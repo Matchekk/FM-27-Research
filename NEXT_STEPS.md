@@ -18,7 +18,8 @@
 - [x] ATTR-004-Analyseplan vor der Datenerhebung versioniert. Primärtest, Abhängigkeit geteilter Baselines und Holm-Familie festgelegt. [Analysecode](analysis/analyse_attr004.py)
 
 ## P3 – Positions-, Taktik- und Trainingsstudien
-- [ ] Attributvergleich pro Positionsgruppe.
+- [x] ATTR-005-Positionsscreening mit 900 Hauptmatches abgeschlossen. Der Angriff ist für beide Attribute ein explorativer Kandidat. [Ergebnisbericht](experiments/ATTR-005-ergebnisse.md)
+- [ ] Für eine unabhängige Positionsbestätigung den primären Kontrast, Zielunterschied, Testfamilie und Fallzahl vorab festlegen. [Fallzahlplanung](experiments/ATTR-005-ergebnisse.md#fallzahlen-für-eine-unabhängige-bestätigung)
 - [ ] Pressing × Defensivlinie in 2×2-Design.
 - [x] Bestehende Karriereversuche mit Kalender-Readback und A/A-Kontrolle archiviert. [TRAIN-001](experiments/TRAIN-001-karriere.md)
 - [ ] Conditioning vs. Heavy mit mehreren unabhängigen Save-Ablegern pro Arm, vergleichbarer Spielbelastung und Ausfalltagen erneut prüfen.

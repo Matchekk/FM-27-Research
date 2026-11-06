@@ -1,5 +1,11 @@
 # Research Log
 
+## 2026-11-06 – ATTR-005-Positionsscreening abgeschlossen
+
+- Alle 900 Hauptmatches auf Build `27.0.0+2493426` sind akzeptiert. 100 disjunkte Seeds lieferten je neun vollständige Arme. Es gab keine Hauptfehlversuche oder Ausschlüsse. [Laufmanifest](data/attr-005/manifest.json)
+- Der Angriff hatte für beide Attribute die höchsten xGD-Schätzwerte gegenüber Baseline. Sprunghöhe erreichte +0,232 xGD (95-%-KI +0,073 bis +0,392, Holm-p = 0,058). Kein primärer oder sekundärer Test erreichte die Holm-Schwelle. [Ergebnisbericht](experiments/ATTR-005-ergebnisse.md)
+- Alle 78 Tests und 432 Mindestfallzahlen nachgerechnet. Die Planung verwendet gepaarte Varianzen und mehrere Zielunterschiede. Die unabhängige Bestätigung erhält einen eigenen Analyseplan. [Effektarchiv](data/attr-005/effects.json)
+
 ## 2026-11-06 – ATTR-005 vorregistriert und technisch freigegeben
 
 - [Vorregistrierung](experiments/ATTR-005-position-screening.md) und Analysecode in `41460cc` vor dem ersten Match auf `main` gepusht.

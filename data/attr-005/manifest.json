@@ -228,6 +228,10 @@
   },
   "publication_counts": {
     "validation_matches": 36,
-    "validation_failed_attempts": 0
+    "validation_failed_attempts": 0,
+    "matches": 900,
+    "failed_attempts": 0,
+    "not_run": 0,
+    "excluded_seed_blocks": 0
   }
 }
