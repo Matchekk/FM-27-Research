@@ -1,0 +1,495 @@
+{
+  "passed": true,
+  "matches": 96,
+  "native_profile_and_tactics_readback": true,
+  "complete_native_attributes_and_roster_readback": true,
+  "both_venue_transfers_verified": true,
+  "repeat_comparisons": [
+    {
+      "scenario": "0",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "0",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "0",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "0",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "0",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "0",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "1",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "1",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "1",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "1",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "1",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "1",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "2",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "2",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "2",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "2",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "2",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "2",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "3",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "3",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "3",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "3",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "3",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "3",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "4",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "4",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "4",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "4",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "4",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "4",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "5",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "5",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "5",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "5",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "5",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "5",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "6",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "6",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "6",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "6",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "6",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "6",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "7",
+      "arm": "baseline",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "7",
+      "arm": "JumpingReach",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "7",
+      "arm": "Acceleration",
+      "seed": 2817012740,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "7",
+      "arm": "baseline",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "7",
+      "arm": "JumpingReach",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "scenario": "7",
+      "arm": "Acceleration",
+      "seed": 1307390163,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    }
+  ],
+  "negative_probe": {
+    "passed": true,
+    "returncode": 108,
+    "raw_log_sha256": "9fe9602b69e474e5a5d9e7e93d040fbed077dda059e07cc6762458cec18a5ba6",
+    "invalid_setup_sha256": "1e852b961a1a86762dad77ae24e6153eb9dafe5f52e7dfc84a9ab6fed5a2a4cc"
+  }
+}

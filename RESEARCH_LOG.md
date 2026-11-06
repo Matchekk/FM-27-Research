@@ -1,5 +1,11 @@
 # Research Log
 
+## 2026-11-06 – ATTR-004 vorregistriert und technisch freigegeben
+
+- Die [Vorregistrierung](experiments/ATTR-004-cross-tactic.md) und der Analysecode wurden in `ccfd630` vor dem ersten Match auf `main` gepusht. Acht Szenarien mit je 140 disjunkten Seeds und drei Armen sind festgelegt.
+- FM27 meldete beim Start `27.0.0+2493426`. Engine, Host, Matchressourcen und Fixture stimmten mit VALID-001 überein.
+- 96 technische Prüfläufe wurden akzeptiert. Alle 48 Wiederholungspaare stimmten bei Endstand, Teamstatistik und Endtick exakt überein. Die Übertragung der aktiven Profile auf beide Spielseiten und die nativen Attribut- und Taktik-Readbacks sind geprüft. Die getrennte ungültige Konfiguration wurde mit Exitcode 108 abgewiesen. [Validierungsbericht](data/attr-004/validation-summary.json)
+
 ## 2026-11-06 – Lokale Messdaten archiviert und nachgerechnet
 
 - Build `27.0.0+2493426`, Adapter `fm27_desktop_2493426_adapter_v1`, Tactics Lab v1106. Der Ausgangsstand auf `main` war `fa436a2171fb2c3ed97b34e25d0f759d57d222e6`. Der Git-Verlauf führt den Commit dieser Archivierung.

@@ -12,9 +12,10 @@
 ## P2 – Replikation
 - [x] Fünf Kandidaten mit 240 neuen Paaren je Attribut ausgewertet. [ATTR-002](experiments/ATTR-002-hauptreplikation.md)
 - [x] Antritt und Tempo bei alternativer Gegnermentalität und gepaartem Seitenwechsel geprüft. [ATTR-003](experiments/ATTR-003-zusatzszenarien.md)
-- [ ] Sprunghöhe und Antritt direkt unter weiteren Gegneraufstellungen vergleichen. Vorab primäre Zielgröße, kleinste praktisch relevante Effektgröße, Stichprobe und Testfamilie festlegen.
+- [x] ATTR-004 vorregistriert und den nativen Setup-, Seitenwechsel- und Wiederholbarkeitscheck bestanden. [Vorregistrierung](experiments/ATTR-004-cross-tactic.md) · [Validierung](data/attr-004/validation-summary.json)
+- [ ] ATTR-004-Hauptserie mit 3.360 Matches abschließen und nach dem festgelegten Plan auswerten.
 - [ ] Gegnermentalität bei denselben Seeds und separater Baseline pro Profil vergleichen. Den Einfluss fester Fixture-Plätze beim Seitenwechsel untersuchen.
-- [ ] Den Analyseplan vor der Datenerhebung versionieren. Direkte Rangtests, Abhängigkeit geteilter Baselines und Sekundärmetriken ausdrücklich einordnen.
+- [x] ATTR-004-Analyseplan vor der Datenerhebung versioniert. Primärtest, Abhängigkeit geteilter Baselines und Holm-Familie festgelegt. [Analysecode](analysis/analyse_attr004.py)
 
 ## P3 – Positions-, Taktik- und Trainingsstudien
 - [ ] Attributvergleich pro Positionsgruppe.
