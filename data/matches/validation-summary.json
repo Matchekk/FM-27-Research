@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "requested": 24,
+  "completed": 24,
+  "repeat_comparisons": [
+    {
+      "arm": "baseline",
+      "seed": 810653,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    },
+    {
+      "arm": "baseline",
+      "seed": 811315,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    },
+    {
+      "arm": "baseline",
+      "seed": 400739,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    },
+    {
+      "arm": "baseline",
+      "seed": 3911093,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    },
+    {
+      "arm": "Acceleration",
+      "seed": 810653,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    },
+    {
+      "arm": "Acceleration",
+      "seed": 811315,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    },
+    {
+      "arm": "Acceleration",
+      "seed": 400739,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    },
+    {
+      "arm": "Acceleration",
+      "seed": 3911093,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true,
+        "native_attribute_counts": true
+      },
+      "passed": true
+    }
+  ],
+  "failure_logged": true,
+  "failed_valid_runs": []
+}

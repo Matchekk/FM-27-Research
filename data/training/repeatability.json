@@ -1,0 +1,517 @@
+{
+  "equalInputSha256": "794faae6873a42bd7225c8f2133f669dad9716e2ff469669d79d66c095f3f330",
+  "finalDate": "2026-08-10",
+  "matched": 22,
+  "calendarEqual": true,
+  "identicalRawAttributeProfiles": 16,
+  "identicalCA": 22,
+  "identicalPA": 22,
+  "identicalCondition": 8,
+  "identicalSharpness": 13,
+  "allDeltas": {
+    "crossing": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "dribbling": {
+      "n": 22,
+      "mean": -0.0455,
+      "median": 0.0,
+      "min": -1,
+      "max": 0,
+      "increased": 0,
+      "decreased": 1
+    },
+    "finishing": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "heading": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "long_shots": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "marking": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "off_the_ball": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "passing": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "penalty_taking": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "tackling": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "vision": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "handling": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "aerial_reach": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "command_of_area": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "communication": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "kicking": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "throwing": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "anticipation": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "decisions": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "one_on_ones": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "positioning": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "reflexes": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "first_touch": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "technique": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "flair": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "corners": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "teamwork": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "work_rate": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "long_throws": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": -1,
+      "max": 1,
+      "increased": 1,
+      "decreased": 1
+    },
+    "eccentricity": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "rushing_out": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "punching": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "acceleration": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "free_kick_taking": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "strength": {
+      "n": 22,
+      "mean": -0.0455,
+      "median": 0.0,
+      "min": -1,
+      "max": 0,
+      "increased": 0,
+      "decreased": 1
+    },
+    "stamina": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "pace": {
+      "n": 22,
+      "mean": 0.0455,
+      "median": 0.0,
+      "min": 0,
+      "max": 1,
+      "increased": 1,
+      "decreased": 0
+    },
+    "jumping_reach": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "leadership": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "dirtiness": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "balance": {
+      "n": 22,
+      "mean": 0.0455,
+      "median": 0.0,
+      "min": 0,
+      "max": 1,
+      "increased": 1,
+      "decreased": 0
+    },
+    "bravery": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "consistency": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "aggression": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "agility": {
+      "n": 22,
+      "mean": 0.0455,
+      "median": 0.0,
+      "min": 0,
+      "max": 1,
+      "increased": 1,
+      "decreased": 0
+    },
+    "important_matches": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "injury_proneness": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "versatility": {
+      "n": 22,
+      "mean": -0.0455,
+      "median": 0.0,
+      "min": -1,
+      "max": 1,
+      "increased": 1,
+      "decreased": 2
+    },
+    "natural_fitness": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "determination": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "composure": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "concentration": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "condition": {
+      "n": 22,
+      "mean": -83.3182,
+      "median": 0.0,
+      "min": -1000,
+      "max": 123,
+      "increased": 4,
+      "decreased": 10
+    },
+    "sharpness": {
+      "n": 22,
+      "mean": -109.7273,
+      "median": 0.0,
+      "min": -800,
+      "max": 200,
+      "increased": 2,
+      "decreased": 7
+    },
+    "ability_current": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    },
+    "ability_potential": {
+      "n": 22,
+      "mean": 0,
+      "median": 0.0,
+      "min": 0,
+      "max": 0,
+      "increased": 0,
+      "decreased": 0
+    }
+  }
+}

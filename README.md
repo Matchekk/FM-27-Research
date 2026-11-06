@@ -2,7 +2,7 @@
 
 Offenes, reproduzierbares Forschungsprojekt zur **Football Manager 2027**-Meta: Spielerattribute, Positionen, Taktiken und Training.
 
-> **Forschungsstatus (2026-11-06):** Projektstruktur eingerichtet. Frühere Experimente existieren lokal, sind hier aber **noch nicht als Rohdaten importiert oder unabhängig validiert**. Es gibt daher noch keine bestätigte FM27-Meta-Rangliste.
+> **Forschungsstatus (2026-11-06):** Das Archiv enthält 2.504 geprüfte Matchmessungen und die Ergebnisse separater Karriere-Trainingsversuche. Drei Einzeleffekte wurden im Hauptszenario repliziert. [Befunde und Gültigkeitsbereich](FINDINGS.md)
 
 ## Arbeitsprinzip
 

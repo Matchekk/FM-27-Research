@@ -1,0 +1,13 @@
+{
+  "build": "27.0.0+2493426",
+  "engine_sha256": "252ff8fb5b7a4a5a5464db6ba632e309eef9b6e65ffa992ae20575a189e66c6a",
+  "decoder": "fmsave 0.10.0",
+  "source_sha256": {
+    "weekly-observations": "ac6b7875da89e77b7de9c378ff93e6362e03d5f4a3f6dd90f2b537286b5dea2a",
+    "youth-observations": "a35a5be9065238ebc9f1fc41819a0e1f060be7abe3d693a1b754c7c01d189f41",
+    "pilot-observations": "710474b1887a5c4fffe61260f4f5f18100ccf06e0d2b0dbfb819c8e52a30a861",
+    "plans-followup-results": "e0d422a56ed441cde16436696433ac3b3db808af7daa4e72cc43e345623c6f06",
+    "repeatability": "7d4e1b95f84155340ff225e4f6888550e2cb1a4480ea8c4fe16523f1e2003149"
+  },
+  "baseline_save_sha256": "b8c8a6c52bbd0d0a8a46abe8e9a44db74445fe550a2c0dfb0ac672c5ca3aad8f"
+}

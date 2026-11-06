@@ -1,0 +1,455 @@
+{
+  "passed": true,
+  "studies": [
+    {
+      "study": "match-attribute-study",
+      "matches": 132,
+      "seeds": [
+        400739,
+        401070,
+        401401,
+        401732,
+        402063,
+        402394,
+        402725,
+        403056,
+        403387,
+        403718,
+        404049,
+        404380
+      ],
+      "all_published_values_match": true,
+      "legacy_baseline_hash": "9bea5115275b997a27d18bbce9a5da950c5d05b4a6e6bcbbf99fd586faeb8a64",
+      "new_baseline_hash": "e077952c9d14a90563224ad09dbaaf0508ba47618b6584c73adcf407c0cbcea8",
+      "baseline_reusable": false,
+      "reproduced_effects": {
+        "Acceleration": {
+          "goals": {
+            "mean": -0.0833,
+            "interval95": [
+              -0.8232,
+              0.6566
+            ]
+          },
+          "xg": {
+            "mean": 0.3698,
+            "interval95": [
+              -0.2216,
+              0.9611
+            ]
+          },
+          "shots": {
+            "mean": 2.0833,
+            "interval95": [
+              -2.3722,
+              6.5388
+            ]
+          },
+          "passing_percentage": {
+            "mean": -0.4819,
+            "interval95": [
+              -1.6941,
+              0.7304
+            ]
+          }
+        },
+        "Pace": {
+          "goals": {
+            "mean": -0.25,
+            "interval95": [
+              -0.9205,
+              0.4205
+            ]
+          },
+          "xg": {
+            "mean": 0.3088,
+            "interval95": [
+              -0.0293,
+              0.6469
+            ]
+          },
+          "shots": {
+            "mean": 3.8333,
+            "interval95": [
+              0.334,
+              7.3327
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.4484,
+            "interval95": [
+              -2.9981,
+              0.1013
+            ]
+          }
+        },
+        "Agility": {
+          "goals": {
+            "mean": -0.5,
+            "interval95": [
+              -1.4954,
+              0.4954
+            ]
+          },
+          "xg": {
+            "mean": -0.0773,
+            "interval95": [
+              -0.5771,
+              0.4224
+            ]
+          },
+          "shots": {
+            "mean": -0.5833,
+            "interval95": [
+              -4.2728,
+              3.1062
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.6015,
+            "interval95": [
+              -3.9459,
+              0.7429
+            ]
+          }
+        },
+        "Stamina": {
+          "goals": {
+            "mean": -0.5833,
+            "interval95": [
+              -1.5004,
+              0.3337
+            ]
+          },
+          "xg": {
+            "mean": 0.0006,
+            "interval95": [
+              -0.7062,
+              0.7074
+            ]
+          },
+          "shots": {
+            "mean": 1.75,
+            "interval95": [
+              -4.0298,
+              7.5298
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.7481,
+            "interval95": [
+              -3.3354,
+              -0.1608
+            ]
+          }
+        },
+        "JumpingReach": {
+          "goals": {
+            "mean": -0.1667,
+            "interval95": [
+              -1.0162,
+              0.6829
+            ]
+          },
+          "xg": {
+            "mean": 0.4116,
+            "interval95": [
+              -0.3,
+              1.1233
+            ]
+          },
+          "shots": {
+            "mean": 2.8333,
+            "interval95": [
+              -1.8344,
+              7.501
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.5326,
+            "interval95": [
+              -3.8057,
+              0.7405
+            ]
+          }
+        },
+        "WorkRate": {
+          "goals": {
+            "mean": 0.5833,
+            "interval95": [
+              -0.3337,
+              1.5004
+            ]
+          },
+          "xg": {
+            "mean": 0.7045,
+            "interval95": [
+              0.2452,
+              1.1638
+            ]
+          },
+          "shots": {
+            "mean": 4.8333,
+            "interval95": [
+              0.1578,
+              9.5089
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.0295,
+            "interval95": [
+              -2.5111,
+              0.4521
+            ]
+          }
+        },
+        "Finishing": {
+          "goals": {
+            "mean": 0.0833,
+            "interval95": [
+              -0.6566,
+              0.8232
+            ]
+          },
+          "xg": {
+            "mean": 0.114,
+            "interval95": [
+              -0.1339,
+              0.3618
+            ]
+          },
+          "shots": {
+            "mean": 0,
+            "interval95": [
+              -3.1595,
+              3.1595
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.6736,
+            "interval95": [
+              -2.9177,
+              -0.4294
+            ]
+          }
+        },
+        "Passing": {
+          "goals": {
+            "mean": -0.4167,
+            "interval95": [
+              -1.2499,
+              0.4165
+            ]
+          },
+          "xg": {
+            "mean": 0.2079,
+            "interval95": [
+              -0.2327,
+              0.6485
+            ]
+          },
+          "shots": {
+            "mean": -0.3333,
+            "interval95": [
+              -3.9002,
+              3.2335
+            ]
+          },
+          "passing_percentage": {
+            "mean": -0.6215,
+            "interval95": [
+              -1.7973,
+              0.5544
+            ]
+          }
+        },
+        "Decisions": {
+          "goals": {
+            "mean": -0.0833,
+            "interval95": [
+              -0.7718,
+              0.6052
+            ]
+          },
+          "xg": {
+            "mean": 0.2943,
+            "interval95": [
+              -0.2441,
+              0.8328
+            ]
+          },
+          "shots": {
+            "mean": 1.8333,
+            "interval95": [
+              -1.5811,
+              5.2477
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.5199,
+            "interval95": [
+              -2.6587,
+              -0.381
+            ]
+          }
+        },
+        "Marking": {
+          "goals": {
+            "mean": 0.0833,
+            "interval95": [
+              -0.5496,
+              0.7163
+            ]
+          },
+          "xg": {
+            "mean": 0.286,
+            "interval95": [
+              -0.0391,
+              0.6111
+            ]
+          },
+          "shots": {
+            "mean": 2.4167,
+            "interval95": [
+              -1.8965,
+              6.7299
+            ]
+          },
+          "passing_percentage": {
+            "mean": -1.6013,
+            "interval95": [
+              -3.5487,
+              0.346
+            ]
+          }
+        }
+      }
+    },
+    {
+      "study": "match-attribute-replication",
+      "matches": 96,
+      "seeds": [
+        810653,
+        810984,
+        811315,
+        811646,
+        811977,
+        812308,
+        812639,
+        812970,
+        813301,
+        813632,
+        813963,
+        814294,
+        814625,
+        814956,
+        815287,
+        815618,
+        815949,
+        816280,
+        816611,
+        816942,
+        817273,
+        817604,
+        817935,
+        818266
+      ],
+      "all_published_values_match": true,
+      "legacy_baseline_hash": "9bea5115275b997a27d18bbce9a5da950c5d05b4a6e6bcbbf99fd586faeb8a64",
+      "new_baseline_hash": "e077952c9d14a90563224ad09dbaaf0508ba47618b6584c73adcf407c0cbcea8",
+      "baseline_reusable": false,
+      "reproduced_effects": {
+        "WorkRate": {
+          "goals": {
+            "mean": 0.1667,
+            "interval95": [
+              -0.4763,
+              0.8097
+            ]
+          },
+          "xg": {
+            "mean": 0.2586,
+            "interval95": [
+              -0.1014,
+              0.6185
+            ]
+          },
+          "shots": {
+            "mean": 1.75,
+            "interval95": [
+              -1.2623,
+              4.7623
+            ]
+          },
+          "passing_percentage": {
+            "mean": -0.6986,
+            "interval95": [
+              -2.2736,
+              0.8765
+            ]
+          }
+        },
+        "Pace": {
+          "goals": {
+            "mean": 0.0833,
+            "interval95": [
+              -0.7324,
+              0.8991
+            ]
+          },
+          "xg": {
+            "mean": 0.1839,
+            "interval95": [
+              -0.198,
+              0.5658
+            ]
+          },
+          "shots": {
+            "mean": 2.1667,
+            "interval95": [
+              -0.4353,
+              4.7687
+            ]
+          },
+          "passing_percentage": {
+            "mean": 0.4184,
+            "interval95": [
+              -0.9201,
+              1.7568
+            ]
+          }
+        },
+        "Acceleration": {
+          "goals": {
+            "mean": 0.2917,
+            "interval95": [
+              -0.4706,
+              1.054
+            ]
+          },
+          "xg": {
+            "mean": 0.3348,
+            "interval95": [
+              -0.107,
+              0.7766
+            ]
+          },
+          "shots": {
+            "mean": 3.875,
+            "interval95": [
+              0.9354,
+              6.8146
+            ]
+          },
+          "passing_percentage": {
+            "mean": 0.6952,
+            "interval95": [
+              -0.889,
+              2.2795
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
