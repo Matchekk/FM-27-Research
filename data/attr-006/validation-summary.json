@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "matches": 8,
+  "native_forward_positions": {
+    "AMR": {
+      "start_slot": 8,
+      "roster_slot": 8,
+      "role": "Winger",
+      "native_role": "4194432"
+    },
+    "AML": {
+      "start_slot": 9,
+      "roster_slot": 9,
+      "role": "Winger",
+      "native_role": "4194432"
+    },
+    "ST": {
+      "start_slot": 10,
+      "roster_slot": 10,
+      "role": "CentreForward",
+      "native_role": "8390656"
+    }
+  },
+  "paired_native_comparisons": 4,
+  "native_attribute_changes_per_comparison": 3,
+  "repeat_comparisons": [
+    {
+      "arm": "baseline",
+      "seed": 1421451600,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "baseline",
+      "seed": 3871900587,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FW-JumpingReach",
+      "seed": 1421451600,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FW-JumpingReach",
+      "seed": 3871900587,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    }
+  ],
+  "negative_probe": {
+    "passed": true,
+    "returncode": 108,
+    "raw_log_sha256": "939e3a2b9fb4fef4bfa04574c81142c01ae5336ff20782d561c964a3665bed9c",
+    "invalid_setup_sha256": "1e852b961a1a86762dad77ae24e6153eb9dafe5f52e7dfc84a9ab6fed5a2a4cc"
+  }
+}

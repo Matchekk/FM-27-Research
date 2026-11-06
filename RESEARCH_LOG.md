@@ -1,5 +1,10 @@
 # Research Log
 
+## 2026-11-07 – ATTR-006 vorregistriert und technisch freigegeben
+
+- [Vorregistrierung](experiments/ATTR-006-vorregistrierung.md) und Analysecode in `b9cb3e6` vor dem ersten Match auf `main` gepusht.
+- Build `27.0.0+2493426`, Engine, Host, Adapter, Fixture und Matchressourcen geprüft. Beide Setup-Hashes stimmen mit ATTR-005 überein. Acht Prüfmatches wurden akzeptiert. Jeder gepaarte native Vergleich zeigte genau drei JumpingReach-Änderungen. Vier Wiederholungspaare stimmten exakt überein. Die Negativprobe wurde mit Code 108 abgewiesen. [Validierung](data/attr-006/validation-summary.json)
+
 ## 2026-11-06 – ATTR-005-Positionsscreening abgeschlossen
 
 - Alle 900 Hauptmatches auf Build `27.0.0+2493426` sind akzeptiert. 100 disjunkte Seeds lieferten je neun vollständige Arme. Es gab keine Hauptfehlversuche oder Ausschlüsse. [Laufmanifest](data/attr-005/manifest.json)
