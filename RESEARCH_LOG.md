@@ -1,5 +1,11 @@
 # Research Log
 
+## 2026-11-06 – ATTR-004 abgeschlossen
+
+- Alle 3.360 Hauptmatches der vorregistrierten acht Szenarien wurden angenommen. Das ergibt 1.120 vollständige Seed-Tripel auf Build `27.0.0+2493426` ohne fehlgeschlagene Hauptversuche oder Ausschlüsse. Die 96 technischen Läufe sind separat archiviert. [Manifest](data/attr-004/manifest.json)
+- Der direkte Kontrast Sprunghöhe minus Antritt beträgt +0,021 xGD (95-%-KI −0,038 bis +0,080, p = 0,479). Das Intervall liegt innerhalb der praktischen Schwellen. Beide Attribute verbesserten xGD gegenüber Baseline im Szenariomittel. Keiner der 21 Kontexttests war nach Holm signifikant. [Ergebnisse](experiments/ATTR-004-ergebnisse.md)
+- Primärtest, alle 33 Sekundärtests und die Holm-Entscheidungen aus den publizierbaren Matchzeilen unabhängig nachgerechnet. Die ATTR-004-Analysetests und die Rechenprüfung des bisherigen Archivs bestanden.
+
 ## 2026-11-06 – ATTR-004 vorregistriert und technisch freigegeben
 
 - Die [Vorregistrierung](experiments/ATTR-004-cross-tactic.md) und der Analysecode wurden in `ccfd630` vor dem ersten Match auf `main` gepusht. Acht Szenarien mit je 140 disjunkten Seeds und drei Armen sind festgelegt.

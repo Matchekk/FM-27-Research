@@ -5,6 +5,7 @@
 | Pfad | Umfang |
 |---|---|
 | [matches/](matches/) | 2.504 vollständige Matchmessungen, zwei getrennte Negativproben, Manifest, Validierung und vollständige Effektschätzungen |
+| [attr-004/](attr-004/) | 3.360 Hauptmatches, 96 technische Prüfläufe, Manifest und 34 vorregistrierte Tests |
 | [historical/](historical/) | 228 ältere Matchmessungen in zwei getrennten Serien und Vergleich mit den früheren Zusammenfassungen |
 | [training/](training/) | Spielerdifferenzen mit versuchslokalen Kürzeln, Kalender, Belastungsaggregate und A/A-Kontrolle |
 

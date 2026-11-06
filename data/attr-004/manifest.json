@@ -1245,7 +1245,11 @@
   "timeout_seconds": 90,
   "publication_counts": {
     "validation_matches": 96,
-    "validation_failed_attempts": 0
+    "validation_failed_attempts": 0,
+    "matches": 3360,
+    "failed_attempts": 0,
+    "not_run": 0,
+    "excluded_triplets": 0
   },
   "runner_sha256": "3ecd54b4cde496743f5df1fd598c0cd0cd293d075b0c307bf0ddac4e2a95a496",
   "runner_git_blob": "b49a51152ad39a64f8db74b2f94712ded2cf2153"

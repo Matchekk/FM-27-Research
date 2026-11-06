@@ -13,8 +13,8 @@
 - [x] Fünf Kandidaten mit 240 neuen Paaren je Attribut ausgewertet. [ATTR-002](experiments/ATTR-002-hauptreplikation.md)
 - [x] Antritt und Tempo bei alternativer Gegnermentalität und gepaartem Seitenwechsel geprüft. [ATTR-003](experiments/ATTR-003-zusatzszenarien.md)
 - [x] ATTR-004 vorregistriert und den nativen Setup-, Seitenwechsel- und Wiederholbarkeitscheck bestanden. [Vorregistrierung](experiments/ATTR-004-cross-tactic.md) · [Validierung](data/attr-004/validation-summary.json)
-- [ ] ATTR-004-Hauptserie mit 3.360 Matches abschließen und nach dem festgelegten Plan auswerten.
-- [ ] Gegnermentalität bei denselben Seeds und separater Baseline pro Profil vergleichen. Den Einfluss fester Fixture-Plätze beim Seitenwechsel untersuchen.
+- [x] ATTR-004-Hauptserie mit 3.360 vollständigen Matches ausgewertet. Beide Aufwertungen verbessern xGD im Mittel. Der direkte Unterschied liegt im praktisch kleinen Bereich. [Ergebnisse](experiments/ATTR-004-ergebnisse.md)
+- [ ] Für präzisere Kontextschätzungen Gegnermentalitäten mit gemeinsamen Seeds und separater Baseline pro Profil vergleichen. Für den Seitenwechsel feste Fixture-Plätze gezielt von Standortmechanismen trennen.
 - [x] ATTR-004-Analyseplan vor der Datenerhebung versioniert. Primärtest, Abhängigkeit geteilter Baselines und Holm-Familie festgelegt. [Analysecode](analysis/analyse_attr004.py)
 
 ## P3 – Positions-, Taktik- und Trainingsstudien

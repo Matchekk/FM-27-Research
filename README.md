@@ -2,7 +2,7 @@
 
 Offenes, reproduzierbares Forschungsprojekt zur **Football Manager 2027**-Meta: Spielerattribute, Positionen, Taktiken und Training.
 
-> **Forschungsstatus (2026-11-06):** Das Archiv enthält 2.504 geprüfte Matchmessungen und die Ergebnisse separater Karriere-Trainingsversuche. Drei Einzeleffekte wurden im Hauptszenario repliziert. [Befunde und Gültigkeitsbereich](FINDINGS.md)
+> **Forschungsstatus (2026-11-06):** Das Archiv enthält die bisherige Serie mit 2.504 geprüften Matchmessungen, die 3.360 Hauptmatches und 96 technischen Prüfläufe von ATTR-004 sowie separate Karriere-Trainingsversuche. ATTR-004 bestätigt die mittleren xGD-Gewinne von Sprunghöhe und Antritt über acht getestete Szenarien. [Befunde und Gültigkeitsbereich](FINDINGS.md)
 
 ## Arbeitsprinzip
 
