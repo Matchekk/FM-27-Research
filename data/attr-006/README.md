@@ -1,7 +1,10 @@
 # ATTR-006 – Daten und Provenienz
 
-[Vorregistrierung](../../experiments/ATTR-006-vorregistrierung.md) · [Analysecode](../../analysis/analyse_attr006.py)
+[Vorregistrierung](../../experiments/ATTR-006-vorregistrierung.md) · [Ergebnisbericht](../../experiments/ATTR-006-ergebnisse.md) · [Analysecode](../../analysis/analyse_attr006.py)
 
-Das [Manifest](manifest.json) enthält Versions- und Setup-Identität, die nativ gelesenen Positionen und die Seed-Listen. Die [technischen Matchzeilen](validation.jsonl) und der [Validierungsbericht](validation-summary.json) dokumentieren die Freigabe mit separaten Prüfseeds.
+- [Manifest](manifest.json) mit Versions- und Setup-Identität, den nativ gelesenen Positionen, den Seed-Listen und den Fallzahlen.
+- [Technische Matchzeilen](validation.jsonl) und [Validierungsbericht](validation-summary.json) mit acht Prüfmatches und der getrennten Negativprobe.
+- [Hauptmessungen](matches.jsonl) mit 600 Matches in 300 vollständigen Paaren.
+- [Effektarchiv](effects.json) mit Primärtest, explorativen Sekundärtests und Sensitivitätsprüfungen.
 
-Die JSONL-Zeilen enthalten den Endstand und die native Teamstatistik in Heim-/Auswärtsreihenfolge. `pair_id` gruppiert beide Arme desselben Seeds und Wiederholungsindex. Die SHA-256-Werte belegen die lokal geprüften Setups, Laufprotokolle, Readbacks und Startbelege. Vollständige Dumps und Originalspielmaterial verbleiben lokal.
+Die JSONL-Zeilen enthalten den Endstand und die native Teamstatistik in Heim-/Auswärtsreihenfolge. `pair_id` gruppiert beide Arme desselben Seeds und Wiederholungsindex. Die SHA-256-Werte belegen die lokal geprüften Setups, Laufprotokolle, Readbacks und Startbelege. Der native Laufstand ist Commit `3bca400`. Commit `a9a9113` behebt die Typkonvertierung der Entscheidung beim JSON-Export. Vollständige Dumps und Originalspielmaterial verbleiben lokal.

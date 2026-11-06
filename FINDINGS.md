@@ -1,6 +1,6 @@
 # Findings – geprüfte Forschungsergebnisse
 
-**Stand 2026-11-06 · Match- und Karrieredaten für FM27 27.0.0+2493426**
+**Stand 2026-11-07 · Match- und Karrieredaten für FM27 27.0.0+2493426**
 
 Hier stehen ausschließlich Befunde mit eindeutiger Experiment-ID, verlinktem Protokoll, Buildnummer, Messwerten und Unsicherheit. Ergebnisse aus vorherigen Chat-Zusammenfassungen werden erst nach Einsicht in originale Messdaten und Reproduzierbarkeitsprüfung eingetragen.
 
@@ -18,9 +18,10 @@ Hier stehen ausschließlich Befunde mit eindeutiger Experiment-ID, verlinktem Pr
 | ATTR-004 | Sprunghöhe und Antritt über acht Szenarien | Gegen Baseline +0,325 xGD, 95-%-KI [0,266; 0,383], bzw. +0,303 xGD, 95-%-KI [0,246; 0,361]. Beide Holm-p < 0,001. | 27.0.0+2493426 | Beide Einzeleffekte im Szenariomittel bestätigt, 1.120 neue Tripel | [Ergebnisse](experiments/ATTR-004-ergebnisse.md#sekundärtests-gegen-baseline) |
 | ATTR-004 | Direkter Vergleich | Sprunghöhe minus Antritt +0,021 xGD, 95-%-KI [−0,038; +0,080], p = 0,479. Das Intervall liegt innerhalb von ±0,10 xGD. | 27.0.0+2493426 | Vorregistrierter Primärtest, mittlerer Unterschied praktisch klein | [Ergebnisse](experiments/ATTR-004-ergebnisse.md#primärer-endpunkt) |
 | ATTR-005 | Sprunghöhe und Antritt nach Positionsgruppe | Höchste Baseline-Kontraste im Angriff. Sprunghöhe +0,232 xGD, 95-%-KI +0,073 bis +0,392, Holm-p = 0,058. Antritt +0,166 xGD, 95-%-KI −0,007 bis +0,338, Holm-p = 0,652. Alle direkten Kontraste bleiben unsicher. | 27.0.0+2493426 | Explorativ, 100 gepaarte Seeds | [Positionsscreening](experiments/ATTR-005-ergebnisse.md) |
+| ATTR-006 | Sprunghöhe für AMR, AML und ST | +0,171 xGD pro Match, 95-%-KI +0,052 bis +0,290, p = 0,00498. Die Intervalluntergrenze liegt unter +0,10 xGD. | 27.0.0+2493426 | Positiver Effekt im getesteten Standardfixture bestätigt, 300 neue Paare | [Bestätigung](experiments/ATTR-006-ergebnisse.md) |
 | TRAIN-001 | Wochenpläne | Profis P mit höherer Kondition und Spielschärfe. U19 I mit einem statt acht Verletzungseinträgen bei ähnlichen Rohwertzuwächsen. | 27.0.0+2493426 | Explorativ, ein Save-Ableger je Arm | [Karriereversuche](experiments/TRAIN-001-karriere.md) |
 
-ATTR-001 bis ATTR-004 werteten jeweils ein Attribut um vier Anzeigepunkte bei zehn Feldspielern auf. ATTR-005 änderte jeweils zwei oder drei Spieler einer Positionsgruppe. Dribbling und Beweglichkeit bleiben nach der Hauptreplikation unklar. Einsatzfreude belegte Screening-Platz 13 und hat keine neue Hauptreplikation. Der Aufbau erlaubt einzelne Rangvergleiche im Standardfixture. Eine übergreifende FM27-Meta-Rangliste bleibt offen.
+ATTR-001 bis ATTR-004 werteten jeweils ein Attribut um vier Anzeigepunkte bei zehn Feldspielern auf. ATTR-005 änderte jeweils zwei oder drei Spieler einer Positionsgruppe. ATTR-006 bestätigte den positiven xGD-Effekt der Sprunghöhenanhebung bei drei Angreifern im Standardfixture. Dribbling und Beweglichkeit bleiben nach der Hauptreplikation unklar. Einsatzfreude belegte Screening-Platz 13 und hat keine neue Hauptreplikation. Der Aufbau erlaubt einzelne Rangvergleiche im Standardfixture. Eine übergreifende FM27-Meta-Rangliste bleibt offen.
 
 ## Bei jedem neuen Befund dokumentieren
 1. Hypothese und präzise Intervention.

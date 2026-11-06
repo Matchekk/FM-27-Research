@@ -1,5 +1,11 @@
 # Research Log
 
+## 2026-11-07 – ATTR-006 abgeschlossen
+
+- Alle 600 Hauptmatches auf Build `27.0.0+2493426` wurden akzeptiert. Die 300 neuen Paare sind vollständig und von den früheren Matcharchiven getrennt. Es gab keine Hauptfehlversuche oder Ausschlüsse. [Manifest](data/attr-006/manifest.json)
+- Die Sprunghöhenanhebung bei AMR, AML und ST verbessert xGD um +0,171 pro Match (95-%-KI +0,052 bis +0,290, p = 0,00498). Der vorregistrierte positive Effekt ist bestätigt. Das Intervall lässt Effekte unter und über der praktischen Schwelle von +0,10 zu. [Ergebnisbericht](experiments/ATTR-006-ergebnisse.md)
+- Alle sechs Tests und 300 Sensitivitätsläufe unabhängig nachgerechnet. Commit `a9a9113` korrigiert die JSON-Typkonvertierung. Der Vergleich mit dem vorregistrierten Code ergab identische Zahlen und Entscheidungen.
+
 ## 2026-11-07 – ATTR-006 vorregistriert und technisch freigegeben
 
 - [Vorregistrierung](experiments/ATTR-006-vorregistrierung.md) und Analysecode in `b9cb3e6` vor dem ersten Match auf `main` gepusht.

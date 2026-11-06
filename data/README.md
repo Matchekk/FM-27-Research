@@ -7,6 +7,7 @@
 | [matches/](matches/) | 2.504 vollständige Matchmessungen, zwei getrennte Negativproben, Manifest, Validierung und vollständige Effektschätzungen |
 | [attr-004/](attr-004/) | 3.360 Hauptmatches, 96 technische Prüfläufe, Manifest und 34 vorregistrierte Tests |
 | [attr-005/](attr-005/) | 900 Hauptmatches, 36 Prüfmatches, 78 Tests und Fallzahlplanung |
+| [attr-006/](attr-006/) | 600 Hauptmatches, acht Prüfmatches, gepaarter Primärtest und Sensitivität |
 | [historical/](historical/) | 228 ältere Matchmessungen in zwei getrennten Serien und Vergleich mit den früheren Zusammenfassungen |
 | [training/](training/) | Spielerdifferenzen mit versuchslokalen Kürzeln, Kalender, Belastungsaggregate und A/A-Kontrolle |
 
