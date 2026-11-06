@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "matches": 32,
+  "native_forward_positions": {
+    "AMR": {
+      "start_slot": 8,
+      "roster_slot": 8,
+      "role": "Winger",
+      "native_role": "4194432"
+    },
+    "AML": {
+      "start_slot": 9,
+      "roster_slot": 9,
+      "role": "Winger",
+      "native_role": "4194432"
+    },
+    "ST": {
+      "start_slot": 10,
+      "roster_slot": 10,
+      "role": "CentreForward",
+      "native_role": "8390656"
+    }
+  },
+  "paired_native_comparisons": 28,
+  "native_attribute_changes_per_arm": {
+    "baseline": 0,
+    "AMR": 1,
+    "AML": 1,
+    "ST": 1,
+    "AMR+AML": 2,
+    "AMR+ST": 2,
+    "AML+ST": 2,
+    "ALL": 3
+  },
+  "both_teams_native_phase_configurations_identical": true,
+  "binary_input_differences_verified": true,
+  "repeat_comparisons": [
+    {
+      "arm": "baseline",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "baseline",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AMR",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AMR",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AML",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AML",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "ST",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "ST",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AMR+AML",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AMR+AML",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AMR+ST",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AMR+ST",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AML+ST",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "AML+ST",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "ALL",
+      "seed": 3136834149,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "ALL",
+      "seed": 3870127266,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    }
+  ],
+  "negative_probe": {
+    "passed": true,
+    "returncode": 108,
+    "raw_log_sha256": "0c032daaf98445b2dc060dbdcf11310101da9350032d26cb12ee612f711a355e",
+    "invalid_setup_sha256": "1e852b961a1a86762dad77ae24e6153eb9dafe5f52e7dfc84a9ab6fed5a2a4cc"
+  }
+}

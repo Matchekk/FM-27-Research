@@ -1,5 +1,10 @@
 # Research Log
 
+## 2026-11-07 – ATTR-007 vorregistriert und technisch freigegeben
+
+- Die [Vorregistrierung](experiments/ATTR-007-vorregistrierung.md) und der Analysecode wurden vor dem ersten Match in `9ceaf95` gepusht.
+- Build `27.0.0+2493426`, Adapter, Fixture und die binären Baseline- und ALL-Setups stimmen mit ATTR-006 überein. Die 32 Prüfmatches bestätigen Positionszuordnung, Attributänderungen und identische Phasenkonfigurationen beider Teams. Alle 16 Wiederholungspaare stimmten exakt überein, die Negativprobe endete mit Code 108. [Validierung](data/attr-007/validation-summary.json)
+
 ## 2026-11-07 – ATTR-006 abgeschlossen
 
 - Alle 600 Hauptmatches auf Build `27.0.0+2493426` wurden akzeptiert. Die 300 neuen Paare sind vollständig und von den früheren Matcharchiven getrennt. Es gab keine Hauptfehlversuche oder Ausschlüsse. [Manifest](data/attr-006/manifest.json)
