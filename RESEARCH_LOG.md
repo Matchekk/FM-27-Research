@@ -1,5 +1,10 @@
 # Research Log
 
+## 2026-11-06 – ATTR-005 vorregistriert und technisch freigegeben
+
+- [Vorregistrierung](experiments/ATTR-005-position-screening.md) und Analysecode in `41460cc` vor dem ersten Match auf `main` gepusht.
+- Engine `27.0.0+2493426`, Adapter-Host, Standardfixture und Matchressourcen stimmten mit dem validierten Stand überein. Vier Baselines ergaben dieselbe native Startelf und Positionszuordnung. 36 Prüfmatches wurden akzeptiert, alle 18 Wiederholungspaare stimmten exakt überein und die getrennte Negativprobe endete mit Code 108. [Validierung](data/attr-005/validation-summary.json)
+
 ## 2026-11-06 – ATTR-004 abgeschlossen
 
 - Alle 3.360 Hauptmatches der vorregistrierten acht Szenarien wurden angenommen. Das ergibt 1.120 vollständige Seed-Tripel auf Build `27.0.0+2493426` ohne fehlgeschlagene Hauptversuche oder Ausschlüsse. Die 96 technischen Läufe sind separat archiviert. [Manifest](data/attr-004/manifest.json)

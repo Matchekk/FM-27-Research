@@ -178,8 +178,9 @@ def audit_dump(path, data, server):
     teams = read(path)["teams"]
     for side, (actual, expected) in enumerate(zip(teams, data["teams"], strict=True)):
         players = [(p["id"], p["attributes"]) for p in actual["players"]]
-        wanted = [(p["native_id"], p["attributes"]) for p in expected["players"][:23]]
-        require(actual["side"] == side and actual["count"] == 23 and players == wanted,
+        count = expected.get("roster_size", len(expected["players"]))
+        wanted = [(p["native_id"], p["attributes"]) for p in expected["players"][:count]]
+        require(actual["side"] == side and actual["count"] == count and players == wanted,
                 f"Native roster, start order or attributes differ: side {side}")
         require(bytes.fromhex(actual["creator_hex"])[0x25] == expected["mentality"],
                 f"Native mentality mismatch: side {side}")
@@ -249,7 +250,7 @@ def execute(folder, server, manifest, jobs):
 
     folder.mkdir(exist_ok=True)
     ledger = folder / "ledger.jsonl"
-    jobs = sorted(jobs, key=lambda j: sha256(f"ATTR-004/order/{j['variant']}".encode()).digest())
+    jobs = sorted(jobs, key=lambda j: sha256(f"{manifest['experiment_id']}/order/{j['variant']}".encode()).digest())
     by_key = {j["variant"]: j for j in jobs}
     require(len(by_key) == len(jobs), "Duplicate planned key")
     prior = read_rows(ledger) if ledger.exists() else []
@@ -292,7 +293,7 @@ def execute(folder, server, manifest, jobs):
                 setups = manifest["scenarios"][j["s"]]["setups"]
                 row = dict(**IDENTITY, key=key, attempt=attempts[key], scenario=j["s"], seed=j["seed"],
                            arm=j["arm"], repeat=j["repeat"], tested_side=j["side"],
-                           pair_id=f"ATTR-004/{j['s']}/{j['seed']}/{j['repeat']}",
+                           pair_id=f"{manifest['experiment_id']}/{j['s']}/{j['seed']}/{j['repeat']}",
                            setup_sha256=setups[j["arm"]], baseline_setup_sha256=setups["baseline"],
                            log=result["log"], timestamp_utc=datetime.now(timezone.utc).isoformat())
                 try:

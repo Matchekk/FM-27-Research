@@ -1,0 +1,246 @@
+{
+  "passed": true,
+  "matches": 36,
+  "native_position_groups": {
+    "CB": {
+      "DCR": {
+        "start_slot": 2,
+        "roster_slot": 2,
+        "role": "CentreBack",
+        "native_role": "2097154"
+      },
+      "DCL": {
+        "start_slot": 3,
+        "roster_slot": 3,
+        "role": "CentreBack",
+        "native_role": "2097154"
+      }
+    },
+    "FB": {
+      "DR": {
+        "start_slot": 1,
+        "roster_slot": 1,
+        "role": "FullBack",
+        "native_role": "4194308"
+      },
+      "DL": {
+        "start_slot": 4,
+        "roster_slot": 4,
+        "role": "FullBack",
+        "native_role": "4194308"
+      }
+    },
+    "CM": {
+      "DMC": {
+        "start_slot": 5,
+        "roster_slot": 5,
+        "role": "DefensiveMidfielder",
+        "native_role": "2097168"
+      },
+      "MCR": {
+        "start_slot": 6,
+        "roster_slot": 6,
+        "role": "CentralMidfielder",
+        "native_role": "4194336"
+      },
+      "MCL": {
+        "start_slot": 7,
+        "roster_slot": 7,
+        "role": "AttackingMidfielder",
+        "native_role": "8389120"
+      }
+    },
+    "FW": {
+      "AMR": {
+        "start_slot": 8,
+        "roster_slot": 8,
+        "role": "Winger",
+        "native_role": "4194432"
+      },
+      "AML": {
+        "start_slot": 9,
+        "roster_slot": 9,
+        "role": "Winger",
+        "native_role": "4194432"
+      },
+      "ST": {
+        "start_slot": 10,
+        "roster_slot": 10,
+        "role": "CentreForward",
+        "native_role": "8390656"
+      }
+    }
+  },
+  "native_position_readback_matches": 4,
+  "verified_attribute_and_profile_readbacks": 36,
+  "repeat_comparisons": [
+    {
+      "arm": "baseline",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "baseline",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CB-JumpingReach",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CB-JumpingReach",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CB-Acceleration",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CB-Acceleration",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FB-JumpingReach",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FB-JumpingReach",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FB-Acceleration",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FB-Acceleration",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CM-JumpingReach",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CM-JumpingReach",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CM-Acceleration",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "CM-Acceleration",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FW-JumpingReach",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FW-JumpingReach",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FW-Acceleration",
+      "seed": 3601306347,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    },
+    {
+      "arm": "FW-Acceleration",
+      "seed": 3786416130,
+      "exact": {
+        "score": true,
+        "team_statistics": true,
+        "finish_tick": true
+      }
+    }
+  ],
+  "negative_probe": {
+    "passed": true,
+    "returncode": 108,
+    "raw_log_sha256": "0a0b86686a2cea989f64cb5a437a6a5f838fa06b230e35bdf6df21e8b630e21f",
+    "invalid_setup_sha256": "1e852b961a1a86762dad77ae24e6153eb9dafe5f52e7dfc84a9ab6fed5a2a4cc"
+  }
+}

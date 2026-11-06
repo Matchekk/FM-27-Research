@@ -1,0 +1,233 @@
+{
+  "build": "27.0.0+2493426",
+  "engine_sha256": "252ff8fb5b7a4a5a5464db6ba632e309eef9b6e65ffa992ae20575a189e66c6a",
+  "adapter_version": "fm27_desktop_2493426_adapter_v1",
+  "adapter_host_sha256": "50c8eef1e3c560974070163ec2c1633508be314bdd31d69de5388470efc0f81a",
+  "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+  "experiment_id": "ATTR-005",
+  "preregistration_commit": "41460cc49e4d0a19eb27f8565d163d4eb39eead3",
+  "lab_release": "v1106",
+  "lab_commit": "756296240632cb71552271f0ae9e9e69d65e34bc",
+  "adapter_source_sha256": {
+    "src\\fm27_tactics_server.py": "4d5f9742a4c28a35491e6da3908fc933f5e9cc116bab21441fa0321ab5688fd4",
+    "src\\desktop_warm_batch.py": "1a286931ae9de57e9f1a4ef2fb91b220c3b4b87b635feb58ccc05f510fa59400",
+    "src\\fm27_simulator.py": "b0af7b6ef6f5e6d2879186a23a52427b8e0c79df1730755f219820767c1196c4",
+    "native\\desktop_host.cpp": "7b3662c40c9bfbe72fb7df369690cb1fc7eadc95a86cb3aadc6e44ecd7060e66",
+    "native\\fm27_engine_compat.h": "936cdf008a64830acf018cda04b024e7515c267861b18e658edef80f7c4151de"
+  },
+  "resource_fingerprint": "bf5346a716ed1871268a0d77f46f66f9010f86730df112b4d53155c982519dd1",
+  "validation_seeds": [
+    3601306347,
+    3786416130
+  ],
+  "seeds": [
+    3443700180,
+    3314910303,
+    3096751238,
+    2798401683,
+    2184377754,
+    2989732133,
+    1092481346,
+    299851413,
+    3879609393,
+    100822782,
+    624857356,
+    384598935,
+    1880821157,
+    4018736080,
+    3497931307,
+    581683285,
+    1356578269,
+    1311019682,
+    939471575,
+    3049185491,
+    822098943,
+    1226474135,
+    2136924247,
+    1162967773,
+    3605862523,
+    1651987143,
+    2592267597,
+    3849574995,
+    462414713,
+    788607473,
+    1242157343,
+    2532125438,
+    3578293823,
+    2542752889,
+    1960876979,
+    3024040985,
+    483144047,
+    2479318012,
+    423021578,
+    474462020,
+    2291169415,
+    1347464771,
+    3865583495,
+    3747252926,
+    33397879,
+    3513672462,
+    1301056401,
+    3104890448,
+    584746145,
+    270505705,
+    399689245,
+    140157665,
+    344083993,
+    3817637924,
+    3727392046,
+    2793561689,
+    1918285985,
+    2326657002,
+    3466746670,
+    4144128695,
+    3187119400,
+    162398344,
+    344388417,
+    176579949,
+    890074497,
+    3791879551,
+    1543672380,
+    3425786448,
+    1175572896,
+    828735060,
+    3864775532,
+    1288834577,
+    1028051975,
+    3500217774,
+    1716830247,
+    2474968980,
+    3789707036,
+    2510794653,
+    3686927042,
+    2781428580,
+    1458141138,
+    2809625707,
+    946851667,
+    171628625,
+    2658462332,
+    2197282614,
+    3128572385,
+    3137312072,
+    2015884833,
+    2856458475,
+    3831063982,
+    1984815212,
+    3651696769,
+    552532339,
+    4231565768,
+    1871115377,
+    799427272,
+    508361806,
+    3673810119,
+    3520623116
+  ],
+  "mode": "quick",
+  "worker_cap": 4,
+  "timeout_seconds": 90,
+  "scenarios": {
+    "standard": {
+      "formation": "433",
+      "opponent_formation": "4231",
+      "mentalities": [
+        4,
+        4
+      ],
+      "tested_side": 0,
+      "active_rosters": [
+        23,
+        26
+      ],
+      "setups": {
+        "baseline": "c9a751584a33048a0cae2389770bd86a6a12d82747118c5143363b9198eafd4b",
+        "CB-JumpingReach": "464a92bcdd2d70c71749dd1ad936f6e4b9002d6a6b0b60c5ceb1c64e833c72d1",
+        "CB-Acceleration": "9305ba49bfbdb248dfcc9776d0e19a7b8913af049c9eecaa791fdd14ab47ea73",
+        "FB-JumpingReach": "6651011ec2da91c42797129f5961aaceb20e24099835ab1eefa5aea2f542e41e",
+        "FB-Acceleration": "f4077e02a7da279a4f8f1a2433a389f8cbacb8027d1f18cf7c4490e076e3afe5",
+        "CM-JumpingReach": "9a1ac0e5eaca29240b89083d10f9655fe2a0bf276d77839b8f1e74d8343d0e95",
+        "CM-Acceleration": "e30f3b0a84f20583045ff074e4b4ce06fbf1c5ced0e503bfd3eb5412c2dae57e",
+        "FW-JumpingReach": "51775ca95d49be46b9a6050e6683b35bc16023691a8ee4332617ce9110620079",
+        "FW-Acceleration": "5422bd7cf3ba2adfba25b4c71fdef2488d56312d8b7d0a77c92789133d5764e2"
+      }
+    }
+  },
+  "code_sha256": {
+    "analysis/run_attr005.py": "fb4d74bd7b6a58bc92077d48596bd766757bc87be92ae7a11ff9fb77822c076d",
+    "analysis/run_attr004.py": "99a74081fc4e9f998f1a9661e0e58b93db438ff543b63055b4ebede2cb460155",
+    "analysis/analyse_attr005.py": "71d0810d3a37631c4e9d2dc682da759d35e51869ace8d531e803fb5ae5c08d4c"
+  },
+  "native_position_groups": {
+    "CB": {
+      "DCR": {
+        "start_slot": 2,
+        "roster_slot": 2,
+        "role": "CentreBack",
+        "native_role": "2097154"
+      },
+      "DCL": {
+        "start_slot": 3,
+        "roster_slot": 3,
+        "role": "CentreBack",
+        "native_role": "2097154"
+      }
+    },
+    "FB": {
+      "DR": {
+        "start_slot": 1,
+        "roster_slot": 1,
+        "role": "FullBack",
+        "native_role": "4194308"
+      },
+      "DL": {
+        "start_slot": 4,
+        "roster_slot": 4,
+        "role": "FullBack",
+        "native_role": "4194308"
+      }
+    },
+    "CM": {
+      "DMC": {
+        "start_slot": 5,
+        "roster_slot": 5,
+        "role": "DefensiveMidfielder",
+        "native_role": "2097168"
+      },
+      "MCR": {
+        "start_slot": 6,
+        "roster_slot": 6,
+        "role": "CentralMidfielder",
+        "native_role": "4194336"
+      },
+      "MCL": {
+        "start_slot": 7,
+        "roster_slot": 7,
+        "role": "AttackingMidfielder",
+        "native_role": "8389120"
+      }
+    },
+    "FW": {
+      "AMR": {
+        "start_slot": 8,
+        "roster_slot": 8,
+        "role": "Winger",
+        "native_role": "4194432"
+      },
+      "AML": {
+        "start_slot": 9,
+        "roster_slot": 9,
+        "role": "Winger",
+        "native_role": "4194432"
+      },
+      "ST": {
+        "start_slot": 10,
+        "roster_slot": 10,
+        "role": "CentreForward",
+        "native_role": "8390656"
+      }
+    }
+  },
+  "publication_counts": {
+    "validation_matches": 36,
+    "validation_failed_attempts": 0
+  }
+}
