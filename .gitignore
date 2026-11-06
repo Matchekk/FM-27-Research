@@ -1,0 +1,39 @@
+# Lokale Umgebungen und temporäre Dateien
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Lokal/private Arbeitspfade
+private/
+local/
+scratch/
+tmp/
+data/private/
+data/raw-local/
+
+# Geschützte oder für Git ungeeignete Spieldateien/Binaries
+*.dll
+*.exe
+*.fm
+*.fmf
+*.pck
+*.zip
+*.7z
+*.rar
+*.db-wal
+*.db-shm
+
+# Geheimnisse
+*.pem
+*.key
+*.p12
+secrets/
