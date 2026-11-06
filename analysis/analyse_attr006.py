@@ -77,7 +77,7 @@ def checked_rows(rows, manifest):
 
 
 def decision(result):
-    lower = result["ci95"][0]
+    lower = float(result["ci95"][0])
     return dict(positive_confirmed=result["p"] < 0.05 and lower > 0, above_practical_margin=lower > MARGIN)
 
 
