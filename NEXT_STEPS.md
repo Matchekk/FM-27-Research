@@ -20,6 +20,8 @@
 ## P3 – Positions-, Taktik- und Trainingsstudien
 - [x] ATTR-005-Positionsscreening mit 900 Hauptmatches abgeschlossen. Der Angriff ist für beide Attribute ein explorativer Kandidat. [Ergebnisbericht](experiments/ATTR-005-ergebnisse.md)
 - [x] ATTR-006 mit 300 neuen Paaren ausgewertet. Positiver xGD-Effekt der Sprunghöhenanhebung bei AMR, AML und ST im Standardfixture bestätigt. [Ergebnisbericht](experiments/ATTR-006-ergebnisse.md)
+- [x] ATTR-007 mit 200 neuen Achtarmblöcken ausgewertet. ST zeigt einen positiven Shapley-Beitrag, der Abstand zum Flügelmittel bleibt nach Holm offen. [Ergebnisbericht](experiments/ATTR-007-ergebnisse.md)
+- [ ] Einen unabhängigen Achtarmversuch mit Shapley(ST) minus Flügelmittel als einzigem Primärkontrast vorregistrieren. Für 0,10 xGD bei 90 % Power liegen die Planungsschätzungen bei 283 bis 337 neuen Seeds. [Fallzahlen](experiments/ATTR-007-ergebnisse.md#fallzahlen-und-vorgeschlagene-folgestudie)
 - [ ] Die praktische Schwelle von +0,10 xGD und die Übertragbarkeit des Eingriffs auf andere Angriffsrollen oder Fixtures in getrennten Designs untersuchen.
 - [ ] Pressing × Defensivlinie in 2×2-Design.
 - [x] Bestehende Karriereversuche mit Kalender-Readback und A/A-Kontrolle archiviert. [TRAIN-001](experiments/TRAIN-001-karriere.md)

@@ -1,5 +1,11 @@
 # Research Log
 
+## 2026-11-07 – ATTR-007 abgeschlossen
+
+- Alle 1.600 Hauptmatches wurden auf Build `27.0.0+2493426` im ersten Versuch akzeptiert. Die 200 neuen Seed-Blöcke enthalten alle acht Arme. [Manifest](data/attr-007/manifest.json)
+- Shapley ST +0,103 xGD, Holm-p = 0,0065. Der direkte Kontrast ST minus Flügelmittel liegt bei +0,088 xGD, Holm-p = 0,104. Alle vier Interaktionen bleiben unsicher. Die Shapley-Summe stimmt in jedem Block exakt mit ALL minus Baseline überein. [Ergebnisse](experiments/ATTR-007-ergebnisse.md)
+- Die eingefrorene Analyse und die unabhängige Nachrechnung stimmen für alle 84 Tests, Bootstrap-Intervalle und 224 Fallzahlminima überein. [Effektarchiv](data/attr-007/effects.json)
+
 ## 2026-11-07 – ATTR-007 vorregistriert und technisch freigegeben
 
 - Die [Vorregistrierung](experiments/ATTR-007-vorregistrierung.md) und der Analysecode wurden vor dem ersten Match in `9ceaf95` gepusht.

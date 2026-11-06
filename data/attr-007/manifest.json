@@ -363,6 +363,10 @@
   },
   "publication_counts": {
     "validation_matches": 32,
-    "validation_failed_attempts": 0
+    "validation_failed_attempts": 0,
+    "matches": 1600,
+    "failed_attempts": 0,
+    "not_run": 0,
+    "excluded_seed_blocks": 0
   }
 }
