@@ -51,3 +51,25 @@ noch nicht automatisch belegt. Sämtliche Freigaben bleiben vorerstfalse.
 Nächster Schritt: Root integriert die geprüften Dateien, registriert frische
 technische Seeds und eigenen persistenten Supervisor und führt die kleine
 vorveröffentlichte Prüfung seriell aus. Kein automatischer MECH-002-Mainlauf.
+
+## Supervisorhärtung vor Registrierung
+
+Der unabhängige Quellenreview fand eine ungesicherte Fehlerkante nach dem
+Host-Popen sowie fehlende Nach-Lock-Hashes. Beide sind vor einem echten Start
+bearbeitet: eigener [Windows-Jobbaustein](CONTAINMENT-005.md) mit blockiertem
+Capsulestart vor Jobzuweisung, dreiprocessigem Limit und nachgewiesenem
+Kernel-ActiveProcesses=0. Unbestätigte Bereinigung erhält Marker, Budgetblocker
+und globale Lease dauerhaft. Der Wrapper verlangt einen persistierten
+bestätigten Abschlussbeleg auch nach scheinbar normaler Rückgabe.
+Der neue Baustein gehört zum Codefreeze.
+
+Fixture, beide Hosts, alle vier Eingabebinaries, Katalog und Konfigurationen
+werden nach Erwerb sämtlicher lesender Handles erneut gehasht. Negative Probes
+müssen neben Exitcode auch den tatsächlichen Ablehnungsgrund belegen.
+Ein Offlineexport erhält selbst bei ungeklärtem Crash alle20Probeplätze und
+kennzeichnet unvollständige Zeitabrechnung; er setzt kein Gate oder Budget zurück.
+
+13 reale Windows-Kerneltests mit harmlosen Pythonprozessen sowie separate
+Wrapper-/TOCTOU-/Crashledgerregressionen bestanden. Das sind weiterhin null
+FM-Starts. Erneuter unabhängiger Review und exakte veröffentlichte CI bleiben
+vor Registrierung beziehungsweise nativer Ausführung erforderlich.

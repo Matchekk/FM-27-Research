@@ -106,6 +106,16 @@ class NightControlTests(unittest.TestCase):
         with self.assertRaises(SystemExit), redirect_stderr(io.StringIO()):
             parse_cli(['run','--study','VALID-005-OBSERVER-V1','--observer-host','unexpected.exe'])
 
+    def test_preparation_native_loader_cannot_escape_reservations(self):
+        from analysis.night_supervise import validate_phase_keys
+        validate_phase_keys('VALID-005-OBSERVER-V1','prepare',[])
+        validate_phase_keys('MECH-003-STAMINA-R0','prepare',['loader-check-image-prepare'])
+        for study,phase,keys in [('MECH-003-STAMINA-R0','prepare',[]),
+                ('VALID-005-OBSERVER-V1','prepare',['undeclared']),
+                ('MECH-003-STAMINA-R0','main',[]),
+                ('MECH-003-STAMINA-R0','technical',['a','a'])]:
+            with self.assertRaises(ValueError):validate_phase_keys(study,phase,keys)
+
 
 if __name__ == '__main__':
     unittest.main()

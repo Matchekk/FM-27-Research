@@ -16,6 +16,14 @@ ROUTES={
 }
 
 
+def validate_phase_keys(study,phase,keys):
+    require(len(keys)==len(set(keys)),'Duplicate program operation keys')
+    if phase=='prepare':
+        expected=['loader-check-image-prepare'] if study=='MECH-003-STAMINA-R0' else []
+        require(keys==expected,'Preparation must reserve its actual declared native probes')
+    else:require(bool(keys),'Execution phase needs nonempty explicit reservations')
+
+
 def parse_cli(argv):
     parser=ArgumentParser(description=__doc__)
     parser.add_argument('command',choices=('run','admitted','status'))
@@ -41,7 +49,8 @@ def main(argv=None):
     require(type(keys) is list and all(type(k) is str and k and len(k)<=200 for k in keys),
             'Explicit unique job-key JSON list required')
     require(args.phase=='prepare' or args.keys_file is not None,'Non-preparation phase needs explicit match reservations')
-    require(not any(a in ('--child','--study-supervisor') for a in arguments),'Cannot inject an inner child mode')
+    validate_phase_keys(args.study,args.phase,keys)
+    require(not any(a in ('--child','--study-supervisor','--capsule') for a in arguments),'Cannot inject an inner child mode')
     if args.command=='admitted':
         # The original token exists only in this authenticated process environment.
         # No token is printed, passed in argv or exported in a public receipt.

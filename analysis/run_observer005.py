@@ -20,7 +20,7 @@ import time
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from research.budget import supervisor_alive
+from research.budget import supervisor_alive, atomic
 from research.coordination import NativeLease
 from research.core import allocate, config_hash, historical_seeds
 from research.native import read, write, rows, require, digest, event
@@ -39,6 +39,7 @@ CONTEXTS=('high_press','deep_block')
 DOCUMENT='experiments/VALID-005-passive-observer.md'
 REVIEW_DOCUMENT='docs/night-001/OBSERVER-RUNNER-REVIEW.md'
 CODE=('analysis/run_observer005.py','analysis/night_supervise.py','research/passive_observer.py',
+      'research/native_process005.py',
       'research/night_control.py','research/budget.py','research/study_budget.py','research/core.py',
       'research/native.py','research/coordination.py','adapters/passive_observer_v1.h',
       'adapters/passive-observer-v1.patch',DOCUMENT,REVIEW_DOCUMENT)
@@ -203,20 +204,66 @@ def clean_environment(mode):
 
 
 def native_call(command,env,log,output,timeout=90,on_start=None):
-    began=time.monotonic();progress=began;signature=None
-    with output.open('xb') as stream:
-        process=subprocess.Popen(command,cwd=RUNTIME/'engine',env=env,stdout=stream,stderr=subprocess.STDOUT,
-                                 creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-        if on_start:on_start()
-        write(output.with_suffix('.process.json'),dict(pid=process.pid,started_utc=datetime.now(timezone.utc).isoformat()))
-        while process.poll() is None:
-            current=(log.stat().st_size,log.stat().st_mtime_ns) if log.exists() else None
-            if current is not None and current!=signature:signature=current;progress=time.monotonic()
-            if time.monotonic()-progress>timeout:
-                subprocess.run(['taskkill','/PID',str(process.pid),'/T','/F'],capture_output=True,timeout=4)
-                process.wait(timeout=4);raise TimeoutError('Native progress timeout; retained original attempt')
-            time.sleep(.1)
-    return process.returncode,time.monotonic()-began
+    # Imported lazily: preparation and public analysis never start a process.
+    from research.native_process005 import contained_call, confirmed_cleanup, CleanupUnconfirmed
+    pending=LOCAL/'native-cleanup-pending.json'
+    with pending.open('x',encoding='utf8') as stream:
+        json.dump(dict(started_utc=datetime.now(timezone.utc).isoformat(),
+                       operation=output.stem),stream)
+        stream.flush();os.fsync(stream.fileno())
+    try:
+        result=contained_call(command,env,log,output,timeout,on_start)
+    except CleanupUnconfirmed:
+        # The parent deliberately retains the global NativeLease and crash state.
+        raise
+    except BaseException as error:
+        if not confirmed_cleanup(output,expected_limit=3):
+            raise CleanupUnconfirmed(dict(origin='observer_wrapper',cause_type=type(error).__name__)) from error
+        pending.unlink()
+        raise
+    else:
+        if not confirmed_cleanup(output,expected_limit=3):
+            raise CleanupUnconfirmed(dict(origin='observer_wrapper',cause_type='MissingConfirmedReceipt'))
+        pending.unlink()
+        return result
+
+
+def verify_locked_identity(frozen,original,observer,fixture):
+    """Rehash after all read leases are held, closing the pre-lock TOCTOU gap."""
+    require(fingerprint()==frozen['identity']['resource_fingerprint'],'Resource drift during lock acquisition')
+    require(digest(fixture)==frozen['identity']['fixture_sha256'],'Locked fixture drift')
+    require(digest(original)==frozen['identity']['adapter_host_sha256'] and
+            digest(observer)==frozen['observer_host_sha256'],'Locked host drift')
+    require(all(digest(LOCAL/'inputs'/(label+'.bin'))==value for label,value in frozen['setups'].items()),
+            'Locked binary input drift')
+    require(config_hash(read(LOCAL/'configs.json'))==frozen['configs_sha256'],'Locked configuration drift')
+    require(digest(RUNTIME/'source/tactics_ui/catalog.json')==frozen['catalog_sha256'],'Locked catalog drift')
+
+
+def audit_negative(evidence,mode,code):
+    expected=252 if mode=='invalid_opt_in' else 108
+    require(code==expected and not any(r.get('event')=='natural_match_finished' for r in evidence),
+            'Negative probe failed')
+    rejected=event(evidence,'native_passive_observer_rejected' if mode=='invalid_opt_in' else 'scenario_rejected')
+    if mode=='invalid_opt_in':require(rejected.get('reason')=='invalid_opt_in','Wrong opt-in rejection cause')
+
+
+def supervised_phase(budget,phase,keys,command,proof):
+    """Keep the lease on an interrupted/unverifiable tree; never auto-take over."""
+    lease=NativeLease(ROOT/'local/global-native',EXPERIMENT,workers=1).acquire()
+    try:
+        owned=lease.assert_owned()
+        with proof.open('x',encoding='utf8') as stream:
+            json.dump({k:owned[k] for k in ('schema','experiment','workers','owner_pid','acquired_utc')},stream,indent=2)
+            stream.flush();os.fsync(stream.fileno())
+        budget.run(phase,'technical',keys,command,ROOT,LOCAL/(phase+'.stdout'))
+    finally:
+        state=budget.load()
+        pending=(LOCAL/'native-cleanup-pending.json').exists()
+        if state['active'] or pending:
+            state.update(halted=True,cleanup_unconfirmed=True,global_native_lease_retained=True)
+            atomic(budget.path,state)
+        else:lease.release()
 
 
 def audit_input(evidence,dump,config,binary,catalog,oop_map):
@@ -294,9 +341,10 @@ def technical():
     spec=importlib.util.spec_from_file_location('night_file_leases',RUNTIME/'source/desktop_engine.py')
     leases=importlib.util.module_from_spec(spec);spec.loader.exec_module(leases)
     fixture=RUNTIME/'engine/fm27_native/fixtures/match.pkm'
-    for path in [*resource_paths().values(),original,observer,fixture,*((LOCAL/'inputs').glob('*.bin'))]:leases.lease(path)
+    for path in [*resource_paths().values(),original,observer,fixture,LOCAL/'configs.json',
+                 RUNTIME/'source/tactics_ui/catalog.json',*((LOCAL/'inputs').glob('*.bin'))]:leases.lease(path)
     try:
-        require(fingerprint()==frozen['identity']['resource_fingerprint'],'Resource drift during lock acquisition')
+        verify_locked_identity(frozen,original,observer,fixture)
         configs=read(LOCAL/'configs.json');catalog=read(RUNTIME/'source/tactics_ui/catalog.json')
         require(digest(RUNTIME/'source/tactics_ui/catalog.json')==frozen['catalog_sha256'],'Catalog drift')
         planned=read(PUBLIC/'job-plan.json');trace={};results=[]
@@ -331,9 +379,8 @@ def technical():
                     require(code==0 and check['compatible'] is True,'Image compatibility failed')
                     row.update(status='ok',stdout_sha256=digest(stdout))
                 elif job['kind']=='negative':
-                    expected=252 if job['mode']=='invalid_opt_in' else 108
                     evidence=rows(log) if log.exists() else []
-                    require(code==expected and not any(r.get('event')=='natural_match_finished' for r in evidence),'Negative probe failed')
+                    audit_negative(evidence,job['mode'],code)
                     row.update(status='expected_rejection',raw_log_sha256=digest(log) if log.exists() else None,
                                stdout_sha256=digest(stdout))
                 else:
@@ -364,7 +411,11 @@ def technical():
 
 
 def export():
-    budget=read(LOCAL/'budget.json');require(budget['active'] is None,'Unreconciled native operation retained')
+    # Offline status export must still expose all unbegun/unresolved probes. It
+    # neither reconciles an active operation nor clears the retained native lease.
+    budget=read(LOCAL/'budget.json')
+    unresolved=bool(budget['active'] or budget.get('cleanup_unconfirmed') or
+                    (LOCAL/'native-cleanup-pending.json').exists())
     data=rows(LOCAL/'ledger.jsonl') if (LOCAL/'ledger.jsonl').exists() else []
     actual={r['key']:r for r in data};require(len(actual)==len(data),'Duplicate probe ledger')
     if (PUBLIC/'job-plan.json').exists():plan=read(PUBLIC/'job-plan.json')
@@ -381,10 +432,15 @@ def export():
     (PUBLIC/'measurements.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in data),encoding='utf8')
     (PUBLIC/'job-accounting.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in accounting),encoding='utf8')
     summary=read(LOCAL/'technical-summary.json') if (LOCAL/'technical-summary.json').exists() else dict(passed=False)
+    if unresolved:summary.update(passed=False,cleanup_unconfirmed=True,native_release_granted=False)
     write(PUBLIC/'technical-summary.json',summary)
     operations=[{k:o[k] for k in ('name','kind','keys','start_utc','child_deadline_utc','elapsed_seconds','returncode','timed_out')} for o in budget['operations']]
     public={k:budget[k] for k in ('experiment','limits','limit_seconds','charged_seconds','reserved','halted','wall_start_utc','wall_deadline_utc','wall_limit_seconds')}
-    public.update(active=None,operations=operations)
+    active=budget['active']
+    public.update(active={k:active[k] for k in ('name','kind','keys','start_utc','child_deadline_utc')} if active else None,
+                  operations=operations,cleanup_unconfirmed=unresolved,
+                  global_native_lease_retained=bool(budget.get('global_native_lease_retained') or unresolved),
+                  charged_seconds_incomplete=unresolved)
     if operations:
         end=max(datetime.fromisoformat(o['start_utc'])+timedelta(seconds=o['elapsed_seconds']) for o in operations)
         public['elapsed_study_window_seconds']=(end-datetime.fromisoformat(budget['wall_start_utc'])).total_seconds()
@@ -425,12 +481,7 @@ def main():
     command=[sys.executable,str(Path(__file__).resolve()),args.phase,'--child']
     if args.observer_host:command.extend(('--observer-host',str(args.observer_host.resolve())))
     if args.build_manifest:command.extend(('--build-manifest',str(args.build_manifest.resolve())))
-    with NativeLease(ROOT/'local/global-native',EXPERIMENT,workers=1) as lease:
-        owned=lease.assert_owned()
-        with proof.open('x',encoding='utf8') as stream:
-            json.dump({k:owned[k] for k in ('schema','experiment','workers','owner_pid','acquired_utc')},stream,indent=2)
-            stream.flush();os.fsync(stream.fileno())
-        budget.run(args.phase,'technical',keys,command,ROOT,LOCAL/(args.phase+'.stdout'))
+    supervised_phase(budget,args.phase,keys,command,proof)
     print((LOCAL/(args.phase+'.stdout')).read_text(encoding='utf8',errors='replace')[-3000:])
 
 
