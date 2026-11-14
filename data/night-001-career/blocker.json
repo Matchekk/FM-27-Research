@@ -1,0 +1,20 @@
+{
+  "status": "blocked_before_semantic_readers",
+  "error_type": "UnsupportedGameError",
+  "error_claims": {
+    "layout": "SaveSummaryLayout",
+    "section": "save_game_summary",
+    "build": "27.0.1+2503222",
+    "schema": 31
+  },
+  "evidence_private_events_sha256": "865877cf99fe610e1435b56ff4ac15b7d62944b3f6146c01b1f032dda5b66b31",
+  "classification": "exact_build_admission_failure_not_proof_of_changed_schema_grammar",
+  "installed_registered_fm27_build": "27.0.0+2486695",
+  "same_summary_schema_already_registered_for_older_build": true,
+  "policy_source_sha256": "fb0ada2a507076a2fbb039287b467ed975db34408a8f786e3466e6b8a2890c96",
+  "layout_source_sha256": "abf9725e5ca5d5eb5a4bff179ceaf1009c578f299b050fed2f2c2ebb0dfb2900",
+  "native_starts": 0,
+  "calendar_advances": 0,
+  "seeds_reserved": 0,
+  "retry_performed": false
+}

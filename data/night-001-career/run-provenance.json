@@ -1,0 +1,11 @@
+{
+  "kind": "post_run_own_code_snapshot_unchanged_since_execution",
+  "recorded_utc": "2026-11-14T17:32:27.282225+00:00",
+  "normalization": "CRLF_to_LF",
+  "source_sha256": {
+    "research/career_readonly004.py": "bb67779acf25c16d50ce316837eb12d54657baa882789a3c8a1f9da4c75a82ee",
+    "analysis/audit_career004.py": "2d2c8c1e51dfaccbaf1884ae5a03585c0943a1427c2f5a7dc0b7cf24a33a18d7"
+  },
+  "private_events_sha256": "865877cf99fe610e1435b56ff4ac15b7d62944b3f6146c01b1f032dda5b66b31",
+  "private_attempt_sha256": "7d2b3d7398a3cb7db5b46b51a211c18d2603e4ff7d349b5f15065b7c9efa2dcc"
+}

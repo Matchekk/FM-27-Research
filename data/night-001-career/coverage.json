@@ -1,0 +1,118 @@
+{
+  "experiment_id": "VALID-004-CAREER-R0",
+  "kind": "single_save_readonly_coverage",
+  "snapshot": {
+    "source_sha256_before": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+    "source_sha256_after_copy": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+    "snapshot_sha256": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+    "bytes": 147130636,
+    "size_unchanged": true,
+    "mtime_unchanged": true,
+    "stable": true,
+    "source_sha256_after_reader": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+    "stable_through_reader": true
+  },
+  "reader": {
+    "package": "fmsave",
+    "version": "0.9.0",
+    "files": {
+      "_save.py": "703da4fd9fa480a7a5cd27d275eb2c8679083b270352824c31665b7691992203",
+      "_container.py": "f15955533c8b8ecdf6e30cf9714e8876473599c5f2f46177718289cf6f98a067",
+      "_version.py": "a0fde1079f14ecba66b77ba90388af09fca0a32c89ce8e76103affb88d8ba42f",
+      "_context.py": "97945e9e75ba175b70cb1276c7d4ac6179ea36d08181f357e873b7697437b535",
+      "models/meta.py": "b50246004cfe581f344a978c3d11412f12a68af6251459630c9d5bbb8782ac0d",
+      "models/training.py": "b8381c9fa1cc1d2878f7b6d67a1a9c13127d681f6e15e9dbca9a28202304b7a7",
+      "models/players.py": "3f88cd9200d514f691afb9d09bd0ebdbd3535985cff5e5e0a05c8e0f535c59b8",
+      "models/tactics.py": "0973a8952b325582dd082d8fcee7c56c34ff8102b6fcdc4e87beaf83c8c7c9a1",
+      "models/staff.py": "459791247686f9d2a1ac63f795095c5179657e05c4eaefb5f364a7aefc0c57ae",
+      "models/injuries.py": "ecb73ba735042292cfbcf15fee38084fb0d49613014760af40196db90aad8cb0",
+      "readers/training.py": "39c7d01079217b3eb2759bb746cf90153fba0b864f9e139ba47f40846618d615",
+      "readers/tactics.py": "10f20bed68a7c3fa398bd57ee85604d3b5a12653002ad1dfc03d99a47cf10741",
+      "readers/players.py": "3067819731813218931b7f01681511a14b8f396e5ec6f54845a98c368cb2f24d"
+    }
+  },
+  "resources": {
+    "status": "completed",
+    "start_utc": "2026-11-14T17:27:50.025506+00:00",
+    "elapsed_seconds": 0.7030000000013388,
+    "max_seconds": 180,
+    "child_started": true,
+    "child_returncode": 0,
+    "max_observed_private_bytes": 901120,
+    "private_bytes_limit": 1610612736,
+    "memory_observation_interval_seconds": 0.2,
+    "hard_kernel_memory_limit": false,
+    "retries": 0,
+    "reader_processes_started": 1
+  },
+  "probes": [
+    {
+      "probe": "open",
+      "status": "failed",
+      "error_type": "UnsupportedGameError"
+    },
+    {
+      "probe": "managed_clubs",
+      "status": "not_started"
+    },
+    {
+      "probe": "clubs",
+      "status": "not_started"
+    },
+    {
+      "probe": "players",
+      "status": "not_started"
+    },
+    {
+      "probe": "training",
+      "status": "not_started"
+    },
+    {
+      "probe": "tactics",
+      "status": "not_started"
+    },
+    {
+      "probe": "selections",
+      "status": "not_started"
+    },
+    {
+      "probe": "set_pieces",
+      "status": "not_started"
+    },
+    {
+      "probe": "staff",
+      "status": "not_started"
+    },
+    {
+      "probe": "staff_lists",
+      "status": "not_started"
+    },
+    {
+      "probe": "injuries",
+      "status": "not_started"
+    },
+    {
+      "probe": "fixtures",
+      "status": "not_started"
+    }
+  ],
+  "native_released": false,
+  "career_advance_released": false,
+  "replay_released": false,
+  "source_semantics_verified": false,
+  "ui_to_save_binding_verified": false,
+  "career_rng_independence_verified": false,
+  "individual_participation_verified": false,
+  "native_starts": 0,
+  "calendar_advances": 0,
+  "seeds_reserved": 0,
+  "missing": [
+    "independent_ui_field_validation",
+    "career_rng_stream_provenance",
+    "individual_actual_session_participation",
+    "session_coach_focus_intensity_binding",
+    "observed_injury_intervals",
+    "passive_native_tactical_effectiveness",
+    "calendar_executor_validation"
+  ]
+}
