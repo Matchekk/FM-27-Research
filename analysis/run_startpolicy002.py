@@ -238,6 +238,14 @@ def assert_inner_admission():
             'One-worker global lease mismatch')
 
 
+def audit_malformed(evidence, code):
+    # Original host starts at "initial"; malformed magic returns before "records".
+    require(type(code) is int and code == 108 and
+            event(evidence, 'scenario_rejected')['stage'] == 'initial' and
+            not any(e.get('event') == 'natural_match_finished' for e in evidence),
+            'Malformed header was not rejected at the original initial stage')
+
+
 def technical():
     frozen = verify_frozen(); review_gate(); registration = read(LOCAL/'registration.json')
     require(registration['inputs_sha256'] == source_hash(PUBLIC/'inputs.json') and
@@ -297,8 +305,7 @@ def technical():
                            engine_sha256=frozen['identity']['engine_sha256'])
                 evidence = rows(log) if log.exists() else []
                 if job['kind'] == 'negative':
-                    require(code == 108 and event(evidence, 'scenario_rejected')['stage'] == 'header' and
-                            not any(e.get('event') == 'natural_match_finished' for e in evidence), 'Malformed input not rejected')
+                    audit_malformed(evidence, code)
                     row['status'] = 'expected_rejection'
                 else:
                     require(code == 0 and dump.exists(), 'Full native probe failed')

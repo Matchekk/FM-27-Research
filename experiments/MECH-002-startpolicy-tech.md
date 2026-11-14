@@ -112,7 +112,16 @@ fields, accumulator, penalty, rawTF33 and nonnull cache89/8A. The112-byte opaque
 near-morale region is excluded because pointer/consumer semantics are unvalidated.
 Finished raw states are retained and described; no requirement to maintain7000,
 no restoration/clamp and no post hoc interpretation as a permanent sharpness
-intervention. Malformed input must yield108/header rejection without finish.
+intervention. The malformed-header input must yield exit108 and exactly one
+`scenario_rejected` event with **`stage="initial"`**, without finish. The original
+host initializes that stage before its magic-header check; `header` describes
+the corrupted input, not an emitted stage. Both source and the completed
+VALID-005 malformed-input private log support `initial`; a synthetic `header`
+stage must fail the auditor.
+Offline regression check:14targeted test cases,13passed and one optional private
+gold skipped in the isolated worktree. The existing private negative log and its
+actual exit108 ledger record were separately read and passed the exact
+`initial` gate. No native command was launched for this correction.
 
 Any input/identity/cache/seed/repeat/control/budget failure stops the series
 immediately. Begun failures and all unbegun attempts remain accounted. Technical

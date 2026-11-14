@@ -188,6 +188,27 @@ class StartpolicyTechnicalTests(unittest.TestCase):
         self.assertEqual(rva_slice(image,0x1000,4),b'own!')
         with self.assertRaises(ValueError): rva_slice(image,0x1020,1)
 
+    def test_malformed_header_requires_observed_initial_stage_not_header_label(self):
+        rejected = dict(event='scenario_rejected',stage='initial')
+        runner.audit_malformed([rejected],108)
+        for events, code in (([dict(rejected,stage='header')],108),
+                             ([dict(rejected,stage='records')],108), ([rejected],109),
+                             ([rejected,dict(event='natural_match_finished')],108),
+                             ([rejected,rejected],108), ([],108)):
+            with self.subTest(events=events,code=code), self.assertRaises(ValueError):
+                runner.audit_malformed(events,code)
+
+    def test_existing_private_malformed_negative_gold(self):
+        directory = runner.ROOT/'local/valid005-observer-v1'
+        log = directory/'technical/negative-binary.jsonl'
+        ledger = directory/'ledger.jsonl'
+        if not log.exists() or not ledger.exists():
+            self.skipTest('Existing private technical negative gold unavailable')
+        from research.native import rows
+        observed = [r for r in rows(ledger) if r['key'] == 'negative-binary']
+        self.assertEqual(len(observed),1)
+        runner.audit_malformed(rows(log),observed[0]['returncode'])
+
 
 if __name__ == '__main__':
     unittest.main()
