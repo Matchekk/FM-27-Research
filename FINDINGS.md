@@ -31,3 +31,22 @@ ATTR-001 bis ATTR-004 werteten jeweils ein Attribut um vier Anzeigepunkte bei ze
 4. Gültigkeitsbereich (Build, Teams, Gegner, Taktiken).
 5. Welche alternative Erklärung weiterhin möglich ist.
 6. Link zu Experimentdokument, Manifest und Rohdaten.
+
+## Ergänzung 14.11.2026 – TACT-001-P0 auf neuem Build
+
+Die obigen ATTR- und TRAIN-Einträge bleiben unverändert Build
+`27.0.0+2493426` zugeordnet. Der folgende Befund verwendet **27.0.1+2503222**.
+
+| ID | Vorregistrierter Kontrast | Ergebnis | Evidenz und Grenze |
+|---|---|---|---|
+| TACT-001-P0 | Pressing×Defensivlinie: combined − press − line + baseline auf xGD; Seitenmittel im Seed, zwei Gegner je 1/2 | +0,020 xGD-DoD, 95-%-t-KI [−0,770; +0,809], p=0,9565; 128 Hauptmatches, 16 unabhängige Seedblöcke | Explorativ, Richtung offen. Kein Nachweis von Äquivalenz, kein Taktiksieger und keine universelle Meta-Aussage. |
+
+Keiner der zehn sekundären DoD-Tests erreicht die vorregistrierte Holm-Schwelle.
+Die Kontrast-SD beträgt 1,818 gegen high_press und 0,831 gegen deep_block.
+23 technische Matches, sieben exakte Wiederholungen und die negative Binärprobe
+bestanden; keine Hauptausfälle, Ausschlüsse oder Retries. Die Vorregistrierung
+wurde in `650a89a`, die technische Freigabe in `c9a4353` vor der Hauptserie gepusht.
+[Ergebnisbericht](experiments/TACT-001-P0-results.md) ·
+[Vorregistrierung](experiments/TACT-001-P0-preregistration.md) ·
+[Matchmessungen](data/tact-001-p0/main.jsonl) ·
+[Effekte und Powerplanung](data/tact-001-p0/effects.json).

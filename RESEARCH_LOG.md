@@ -26,6 +26,25 @@
   Kumulatives Budget 22,553/900 Sekunden, keine Retries oder Ersatzseeds.
   [Technische Freigabe](experiments/TACT-001-P0-validation.md).
 
+## 2026-11-14 – TACT-001-P0 Hauptserie abgeschlossen
+
+- Nach Push der technischen Freigabe `c9a4353` alle 128 vorregistrierten
+  Hauptmatches akzeptiert. 16 vollständige Seedblöcke, keine Ausfälle,
+  Ergebnisexklusionen, Ersatzseeds oder Retries. Keine Holdouts simuliert.
+- Primärer xGD-DoD-Kontrast +0,019756, 95-%-t-KI [−0,769851; +0,809364],
+  p=0,956542. Bootstrap-KI [−0,616687; +0,679748]. Richtung offen.
+  Keiner der zehn Sekundärtests erreicht Holm bei 0,05.
+- SD 1,8184 (high_press) und 0,8306 (deep_block); gepoolt 1,4136, gepoolte
+  einseitige 95-%-Obergrenze 2,0634. Neue Fallzahlplanung für 0,10/0,15/0,20
+  xGD-DoD bei 90 % Power publiziert; keine dieser Serien gestartet.
+- Alle 152 Versuchsplätze abgerechnet: 151 vollständige akzeptierte Matches
+  (128 Haupt-/23 Technikmatches) und eine erwartete negative Eingabe.
+  Dauerhaft verrechnete Wall-Time 108,478/900 Sekunden, keine Budgetrücksetzung.
+- Alle elf Kontraste, t-/Bootstrapintervalle, Holm-Familie, SD-Obergrenzen und
+  sechs Fallzahlminima unabhängig aus öffentlichen Matchzeilen nachgerechnet.
+  [Pilotbericht](experiments/TACT-001-P0-results.md). Stopp nach dem Pilot;
+  kein Gewinner gewählt und keine Optimierung oder Karrierefortschreibung.
+
 ## 2026-11-14 – Bestandsaufnahme und VALID-002
 
 - Leeres Arbeitsverzeichnis mit dem Forschungsrepository verbunden; sauberer Ausgang

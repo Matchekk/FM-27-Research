@@ -4,9 +4,11 @@
 
 1. [VALID-002](experiments/VALID-002-adapter.md) und den tatsächlich freigegebenen
    Fixturekontext beachten. Neue Rollen, PI oder Startprofile zuerst nativ auditieren.
-2. [TACT-001-P0](experiments/TACT-001-discovery.md#erster-begrenzter-pilot) mit
-   128 Hauptmatches separat vorregistrieren: eigener 4-2-3-1-Kontrollarm,
-   Pressing × Linie, zwei fixierte Entdeckungsgegner, neue Seeds; keine OP-Aussage.
+2. [TACT-001-P0 abgeschlossen](experiments/TACT-001-P0-results.md): 128 Hauptmatches,
+   23 technische Matches und Negativprobe. Primärintervall breit, Richtung offen.
+   Nächster separater Planungsschritt: praktisch relevantes Präzisionsziel und
+   Varianzreduktion prüfen, bevor eine größere Interaktionsbestätigung budgetiert
+   wird. Kein automatischer Start der hohen Power-Fallzahlen oder einer Optimierung.
 3. Karriere-PKM-Kapazitätsadapter und Standardsituationszähler sind technische
    Folgearbeiten. TRAIN-Längsschnitt erst nach echtem Kalender-/Teilnahmeaudit.
 4. [Gesamtroadmap](docs/ROADMAP.md) und [externe Studien](docs/EXTERNAL_RESEARCH.md)

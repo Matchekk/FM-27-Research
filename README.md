@@ -1,10 +1,15 @@
 # FM27 Meta Research
 
+> **TACT-001-P0 abgeschlossen (14.11.2026):** 128 Hauptmatches und 23 technische
+> Matches akzeptiert. Pressing×Linie: +0,020 xGD-DoD, 95-%-KI [−0,770; +0,809].
+> Die Richtung bleibt offen; kein Taktiksieger ausgewählt.
+> [Ergebnis und Varianzplanung](experiments/TACT-001-P0-results.md).
+
 > **Plattformstand 14.11.2026:** [VALID-002](experiments/VALID-002-adapter.md)
 > prüft FM27 `27.0.1+2503222` mit Tactics Lab v1114.6: 42 akzeptierte technische
 > Matches, deterministische Wiederholungen, FMF-Roundtrip und Workerchecks.
 > Freigabe für das gebündelte kontrollierte Fixture; Karriere-PKM-Transfer noch
-> gesperrt. Keine neue wissenschaftliche Leistungsserie. [Neue Architektur](docs/PLATFORM.md),
+> gesperrt. Dies ist der technische Basisstand vor TACT-001-P0. [Neue Architektur](docs/PLATFORM.md),
 > [Roadmap aller Module](docs/ROADMAP.md), [TACT-001-Entwurf](experiments/TACT-001-discovery.md).
 > Der anschließende [Plattform-Smoke](data/platform-smoke/report.md) bestand mit
 > vier weiteren A/A-Matches; insgesamt 46 akzeptierte technische Matches.

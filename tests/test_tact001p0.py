@@ -4,6 +4,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import json
 
 import numpy as np
 
@@ -39,6 +40,25 @@ def fixture():
 
 
 class PilotContractTests(unittest.TestCase):
+    def test_published_pilot_reproduces_analysis_and_complete_budget_accounting(self):
+        folder=ROOT/"data/tact-001-p0"
+        self.assertTrue((folder/"effects.json").is_file())
+        receipt=read(folder/"manifest.json")
+        data=[json.loads(line) for line in (folder/"main.jsonl").read_text(encoding="utf8").splitlines()]
+        result=analyse(data,receipt)
+        self.assertEqual(result,read(folder/"effects.json"))
+        budget=read(folder/"budget.json")
+        self.assertLessEqual(budget["charged_seconds"],900)
+        self.assertFalse(budget["halted"])
+        self.assertIsNone(budget["active"])
+        self.assertEqual(sum(kind=="main" for kind in budget["reserved"].values()),128)
+        self.assertEqual(sum(kind=="technical" for kind in budget["reserved"].values()),24)
+        accounted=[json.loads(line) for line in (folder/"job-accounting.jsonl").read_text(encoding="utf8").splitlines()]
+        self.assertEqual(len(accounted),152)
+        self.assertEqual(sum(row["status"]=="ok" for row in accounted),151)
+        self.assertEqual(sum(row["status"]=="expected_rejection" for row in accounted),1)
+        self.assertEqual(len({row["key"] for row in accounted}),152)
+
     def test_cell_hashes_follow_opponent_and_team_side(self):
         receipt,_=fixture()
         jobs=schedule(receipt)
