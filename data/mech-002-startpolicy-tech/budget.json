@@ -1,0 +1,83 @@
+{
+  "experiment": "MECH-002-STARTPOLICY-TECH-V1",
+  "limits": {
+    "technical": 17,
+    "main": 0
+  },
+  "limit_seconds": 180,
+  "charged_seconds": 58.084414200005995,
+  "recorded_charged_seconds": 58.084414200005995,
+  "reserved": {
+    "full-high_press-s0-sharp10000-r0": "technical",
+    "full-high_press-s0-sharp10000-r1": "technical",
+    "full-high_press-s0-sharp7000-r0": "technical",
+    "full-high_press-s0-sharp7000-r1": "technical",
+    "full-high_press-s1-sharp10000-r0": "technical",
+    "full-high_press-s1-sharp10000-r1": "technical",
+    "full-high_press-s1-sharp7000-r0": "technical",
+    "full-high_press-s1-sharp7000-r1": "technical",
+    "full-deep_block-s0-sharp10000-r0": "technical",
+    "full-deep_block-s0-sharp10000-r1": "technical",
+    "full-deep_block-s0-sharp7000-r0": "technical",
+    "full-deep_block-s0-sharp7000-r1": "technical",
+    "full-deep_block-s1-sharp10000-r0": "technical",
+    "full-deep_block-s1-sharp10000-r1": "technical",
+    "full-deep_block-s1-sharp7000-r0": "technical",
+    "full-deep_block-s1-sharp7000-r1": "technical",
+    "negative-malformed": "technical"
+  },
+  "unrecognized_reserved_key_count": 0,
+  "halted": false,
+  "wall_start_utc": "2026-11-14T20:15:53.528385+00:00",
+  "wall_deadline_utc": "2026-11-14T20:30:53.528385+00:00",
+  "wall_limit_seconds": 900,
+  "active": null,
+  "operations": [
+    {
+      "name": "technical",
+      "kind": "technical",
+      "keys": [
+        "full-high_press-s0-sharp10000-r0",
+        "full-high_press-s0-sharp10000-r1",
+        "full-high_press-s0-sharp7000-r0",
+        "full-high_press-s0-sharp7000-r1",
+        "full-high_press-s1-sharp10000-r0",
+        "full-high_press-s1-sharp10000-r1",
+        "full-high_press-s1-sharp7000-r0",
+        "full-high_press-s1-sharp7000-r1",
+        "full-deep_block-s0-sharp10000-r0",
+        "full-deep_block-s0-sharp10000-r1",
+        "full-deep_block-s0-sharp7000-r0",
+        "full-deep_block-s0-sharp7000-r1",
+        "full-deep_block-s1-sharp10000-r0",
+        "full-deep_block-s1-sharp10000-r1",
+        "full-deep_block-s1-sharp7000-r0",
+        "full-deep_block-s1-sharp7000-r1",
+        "negative-malformed"
+      ],
+      "unrecognized_key_count": 0,
+      "start_utc": "2026-11-14T20:15:53.533860+00:00",
+      "child_deadline_utc": "2026-11-14T20:18:48.538860+00:00",
+      "elapsed_seconds": 58.084414200005995,
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "completed_utc": "2026-11-14T20:16:51.631878+00:00",
+  "private_budget_sha256": "dccd774c8a5a09b564a868c8f0e0f0748bd13c0340ff9f36fb93c2295c884361",
+  "actual_study_window_seconds": 58.103493,
+  "cleanup_unconfirmed": false,
+  "global_native_lease_retained": false,
+  "charged_seconds_incomplete": false,
+  "acceptance": {
+    "passed": true,
+    "reasons": [],
+    "accounting_reconciled": true,
+    "final_reconciliation_present": true,
+    "attempt_limit": 17,
+    "child_limit_seconds": 180,
+    "wall_limit_seconds": 900
+  },
+  "budget_read_error_type": null,
+  "reconciliation_read_error_type": null
+}

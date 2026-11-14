@@ -1,0 +1,127 @@
+{
+  "experiment_id": "VALID-004-CAREER-R3-DIAG",
+  "version": "career-marker-runner-v2",
+  "execution_status": "accounted",
+  "diagnostic_status": "captured_expected_marker_failure",
+  "stages": [
+    {
+      "stage": "published_source_and_release_gates",
+      "status": "observed"
+    },
+    {
+      "stage": "snapshot_before",
+      "status": "observed"
+    },
+    {
+      "stage": "open",
+      "status": "observed"
+    },
+    {
+      "stage": "tactics_final_call",
+      "status": "failed",
+      "error_type": "ReaderCheckError"
+    },
+    {
+      "stage": "close_and_snapshot_after",
+      "status": "observed"
+    }
+  ],
+  "invalid_event_lines": 0,
+  "receipt_issues": [],
+  "child_setup": {
+    "status": "verified_official_reader",
+    "package_version": "0.12.4"
+  },
+  "resources": {
+    "elapsed_seconds": 13.922000000005937,
+    "wall_limit_seconds": 180,
+    "reader_processes_started": 1,
+    "child_returncode": 20,
+    "retries": 0,
+    "private_artifact_bytes": 7069,
+    "stdout_bytes": 1953,
+    "within_wall_limit": true,
+    "go_sent": true,
+    "stdout_truncated": false,
+    "status": "child_failed",
+    "cleanup_confirmed": true,
+    "job_policy": {
+      "limit_flags": 8968,
+      "active_process_limit": 1,
+      "process_memory_limit": 3221225472,
+      "job_memory_limit": 3221225472,
+      "peak_process_private_bytes": 874393600,
+      "peak_job_private_bytes": 881004544,
+      "kill_on_close": true,
+      "breakaway_allowed": false
+    }
+  },
+  "snapshot_stable": true,
+  "snapshot_sha256": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+  "marker": {
+    "status": "captured_final_target_failure",
+    "section_bytes": 2267258,
+    "block_bytes": 9644,
+    "cursor_decile_in_block": 0,
+    "remaining_bytes_power2_upper": 16384,
+    "marker_checks": [
+      {
+        "marker_index": 0,
+        "expected_width_bytes": 3,
+        "fully_inside_block": true,
+        "equals_expected_at_cursor": false
+      },
+      {
+        "marker_index": 1,
+        "expected_width_bytes": 3,
+        "fully_inside_block": true,
+        "equals_expected_at_cursor": false
+      },
+      {
+        "marker_index": 2,
+        "expected_width_bytes": 3,
+        "fully_inside_block": true,
+        "equals_expected_at_cursor": false
+      }
+    ],
+    "grammar_changed": false,
+    "scan_performed": false
+  },
+  "warnings": {
+    "count": 1,
+    "categories": {
+      "UnknownBuildWarning": 1
+    },
+    "truncated": false
+  },
+  "reader_open_calls": 1,
+  "tactics_calls": 1,
+  "native_starts": 0,
+  "calendar_advances": 0,
+  "seeds_reserved": 0,
+  "native_semantics_verified": false,
+  "tactics_released": false,
+  "replay_released": false,
+  "training_effect_released": false,
+  "career_advance_released": false,
+  "release": {
+    "published_commit": "0744238cbcbd429dd59602f0470b18a1d9f52057",
+    "ci_run": 43636256046,
+    "review_sha256": "53e37ec38265798112e094c351e26c823a367af20922ff862609d1e846051f02",
+    "reviewed_contract_sha256": "116caf7e203c6a6735218b4f712f4fcf732bba0525cd0e8b6b9ac2087307f5ee"
+  },
+  "contract_sha256_lf": "116caf7e203c6a6735218b4f712f4fcf732bba0525cd0e8b6b9ac2087307f5ee",
+  "evidence_sha256": {
+    "attempt.json": "fa4a4d2bc43a3787d744c9e0e91ade1ee296295c46c11d0b357f3eef647a919b",
+    "child-setup.json": "6f39ff0cbfc8d41333fae1f9e8f0048118d784a0a4df92cd460abd6bf0f67224",
+    "close.json": "328b7a959b69808216ebccbc8fd8917a878877c6d2d8d2ddcdd4a9aa16e30d06",
+    "completion.json": "b063cfdd339ccd169fa83c2cbe705b2092ebf5d3c0ce468e758ed7120fd4adf2",
+    "events.jsonl": "c707f342696e568af42cb44db247ca5de97f2df87d403599000b90fb8ed66464",
+    "launch.json": "1c5f2a9f28785089154a4e06dbcd3efe54adb0283c14ef217c5cb822d34aee14",
+    "marker.json": "3d916e97d94988d48881b01afe8a32f1a51220796d55f5cf418f274b94f8d269",
+    "snapshot-after.json": "40b4c9f7bb553478f8795a35979d13851f59b239a1479cc80221e54746b3675a",
+    "snapshot-before.json": "40b4c9f7bb553478f8795a35979d13851f59b239a1479cc80221e54746b3675a",
+    "stdout.txt": "652d01df6e9f3c04e4e24fd33b0556bb9b8aac7902ff6ae9639c667f790d0b36",
+    "warnings.json": "3412909bfef697be8298804e6f1c849752a084be665e6ed8e73635f706dc77e6"
+  }
+}

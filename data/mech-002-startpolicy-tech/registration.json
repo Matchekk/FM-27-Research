@@ -1,0 +1,31 @@
+{
+  "experiment_id": "MECH-002-STARTPOLICY-TECH-V1",
+  "preregistration_commit": "0744238cbcbd429dd59602f0470b18a1d9f52057",
+  "ci_run": 43636256046,
+  "inputs_sha256": "12454c3f2ab76d6a83be908a4266041b555df7346d00cbdfa259dd909a573aa9",
+  "review_gate_sha256": "c752d460b002a2289e31842dc85e0380a5cccdf6416719b025cf3190a952cc50",
+  "code_sha256": {
+    "analysis/run_startpolicy002.py": "eee6c2d9ce814e4454ff9adc1aedca24f890dd5c793e21471c0d0210d24684d4",
+    "analysis/startpolicy002_gate.py": "6b08fb067e1b5f5e28d8a15cd8f978356d7f50bf51414fde9fa1ff8df5db61a5",
+    "analysis/audit_startpolicy002.py": "9836c72a068e9c7e5a33a9019a9c0ddcd66f38e71bd053070b7b981659e05810",
+    "analysis/startpolicy002_budget.py": "364d3d340f2a18c34da00d21787c7874acaf1102071323b867222632ae455f56",
+    "tests/test_startpolicy002.py": "a4dd4e3a9d7e2999e916cec5fe4acd5fc461253253b2f86724fb6f7768b0cb59",
+    "data/mech-002-startpolicy-tech/offline-source-audit.json": "7336f04bc69e19a92152d4aa8f432bb971b1a8e448022b11d0caaf22827e404e",
+    "analysis/run_observer005.py": "b9e95950aeb1d11199ac215c740efd88e15a387bfde256e8e48aae076f643c9b",
+    "analysis/night_supervise.py": "63bbf08ce8d19474bba956140deca44ab43cef70f7c719cec229090d10148791",
+    "research/startpolicy.py": "28a9eb3689e64c12dfb59ed8e1164d578c416d24ecb342073276126ca1ff4ea9",
+    "research/passive_observer.py": "f947f9f621ac3fbdb8a5789fb89125c3d9cda7cff82b5b9bbdc08db61d5dcc67",
+    "research/native_process005.py": "03c50200bb46c3daaeeba5901502f9eede04f2bba7ad04884b2d3dd6ebaa8faf",
+    "research/night_control.py": "2ebd010b0e5da365780bc315b93c4c662f2496c6cedeba0a2bcc65f4999b5aea",
+    "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+    "research/study_budget.py": "7d20b2b9fd2ea1addb64bbec8f6976b971e8746d9d9977fc2e87370e45c93608",
+    "research/core.py": "94ef5c76f56f65adf495df1632da7cb99701d25c64ad6846a6d45872c6730ab6",
+    "research/native.py": "0a9b143d8b51d3e2108c6f60946ca1ea280da4f455299b8718e7303cc168366c",
+    "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e",
+    "adapters/passive_observer_v1.h": "7d52c726b411051aab3f3299a0583de04c1da0b44de5acd27cfe2f0a636f8c51",
+    "adapters/passive-observer-v1.patch": "3874fefd838b85f1ffec9c2715ecea9fb22348b04c125b04d5c38ba37ad24e31",
+    "experiments/MECH-002-startpolicy-tech.md": "c84190e14312873ef319dff316e2abddd5920e3fe78f445366d53e6eb37aa140",
+    "docs/night-001/STARTPOLICY-002-REVIEW.md": "7343dff02d6233e94727ad57cdb5dfe437ef6bf06a82b7739eec5a3ef8541b71",
+    "docs/night-001/OBSERVER-RESULTS-REVIEW.md": "7e95cdda0a90947d16121ba91d2a448bb56b1e8a6f87bd813f77fd3b75fe524c"
+  }
+}

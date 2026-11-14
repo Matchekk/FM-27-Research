@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "full_matches": 16,
+  "aa_pairs": 8,
+  "negative_rejections": 1,
+  "initial_control_pairs": 8,
+  "raw_and_cache_transfer_verified": true,
+  "scientific_main_released": false,
+  "career_released": false,
+  "ui_scale_calibrated": false,
+  "budget_gate": {
+    "passed": true,
+    "reasons": [],
+    "accounting_reconciled": true,
+    "final_reconciliation_present": true,
+    "attempt_limit": 17,
+    "child_limit_seconds": 180,
+    "wall_limit_seconds": 900
+  }
+}

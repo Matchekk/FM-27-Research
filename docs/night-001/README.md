@@ -101,3 +101,27 @@ Die separate [R3-Parserdiagnose](CAREER-R3-RUNNER.md) hat ihren
 Lesepass bleibt bis exakter öffentlicher CI und Director-Proceed gesperrt.
 Keine Kalender-/Replay-/Trainingsfreigabe. Alle bisherigen Savebytes und
 Forschungsarchive bleiben unverändert.
+
+## Geprüfter Stand 21:36 CET
+
+Die ursprüngliche Startpolicy hat ihre separate technische Prüfung bestanden:
+16 vollständige Matches, acht exakte A/A-Paare und eine erwartete
+Negativabweisung. Das gemeinsame Rohpaket C90/C7A7000 erreicht die beiden
+Actorfelder und Cache8A70 nach Originalvorbereitung und erstem Fortschritt.
+Keine UI-Prozentkalibrierung oder Leistungswirkung wird daraus abgeleitet.
+[Ergebnisse](STARTPOLICY-002-RESULTS.md),
+[unabhängiger Rohreview](STARTPOLICY-002-RESULTS-REVIEW.md) und
+[öffentliche reproduzierbare Prüfung](STARTPOLICY-002-PUBLIC-REVIEW.md).
+Global stehen 170,4746041 von 1800 Childsekunden zu Buche; bisher 64 technische
+Vollmatches und keine wissenschaftlichen Hauptmatches im Nachtprogramm.
+
+Die einmalige [R3-Karrierediagnose](CAREER-R3-RESULTS.md) grenzt den erhaltenen
+Taktikmarkerfehler ein, repariert den Parser aber nicht. Ein Decoder, 13,922s,
+vier beobachtete und eine gescheiterte Stufe; der Save bleibt unverändert.
+[Unabhängiger Review](CAREER-R3-RESULTS-REVIEW.md).
+Karrierefortschreibung, Replay und Trainingswirkung bleiben gesperrt.
+
+Ein eigener [Schärfe×Pressing-Entwurf](SHARPNESS-PLAN.md) wird parallel geprüft.
+Er ist eine neue Studie mit eigener Vorregistrierung, neuen Seeds und
+eigenständigen Technik-, Publikations- und Budgetgates. Keine Übernahme der
+geschlossenen Stamina-Studie und keine Freigabe durch diesen Zwischenstand.
