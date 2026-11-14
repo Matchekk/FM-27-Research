@@ -1,0 +1,438 @@
+{
+  "document_type": "non_executable_planning_contract",
+  "experiment_id": "TACT-001-P1B",
+  "status": "proposal_not_registered",
+  "execution_authorized": false,
+  "native_matches_started": 0,
+  "seeds_reserved": [],
+  "generator": "E=-A*B*C*D",
+  "defining_relation": "I=-ABCDE",
+  "design": [
+    {
+      "id": "D00",
+      "levels": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "id": "D01",
+      "levels": [
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "D02",
+      "levels": [
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "D03",
+      "levels": [
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "id": "D04",
+      "levels": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "D05",
+      "levels": [
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "id": "D06",
+      "levels": [
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "id": "D07",
+      "levels": [
+        -1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "D08",
+      "levels": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "D09",
+      "levels": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "id": "D10",
+      "levels": [
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "id": "D11",
+      "levels": [
+        1,
+        -1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "D12",
+      "levels": [
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "id": "D13",
+      "levels": [
+        1,
+        1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": "D14",
+      "levels": [
+        1,
+        1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "D15",
+      "levels": [
+        1,
+        1,
+        1,
+        1,
+        -1
+      ]
+    }
+  ],
+  "factors": [
+    {
+      "code": "A",
+      "name": "pressing",
+      "native_group": "TriggerPress",
+      "phase": "OOP",
+      "low": {
+        "level": -1,
+        "label": "Standard",
+        "option_id": 1313689463,
+        "native_bit": 0
+      },
+      "high": {
+        "level": 1,
+        "label": "More Often",
+        "option_id": 2000905329,
+        "native_bit": 66
+      }
+    },
+    {
+      "code": "B",
+      "name": "defensive_line",
+      "native_group": "DefensiveLine",
+      "phase": "OOP",
+      "low": {
+        "level": -1,
+        "label": "Standard",
+        "option_id": 894978671,
+        "native_bit": 0
+      },
+      "high": {
+        "level": 1,
+        "label": "Higher",
+        "option_id": 1329018200,
+        "native_bit": 57
+      }
+    },
+    {
+      "code": "C",
+      "name": "tempo",
+      "native_group": "Tempo",
+      "phase": "IP",
+      "low": {
+        "level": -1,
+        "label": "Standard",
+        "option_id": 1496610426,
+        "native_bit": 0
+      },
+      "high": {
+        "level": 1,
+        "label": "Higher",
+        "option_id": 1345339954,
+        "native_bit": 47
+      }
+    },
+    {
+      "code": "D",
+      "name": "directness",
+      "native_group": "PassingDirectness",
+      "phase": "IP",
+      "low": {
+        "level": -1,
+        "label": "Standard",
+        "option_id": 1483944022,
+        "native_bit": 0
+      },
+      "high": {
+        "level": 1,
+        "label": "Shorter",
+        "option_id": 1146434657,
+        "native_bit": 3
+      }
+    },
+    {
+      "code": "E",
+      "name": "width",
+      "native_group": "AttackingWidth",
+      "phase": "IP",
+      "low": {
+        "level": -1,
+        "label": "Standard",
+        "option_id": 1951095402,
+        "native_bit": 0
+      },
+      "high": {
+        "level": 1,
+        "label": "Wider",
+        "option_id": 1244744824,
+        "native_bit": 51
+      }
+    }
+  ],
+  "catalog": {
+    "sha256": "c08a8aa77c371aaafb29956c6c794b1580f7751547720dc6da4b83b63b32480c",
+    "tool": "v1114.6",
+    "provenance": "P1A static local file read; not a native validation of new levels"
+  },
+  "contexts": [
+    "high_press",
+    "deep_block"
+  ],
+  "context_weights": [
+    0.5,
+    0.5
+  ],
+  "sides": [
+    0,
+    1
+  ],
+  "side_weights": [
+    0.5,
+    0.5
+  ],
+  "fixed_input_source": "data/tact-001-p0/inputs.json",
+  "holdouts": [
+    "holdout_midblock",
+    "holdout_direct_counter"
+  ],
+  "holdout_execution": false,
+  "estimand": "five high-minus-low main contrasts in the negative half-fraction; not unaliased full-factorial effects",
+  "primary_metric": "xgd",
+  "primary_family": {
+    "contrasts": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "correction": "Holm",
+    "alpha": 0.05,
+    "planning_alpha_per_test": 0.01
+  },
+  "min_practically_relevant_xgd": 0.2,
+  "desired_power_per_contrast": 0.9,
+  "desired_marginal_ci95_full_width": 0.3,
+  "secondary_family": {
+    "metrics": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "main_contrasts": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "size": 25,
+    "correction": "Holm"
+  },
+  "interaction_family": {
+    "contrasts": [
+      "AB",
+      "AC",
+      "AD",
+      "AE",
+      "BC",
+      "BD",
+      "BE",
+      "CD",
+      "CE",
+      "DE"
+    ],
+    "physical_scale": "difference of differences",
+    "size": 10,
+    "correction": "Holm",
+    "exploratory": true
+  },
+  "plausibility_metrics": [
+    "shots_for",
+    "shots_against",
+    "sot_for",
+    "sot_against",
+    "possession_for"
+  ],
+  "budgets": [
+    {
+      "name": "small",
+      "main_blocks_per_context": 16,
+      "main_blocks": 32,
+      "main_matches": 1024,
+      "technical_match_attempts": 73,
+      "maximum_full_matches": 1096,
+      "maximum_match_attempts": 1097,
+      "child_wall_seconds": 1200,
+      "wall_deadline_seconds": 1200,
+      "conditional_power": 0.6112865412954264
+    },
+    {
+      "name": "recommended",
+      "main_blocks_per_context": 32,
+      "main_blocks": 64,
+      "main_matches": 2048,
+      "technical_match_attempts": 73,
+      "maximum_full_matches": 2120,
+      "maximum_match_attempts": 2121,
+      "child_wall_seconds": 2400,
+      "wall_deadline_seconds": 2400,
+      "conditional_power": 0.9457376763263255
+    }
+  ],
+  "recommended_budget": "recommended",
+  "max_workers": 4,
+  "no_progress_timeout_seconds": 90,
+  "technical_plan": {
+    "unique_readback_matches": 64,
+    "repeat_matches": 8,
+    "negative_attempts": 1,
+    "distinct_technical_seeds_needed": 3,
+    "repeat_cells": [
+      {
+        "context": "high_press",
+        "side": 0,
+        "design": "D00"
+      },
+      {
+        "context": "high_press",
+        "side": 0,
+        "design": "D01"
+      },
+      {
+        "context": "high_press",
+        "side": 1,
+        "design": "D00"
+      },
+      {
+        "context": "high_press",
+        "side": 1,
+        "design": "D01"
+      },
+      {
+        "context": "deep_block",
+        "side": 0,
+        "design": "D00"
+      },
+      {
+        "context": "deep_block",
+        "side": 0,
+        "design": "D01"
+      },
+      {
+        "context": "deep_block",
+        "side": 1,
+        "design": "D00"
+      },
+      {
+        "context": "deep_block",
+        "side": 1,
+        "design": "D01"
+      }
+    ]
+  },
+  "stopping": "fixed sample or technical/budget failure; no result-dependent extension; no partial-block performance inference",
+  "missing_before_registration": [
+    "actual identity recheck and native legality/readbacks",
+    "64 concrete setup hashes",
+    "exact new main/technical seed values and registry receipt",
+    "preregistration/analysis/runner commit and file hashes",
+    "persistent budget/deadline implementation and tests",
+    "separate published technical gate"
+  ],
+  "confirmation": "separate future registration; fresh seeds and untouched contexts; actual points primary; not authorized here"
+}

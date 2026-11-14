@@ -1,0 +1,1347 @@
+{
+  "exploratory_forecasts": true,
+  "known_contrasts": {
+    "press_isolated": {
+      "cost_per_seed_block": 4,
+      "balanced_1000": {
+        "counts": [
+          125,
+          125
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.0036156741704693324,
+        "se": 0.06013047622021077,
+        "df": 244.28194493360385,
+        "half_width": 0.11844036162037364,
+        "power": 0.9119773381344977,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_1000": {
+        "counts": [
+          117,
+          133
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.0036018790861490294,
+        "se": 0.06001565700839265,
+        "df": 247.99456223389046,
+        "half_width": 0.11820538958947172,
+        "power": 0.9130165681068342,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_high_press_fraction": 0.4690390503387455,
+      "variance_saved_fraction": 0.0038153560497715677,
+      "optimal_fraction_bootstrap_range95": [
+        0.3301615194263602,
+        0.6276879366551359
+      ],
+      "allocation_uncertainty_note": "Descriptive resampling range from eight blocks/context, not validated future efficiency or a coverage guarantee.",
+      "information_per_1000": 277.63286220392143
+    },
+    "line_isolated": {
+      "cost_per_seed_block": 4,
+      "balanced_1000": {
+        "counts": [
+          125,
+          125
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.004372014016884027,
+        "se": 0.06612120701321193,
+        "df": 154.2982891283099,
+        "half_width": 0.13061965511662046,
+        "power": 0.852198016648256,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_1000": {
+        "counts": [
+          185,
+          65
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.0035559305640093367,
+        "se": 0.05963162385856465,
+        "df": 247.98930363660676,
+        "half_width": 0.1174490193785943,
+        "power": 0.9163520327138421,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_high_press_fraction": 0.7395311411652773,
+      "variance_saved_fraction": 0.1866607585710166,
+      "optimal_fraction_bootstrap_range95": [
+        0.6132006627939294,
+        0.8555695944977301
+      ],
+      "allocation_uncertainty_note": "Descriptive resampling range from eight blocks/context, not validated future efficiency or a coverage guarantee.",
+      "information_per_1000": 281.2203393736949
+    },
+    "combined": {
+      "cost_per_seed_block": 4,
+      "balanced_1000": {
+        "counts": [
+          125,
+          125
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.005870633638759995,
+        "se": 0.0766200602894568,
+        "df": 208.14021174099642,
+        "half_width": 0.15105084694602883,
+        "power": 0.7383495085371221,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_1000": {
+        "counts": [
+          154,
+          96
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.005574662012448437,
+        "se": 0.07466365924898428,
+        "df": 247.9933760914152,
+        "half_width": 0.14705574472781272,
+        "power": 0.7606312505455327,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_high_press_fraction": 0.6152118324197978,
+      "variance_saved_fraction": 0.05041561857266119,
+      "optimal_fraction_bootstrap_range95": [
+        0.4682013274674112,
+        0.7725223031558113
+      ],
+      "allocation_uncertainty_note": "Descriptive resampling range from eight blocks/context, not validated future efficiency or a coverage guarantee.",
+      "information_per_1000": 179.38307251039814
+    },
+    "interaction": {
+      "cost_per_seed_block": 8,
+      "balanced_1000": {
+        "counts": [
+          62,
+          63
+        ],
+        "seed_blocks": 125,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.016070373070199102,
+        "se": 0.1267689751879343,
+        "df": 85.09050736725642,
+        "half_width": 0.2520468148020945,
+        "power": 0.34476168731836626,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_1000": {
+        "counts": [
+          86,
+          39
+        ],
+        "seed_blocks": 125,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.01403411853016047,
+        "se": 0.11846568503225087,
+        "df": 122.97824456744182,
+        "half_width": 0.2344959719083461,
+        "power": 0.3880013239791744,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_high_press_fraction": 0.6864577102923991,
+      "variance_saved_fraction": 0.1267086041589578,
+      "optimal_fraction_bootstrap_range95": [
+        0.5277168283111437,
+        0.8186362308604136
+      ],
+      "allocation_uncertainty_note": "Descriptive resampling range from eight blocks/context, not validated future efficiency or a coverage guarantee.",
+      "information_per_1000": 71.25492048901526
+    },
+    "press_marginal": {
+      "cost_per_seed_block": 8,
+      "balanced_1000": {
+        "counts": [
+          62,
+          63
+        ],
+        "seed_blocks": 125,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.005242187434446303,
+        "se": 0.07240295183517247,
+        "df": 122.14540390927223,
+        "half_width": 0.14332716567275627,
+        "power": 0.7824750060977236,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_1000": {
+        "counts": [
+          65,
+          60
+        ],
+        "seed_blocks": 125,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.005233237276391389,
+        "se": 0.07234111746711816,
+        "df": 122.97911025334255,
+        "half_width": 0.143195048070648,
+        "power": 0.7832069288765883,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_high_press_fraction": 0.5169076436757519,
+      "variance_saved_fraction": 0.0017073327054472065,
+      "optimal_fraction_bootstrap_range95": [
+        0.31215826008471464,
+        0.6621430054791363
+      ],
+      "allocation_uncertainty_note": "Descriptive resampling range from eight blocks/context, not validated future efficiency or a coverage guarantee.",
+      "information_per_1000": 191.08630990444144
+    },
+    "line_marginal": {
+      "cost_per_seed_block": 8,
+      "balanced_1000": {
+        "counts": [
+          62,
+          63
+        ],
+        "seed_blocks": 125,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.003993427605012905,
+        "se": 0.06319357249762751,
+        "df": 101.2278804923703,
+        "half_width": 0.12535562789036855,
+        "power": 0.8799527344329747,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_1000": {
+        "counts": [
+          77,
+          48
+        ],
+        "seed_blocks": 125,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.0037669111394668005,
+        "se": 0.06137516712373825,
+        "df": 122.99403691434337,
+        "half_width": 0.12148843862019292,
+        "power": 0.8985149713186471,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "optimal_high_press_fraction": 0.6186382442969857,
+      "variance_saved_fraction": 0.05672231675409889,
+      "optimal_fraction_bootstrap_range95": [
+        0.45779128246790934,
+        0.7516690513734109
+      ],
+      "allocation_uncertainty_note": "Descriptive resampling range from eight blocks/context, not validated future efficiency or a coverage guarantee.",
+      "information_per_1000": 265.4694955563906
+    }
+  },
+  "independent_side_seed_options": {
+    "press_isolated": {
+      "independent_seed_side_blocks": 500,
+      "counts": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "matches": 1000,
+      "se": 0.06068762147254918,
+      "variance_ratio_to_paired_sides": 1.018617061812664,
+      "caveat": "Counterfactual from P0 marginal variances; independent side seeds were not executed."
+    },
+    "line_isolated": {
+      "independent_seed_side_blocks": 500,
+      "counts": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "matches": 1000,
+      "se": 0.06072791750671068,
+      "variance_ratio_to_paired_sides": 0.843519702924064,
+      "caveat": "Counterfactual from P0 marginal variances; independent side seeds were not executed."
+    },
+    "combined": {
+      "independent_seed_side_blocks": 500,
+      "counts": [
+        125,
+        125,
+        125,
+        125
+      ],
+      "matches": 1000,
+      "se": 0.06530535016344595,
+      "variance_ratio_to_paired_sides": 0.7264614047472917,
+      "caveat": "Counterfactual from P0 marginal variances; independent side seeds were not executed."
+    },
+    "interaction": {
+      "independent_seed_side_blocks": 250,
+      "counts": [
+        63,
+        63,
+        62,
+        62
+      ],
+      "matches": 1000,
+      "se": 0.11332645099428104,
+      "variance_ratio_to_paired_sides": 0.7991652987057921,
+      "caveat": "Counterfactual from P0 marginal variances; independent side seeds were not executed."
+    },
+    "press_marginal": {
+      "independent_seed_side_blocks": 250,
+      "counts": [
+        63,
+        63,
+        62,
+        62
+      ],
+      "matches": 1000,
+      "se": 0.06849407873517625,
+      "variance_ratio_to_paired_sides": 0.8949391605025755,
+      "caveat": "Counterfactual from P0 marginal variances; independent side seeds were not executed."
+    },
+    "line_marginal": {
+      "independent_seed_side_blocks": 250,
+      "counts": [
+        63,
+        63,
+        62,
+        62
+      ],
+      "matches": 1000,
+      "se": 0.05724863042484793,
+      "variance_ratio_to_paired_sides": 0.8206999123777112,
+      "caveat": "Counterfactual from P0 marginal variances; independent side seeds were not executed."
+    }
+  },
+  "control_variates": {
+    "press_isolated": {
+      "ordinary_optimally_stratified": {
+        "counts": [
+          117,
+          133
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.0036018790861490294,
+        "se": 0.06001565700839265,
+        "df": 247.99456223389052,
+        "half_width": 0.11820538958947172,
+        "power": 0.9130165681068343,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "alternatives": [
+        {
+          "calibration_ratio": 0.25,
+          "paired_blocks": [
+            101,
+            120
+          ],
+          "calibration_blocks": [
+            26,
+            30
+          ],
+          "beta": [
+            -0.1886966932760521,
+            -0.17840024503193475
+          ],
+          "matches": 996,
+          "se": 0.060126405479259855,
+          "variance": 0.0036151846358563697,
+          "variance_ratio_to_ordinary": 1.0036940578484455,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 0.5,
+          "paired_blocks": [
+            89,
+            110
+          ],
+          "calibration_blocks": [
+            45,
+            55
+          ],
+          "beta": [
+            -0.3144944887934202,
+            -0.29733374171989124
+          ],
+          "matches": 996,
+          "se": 0.06066897126899957,
+          "variance": 0.0036807240748386954,
+          "variance_ratio_to_ordinary": 1.0218899598803477,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 1,
+          "paired_blocks": [
+            72,
+            94
+          ],
+          "calibration_blocks": [
+            72,
+            94
+          ],
+          "beta": [
+            -0.47174173319013024,
+            -0.44600061257983686
+          ],
+          "matches": 996,
+          "se": 0.06250183134433382,
+          "variance": 0.00390647892139555,
+          "variance_ratio_to_ordinary": 1.0845669240863345,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 2,
+          "paired_blocks": [
+            52,
+            72
+          ],
+          "calibration_blocks": [
+            104,
+            144
+          ],
+          "beta": [
+            -0.6289889775868404,
+            -0.5946674834397825
+          ],
+          "matches": 992,
+          "se": 0.0673417461233379,
+          "variance": 0.004534910770940096,
+          "variance_ratio_to_ordinary": 1.2590402571754908,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 4,
+          "paired_blocks": [
+            33,
+            50
+          ],
+          "calibration_blocks": [
+            132,
+            200
+          ],
+          "beta": [
+            -0.7547867731042084,
+            -0.713600980127739
+          ],
+          "matches": 996,
+          "se": 0.07698477547004894,
+          "variance": 0.005926655654173849,
+          "variance_ratio_to_ordinary": 1.6454343725653402,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 8,
+          "paired_blocks": [
+            19,
+            30
+          ],
+          "calibration_blocks": [
+            152,
+            240
+          ],
+          "beta": [
+            -0.8386519701157871,
+            -0.7928899779197099
+          ],
+          "matches": 980,
+          "se": 0.09518536831676298,
+          "variance": 0.009060254341597827,
+          "variance_ratio_to_ordinary": 2.5154243451533103,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        }
+      ],
+      "oracle_known_mean_max_r2": [
+        0.7595162381438684,
+        0.370786167993798
+      ],
+      "caveat": "Oracle gain excludes unavailable known baseline means; finite-calibration costs above are the realistic comparator."
+    },
+    "line_isolated": {
+      "ordinary_optimally_stratified": {
+        "counts": [
+          185,
+          65
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.003555930564009336,
+        "se": 0.059631623858564645,
+        "df": 247.98930363660673,
+        "half_width": 0.11744901937859428,
+        "power": 0.916352032713842,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "alternatives": [
+        {
+          "calibration_ratio": 0.25,
+          "paired_blocks": [
+            165,
+            56
+          ],
+          "calibration_blocks": [
+            42,
+            14
+          ],
+          "beta": [
+            -0.24841530083852031,
+            -0.12750312537001288
+          ],
+          "matches": 996,
+          "se": 0.05942470400995154,
+          "variance": 0.003531295446670351,
+          "variance_ratio_to_ordinary": 0.9930721039414199,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 0.5,
+          "paired_blocks": [
+            150,
+            49
+          ],
+          "calibration_blocks": [
+            75,
+            25
+          ],
+          "beta": [
+            -0.41402550139753386,
+            -0.21250520895002145
+          ],
+          "matches": 996,
+          "se": 0.05967584608053045,
+          "variance": 0.0035612066054271614,
+          "variance_ratio_to_ordinary": 1.0014837301580706,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 1,
+          "paired_blocks": [
+            126,
+            40
+          ],
+          "calibration_blocks": [
+            126,
+            40
+          ],
+          "beta": [
+            -0.6210382520963008,
+            -0.3187578134250322
+          ],
+          "matches": 996,
+          "se": 0.06107915244562182,
+          "variance": 0.00373066286347551,
+          "variance_ratio_to_ordinary": 1.0491382765554236,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 2,
+          "paired_blocks": [
+            96,
+            28
+          ],
+          "calibration_blocks": [
+            192,
+            56
+          ],
+          "beta": [
+            -0.8280510027950677,
+            -0.4250104179000429
+          ],
+          "matches": 992,
+          "se": 0.06529041536751537,
+          "variance": 0.004262838338862688,
+          "variance_ratio_to_ordinary": 1.198796844350163,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 4,
+          "paired_blocks": [
+            65,
+            18
+          ],
+          "calibration_blocks": [
+            260,
+            72
+          ],
+          "beta": [
+            -0.9936612033540813,
+            -0.5100125014800515
+          ],
+          "matches": 996,
+          "se": 0.07405531078937004,
+          "variance": 0.005484189056110186,
+          "variance_ratio_to_ordinary": 1.5422655075488105,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 8,
+          "paired_blocks": [
+            39,
+            10
+          ],
+          "calibration_blocks": [
+            312,
+            80
+          ],
+          "beta": [
+            -1.104068003726757,
+            -0.5666805572000572
+          ],
+          "matches": 980,
+          "se": 0.0909968879871153,
+          "variance": 0.00828043362333961,
+          "variance_ratio_to_ordinary": 2.3286263537169196,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        }
+      ],
+      "oracle_known_mean_max_r2": [
+        0.5363455844521956,
+        0.797190860582126
+      ],
+      "caveat": "Oracle gain excludes unavailable known baseline means; finite-calibration costs above are the realistic comparator."
+    },
+    "combined": {
+      "ordinary_optimally_stratified": {
+        "counts": [
+          154,
+          96
+        ],
+        "seed_blocks": 250,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.0055746620124484374,
+        "se": 0.07466365924898428,
+        "df": 247.9933760914153,
+        "half_width": 0.14705574472781272,
+        "power": 0.7606312505455327,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "alternatives": [
+        {
+          "calibration_ratio": 0.25,
+          "paired_blocks": [
+            135,
+            86
+          ],
+          "calibration_blocks": [
+            34,
+            22
+          ],
+          "beta": [
+            -0.3008899988297602,
+            -0.19675519205642059
+          ],
+          "matches": 996,
+          "se": 0.07392874626983484,
+          "variance": 0.005465459525029619,
+          "variance_ratio_to_ordinary": 0.9804109222810343,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 0.5,
+          "paired_blocks": [
+            121,
+            78
+          ],
+          "calibration_blocks": [
+            61,
+            39
+          ],
+          "beta": [
+            -0.5014833313829337,
+            -0.3279253200940343
+          ],
+          "matches": 996,
+          "se": 0.07386396736984721,
+          "variance": 0.0054558856756138545,
+          "variance_ratio_to_ordinary": 0.9786935357570825,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 1,
+          "paired_blocks": [
+            100,
+            66
+          ],
+          "calibration_blocks": [
+            100,
+            66
+          ],
+          "beta": [
+            -0.7522249970744005,
+            -0.49188798014105145
+          ],
+          "matches": 996,
+          "se": 0.07497391112295437,
+          "variance": 0.005621087349072661,
+          "variance_ratio_to_ordinary": 1.0083279195259827,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 2,
+          "paired_blocks": [
+            73,
+            51
+          ],
+          "calibration_blocks": [
+            146,
+            102
+          ],
+          "beta": [
+            -1.0029666627658673,
+            -0.6558506401880686
+          ],
+          "matches": 992,
+          "se": 0.07925527576399068,
+          "variance": 0.006281398736426208,
+          "variance_ratio_to_ordinary": 1.1267766050030656,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 4,
+          "paired_blocks": [
+            48,
+            34
+          ],
+          "calibration_blocks": [
+            192,
+            136
+          ],
+          "beta": [
+            -1.2035599953190408,
+            -0.7870207682256823
+          ],
+          "matches": 984,
+          "se": 0.08937654552603996,
+          "variance": 0.007988166890168295,
+          "variance_ratio_to_ordinary": 1.4329419204842206,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 8,
+          "paired_blocks": [
+            28,
+            21
+          ],
+          "calibration_blocks": [
+            224,
+            168
+          ],
+          "beta": [
+            -1.3372888836878232,
+            -0.8744675202507581
+          ],
+          "matches": 980,
+          "se": 0.1080436579121001,
+          "variance": 0.011673432015026911,
+          "variance_ratio_to_ordinary": 2.0940161015967753,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        }
+      ],
+      "oracle_known_mean_max_r2": [
+        0.7252746180176223,
+        0.554851321998769
+      ],
+      "caveat": "Oracle gain excludes unavailable known baseline means; finite-calibration costs above are the realistic comparator."
+    },
+    "interaction": {
+      "ordinary_optimally_stratified": {
+        "counts": [
+          86,
+          39
+        ],
+        "seed_blocks": 125,
+        "matches": 1000,
+        "unspent_matches": 0,
+        "variance": 0.014034118530160468,
+        "se": 0.11846568503225087,
+        "df": 122.97824456744183,
+        "half_width": 0.2344959719083461,
+        "power": 0.38800132397917464,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "alternatives": [
+        {
+          "calibration_ratio": 0.25,
+          "paired_blocks": [
+            81,
+            36
+          ],
+          "calibration_blocks": [
+            21,
+            9
+          ],
+          "beta": [
+            0.13622199528481221,
+            0.10914817834552701
+          ],
+          "matches": 996,
+          "se": 0.12083489620459846,
+          "variance": 0.014601072140776085,
+          "variance_ratio_to_ordinary": 1.040398234445376,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 0.5,
+          "paired_blocks": [
+            76,
+            34
+          ],
+          "calibration_blocks": [
+            38,
+            17
+          ],
+          "beta": [
+            0.22703665880802035,
+            0.18191363057587837
+          ],
+          "matches": 990,
+          "se": 0.12353064367457443,
+          "variance": 0.015259819926654676,
+          "variance_ratio_to_ordinary": 1.08733725555047,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 1,
+          "paired_blocks": [
+            69,
+            30
+          ],
+          "calibration_blocks": [
+            69,
+            30
+          ],
+          "beta": [
+            0.3405549882120305,
+            0.27287044586381753
+          ],
+          "matches": 990,
+          "se": 0.12873803967714317,
+          "variance": 0.01657348285991369,
+          "variance_ratio_to_ordinary": 1.1809422034092074,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 2,
+          "paired_blocks": [
+            57,
+            25
+          ],
+          "calibration_blocks": [
+            114,
+            50
+          ],
+          "beta": [
+            0.4540733176160407,
+            0.36382726115175673
+          ],
+          "matches": 984,
+          "se": 0.13980035031977345,
+          "variance": 0.01954413794953138,
+          "variance_ratio_to_ordinary": 1.3926159956202044,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 4,
+          "paired_blocks": [
+            43,
+            18
+          ],
+          "calibration_blocks": [
+            172,
+            72
+          ],
+          "beta": [
+            0.5448879811392489,
+            0.43659271338210803
+          ],
+          "matches": 976,
+          "se": 0.16056290774141324,
+          "variance": 0.025780447342377576,
+          "variance_ratio_to_ordinary": 1.8369837255523593,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        },
+        {
+          "calibration_ratio": 8,
+          "paired_blocks": [
+            29,
+            12
+          ],
+          "calibration_blocks": [
+            232,
+            96
+          ],
+          "beta": [
+            0.6054310901547209,
+            0.485103014869009
+          ],
+          "matches": 984,
+          "se": 0.19458426000072834,
+          "variance": 0.03786303424003105,
+          "variance_ratio_to_ordinary": 2.697927494246275,
+          "assumptions": "P0 covariance transfers, beta frozen before new data, independent new calibration sample; approximate integer allocation"
+        }
+      ],
+      "oracle_known_mean_max_r2": [
+        0.094857200188887,
+        0.2043033280827134
+      ],
+      "caveat": "Oracle gain excludes unavailable known baseline means; finite-calibration costs above are the realistic comparator."
+    }
+  },
+  "orthogonal_noise_tau2": {
+    "high_press": 0.7488539455503739,
+    "deep_block": 0.3523372627940198
+  },
+  "doe_forecasts": [
+    {
+      "budget_matches": 512,
+      "seed_blocks": 16,
+      "blocks_per_context": 8,
+      "marginal95": {
+        "variance": 0.008603056315190576,
+        "se": 0.09275266203829718,
+        "df": 12.393137466613279,
+        "half_width": 0.20138196176678558,
+        "power": 0.5113168047447914,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "bonferroni5": {
+        "variance": 0.008603056315190576,
+        "se": 0.09275266203829718,
+        "df": 12.393137466613279,
+        "half_width": 0.28168874680041023,
+        "power": 0.24208465871703935,
+        "alpha": 0.01,
+        "effect": 0.2
+      },
+      "variance_transfer_sensitivity": {
+        "0.5": {
+          "variance": 0.004301528157595288,
+          "se": 0.06558603630038401,
+          "df": 12.393137466613279,
+          "half_width": 0.1991840230465105,
+          "power": 0.5268559527758567,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "1.0": {
+          "variance": 0.008603056315190576,
+          "se": 0.09275266203829718,
+          "df": 12.393137466613279,
+          "half_width": 0.28168874680041023,
+          "power": 0.24208465871703935,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "2.0": {
+          "variance": 0.017206112630381153,
+          "se": 0.13117207260076802,
+          "df": 12.393137466613279,
+          "half_width": 0.398368046093021,
+          "power": 0.10651412255143419,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "4.0": {
+          "variance": 0.034412225260762305,
+          "se": 0.18550532407659437,
+          "df": 12.393137466613279,
+          "half_width": 0.5633774936008205,
+          "power": 0.05140968950122341,
+          "alpha": 0.01,
+          "effect": 0.2
+        }
+      },
+      "main_effects": 5,
+      "two_factor_alias_contrasts": 10,
+      "information_per_1000_per_main": 227.02687608255346
+    },
+    {
+      "budget_matches": 1024,
+      "seed_blocks": 32,
+      "blocks_per_context": 16,
+      "marginal95": {
+        "variance": 0.004301528157595288,
+        "se": 0.06558603630038401,
+        "df": 26.55672314274274,
+        "half_width": 0.13467661209617598,
+        "power": 0.8358514562343534,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "bonferroni5": {
+        "variance": 0.004301528157595288,
+        "se": 0.06558603630038401,
+        "df": 26.55672314274274,
+        "half_width": 0.18194638092667617,
+        "power": 0.6112865412954264,
+        "alpha": 0.01,
+        "effect": 0.2
+      },
+      "variance_transfer_sensitivity": {
+        "0.5": {
+          "variance": 0.002150764078797644,
+          "se": 0.04637633101914859,
+          "df": 26.55672314274274,
+          "half_width": 0.1286555197656034,
+          "power": 0.9280925117571296,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "1.0": {
+          "variance": 0.004301528157595288,
+          "se": 0.06558603630038401,
+          "df": 26.55672314274274,
+          "half_width": 0.18194638092667617,
+          "power": 0.6112865412954264,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "2.0": {
+          "variance": 0.008603056315190576,
+          "se": 0.09275266203829718,
+          "df": 26.55672314274274,
+          "half_width": 0.2573110395312068,
+          "power": 0.29020445116535043,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "4.0": {
+          "variance": 0.017206112630381153,
+          "se": 0.13117207260076802,
+          "df": 26.55672314274274,
+          "half_width": 0.36389276185335234,
+          "power": 0.12625078257727615,
+          "alpha": 0.01,
+          "effect": 0.2
+        }
+      },
+      "main_effects": 5,
+      "two_factor_alias_contrasts": 10,
+      "information_per_1000_per_main": 227.02687608255346
+    },
+    {
+      "budget_matches": 2048,
+      "seed_blocks": 64,
+      "blocks_per_context": 32,
+      "marginal95": {
+        "variance": 0.002150764078797644,
+        "se": 0.04637633101914859,
+        "df": 54.88389449500166,
+        "half_width": 0.09294466373436444,
+        "power": 0.9885764726965948,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "bonferroni5": {
+        "variance": 0.002150764078797644,
+        "se": 0.04637633101914859,
+        "df": 54.88389449500166,
+        "half_width": 0.12375143368514892,
+        "power": 0.9457376763263255,
+        "alpha": 0.01,
+        "effect": 0.2
+      },
+      "variance_transfer_sensitivity": {
+        "0.5": {
+          "variance": 0.001075382039398822,
+          "se": 0.032793018150192005,
+          "df": 54.88389449500166,
+          "half_width": 0.08750547794032615,
+          "power": 0.9995721276214494,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "1.0": {
+          "variance": 0.002150764078797644,
+          "se": 0.04637633101914859,
+          "df": 54.88389449500166,
+          "half_width": 0.12375143368514892,
+          "power": 0.9457376763263255,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "2.0": {
+          "variance": 0.004301528157595288,
+          "se": 0.06558603630038401,
+          "df": 54.88389449500166,
+          "half_width": 0.1750109558806523,
+          "power": 0.6484853578192283,
+          "alpha": 0.01,
+          "effect": 0.2
+        },
+        "4.0": {
+          "variance": 0.008603056315190576,
+          "se": 0.09275266203829718,
+          "df": 54.88389449500166,
+          "half_width": 0.24750286737029784,
+          "power": 0.3140405200018616,
+          "alpha": 0.01,
+          "effect": 0.2
+        }
+      },
+      "main_effects": 5,
+      "two_factor_alias_contrasts": 10,
+      "information_per_1000_per_main": 227.02687608255346
+    }
+  ],
+  "conditional_90_power_requirements": {
+    "alpha_per_test": 0.01,
+    "transfer_assumption": true,
+    "rows": [
+      {
+        "variance_multiplier": 1,
+        "effect": 0.1,
+        "blocks_per_context": 105,
+        "seed_blocks": 210,
+        "matches": 6720
+      },
+      {
+        "variance_multiplier": 1,
+        "effect": 0.15,
+        "blocks_per_context": 48,
+        "seed_blocks": 96,
+        "matches": 3072
+      },
+      {
+        "variance_multiplier": 1,
+        "effect": 0.2,
+        "blocks_per_context": 28,
+        "seed_blocks": 56,
+        "matches": 1792
+      },
+      {
+        "variance_multiplier": 1,
+        "effect": 0.3,
+        "blocks_per_context": 14,
+        "seed_blocks": 28,
+        "matches": 896
+      },
+      {
+        "variance_multiplier": 2,
+        "effect": 0.1,
+        "blocks_per_context": 207,
+        "seed_blocks": 414,
+        "matches": 13248
+      },
+      {
+        "variance_multiplier": 2,
+        "effect": 0.15,
+        "blocks_per_context": 93,
+        "seed_blocks": 186,
+        "matches": 5952
+      },
+      {
+        "variance_multiplier": 2,
+        "effect": 0.2,
+        "blocks_per_context": 54,
+        "seed_blocks": 108,
+        "matches": 3456
+      },
+      {
+        "variance_multiplier": 2,
+        "effect": 0.3,
+        "blocks_per_context": 25,
+        "seed_blocks": 50,
+        "matches": 1600
+      },
+      {
+        "variance_multiplier": 4,
+        "effect": 0.1,
+        "blocks_per_context": 412,
+        "seed_blocks": 824,
+        "matches": 26368
+      },
+      {
+        "variance_multiplier": 4,
+        "effect": 0.15,
+        "blocks_per_context": 184,
+        "seed_blocks": 368,
+        "matches": 11776
+      },
+      {
+        "variance_multiplier": 4,
+        "effect": 0.2,
+        "blocks_per_context": 105,
+        "seed_blocks": 210,
+        "matches": 6720
+      },
+      {
+        "variance_multiplier": 4,
+        "effect": 0.3,
+        "blocks_per_context": 48,
+        "seed_blocks": 96,
+        "matches": 3072
+      }
+    ]
+  },
+  "sequential_screening_at_1000": {
+    "press_isolated": {
+      "five_separate_two_arm_tests": {
+        "counts": [
+          25,
+          25
+        ],
+        "seed_blocks": 50,
+        "matches": 200,
+        "unspent_matches": 0,
+        "variance": 0.018078370852346662,
+        "se": 0.13445583234782588,
+        "df": 47.28037643876204,
+        "half_width": 0.2704479096370648,
+        "power": 0.30792139719670786,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "six_arm_shared_anchor": {
+        "counts": [
+          41,
+          42
+        ],
+        "seed_blocks": 83,
+        "matches": 996,
+        "unspent_matches": 4,
+        "variance": 0.010875975889043855,
+        "se": 0.10428794699793383,
+        "df": 80.21146091150314,
+        "half_width": 0.2075312295559172,
+        "power": 0.4740745984770206,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "note": "Estimates isolated effects at a frozen anchor, not five-factor marginal effects; new factors have no measured variance."
+    },
+    "line_isolated": {
+      "five_separate_two_arm_tests": {
+        "counts": [
+          25,
+          25
+        ],
+        "seed_blocks": 50,
+        "matches": 200,
+        "unspent_matches": 0,
+        "variance": 0.021860070084420133,
+        "se": 0.1478515136358777,
+        "df": 29.864184992576106,
+        "half_width": 0.30201066805579707,
+        "power": 0.2582021280525203,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "six_arm_shared_anchor": {
+        "counts": [
+          41,
+          42
+        ],
+        "seed_blocks": 83,
+        "matches": 996,
+        "unspent_matches": 4,
+        "variance": 0.013294286582907022,
+        "se": 0.11530085248126755,
+        "df": 49.56521608728539,
+        "half_width": 0.23163892228270078,
+        "power": 0.3979509307223967,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "note": "Estimates isolated effects at a frozen anchor, not five-factor marginal effects; new factors have no measured variance."
+    }
+  },
+  "full_factorial_forecasts": [
+    {
+      "main_matches": 1024,
+      "blocks_per_context": 8,
+      "main_effect": {
+        "variance": 0.004301528157595288,
+        "se": 0.06558603630038401,
+        "df": 12.393137466613279,
+        "half_width": 0.1991840230465105,
+        "power": 0.5268559527758567,
+        "alpha": 0.01,
+        "effect": 0.2
+      }
+    },
+    {
+      "main_matches": 2048,
+      "blocks_per_context": 16,
+      "main_effect": {
+        "variance": 0.002150764078797644,
+        "se": 0.04637633101914859,
+        "df": 26.55672314274274,
+        "half_width": 0.1286555197656034,
+        "power": 0.9280925117571296,
+        "alpha": 0.01,
+        "effect": 0.2
+      }
+    }
+  ],
+  "adaptive_new_candidate_round_precision": {
+    "assumed_blocks_per_context": 4,
+    "analogues": {
+      "press_isolated": {
+        "variance": 0.11298981782716663,
+        "se": 0.3361395808695647,
+        "df": 5.910047054845254,
+        "half_width": 0.8255480641601649,
+        "power": 0.07965205474390956,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "line_isolated": {
+        "variance": 0.13662543802762583,
+        "se": 0.3696287840896943,
+        "df": 3.733023124072014,
+        "half_width": 1.0558579236479437,
+        "power": 0.07022997009892176,
+        "alpha": 0.05,
+        "effect": 0.2
+      },
+      "combined": {
+        "variance": 0.18345730121124984,
+        "se": 0.42831915811839405,
+        "df": 5.035650284056364,
+        "half_width": 1.0986890673107006,
+        "power": 0.06717089786408856,
+        "alpha": 0.05,
+        "effect": 0.2
+      }
+    },
+    "note": "Unselected two-arm uncertainty using P0 contrast SDs; not surrogate predictive accuracy or valid post-selection inference."
+  },
+  "warning": "New tempo/directness/width variances, higher-order aliases and candidate-selection performance are unmeasured. Forecasts are not demonstrated gains."
+}

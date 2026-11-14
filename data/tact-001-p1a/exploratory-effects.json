@@ -1,0 +1,2137 @@
+{
+  "exploratory": true,
+  "contrasts": {
+    "press_isolated": {
+      "xgd": {
+        "mean": 0.19095030095,
+        "se": 0.23768657705807308,
+        "df": 13.790109794638925,
+        "ci95": [
+          -0.31956560122489897,
+          0.7014662031248989
+        ],
+        "p": 0.4353902140958833,
+        "bootstrap_ci95": [
+          -0.24332387498843747,
+          0.6296841381723435
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.3074313929,
+            "sd": 0.890169326090697,
+            "sd_ci95_normal_assumption": [
+              0.5885569464937848,
+              1.8117367854609858
+            ],
+            "home_sd": 1.1190248387538548,
+            "away_sd": 1.2362389796838333,
+            "home_mean": 0.3664392529999999,
+            "away_mean": 0.24842353280000007
+          },
+          "deep_block": {
+            "mean": 0.07446920900000004,
+            "sd": 1.0076882732878758,
+            "sd_ci95_normal_assumption": [
+              0.6662574363784347,
+              2.050919818829272
+            ],
+            "home_sd": 1.2556800946777844,
+            "away_sd": 1.7345716748474242,
+            "home_mean": 0.19126340575,
+            "away_mean": -0.04232498775000004
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.06782035362857143,
+            0.29351891444285716
+          ],
+          "max_abs_change": 0.12312994732142858
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.166747219425,
+          "trimmed20_context_average": 0.1689724581,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gf": {
+        "mean": 0.15625,
+        "se": 0.27217501919064613,
+        "df": 8.254645448652267,
+        "ci95": [
+          -0.4680324554593993,
+          0.7805324554593993
+        ],
+        "p": 0.5812163652946587,
+        "bootstrap_ci95": [
+          -0.34375,
+          0.65625
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.125,
+            "sd": 0.44320263021395917,
+            "sd_ci95_normal_assumption": [
+              0.29303412179152594,
+              0.9020379438348343
+            ],
+            "home_sd": 1.164964745021435,
+            "away_sd": 1.0690449676496976,
+            "home_mean": -0.25,
+            "away_mean": 0.0
+          },
+          "deep_block": {
+            "mean": 0.4375,
+            "sd": 1.474485382381644,
+            "sd_ci95_normal_assumption": [
+              0.9748916176604374,
+              3.0009789470246835
+            ],
+            "home_sd": 1.6420805617960927,
+            "away_sd": 1.6690459207925603,
+            "home_mean": 0.125,
+            "away_mean": 0.75
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.026785714285714288,
+            0.29464285714285715
+          ],
+          "max_abs_change": 0.1830357142857143
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.125,
+          "trimmed20_context_average": 0.08333333333333333,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "ga": {
+        "mean": 0.0,
+        "se": 0.287383516775555,
+        "df": 13.90856313497823,
+        "ci95": [
+          -0.6167567155468014,
+          0.6167567155468014
+        ],
+        "p": 1.0,
+        "bootstrap_ci95": [
+          -0.5,
+          0.53125
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.25,
+            "sd": 1.1952286093343936,
+            "sd_ci95_normal_assumption": [
+              0.7902542584355348,
+              2.4326154306802836
+            ],
+            "home_sd": 1.3024701806293193,
+            "away_sd": 1.5526475085202969,
+            "home_mean": -0.375,
+            "away_mean": -0.125
+          },
+          "deep_block": {
+            "mean": 0.25,
+            "sd": 1.1019463300386794,
+            "sd_ci95_normal_assumption": [
+              0.7285784268211435,
+              2.2427606110653557
+            ],
+            "home_sd": 1.3024701806293193,
+            "away_sd": 1.1259916264596033,
+            "home_mean": 0.375,
+            "away_mean": 0.125
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.125,
+            0.125
+          ],
+          "max_abs_change": 0.125
+        },
+        "robust_sensitivity": {
+          "median_context_average": -0.25,
+          "trimmed20_context_average": -0.04166666666666666,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gd": {
+        "mean": 0.15625,
+        "se": 0.41642478098005375,
+        "df": 11.728665945870913,
+        "ci95": [
+          -0.7533951154943649,
+          1.065895115494365
+        ],
+        "p": 0.7141957885634775,
+        "bootstrap_ci95": [
+          -0.625,
+          0.90625
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.125,
+            "sd": 1.246423454758225,
+            "sd_ci95_normal_assumption": [
+              0.8241029667831885,
+              2.536810870763212
+            ],
+            "home_sd": 1.6420805617960927,
+            "away_sd": 1.4577379737113252,
+            "home_mean": 0.125,
+            "away_mean": 0.125
+          },
+          "deep_block": {
+            "mean": 0.1875,
+            "sd": 1.9988836169936743,
+            "sd_ci95_normal_assumption": [
+              1.3216101740787043,
+              4.06827203838494
+            ],
+            "home_sd": 2.3754698783308417,
+            "away_sd": 2.065879266282796,
+            "home_mean": -0.25,
+            "away_mean": 0.625
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.04464285714285714,
+            0.3482142857142857
+          ],
+          "max_abs_change": 0.20089285714285715
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.25,
+          "trimmed20_context_average": 0.20833333333333331,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "points": {
+        "mean": 0.28125,
+        "se": 0.38291498263788454,
+        "df": 11.289327257622501,
+        "ci95": [
+          -0.5589124165015654,
+          1.1214124165015655
+        ],
+        "p": 0.4776251927232341,
+        "bootstrap_ci95": [
+          -0.40625,
+          0.96875
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.375,
+            "sd": 1.093813773650968,
+            "sd_ci95_normal_assumption": [
+              0.7232013907736756,
+              2.226208646022751
+            ],
+            "home_sd": 0.9161253813129043,
+            "away_sd": 1.7268882005337975,
+            "home_mean": 0.625,
+            "away_mean": 0.125
+          },
+          "deep_block": {
+            "mean": 0.1875,
+            "sd": 1.8696351821373374,
+            "sd_ci95_normal_assumption": [
+              1.2361544501747828,
+              3.8052163061448185
+            ],
+            "home_sd": 2.356601669474803,
+            "away_sd": 1.927248223318863,
+            "home_mean": -0.125,
+            "away_mean": 0.5
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.08035714285714286,
+            0.4732142857142857
+          ],
+          "max_abs_change": 0.20089285714285715
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.625,
+          "trimmed20_context_average": 0.25,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      }
+    },
+    "line_isolated": {
+      "xgd": {
+        "mean": 0.11332977804375005,
+        "se": 0.26136701975156107,
+        "df": 8.710387289501366,
+        "ci95": [
+          -0.48093378718739305,
+          0.7075933432748931
+        ],
+        "p": 0.6751160301229601,
+        "bootstrap_ci95": [
+          -0.35804525574968743,
+          0.5985602810981249
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.04912368541249995,
+            "sd": 1.3945460325643713,
+            "sd_ci95_normal_assumption": [
+              0.9220377860868714,
+              2.838280619386476
+            ],
+            "home_sd": 1.5634501045723792,
+            "away_sd": 1.6286754662681484,
+            "home_mean": 0.054324304374999896,
+            "away_mean": -0.15257167519999976
+          },
+          "deep_block": {
+            "mean": 0.27578324150000005,
+            "sd": 0.4911704098385663,
+            "sd_ci95_normal_assumption": [
+              0.32474917765615485,
+              0.9996654269614907
+            ],
+            "home_sd": 1.1042315431682816,
+            "away_sd": 1.0293068660825873,
+            "home_mean": 0.6792477511250001,
+            "away_mean": -0.12768126812499997
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.03256688977142849,
+            0.23376136037142864
+          ],
+          "max_abs_change": 0.14589666781517854
+        },
+        "robust_sensitivity": {
+          "median_context_average": -0.06847023194999986,
+          "trimmed20_context_average": 0.0776343255583335,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gf": {
+        "mean": 0.28125,
+        "se": 0.26065465316062497,
+        "df": 13.000955386579164,
+        "ci95": [
+          -0.28185593641013007,
+          0.8443559364101301
+        ],
+        "p": 0.3001938285045137,
+        "bootstrap_ci95": [
+          -0.1875,
+          0.75
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.0625,
+            "sd": 1.1783008347374015,
+            "sd_ci95_normal_assumption": [
+              0.7790620514747597,
+              2.3981628034840083
+            ],
+            "home_sd": 1.927248223318863,
+            "away_sd": 1.0606601717798212,
+            "home_mean": 0.5,
+            "away_mean": -0.375
+          },
+          "deep_block": {
+            "mean": 0.5,
+            "sd": 0.8864052604279183,
+            "sd_ci95_normal_assumption": [
+              0.5860682435830519,
+              1.8040758876696685
+            ],
+            "home_sd": 1.7677669529663689,
+            "away_sd": 1.1877349391654208,
+            "home_mean": 0.375,
+            "away_mean": 0.625
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.14285714285714285,
+            0.39285714285714285
+          ],
+          "max_abs_change": 0.13839285714285715
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.25,
+          "trimmed20_context_average": 0.25,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "ga": {
+        "mean": 0.09375,
+        "se": 0.4048740434646664,
+        "df": 10.37144850159633,
+        "ci95": [
+          -0.8040052891055075,
+          0.9915052891055075
+        ],
+        "p": 0.8213895074717705,
+        "bootstrap_ci95": [
+          -0.625,
+          0.84375
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.4375,
+            "sd": 2.0430631764233684,
+            "sd_ci95_normal_assumption": [
+              1.350820556680376,
+              4.15818946267516
+            ],
+            "home_sd": 2.100170061141308,
+            "away_sd": 2.2677868380553634,
+            "home_mean": -0.125,
+            "away_mean": 1.0
+          },
+          "deep_block": {
+            "mean": -0.25,
+            "sd": 1.0350983390135313,
+            "sd_ci95_normal_assumption": [
+              0.6843802632540061,
+              2.106706760607149
+            ],
+            "home_sd": 0.9910312089651149,
+            "away_sd": 1.3024701806293193,
+            "home_mean": 0.125,
+            "away_mean": -0.625
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.1607142857142857,
+            0.26785714285714285
+          ],
+          "max_abs_change": 0.2544642857142857
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.0,
+          "trimmed20_context_average": 0.0,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gd": {
+        "mean": 0.1875,
+        "se": 0.48354623800182156,
+        "df": 8.62035900421574,
+        "ci95": [
+          -0.9137451753117065,
+          1.2887451753117065
+        ],
+        "p": 0.7075938379092057,
+        "bootstrap_ci95": [
+          -0.71875,
+          1.03125
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.375,
+            "sd": 2.5877458475338284,
+            "sd_ci95_normal_assumption": [
+              1.7109506581350153,
+              5.266766901517872
+            ],
+            "home_sd": 2.8753881725529062,
+            "away_sd": 2.445841952609133,
+            "home_mean": 0.625,
+            "away_mean": -1.375
+          },
+          "deep_block": {
+            "mean": 0.75,
+            "sd": 0.8864052604279183,
+            "sd_ci95_normal_assumption": [
+              0.5860682435830519,
+              1.8040758876696685
+            ],
+            "home_sd": 1.9086270308410553,
+            "away_sd": 1.2817398889233114,
+            "home_mean": 0.25,
+            "away_mean": 1.25
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.05357142857142855,
+            0.48214285714285715
+          ],
+          "max_abs_change": 0.29464285714285715
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.375,
+          "trimmed20_context_average": 0.16666666666666669,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "points": {
+        "mean": 0.40625,
+        "se": 0.359617542377613,
+        "df": 11.643821536210172,
+        "ci95": [
+          -0.37995586796312153,
+          1.1924558679631216
+        ],
+        "p": 0.2813493676875771,
+        "bootstrap_ci95": [
+          -0.25,
+          1.0625
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.0,
+            "sd": 1.7320508075688772,
+            "sd_ci95_normal_assumption": [
+              1.1451872184269887,
+              3.525194668458187
+            ],
+            "home_sd": 2.1213203435596424,
+            "away_sd": 1.5811388300841898,
+            "home_mean": 0.75,
+            "away_mean": -0.75
+          },
+          "deep_block": {
+            "mean": 0.8125,
+            "sd": 1.0669549461635468,
+            "sd_ci95_normal_assumption": [
+              0.7054430283710721,
+              2.171543624046523
+            ],
+            "home_sd": 1.164964745021435,
+            "away_sd": 1.407885953173359,
+            "home_mean": 0.25,
+            "away_mean": 1.375
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.25,
+            0.6205357142857143
+          ],
+          "max_abs_change": 0.2142857142857143
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.375,
+          "trimmed20_context_average": 0.41666666666666663,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      }
+    },
+    "combined": {
+      "xgd": {
+        "mean": 0.3240363132,
+        "se": 0.3028673812176295,
+        "df": 11.749850662798183,
+        "ci95": [
+          -0.3374165379321608,
+          0.9854891643321608
+        ],
+        "p": 0.30615290294993647,
+        "bootstrap_ci95": [
+          -0.23269849296312503,
+          0.8789221379746864
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.30772631246249993,
+            "sd": 1.4525576575675347,
+            "sd_ci95_normal_assumption": [
+              0.9603935728706608,
+              2.9563500606962196
+            ],
+            "home_sd": 1.9770328626797458,
+            "away_sd": 1.2192650135913194,
+            "home_mean": 0.5587589291249999,
+            "away_mean": 0.05669369579999997
+          },
+          "deep_block": {
+            "mean": 0.34034631393750003,
+            "sd": 0.9085114588280732,
+            "sd_ci95_normal_assumption": [
+              0.6006842904941709,
+              1.8490680163067528
+            ],
+            "home_sd": 0.9861470897978576,
+            "away_sd": 1.4703147022798506,
+            "home_mean": 0.619015133125,
+            "away_mean": 0.061677494750000006
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.18717303594732143,
+            0.4646950383258929
+          ],
+          "max_abs_change": 0.1406587251258929
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.44499077137500004,
+          "trimmed20_context_average": 0.3091824215,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gf": {
+        "mean": 0.3125,
+        "se": 0.2625212576426635,
+        "df": 13.315550705433004,
+        "ci95": [
+          -0.2532794944423148,
+          0.8782794944423148
+        ],
+        "p": 0.2546874139602754,
+        "bootstrap_ci95": [
+          -0.15625,
+          0.8125
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.3125,
+            "sd": 1.1630471062809844,
+            "sd_ci95_normal_assumption": [
+              0.7689766805460837,
+              2.367117315676323
+            ],
+            "home_sd": 2.6049403612586386,
+            "away_sd": 1.3024701806293193,
+            "home_mean": 0.25,
+            "away_mean": 0.375
+          },
+          "deep_block": {
+            "mean": 0.3125,
+            "sd": 0.9234059624177068,
+            "sd_ci95_normal_assumption": [
+              0.6105321512273123,
+              1.879382383768759
+            ],
+            "home_sd": 1.7268882005337975,
+            "away_sd": 0.7559289460184544,
+            "home_mean": 0.125,
+            "away_mean": 0.5
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.15625,
+            0.40625
+          ],
+          "max_abs_change": 0.15625
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.25,
+          "trimmed20_context_average": 0.25,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "ga": {
+        "mean": 0.0,
+        "se": 0.2625212576426635,
+        "df": 13.768897199877486,
+        "ci95": [
+          -0.5639400023436824,
+          0.5639400023436824
+        ],
+        "p": 1.0,
+        "bootstrap_ci95": [
+          -0.46875,
+          0.5
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.0625,
+            "sd": 1.1160357137142674,
+            "sd_ci95_normal_assumption": [
+              0.7378939630804086,
+              2.2714363404365736
+            ],
+            "home_sd": 1.407885953173359,
+            "away_sd": 1.0350983390135313,
+            "home_mean": -0.375,
+            "away_mean": 0.25
+          },
+          "deep_block": {
+            "mean": 0.0625,
+            "sd": 0.9797047660246574,
+            "sd_ci95_normal_assumption": [
+              0.6477554647823607,
+              1.9939657674942997
+            ],
+            "home_sd": 0.9910312089651149,
+            "away_sd": 1.8516401995451028,
+            "home_mean": 0.125,
+            "away_mean": 0.0
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.11160714285714285,
+            0.11160714285714285
+          ],
+          "max_abs_change": 0.11160714285714285
+        },
+        "robust_sensitivity": {
+          "median_context_average": -0.125,
+          "trimmed20_context_average": 0.0,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gd": {
+        "mean": 0.3125,
+        "se": 0.40573456312506295,
+        "df": 13.8470893096629,
+        "ci95": [
+          -0.5586164921555055,
+          1.1836164921555055
+        ],
+        "p": 0.45411705420271997,
+        "bootstrap_ci95": [
+          -0.46875,
+          1.03125
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.375,
+            "sd": 1.7060815589280267,
+            "sd_ci95_normal_assumption": [
+              1.128017022561085,
+              3.472340181480933
+            ],
+            "home_sd": 2.9246489410818914,
+            "away_sd": 1.4577379737113252,
+            "home_mean": 0.625,
+            "away_mean": 0.125
+          },
+          "deep_block": {
+            "mean": 0.25,
+            "sd": 1.535298947157477,
+            "sd_ci95_normal_assumption": [
+              1.0150999745884983,
+              3.1247510981537885
+            ],
+            "home_sd": 2.0701966780270626,
+            "away_sd": 2.0,
+            "home_mean": 0.0,
+            "away_mean": 0.5
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.1607142857142857,
+            0.5178571428571428
+          ],
+          "max_abs_change": 0.2053571428571428
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.75,
+          "trimmed20_context_average": 0.45833333333333337,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "points": {
+        "mean": 0.5,
+        "se": 0.373508940416998,
+        "df": 12.579791822416471,
+        "ci95": [
+          -0.309665525427659,
+          1.309665525427659
+        ],
+        "p": 0.20437325996006708,
+        "bootstrap_ci95": [
+          -0.21875,
+          1.15625
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.625,
+            "sd": 1.7268882005337975,
+            "sd_ci95_normal_assumption": [
+              1.1417738361148193,
+              3.5146873584440237
+            ],
+            "home_sd": 2.295181287579947,
+            "away_sd": 1.5059406173077154,
+            "home_mean": 0.875,
+            "away_mean": 0.375
+          },
+          "deep_block": {
+            "mean": 0.375,
+            "sd": 1.2174328963613794,
+            "sd_ci95_normal_assumption": [
+              0.8049351590110089,
+              2.47780719636198
+            ],
+            "home_sd": 1.7268882005337975,
+            "away_sd": 1.6420805617960927,
+            "home_mean": -0.125,
+            "away_mean": 0.875
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.3660714285714286,
+            0.7232142857142857
+          ],
+          "max_abs_change": 0.2232142857142857
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.875,
+          "trimmed20_context_average": 0.6666666666666667,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      }
+    },
+    "interaction": {
+      "xgd": {
+        "mean": 0.019756234206249945,
+        "se": 0.35339435376334244,
+        "df": 9.798918464383739,
+        "ci95": [
+          -0.7698511953924132,
+          0.8093636638049131
+        ],
+        "p": 0.9565415495870156,
+        "bootstrap_ci95": [
+          -0.6168881963760938,
+          0.6814258278885923
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.04941860497499995,
+            "sd": 1.818398034952448,
+            "sd_ci95_normal_assumption": [
+              1.2022777729962675,
+              3.7009347704682174
+            ],
+            "home_sd": 1.897495041131962,
+            "away_sd": 2.237393320975889,
+            "home_mean": 0.13799537174999998,
+            "away_mean": -0.03915816180000009
+          },
+          "deep_block": {
+            "mean": -0.009906136562500056,
+            "sd": 0.8305605355294757,
+            "sd_ci95_normal_assumption": [
+              0.5491451551316037,
+              1.6904166776665719
+            ],
+            "home_sd": 1.3583726372157232,
+            "away_sd": 1.5572920972625157,
+            "home_mean": -0.25149602375000013,
+            "away_mean": 0.23168375062500007
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.18736854390267865,
+            0.19412586159732137
+          ],
+          "max_abs_change": 0.2071247781089286
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.10348398349999992,
+          "trimmed20_context_average": -0.028425289641666705,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gf": {
+        "mean": -0.125,
+        "se": 0.2432114012835042,
+        "df": 13.518734960467514,
+        "ci95": [
+          -0.6483841565061045,
+          0.3983841565061045
+        ],
+        "p": 0.6155802797699199,
+        "bootstrap_ci95": [
+          -0.5625,
+          0.3125
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.375,
+            "sd": 1.0606601717798212,
+            "sd_ci95_normal_assumption": [
+              0.701281086275827,
+              2.1587320454255687
+            ],
+            "home_sd": 2.390457218668787,
+            "away_sd": 1.0350983390135313,
+            "home_mean": 0.0,
+            "away_mean": 0.75
+          },
+          "deep_block": {
+            "mean": -0.625,
+            "sd": 0.8762745818846641,
+            "sd_ci95_normal_assumption": [
+              0.5793701008201317,
+              1.7834572003699176
+            ],
+            "home_sd": 1.3024701806293193,
+            "away_sd": 1.3562026818605375,
+            "home_mean": -0.375,
+            "away_mean": -0.875
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.24107142857142858,
+            -0.0267857142857143
+          ],
+          "max_abs_change": 0.11607142857142858
+        },
+        "robust_sensitivity": {
+          "median_context_average": -0.125,
+          "trimmed20_context_average": -0.16666666666666666,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "ga": {
+        "mean": -0.09375,
+        "se": 0.5031984751140874,
+        "df": 12.810754009545466,
+        "ci95": [
+          -1.1824789207734039,
+          0.9949789207734039
+        ],
+        "p": 0.8551209006030805,
+        "bootstrap_ci95": [
+          -1.03125,
+          0.8125
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.25,
+            "sd": 2.29906813420444,
+            "sd_ci95_normal_assumption": [
+              1.5200844167378793,
+              4.67922920834833
+            ],
+            "home_sd": 2.295181287579947,
+            "away_sd": 3.2043497223082786,
+            "home_mean": 0.125,
+            "away_mean": -0.625
+          },
+          "deep_block": {
+            "mean": 0.0625,
+            "sd": 1.6783814482155972,
+            "sd_ci95_normal_assumption": [
+              1.1097024254382604,
+              3.4159629192364043
+            ],
+            "home_sd": 1.9955307206712847,
+            "away_sd": 1.8516401995451028,
+            "home_mean": -0.375,
+            "away_mean": 0.5
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.32589285714285715,
+            0.17410714285714285
+          ],
+          "max_abs_change": 0.26785714285714285
+        },
+        "robust_sensitivity": {
+          "median_context_average": -0.25,
+          "trimmed20_context_average": 0.04166666666666667,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gd": {
+        "mean": -0.03125,
+        "se": 0.542167236653046,
+        "df": 11.202126144818788,
+        "ci95": [
+          -1.2219303281124356,
+          1.1594303281124356
+        ],
+        "p": 0.955051471411799,
+        "bootstrap_ci95": [
+          -1.03125,
+          0.9375
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.625,
+            "sd": 2.655856063225458,
+            "sd_ci95_normal_assumption": [
+              1.7559833720216478,
+              5.405389722612064
+            ],
+            "home_sd": 2.100170061141308,
+            "away_sd": 3.420004177106889,
+            "home_mean": -0.125,
+            "away_mean": 1.375
+          },
+          "deep_block": {
+            "mean": -0.6875,
+            "sd": 1.5338443765351724,
+            "sd_ci95_normal_assumption": [
+              1.014138250095381,
+              3.121790651162143
+            ],
+            "home_sd": 2.0,
+            "away_sd": 1.8468119248354136,
+            "home_mean": 0.0,
+            "away_mean": -1.375
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.2723214285714286,
+            0.2276785714285714
+          ],
+          "max_abs_change": 0.2589285714285714
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.0,
+          "trimmed20_context_average": 0.04166666666666663,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "points": {
+        "mean": -0.1875,
+        "se": 0.4375,
+        "df": 12.495910780669144,
+        "ci95": [
+          -1.1365517955629616,
+          0.7615517955629617
+        ],
+        "p": 0.6755301718341277,
+        "bootstrap_ci95": [
+          -1.0,
+          0.59375
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.25,
+            "sd": 1.4142135623730951,
+            "sd_ci95_normal_assumption": [
+              0.9350414483677694,
+              2.8783093939007585
+            ],
+            "home_sd": 1.0690449676496976,
+            "away_sd": 2.138089935299395,
+            "home_mean": -0.5,
+            "away_mean": 1.0
+          },
+          "deep_block": {
+            "mean": -0.625,
+            "sd": 2.03100960115899,
+            "sd_ci95_normal_assumption": [
+              1.3428510443145762,
+              4.133657157345453
+            ],
+            "home_sd": 2.6049403612586386,
+            "away_sd": 1.8516401995451028,
+            "home_mean": -0.25,
+            "away_mean": -1.0
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.375,
+            0.08928571428571429
+          ],
+          "max_abs_change": 0.2767857142857143
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.0,
+          "trimmed20_context_average": -0.08333333333333334,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      }
+    },
+    "press_marginal": {
+      "xgd": {
+        "mean": 0.20082841805312499,
+        "se": 0.20231126675880964,
+        "df": 13.936401894819422,
+        "ci95": [
+          -0.23327193756496287,
+          0.6349287736712128
+        ],
+        "p": 0.33779403128192675,
+        "bootstrap_ci95": [
+          -0.16326268186867193,
+          0.5758386584752337
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.33214069538749996,
+            "sd": 0.8361320106307547,
+            "sd_ci95_normal_assumption": [
+              0.5528288704394267,
+              1.7017561454446817
+            ],
+            "home_sd": 1.1423623191543224,
+            "away_sd": 0.6642517232258808,
+            "home_mean": 0.43543693887499996,
+            "away_mean": 0.22884445189999994
+          },
+          "deep_block": {
+            "mean": 0.06951614071875001,
+            "sd": 0.7814335658520865,
+            "sd_ci95_normal_assumption": [
+              0.5166636727704927,
+              1.590429927377578
+            ],
+            "home_sd": 1.209974754235959,
+            "away_sd": 1.2129980194243926,
+            "home_mean": 0.06551539387500008,
+            "away_mean": 0.07351688756249997
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.09430958297366067,
+            0.2958564745022321
+          ],
+          "max_abs_change": 0.10651883507946432
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.10066973781250001,
+          "trimmed20_context_average": 0.16980226968749998,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gf": {
+        "mean": 0.09375,
+        "se": 0.28125,
+        "df": 10.985765124555158,
+        "ci95": [
+          -0.5253749525047935,
+          0.7128749525047935
+        ],
+        "p": 0.7451579082211128,
+        "bootstrap_ci95": [
+          -0.421875,
+          0.625
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.0625,
+            "sd": 0.7763237542601484,
+            "sd_ci95_normal_assumption": [
+              0.5132851974405046,
+              1.5800300704553616
+            ],
+            "home_sd": 1.7113069358158484,
+            "away_sd": 0.9910312089651149,
+            "home_mean": -0.25,
+            "away_mean": 0.375
+          },
+          "deep_block": {
+            "mean": 0.125,
+            "sd": 1.3887301496588271,
+            "sd_ci95_normal_assumption": [
+              0.9181924746570954,
+              2.8264437152255764
+            ],
+            "home_sd": 1.8212534929861592,
+            "away_sd": 1.3076014027873435,
+            "home_mean": -0.0625,
+            "away_mean": 0.3125
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.07589285714285714,
+            0.22767857142857142
+          ],
+          "max_abs_change": 0.16964285714285715
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.0625,
+          "trimmed20_context_average": 0.020833333333333332,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "ga": {
+        "mean": -0.046875,
+        "se": 0.1386266746002164,
+        "df": 12.822148481100486,
+        "ci95": [
+          -0.3467825428027623,
+          0.2530325428027623
+        ],
+        "p": 0.7407312625158406,
+        "bootstrap_ci95": [
+          -0.296875,
+          0.203125
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.375,
+            "sd": 0.4629100498862757,
+            "sd_ci95_normal_assumption": [
+              0.3060641582190318,
+              0.9421479050751922
+            ],
+            "home_sd": 0.5938674695827104,
+            "away_sd": 0.5629958132298016,
+            "home_mean": -0.3125,
+            "away_mean": -0.4375
+          },
+          "deep_block": {
+            "mean": 0.28125,
+            "sd": 0.6329847098130751,
+            "sd_ci95_normal_assumption": [
+              0.4185131267339131,
+              1.288296113773135
+            ],
+            "home_sd": 0.7529703086538577,
+            "away_sd": 1.1572751247156894,
+            "home_mean": 0.1875,
+            "away_mean": 0.375
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.11607142857142858,
+            0.008928571428571425
+          ],
+          "max_abs_change": 0.06919642857142858
+        },
+        "robust_sensitivity": {
+          "median_context_average": -0.125,
+          "trimmed20_context_average": -0.08333333333333334,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gd": {
+        "mean": 0.140625,
+        "se": 0.318415002534877,
+        "df": 11.330584002214227,
+        "ci95": [
+          -0.5577150298182756,
+          0.8389650298182756
+        ],
+        "p": 0.6670595006618645,
+        "bootstrap_ci95": [
+          -0.4375,
+          0.734375
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.4375,
+            "sd": 0.9136856289618595,
+            "sd_ci95_normal_assumption": [
+              0.6041053180282856,
+              1.8595988603729963
+            ],
+            "home_sd": 1.6352697462061552,
+            "away_sd": 0.7529703086538577,
+            "home_mean": 0.0625,
+            "away_mean": 0.8125
+          },
+          "deep_block": {
+            "mean": -0.15625,
+            "sd": 1.5522880577668934,
+            "sd_ci95_normal_assumption": [
+              1.0263327353350808,
+              3.159328560824311
+            ],
+            "home_sd": 2.1213203435596424,
+            "away_sd": 1.7204131563585034,
+            "home_mean": -0.25,
+            "away_mean": -0.0625
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.03125,
+            0.27232142857142855
+          ],
+          "max_abs_change": 0.171875
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.25,
+          "trimmed20_context_average": 0.0625,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "points": {
+        "mean": 0.1875,
+        "se": 0.26305214040457564,
+        "df": 11.486872998932766,
+        "ci95": [
+          -0.3884938674073022,
+          0.7634938674073022
+        ],
+        "p": 0.4902045011836811,
+        "bootstrap_ci95": [
+          -0.3125,
+          0.65625
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.5,
+            "sd": 0.7676494735787385,
+            "sd_ci95_normal_assumption": [
+              0.5075499872942492,
+              1.5623755490768942
+            ],
+            "home_sd": 1.026436275942851,
+            "away_sd": 1.0606601717798212,
+            "home_mean": 0.375,
+            "away_mean": 0.625
+          },
+          "deep_block": {
+            "mean": -0.125,
+            "sd": 1.2747548783981961,
+            "sd_ci95_normal_assumption": [
+              0.8428349716935266,
+              2.594473026589715
+            ],
+            "home_sd": 1.8708286933869707,
+            "away_sd": 1.558387444947959,
+            "home_mean": -0.25,
+            "away_mean": 0.0
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.08928571428571427,
+            0.3214285714285714
+          ],
+          "max_abs_change": 0.1339285714285714
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.4375,
+          "trimmed20_context_average": 0.20833333333333331,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      }
+    },
+    "line_marginal": {
+      "xgd": {
+        "mean": 0.12320789514687504,
+        "se": 0.17630920227481056,
+        "df": 11.648861476804514,
+        "ci95": [
+          -0.26222506924440586,
+          0.508640859538156
+        ],
+        "p": 0.4983814305030524,
+        "bootstrap_ci95": [
+          -0.19405424556312492,
+          0.45390305149492105
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.024414382925000006,
+            "sd": 0.8490007326675063,
+            "sd_ci95_normal_assumption": [
+              0.5613373367786232,
+              1.7279474962500898
+            ],
+            "home_sd": 1.2933524468880893,
+            "away_sd": 0.7192564558570196,
+            "home_mean": 0.12332199025000001,
+            "away_mean": -0.17215075609999997
+          },
+          "deep_block": {
+            "mean": 0.2708301732187501,
+            "sd": 0.5233695345995979,
+            "sd_ci95_normal_assumption": [
+              0.34603840656314405,
+              1.065199406935167
+            ],
+            "home_sd": 0.6977322882145223,
+            "away_sd": 0.7804031218269071,
+            "home_mean": 0.5534997392500002,
+            "away_mean": -0.011839392812499988
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.023057439402232205,
+            0.19654462575937504
+          ],
+          "max_abs_change": 0.10015045574464283
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.04616937000000006,
+          "trimmed20_context_average": 0.09774907577916672,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gf": {
+        "mean": 0.21875,
+        "se": 0.2069522676160582,
+        "df": 13.705527972245884,
+        "ci95": [
+          -0.2260148463629123,
+          0.6635148463629124
+        ],
+        "p": 0.30878426633318035,
+        "bootstrap_ci95": [
+          -0.15625,
+          0.59375
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.25,
+            "sd": 0.8864052604279183,
+            "sd_ci95_normal_assumption": [
+              0.5860682435830519,
+              1.8040758876696685
+            ],
+            "home_sd": 1.5118578920369088,
+            "away_sd": 0.9258200997725514,
+            "home_mean": 0.5,
+            "away_mean": 0.0
+          },
+          "deep_block": {
+            "mean": 0.1875,
+            "sd": 0.7647361823344235,
+            "sd_ci95_normal_assumption": [
+              0.5056237944354914,
+              1.5564462087150257
+            ],
+            "home_sd": 1.4126343172547218,
+            "away_sd": 1.032939633141398,
+            "home_mean": 0.1875,
+            "away_mean": 0.1875
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.1294642857142857,
+            0.3080357142857143
+          ],
+          "max_abs_change": 0.0892857142857143
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.125,
+          "trimmed20_context_average": 0.22916666666666669,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "ga": {
+        "mean": 0.046875,
+        "se": 0.1907274314958391,
+        "df": 9.036480836939843,
+        "ci95": [
+          -0.38431505712837394,
+          0.47806505712837394
+        ],
+        "p": 0.8113518025968197,
+        "bootstrap_ci95": [
+          -0.296875,
+          0.40625
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.3125,
+            "sd": 1.0066741563896717,
+            "sd_ci95_normal_assumption": [
+              0.6655869285014492,
+              2.048855815009569
+            ],
+            "home_sd": 1.208230701716948,
+            "away_sd": 0.9977653603356423,
+            "home_mean": -0.0625,
+            "away_mean": 0.6875
+          },
+          "deep_block": {
+            "mean": -0.21875,
+            "sd": 0.3881618771300742,
+            "sd_ci95_normal_assumption": [
+              0.2566425987202523,
+              0.7900150352276808
+            ],
+            "home_sd": 0.6781013409302687,
+            "away_sd": 0.9543135154205277,
+            "home_mean": -0.0625,
+            "away_mean": -0.375
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            -0.07366071428571429,
+            0.140625
+          ],
+          "max_abs_change": 0.12053571428571429
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.0,
+          "trimmed20_context_average": 0.04166666666666667,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "gd": {
+        "mean": 0.171875,
+        "se": 0.28414924319926366,
+        "df": 11.170953405444841,
+        "ci95": [
+          -0.4523675429862909,
+          0.7961175429862909
+        ],
+        "p": 0.5573485417092281,
+        "bootstrap_ci95": [
+          -0.375,
+          0.671875
+        ],
+        "context": {
+          "high_press": {
+            "mean": -0.0625,
+            "sd": 1.3935437867947622,
+            "sd_ci95_normal_assumption": [
+              0.9213751270932302,
+              2.8362407765434883
+            ],
+            "home_sd": 2.0777305613852546,
+            "away_sd": 1.0999188281738923,
+            "home_mean": 0.5625,
+            "away_mean": -0.6875
+          },
+          "deep_block": {
+            "mean": 0.40625,
+            "sd": 0.8010874305770697,
+            "sd_ci95_normal_assumption": [
+              0.5296583000512798,
+              1.630430889728305
+            ],
+            "home_sd": 1.535298947157477,
+            "away_sd": 1.0835622468770048,
+            "home_mean": 0.25,
+            "away_mean": 0.5625
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.06026785714285715,
+            0.34598214285714285
+          ],
+          "max_abs_change": 0.17410714285714285
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.375,
+          "trimmed20_context_average": 0.25,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      },
+      "points": {
+        "mean": 0.3125,
+        "se": 0.22903134532822608,
+        "df": 7.304204062352387,
+        "ci95": [
+          -0.22453407312504092,
+          0.8495340731250409
+        ],
+        "p": 0.21297649744924424,
+        "bootstrap_ci95": [
+          -0.109375,
+          0.71875
+        ],
+        "context": {
+          "high_press": {
+            "mean": 0.125,
+            "sd": 1.2817398889233114,
+            "sd_ci95_normal_assumption": [
+              0.8474532800820476,
+              2.6086894235652878
+            ],
+            "home_sd": 2.017778127403648,
+            "away_sd": 0.8017837257372732,
+            "home_mean": 0.5,
+            "away_mean": -0.25
+          },
+          "deep_block": {
+            "mean": 0.5,
+            "sd": 0.1889822365046136,
+            "sd_ci95_normal_assumption": [
+              0.12495016936518102,
+              0.38463027161105706
+            ],
+            "home_sd": 0.6408699444616557,
+            "away_sd": 0.6408699444616557,
+            "home_mean": 0.125,
+            "away_mean": 0.875
+          }
+        },
+        "leave_one_out": {
+          "mean_range": [
+            0.19642857142857142,
+            0.4642857142857143
+          ],
+          "max_abs_change": 0.1517857142857143
+        },
+        "robust_sensitivity": {
+          "median_context_average": 0.375,
+          "trimmed20_context_average": 0.3541666666666667,
+          "caveat": "Median/trimmed location differs from the arithmetic mean; no mean-variance gain claimed."
+        },
+        "p_holm30_exploratory": 1.0
+      }
+    }
+  },
+  "dependence": {
+    "press_isolated": {
+      "high_press": {
+        "side_covariance": 0.194551155906623,
+        "side_correlation": 0.1406344294931632,
+        "paired_side_variance": 0.7924014291127657,
+        "independent_side_counterfactual_variance": 0.6951258511594541,
+        "paired_to_independent_side_variance": 1.1399395200035476,
+        "paired_arm_variance": 0.7924014291127656,
+        "independent_arm_counterfactual_variance": 0.8688235767460114,
+        "paired_to_independent_arm_variance": 0.9120395098859215
+      },
+      "deep_block": {
+        "side_covariance": -0.261864385432703,
+        "side_correlation": -0.12022787656050234,
+        "paired_side_variance": 1.015435656121901,
+        "independent_side_counterfactual_variance": 1.1463678488382523,
+        "paired_to_independent_side_variance": 0.8857851841805925,
+        "paired_arm_variance": 1.0154356561219005,
+        "independent_arm_counterfactual_variance": 1.1176457663194705,
+        "paired_to_independent_arm_variance": 0.9085487430116976
+      },
+      "outcome_correlations": {
+        "high_press": [
+          [
+            1.0,
+            0.642462931520933,
+            0.4761204332470638
+          ],
+          [
+            0.642462931520933,
+            1.0,
+            0.825170173811949
+          ],
+          [
+            0.4761204332470638,
+            0.8251701738119491,
+            1.0
+          ]
+        ],
+        "deep_block": [
+          [
+            1.0,
+            0.38021823663002435,
+            0.5547654540764104
+          ],
+          [
+            0.38021823663002435,
+            1.0,
+            0.8875573301071332
+          ],
+          [
+            0.5547654540764104,
+            0.8875573301071332,
+            1.0
+          ]
+        ]
+      }
+    },
+    "line_isolated": {
+      "high_press": {
+        "side_covariance": 1.3410372719264794,
+        "side_correlation": 0.5266502179718383,
+        "paired_side_variance": 1.9447586369410281,
+        "independent_side_counterfactual_variance": 1.2742400009777883,
+        "paired_to_independent_side_variance": 1.5262106317873534,
+        "paired_arm_variance": 1.9447586369410281,
+        "independent_arm_counterfactual_variance": 1.6174206854236766,
+        "paired_to_independent_arm_variance": 1.2023826914465403
+      },
+      "deep_block": {
+        "side_covariance": -0.6569032197443105,
+        "side_correlation": -0.5779581228045999,
+        "paired_side_variance": 0.24124837150098516,
+        "independent_side_counterfactual_variance": 0.5696999813731405,
+        "paired_to_independent_side_variance": 0.4234656475141659,
+        "paired_arm_variance": 0.241248371500985,
+        "independent_arm_counterfactual_variance": 0.5843038161514349,
+        "paired_to_independent_arm_variance": 0.4128817317846514
+      },
+      "outcome_correlations": {
+        "high_press": [
+          [
+            1.0,
+            0.8153244285641572,
+            0.7618959747762296
+          ],
+          [
+            0.8153244285641571,
+            0.9999999999999998,
+            0.940246506009723
+          ],
+          [
+            0.7618959747762295,
+            0.9402465060097229,
+            1.0
+          ]
+        ],
+        "deep_block": [
+          [
+            1.0,
+            0.7308126807823895,
+            0.30225404708446374
+          ],
+          [
+            0.7308126807823895,
+            1.0,
+            0.4342715744283826
+          ],
+          [
+            0.30225404708446374,
+            0.4342715744283826,
+            1.0
+          ]
+        ]
+      }
+    },
+    "combined": {
+      "high_press": {
+        "side_covariance": 1.5222144403744127,
+        "side_correlation": 0.6314861606018695,
+        "paired_side_variance": 2.1099237485580837,
+        "independent_side_counterfactual_variance": 1.3488165283708775,
+        "paired_to_independent_side_variance": 1.5642777977420574,
+        "paired_arm_variance": 2.109923748558084,
+        "independent_arm_counterfactual_variance": 1.4278020850849908,
+        "paired_to_independent_arm_variance": 1.477742448059592
+      },
+      "deep_block": {
+        "side_covariance": 0.08363043841529251,
+        "side_correlation": 0.05767828997910197,
+        "paired_side_variance": 0.8253930708219137,
+        "independent_side_counterfactual_variance": 0.7835778516142674,
+        "paired_to_independent_side_variance": 1.0533644731298897,
+        "paired_arm_variance": 0.8253930708219135,
+        "independent_arm_counterfactual_variance": 0.8407475124798648,
+        "paired_to_independent_arm_variance": 0.9817371548175481
+      },
+      "outcome_correlations": {
+        "high_press": [
+          [
+            1.0,
+            0.7899673883938494,
+            0.7803628634396027
+          ],
+          [
+            0.7899673883938495,
+            0.9999999999999999,
+            0.9152187513219938
+          ],
+          [
+            0.7803628634396025,
+            0.9152187513219939,
+            1.0
+          ]
+        ],
+        "deep_block": [
+          [
+            1.0,
+            0.6673941254459976,
+            0.605655204918898
+          ],
+          [
+            0.6673941254459976,
+            1.0,
+            0.9553752543358542
+          ],
+          [
+            0.605655204918898,
+            0.9553752543358542,
+            0.9999999999999998
+          ]
+        ]
+      }
+    },
+    "interaction": {
+      "high_press": {
+        "side_covariance": 2.309934675103896,
+        "side_correlation": 0.5440974760778325,
+        "paired_side_variance": 3.306571413518924,
+        "independent_side_counterfactual_variance": 2.1516040759669757,
+        "paired_to_independent_side_variance": 1.5367936185159352,
+        "paired_arm_variance": 3.306571413518924,
+        "independent_arm_counterfactual_variance": 2.5618376617850886,
+        "paired_to_independent_arm_variance": 1.2907029445475888
+      },
+      "deep_block": {
+        "side_covariance": -0.7555058425083224,
+        "side_correlation": -0.3571484937361292,
+        "paired_side_variance": 0.6898308031790095,
+        "independent_side_counterfactual_variance": 1.0675837244331707,
+        "paired_to_independent_side_variance": 0.6461608465839739,
+        "paired_arm_variance": 0.6898308031790092,
+        "independent_arm_counterfactual_variance": 1.5962964496778478,
+        "paired_to_independent_arm_variance": 0.4321445451552721
+      },
+      "outcome_correlations": {
+        "high_press": [
+          [
+            0.9999999999999999,
+            0.7445463422370321,
+            0.5898768620491962
+          ],
+          [
+            0.7445463422370321,
+            0.9999999999999998,
+            0.9413640981470925
+          ],
+          [
+            0.5898768620491962,
+            0.9413640981470927,
+            0.9999999999999999
+          ]
+        ],
+        "deep_block": [
+          [
+            0.9999999999999999,
+            0.22279379509476094,
+            0.22759619435248343
+          ],
+          [
+            0.22279379509476097,
+            1.0,
+            0.816833540839835
+          ],
+          [
+            0.22759619435248343,
+            0.8168335408398351,
+            0.9999999999999998
+          ]
+        ]
+      }
+    },
+    "press_marginal": {
+      "high_press": {
+        "side_covariance": 0.5251224683867601,
+        "side_correlation": 0.6920285973972026,
+        "paired_side_variance": 0.6991167392014286,
+        "independent_side_counterfactual_variance": 0.43655550500804857,
+        "paired_to_independent_side_variance": 1.6014383765210778,
+        "paired_arm_variance": 0.6991167392014284,
+        "independent_arm_counterfactual_variance": 0.6404594154462722,
+        "paired_to_independent_arm_variance": 1.0915863243485675
+      },
+      "deep_block": {
+        "side_covariance": -0.2464247148273196,
+        "side_correlation": -0.1678989042773345,
+        "paired_side_variance": 0.6106384178403071,
+        "independent_side_counterfactual_variance": 0.7338507752539669,
+        "paired_to_independent_side_variance": 0.8321016185190795,
+        "paired_arm_variance": 0.6106384178403071,
+        "independent_arm_counterfactual_variance": 0.39907411241946195,
+        "paired_to_independent_arm_variance": 1.5301378837584747
+      },
+      "outcome_correlations": {
+        "high_press": [
+          [
+            1.0,
+            0.9511012574988107,
+            0.6981804847656414
+          ],
+          [
+            0.9511012574988108,
+            1.0,
+            0.7383294988511324
+          ],
+          [
+            0.6981804847656412,
+            0.7383294988511323,
+            1.0
+          ]
+        ],
+        "deep_block": [
+          [
+            0.9999999999999999,
+            0.5580884313186634,
+            0.7415514925142259
+          ],
+          [
+            0.5580884313186634,
+            1.0,
+            0.8685877742399593
+          ],
+          [
+            0.741551492514226,
+            0.8685877742399593,
+            1.0
+          ]
+        ]
+      }
+    },
+    "line_marginal": {
+      "high_press": {
+        "side_covariance": 0.34655928755822085,
+        "side_correlation": 0.37254340907172195,
+        "paired_side_variance": 0.7208022440699625,
+        "independent_side_counterfactual_variance": 0.5475226002908521,
+        "paired_to_independent_side_variance": 1.3164794360763588,
+        "paired_arm_variance": 0.7208022440699624,
+        "independent_arm_counterfactual_variance": 0.6404594154462722,
+        "paired_to_independent_arm_variance": 1.1254456202626162
+      },
+      "deep_block": {
+        "side_covariance": -9.834979312828183e-05,
+        "side_correlation": -0.0001806199143080065,
+        "paired_side_variance": 0.27391566974699977,
+        "independent_side_counterfactual_variance": 0.2739648446435639,
+        "paired_to_independent_side_variance": 0.9998205065448156,
+        "paired_arm_variance": 0.27391566974699966,
+        "independent_arm_counterfactual_variance": 0.39907411241946195,
+        "paired_to_independent_arm_variance": 0.6863779464078347
+      },
+      "outcome_correlations": {
+        "high_press": [
+          [
+            1.0,
+            0.7136676019573677,
+            0.7509972467749385
+          ],
+          [
+            0.7136676019573677,
+            1.0,
+            0.9247688366826331
+          ],
+          [
+            0.7509972467749386,
+            0.924768836682633,
+            1.0
+          ]
+        ],
+        "deep_block": [
+          [
+            1.0,
+            0.5218069980084142,
+            0.8254334113922915
+          ],
+          [
+            0.5218069980084142,
+            1.0,
+            0.29488391230979427
+          ],
+          [
+            0.8254334113922915,
+            0.29488391230979427,
+            1.0
+          ]
+        ]
+      }
+    }
+  },
+  "arm_means": {
+    "high_press": {
+      "baseline": {
+        "xgd": -0.160900555525,
+        "gf": 1.4375,
+        "ga": 1.1875,
+        "gd": 0.25,
+        "points": 1.3125
+      },
+      "press": {
+        "xgd": 0.14653083737499997,
+        "gf": 1.3125,
+        "ga": 0.9375,
+        "gd": 0.375,
+        "points": 1.6875
+      },
+      "line": {
+        "xgd": -0.2100242409375,
+        "gf": 1.5,
+        "ga": 1.625,
+        "gd": -0.125,
+        "points": 1.3125
+      },
+      "combined": {
+        "xgd": 0.14682575693749988,
+        "gf": 1.75,
+        "ga": 1.125,
+        "gd": 0.625,
+        "points": 1.9375
+      }
+    },
+    "deep_block": {
+      "baseline": {
+        "xgd": 0.06372490106249995,
+        "gf": 1.25,
+        "ga": 1.0625,
+        "gd": 0.1875,
+        "points": 1.4375
+      },
+      "press": {
+        "xgd": 0.13819411006249993,
+        "gf": 1.6875,
+        "ga": 1.3125,
+        "gd": 0.375,
+        "points": 1.625
+      },
+      "line": {
+        "xgd": 0.33950814256250006,
+        "gf": 1.75,
+        "ga": 0.8125,
+        "gd": 0.9375,
+        "points": 2.25
+      },
+      "combined": {
+        "xgd": 0.404071215,
+        "gf": 1.5625,
+        "ga": 1.125,
+        "gd": 0.4375,
+        "points": 1.8125
+      }
+    }
+  },
+  "arm_covariance_xgd": {
+    "high_press": [
+      [
+        0.6761043427347952,
+        0.03821107381662297,
+        -0.16366897575867587,
+        -0.3410608317365465
+      ],
+      [
+        0.03821107381662297,
+        0.19271923401121618,
+        0.2020606793576998,
+        -0.10285729079847332
+      ],
+      [
+        -0.16366897575867587,
+        0.2020606793576998,
+        0.9413163426888813,
+        -0.28305183550523816
+      ],
+      [
+        -0.3410608317365465,
+        -0.10285729079847332,
+        -0.28305183550523816,
+        0.7516977423501957
+      ]
+    ],
+    "deep_block": [
+      [
+        0.47320032263646117,
+        0.05110505509878492,
+        0.17152772232522492,
+        0.007677220828975624
+      ],
+      [
+        0.05110505509878492,
+        0.6444454436830093,
+        -0.09408308357735853,
+        0.18024713197194697
+      ],
+      [
+        0.17152772232522492,
+        -0.09408308357735853,
+        0.11110349351497369,
+        -0.036052948894920535
+      ],
+      [
+        0.007677220828975624,
+        0.18024713197194697,
+        -0.036052948894920535,
+        0.3675471898434036
+      ]
+    ]
+  },
+  "arm_correlation_xgd": {
+    "high_press": [
+      [
+        1.0,
+        0.10585706519477173,
+        -0.20515953330931563,
+        -0.47841342833597666
+      ],
+      [
+        0.10585706519477173,
+        1.0,
+        0.4744074265511185,
+        -0.2702408061168928
+      ],
+      [
+        -0.2051595333093156,
+        0.4744074265511185,
+        1.0,
+        -0.33649340217080065
+      ],
+      [
+        -0.4784134283359767,
+        -0.2702408061168927,
+        -0.33649340217080065,
+        1.0
+      ]
+    ],
+    "deep_block": [
+      [
+        1.0,
+        0.09254399981342447,
+        0.7480798333146323,
+        0.018408778134679758
+      ],
+      [
+        0.09254399981342447,
+        1.0,
+        -0.3516046473280156,
+        0.3703554424177511
+      ],
+      [
+        0.7480798333146323,
+        -0.3516046473280156,
+        0.9999999999999998,
+        -0.1784104884121493
+      ],
+      [
+        0.018408778134679758,
+        0.3703554424177511,
+        -0.1784104884121493,
+        0.9999999999999998
+      ]
+    ]
+  },
+  "block_model": {
+    "estimates": {
+      "press_isolated": 0.19095030095000015,
+      "line_isolated": 0.11332977804375002,
+      "interaction": 0.019756234206250417
+    },
+    "independent_clusters": 16,
+    "naive_match_n_forbidden": 128,
+    "interpretation": "Same point estimates as complete paired contrasts; no additional independent n or proven variance reduction."
+  }
+}
