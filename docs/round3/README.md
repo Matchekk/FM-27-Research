@@ -4,9 +4,12 @@ Arbeitsstand 14.11.2026, Europe/Berlin. Drei tatsächliche Codex-Fachagenten
 arbeiteten parallel in getrennten Git-Worktrees und Branches. Der Director allein
 integriert und publiziert; native Prozesse werden ausschließlich zentral und
 nacheinander unter NativeLease und persistentem Studienbudget ausgeführt.
-Die drei Facharbeiten sind integriert; ein separater unabhängiger Reviewer folgt
-nach der Facharbeit. 118 integrierte Repositorytests bestehen. Noch kein neuer
-nativer Prozess und keine neue Seedreservierung in dieser Runde.
+Die drei Facharbeiten und der anschließende separate unabhängige Preflight sind
+integriert. 124 integrierte Repositorytests und fünf historische Analysetests
+bestehen. Zwei Reviewbefunde wurden vor Freeze korrigiert: fehlende unbegonnene
+Technikplätze beim Vorbereitungsexport und unstrenge TRAIN-Session-/Slottypen.
+[Unabhängige Abnahme](REVIEW.md) erlaubt zentrale ATTR-Vorbereitung/Technik,
+noch keine Hauptserie. Noch kein neuer nativer Prozess oder Seed in dieser Runde.
 
 ## Verantwortlichkeiten
 

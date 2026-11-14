@@ -1,0 +1,69 @@
+{
+  "kind": "static_file_identity_check_not_native_release",
+  "checked_utc": "2026-11-14T16:27:09.901205+00:00",
+  "observed_engine_file_version": "27.0.1",
+  "observed_engine_product_version": "27.0.1+2503222",
+  "tool_tag": "v1114.6",
+  "tool_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+  "upstream_tree_clean": true,
+  "sha256": {
+    "engine": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "host": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "fixture": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "catalog": "c08a8aa77c371aaafb29956c6c794b1580f7751547720dc6da4b83b63b32480c"
+  },
+  "resources": [
+    {
+      "path": "game_plugin.dll",
+      "sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340"
+    },
+    {
+      "path": "icudt65l.dat",
+      "sha256": "fc6a02273fb5e48de8df4cd40d9e35f2d41cafef3fae5303701cb1ce7cfd322e"
+    },
+    {
+      "path": "libs/EOSSDK-Win64-Shipping.dll",
+      "sha256": "9c498fe31c8df1d9085dfa9c71c6d50ec6b569acdb29f1decb97be105b6341dc"
+    },
+    {
+      "path": "libs/PartyWin.dll",
+      "sha256": "529229efe4612cce38bd6aeac1554de8bcb537a6562cb2ad666643c074cd7172"
+    },
+    {
+      "path": "libs/PlayFabMultiplayerWin.dll",
+      "sha256": "d83bc8af2511f4c0c312be1cb1939c83f1c96e5101be1e0c2c93f76de6e9a7d8"
+    },
+    {
+      "path": "libs/icudt65.dll",
+      "sha256": "5934535155d009039714d0e78dd63fce7b24b639d79b66b93a4b70358894ef00"
+    },
+    {
+      "path": "libs/icuin65.dll",
+      "sha256": "7fb37ec576cb72d144aeb61cec361ccaee4966fc300732adda8f6841fcb90b62"
+    },
+    {
+      "path": "libs/icuuc65.dll",
+      "sha256": "8641dfd912e3ef061de22a0b201d756855a4c4fb29dea889a5689034d74b8a98"
+    },
+    {
+      "path": "libs/steam_api64.dll",
+      "sha256": "eb17909a76668cf9ae0b92a618a34a50f6c73d3a6787cb4dd8ce36a8b10bfb75"
+    },
+    {
+      "path": "shared/data/simatch.fmf",
+      "sha256": "b7452ea21de3c82b022d6bad02bc7e43be8b97e117148aad87f36c30f04b7e24"
+    },
+    {
+      "path": "shared/data/simatchshared.fmf",
+      "sha256": "63d60f4f2fa09f56eb9fcd1e74205ab2c9a1e816c2bd8ba526c804d3a9142a9f"
+    }
+  ],
+  "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883",
+  "new_native_processes": 0,
+  "native_release_granted": false,
+  "baseline_ci": {
+    "commit": "7767d859e3a66a9aedcf9c1574f3e48dc8dc841f",
+    "run": 43612939765,
+    "conclusion": "success"
+  }
+}

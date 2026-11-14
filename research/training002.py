@@ -90,6 +90,9 @@ def measurement(value, unit, sources, *, numeric=False, bounds=(None, None)):
     require(value["source_sha256"] in sources, "Unresolved field source receipt")
     _code(value["locator"])
     require(value["value"] is not None, "Use null measurement for missing")
+    if unit == "session_code":
+        require(type(value["value"]) is int and 0 <= value["value"] <= 65535,
+                "Integer session code in 0..65535 required")
     if numeric:
         _number(value["value"], *bounds)
     elif unit == "sha256":
@@ -180,6 +183,7 @@ def read_checkpoint(path, source_paths):
     for event in row["participation"] or []:
         _keys(event, ("subject", "day", "slot", "session", "status", "minutes", "coach"))
         require(event["subject"] in players, "Participation subject missing from cohort")
+        require(type(event["slot"]) is int and event["slot"] in (0, 1, 2), "Invalid participation slot")
         key = (event["day"], event["slot"])
         require(key in calendar, "Participation not bound to calendar")
         require(_day(event["day"]) <= now, "Participation cannot be in the future")

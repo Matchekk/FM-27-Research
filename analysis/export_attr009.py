@@ -10,6 +10,8 @@ sys.path.insert(0,str(ROOT))
 from research.native import read,rows,write,require,digest
 from run_attr009 import LOCAL,PUBLIC,collect,technical_jobs,ordered_main,verify_code
 from analyse_attr009 import analyse
+from research.attr009 import ARMS, CONTEXTS
+from itertools import product
 
 FIELDS=("build","engine_sha256","adapter_host_sha256","adapter_version","lab_version","lab_commit",
         "fixture_sha256","resource_fingerprint","key","seed","arm","tested_side","setup_sha256",
@@ -39,13 +41,40 @@ def export():
         # Publish technical accounting without manufacturing a main schedule.
         budget=read(LOCAL/"budget.json")
         require(budget["active"] is None,"Unreconciled active preparation retained")
+        require(not budget['reserved'] and all(o['name']=='prepare' for o in budget['operations']),
+                'Missing receipt with retained match reservations: reconcile original evidence')
+        require(not any((LOCAL/name).exists() for name in ('technical','main','negative-attempt.json','negative.jsonl')),
+                'Native match evidence without registration: retain and reconcile')
+        plan=read(LOCAL/'seed-plan.json') if (LOCAL/'seed-plan.json').exists() else None
+        if plan:
+            require(len(plan['main_seeds'])==32 and len(plan['technical_seeds'])==2,
+                    'Incomplete retained seed plan')
+            seeds=plan['main_seeds']+plan['technical_seeds']
+            require(len(set(seeds))==34 and all(type(s) is int and 0<s<=0xffffffff for s in seeds),
+                    'Invalid retained seed plan')
+        accounting=[]
+        for h,s,a in product(CONTEXTS,(0,1),ARMS):
+            for repeat in range(2 if a in ('OJ','SJ') else 1):
+                accounting.append(dict(key=f'tech-{h}-{s}-{a}-r{repeat}',kind='technical',
+                    seed=plan['technical_seeds'][CONTEXTS.index(h)] if plan else None,
+                    scenario=h,side=s,design_id=a,status='not_started',registered=False,
+                    reserved=False,native_log_present=False))
+        accounting.append(dict(key='negative-binary',kind='technical',seed=None,status='not_started',
+                               registered=False,reserved=False,native_log_present=False))
+        for h,i,s,a in product(CONTEXTS,range(16),(0,1),ARMS):
+            seed=plan['main_seeds'][CONTEXTS.index(h)*16+i] if plan else None
+            key=f'{h}-{seed}-{s}-{a}' if plan else f'planned-{h}-block{i:02d}-{s}-{a}'
+            accounting.append(dict(key=key,kind='main',seed=seed,scenario=h,block_slot=i,
+                side=s,design_id=a,status='not_started',registered=False,reserved=False,native_log_present=False))
+        PUBLIC.mkdir(parents=True,exist_ok=True)
+        (PUBLIC/'job-accounting.jsonl').write_text(''.join(json.dumps(row)+'\n' for row in accounting),encoding='utf8')
         fields=("name","kind","keys","start_utc","child_deadline_utc","elapsed_seconds","returncode","timed_out")
         operations=[{k:o[k] for k in fields if k in o} for o in budget["operations"]]
         public={k:budget[k] for k in ("experiment","limits","limit_seconds","charged_seconds","reserved","halted","wall_start_utc","wall_deadline_utc","wall_limit_seconds")}
         public.update(active=None,operations=operations,charge_scope="all supervised preparation walltime; no reset/retry")
         write(PUBLIC/"budget.json",public)
         write(PUBLIC/"run-summary.json",dict(experiment_id="ATTR-009-Bridge",scientific_series_complete=False,
-            technical_gate_passed=False,registration_completed=False,counts=dict(technical={},main={"not_started":384}),
+            technical_gate_passed=False,registration_completed=False,counts=dict(technical={"not_started":33},main={"not_started":384}),
             charged_native_wall_seconds=budget["charged_seconds"],limit_seconds=600,excluded_matches=0,retries=0,holdout_matches=0))
         write(PUBLIC/"preparation-status.json",dict(status="blocked_before_registration",operations=operations,
             seed_reservation_present=(LOCAL/"seed-plan.json").exists(),native_full_matches_claimed=0,

@@ -102,6 +102,19 @@ class Training002Tests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Unit mismatch"):
             self.read()
 
+    def test_session_codes_and_participation_slots_are_strict_integers(self):
+        for value in (303.5, True, -1, 65536):
+            row = deepcopy(self.row)
+            row['calendar'][0]['session']['value'] = value
+            row['participation'][0]['session']['value'] = value
+            with self.assertRaises(ValueError):
+                self.read(row)
+        for value in (False, 0.0, -1, 3):
+            row = deepcopy(self.row)
+            row['participation'][0]['slot'] = value
+            with self.assertRaises(ValueError):
+                self.read(row)
+
     def test_injury_expected_return_is_not_observed_duration(self):
         self.row["injuries"] = [dict(event="I01", subject="S01", start="2026-11-12", end="2026-11-20",
                                      end_kind="expected_return", cause="training", source_sha256=self.digest,

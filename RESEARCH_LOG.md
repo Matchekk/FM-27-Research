@@ -354,3 +354,22 @@ Vier echteSubagents,initialdrei parallel,eigeneBranches/Worktrees,Directorallein
 [Abschluss](docs/round2/README.md),[Review](docs/round2/RESULTS-REVIEW.md),
 [Ledger](docs/round2/QUEUE.json),[Folgeauftrag](experiments/NEXT-ATTR-MECH-TRAIN-round3.md).
 Nach finalemPush/CIStop:keine1024-Erweiterung,Holdouts,weitereOptimierung oderKarriere.
+
+## 2026-11-14 – Runde3: parallele Facharbeit und unabhängiger Preflight
+
+Drei tatsächliche Codex-Fachagenten in getrennten Worktrees/Branches; danach
+separater Reviewer. ATTR-009-Bridge als sechsarmiger Roh60→80-Maskenpilot
+vorbereitet:384Main/32Blöcke,32Tech+1Negativprobe,600Child-/1200UTC-Sekunden.
+Passive Mechanismuszerlegung ausdrücklich unidentifiziert gemäß Bindungsauftrag;
+keine FM-Anzeige12→16 behauptet. MECH-Startpolicycodec offline binärgeprüft,
+512erStudie wegen fehlender Nach-Vorbereitungs-/Erstfortschritt-/Familiaritybelege
+blockiert. TRAIN-Checkpointdiagnose ohne Save-Decoder/Executor und ohne Freigabepfad;
+660historische Zeilen unabhängig mit rationaler Arithmetik rekonstruiert.
+
+Reviewer fand zwei vor Freeze korrigierte Fehler: fehlende33 unbegonnene
+Technikplätze im ATTR-Vorbereitungsexport und TRAIN-Bruchsessioncodes/boolesche
+Slots.124integrierteTests+5historischeAnalysen bestehen;272alte Dateien unverändert.
+Identität27.0.1+2503222/Host/Fixture/Katalog/elfRessourcen stimmtVALID002.
+Bisher0nativeProzesse/0neueMatches/0Seeds/0Advances/0Holdouts. Preflightfreigabe
+nur für zentrale ATTR-Vorbereitung/Technik nach Publikation/CI,keine Mainfreigabe.
+[Runde3](docs/round3/README.md),[Review](docs/round3/REVIEW.md).

@@ -6,7 +6,7 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'analysis'))
 from research.attr009 import *
 from research.core import schedule
-from research.native import read
+from research.native import read, rows
 import analyse_attr009 as analysis
 import run_attr009 as runner
 import export_attr009 as exporter
@@ -144,6 +144,17 @@ class AttrBridgeTests(unittest.TestCase):
             with patch.object(exporter,'LOCAL',local),patch.object(exporter,'PUBLIC',public):exporter.export()
             self.assertFalse(read(public/'run-summary.json')['scientific_series_complete'])
             self.assertEqual(read(public/'run-summary.json')['counts']['main']['not_started'],384)
+            self.assertEqual(read(public/'run-summary.json')['counts']['technical']['not_started'],33)
+            accounting=rows(public/'job-accounting.jsonl')
+            self.assertEqual(len(accounting),417)
+            self.assertEqual(len({r['key'] for r in accounting}),417)
+            self.assertTrue(all(r['seed'] is None and r['status']=='not_started' for r in accounting))
+            write(local/'seed-plan.json',dict(main_seeds=list(range(1000,1032)),technical_seeds=[2001,2002]))
+            with patch.object(exporter,'LOCAL',local),patch.object(exporter,'PUBLIC',public):exporter.export()
+            accounting=rows(public/'job-accounting.jsonl')
+            self.assertEqual(len(accounting),417)
+            self.assertEqual(len({r['seed'] for r in accounting if r['kind']=='main'}),32)
+            self.assertTrue(all(r['seed'] is not None for r in accounting if r['key']!='negative-binary'))
             self.assertFalse((public/'effects.json').exists())
     def test_phase_reentry_cannot_start_child_or_replace_provenance(self):
         class Budget:

@@ -14,7 +14,8 @@
       "native_execution": "director_only",
       "specialist_commit": "887306deaa07e8e98a53ffe1af94e5d6e1ee7c24",
       "new_native_starts": 0,
-      "new_seed_reservations": 0
+      "new_seed_reservations": 0,
+      "integration_commit": "7d37cb6"
     },
     {
       "agent": "/root/round3_mech",
@@ -24,7 +25,8 @@
       "native_execution": "director_only",
       "specialist_commit": "c667ed0dc99f99af36276b46139414486b68940a",
       "new_native_starts": 0,
-      "new_seed_reservations": 0
+      "new_seed_reservations": 0,
+      "integration_commit": "19e75af"
     },
     {
       "agent": "/root/round3_train",
@@ -34,13 +36,24 @@
       "native_execution": "none",
       "specialist_commit": "126fc131aa87a733298546213b2a8f879686277e",
       "new_native_starts": 0,
-      "new_seed_reservations": 0
+      "new_seed_reservations": 0,
+      "integration_commit": "2fcc583"
     }
   ],
   "independent_reviewer": {
-    "status": "queued_after_specialist_work"
+    "agent": "/root/round3_reviewer",
+    "branch": "codex/round3-review",
+    "specialist_commit": "a55dd49bd4144ef29d2437ba30a3bbb7a7197abc",
+    "integration_commit": "60ffc8d",
+    "status": "offline_preflight_passed_no_main_release",
+    "new_native_starts": 0
   },
   "holdouts_executed": 0,
   "career_advances": 0,
-  "automatic_next_round": false
+  "automatic_next_round": false,
+  "preflight_tests": {
+    "repository": 124,
+    "historical_analysis": 5,
+    "protected_prior_files": 272
+  }
 }
