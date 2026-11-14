@@ -1,0 +1,35 @@
+{
+  "id": "VALID-003-offline-preparation",
+  "native_processes_started": 0,
+  "seed_reservations": 0,
+  "career_replay_released": false,
+  "profile_vectors": 21,
+  "profile_native_validation": false,
+  "synthetic_python_children": 2,
+  "probe_results": [
+    {
+      "native_processes_started": 0,
+      "synthetic_python_children": 1,
+      "charged_seconds": 0.04124890000093728,
+      "reserved_attempts": 1,
+      "halted": false,
+      "actual_python_child_workers": 1
+    },
+    {
+      "native_processes_started": 0,
+      "synthetic_python_children": 1,
+      "charged_seconds": 0.08013750000100117,
+      "reserved_attempts": 2,
+      "halted": false,
+      "actual_python_child_workers": 1
+    }
+  ],
+  "shared_live_native_lease_used": false,
+  "code_lf_sha256": {
+    "research/validation003.py": "5c29945950e21ef183397b92d1cb8d09f38a300ef1de51d9b356f04bd956af1d",
+    "research/coordination_testpath.py": "81d223ec2e2be5679cb2b8238db1e48a111c966fb3310a0b5acaaa14a573f7c3",
+    "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e",
+    "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+    "research/study_budget.py": "7d20b2b9fd2ea1addb64bbec8f6976b971e8746d9d9977fc2e87370e45c93608"
+  }
+}
