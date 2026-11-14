@@ -1,0 +1,10 @@
+{
+  "experiment_id": "MECH-002-SHARPNESS-P0",
+  "approved_for_technical": true,
+  "approved_for_main": false,
+  "inputs_sha256": "0f1f4e048a1f3f893f47acf21b99b2730341424eb83a70c7ede066402b92f34f",
+  "review_sha256": "b504b9fccadef1bdb20bfc22f8c9a364bb4b381db251c88905064a082268b68e",
+  "runner_review_sha256": "d071509b1d92df62da70b988b9721a57044f69419b838229f00a1bda41276dbf",
+  "science_review_sha256": "5ebd239637a9917d5ba98c3ab71528770c47297a5e113d491b4938d7453294d6",
+  "scope": "Exactly32 new technical full matches plus one malformed-header control after registered publication and exact successful CI. No main authorization."
+}

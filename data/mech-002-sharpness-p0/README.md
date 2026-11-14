@@ -1,4 +1,17 @@
-# MECH-002-SHARPNESS-P0: gesperrter Entwurf
+# MECH-002-SHARPNESS-P0: konkrete Vorbereitung
+
+Stand 14.11.2026,22:01CET: Das separate TECH17-Transfergate ist tatsächlich
+bestanden und [unabhängig freigegeben](../mech-002-startpolicy-tech/release-gate.json).
+Die geprüfte neue Codegeneration `95d94a4e674a13eea543b64677f7c621c52e871a`
+hat [CI43640107860](https://github.com/Matchekk/FM-27-Research/actions/runs/43640107860)
+bestanden. Inerte Vorbereitung erstellt16 gehashte Eingabebinaries privat und
+den konkreten [Vertrag](contract.json), [Inputbeleg](inputs.json) und
+[Seedplan](seed-plan.json) öffentlich.64 neue Main- und vier neue Technikseeds
+sind zentral reserviert;2528 frühere/reservierte Werte ausgeschlossen.
+Keine Engine wurde dabei gestartet; das eigene3600s-Fenster ist noch ungeöffnet.
+Konkreter Inputreview, Registrierung und eigene Technikfreigabe stehen noch aus.
+
+## Erhaltener ursprünglicher Entwurfsstatus
 
 `contract-draft.json` beschreibt den separaten Raw-Startpaket×Pressing-Pilot:
 vier Arme,64 neue unabhängige Seedblöcke/512 Hauptmatches,32 neue technische
