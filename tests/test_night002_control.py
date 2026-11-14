@@ -2,16 +2,21 @@
 from contextlib import redirect_stderr
 from datetime import datetime
 from hashlib import sha256
+from copy import deepcopy
 import io
+import json
 import os
+import stat
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
 from research.budget import atomic
 from research.night002_control import (ARTIFACT_LIMIT_BYTES, CHILD_SECONDS, DEADLINE,
-    Night002Budget, artifact_bytes, assert_artifact_limit, assert_night002_admission)
+    Night002Budget, TERMINAL_STUDY, INDEPENDENT_STUDY, FAILED_CHARGED_SECONDS, artifact_bytes,
+    assert_artifact_limit, assert_night002_admission, reconcile_terminal_state)
 
 
 class Night002ControlTests(unittest.TestCase):
@@ -96,6 +101,95 @@ class Night002ControlTests(unittest.TestCase):
         with patch('research.night002_control.ARTIFACT_LIMIT_BYTES', 12):
             with self.assertRaisesRegex(ValueError, 'artifact limit'):assert_artifact_limit(self.root)
         self.assertEqual(ARTIFACT_LIMIT_BYTES, 4 * 1024**3)
+
+    def test_fast_scandir_counts_nested_files_and_rejects_reparse_before_descent(self):
+        root=self.root/'nested';(root/'a/b').mkdir(parents=True)
+        (root/'a/b/one').write_bytes(b'12345');(root/'two').write_bytes(b'1234567')
+        self.assertEqual(artifact_bytes(root),sum(p.stat().st_size for p in root.rglob('*') if p.is_file()))
+        fake=SimpleNamespace(path=str(root/'junction'),stat=lambda **kw:SimpleNamespace(st_mode=stat.S_IFDIR,
+            st_file_attributes=0x400,st_size=0))
+        class Entries:
+            def __enter__(self):return iter([fake])
+            def __exit__(self,*args):return False
+        with patch('research.night002_control.os.scandir',return_value=Entries()) as scan:
+            with self.assertRaisesRegex(ValueError,'reparse'):artifact_bytes(root)
+            self.assertEqual(scan.call_count,1)
+
+    def test_real_symlink_is_rejected_when_creation_is_permitted(self):
+        target=self.root/'target';target.mkdir();link=self.root/'link'
+        try:link.symlink_to(target,target_is_directory=True)
+        except OSError:self.skipTest('Windows symlink creation privilege unavailable')
+        with self.assertRaisesRegex(ValueError,'reparse'):artifact_bytes(link)
+
+    def terminal_fixture(self):
+        budget=Night002Budget(self.path);state=budget.load()
+        tech=[TERMINAL_STUDY+':t'+str(i) for i in range(33)]
+        main=[TERMINAL_STUDY+':m'+str(i) for i in range(512)]
+        state.update(halted=True,charged_seconds=FAILED_CHARGED_SECONDS,
+            reserved={**dict.fromkeys(tech,'technical'),**dict.fromkeys(main,'main')},
+            operations=[dict(name=TERMINAL_STUDY+'/technical',kind='technical',keys=tech,returncode=0,
+                timed_out=False,elapsed_seconds=107.96172520000255),
+                dict(name=TERMINAL_STUDY+'/main',kind='main',keys=main,returncode=1,
+                timed_out=False,elapsed_seconds=481.77362549999816)])
+        raw=json.dumps(state).encode();digest=sha256(raw).hexdigest()
+        proof=dict(experiment_id=TERMINAL_STUDY,global_budget_sha256=digest,terminal_closed=True,
+            scientific_series_complete=False,allow_resume=False,cleanup_verified=True,archive_restored=True,
+            global_charged_seconds=FAILED_CHARGED_SECONDS,global_reserved_counts={'technical':33,'main':512},
+            main_planned=512,technical_planned_jobs=33,main_accepted=224,main_failed_before_native=1,
+            main_not_started=287,native_calls=257,kernel_active_processes=0,pending_markers=0,
+            archive_entries_restored=1024,global_lease_absent=True)
+        binding=dict(termination_sha256='c'*64,review_sha256='d'*64,publication_commit='a'*40,ci_run=123)
+        review=dict(experiment_id=TERMINAL_STUDY,terminal_cleanup_verified=True,independent_study_only=INDEPENDENT_STUDY,
+            no_original_study_resumption=True,scientific_analysis_allowed=False,
+            termination_sha256='c'*64,review_sha256='d'*64)
+        return state,raw,digest,proof,review,binding
+
+    def test_terminal_reconciliation_keeps_all_charges_jobs_and_denies_old_study(self):
+        state,raw,digest,proof,review,binding=self.terminal_fixture()
+        after=reconcile_terminal_state(raw,digest,proof,review,binding)
+        self.assertTrue(state['halted']);self.assertFalse(after['halted'])
+        self.assertEqual(after['terminal_studies'],[TERMINAL_STUDY])
+        for key,value in state.items():
+            if key!='halted':self.assertEqual(after[key],value)
+        atomic(self.path,after);before=self.path.read_bytes();budget=Night002Budget(self.path)
+        with patch('research.night002_control.utcnow',return_value=self.when):
+            with self.assertRaisesRegex(ValueError,'permanently denied'):
+                budget.reserve(TERMINAL_STUDY+'/main','main',['retry'])
+            self.assertEqual(before,self.path.read_bytes())
+            with self.assertRaisesRegex(ValueError,'permanently denied'):
+                assert_night002_admission(self.root,TERMINAL_STUDY,'main',['retry'])
+            budget.reserve(INDEPENDENT_STUDY+'/technical','technical',[INDEPENDENT_STUDY+':new'])
+        self.assertEqual(budget.load()['charged_seconds'],FAILED_CHARGED_SECONDS)
+        self.assertEqual(len(budget.load()['reserved']),546)
+
+    def test_literal_terminal_ban_also_holds_without_terminal_metadata(self):
+        budget=Night002Budget(self.path)
+        for terminal in (None,[TERMINAL_STUDY]):
+            state=budget.load()
+            if terminal is None:state.pop('terminal_studies',None)
+            else:state['terminal_studies']=terminal
+            atomic(self.path,state);before=self.path.read_bytes()
+            with self.assertRaisesRegex(ValueError,'permanently denied'):
+                budget.reserve(TERMINAL_STUDY+'/main','main',['never'])
+            with self.assertRaisesRegex(ValueError,'permanently denied'):
+                assert_night002_admission(self.root,TERMINAL_STUDY,'main',['never'])
+            self.assertEqual(before,self.path.read_bytes())
+
+    def test_terminal_reconciliation_rejects_wrong_sha_cleanup_or_reservation_drift_without_mutation(self):
+        state,raw,digest,proof,review,binding=self.terminal_fixture()
+        for mode in ('sha','cleanup','reserved','resume','review'):
+            p,r=deepcopy(proof),deepcopy(review);payload=raw;wanted=digest
+            if mode=='sha':wanted='f'*64
+            elif mode=='cleanup':p['cleanup_verified']=False
+            elif mode=='reserved':
+                changed=deepcopy(state);changed['reserved'].pop(next(iter(changed['reserved'])))
+                payload=json.dumps(changed).encode();wanted=sha256(payload).hexdigest();p['global_budget_sha256']=wanted
+            elif mode=='resume':p['allow_resume']=True
+            else:r['terminal_cleanup_verified']=False
+            before=(payload,deepcopy(p),deepcopy(r))
+            with self.subTest(mode=mode),self.assertRaises(ValueError):
+                reconcile_terminal_state(payload,wanted,p,r,binding)
+            self.assertEqual((payload,p,r),before)
 
     def test_tampered_caps_seconds_or_artifact_contract_reject_without_repair(self):
         for key, value in [('limits', {'technical': 193, 'main': 2048}),

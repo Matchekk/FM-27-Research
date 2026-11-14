@@ -2,8 +2,17 @@
 
 Separate NIGHT-002-Studie. [Vorregistrierung](../../experiments/MECH-004-split-preregistration.md)
 und [unabhängiger Inputreview](../../docs/night-002/SPLIT004-INPUT-REVIEW.md).
-Aktuell: TECH32+1 bestanden und unabhängig aus Originalbelegen geprüft.
-Noch keine Hauptmatches. [Technischer Bericht](../../experiments/MECH-004-split-validation.md).
+Aktuell: TECH32+1 bestanden; Main nach224 akzeptierten Matches terminal gestoppt.
+Keine Leistungsschätzung aus der Teilserie. Alle Rohbelege erhalten,257 echte
+Nativeaufrufe bereinigt,545 geplante Plätze bleiben reserviert.
+[Technischer Bericht](../../experiments/MECH-004-split-validation.md) ·
+[Stoppbericht](../../experiments/MECH-004-split-stop.md) ·
+[unabhängiger Abschluss](../../docs/night-002/SPLIT004-TERMINATION-REVIEW.md).
+
+`main-summary.json` und `main-budget.json` geben ausdrücklich keine erfolgreiche
+Hauptserie frei; `main-job-accounting.jsonl` enthält alle512 Plätze einschließlich
+Fehlern/unbegonnenen Jobs. `native-call-time.json` zählt die tatsächlich257 Calls,
+keine imputierten Ergebnisse. Kein `main.jsonl`/Effektarchiv wurde erzeugt.
 
 - `contract.json`: eingefrorener Entwurf mit vier C90/C7A-Armen und Grenzen.
 - `inputs.json`: Setup-/Code-/Ressourcen-/Kontrollhashes, tatsächliche Softwareversionen.

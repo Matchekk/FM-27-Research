@@ -1,71 +1,113 @@
 # NIGHT-002 – konsolidierter Forschungsbericht
 
-**Zwischenstand vor erster nativer Ausführung.** Dieser Bericht wird mit
-tatsächlich abgeschlossenen Abschnitten ergänzt; geplante Studien sind keine
-gemessenen Befunde.
+**Zwischenstand 15.11.2026 Europe/Berlin.** MECH-004 ist terminal gestoppt;
+die eigenständige Mission ist noch aktiv. Keine Teilserien-Leistungsauswertung.
 
 ## A. Neue Forschungsfragen
 
-[Zehn geprüfte Kandidaten](NOVELTY_MATRIX.md) mit Hypothese, Überschneidung,
-Novelty-Entscheidung, Endpunkt, Kontrolle, Einheit, Confoundern, Aufwand und Nutzen.
-Beste drei: getrennte C90/C7A-Attribution; kontrolliertes ST→AMC-IP-Paket bei
-fester OOP-Struktur; Nettoertrag tatsächlich ausgeführter Ecken.
-Zuerst wird MECH-004-SPLIT-R0 technisch geprüft. [Quellenrefresh](LITERATURE_AUDIT.md)
-ergänzt unter anderem Puritys neuen Torwartnachtrag und aktualisiert den
-dynamischen FMAX-Stand. Externe Zahlen bleiben Autorenangaben, keine eigene Replikation.
+[Zehn Kandidaten](NOVELTY_MATRIX.md) enthalten Hypothese, Quellenüberlappung,
+Novelty-Entscheidung, Kontrolle, Einheit, Endpunkt, Confounder, Aufwand und Nutzen.
+Beste drei: getrennte C90/C7A-Attribution; gekreuzte stürmerlose IP/OOP-Pakete;
+Nettoertrag je tatsächlich ausgeführter Ecke. [Aktueller Quellenreview](LITERATURE_AUDIT.md)
+ergänzt Puritys neuen Keepernachtrag und trennt FMAX-Livedaten vom Suchcache.
+Externe Zahlen sind Autorenangaben, keine eigenen Replikationen.
+
+MECH-004 und TACT-003 sind `NOVEL_HYPOTHESIS` innerhalb der geprüften Literatur,
+kein Anspruch weltweiter Erstmaligkeit. Joint-Sharpness-Wiederholung und alter
+Staminavertrag sind `DUPLICATE_STOP`; ihre Budgets/Seeds bleiben geschlossen.
 
 ## B. Tatsächlich ausgeführte Studien
 
-Bis zu diesem Zwischenstand: **0 Hauptmatches,32 technische Vollmatches,
-1 erwartete Negativabweisung** in NIGHT-002. MECH-004 ist registriert auf Vorregistrierungscommit
-`0e535dc`, [CI43648809178 erfolgreich](https://github.com/Matchekk/FM-27-Research/actions/runs/43648809178).
-Der registrierte vollständige Jobplan wurde vor Technik veröffentlicht.
-Alle32 technischen Matches und16 exakte A/A-Paare bestanden; beide Felder
-überstehen Vorbereitung/Erstfortschritt getrennt. Der Cache8A folgt in allen
-gekreuzten Startaufnahmen C90 (70/100), unabhängig von C7A. Noch kein Matcheffekt.
-[Technischer Bericht](../../experiments/MECH-004-split-validation.md).
-[Unabhängige technische Rohabnahme](SPLIT004-TECHNICAL-REVIEW.md) bestanden;
-Mainfreigabe liegt als konkretes Gate vor und benötigt öffentliche erfolgreiche CI.
-Eigene Phasenchildzeit78,533s, global107,962s; separat110,736 summierte native
-Callsekunden.0 unerwartete Fehler,0 Retries/Ersatzseeds, vollständige Bereinigung.
-Historische MECH-002-Zahlen werden nicht als neue Messungen gezählt.
+### MECH-004-SPLIT-R0: Technik bestanden, Hauptserie abgebrochen
 
-## C. Technische Fortschritte
+Frage: Unterscheiden sich C90- und C7A-Rohstartwirkungen? Vier gekreuzte Arme
+7000/10000 je Feld, zehn Startfeldspieler, D00, zwei feste Gegner, beide Seiten.
+FM27 27.0.1+2503222, unveränderter passiver Observerhost, Tactics Lab v1114.6.
 
-Neue separate Missionsbudget-/Admissionmodule und Splitcompiler-/Readback-/
-Analysemodule sind offline implementiert. Aktuelle fokussierte Tests:22 bestanden.
-Gesamtsuite403 durchlaufen (402bestanden,1Skip), fünf Analysetests sowie alle
-bestehenden CI-Archiv-/Ergebnisverifier bestanden.68 neue Seeds wurden gegen2597
-historische/reservierte Werte geprüft; konkrete Inputs sind offline erzeugt.
-Der konkrete [Inputreview](SPLIT004-INPUT-REVIEW.md) hat alle16 Eingaben,
-68disjunkte Seeds und unveränderte Ressourcen unabhängig akzeptiert.
-Vorregistrierung/CI sind veröffentlicht; registrierter Jobplan und native
-Splitabnahme bleiben vor Main erforderlich.
-Der Director hat den von einem anderen Agenten geschriebenen Missionscontroller
-separat auf Authentifizierung, feste Limits, strikte Argumente und Leasegrenzen geprüft.
-Das tatsächliche neue Transfergate ist nun bestanden; die frühere reine
-Offlinevorbereitung wird davon unterschieden. [Sicherheit](SAFETY_ASSESSMENT.md)
-und konkrete Input-/Runnerreviews lagen vor dem ersten Aufruf vor.
+- Technik:32 Vollmatches, vier separate Seeds,16 exakte A/A-Paare und eine
+  erwartete Exit108-Abweisung. Beide Rohfelder überstehen Vorbereitung und
+  Erstfortschritt getrennt. Alle Kontrollen/Actorbindungen/Nativeinputs bestanden.
+- Neuer technischer Befund: Cache8A ist70 bei C90=7000 und100 bei C90=10000,
+  unabhängig von C7A, in allen geprüften Start-/Erstschrittaufnahmen. Keine
+  UI-Skala, Consumersemantik oder natürliche Karrierewirkung nachgewiesen.
+- Main:224 akzeptierte Matches,1 vor Engineaufruf fehlgeschlagener Job,
+  287 unbegonnene Plätze.28 vollständige8er-Blöcke ausschließlich `deep_block`;
+  die geplante64-Block-/Zweikontextserie fehlt. **Keine primären oder sekundären
+  Leistungseffekte, Intervalle oder Äquivalenzaussagen aus dieser Teilserie.**
+- Fehlerursache: Der Director versuchte wegen steigender Scanlaufzeit, bereits
+  abgeschlossene private Belege während des unveränderten laufenden Pfadscans
+  verlustfrei zu archivieren. Das löste `Mission artifact path escaped` aus.
+  Eine echte Pfadflucht ist nicht belegt. Dies war ein vermeidbarer Fehler des
+  Directorablaufs, keine Wirkung der wissenschaftlichen Intervention.
+- Alle1024 archivierten Originaldateien wurden bytegleich wiederhergestellt;
+  alle257 tatsächlichen nativen Calls sind bereinigt. Keine verlorenen Rohdaten,
+  offenen Pendingmarker oder globale Lease. Alle545 Plätze/68 Seeds bleiben
+  reserviert; eigener Studienetat `halted`, keine Wiederholung oder Ersatzseeds.
+
+Eigene belastete Phasenchildzeit528,8133745s, globale589,7353507s; zusätzlich
+separat838,064s summierte Native-Callzeit. Diese Größen werden nicht addiert.
+Die technische Teilstudie bleibt gültig; die Fußball-Feldattribution bleibt offen.
+[Technikbericht](../../experiments/MECH-004-split-validation.md),
+[Stoppbericht](../../experiments/MECH-004-split-stop.md),
+[Terminalbeleg](../../data/night-002-split004/termination.json),
+[unabhängige Abschlussprüfung](SPLIT004-TERMINATION-REVIEW.md).
+
+Vorregistrierung0e535dc/CI43648809178, Registrierungb53c56e/CI43649328317 und
+Technikfreigabe5ea00c8/CI43650461926 lagen jeweils vor ihren freigegebenen
+Aufrufen vor. Der spätere Infrastrukturabbruch wird dadurch nicht beschönigt.
+
+### TACT-003-STLESS-R0: unabhängiger nächster Gegenstand, noch nicht ausgeführt
+
+Primärfrage: Moderiert das OOP4420-Paket den Effekt des IP4240-Pakets gegenüber
+IP4231/OOP4411? Vorregistrierter2×2-DoD, keine isolierte Rollen-/Positionswirkung.
+[Design](STLESS003-DESIGN.md) und [unabhängiger Neuheitsreview](STLESS003-NOVELTY-REVIEW.md)
+liegen vor.0 neue TACT-Matches/Seeds bei diesem Zwischenstand.
+
+Vor Ausführung: neue überprüfte globale Administrationsfortsetzung ausschließlich
+für diese unabhängige Frage. Kein Reset: bisherige Zeit, alle545 Reservierungen,
+Fehloperation und eigener MECH-Stopp bleiben erhalten. Dauerhaftes MECH-004-
+Admissionverbot. Danach eigene Input-/Code-/Review-/Publikations-/CI-Gates.
+
+## C. Technische Fortschritte und Grenzen
+
+Native Splitidentifikation ist tatsächlich bestanden. Die Archivierung war kein
+Erfolg des Laufzeitpfads; erfolgreich war nur die überprüfte bytegleiche
+Wiederherstellung. Der ausgeführte eigene Hilfsquellstand ist unter
+`archive/night-002/archive_completed_native_v0.py` erhalten und wird nicht erneut
+während einer aktiven Phase eingesetzt.
+
+Der neue, erst nach dem Stopp geänderte Controller zählt Artefakte mit einer
+geprüften Scandir-Traversierung statt einzelnen Windows-Pfadauflösungen.
+Read-only-Identität146.920.935Bytes, ein Messdurchlauf0,633s vorher/0,013s nachher
+(etwa48fach); keine neue native Validierung durch diesen Mikrobenchmark.
+Reparse-/Linkverbote, Bytecaps und alte Abrechnung bleiben unverändert.
+
+[SET-Readiness](SET-READINESS.md): Drei vorhandene Logs und Originalcode geprüft.
+Der Host liefert keine vollständige Eckkontakt-/Retake-/Shot-xG-/Besitzkette.
+Zusätzlich konkurrieren Stats-/Eventhooks um Debugregister; Episoden-xG und
+Torfenster stimmen nicht überein.0 neue SET-Wirksamkeitsmatches, kein Nennergate.
 
 ## D. Praktische Konsequenzen
 
-Noch keine neuen eigenen Spieler-/Taktik-/Trainingsempfehlungen.
-Meta-Scorev0.1 bleibt unverändert und unvalidiertes Prognosemodell.
-Getrennte Rohfeldattribution könnte die Interpretation des alten Schärfepakets
-verbessern; eine UI-Skala oder natürliche Karrierewirkung folgt daraus nicht.
+Noch keine neue eigene Spieler-, Rollen- oder Trainingsempfehlung. Der technische
+C90-Cachebefund ersetzt keine Fußballleistungsschätzung. Meta-Scorev0.1 bleibt
+unverändert und unvalidiertes Prognosemodell. Natürliche Karriereübertragung,
+UI-Prozentbedeutung und echte Rollenlaufwege bleiben unbewiesen.
 
 ## E. Kritische Bewertung
 
-Bislang Quellenklärung und überprüfbare Versuchsplanung, keine neue bestätigte
-Enginewirkung. Der Forschungswert hängt vom tatsächlichen Transfergate und
-gegebenenfalls nachfolgenden neuen Seedmessungen ab. Fehlende Gates werden
-als Blocker dokumentiert und nicht als Effekte dargestellt.
+Neue bestätigte Fußballwirkung: bislang keine. Neuer technischer Transferbefund:
+getrennte Rohfelder und beobachtete C90-Cachekopplung. Explorative Leistungshinweise:
+keine aus der unvollständigen Serie berechnet. Widerlegte Wirkungshypothesen:
+keine; Infrastrukturfehler ist kein Nullbefund. Der Directorfehler hat224 gültige
+Messungen ohne vorregistrierte Gesamtauswertung verbraucht und ist ein realer
+Forschungsverlust. Andere unabhängige Fragen werden nicht dafür umetikettiert.
 
 ## F. Nächste Prioritäten
 
-1. MECH-004: konkrete publizierte Inputs/Review/CI, dann technische Splitidentifikation;
-   nur nach unabhängiger Freigabe begrenzter Hauptpilot.
-2. ST→AMC: kontrollierbare Originalpositionen/-rollen und feste OOP-Identitäten
-   offline prüfen, bevor ein separater nativer Vertrag entsteht.
-3. SET: reale Ausführungs-/Schuss-/VAR-/Konterketten zunächst technisch lesbar
-   und mit Goldfällen prüfbar machen; keine Wirksamkeitsserie ohne Nenner.
+1. TACT-003 mit eigenen überprüften Gates als unabhängigen begrenzten Pilot
+   ausführen und vollständig auswerten; niemals MECH-004 fortsetzen.
+2. SET: tatsächliche Kontakte/Legalität/Retakes, danach einzelne Schuss-/Finaltor-
+   und Besitz-/Konterbindung reparieren und gegen echte unabhängige Goldfälle prüfen.
+3. Neue natürliche Schärfe-/Profilfrage erst mit eigenem Kontext-/Consumer-/UI-Gate
+   planen; die fehlgeschlagene identische Serie nicht neu benennen oder nachfüllen.

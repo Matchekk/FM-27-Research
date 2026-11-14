@@ -1,0 +1,1312 @@
+{
+  "schema_version": 1,
+  "experiment_id": "MECH-004-SPLIT-R0",
+  "terminal_closed": true,
+  "scientific_series_complete": false,
+  "complete_accounting": true,
+  "planned_jobs": 545,
+  "calls": 257,
+  "sum_native_elapsed_seconds": 838.0640000000058,
+  "phases": {
+    "technical": {
+      "calls": 33,
+      "sum_native_elapsed_seconds": 110.73599999999715,
+      "ledger_sha256": "dd633f32bd052bde85606ea40207550bde06806f9b6b4c554180ca121fe214b9",
+      "jobs": [
+        {
+          "job_id": "tech-deep_block-s1-C90H-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.375
+        },
+        {
+          "job_id": "tech-deep_block-s1-C90H-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4530000000013388
+        },
+        {
+          "job_id": "tech-deep_block-s1-C90L-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.6560000000026776
+        },
+        {
+          "job_id": "tech-deep_block-s1-C90L-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.6409999999959837
+        },
+        {
+          "job_id": "tech-deep_block-s1-C90L-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4069999999992433
+        },
+        {
+          "job_id": "tech-deep_block-s1-C90L-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.360000000000582
+        },
+        {
+          "job_id": "tech-deep_block-s1-C90H-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.438000000001921
+        },
+        {
+          "job_id": "tech-deep_block-s1-C90H-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.438000000001921
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90L-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3910000000032596
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90L-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3910000000032596
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90H-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5319999999992433
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90H-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.452999999994063
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90L-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.514999999999418
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90L-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90H-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.375
+        },
+        {
+          "job_id": "tech-deep_block-s0-C90H-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3439999999973224
+        },
+        {
+          "job_id": "tech-high_press-s1-C90L-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3280000000013388
+        },
+        {
+          "job_id": "tech-high_press-s1-C90L-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.438000000001921
+        },
+        {
+          "job_id": "tech-high_press-s1-C90H-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5780000000013388
+        },
+        {
+          "job_id": "tech-high_press-s1-C90H-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5930000000007567
+        },
+        {
+          "job_id": "tech-high_press-s1-C90L-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.561999999998079
+        },
+        {
+          "job_id": "tech-high_press-s1-C90L-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5460000000020955
+        },
+        {
+          "job_id": "tech-high_press-s1-C90H-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.311999999998079
+        },
+        {
+          "job_id": "tech-high_press-s1-C90H-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2659999999959837
+        },
+        {
+          "job_id": "tech-high_press-s0-C90L-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2030000000013388
+        },
+        {
+          "job_id": "tech-high_press-s0-C90L-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3439999999973224
+        },
+        {
+          "job_id": "tech-high_press-s0-C90H-C7AL-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.436999999998079
+        },
+        {
+          "job_id": "tech-high_press-s0-C90H-C7AL-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4530000000013388
+        },
+        {
+          "job_id": "tech-high_press-s0-C90L-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3280000000013388
+        },
+        {
+          "job_id": "tech-high_press-s0-C90L-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3910000000032596
+        },
+        {
+          "job_id": "tech-high_press-s0-C90H-C7AH-r0",
+          "status": "ok",
+          "native_elapsed_seconds": 3.375
+        },
+        {
+          "job_id": "tech-high_press-s0-C90H-C7AH-r1",
+          "status": "ok",
+          "native_elapsed_seconds": 3.312999999994645
+        },
+        {
+          "job_id": "negative-malformed",
+          "status": "expected_rejection",
+          "native_elapsed_seconds": 1.0
+        }
+      ]
+    },
+    "main": {
+      "calls": 224,
+      "sum_native_elapsed_seconds": 727.3280000000086,
+      "ledger_sha256": "2c6d4738f222480169a4a4546b8c98d34dddefc4bb3067ae235d7df1097608e3",
+      "jobs": [
+        {
+          "job_id": "deep_block-135505676-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0
+        },
+        {
+          "job_id": "deep_block-135505676-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1559999999954016
+        },
+        {
+          "job_id": "deep_block-135505676-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2189999999973224
+        },
+        {
+          "job_id": "deep_block-135505676-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.139999999999418
+        },
+        {
+          "job_id": "deep_block-135505676-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.389999999999418
+        },
+        {
+          "job_id": "deep_block-135505676-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.875
+        },
+        {
+          "job_id": "deep_block-135505676-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.014999999999418
+        },
+        {
+          "job_id": "deep_block-135505676-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.9839999999967404
+        },
+        {
+          "job_id": "deep_block-139753610-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1089999999967404
+        },
+        {
+          "job_id": "deep_block-139753610-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2030000000013388
+        },
+        {
+          "job_id": "deep_block-139753610-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.125
+        },
+        {
+          "job_id": "deep_block-139753610-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-139753610-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1719999999986612
+        },
+        {
+          "job_id": "deep_block-139753610-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-139753610-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2030000000013388
+        },
+        {
+          "job_id": "deep_block-139753610-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.202999999994063
+        },
+        {
+          "job_id": "deep_block-373493351-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1409999999959837
+        },
+        {
+          "job_id": "deep_block-373493351-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-373493351-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.186999999998079
+        },
+        {
+          "job_id": "deep_block-373493351-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0
+        },
+        {
+          "job_id": "deep_block-373493351-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0160000000032596
+        },
+        {
+          "job_id": "deep_block-373493351-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2189999999973224
+        },
+        {
+          "job_id": "deep_block-373493351-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1090000000040163
+        },
+        {
+          "job_id": "deep_block-373493351-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2189999999973224
+        },
+        {
+          "job_id": "deep_block-379216780-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.125
+        },
+        {
+          "job_id": "deep_block-379216780-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.312000000005355
+        },
+        {
+          "job_id": "deep_block-379216780-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3910000000032596
+        },
+        {
+          "job_id": "deep_block-379216780-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2969999999986612
+        },
+        {
+          "job_id": "deep_block-379216780-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2969999999986612
+        },
+        {
+          "job_id": "deep_block-379216780-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0930000000007567
+        },
+        {
+          "job_id": "deep_block-379216780-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.187000000005355
+        },
+        {
+          "job_id": "deep_block-379216780-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-590051202-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.985000000000582
+        },
+        {
+          "job_id": "deep_block-590051202-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0319999999992433
+        },
+        {
+          "job_id": "deep_block-590051202-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0160000000032596
+        },
+        {
+          "job_id": "deep_block-590051202-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1560000000026776
+        },
+        {
+          "job_id": "deep_block-590051202-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1560000000026776
+        },
+        {
+          "job_id": "deep_block-590051202-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0460000000020955
+        },
+        {
+          "job_id": "deep_block-590051202-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0939999999973224
+        },
+        {
+          "job_id": "deep_block-590051202-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.9839999999967404
+        },
+        {
+          "job_id": "deep_block-678981898-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3910000000032596
+        },
+        {
+          "job_id": "deep_block-678981898-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0930000000007567
+        },
+        {
+          "job_id": "deep_block-678981898-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2189999999973224
+        },
+        {
+          "job_id": "deep_block-678981898-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.061999999998079
+        },
+        {
+          "job_id": "deep_block-678981898-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0939999999973224
+        },
+        {
+          "job_id": "deep_block-678981898-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0930000000007567
+        },
+        {
+          "job_id": "deep_block-678981898-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.061999999998079
+        },
+        {
+          "job_id": "deep_block-678981898-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0160000000032596
+        },
+        {
+          "job_id": "deep_block-690651050-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1560000000026776
+        },
+        {
+          "job_id": "deep_block-690651050-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1560000000026776
+        },
+        {
+          "job_id": "deep_block-690651050-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2660000000032596
+        },
+        {
+          "job_id": "deep_block-690651050-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.311999999998079
+        },
+        {
+          "job_id": "deep_block-690651050-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1089999999967404
+        },
+        {
+          "job_id": "deep_block-690651050-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.014999999999418
+        },
+        {
+          "job_id": "deep_block-690651050-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.860000000000582
+        },
+        {
+          "job_id": "deep_block-690651050-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.952999999994063
+        },
+        {
+          "job_id": "deep_block-989175784-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.188000000001921
+        },
+        {
+          "job_id": "deep_block-989175784-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2030000000013388
+        },
+        {
+          "job_id": "deep_block-989175784-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.311999999998079
+        },
+        {
+          "job_id": "deep_block-989175784-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2030000000013388
+        },
+        {
+          "job_id": "deep_block-989175784-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.313000000001921
+        },
+        {
+          "job_id": "deep_block-989175784-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.438000000001921
+        },
+        {
+          "job_id": "deep_block-989175784-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.375
+        },
+        {
+          "job_id": "deep_block-989175784-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.562000000005355
+        },
+        {
+          "job_id": "deep_block-1110545091-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.422000000005937
+        },
+        {
+          "job_id": "deep_block-1110545091-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2339999999967404
+        },
+        {
+          "job_id": "deep_block-1110545091-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2810000000026776
+        },
+        {
+          "job_id": "deep_block-1110545091-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1560000000026776
+        },
+        {
+          "job_id": "deep_block-1110545091-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1569999999992433
+        },
+        {
+          "job_id": "deep_block-1110545091-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1559999999954016
+        },
+        {
+          "job_id": "deep_block-1110545091-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0469999999986612
+        },
+        {
+          "job_id": "deep_block-1110545091-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0309999999954016
+        },
+        {
+          "job_id": "deep_block-1167839174-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0939999999973224
+        },
+        {
+          "job_id": "deep_block-1167839174-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2659999999959837
+        },
+        {
+          "job_id": "deep_block-1167839174-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-1167839174-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1409999999959837
+        },
+        {
+          "job_id": "deep_block-1167839174-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.327999999994063
+        },
+        {
+          "job_id": "deep_block-1167839174-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2810000000026776
+        },
+        {
+          "job_id": "deep_block-1167839174-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4059999999954016
+        },
+        {
+          "job_id": "deep_block-1167839174-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.188000000001921
+        },
+        {
+          "job_id": "deep_block-1228649229-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.313000000001921
+        },
+        {
+          "job_id": "deep_block-1228649229-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.8439999999973224
+        },
+        {
+          "job_id": "deep_block-1228649229-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.985000000000582
+        },
+        {
+          "job_id": "deep_block-1228649229-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 4.235000000000582
+        },
+        {
+          "job_id": "deep_block-1228649229-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 4.26600000000326
+        },
+        {
+          "job_id": "deep_block-1228649229-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.875
+        },
+        {
+          "job_id": "deep_block-1228649229-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5469999999986612
+        },
+        {
+          "job_id": "deep_block-1228649229-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4060000000026776
+        },
+        {
+          "job_id": "deep_block-1232584037-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2659999999959837
+        },
+        {
+          "job_id": "deep_block-1232584037-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3280000000013388
+        },
+        {
+          "job_id": "deep_block-1232584037-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2819999999992433
+        },
+        {
+          "job_id": "deep_block-1232584037-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1569999999992433
+        },
+        {
+          "job_id": "deep_block-1232584037-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-1232584037-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4690000000045984
+        },
+        {
+          "job_id": "deep_block-1232584037-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4059999999954016
+        },
+        {
+          "job_id": "deep_block-1232584037-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3910000000032596
+        },
+        {
+          "job_id": "deep_block-1266552195-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2809999999954016
+        },
+        {
+          "job_id": "deep_block-1266552195-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.514999999999418
+        },
+        {
+          "job_id": "deep_block-1266552195-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4219999999986612
+        },
+        {
+          "job_id": "deep_block-1266552195-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3289999999979045
+        },
+        {
+          "job_id": "deep_block-1266552195-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3439999999973224
+        },
+        {
+          "job_id": "deep_block-1266552195-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2180000000007567
+        },
+        {
+          "job_id": "deep_block-1266552195-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.139999999999418
+        },
+        {
+          "job_id": "deep_block-1266552195-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1719999999986612
+        },
+        {
+          "job_id": "deep_block-1461611105-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2180000000007567
+        },
+        {
+          "job_id": "deep_block-1461611105-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.514999999999418
+        },
+        {
+          "job_id": "deep_block-1461611105-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3280000000013388
+        },
+        {
+          "job_id": "deep_block-1461611105-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4059999999954016
+        },
+        {
+          "job_id": "deep_block-1461611105-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2339999999967404
+        },
+        {
+          "job_id": "deep_block-1461611105-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2969999999986612
+        },
+        {
+          "job_id": "deep_block-1461611105-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1090000000040163
+        },
+        {
+          "job_id": "deep_block-1461611105-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0160000000032596
+        },
+        {
+          "job_id": "deep_block-1705923510-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.110000000000582
+        },
+        {
+          "job_id": "deep_block-1705923510-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.014999999999418
+        },
+        {
+          "job_id": "deep_block-1705923510-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.311999999998079
+        },
+        {
+          "job_id": "deep_block-1705923510-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.125
+        },
+        {
+          "job_id": "deep_block-1705923510-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2190000000045984
+        },
+        {
+          "job_id": "deep_block-1705923510-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1719999999986612
+        },
+        {
+          "job_id": "deep_block-1705923510-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1719999999986612
+        },
+        {
+          "job_id": "deep_block-1705923510-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2340000000040163
+        },
+        {
+          "job_id": "deep_block-1821378395-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5
+        },
+        {
+          "job_id": "deep_block-1821378395-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4069999999992433
+        },
+        {
+          "job_id": "deep_block-1821378395-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2189999999973224
+        },
+        {
+          "job_id": "deep_block-1821378395-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0469999999986612
+        },
+        {
+          "job_id": "deep_block-1821378395-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4060000000026776
+        },
+        {
+          "job_id": "deep_block-1821378395-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.375
+        },
+        {
+          "job_id": "deep_block-1821378395-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.422000000005937
+        },
+        {
+          "job_id": "deep_block-1821378395-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-2075112168-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4219999999986612
+        },
+        {
+          "job_id": "deep_block-2075112168-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3589999999967404
+        },
+        {
+          "job_id": "deep_block-2075112168-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.375
+        },
+        {
+          "job_id": "deep_block-2075112168-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2339999999967404
+        },
+        {
+          "job_id": "deep_block-2075112168-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0930000000007567
+        },
+        {
+          "job_id": "deep_block-2075112168-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.139999999999418
+        },
+        {
+          "job_id": "deep_block-2075112168-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.235000000000582
+        },
+        {
+          "job_id": "deep_block-2075112168-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1560000000026776
+        },
+        {
+          "job_id": "deep_block-2182573658-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1559999999954016
+        },
+        {
+          "job_id": "deep_block-2182573658-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.139999999999418
+        },
+        {
+          "job_id": "deep_block-2182573658-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2660000000032596
+        },
+        {
+          "job_id": "deep_block-2182573658-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-2182573658-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.172000000005937
+        },
+        {
+          "job_id": "deep_block-2182573658-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.063000000001921
+        },
+        {
+          "job_id": "deep_block-2182573658-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-2182573658-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.811999999998079
+        },
+        {
+          "job_id": "deep_block-2261148850-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3439999999973224
+        },
+        {
+          "job_id": "deep_block-2261148850-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3439999999973224
+        },
+        {
+          "job_id": "deep_block-2261148850-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5
+        },
+        {
+          "job_id": "deep_block-2261148850-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.389999999999418
+        },
+        {
+          "job_id": "deep_block-2261148850-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.7030000000013388
+        },
+        {
+          "job_id": "deep_block-2261148850-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5780000000013388
+        },
+        {
+          "job_id": "deep_block-2261148850-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4219999999986612
+        },
+        {
+          "job_id": "deep_block-2261148850-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.8909999999959837
+        },
+        {
+          "job_id": "deep_block-2621818888-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2190000000045984
+        },
+        {
+          "job_id": "deep_block-2621818888-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2030000000013388
+        },
+        {
+          "job_id": "deep_block-2621818888-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0940000000045984
+        },
+        {
+          "job_id": "deep_block-2621818888-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0789999999979045
+        },
+        {
+          "job_id": "deep_block-2621818888-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0939999999973224
+        },
+        {
+          "job_id": "deep_block-2621818888-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.9839999999967404
+        },
+        {
+          "job_id": "deep_block-2621818888-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.9689999999973224
+        },
+        {
+          "job_id": "deep_block-2621818888-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.8280000000013388
+        },
+        {
+          "job_id": "deep_block-2738067619-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1719999999986612
+        },
+        {
+          "job_id": "deep_block-2738067619-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2819999999992433
+        },
+        {
+          "job_id": "deep_block-2738067619-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4069999999992433
+        },
+        {
+          "job_id": "deep_block-2738067619-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3590000000040163
+        },
+        {
+          "job_id": "deep_block-2738067619-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3440000000045984
+        },
+        {
+          "job_id": "deep_block-2738067619-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1569999999992433
+        },
+        {
+          "job_id": "deep_block-2738067619-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-2738067619-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0160000000032596
+        },
+        {
+          "job_id": "deep_block-3029225151-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3439999999973224
+        },
+        {
+          "job_id": "deep_block-3029225151-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4690000000045984
+        },
+        {
+          "job_id": "deep_block-3029225151-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4689999999973224
+        },
+        {
+          "job_id": "deep_block-3029225151-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.625
+        },
+        {
+          "job_id": "deep_block-3029225151-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5160000000032596
+        },
+        {
+          "job_id": "deep_block-3029225151-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1719999999986612
+        },
+        {
+          "job_id": "deep_block-3029225151-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.9689999999973224
+        },
+        {
+          "job_id": "deep_block-3029225151-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.889999999999418
+        },
+        {
+          "job_id": "deep_block-3076034408-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4219999999986612
+        },
+        {
+          "job_id": "deep_block-3076034408-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1089999999967404
+        },
+        {
+          "job_id": "deep_block-3076034408-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.9530000000013388
+        },
+        {
+          "job_id": "deep_block-3076034408-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-3076034408-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2190000000045984
+        },
+        {
+          "job_id": "deep_block-3076034408-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.125
+        },
+        {
+          "job_id": "deep_block-3076034408-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.014999999999418
+        },
+        {
+          "job_id": "deep_block-3076034408-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-3375600660-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5469999999986612
+        },
+        {
+          "job_id": "deep_block-3375600660-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.264999999999418
+        },
+        {
+          "job_id": "deep_block-3375600660-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.125
+        },
+        {
+          "job_id": "deep_block-3375600660-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.235000000000582
+        },
+        {
+          "job_id": "deep_block-3375600660-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2190000000045984
+        },
+        {
+          "job_id": "deep_block-3375600660-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.061999999998079
+        },
+        {
+          "job_id": "deep_block-3375600660-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0
+        },
+        {
+          "job_id": "deep_block-3375600660-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.8280000000013388
+        },
+        {
+          "job_id": "deep_block-3409096114-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.875
+        },
+        {
+          "job_id": "deep_block-3409096114-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.6089999999967404
+        },
+        {
+          "job_id": "deep_block-3409096114-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4689999999973224
+        },
+        {
+          "job_id": "deep_block-3409096114-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.4840000000040163
+        },
+        {
+          "job_id": "deep_block-3409096114-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.360000000000582
+        },
+        {
+          "job_id": "deep_block-3409096114-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.422000000005937
+        },
+        {
+          "job_id": "deep_block-3409096114-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-3409096114-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 2.9530000000013388
+        },
+        {
+          "job_id": "deep_block-3738893045-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.8440000000045984
+        },
+        {
+          "job_id": "deep_block-3738893045-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0780000000013388
+        },
+        {
+          "job_id": "deep_block-3738893045-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-3738893045-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.2030000000013388
+        },
+        {
+          "job_id": "deep_block-3738893045-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.375
+        },
+        {
+          "job_id": "deep_block-3738893045-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3440000000045984
+        },
+        {
+          "job_id": "deep_block-3738893045-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0310000000026776
+        },
+        {
+          "job_id": "deep_block-3738893045-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0309999999954016
+        },
+        {
+          "job_id": "deep_block-3983827217-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 4.094000000004598
+        },
+        {
+          "job_id": "deep_block-3983827217-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3280000000013388
+        },
+        {
+          "job_id": "deep_block-3983827217-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.25
+        },
+        {
+          "job_id": "deep_block-3983827217-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.327999999994063
+        },
+        {
+          "job_id": "deep_block-3983827217-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.110000000000582
+        },
+        {
+          "job_id": "deep_block-3983827217-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3910000000032596
+        },
+        {
+          "job_id": "deep_block-3983827217-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.186999999998079
+        },
+        {
+          "job_id": "deep_block-3983827217-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 2.875
+        },
+        {
+          "job_id": "deep_block-3998658143-1-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 4.360000000000582
+        },
+        {
+          "job_id": "deep_block-3998658143-0-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.6719999999986612
+        },
+        {
+          "job_id": "deep_block-3998658143-1-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.5159999999959837
+        },
+        {
+          "job_id": "deep_block-3998658143-0-C90H-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.3590000000040163
+        },
+        {
+          "job_id": "deep_block-3998658143-1-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1409999999959837
+        },
+        {
+          "job_id": "deep_block-3998658143-0-C90L-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0310000000026776
+        },
+        {
+          "job_id": "deep_block-3998658143-1-C90H-C7AL",
+          "status": "ok",
+          "native_elapsed_seconds": 3.0310000000026776
+        },
+        {
+          "job_id": "deep_block-3998658143-0-C90L-C7AH",
+          "status": "ok",
+          "native_elapsed_seconds": 3.1569999999992433
+        }
+      ]
+    }
+  },
+  "time_accounting": "Sum of individually measured contained_call elapsed time, separately from inclusive supervised phase-child time. Failed-before-invocation and unbegun jobs contribute no call duration, not imputed missing outcomes."
+}

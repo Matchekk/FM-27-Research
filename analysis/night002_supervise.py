@@ -25,9 +25,9 @@ sys.path.insert(0, str(ROOT))
 from research.native import read, require
 from research.night002_control import Night002Budget, assert_night002_admission, assert_artifact_limit
 
-STUDY = 'MECH-004-SPLIT-R0'
-ROUTES = {STUDY: 'analysis/run_split004.py'}
-ARMS = ('C90L-C7AL', 'C90H-C7AL', 'C90L-C7AH', 'C90H-C7AH')
+STUDY = 'TACT-003-STLESS-R0'
+ROUTES = {STUDY: 'analysis/run_stless003.py'}
+ARMS = ('I0-O0', 'I1-O0', 'I0-O1', 'I1-O1')
 CONTEXTS = ('high_press', 'deep_block')
 
 
@@ -38,22 +38,22 @@ def validate_phase_keys(study, phase, keys):
     if phase == 'technical':
         expected = [f'tech-{context}-s{side}-{arm}-r{repeat}'
                     for context in CONTEXTS for side in (0, 1) for arm in ARMS for repeat in (0, 1)]
-        require(keys == expected + ['negative-malformed'], 'Split pilot requires exactly32+1 technical keys')
+        require(keys == expected + ['negative-malformed'], 'IP/OOP pilot requires exactly32+1 technical keys')
         return
-    pattern = r'(high_press|deep_block)-([1-9][0-9]*)-([01])-(C90L-C7AL|C90H-C7AL|C90L-C7AH|C90H-C7AH)'
+    pattern = r'(high_press|deep_block)-([1-9][0-9]*)-([01])-(I0-O0|I1-O0|I0-O1|I1-O1)'
     parsed = [re.fullmatch(pattern, key) for key in keys]
-    require(len(keys) == 512 and all(parsed), 'Split pilot requires exactly512 main jobs')
+    require(len(keys) == 512 and all(parsed), 'IP/OOP pilot requires exactly512 main jobs')
     groups = {}
     for match in parsed:
         context, seed, side, arm = match.groups()
-        require(int(seed) <= 0xffffffff, 'Invalid split seed')
+        require(int(seed) <= 0xffffffff, 'Invalid IP/OOP seed')
         groups.setdefault((context, seed), set()).add((side, arm))
     cells = set(product(('0', '1'), ARMS))
     require(len(groups) == 64 and all(value == cells for value in groups.values()) and
             all(sum(h == context for h, _ in groups) == 32 for context in CONTEXTS) and
             len({seed for _, seed in groups}) == 64 and
             keys == sorted(keys, key=lambda key: sha256(key.encode()).digest()),
-            'Split main needs64 distinct complete seed blocks in registered schedule order')
+            'IP/OOP main needs64 distinct complete seed blocks in registered schedule order')
 
 
 def parse_cli(argv):
@@ -102,6 +102,7 @@ def main(argv=None):
         command = [sys.executable, str(ROOT / ROUTES[args.study]), args.phase, *arguments]
         raise SystemExit(subprocess.run(command, cwd=ROOT,
                          creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0)).returncode)
+    require((local / 'program-budget.json').is_file(), 'Existing mission ledger required; no new/reset mission')
     budget = Night002Budget(local / 'program-budget.json')
     command = [sys.executable, str(Path(__file__).resolve()), 'admitted', '--study', args.study,
                '--phase', args.phase, '--keys-file', str(args.keys_file.resolve())]

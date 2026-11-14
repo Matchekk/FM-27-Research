@@ -1,0 +1,20 @@
+{
+  "experiment_id": "MECH-004-SPLIT-R0",
+  "terminal_cleanup_verified": true,
+  "independent_study_only": "TACT-003-STLESS-R0",
+  "termination_sha256": "f119e024f85668c395e8fed0bcd1cdd5e386bf5046e147a1af57813bb77fd7d6",
+  "review_sha256": "ab5cbcdb3dad637c437b5c4f58e697f6fb7e44a45da2414cb7e95cf98ea351aa",
+  "no_original_study_resumption": true,
+  "scientific_analysis_allowed": false,
+  "terminal": true,
+  "main_ok": 224,
+  "main_failed_before_native": 1,
+  "main_unbegun": 287,
+  "verified_native_cleanup_receipts": 257,
+  "restored_archive_members_verified": 1024,
+  "all545_reservations_retained": true,
+  "all68_seed_reservations_retained": true,
+  "summed_native_call_seconds": 838.0640000000058,
+  "reviewer_native_calls": 0,
+  "scope": "Clean terminal closure evidence only. No study resumption, no partial scientific effect analysis, no new native start allowance. Separate reviewed/published administrative reconciliation and successfulCI required before any independent study."
+}

@@ -1,5 +1,9 @@
 """Independent reviewer checks with manufactured football scores, no engine."""
 from copy import deepcopy
+import json
+from pathlib import Path
+import shutil
+import tempfile
 import unittest
 
 from analysis import review_split004 as review
@@ -40,6 +44,26 @@ class IndependentSplitReviewTests(unittest.TestCase):
         bad_effects = deepcopy(effects);bad_effects['secondary']['C90:xgd']['p_holm'] = .9
         with self.assertRaisesRegex(ValueError, 'Holm'):
             review.verify_stored_analysis(self.data, self.receipt, bad_effects, blocks)
+
+    def test_terminal_series_cannot_gain_scientific_outputs_or_success_flag(self):
+        source=review.ROOT/'data/night-002-split004'
+        if not (source/'termination.json').exists():self.skipTest('Terminal public archive not present')
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);target=root/'data/night-002-split004';target.mkdir(parents=True)
+            for name in ('termination.json','native-call-time.json','main-summary.json',
+                    'main-job-accounting.jsonl','main-job-plan.json','technical-job-plan.json',
+                    'seed-plan.json','manifest.json','termination-review.json'):
+                if (source/name).exists():shutil.copyfile(source/name,target/name)
+            doc=review.ROOT/'docs/night-002/SPLIT004-TERMINATION-REVIEW.md'
+            if doc.exists():
+                dest=root/'docs/night-002'/doc.name;dest.parent.mkdir(parents=True);shutil.copyfile(doc,dest)
+            self.assertTrue(review.audit_terminal(root)['terminal_stop_verified'])
+            (target/'effects.json').write_text('{}')
+            with self.assertRaisesRegex(ValueError,'forbidden scientific'):review.audit_terminal(root)
+            (target/'effects.json').unlink()
+            summary=json.loads((target/'main-summary.json').read_text());summary['scientific_analysis_allowed']=True
+            (target/'main-summary.json').write_text(json.dumps(summary))
+            with self.assertRaisesRegex(ValueError,'relabeled successful'):review.audit_terminal(root)
 
 
 if __name__ == '__main__':

@@ -4,6 +4,13 @@ Beginn14.11.2026, Ausgangscommit062fa7e. Frist15.11.2026 08:00Europe/Berlin.
 Der eingefügte Nutzerauftrag ist die Autorisierung; keine NIGHT-001-Verträge
 werden verlängert. [Konsolidierter Bericht](OVERNIGHT_REPORT.md).
 
+**Aktueller Stand15.11.2026:** MECH-004 nach bestandener Technik in Main terminal
+abgebrochen;224 akzeptierte Matches liefern keine freigegebene Leistungsschätzung.
+Alle Belege restauriert/überprüft, alle Reservierungen und Zeiten erhalten.
+Die neue Controller-Epoche darf nur die unabhängige TACT-003-Frage weiterführen,
+erst nach [geprüfter administrativer Transition](RECONCILIATION-REVIEW.md) und
+deren öffentlicher erfolgreicher CI. Kein MECH-Retry und keine Livearchivierung.
+
 ## Forschungsentscheidung und Architektur
 
 [Aktueller Primärquellenaudit](LITERATURE_AUDIT.md),

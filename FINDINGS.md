@@ -18,6 +18,15 @@ Exit108-Abweisung;0 unerwartete Fehler,0 Retry/Ersatz, alle Bereinigungen bestä
 [öffentliche Messungen](data/night-002-split004/technical.jsonl) ·
 [unabhängige Rohabnahme](docs/night-002/SPLIT004-TECHNICAL-REVIEW.md).
 
+**Nachfolgende Hauptserie terminal abgebrochen:**224 akzeptierte Matches,
+1 vor der Engine gescheiterter Job,287 unbegonnene Plätze. Ein vom Director
+eingeführter Versuch, abgeschlossene private Belege während des laufenden
+Pfadscans zu archivieren, löste das Sicherheitsgate aus. Alle Belege wurden
+bytegleich wiederhergestellt. Keine primären oder sekundären Leistungsschätzer
+aus der unvollständigen Serie; kein Null-/Wirkungslosigkeitsbefund. Das obige
+separate32-Match-Transferergebnis bleibt davon unterschieden.
+[Terminalbeleg](data/night-002-split004/termination.json).
+
 **Stand 2026-11-07 · Match- und Karrieredaten für FM27 27.0.0+2493426**
 
 Hier stehen ausschließlich Befunde mit eindeutiger Experiment-ID, verlinktem Protokoll, Buildnummer, Messwerten und Unsicherheit. Ergebnisse aus vorherigen Chat-Zusammenfassungen werden erst nach Einsicht in originale Messdaten und Reproduzierbarkeitsprüfung eingetragen.

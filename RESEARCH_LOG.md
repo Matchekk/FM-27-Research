@@ -1,5 +1,42 @@
 # Research Log
 
+## 2026-11-15 – terminale Bereinigung und getrennte Fortsetzungsadministration
+
+- Unabhängiger Rohabschlussreview bestätigt224 vollständige Mainmessungen,
+  257 Kernelbereinigungen und bytegleiche Wiederherstellung aller1024 Dateien.
+  Öffentlicher Terminalverifier kontrolliert ausdrücklich fehlende Mainfreigabe
+  und verbietet stilles Erzeugen eines vollständigen Effektarchivs.
+- Neue Controller-Epoche und einmalige administrative Transition für
+  TACT-003 unabhängig geprüft: alle589,7353507s,545 Jobs, fehlgeschlagene
+  Operation und MECH-Eigenetat bleiben erhalten; MECH bleibt dauerhaft gesperrt.
+  Noch keine tatsächliche Transition oder neue Enginephase bei diesem Commit.
+- Artefaktzähler auf sichere Scandir-Traversierung umgestellt; tatsächliche
+  146.920.935Bytes identisch gezählt,0,633s→0,013s im einzelnen Lesebenchmark.
+  Keine Livearchivierung.432 Tests durchlaufen,430 bestanden und2 übersprungen.
+  Reconcile-Dryrun ohne Mutation und öffentlicher Terminalverifier bestanden.
+  [Directorreview](docs/night-002/RECONCILIATION-REVIEW.md).
+
+## 2026-11-15 Berlin – MECH-004-Hauptserie terminal gestoppt
+
+- 224 gültige Mainmatches,1 vor Engineaufruf fehlgeschlagener Job,287 unbegonnene
+  Plätze. Keine vollständige64-Block-Serie, keine Effektschätzung und kein
+  Nullbefund. Alle545 geplanten Plätze/68 neuen Seeds bleiben reserviert.
+- Der Director versuchte wegen wachsender Admission-Laufzeit die verlustfreie
+  Kompaktierung abgeschlossener Belege während der laufenden Serie. Der
+  gleichzeitige Pfadscan löste `Mission artifact path escaped` aus; ein realer
+  Austritt aus dem Studienpfad ist nicht belegt. Diese vermeidbare Kollision ist
+  ein Fehler des Directorablaufs, keine wissenschaftliche Wirkung der Intervention.
+- Sämtliche1024 archivierten Dateien bytegleich restauriert;257 tatsächliche
+  Nativeaufrufe (33Technik/224Main), keine Pendingmarker/Lease. Eigene belastete
+  Zeit528,8133745s und globale589,7353507s bleiben vollständig erhalten;
+  separat838,064s tatsächliche Callsumme. Der Studienetat bleibt `halted`.
+- [Terminalbeleg](data/night-002-split004/termination.json),
+  [vollständige512er-Abrechnung](data/night-002-split004/main-job-accounting.jsonl)
+  und ausgeführter eigener Hilfsquellstand unter `archive/night-002/` bewahrt.
+  Eine andere unabhängige Frage darf erst nach neuer geprüfter globaler
+  Fortsetzungsadministration mit unveränderten Lasten und dauerhaftem MECH-004-
+  Verbot folgen; keine Umbenennung oder Wiederholung dieses Versuchs.
+
 ## 2026-11-14 – MECH-004 getrennte Rohfeldübertragung nativ bestanden
 
 - Nach erfolgreicher CI43649328317 aufb53c56e alle32 technischen Vollmatches

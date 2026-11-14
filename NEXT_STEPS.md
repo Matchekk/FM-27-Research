@@ -4,10 +4,13 @@
 
 [Zehn geprüfte Kandidaten](docs/night-002/NOVELTY_MATRIX.md), beste drei und
 [aktueller Quellenrefresh](docs/night-002/LITERATURE_AUDIT.md) liegen vor.
-MECH-004-SPLIT-R0 prüft die getrennten C90/C7A-Startfelder mit eigener
-Vorregistrierung und neuer Missionsabrechnung. TECH32+1 und unabhängige
-Rohabnahme bestanden; erst nach öffentlicher Freigabe mit erfolgreicher CI
-der begrenzte Mainpilot. Keine weiteren Technikseeds oder Wiederholungen.
+MECH-004-SPLIT-R0 ist nach bestandenem TECH32+1 in der Hauptserie terminal
+abgebrochen.224 akzeptierte Matches sind kein vollständiger Leistungsversuch;
+kein Retry, keine Ersatzseeds und keine Wiederaufnahme. Sämtliche Reservierungen
+und Zeiten bleiben verbraucht. Nächster unabhängiger Gegenstand ist
+TACT-003-STLESS-R0: IP/OOP-Paketinteraktion. Vor dessen eigener Technik sind
+geprüfte administrative Bereinigung des globalen Stopps, separate Code-/Input-
+und CI-Gates erforderlich. Das beendet den alten Studienpfad dauerhaft.
 Der gemeinsame MECH-002-Effekt und terminales MECH-003 werden nicht wiederholt.
 [Fortschritt und verbleibende Fragen](docs/night-002/OVERNIGHT_REPORT.md).
 

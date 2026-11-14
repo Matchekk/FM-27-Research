@@ -34,4 +34,5 @@ jobs:
       - run: if (Test-Path data/mech-002-sharpness-p0/main.jsonl) { python -B analysis/review_sharpness002_results.py public-main }
       - run: if (Test-Path data/night-002-split004/technical.jsonl) { python -B analysis/review_split004.py public-technical }
       - run: if (Test-Path data/night-002-split004/main.jsonl) { python -B analysis/review_split004.py public-main }
+      - run: if (Test-Path data/night-002-split004/termination.json) { python -B analysis/review_split004.py public-terminal }
       - run: git diff --check

@@ -444,9 +444,74 @@ def audit_private(root, phase):
     return report
 
 
+def audit_terminal(root):
+    """Portable irreversible-stop guard; independent studies may continue later."""
+    root=Path(root);public=root/'data/night-002-split004'
+    proof=read(public/'termination.json');calls=read(public/'native-call-time.json')
+    summary=read(public/'main-summary.json');accounting=read(public/'main-job-accounting.jsonl')
+    plan=read(public/'main-job-plan.json');seeds=read(public/'seed-plan.json');receipt=read(public/'manifest.json')
+    expected=expected_jobs(receipt,seeds,'main')
+    need(proof['experiment_id']==EXPERIMENT and proof['terminal_closed'] is True and proof['terminal'] is True and
+         proof['scientific_series_complete'] is False and proof['scientific_analysis_allowed'] is False and
+         proof['allow_resume'] is False and proof['cleanup_verified'] is True and proof['archive_restored'] is True,
+         'Terminal study prohibition/cleanup claim changed')
+    need(all(proof[k]==v for k,v in (('main_planned',512),('technical_planned_jobs',33),('main_accepted',224),
+         ('main_failed_before_native',1),('main_not_started',287),('native_calls',257),('archive_entries_restored',1024))) and
+         proof['global_reserved_counts']=={'main':512,'technical':33} and proof['global_reserved_jobs']==545 and
+         proof['global_charged_seconds']==589.7353507000007 and proof['study_charged_seconds']==528.8133745000014,
+         'Terminal counts/charges/reservations changed')
+    need(summary['passed'] is False and summary['complete'] is False and summary['scientific_analysis_allowed'] is False,
+         'Failed study was relabeled successful')
+    need(not any((public/name).exists() for name in ('main.jsonl','effects.json','seed-contrasts.jsonl','analysis-provenance.json')),
+         'Incomplete study acquired forbidden scientific analysis outputs')
+    need(len(plan)==len(accounting)==512 and [j['key'] for j in plan]==[j['key'] for j in expected] and
+         [r['job_id'] for r in accounting]==[j['key'] for j in plan] and
+         all(r['seed']==j['seed'] for r,j in zip(accounting,plan,strict=True)) and
+         Counter(r['status'] for r in accounting)=={'ok':224,'failed':1,'not_started':287},
+         'Terminal full job accounting changed/missing')
+    need(calls['experiment_id']==EXPERIMENT and calls['terminal_closed'] is True and
+         calls['scientific_series_complete'] is False and calls['complete_accounting'] is True and
+         calls['planned_jobs']==545 and calls['calls']==257 and
+         file_hash(public/'native-call-time.json',True)==proof['native_call_time_sha256'],
+         'Terminal native call accounting binding differs')
+    total=0.;count=0
+    for phase,n in (('technical',33),('main',224)):
+        part=calls['phases'][phase];jobs=part['jobs']
+        need(part['calls']==len(jobs)==n and len({r['job_id'] for r in jobs})==n and
+             all(r['status'] in ('ok','expected_rejection') and number(r['native_elapsed_seconds']) and
+                 r['native_elapsed_seconds']>0 for r in jobs), 'Terminal native call phase incomplete')
+        wanted={r['job_id'] for r in accounting if r['status']=='ok'} if phase=='main' else {
+            j['key'] for j in read(public/'technical-job-plan.json')}
+        need({r['job_id'] for r in jobs}==wanted and all(r['status']==(
+            'expected_rejection' if r['job_id']=='negative-malformed' else 'ok') for r in jobs),
+            'Terminal native call jobs differ from retained match accounting')
+        compare(sum(r['native_elapsed_seconds'] for r in jobs),part['sum_native_elapsed_seconds'],'terminal phase actual elapsed')
+        count+=n;total+=part['sum_native_elapsed_seconds']
+    compare(calls['sum_native_elapsed_seconds'],total,'terminal actual elapsed sum')
+    compare(total,838.0640000000058,'immutable terminal actual elapsed')
+    review_path=public/'termination-review.json'
+    reviewed=False
+    if review_path.exists():
+        review=read(review_path)
+        need(review['experiment_id']==EXPERIMENT and review['terminal_cleanup_verified'] is True and
+             review['independent_study_only']=='TACT-003-STLESS-R0' and review['no_original_study_resumption'] is True and
+             review['scientific_analysis_allowed'] is False and
+             review['termination_sha256']==file_hash(public/'termination.json',True) and
+             review['review_sha256']==file_hash(root/'docs/night-002/SPLIT004-TERMINATION-REVIEW.md',True),
+             'Independent terminal review commitment differs')
+        reviewed=True
+    return dict(terminal_stop_verified=True,scientific_analysis_allowed=False,native_calls=count,
+        actual_main_accepted=224,failed_before_native=1,unbegun_main=287,all545reservations_retained=True,
+        actual_native_call_seconds=total,independent_terminal_review_bound=reviewed,reviewer_native_starts=0)
+
+
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
-    parser.add_argument('mode', choices=('public-technical', 'public-main', 'private-technical', 'private-main'))
+    parser.add_argument('mode', choices=('public-technical', 'public-main', 'public-terminal', 'private-technical', 'private-main'))
     parser.add_argument('--root', type=Path, default=ROOT)
-    args = parser.parse_args();access, phase = args.mode.split('-')
-    print(json.dumps((audit_private if access == 'private' else audit_public)(args.root, phase), indent=2))
+    args = parser.parse_args()
+    if args.mode=='public-terminal':result=audit_terminal(args.root)
+    else:
+        access, phase = args.mode.split('-')
+        result=(audit_private if access == 'private' else audit_public)(args.root, phase)
+    print(json.dumps(result, indent=2))
