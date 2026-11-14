@@ -75,6 +75,8 @@ Offenes, reproduzierbares Forschungsprojekt zur **Football Manager 2027**-Meta: 
 
 > **Forschungsstatus (2026-11-07):** Das Archiv enthält die bisherige Serie mit 2.504 geprüften Matchmessungen, die 3.360 Hauptmatches und 96 technischen Prüfläufe von ATTR-004 sowie separate Karriere-Trainingsversuche. ATTR-004 bestätigt die mittleren xGD-Gewinne von Sprunghöhe und Antritt über acht getestete Szenarien. ATTR-005 ergänzt 900 Hauptmatches und 36 Prüfmatches für vier Positionsgruppen. ATTR-006 bestätigt in 600 Hauptmatches den positiven xGD-Effekt einer Sprunghöhenanhebung für drei Angreifer im Standardfixture. ATTR-007 zerlegt diesen gemeinsamen Eingriff in 1.600 weiteren Hauptmatches. [Befunde und Gültigkeitsbereich](FINDINGS.md)
 
+> **Externe Studien / Anti-Duplikat-Preflight (14.11.2026):** Vor jeder neuen Hypothese den [externen FM27-Studienatlas](docs/FM27_EXTERNAL_STUDY_ATLAS_2026-11-14.md), den [maschinenlesbaren Index mit 35 Einträgen](research/fm27-external-study-index-20261114.json) und die unveränderten eigenen [FINDINGS](FINDINGS.md) prüfen. Externe Autorenzahlen sind keine eigenen Replikationen. Details in [AGENTS.md](AGENTS.md).
+
 ## Arbeitsprinzip
 
 - **Markdown-first:** Fragestellungen, Methodik, Entscheidungen, Ergebnisse und nächste Schritte in `.md`.
