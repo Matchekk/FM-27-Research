@@ -25,12 +25,12 @@ neue Fallzahlen. Keine Gewinnerwahl oder Karrierebestätigung.
 
 ## Tatsächliche Offlineprüfungen
 
-Neun fokussierte Tests bestehen: physische Haupt-/DoD-Skalierung gegen bekannte
+Zehn fokussierte Tests bestehen: physische Haupt-/DoD-Skalierung gegen bekannte
 synthetische Effekte,fehlende/duplizierte/driftende Readbacks,erlaubte Binärdiffs,
 Rolleneligibility/D00-Reinheit,PI-Fehler auch im anderen Team/OOP,32Technikjobs/
 16Paare,Leasekonkurrenz/Budgetretention und öffentliche Export-Whitelist und CI-Bindung an den exakten technischen Freigabecommit.
 Keine nativen Anwendungen,Serverimports,Seedreservierungen oder Registrywrites.
-Vollständige Repositorytests61/61 und historische Analysetests5/5 bestanden vor Übergabe. Neuer Verifier meldet erwartungsgemäß noch keine registrierte Studie.
+Vollständige Repositorytests62/62 und historische Analysetests5/5 bestanden vor Übergabe. Neuer Verifier meldet erwartungsgemäß noch keine registrierte Studie.
 
 ## Zentrale Befehle nach Review/Integration
 
@@ -59,3 +59,14 @@ nicht als Änderung historischer wissenschaftlicher Verträge.
 Root muss Readme/Researchlog/Finding/Roadmap/CI und tatsächlichen technischen
 Gatebericht nach gemessenen Ergebnissen ergänzen; diese Zuständigkeiten liegen
 außerhalb dieses Agentenbereichs. Kein eigener Push oder nativer Leistungsclaim.
+
+## Reviewkorrektur vor Veröffentlichung
+
+Der unabhängige Reviewer fand einen Provenienzfehler: eine neue abgewiesene
+Phasenwiederholung konnte den alten Leasebeleg vor dem No-Retry-Gate ersetzen.
+Der neue Supervisor prüft abgeschlossene/aktive/abgebrochene Phasen vor jeder
+Leasebelegmutation und legt Belege exklusiv mit flush/fsync an. Retain-/Crash-
+belege bleiben blockierend. Regressionstest führt einmal einen gewöhnlichen
+Pythonchild aus und beweist anschließend unveränderte Budget-/Leasebytes sowie
+keinen weiteren Childstart bei abgeschlossener oder zurückbehaltener Phase.
+Keine nativen Prozesse, Registryaktionen oder neuen wissenschaftlichen Seeds.

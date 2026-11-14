@@ -98,6 +98,26 @@ class RolePilotTests(unittest.TestCase):
                 budget.reserve('technical','technical',['t']);budget.finish(.1,0)
             with self.assertRaises(ValueError):budget.reserve('retry','technical',['t'])
             self.assertEqual(budget.load()['reserved'],{'t':'technical'})
+    def test_repeated_or_retained_phase_preserves_budget_and_original_lease_without_child(self):
+        with tempfile.TemporaryDirectory() as temp:
+            folder=Path(temp);local=folder/'study';local.mkdir()
+            budget=DeadlineBudget(local/'budget.json',experiment='TACT-002-R0',seconds=900,caps={'technical':33,'main':512},wall_seconds=1800)
+            with patch.object(runner,'ROOT',folder),patch.object(runner,'LOCAL',local):
+                # A real ordinary Python child, never a native application.
+                runner.run_supervised_phase(budget,'prepare',[],[sys.executable,'-c',"print('offline only')"])
+                old_budget=budget.path.read_bytes();old_proof=(local/'prepare.lease.json').read_bytes()
+                with patch.object(runner.subprocess,'Popen') as child:
+                    with self.assertRaisesRegex(ValueError,'already attempted'):runner.run_supervised_phase(budget,'prepare',[],[sys.executable,'-c','raise SystemExit(99)'])
+                    child.assert_not_called()
+                self.assertEqual(budget.path.read_bytes(),old_budget);self.assertEqual((local/'prepare.lease.json').read_bytes(),old_proof)
+                # A crash between exclusive proof creation and budget.run likewise
+                # leaves a retained proof that cannot be replaced on the next call.
+                retained=local/'technical.lease.json';retained.write_bytes(b'original retained evidence')
+                with patch.object(runner.subprocess,'Popen') as child:
+                    with self.assertRaisesRegex(ValueError,'Retained phase lease'):runner.run_supervised_phase(budget,'technical',['t'],[sys.executable,'-c','raise SystemExit(99)'])
+                    child.assert_not_called()
+                self.assertEqual(budget.path.read_bytes(),old_budget);self.assertEqual(retained.read_bytes(),b'original retained evidence')
+                self.assertFalse((folder/'local/global-native/native-execution.lease.json').exists())
     def test_exact_published_gate_ci_commit_required_before_main(self):
         with tempfile.TemporaryDirectory() as temp:
             folder=Path(temp);write(folder/'technical-gate.json',dict(passed=True,published_commit='a'*40,ci_run=123))

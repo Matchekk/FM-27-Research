@@ -271,6 +271,23 @@ def execute(lab,kind):
     print(kind,"complete",len(data),flush=True)
 
 
+def run_supervised_phase(budget,phase,keys,command):
+    """Never replace the provenance of a completed, retained or crashed phase."""
+    state=budget.load()
+    require(not state['active'] and not state['halted'],'Interrupted/failed operation: retain original provenance')
+    require(phase not in {o['name'] for o in state['operations']},'Phase already attempted: retain original provenance')
+    proof_path=LOCAL/(phase+'.lease.json')
+    require(not proof_path.exists(),'Retained phase lease proof exists: no retry or overwrite')
+    with NativeLease(ROOT/'local/global-native',EXPERIMENT,workers=4) as lease:
+        proof=lease.assert_owned()
+        # Exclusive creation also closes the precheck/open race. A failed or partial
+        # write remains blocking; no retry can silently repair or replace it.
+        with proof_path.open('x',encoding='utf8',newline='\n') as stream:
+            json.dump({k:proof[k] for k in ('schema','experiment','workers','owner_pid','acquired_utc')},stream,indent=2)
+            stream.write('\n');stream.flush();os.fsync(stream.fileno())
+        budget.run(phase,'main' if phase=='main' else 'technical',keys,command,ROOT,LOCAL/(phase+'.stdout'))
+
+
 def main():
     parser=ArgumentParser(description=__doc__)
     parser.add_argument("phase",choices=("prepare","register","technical","main","status"));parser.add_argument("--commit")
@@ -294,10 +311,7 @@ def main():
     if args.phase=="main":
         require(read(LOCAL/"technical-summary.json")["passed"],"Technical gate not passed");check_technical_publication()
     cmd=[sys.executable,str(Path(__file__).resolve()),args.phase,"--child","--runtime",str(args.runtime.resolve()),"--game",str(args.game.resolve())]
-    with NativeLease(ROOT/"local/global-native",EXPERIMENT,workers=4) as lease:
-        proof=lease.assert_owned()
-        write(LOCAL/(args.phase+'.lease.json'),{k:proof[k] for k in ('schema','experiment','workers','owner_pid','acquired_utc')})
-        budget.run(args.phase,"main" if args.phase=="main" else "technical",keys,cmd,ROOT,LOCAL/(args.phase+".stdout"))
+    run_supervised_phase(budget,args.phase,keys,cmd)
     print((LOCAL/(args.phase+".stdout")).read_text(encoding="utf8",errors="replace")[-3000:])
     print("Charged seconds:",budget.load()["charged_seconds"],"/900; fixed UTC deadline:",budget.load()["wall_deadline_utc"])
 
