@@ -26,7 +26,7 @@ def validate(config, executable=False):
     """The same contract governs every module; draft plans cannot execute."""
     require(isinstance(config, dict) and config.get("schema_version") == 1, "Unknown experiment schema")
     module = config.get("module")
-    require(module in MODULES and re.fullmatch(module+r"-\d{3}(?:-[a-z0-9-]+)?", config.get("experiment_id", "")), "Invalid experiment ID/module")
+    require(module in MODULES and re.fullmatch(module+r"-\d{3}(?:-[A-Za-z0-9-]+)?", config.get("experiment_id", "")), "Invalid experiment ID/module")
     require(config.get("kind") in ("native", "career") and config.get("stage") in
             ("technical", "discovery", "confirmation"), "Unknown experiment kind/stage")
     require(config.get("status") in ("draft", "registered"), "Unknown registration status")
@@ -69,6 +69,13 @@ def validate(config, executable=False):
         require(all(identity.get(k) for k in IDENTITY_FIELDS), "Unpinned native identity")
         require(all(HASH.fullmatch(identity[k]) for k in IDENTITY_FIELDS if k.endswith("sha256") or k=="resource_fingerprint"), "Invalid identity digest")
         require(all(HASH.fullmatch(a.get("setup_sha256", "")) for a in arms), "Unpinned arm setup")
+        if "setups" in design:
+            cells=design["setups"]
+            require(set(cells)=={s["id"] for s in scenarios}, "Setup scenarios differ")
+            for by_side in cells.values():
+                require(set(by_side)=={str(s) for s in design["sides"]}, "Setup sides differ")
+                for by_arm in by_side.values():
+                    require(set(by_arm)=={a["id"] for a in arms} and all(HASH.fullmatch(v) for v in by_arm.values()), "Incomplete cell setup hashes")
         require(re.fullmatch(r"[0-9a-f]{40}", config["preregistration"]["commit"]), "Preregistration commit missing")
         require(HASH.fullmatch(config["preregistration"]["document_sha256"]) and
                 HASH.fullmatch(config["preregistration"]["analysis_sha256"]), "Unpinned preregistration/analysis")
@@ -134,7 +141,7 @@ class Registry:
                 opponents={s["opponent"] for s in config["design"]["scenarios"]}
                 seen=set()
                 for ident in prior_ids:
-                    require(re.fullmatch(r"[A-Z]+-\d{3}(?:-[a-z0-9-]+)?",ident), "Invalid discovery ID")
+                    require(re.fullmatch(r"[A-Z]+-\d{3}(?:-[A-Za-z0-9-]+)?",ident), "Invalid discovery ID")
                     previous=json.loads((self.directory/(ident+".json")).read_text(encoding="utf8"))["config"]
                     require(previous["stage"]=="discovery", "Source is not a discovery experiment")
                     seen.update(s["opponent"] for s in previous["design"]["scenarios"])
@@ -162,8 +169,9 @@ def schedule(receipt):
     for i,scenario in enumerate(design["scenarios"]):
         for seed, side, arm in product(seeds[i*n:(i+1)*n], design["sides"], design["arms"]):
             key = f"{scenario['id']}-{seed}-{side}-{arm['id']}"
+            setup=design["setups"][scenario["id"]][str(side)][arm["id"]] if "setups" in design else arm["setup_sha256"]
             jobs.append(dict(key=key, scenario=scenario["id"], seed=seed, side=side, arm=arm["id"],
-                             setup_sha256=arm["setup_sha256"], config_sha256=receipt["config_sha256"],identity=config["identity"]))
+                             setup_sha256=setup, config_sha256=receipt["config_sha256"],identity=config["identity"]))
     require(len(jobs) <= config["budget"]["max_matches"], "Schedule exceeds budget")
     return sorted(jobs, key=lambda j:sha256(j["key"].encode()).digest())
 

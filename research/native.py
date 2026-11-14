@@ -107,7 +107,7 @@ class NativeLab:
                     require(struct.unpack_from("<I", raw)[0] == self.server.POSITIONS[cell["position"]]["mask"], "Native phase position differs")
                     require(struct.unpack_from("<Q", raw, 64)[0] == int(self.server.ROLES[cell["role"]]["flags"]) | int(cell["duty"]), "Native role/duty differs")
 
-    def run(self, jobs, directory, workers=1, full=False, bounded_validation=False):
+    def run(self, jobs, directory, workers=1, full=False, bounded_validation=False, audit=None):
         """No hidden retries; retain every attempt, including integrity failures."""
         from desktop_warm_batch import DesktopWarmRunner, inspect_saved_run
         import desktop_warm_batch
@@ -168,6 +168,8 @@ class NativeLab:
                 require(0 < row["finish_tick"] < 47996, "Invalid natural finish")
                 from .stats import metrics
                 metrics(row)
+                if audit is not None:
+                    row.update(audit(row,job,task,log))
             except Exception as error:
                 row.update(status="failed", error_type=type(error).__name__)
                 write(directory / f"{job['key']}.failure.json", dict(detail=str(error), native_result=result))

@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-11-14 – TACT-001-P0 vorbereitet und vorregistriert
+
+- Ausgangscommit `d0e8aae`, sauberer Arbeitsbaum; DLL, Host, Fixture, Ressourcen
+  und aktueller Upstreamtag stimmen mit VALID-002 überein.
+- Eigene regelkonforme IP-4-2-3-1/OOP-4-4-1-1, zwei binäre Faktoren,
+  zwei Gegnerstile mit identischen geschriebenen Spielerprofilen. 16 Eingabezellen
+  und zwei ungespielte Holdoutprofile eingefroren. Keine Downloads als Kandidaten.
+- 19 neue Seeds gegen 2.130 historische/reservierte Werte geprüft. Hauptplan:
+  128 Matches, 16 unabhängige Seedblöcke; Technikplan 23 Matches plus Negativprobe.
+- Dauerhafte Budgetkontrolle und externe Deadline implementiert und getestet;
+  reiner Supervisorfehler vor Engineaufruf repariert, Zeitverbrauch erhalten.
+  Vorbereitungszeit kumulativ 4,125 Sekunden, noch kein Match gestartet.
+- 21 Plattform-/Pilot-/Budgettests und fünf bisherige Analysetests bestanden.
+  [Eingefrorener Plan](experiments/TACT-001-P0-preregistration.md).
+
 ## 2026-11-14 – Bestandsaufnahme und VALID-002
 
 - Leeres Arbeitsverzeichnis mit dem Forschungsrepository verbunden; sauberer Ausgang
