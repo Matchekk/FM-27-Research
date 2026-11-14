@@ -5,6 +5,8 @@ import unittest
 from unittest.mock import patch
 from hashlib import sha256
 import os
+from contextlib import redirect_stderr
+import io
 
 from research.night_control import NightBudget, DEADLINE, assert_night_admission
 from research.budget import atomic
@@ -59,6 +61,10 @@ class NightControlTests(unittest.TestCase):
             before = self.path.read_bytes()
             with self.assertRaises(ValueError):
                 NightBudget(self.path).reserve('next', 'technical', ['next-job'])
+            self.assertEqual(before, self.path.read_bytes())
+            budget.finish(1, 1)
+            with self.assertRaises(ValueError):
+                NightBudget(self.path).reserve('next', 'technical', ['next-job'])
 
     def test_admission_binds_outer_token_live_parent_phase_and_exact_keys(self):
         root=Path(self.temp.name)
@@ -97,12 +103,8 @@ class NightControlTests(unittest.TestCase):
                              '--','--observer-host','private-placeholder.exe'])
         self.assertEqual(args.phase,'prepare')
         self.assertEqual(extra,['--observer-host','private-placeholder.exe'])
-        with self.assertRaises(SystemExit):
+        with self.assertRaises(SystemExit), redirect_stderr(io.StringIO()):
             parse_cli(['run','--study','VALID-005-OBSERVER-V1','--observer-host','unexpected.exe'])
-            self.assertEqual(before, self.path.read_bytes())
-            budget.finish(1, 1)
-            with self.assertRaises(ValueError):
-                NightBudget(self.path).reserve('next', 'technical', ['next-job'])
 
 
 if __name__ == '__main__':
