@@ -14,7 +14,12 @@ noch keine Hauptserie. Dies war der Offline-Preflightstand.
 Nach erfolgreicher CI43616762281 wurde ATTR zentral vorbereitet:24 konkrete
 Eingabezellen und34 frische Seeds (2Technik/32Main),0Vollmatches. Vorbereitung
 11,190/600Child-Sekunden; feste Frist18:00:36,423CET. Konkrete Artefakte werden
-vor Technik publiziert; Inputreview und tatsächliche technische Gates folgen.
+vor Technik publiziert. Der unabhängige Inputreview und die echte Technik sind
+bestanden:32Vollmatches/24Eingabezellen,8exakteA/A-Paare,Exit108erwartet.
+Unabhängiger Echtdatenreview bestätigte101568Attributwerte,33856Profilfelder,
+1408Phasenzellen und23936PI-Gruppen direkt. CumulChild30,960/600s,
+Studienfenster200,071/1200s. Alle384Mainmatches bleiben bis Techpublikation/CI
+unbegonnen. [Validierung](../../experiments/ATTR-009-validation.md).
 
 ## Verantwortlichkeiten
 

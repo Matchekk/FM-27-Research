@@ -389,3 +389,13 @@ Verbrauch11,189784/600Child-Sekunden,festeFrist14.11.2026 18:00:36,423CET
 (17:00:36,423UTC) bleibt fürallefolgendenPhasen unverrückbar. KonkretenVertrag,
 Analysecode/Seedplan vorerstenTechnik-/Hauptmatches publizieren; unabhängiger
 Inputreviewläuft. KeineMECH-/Karriere-/Holdoutausführung.
+
+## 2026-11-14 – ATTR-009 native Technik bestanden
+
+Nach PreregCI43616995356 und unabhängigem24Binary-/Seedreview:32/32native
+Vollmatches,24Eingabezellen,8exakteA/A-Paare,Exit108erwartet.69Attribute/
+1058Profilfelder/22Spielerbindungen/44Phasenzellen/748PI-Gruppen proMatch;
+24Rohdosis-Geschwistervergleiche vollständig.0Fehler/Retry/Ersatz/Exklusion.
+Alle384Hauptmatches unbegonnen. CumulChild30,9597241/600s,
+Studienfenster200,071489/1200s,Deadlineunverändert18:00:36,423CET.
+UnabhängigerReviewer prüft jetztOriginalbelege;Main erstnachReview+Techpublikation/CI.

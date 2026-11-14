@@ -1,0 +1,1756 @@
+{
+  "passed": true,
+  "matches": 32,
+  "readback_cells": 24,
+  "repeats": [
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "SJ",
+      "exact": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "SJ",
+      "exact": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "OJ",
+      "exact": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "OJ",
+      "exact": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "SJ",
+      "exact": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "SJ",
+      "exact": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "OJ",
+      "exact": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "OJ",
+      "exact": true
+    }
+  ],
+  "negative": {
+    "status": "expected_rejection",
+    "returncode": 108,
+    "natural_match_finished": false,
+    "raw_log_sha256": "32ae5b28d7c8c5860b67376ba8ee688ddfc622c965e2b735c29c7b683b7dde5f"
+  },
+  "raw_calibration": [
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "OJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "OA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "OP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "SJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "SA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "SP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "OJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "OA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "OP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "SJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "SA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "SP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "OJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "OA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "OP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "SJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "SA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "SP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "OJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "OA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "OP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "SJ",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 54,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "SA",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 49,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "SP",
+      "raw_dose": [
+        {
+          "roster_slot": 1,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 2,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 3,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 4,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 5,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 6,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 7,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 8,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 9,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        },
+        {
+          "roster_slot": 10,
+          "attribute": 53,
+          "before": 60,
+          "after": 80
+        }
+      ],
+      "input_attribute_values": 3174,
+      "native_fm_display_calibrated": false,
+      "mechanism_decomposition_identified": false
+    }
+  ],
+  "native_identity": {
+    "build": "27.0.1+2503222",
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+    "lab_version": "v1114.6",
+    "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+  },
+  "matrix_sha256": "064eadb97582f9556771cbc98fde8e282520728068ee911ba08330a67341fc2b",
+  "passive_effectiveness": "unavailable; mechanism unidentified",
+  "fm_in_game_display_calibrated": false
+}

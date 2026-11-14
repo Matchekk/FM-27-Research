@@ -1,0 +1,25 @@
+{
+  "experiment_id": "ATTR-009-Bridge",
+  "scientific_series_complete": false,
+  "technical_gate_passed": true,
+  "counts": {
+    "technical": {
+      "ok": 32,
+      "expected_rejection": 1
+    },
+    "main": {
+      "not_started": 384
+    }
+  },
+  "charged_native_wall_seconds": 30.959724100004678,
+  "limit_seconds": 600,
+  "elapsed_study_window_seconds": 200.071489,
+  "fixed_utc_deadline": "2026-11-14T17:00:36.422962+00:00",
+  "within_fixed_deadline": true,
+  "independent_main_seed_blocks": null,
+  "excluded_matches": 0,
+  "retries": 0,
+  "holdout_matches": 0,
+  "winner_confirmed": false,
+  "preregistration_commit": "fc14746685f0a1f6475b1968912317d9ffabdfb6"
+}
