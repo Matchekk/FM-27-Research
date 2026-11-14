@@ -34,8 +34,13 @@ jedem tatsächlichen Dump. Alle5557Records sind nach Originalvorbereitung
 verifiziert; beide tatsächlichen Spielerphasen sind gebunden.
 
 Original-DLL/Host und neuer Observer behalten die registrierten Identitäten.
-Alle eingefrorenen Code-/Dokument-/Runtime-/Inputhashes bestehen nach der Serie
-unverändert. Private und öffentliche Registrierungsreceipts stimmen überein.
+Alle14eingefrorenen Code-/Dokumenthashes bestehen gegen die tatsächlichen
+Gitblobs des Registrierungscommits; Runtime-/Inputhashes sind unverändert.
+Nach Abschluss der Serie ergänzt `d3ad665` einen neuen technischen Masterpfad.
+Diese spätere Quellenepoche verändert ausschließlich den aktuellen Router,
+nicht den in `39b6af5` archivierten Laufcode oder die abgeschlossene Abnahme.
+Die historische Rekonstruktion bindet deshalb ausdrücklich den alten Gitblob.
+Private und öffentliche Registrierungsreceipts stimmen überein.
 Keine neuen Seeds oder nativen Starts durch den Reviewer.
 
 ## Tatsächliche Stage- und Rohzustandsbeobachtung

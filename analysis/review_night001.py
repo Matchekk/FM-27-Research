@@ -204,6 +204,11 @@ def audit_observer_runs(central):
     """Independent direct raw-result/profile/stage reconstruction, no new host."""
     central=Path(central);public=central/'data/valid-005-observer-v1';local=central/'local/valid005-observer-v1'
     directory=local/'technical';frozen=read(public/'inputs.json');plan=read(public/'job-plan.json')
+    registration=read(public/'registration.json');commit=registration['preregistration_commit']
+    need(type(commit) is str and len(commit)==40 and all(c in '0123456789abcdef' for c in commit),'Full run commit missing')
+    for name,wanted in frozen['code_sha256'].items():
+        blob=subprocess.check_output(['git','show',commit+':'+name],cwd=central)
+        need(sha256(blob.replace(b'\r\n',b'\n')).hexdigest()==wanted,'Historical frozen source blob differs')
     line_rows=lambda path:[json.loads(line) for line in path.read_text(encoding='utf8').splitlines() if line.strip()]
     ledger=line_rows(local/'ledger.jsonl');need(ledger==line_rows(public/'measurements.jsonl'),'Public/private observer ledger drift')
     need(len(ledger)==len(plan)==20 and len({r['key'] for r in ledger})==20,'Probe inventory drift')
@@ -319,6 +324,7 @@ def audit_observer_runs(central):
     need(profiles==16*1058 and attributes==16*3174 and captures==24,'Readback coverage count mismatch')
     artifacts['ledger.jsonl']=file_hash(local/'ledger.jsonl')
     return dict(full_matches=16,exact_four_mode_groups=4,observer_traces=8,snapshots=captures,
+        frozen_source_blobs_verified=len(frozen['code_sha256']),source_commit=commit,
         player_stage_records=captures*46,profile_values_verified=profiles,attribute_values_verified=attributes,
         cleanup_receipts_verified=20,private_artifact_files=len(artifacts),private_artifact_manifest_sha256=canonical_hash(artifacts),
         stage_counts=stage_counts,performance_inference=False,consumer_semantics_validated=False,
