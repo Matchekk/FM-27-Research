@@ -1,0 +1,23 @@
+{
+  "experiment_id": "MECH-003-STAMINA-R0",
+  "status": "stopped_before_main_resource_admission",
+  "technical_gate_passed": true,
+  "main_matches_started": 0,
+  "main_seed_blocks_observed": 0,
+  "unbegun_main_match_jobs": 512,
+  "unbegun_main_probe_jobs": 2,
+  "reason": "Technical gates passed, but exact published technical-review CI was not complete by the resource-based main admission cutoff. Main never started; fixed deadline not extended.",
+  "closed_utc": "2026-11-14T19:27:26.093741+00:00",
+  "private_budget_sha256_before": "33058f4563ad2547d28986f3eec263eec1a5f8dfa2eb1e86c584e17793cd6d9b",
+  "private_budget_sha256_after": "880808300fd0027764d326e5aa2759d22ee8c73bfe8776593aa6e57a3df46181",
+  "changed_budget_fields": [
+    "halted:false_to_true",
+    "administrative_stop",
+    "administrative_stop_utc"
+  ],
+  "counters_refunded": false,
+  "deadline_extended": false,
+  "replacement_seeds": 0,
+  "main_performance_effect_estimate": null,
+  "global_program_budget_mutated": false
+}

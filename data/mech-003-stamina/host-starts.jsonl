@@ -1,0 +1,8 @@
+{"phase": "prepare", "kind": "loader", "key": "loader-check-image-prepare", "status": "started", "ordinal": 1, "utc": "2026-11-14T19:10:43.754491+00:00"}
+{"phase": "technical", "kind": "loader", "key": "loader-check-image-technical", "status": "started", "ordinal": 1, "utc": "2026-11-14T19:22:11.366393+00:00"}
+{"phase": "technical", "kind": "capabilities", "key": "worker-capabilities-technical", "status": "started", "ordinal": 1, "utc": "2026-11-14T19:22:12.812472+00:00"}
+{"phase": "technical", "kind": "worker_start", "key": "worker-start-technical-001", "status": "started", "ordinal": 1, "utc": "2026-11-14T19:22:13.091828+00:00"}
+{"phase": "technical", "kind": "worker_start", "key": "worker-start-technical-002", "status": "started", "ordinal": 2, "utc": "2026-11-14T19:22:13.098980+00:00"}
+{"phase": "technical", "kind": "worker_start", "key": "worker-start-technical-003", "status": "started", "ordinal": 3, "utc": "2026-11-14T19:22:13.103979+00:00"}
+{"phase": "technical", "kind": "worker_start", "key": "worker-start-technical-004", "status": "started", "ordinal": 4, "utc": "2026-11-14T19:22:13.108979+00:00"}
+{"phase": "technical", "kind": "negative", "key": "negative-binary", "status": "start_permission_sent", "ordinal": 1, "utc": "2026-11-14T19:22:29.801106+00:00"}

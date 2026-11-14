@@ -1,0 +1,10 @@
+{
+  "experiment_id": "MECH-002-STARTPOLICY-TECH-V1",
+  "approved_for_technical": true,
+  "inputs_sha256": "12454c3f2ab76d6a83be908a4266041b555df7346d00cbdfa259dd909a573aa9",
+  "review_sha256": "7343dff02d6233e94727ad57cdb5dfe437ef6bf06a82b7739eec5a3ef8541b71",
+  "observer_results_review_sha256": "7e95cdda0a90947d16121ba91d2a448bb56b1e8a6f87bd813f77fd3b75fe524c",
+  "input_review_document": "docs/night-001/STARTPOLICY-002-INPUTS-REVIEW.md",
+  "input_review_sha256": "27c7df63c94f397f3e7f03d9ddaa48a9ac7b4a587003329de6300b11c62355f5",
+  "scope": "Exactly seventeen technical probes; one worker; no scientific main or career release"
+}

@@ -1,0 +1,62 @@
+{
+  "prepare": {
+    "schema": "fm27.contained-call.v1",
+    "job_policy": {
+      "limit_flags": 8200,
+      "active_process_limit": 10,
+      "kill_on_close": true,
+      "breakaway_allowed": false,
+      "memory_limit_claimed": false
+    },
+    "capsule_started": true,
+    "capsule_exit_confirmed": true,
+    "cleanup_confirmed": true,
+    "kernel_active_processes": 0,
+    "terminate_job_succeeded": true,
+    "kill_close_fallback": false,
+    "cleanup_error_types": [],
+    "host_start_permission_sent": true,
+    "elapsed_seconds": 13.68800000000192,
+    "error_type": null
+  },
+  "technical": {
+    "schema": "fm27.contained-call.v1",
+    "job_policy": {
+      "limit_flags": 8200,
+      "active_process_limit": 10,
+      "kill_on_close": true,
+      "breakaway_allowed": false,
+      "memory_limit_claimed": false
+    },
+    "capsule_started": true,
+    "capsule_exit_confirmed": true,
+    "cleanup_confirmed": true,
+    "kernel_active_processes": 0,
+    "terminate_job_succeeded": true,
+    "kill_close_fallback": false,
+    "cleanup_error_types": [],
+    "host_start_permission_sent": true,
+    "elapsed_seconds": 20.610000000000582,
+    "error_type": null
+  },
+  "negative": {
+    "schema": "fm27.contained-call.v1",
+    "job_policy": {
+      "limit_flags": 8200,
+      "active_process_limit": 3,
+      "kill_on_close": true,
+      "breakaway_allowed": false,
+      "memory_limit_claimed": false
+    },
+    "capsule_started": true,
+    "capsule_exit_confirmed": true,
+    "cleanup_confirmed": true,
+    "kernel_active_processes": 0,
+    "terminate_job_succeeded": true,
+    "kill_close_fallback": false,
+    "cleanup_error_types": [],
+    "host_start_permission_sent": true,
+    "elapsed_seconds": 0.9219999999986612,
+    "error_type": null
+  }
+}

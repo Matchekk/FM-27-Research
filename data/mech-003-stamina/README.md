@@ -1,4 +1,17 @@
-# MECH-003-STAMINA-R0: vorbereitete, nicht ausgeführte Studie
+# MECH-003-STAMINA-R0: Technik bestanden, terminaler Stop vor Main
+
+Aktueller Stand:32technische Vollmatches/16exakteA/A-Paare sowie insgesamt
+2Loaderchecks,1Capabilitycheck und1erwarteteNegativabweisung bestanden.
+512wissenschaftliche Hauptmatches plus2Mainprobes unbegonnen. Das eigene
+Budget ist wegen fehlender rechtzeitiger Ressourcen-/CI-Zulassung geschlossen;
+Frist und Zähler wurden nicht erweitert. Keine Leistungsschätzung.
+[Ergebnis und Stopgrund](../../docs/night-001/STAMINA-TECH-RESULTS.md),
+[unabhängiger Rohreview](../../docs/night-001/MECH003-TECHNICAL-REVIEW.md),
+[Budgetreview](../../docs/night-001/MECH003-STOP-REVIEW.md).
+`technical.jsonl` erhält32Messungen, `job-accounting.jsonl` sämtliche550Plätze,
+`administrative-stop.json` den terminalen Stop. Private Rohlogs bleiben lokal.
+
+## Ursprüngliche Offlinevorbereitungsstufe
 
 `contract-draft.json` ist der maschinenlesbare wissenschaftliche Vertrag mit noch
 leeren Identitäts-, Setup-, Ausführungs- und Commitfeldern. Die einzige Vertrags-

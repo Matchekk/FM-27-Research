@@ -28,4 +28,5 @@ jobs:
       - run: python analysis/verify_night_archive.py
       - run: if (Test-Path data/attr-009-bridge/manifest.json) { python analysis/verify_attr009.py }
       - run: if (Test-Path data/attr-009-bridge/effects.json) { python analysis/review_round3.py results }
+      - run: if (Test-Path data/mech-003-stamina/manifest.json) { python analysis/verify_mech003_archive.py }
       - run: git diff --check

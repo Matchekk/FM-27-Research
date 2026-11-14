@@ -4,6 +4,12 @@ Stand nach VALID-005,14.11.2026. Keine automatische Freigabe durch diese Roadmap
 Keine Holdouts, historischen Seeds oder alten Studienbudgets verwenden.
 Die alten ATTR-/TACT-/TRAIN-Archive bleiben unverändert.
 
+**Aktualisierung nach MECH-003-Technik:** Der Staminazweig ist nach32gültigen
+Technikmatches aus administrativen Zeitgründen vor jedem Hauptmatch terminal
+geschlossen. Die frühere Priorität1 unten ist damit keine ausführbare Fortsetzung.
+Nächste Priorität ist das unabhängige MECH-002-Transfergate (16+1), danach die
+separat geprüfte R3-Karrierediagnose. [Nachvollziehbarer Stop](STAMINA-TECH-RESULTS.md).
+
 | Priorität | Bereich und Erkenntnisfrage | Kleinster sinnvoller nächster Schritt | Budget und zwingendes Gate |
 |---|---|---|---|
 | 1 | MECH-003: verändert Stamina die Leistung, abhängig von Pressing? | Marginaler raw40/80-Effekt auf xGD, eigener voller2×2-Seedpilot im festen D00-Kontext |512Main/64Seedblöcke;32Technikmatches,3Loader,2Capabilities,1Negativprobe getrennt:550reserviertePlätze;600Child-/1200UTC-s,max4Worker. Exakter publizierter Codereview/CI schon vor Prepareloader, danach Inputs/Seeds, echte Technik und separater Mainreview |

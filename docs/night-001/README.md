@@ -74,3 +74,30 @@ Karrierefreigabe. Eine neue Startpolicyroute ist ausschließlich technisch;
 Main ist dort strukturell gesperrt. Der Staminaentwurf hat Windows-/Capability-
 und Prozessgates im [Fixreview](MECH003-FIX-REVIEW.md) bestanden; seine native
 Vorbereitung und Studienphasen sind noch nicht ausgeführt.
+
+## MECH-003: Technik bestanden, Main aus Ressourcengründen unbegonnen
+
+32technische Vollmatches/16exakteA/A-Paare, insgesamt2Loaderchecks,
+1Capabilitycheck und1erwarteteNegativabweisung vollständig geprüft.
+Der512erHauptlauf samt2CLI-Probes blieb vor seiner Zulassung stehen:
+Review-/Publikations-CI war bis zum laufzeitbasierten Cutoff nicht vollständig.
+Die feste Frist wurde eingehalten und das eigene Budget terminal geschlossen.
+[Ergebnisbericht](STAMINA-TECH-RESULTS.md),
+[unabhängiger Stopreview](MECH003-STOP-REVIEW.md).
+Keine Stamina-Leistungsaussage;550Plätze vollständig abgerechnet.
+Der globale Nachtstand beträgt101,2047395/1800Childsekunden.
+
+## Vorbereitete nächste enge Prüfungen
+
+MECH-002-STARTPOLICY-TECH-V1 ist rein statisch vorbereitet:8Eingaben,
+4neueSeeds,17geplanteProbes (16Full+1Negativ),1Worker,180/900s.
+[Konkreter Inputreview](STARTPOLICY-002-INPUTS-REVIEW.md) und finale
+[Codeprüfung](STARTPOLICY-002-REVIEW.md) bestanden. Der7000→Cache70-Transfer ist
+noch ungetestet. Keine Mainroute oder automatische weitere Serie.
+Globale Zeitladung nach dieser inerten Vorbereitung112,1350788/1800s.
+
+Die separate [R3-Parserdiagnose](CAREER-R3-RUNNER.md) hat ihren
+[finalen Codereview](CAREER-R3-RUNNER-REVIEW.md) bestanden. Einmaliger tatsächlicher
+Lesepass bleibt bis exakter öffentlicher CI und Director-Proceed gesperrt.
+Keine Kalender-/Replay-/Trainingsfreigabe. Alle bisherigen Savebytes und
+Forschungsarchive bleiben unverändert.

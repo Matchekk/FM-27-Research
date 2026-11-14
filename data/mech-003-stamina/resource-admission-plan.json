@@ -1,0 +1,16 @@
+{
+  "scope": "administrative resource admission; no main effect analysis",
+  "main_native_matches_planned": 512,
+  "technical_sessions_seconds": [
+    16.09860530000151,
+    16.30588269999862,
+    16.463825600003474,
+    16.65598580000369
+  ],
+  "projection_rule": "16 times slowest observed 8-match technical session plus 15 seconds overhead",
+  "minimum_remaining_seconds": 282,
+  "fixed_study_deadline_utc": "2026-11-14T19:30:38.762040+00:00",
+  "latest_main_admission_utc": "2026-11-14T19:25:56.762040+00:00",
+  "rule": "No main if complete independent review and exact published CI are not passed before this latest admission; never extend/reset budget.",
+  "registered_utc": "2026-11-14T19:26:29.639331+00:00"
+}

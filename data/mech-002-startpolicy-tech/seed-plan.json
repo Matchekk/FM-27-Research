@@ -1,0 +1,12 @@
+{
+  "experiment_id": "MECH-002-STARTPOLICY-TECH-V1",
+  "namespace": "MECH-002-STARTPOLICY-TECH-V1/technical-v1",
+  "seeds": [
+    1872406977,
+    1245076665,
+    2075475079,
+    999124409
+  ],
+  "excluded_seed_count": 2524,
+  "excluded_seed_set_sha256": "72ac0a590b160d830448d26b50e24d5cf6eed060b6b5197441b408c0e0ca54cd"
+}
