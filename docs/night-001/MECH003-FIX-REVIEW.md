@@ -125,3 +125,26 @@ registrierten einzelnen Prepareloader unter Master/Lease/Restbudget ausführen.
 Danach konkrete Inputs/Seeds erneut unabhängig prüfen und veröffentlichen.
 Technik, Main, UI-/Consumer-/Ermüdungsmediation und Karriereübertragung bleiben
 bis ihren jeweiligen echten Gates gesperrt; keine automatische Folgeserie.
+
+## Letzter Masterguard vor Preparefreeze
+
+Den nach `d3ad665` ergänzten `selected_runner.is_file()`-Guard separat gelesen
+und unabhängig geprüft. Er liegt nach Routen-/Phasen-/Key-/Argumentprüfung,
+aber **vor** `NightBudget`-Anlage, Budgetreservierung und Childstart; auch der
+interne `admitted`-Pfad wird vor Token-/Zulassungsweitergabe abgewiesen, wenn
+der ausgewählte Runner noch fehlt. Damit verbraucht eine lediglich vorgemerkte
+Zukunftsroute kein globales Versuchsbudget. Keine Frist oder bestehende
+Reservierung wird dadurch zurückgesetzt oder verändert.
+
+Alle zehn aktuellen Mastertests bestanden. Zusätzliche eigene Prüfungen mit
+harmloser temporärer Checkoutstruktur bestätigen für `run` **und** `admitted`:
+fehlender Runner führt zur erwarteten Abweisung, `NightBudget`, Admission und
+`subprocess.run` werden jeweils nicht aufgerufen.0Hosts,0Seeds,0Savezugriffe.
+Geprüfter endgültiger Routerhash, CRLF→LF normalisiert:
+`63bbf08ce8d19474bba956140deca44ab43cef70f7c719cec229090d10148791`.
+
+Die obige enge Preparefreigabe gilt auch mit diesem Guard. Vor tatsächlicher
+Vorbereitung sind genau diese Routerquelle und die endgültige Fassung dieses
+Reviewdokuments gemeinsam zu veröffentlichen und an erfolgreiche exakte CI
+sowie das Preparegate zu binden. Diese Ergänzung erfolgte vor jedem MECH-Prepare;
+keine eingefrorene Observerquelle oder dessen alter Reviewtext wurde verändert.
