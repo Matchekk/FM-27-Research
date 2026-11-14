@@ -1,5 +1,15 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## NIGHT-002 – neuer separater Auftrag
+
+[Zehn geprüfte Kandidaten](docs/night-002/NOVELTY_MATRIX.md), beste drei und
+[aktueller Quellenrefresh](docs/night-002/LITERATURE_AUDIT.md) liegen vor.
+MECH-004-SPLIT-R0 prüft die getrennten C90/C7A-Startfelder mit eigener
+Vorregistrierung und neuer Missionsabrechnung. Erst konkrete Inputs/Review/CI,
+dann technische32+1-Serie, erst nach unabhängiger Freigabe Mainpilot.
+Der gemeinsame MECH-002-Effekt und terminales MECH-003 werden nicht wiederholt.
+[Fortschritt und verbleibende Fragen](docs/night-002/OVERNIGHT_REPORT.md).
+
 ## Nach Runde3 – Messbarkeit und neue Faktoren priorisieren
 
 [ATTR-009](experiments/ATTR-009-results.md) abgeschlossen:384Matches/32Blöcke,

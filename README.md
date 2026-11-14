@@ -1,5 +1,11 @@
 # FM27 Meta Research
 
+> **NIGHT-002, neuer Auftrag:** Quellenrefresh und zehn konkrete Kandidaten;
+> getrennte C90/C7A-Attribution zuerst technisch prüfen. Noch keine neuen
+> nativen Ergebnisse. [Mission](docs/night-002/README.md) ·
+> [konsolidierter Bericht](docs/night-002/OVERNIGHT_REPORT.md).
+> NIGHT-001 bleibt abgeschlossen; alte Budgets und terminale Studien bleiben erhalten.
+
 > **Neuer Nutzerauftrag NIGHT-001:** autonome Forschung bis15.11.2026 00:00CET.
 > Externe FM27-Evidenz,rein lesender Audit der ausdrücklich bereitgestellten
 > Testkarriere und ein eigener passiver Engine-Observer werden getrennt bearbeitet.

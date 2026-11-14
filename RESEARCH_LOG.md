@@ -1,5 +1,22 @@
 # Research Log
 
+## 2026-11-14 – NIGHT-002: Quellenrefresh und separate Splitvorbereitung
+
+- `main`/`origin/main` nach Fetch sauber auf062fa7e; CI43646274113 erfolgreich.
+  DLL27.0.1+2503222, Host, Fixture und Ressourcen erneut statisch gehasht.
+- Aktuelle Originalquellen geprüft, Puritys neuer Torwartnachtrag ergänzt und
+  dynamischer FMAX-Stand vom Suchcache getrennt. Zehn Kandidaten, beste drei
+  und explizite Novelty-Entscheidungen dokumentiert. Kein neues Ranking.
+- MECH-004-SPLIT-R0 fragt HL−LH statt erneuten gemeinsamen Schärfepaketeffekt.
+  Eigene NIGHT-002-Budgets/Supervision und enge Splitcompiler/-audits/-analyse
+  offline vorbereitet. Unabhängiger Runnerreview und Directorreview des neuen
+  Controllers;403Tests durchlaufen (402bestanden/einer übersprungen), fünf Analysetests und alle
+  historischen CI-Verifier bestanden.22 neue fokussierte Tests bestanden.
+- 68 neue Seeds gegen2597 frühere/reservierte Werte geprüft und separat gebunden.
+  Konkreter unabhängiger Inputreview bestanden. Noch0 native Aufrufe,0 Matches;
+  Veröffentlichung/CI und getrennte native Rohfeldabnahme stehen vor der
+  Hauptfreigabe. [Mission](docs/night-002/README.md).
+
 ## 2026-11-14 – TACT-001-P1B vollständig abgeschlossen
 
 - Nach gepushter Vorregistrierung `e0b63bd` und technischer Freigabe `9831b2a`

@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "mission": "NIGHT-002",
+  "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+  "base_commit": "062fa7e3bfc129d61c28b112b71bf7f54fc4123f",
+  "mac_current_head": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+  "mac_latest_commit_utc": "2026-11-14T14:46:59Z",
+  "mac_study_document_count": 23,
+  "mac_pages": [
+    {
+      "id": "MAC-01",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/01-attribute-values.md",
+      "git_blob_sha": "dc5d733d484edf2aeb37f856b094ac33444c0797",
+      "sha256": "75785623c9fb8da1cd9f13b60cda9d5ddc0f385ebe2697da4ed87d0d749a663f",
+      "bytes": 16537,
+      "title": "Study 1: what is each attribute worth?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-02",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/02-real-vs-levelled.md",
+      "git_blob_sha": "1fd4d5f24bcee9ad4bea3f4a8b03615c333e62b2",
+      "sha256": "28ecce570006eec197e0c6b6b8fe52de52cd8e263ecc3580886272231fa8ac05",
+      "bytes": 14342,
+      "title": "Study 2: real matches against \"everyone 12\" tests",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-03",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/03-tactical-familiarity.md",
+      "git_blob_sha": "f61a25173d62e96b2ece1031ecdfa5911df5f9e7",
+      "sha256": "a93a9cbfdca04a710b891289ae0de9fe1ef937322bf7d4ce993540c5f86a32c0",
+      "bytes": 16329,
+      "title": "Study 3: tactical familiarity",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-04",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/04-attributes-x-familiarity.md",
+      "git_blob_sha": "2e5f379efb3a9ef3b1766e55a399e151cf12c20b",
+      "sha256": "314034a8db131eddab4a0d906ac0cb26794cb91afc67c6854a7d9865f56e0600",
+      "bytes": 3439,
+      "title": "Study 4: do attributes matter more with a familiar tactic?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-05",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/05-everything-else.md",
+      "git_blob_sha": "7291390869a887c896189820d525f148bf46b35d",
+      "sha256": "2bf92b8eda055050fa493c8475abd5673f57313484a87ad205317242a855d2ee",
+      "bytes": 16901,
+      "title": "Study 5: everything else you can change",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-06",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/06-tactics-x-familiarity.md",
+      "git_blob_sha": "9e4f684c0e4eb5818eff7a3a93f51a86071ef58a",
+      "sha256": "862c284d6e7d7d7acefabea0fee37915b5f4ddfbdb751b527bcf7d9ffe25447c",
+      "bytes": 10446,
+      "title": "Study 6: tactics on real matches, at two familiarity levels",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-07",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/07-tactic-league.md",
+      "git_blob_sha": "e83b091fec59ac0b8b08f35f640ba3143e7ea322",
+      "sha256": "10f3128f40202e6e5cbe45d4b1fbb032d06e55016c0ce2db8d851e8b8646e0fe",
+      "bytes": 15833,
+      "title": "Study 7: a tactic league",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-07B",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/07b-tactic-league-18.md",
+      "git_blob_sha": "9854346349462fcbaec59f60c488d66ec31e7f5e",
+      "sha256": "2190a27f19995e2725bfe9c5615e30c7a57c6dce73948118f122e3edd395d862",
+      "bytes": 8208,
+      "title": "Study 7b: an 18-tactic league, and which matchups stand out",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-08",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/08-tactical-tweaks.md",
+      "git_blob_sha": "90a59e97b26c6b2c22c209aee05dc59fcb5f3dad",
+      "sha256": "72411cd590ea5bf7c867c0ae387ab4bfb5ce1761605c8a1770aab52fc382c6bb",
+      "bytes": 10740,
+      "title": "Study 8: FM27's in-match Tactical Tweaks",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-09",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/09-attributes-by-style.md",
+      "git_blob_sha": "ba96bd58e924f6161e50660d0cc31e28012f3e02",
+      "sha256": "39f04b7a8e59ae80a876c5d7d3be00b39191986635aba52941caa786a7d0ad86",
+      "bytes": 10299,
+      "title": "Study 9: are attribute values tied to the tactic?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-10",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/10-attribute-combinations.md",
+      "git_blob_sha": "d340e0f01a18e5a625a444d1feba6ed1b4160748",
+      "sha256": "1ca2b1423f0f985da119877e53e6334c9fc58193217fb9c713ff280f09d60970",
+      "bytes": 7440,
+      "title": "Study 10: are attributes worth more together?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-11",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/11-hidden-attributes.md",
+      "git_blob_sha": "a211bc419e7cb7c1d9ea24b582a441268f0f3d49",
+      "sha256": "bfb279caf63371636768baad993748c6d6666c70f55eb5d5111bb49b929a7412",
+      "bytes": 9637,
+      "title": "Study 11: which hidden and personality attributes matter?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-12",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/12-thresholds.md",
+      "git_blob_sha": "b39b898aae8440fc52712f27d1a952bdeeb5c94a",
+      "sha256": "3430b58ddc0155be1e60047b442a702c778ef3cf266ac0796b35355fc1a2149d",
+      "bytes": 9997,
+      "title": "Study 12: are there thresholds? Attributes from 1 to 20",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-13",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/13-value-by-position.md",
+      "git_blob_sha": "dd08073a486db81b4eff85a161358c5be186b539",
+      "sha256": "d04f4bb30424f5e7955a7d935f636993687fe7bf6a3cd51598c6a54ec44cc615",
+      "bytes": 8966,
+      "title": "Study 13: what is an attribute worth in each position?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-13B",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/13b-value-by-position-random.md",
+      "git_blob_sha": "659f2b4c14cda759a8036ea44a53500c24b5cb30",
+      "sha256": "303b975f2f453fa71db492f32ab410e7d4da0f977adb418ea78e5d34b741f8d4",
+      "bytes": 12934,
+      "title": "Study 13b: what is an attribute worth in each position? Random configurations",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-14",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/14-team-strength.md",
+      "git_blob_sha": "f417883fa511750993ce87d7e1cd0e05591b4d4e",
+      "sha256": "b7bfe95bca4fde2ab6fdcf78199102183d9a72c19a83f189435f714aa0a9f4ea",
+      "bytes": 7712,
+      "title": "Study 14: does team strength change what attributes are worth?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-14B",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/14b-attributes-across-leagues.md",
+      "git_blob_sha": "2cb402c35ce96de784ecbd31b1274c536251829a",
+      "sha256": "a54ad2efbacc536db25fc2160aea7dc94454833a93c37880af4565ef60e52d81",
+      "bytes": 6700,
+      "title": "Study 14b: are attributes worth the same in every league?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-15",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/15-home-advantage-morale.md",
+      "git_blob_sha": "08ca2908812b7f84de76096394594130cbd282de",
+      "sha256": "bdc9371513185622ad00cff24907651dbfd02ae60b1cb5bea9768e2c4433ab4f",
+      "bytes": 6686,
+      "title": "Study 15: home advantage and morale",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-15B",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/15b-home-advantage-by-ground.md",
+      "git_blob_sha": "0bb54e164be90d9af93b6d426835c872b71d20ca",
+      "sha256": "e447da71807714b5f44cdc0de2f04f99f443b88723eb052087c8f7d2838096cd",
+      "bytes": 5554,
+      "title": "Study 15b: home advantage on every ground",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-17",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/17-positions-in-and-out-of-possession.md",
+      "git_blob_sha": "f11f02ab1d157f0f8a978b55d7ab6e08a164008e",
+      "sha256": "1a27d13eddc6379af516366d286a4217300ff3bfe44b9976fc8417f7dc2fca04",
+      "bytes": 7784,
+      "title": "Study 17: positions in and out of possession",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-19",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/19-a-season-per-tactic.md",
+      "git_blob_sha": "f24eb4b68edaf3b50bb0ced50e22a7986056e517",
+      "sha256": "cf2d377d822a4c81bc5bf9912ea297bb5d1eaaeeb40a0b0eb1b880ac00179c47",
+      "bytes": 8511,
+      "title": "Study 19: which tactic suits which club? A whole season with each preset",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-20",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/20-current-ability.md",
+      "git_blob_sha": "c0881759de8686390d6ba53cd5d166030681794b",
+      "sha256": "ab3ed43bbedd8316627544ddd77877001b9a55dec61b1099059b28bf64157e83",
+      "bytes": 6235,
+      "title": "Study 20: does Current Ability play a role in the match?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-21",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/21-goalkeepers.md",
+      "git_blob_sha": "93766f6e469304f9955ddbd7d337d1e9f6507ac1",
+      "sha256": "e8a0bf62a5b175910c3bb61bacc92cfd0206dbf5acd1a924f9f910dc3580c77d",
+      "bytes": 9826,
+      "title": "Study 21: what makes a goalkeeper good?",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    },
+    {
+      "id": "MAC-INDEX",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/README.md",
+      "git_blob_sha": "c11919bbfaa1775177cd82dcfbc67e13f6669f20",
+      "sha256": "6d2cc23a66246c4eb320ba5c5e9ff472f2274f25518ae667675b065039a00285",
+      "bytes": 12599,
+      "title": "Engine studies: plan and index",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "raw_measurements_independently_reproduced": false
+    }
+  ],
+  "code_evidence": [
+    {
+      "id": "MAC-05-BUILDER",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/study5_everything.py",
+      "sha256": "75b0bd9f18f606f11c7595f4c2d6c8af96f1c82f79ac929f8cf8893882cd0332",
+      "bytes": 7075,
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "finding": "Study05 co-writes both sharpness fields; codec defines independent input fields16/17"
+    },
+    {
+      "id": "MAC-PROFILE-CODEC",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/src/fm27_profiles.py",
+      "sha256": "a54c4cbec2e4489c1ce911d1b2365b2c6883f9aed323425404f8126daeecfc14",
+      "bytes": 3047,
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "finding": "Study05 co-writes both sharpness fields; codec defines independent input fields16/17"
+    }
+  ],
+  "sources": [
+    {
+      "id": "FM27-PURITY-POS",
+      "url": "https://fm-arena.com/threads/attribute-importance-by-position-in-fm27-a-test-on-my-own-tactic.125/",
+      "access": "original_thread_read_HTTP200",
+      "author_reported_matches": 200000,
+      "raw_measurements_independently_reproduced": false,
+      "finding": "Outfield position regression; one3-4-2-1 and one club; no crossed sharpness intervention",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "response_sha256": "09e11a11af004b591b68451e762f7e3e81a33d6b17b68baa6b526bd1af9c3e49",
+      "response_bytes": 125328
+    },
+    {
+      "id": "FM27-PURITY-GK-20261114",
+      "url": "https://fm-arena.com/threads/attribute-importance-by-position-in-fm27-a-test-on-my-own-tactic.125/",
+      "access": "Original thread HTTP200, post8 identified by text and published datetime",
+      "published_utc": "2026-11-14T13:32:30Z",
+      "author_reported_matches": 200000,
+      "raw_measurements_independently_reproduced": false,
+      "finding": "New dedicated goalkeeper campaign,48 visible attributes; update beyond frozen atlas; same source family as Purity outfield, different claimed campaign",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-FMAX-LAB",
+      "url": "https://getfmax.com/en/lab/",
+      "access": "original_HTML_HTTP200; publicAPI403",
+      "raw_measurements_independently_reproduced": false,
+      "finding": "Live HTML top30 now Diamonds1.4 STL75.5pts versus cached search snapshot Hearts1.6 76.1pts/205400matches; do not reuse cached total as latest census",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00",
+      "response_sha256": "b05b79aab3b21af26d6abc4d45dd84ffebbdb3c7e52037ed182cea80ab9ecdbe",
+      "response_bytes": 12370
+    },
+    {
+      "id": "FM27-HARVEST-ATTR",
+      "url": "https://sortitoutsi.net/content/78219/fm27-attribute-test-tactical-understanding-training-system-preset-tactics-ai-reverse-engineering-engine-for-test",
+      "access": "web original readable after initial HTTP403",
+      "raw_measurements_independently_reproduced": false,
+      "finding": "Attribute doses1/6/12/18, locked career conditions; author warns incomplete sample; no field-specific sharpness intervention located",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-ZAZ-TRAIN",
+      "url": "https://fm-arena.com/threads/training-schedules.60/",
+      "access": "web original readable pages1/2 exist, page1 inspected",
+      "raw_measurements_independently_reproduced": false,
+      "finding": "Training guide and sharpness-per-minute observations; no independent controlled split-field experiment",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-MAC-MIRROR",
+      "url": "https://fm-arena.com/threads/fm27-match-engine-what-we-know-so-far.122/",
+      "access": "web original readable page1",
+      "raw_measurements_independently_reproduced": false,
+      "finding": "caiograco mirror of same GitHub family, not independent replication",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-SI-PATCH-20261110",
+      "url": "https://community.sports-interactive.com/forums/topic/612981-mise-%C3%A0-jour-de-lancement-fm27-2701/",
+      "access": "official SI Staff original readable",
+      "published_date": "2026-11-10",
+      "finding": "Launch patch explicitly labelled27.0.1; not an exact DLL version/hash",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-SI-UPDATE-PLAN",
+      "url": "https://community.sports-interactive.com/forums/topic/612924-details-on-fm27-launch-patch-notes-and-first-post-launch-update/",
+      "access": "official SI Staff original readable",
+      "published_date": "2026-11-09",
+      "finding": "First postlaunch update planned later this month; current official update index lists this and Nov2 minor update only",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-SI-ENGINE",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-tactical-tweaks-and-match-engine-upgrades",
+      "access": "official original readable",
+      "finding": "Developer feature explanation, no causal public measurement",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-SI-TRAIN",
+      "url": "https://www.footballmanager.com/fm27/features/fm27-training-and-tactical-effectiveness",
+      "access": "official original readable",
+      "finding": "Four effectiveness components and complexity, no calibrated split-sharpness semantics",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-FMTL-METHOD",
+      "url": "https://www.fmtacticlab.com/fm27-test-method",
+      "access": "original readable",
+      "finding": "Page still dated5Nov says no tests yet; method20-38matches per squad tier, not a new verified effect dataset",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    },
+    {
+      "id": "FM27-TACTICS-LAB",
+      "url": "https://github.com/lqf0624/fm-tactics-lab/commit/cdda4be7280aa74681f015c02be77d7b47eacc4a",
+      "access": "GitHub API and connector checked",
+      "source_commit": "cdda4be7280aa74681f015c02be77d7b47eacc4a",
+      "finding": "HEAD unchanged; releases/latest pointsv1114, while local validated source tagv1114.6 is separate pinned identity; no silent tool migration",
+      "checked_utc": "2026-11-14T22:23:55.515392+00:00"
+    }
+  ],
+  "search_scope": [
+    "FM27 C90 C7A sharpness_secondary split fields",
+    "FM27 strikerless controlled formation tests",
+    "FM27 corner net yield counter exposure",
+    "FM27 patch current official update section",
+    "FM27 Harvestgreen Purity current studies"
+  ],
+  "verdicts": {
+    "MECH-004-SPLIT-R0": {
+      "decision": "NOVEL_HYPOTHESIS",
+      "overlap_ids": [
+        "MAC-05",
+        "MECH-002-SHARPNESS-P0"
+      ],
+      "new_information": "Offdiagonal H/L minus L/H, raw independent field contributions and post-preparation identifiability",
+      "scope_limit": "No global-first claim, no UI or physiological interpretation, no native release from literature alone"
+    },
+    "controlled_strikerless_package": {
+      "decision": "NOVEL_HYPOTHESIS",
+      "overlap_ids": [
+        "MAC-06",
+        "MAC-07",
+        "MAC-07B",
+        "MAC-19",
+        "FM27-FMAX-LAB",
+        "TACT-002-R0"
+      ],
+      "new_information": "Declared controlled ST-to-AMC IP package with same squad and fixed OOP, rather than community package rankings"
+    }
+  },
+  "limitations": [
+    "External author match counts are not independent raw-data reconstructions",
+    "Web search and pages are time-bounded, incomplete literature coverage",
+    "No engine process, seed reservation, career read or simulation performed by Research Agent",
+    "Exact installed game identity is Director native gate, not proven by website label"
+  ]
+}

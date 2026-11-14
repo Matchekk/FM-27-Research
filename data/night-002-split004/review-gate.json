@@ -1,0 +1,19 @@
+{
+  "experiment_id": "MECH-004-SPLIT-R0",
+  "approved_for_technical": true,
+  "inputs_sha256": "b322aa51b2e478f6c86e3405ef273bf78831f473bb0ece9d55c054b30a65d0a5",
+  "review_sha256": "2cb71eb7e60afc03375af973cb381e2004af323b437a57875d09e27599206de0",
+  "scope": "Prepared inputs only; TECH32full+1negative after exact publication and successfulCI. No native split transfer or scientific main release.",
+  "setup_cells_independently_verified": 16,
+  "record_differences_LL_HL_LH_HH": [
+    20,
+    10,
+    10,
+    0
+  ],
+  "new_unique_seeds": 68,
+  "prior_seed_count": 2597,
+  "seed_overlap_count": 0,
+  "native_calls_by_reviewer": 0,
+  "scientific_main_released": false
+}
