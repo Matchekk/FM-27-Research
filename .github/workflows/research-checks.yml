@@ -35,4 +35,6 @@ jobs:
       - run: if (Test-Path data/night-002-split004/technical.jsonl) { python -B analysis/review_split004.py public-technical }
       - run: if (Test-Path data/night-002-split004/main.jsonl) { python -B analysis/review_split004.py public-main }
       - run: if (Test-Path data/night-002-split004/termination.json) { python -B analysis/review_split004.py public-terminal }
+      - run: if (Test-Path data/night-002-stless003/technical.jsonl) { python -B analysis/review_stless003.py public-technical }
+      - run: if (Test-Path data/night-002-stless003/main.jsonl) { python -B analysis/review_stless003.py public-main }
       - run: git diff --check

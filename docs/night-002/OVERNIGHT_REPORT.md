@@ -61,12 +61,17 @@ Aufrufen vor. Der spätere Infrastrukturabbruch wird dadurch nicht beschönigt.
 Primärfrage: Moderiert das OOP4420-Paket den Effekt des IP4240-Pakets gegenüber
 IP4231/OOP4411? Vorregistrierter2×2-DoD, keine isolierte Rollen-/Positionswirkung.
 [Design](STLESS003-DESIGN.md) und [unabhängiger Neuheitsreview](STLESS003-NOVELTY-REVIEW.md)
-liegen vor.0 neue TACT-Matches/Seeds bei diesem Zwischenstand.
+liegen vor.0 neue TACT-Matches;68 neue Seeds gegen2665 frühere/reservierte Werte
+gebunden und16 konkrete Eingaben offline erzeugt.
+[Konkreter unabhängiger Inputreview](STLESS003-INPUT-REVIEW.md) bestanden;
+native Rollen-/Positionslegalität bleibt vor Main zu prüfen.
 
-Vor Ausführung: neue überprüfte globale Administrationsfortsetzung ausschließlich
-für diese unabhängige Frage. Kein Reset: bisherige Zeit, alle545 Reservierungen,
-Fehloperation und eigener MECH-Stopp bleiben erhalten. Dauerhaftes MECH-004-
-Admissionverbot. Danach eigene Input-/Code-/Review-/Publikations-/CI-Gates.
+Die überprüfte globale Administrationsfortsetzung wurde nach Veröffentlichung
+`d143d3e` und erfolgreicher CI43653104526 tatsächlich ausgeführt. Kein Reset:
+bisherige Zeit, alle545 Reservierungen, Fehloperation und eigener MECH-Stopp
+bleiben erhalten. Dauerhaftes MECH-004-Admissionverbot. TACT erhält anschließend
+eigene Input-/Code-/Review-/Publikations-/CI-Gates vor irgendeinem neuen Engineaufruf.
+[Administrativer Receipt](../../data/night-002-stless003/mission-administration.json).
 
 ## C. Technische Fortschritte und Grenzen
 

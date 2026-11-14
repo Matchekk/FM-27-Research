@@ -1,5 +1,22 @@
 # Research Log
 
+## 2026-11-15 – getrennte TACT-003-Vorbereitung nach geprüfter Administration
+
+- Terminalbericht und neue Controller-Epoche ind143d3e auforigin/main;
+  CI43653104526 erfolgreich. Einmalige administrative Transition danach tatsächlich
+  ausgeführt: gleicher Zeitbetrag589,7353507s, gleiche545 Reservierungen und
+  unveränderter eigener MECH-Stopp. Vorher-/Nachher-SHA und Receipt bewahrt.
+- TACT-003-STLESS-R0 ist eine andere Frage: IP×OOP-Paketmoderation bei denselben
+  Spielern, Attributen und expliziten PI. Je Zelle0/3/3/6 geänderte Rollen-/
+  Positionsrecords; keine Umbenennung des gesperrten Schärfeversuchs.
+- 68 neue disjunkte Seeds gegen2665 frühere/reservierte Werte gebunden;
+  16 private Eingaben und veröffentlichbare Hashes offline erzeugt. Zusätzliche
+  Originalquellen zu Harvestgreen-Effectiveness und einer3-4-3-0-Kreatortaktik
+  geprüft: thematische Überlappung, kein gleicher kausaler IP×OOP-Kontrast.
+- 20 fokussierte TACT-Tests bestanden; insgesamt432 lokale Tests (430bestanden,
+  2Skip). Konkreter unabhängiger Inputreview bestanden; noch0 native TACT-Aufrufe.
+  Publikations-/CI-Gates gehen Technik und einer gesonderten Mainfreigabe voraus.
+
 ## 2026-11-15 – terminale Bereinigung und getrennte Fortsetzungsadministration
 
 - Unabhängiger Rohabschlussreview bestätigt224 vollständige Mainmessungen,

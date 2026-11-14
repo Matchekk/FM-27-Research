@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "terminal_study": "MECH-004-SPLIT-R0",
+  "independent_study_only": "TACT-003-STLESS-R0",
+  "before_budget_sha256": "dad11f1be95f9bbccff8e9b62079d943af63cbd3828790e96f07809986bad114",
+  "after_budget_sha256": "3dd7e09b93fee8d4a13f47646d7aa7f027db033acc662b7aa9ba84d9f8f792e0",
+  "charges_and_reservations_preserved": true,
+  "failed_own_ledger_unchanged": true,
+  "binding": {
+    "failed_study": "MECH-004-SPLIT-R0",
+    "independent_study_only": "TACT-003-STLESS-R0",
+    "before_budget_sha256": "dad11f1be95f9bbccff8e9b62079d943af63cbd3828790e96f07809986bad114",
+    "termination_sha256": "f119e024f85668c395e8fed0bcd1cdd5e386bf5046e147a1af57813bb77fd7d6",
+    "review_sha256": "ab5cbcdb3dad637c437b5c4f58e697f6fb7e44a45da2414cb7e95cf98ea351aa",
+    "review_gate_sha256": "e60a169a92f9147f39ee4c2abcecededb1123a19c408031a6ce275d8c5aef73f",
+    "publication_commit": "d143d3ed22b58ecda484ae12803bf89f70fcc8e4",
+    "ci_run": 43653104526,
+    "checked_utc": "2026-11-14T23:27:37.648738+00:00"
+  },
+  "cleanup": {
+    "native_calls": 257,
+    "all_native_cleanup_confirmed": true,
+    "archive_entries_restored": 1024,
+    "summed_native_call_seconds": 838.0640000000058
+  }
+}

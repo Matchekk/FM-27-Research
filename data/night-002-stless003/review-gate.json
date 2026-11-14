@@ -1,0 +1,21 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "approved_for_technical": true,
+  "inputs_sha256": "5f1886c044ff890c81828cdf89141a27f2135f9ef4238ae354660a0fbeed7de7",
+  "review_sha256": "2907ddc5fe4736101c4a1eee46ee7b42033510c0ec439c21f0306f40c1070791",
+  "setup_cells_independently_verified": 16,
+  "record_differences_I0O0_I1O0_I0O1_I1O1": [
+    0,
+    3,
+    3,
+    6
+  ],
+  "prior_seed_count": 2665,
+  "new_unique_seeds": 68,
+  "seed_overlap_count": 0,
+  "old_terminal_study_resumption": false,
+  "reviewer_native_calls": 0,
+  "scientific_main_released": false,
+  "scope": "Prepared inputs only. TECH32full+1negative after exact publication, successfulCI and published registration/jobplan. No native legality or scientific main release.",
+  "encoded_oop_actor_mapping_verified": true
+}
