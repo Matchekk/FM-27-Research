@@ -46,11 +46,20 @@ Parserexception mit begrenztem Fehlerort. Keine Taktik-/Replay-/Karrierefreigabe
 Ein tatsächlicher Diagnosepass benötigt einen separaten Auftrag; Fachagent
 erstellt in dieser Stufe nur einen lokalen Commit, keinen Push.
 
-Geprüfter Implementierungsstand:23 neue Tests bestanden, davon vier echte
-harmlose Windows-Kerneltests und19synthetische Fault-/Export-/Gateprüfungen.
-Gesamtsuite267Tests:266bestanden, eine vorhandene Auslassung; fünf historische
+Geprüfter Implementierungsstand nach Review:27 eigene Tests bestanden, davon vier echte
+harmlose Windows-Kerneltests und23synthetische Fault-/Export-/Gateprüfungen.
+Gesamtsuite271Tests:270bestanden, eine vorhandene Auslassung; fünf historische
 Analysetests bestanden. NIGHT-001-Archivschutz bestätigt340unveränderte Dateien.
 Kerneltests belegen GO vor Projektcode, Speicherabweisung unter64MiB-Testcap,
 verweigerte Nachkommen bei Prozesslimit1 und Kill-on-close; letzteres wird
 ausdrücklich nicht als Kernel-0-Nachweis akzeptiert. Keine `.fm`-Testdatei wurde
 angelegt/geöffnet/gehasht. Finale CI und unabhängiger Runnerreview stehen noch aus.
+
+Unabhängige rote Regressionen fanden vor jeder echten R3-Ausführung eine zu
+späte GO-Fristprüfung und die Möglichkeit gültiger Cacheimporte trotz `-B`.
+Version2 prüft Monoton-/UTC-Restzeit vor GO, isoliert Parent-/Childimports über
+nicht existente private UUID-Cacheprefixe und pinnt `research/__init__.py`.
+Außerdem wird `--release` vor Inhaltslesen auf den festen privaten JSON-Bereich
+`local/night-001-career/releases/` und64KiB begrenzt. Vier unveränderte externe
+Reviewregressionen bestanden gegen den Fixstand; finaler unabhängiger Review folgt
+nach erneutem Quellenfreeze. Es gab keinen Befund manipulierter Projektcaches.

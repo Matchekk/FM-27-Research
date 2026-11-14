@@ -31,6 +31,16 @@ Code und Distributionsmetadaten bleiben gehasht und unverändert. Ein falsches
 Versionslabel, Paket-/Sourceupdate oder unbemerkte Bytecode-Cachemutation ist
 kein zulässiger Vorbereitungsschritt; Decoder startet explizit mit `-I -S -B`.
 
+Runner-v2 bindet auch das tatsächlich importierte `research/__init__.py`.
+`-B` verhindert ausschließlich neue Cachewrites, keine vorhandenen Cacheimporte.
+Deshalb erhalten Parent vor den ersten Researchimports und Childbootstrap vor
+`runpy`, Siteeinbindung und Projektimports jeweils einen frischen privaten
+UUID-`sys.pycache_prefix`, dessen sichere Lage und Nichtexistenz geprüft werden.
+`sys.dont_write_bytecode=True`; die Prefixverzeichnisse werden nicht angelegt.
+Bestehende globale Caches werden weder gelöscht noch verändert. Parent wird als
+direkte Quelldatei gestartet; bereits durch Startuphooks vorgeladene Researchmodule
+verhindern diesen CLI-Einstieg. Ein Cachefund allein ist kein Tampernachweis.
+
 ## Getrennte technische Freigabe
 
 [final-contract.json](../data/night-001-career-r3/final-contract.json) bindet dieses
@@ -60,6 +70,12 @@ verifiziert Parent-/Lease-/Launch-PID, GO-Zulassung, Vertragsidentität und Quel
 erneut, bevor es die Snapshotdatei berührt. Die CLI bietet keinen alternativen
 Savepfad, keinen Seedparameter, keine erweiterbare Matchzahl oder Budgetanhebung.
 
+Vor dem ersten Inhaltslesen von `--release` wird dessen tatsächliches Ziel
+aufgelöst und auf den festen privaten Bereich `local/night-001-career/releases/`,
+Suffix `.json` und Größe1..65536Bytes begrenzt. Andere Pfade, Savepfade, übergroße
+Metadaten und Symlinkziele außerhalb dieses Bereichs werden ohne Inhaltslesen
+abgelehnt. Keine Dateiumbenennung oder Save-Neukodierung als Freigabemetadaten.
+
 ## Ablauf, Fehler und Ressourcen
 
 Fünf feste Stufen:
@@ -87,6 +103,12 @@ Startmarker;5s bleiben für Cleanup und Abrechnung. Start nur mit185s Puffer vor
 `2026-11-14T23:00:00Z`. Keine Zeitrückerstattung und kein neuer Versuch nach Fehler.
 OS-/I/O-Verzögerungen über180s bleiben ausgewiesene Budgetfehler, keine gültigen
 Diagnoseergebnisse.
+
+Unmittelbar vor GO werden beide Uhren erneut geprüft. Die effektive Decoderfrist
+ist das Minimum aus Start+175s und aktueller Monotonzeit plus verbleibender
+UTC-Zeit minus5s Cleanupreserve. Ohne positive Restzeit wird kein GO gesendet.
+Die laufende Schleife prüft zusätzlich die absolute UTC-Grenze mit5s Reserve;
+ein Uhrsprung oder verspätete Jobvorbereitung darf Mitternacht nicht umgehen.
 
 Höchstens1MiB neue private Artefakte. Bekannte Writer sind vor Schreibbeginn
 enger partitioniert: Parentmetadaten128KiB, Childmetadaten256KiB,

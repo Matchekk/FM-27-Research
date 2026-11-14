@@ -1,7 +1,7 @@
 {
   "schema": "valid004.r3.final-run-contract.v1",
   "experiment_id": "VALID-004-CAREER-R3-DIAG",
-  "version": "career-marker-runner-v1",
+  "version": "career-marker-runner-v2",
   "state": "prepared_unreleased_no_real_attempt",
   "snapshot_sha256": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
   "snapshot_bytes": 147130636,
@@ -25,6 +25,12 @@
     "child_metadata_bytes": 262144,
     "retries": 0,
     "deadline_utc": "2026-11-14T23:00:00Z"
+  },
+  "policy_release_metadata": {
+    "directory": "local/night-001-career/releases",
+    "suffix": ".json",
+    "max_bytes": 65536,
+    "resolve_before_read": true
   },
   "reader": {
     "package": "fmsave",
@@ -132,15 +138,16 @@
   },
   "isolated_metadata_sha256": "b616f72d6c3b3c2bbeb7f80e41043fc401d59d88cdfcba9ce31f3e2f43c3a818",
   "code_sha256_lf": {
-    "analysis/run_career004r3.py": "afc994570a5feb5d585b2dc0aae5db42f29e1506901656840138d7f7f7d31e96",
+    "analysis/run_career004r3.py": "b577cf31ede27819df76c8db08b9a16f3d123d6031dd15682fa68dec14a709f9",
+    "research/__init__.py": "05cd9c796c6f8adeff261ff194ea1adff6e837e41b2d7b58c18758989b51940e",
     "research/career_diag004r3.py": "9c7767606f7c273bec8902b0eeed7984d4dbdbf53476048bfcbbae29dd52d326",
     "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e",
     "research/native_process005.py": "03c50200bb46c3daaeeba5901502f9eede04f2bba7ad04884b2d3dd6ebaa8faf",
-    "tests/test_career004r3_runner.py": "04c6403bbb3ddd2ea89caa3c063517f33bc6cbdba667754103478b35792b5598"
+    "tests/test_career004r3_runner.py": "025d27e4a79cf9a28bba391442b21a0bcf93a2b012c7ed17bf3569c50550c3a8"
   },
   "documents_sha256_lf": {
     "experiments/VALID-004-career-readonly-R3-DIAG.md": "841dc5f5ea65b187d91757fcd94ec1c139ff87038368713210036da38570a292",
-    "experiments/VALID-004-career-readonly-R3-RUN.md": "b47b87e2e967a1a2fbf0e7626092927408e91a46dfa8382366cf9d2bda57e24e"
+    "experiments/VALID-004-career-readonly-R3-RUN.md": "c1645fede08e908c1d4d46d415840473e6866a73219f236ca7b47ce16b2555d7"
   },
   "inputs_sha256_lf": {
     "data/night-001-career-r1/R2-contract.json": "848144b13c05a209f5922ef50d47709a25c9f63670725fbab0ed29ab430971b9",
@@ -276,6 +283,9 @@
       3,
       3
     ],
+    "import_cache_policy": "fresh_absent_private_UUID_prefix_before_project_imports; no_bytecode_writes",
+    "pre_go_deadline_recheck": true,
+    "utc_cleanup_reserve_in_loop": true,
     "no_v10": true,
     "no_recovery": true,
     "no_extra_probes": true,

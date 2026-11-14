@@ -5,6 +5,7 @@ from io import BytesIO,StringIO
 import json
 import os
 from pathlib import Path
+import py_compile
 import subprocess
 import sys
 import tempfile
@@ -56,6 +57,7 @@ class RunnerTests(unittest.TestCase):
         self.stack=ExitStack();self.addCleanup(self.stack.close);self.addCleanup(self.tmp.cleanup)
         self.stack.enter_context(patch.object(m,'ROOT',self.root))
         self.stack.enter_context(patch.object(m,'PUBLIC',self.root/'public'))
+        self.release_path=self.root/'local/night-001-career/releases/release.json'
 
     def fake_run(self,*,gate_error=None,assign_error=None,clean=True):
         c=dict(code_sha256_lf={'analysis/run_career004r3.py':'c'*64})
@@ -85,9 +87,9 @@ class RunnerTests(unittest.TestCase):
         popen.assert_not_called();snapshot.assert_not_called();cleanup.assert_not_called();lease.release.assert_not_called()
 
     def test_director_phrase_and_final_review_required_before_external_commands(self):
-        write(self.root/'release.json',dict(experiment_id=m.EXPERIMENT,passed=True,director_proceed='later'))
+        write(self.release_path,dict(experiment_id=m.EXPERIMENT,passed=True,director_proceed='later'))
         with patch.object(m.subprocess,'check_output') as command:
-            with self.assertRaises(ValueError):m.published_gate({},self.root/'release.json')
+            with self.assertRaises(ValueError):m.published_gate({},self.release_path)
             command.assert_not_called()
 
     def test_exact_published_ci_and_review_contract_binding(self):
@@ -95,7 +97,7 @@ class RunnerTests(unittest.TestCase):
         write(self.root/m.CONTRACT,c);contract_hash=m.normalized_hash(self.root/m.CONTRACT)
         review=self.root/m.REVIEW;review.parent.mkdir(parents=True,exist_ok=True);review.write_text('passed '+contract_hash)
         r=release();r.update(reviewed_contract_sha256=contract_hash,review_sha256=m.normalized_hash(review))
-        write(self.root/'release.json',r)
+        write(self.release_path,r)
         def command(args,**kwargs):
             if args[:3]==['git','remote','get-url']:return 'https://github.com/Matchekk/FM-27-Research.git\n'
             if args[0]=='gh':return json.dumps(dict(status='completed',conclusion='success',headSha='a'*40))
@@ -104,17 +106,17 @@ class RunnerTests(unittest.TestCase):
             if args[:2]==['git','ls-remote']:return 'a'*40+'\trefs/heads/main\n'
             raise AssertionError(args)
         with patch.object(m.subprocess,'check_output',side_effect=command),patch.object(m.subprocess,'run'):
-            self.assertEqual(m.published_gate(c,self.root/'release.json')['published_commit'],'a'*40)
+            self.assertEqual(m.published_gate(c,self.release_path)['published_commit'],'a'*40)
         def wrong_ci(args,**kwargs):
             if args[0]=='gh':return json.dumps(dict(status='completed',conclusion='success',headSha='d'*40))
             return command(args,**kwargs)
         with patch.object(m.subprocess,'check_output',side_effect=wrong_ci),patch.object(m,'snapshot_receipt') as snapshot:
-            with self.assertRaises(ValueError):m.published_gate(c,self.root/'release.json')
+            with self.assertRaises(ValueError):m.published_gate(c,self.release_path)
             snapshot.assert_not_called()
-        write(self.root/'release.json',release())
+        write(self.release_path,release())
         write(self.root/m.CONTRACT,{})
         with patch.object(m.subprocess,'check_output') as command:
-            with self.assertRaises(ValueError):m.published_gate({},self.root/'release.json')
+            with self.assertRaises(ValueError):m.published_gate({},self.release_path)
             command.assert_not_called()
 
     def test_assignment_failure_no_go_and_verified_cleanup_before_lease_release(self):
@@ -142,12 +144,62 @@ class RunnerTests(unittest.TestCase):
     def test_monotonic_deadline_cleans_and_cannot_reopen_budget(self):
         lease,process,popen,gate,cleanup,snapshot=self.fake_run()
         process.poll.side_effect=[None,None,254]
-        with patch.object(m.time,'monotonic',side_effect=[0,176,176]),redirect_stdout(StringIO()):
+        with patch.object(m.time,'monotonic',side_effect=[0,0,176,176]),redirect_stdout(StringIO()):
             self.assertEqual(m.run(self.root,self.root/'release.json'),20)
         resources=m.read(m.paths(self.root)['private']/'completion.json')['resources']
         self.assertEqual(resources['status'],'timeout');cleanup.assert_called_once();lease.release.assert_called_once()
         with self.assertRaises(ValueError):m.run(self.root,self.root/'release.json')
         self.assertEqual(popen.call_count,1);snapshot.assert_not_called()
+
+    def test_late_job_assignment_cannot_send_go_after_monotonic_window(self):
+        lease,process,popen,gate,cleanup,snapshot=self.fake_run()
+        clock={'now':0.0}
+        def assigned(p):clock['now']=176.0;return policy()
+        m.ReaderJob().assign.side_effect=assigned
+        with patch.object(m.time,'monotonic',side_effect=lambda:clock['now']),redirect_stdout(StringIO()):
+            with self.assertRaises(ValueError):m.run(self.root,self.root/'release.json')
+        process.stdin.write.assert_not_called();cleanup.assert_called_once();lease.release.assert_called_once();snapshot.assert_not_called()
+
+    def test_late_job_assignment_cannot_send_go_with_less_than_cleanup_reserve(self):
+        lease,process,popen,gate,cleanup,snapshot=self.fake_run()
+        class Clock(datetime):
+            current=datetime(2026,11,14,20,tzinfo=timezone.utc)
+            @classmethod
+            def now(cls,tz=None):return cls.current
+        def assigned(p):Clock.current=datetime(2026,11,14,22,59,56,tzinfo=timezone.utc);return policy()
+        m.ReaderJob().assign.side_effect=assigned
+        with patch.object(m,'datetime',Clock),patch.object(m.time,'monotonic',return_value=0.0),redirect_stdout(StringIO()):
+            with self.assertRaises(ValueError):m.run(self.root,self.root/'release.json')
+        process.stdin.write.assert_not_called();cleanup.assert_called_once();lease.release.assert_called_once();snapshot.assert_not_called()
+
+    def test_release_non_json_outside_and_oversize_rejected_before_content_read(self):
+        outside=self.root/'outside.json';write(outside,{})
+        oversized=self.release_path;oversized.parent.mkdir(parents=True,exist_ok=True);oversized.write_text(' '*(64*1024+1))
+        for candidate in (self.root/'snapshot.fm',outside,oversized):
+            with patch.object(m,'read') as reader:
+                with self.assertRaises(ValueError):m.published_gate({},candidate)
+                reader.assert_not_called()
+        alias=self.release_path.parent/'alias.json';original_resolve=Path.resolve
+        def resolved(path,*args,**kwargs):
+            return self.root/'snapshot.fm' if path==alias else original_resolve(path,*args,**kwargs)
+        with patch.object(Path,'resolve',resolved),patch.object(m,'read') as reader:
+            with self.assertRaises(ValueError):m.published_gate({},alias)
+            reader.assert_not_called()
+
+    def test_fresh_parent_cache_prefix_reads_source_and_preserves_existing_cache(self):
+        module_path=self.root/'probe.py';original=b'value = 7\n';cached=b'value = 9\n'
+        module_path.write_bytes(original);stamp=module_path.stat().st_mtime
+        with patch.object(sys,'pycache_prefix',None):
+            module_path.write_bytes(cached);os.utime(module_path,(stamp,stamp))
+            cached_path=Path(py_compile.compile(str(module_path),doraise=True))
+        original_cache=cached_path.read_bytes();module_path.write_bytes(original);os.utime(module_path,(stamp,stamp))
+        with patch.object(sys,'pycache_prefix',sys.pycache_prefix),patch.object(sys,'dont_write_bytecode',True):
+            prefix=m.isolate_project_imports(self.root)
+            spec=m.importlib.util.spec_from_file_location('r3_parent_cache_probe',module_path)
+            module=m.importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+            self.assertEqual(module.value,7);self.assertFalse(prefix.exists())
+        self.assertEqual(cached_path.read_bytes(),original_cache)
+        self.assertIn('research/__init__.py',m.CODE)
 
     def test_output_and_metadata_bounds_before_disk_growth(self):
         folder=self.root/'bounded';folder.mkdir()

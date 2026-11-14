@@ -19,16 +19,31 @@ import sysconfig
 import threading
 import time
 import traceback
+import uuid
 import warnings
 import zipfile
 
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+def isolate_project_imports(root):
+    """Read source instead of pre-existing pyc; never delete or create a cache."""
+    private=(Path(root)/'local/night-001-career').resolve()
+    prefix=(private/'import-cache'/uuid.uuid4().hex).resolve()
+    if not prefix.is_relative_to(private) or prefix.exists() or prefix.is_symlink():
+        raise RuntimeError('Fresh private import-cache prefix is not safely absent')
+    sys.pycache_prefix=str(prefix);sys.dont_write_bytecode=True
+    return prefix
+
+
+ROOT=Path(__file__).resolve().parents[1]
+if __name__=='__main__' and any(n=='research' or n.startswith('research.') for n in sys.modules):
+    raise RuntimeError('Direct source entry requires no preloaded research modules')
+IMPORT_CACHE_PREFIX=isolate_project_imports(ROOT)
+sys.path.insert(0,str(ROOT))
 from research.career_diag004r3 import STAGES,observe_final_call,require,source_hash
 from research.coordination import NativeLease
 from research.native_process005 import _WindowsJob,_Extended,_cleanup
 
 EXPERIMENT='VALID-004-CAREER-R3-DIAG'
-VERSION='career-marker-runner-v1'
+VERSION='career-marker-runner-v2'
 SNAPSHOT_SHA='1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d'
 SNAPSHOT_BYTES=147130636
 WHEEL_SHA='2bb7a674decbcb48d0c37e13cafe22d0e6dba995493b97046411e94a74854baa'
@@ -42,13 +57,17 @@ BUDGET=dict(wall_seconds=180,cleanup_reserve_seconds=5,hard_process_private_byte
 POLICY=dict(strict=True,one_open=True,one_tactics_call=True,exception_identity_preserved=True,
             expected_warning_categories={'UnknownBuildWarning':1},
             expected_marker_widths=[3,3,3],
+            import_cache_policy='fresh_absent_private_UUID_prefix_before_project_imports; no_bytecode_writes',
+            pre_go_deadline_recheck=True,utc_cleanup_reserve_in_loop=True,
             no_v10=True,no_recovery=True,no_extra_probes=True,no_retry=True)
+RELEASE_METADATA=dict(directory='local/night-001-career/releases',suffix='.json',max_bytes=64*1024,
+                      resolve_before_read=True)
 PUBLIC=ROOT/'data/night-001-career-r3'
 CONTRACT='data/night-001-career-r3/final-contract.json'
 REVIEW='docs/night-001/CAREER-R3-RUNNER-REVIEW.md'
 DOCUMENTS=('experiments/VALID-004-career-readonly-R3-DIAG.md',
            'experiments/VALID-004-career-readonly-R3-RUN.md')
-CODE=('analysis/run_career004r3.py','research/career_diag004r3.py',
+CODE=('analysis/run_career004r3.py','research/__init__.py','research/career_diag004r3.py',
       'research/coordination.py','research/native_process005.py','tests/test_career004r3_runner.py')
 INPUTS=('data/night-001-career-r1/R2-contract.json','data/night-001-career-r3/R3-draft-contract.json',
         'requirements-lock.txt')
@@ -57,8 +76,9 @@ HEX=re.compile(r'[0-9a-f]{64}\Z')
 
 # -I -S disables site hooks before the job/GO boundary. No fmsave/research import
 # and no saved-game access exists in this short bootstrap.
-BOOTSTRAP="""import sys,json,os,hmac,hashlib,ctypes,runpy
+BOOTSTRAP="""import sys,json,os,hmac,hashlib,ctypes,uuid
 from ctypes import wintypes
+from pathlib import Path
 line=sys.stdin.buffer.readline(16385)
 if not line or len(line)>16384:raise SystemExit(231)
 p=json.loads(line)
@@ -68,6 +88,11 @@ k=ctypes.WinDLL('kernel32',use_last_error=True);k.GetCurrentProcess.restype=wint
 k.IsProcessInJob.argtypes=[wintypes.HANDLE,wintypes.HANDLE,ctypes.POINTER(wintypes.BOOL)]
 k.IsProcessInJob.restype=wintypes.BOOL;member=wintypes.BOOL()
 if not k.IsProcessInJob(k.GetCurrentProcess(),None,ctypes.byref(member)) or not member.value:raise SystemExit(231)
+private=(Path(p['central'])/'local/night-001-career').resolve()
+prefix=(private/'import-cache'/uuid.uuid4().hex).resolve()
+if not prefix.is_relative_to(private) or prefix.exists() or prefix.is_symlink():raise SystemExit(231)
+sys.pycache_prefix=str(prefix);sys.dont_write_bytecode=True
+import runpy
 with open(p['script'],'rb') as s:code=s.read()
 if hashlib.sha256(code.replace(b'\\r\\n',b'\\n')).hexdigest()!=p['runner_sha256']:raise SystemExit(231)
 sys.path.insert(0,p['site']);os.environ['FM27_R3_BASE_SITE']=p['site'];os.environ['FM27_R3_ADMITTED']='1'
@@ -210,7 +235,8 @@ def prepare(central):
         require(sha256(wheel.read(metadata)).hexdigest()==metadata_hash,'Isolated metadata differs from wheel')
     c=dict(schema='valid004.r3.final-run-contract.v1',experiment_id=EXPERIMENT,version=VERSION,
         state='prepared_unreleased_no_real_attempt',snapshot_sha256=SNAPSHOT_SHA,snapshot_bytes=SNAPSHOT_BYTES,
-        stages=list(STAGES),budget=BUDGET,reader=r2['reader'],isolated_metadata_sha256=metadata_hash,
+        stages=list(STAGES),budget=BUDGET,policy_release_metadata=RELEASE_METADATA,
+        reader=r2['reader'],isolated_metadata_sha256=metadata_hash,
         code_sha256_lf={n:normalized_hash(ROOT/n) for n in CODE},
         documents_sha256_lf={n:normalized_hash(ROOT/n) for n in DOCUMENTS},
         inputs_sha256_lf={n:normalized_hash(ROOT/n) for n in INPUTS},
@@ -229,7 +255,12 @@ def prepare(central):
 
 
 def verify_frozen(c,central):
+    require(sys.dont_write_bytecode is True and sys.pycache_prefix and
+            Path(sys.pycache_prefix).resolve().is_relative_to((ROOT/'local/night-001-career').resolve()) and
+            not Path(sys.pycache_prefix).exists() and not Path(sys.pycache_prefix).is_symlink(),
+            'Fresh absent source-import prefix required')
     require(c['experiment_id']==EXPERIMENT and c['version']==VERSION and c['budget']==BUDGET and c['policy']==POLICY and
+            c['policy_release_metadata']==RELEASE_METADATA and
             c['snapshot_sha256']==SNAPSHOT_SHA and c['snapshot_bytes']==SNAPSHOT_BYTES and
             c['stages']==list(STAGES) and c['required_review_document']==REVIEW,'Final contract identity/budget drift')
     require(set(c['code_sha256_lf'])==set(CODE) and set(c['documents_sha256_lf'])==set(DOCUMENTS) and
@@ -251,7 +282,12 @@ def verify_frozen(c,central):
 
 
 def published_gate(c,release_path):
-    release=read(release_path);commit=release.get('published_commit','')
+    release_file=Path(release_path).resolve()
+    release_base=(ROOT/RELEASE_METADATA['directory']).resolve()
+    require(release_file.is_relative_to(release_base) and release_file!=release_base and
+            release_file.suffix.lower()==RELEASE_METADATA['suffix'],'Release must be JSON in the fixed private release directory')
+    require(release_file.is_file() and 0<release_file.stat().st_size<=RELEASE_METADATA['max_bytes'],'Release metadata size invalid')
+    release=read(release_file);commit=release.get('published_commit','')
     require(release.get('experiment_id')==EXPERIMENT and release.get('passed') is True and
             release.get('director_proceed')=='published proceed','Director release missing')
     require(re.fullmatch(r'[0-9a-f]{40}',commit) and type(release.get('ci_run')) is int and release['ci_run']>0,
@@ -432,10 +468,15 @@ def run(central,release_path):
         site=sysconfig.get_paths()['purelib']
         packet=dict(token=token,script=str(Path(__file__).resolve()),central=str(central),site=site,
                     runner_sha256=c['code_sha256_lf']['analysis/run_career004r3.py'])
+        admission_monotonic=time.monotonic();admission_utc=datetime.now(timezone.utc)
+        until=min(began+BUDGET['wall_seconds']-BUDGET['cleanup_reserve_seconds'],
+                  admission_monotonic+(deadline-admission_utc).total_seconds()-BUDGET['cleanup_reserve_seconds'])
+        require(admission_monotonic<until,
+                'Reader admission deadline expired before GO')
         process.stdin.write((json.dumps(packet)+'\n').encode());process.stdin.flush();process.stdin.close();go=True
-        until=began+BUDGET['wall_seconds']-BUDGET['cleanup_reserve_seconds']
         while process.poll() is None:
-            if time.monotonic()>=until:status='timeout';break
+            if time.monotonic()>=until or datetime.now(timezone.utc)>=deadline-timedelta(seconds=BUDGET['cleanup_reserve_seconds']):
+                status='timeout';break
             if output.exceeded or output.error_type:status='output_cap_or_io_failure';break
             if sum(x.stat().st_size for x in p['private'].iterdir() if x.is_file())>ARTIFACT_CAP:
                 status='artifact_cap';break
