@@ -16,7 +16,7 @@ from research.native import read, rows, write
 import analyse_mech003 as analysis
 import run_mech003 as runner
 import export_mech003 as exporter
-from verify_mech003 import same,verify_complete_budget
+from verify_mech003 import same,verify_complete_budget,verify_containment
 
 OOP_MAP=[[0,1,2,3,4,9,5,6,7,8,10],[0,1,2,3,4,5,6,7,9,8,10]]
 
@@ -38,6 +38,7 @@ def fixture():
     c=deepcopy(read(ROOT/'research/specs/TACT-002-R0.json'))
     c.update(experiment_id=EXPERIMENT,module='MECH',status='registered',test_origin='own_synthetic_only')
     c['preregistration'].update(commit='a'*40,document_sha256='b'*64,analysis_sha256='c'*64)
+    c['native_process_plan']=runner.contract_definition()['native_process_plan']
     c['budget'].update(max_matches=512,max_workers=4,timeout_seconds=90,max_technical_attempts=33,total_native_wall_seconds=600,
                        absolute_study_wall_seconds=1200,raw_artifact_limit_bytes=2*1024**3,disk_reserve_bytes=20*1024**3)
     c['science'].update(primary_contrast='STAMINA',multiple_testing='holm',desired_full_ci_width=.5,contrast_coefficients={k:list(v) for k,v in COEFFICIENTS.items()},
@@ -85,15 +86,102 @@ def fake_native(config):
 
 
 class Stamina003Tests(unittest.TestCase):
+    def test_public_containment_requires_kernel_zero_and_capsule_exit(self):
+        proofs={phase:dict(schema='fm27.contained-call.v1',cleanup_confirmed=True,capsule_exit_confirmed=True,
+            kernel_active_processes=0,job_policy=dict(active_process_limit=3 if phase=='negative' else 10,
+            limit_flags=0x2008,kill_on_close=True,breakaway_allowed=False)) for phase in ('prepare','technical','main','negative')}
+        verify_containment(proofs)
+        for field,value in (('kernel_active_processes',1),('kernel_active_processes',False),('cleanup_confirmed',False),('capsule_exit_confirmed',False)):
+            bad=deepcopy(proofs);bad['main'][field]=value
+            with self.assertRaises(ValueError):verify_containment(bad)
+
+    def test_prepare_publication_checks_exact_ci_and_all_source_blobs(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);public=root/'data/mech-003-stamina';public.mkdir(parents=True)
+            files=('own.py','experiments/MECH-003-stamina-preregistration.md','data/mech-003-stamina/contract-draft.json','docs/REVIEW.md')
+            original={name:b'own synthetic fixture\n' for name in files}
+            for name,data in original.items():(root/name).parent.mkdir(parents=True,exist_ok=True);(root/name).write_bytes(data)
+            gate=dict(passed=True,published_commit='a'*40,ci_run=42,independent_review_document='docs/REVIEW.md',independent_review_sha256=runner.source_hash(root/'docs/REVIEW.md'))
+            write(public/'prepare-gate.json',gate)
+            def output(args,**kwargs):
+                if args[0]=='gh':return json.dumps(dict(status='completed',conclusion='success',headSha='a'*40))
+                if args[1]=='ls-remote':return 'a'*40+'\trefs/heads/main\n'
+                if args[1]=='show':return original[args[2].split(':',1)[1]]
+                raise AssertionError(args)
+            with patch.object(runner,'ROOT',root),patch.object(runner,'PUBLIC',public),patch.object(runner,'CODE',('own.py',)),patch.object(runner.subprocess,'check_output',side_effect=output),patch.object(runner.subprocess,'run'):
+                self.assertTrue(runner.check_prepare_publication()['passed'])
+                (root/'own.py').write_bytes(b'unpublished change')
+                with self.assertRaises(ValueError):runner.check_prepare_publication()
+
+    def test_loader_capability_keys_and_warm_host_limits_are_separate(self):
+        self.assertEqual(len(probe_jobs()),5)
+        self.assertEqual(PROCESS_CAPS,{'technical':36,'main':514})
+        self.assertEqual(runner.phase_keys('prepare'),['loader-check-image-prepare'])
+        with patch.object(runner,'read',return_value=dict(technical_seeds=[123,456])):
+            self.assertEqual(len(runner.phase_keys('technical')),35)
+        with tempfile.TemporaryDirectory() as temp:
+            host=Path(temp)/'FM27Simulator.exe';ledger=Path(temp)/'hosts.jsonl';calls=[]
+            hook=HostLaunchAudit('technical',host,ledger,lambda:calls.append(True))
+            hook('subprocess.Popen',(str(host),[str(host),'--check-image','own-synthetic.dll'],None,{}))
+            hook('subprocess.Popen',(str(host),[str(host),'--worker-capabilities'],None,{}))
+            for i in range(4):hook('subprocess.Popen',(str(host),[str(host),'--worker-manifest',str(i)],None,{}))
+            with hook.negative_capsule(runner.base_python()):
+                hook('subprocess.Popen',(runner.base_python(),[runner.base_python(),'-I','capsule.py'],None,{}))
+                hook.negative_permission()
+            self.assertEqual(hook.require_complete()['worker_start'],4)
+            self.assertEqual(len(rows(ledger)),7);self.assertEqual(len(calls),7)
+            for argv in ([str(host),'--worker-manifest','5'],[str(host),'--check-image','x'],[str(host),'--output','x']):
+                with self.assertRaises(ValueError):hook('subprocess.Popen',(str(host),argv,None,{}))
+
+    def test_unknown_cleanup_retains_lease_and_durable_marker(self):
+        class Budget:
+            def load(self):return dict(active=None,halted=False,operations=[])
+            def run(self,*args):raise RuntimeError('synthetic child failure')
+        for confirmed in (False,True):
+            with tempfile.TemporaryDirectory() as temp:
+                lease=SimpleNamespace(acquire=lambda:None,assert_owned=lambda:dict(schema=1,experiment=EXPERIMENT,
+                    workers=4,owner_pid=123,acquired_utc='synthetic'),release=unittest.mock.Mock())
+                with patch.object(runner,'LOCAL',Path(temp)),patch.object(runner,'assert_master'),patch.object(runner,'NativeLease',return_value=lease),patch.object(runner,'phase_cleanup_confirmed',return_value=confirmed):
+                    with self.assertRaises(RuntimeError):runner.run_supervised_phase(Budget(),'prepare',['loader-check-image-prepare'],[])
+                self.assertEqual(lease.release.call_count,int(confirmed))
+                self.assertEqual((Path(temp)/'native-cleanup-pending.json').exists(),not confirmed)
+        with tempfile.TemporaryDirectory() as temp:
+            lease=SimpleNamespace(acquire=lambda:None,assert_owned=lambda:dict(schema=1,experiment=EXPERIMENT,
+                workers=4,owner_pid=123,acquired_utc='synthetic'),release=unittest.mock.Mock())
+            budget=SimpleNamespace(load=lambda:dict(active=None,halted=False,operations=[]),run=lambda *args:None)
+            with patch.object(runner,'LOCAL',Path(temp)),patch.object(runner,'assert_master'),patch.object(runner,'NativeLease',return_value=lease),patch.object(runner,'phase_cleanup_confirmed',return_value=False):
+                with self.assertRaises(RuntimeError):runner.run_supervised_phase(budget,'prepare',['loader-check-image-prepare'],[])
+            lease.release.assert_not_called()
+
+    def test_whole_phase_capsule_precedes_runtime_and_uses_base_interpreter(self):
+        from types import ModuleType
+        capsule=ModuleType('research.native_process005');calls=[]
+        capsule.contained_call=lambda *args,**kwargs:(calls.append((args,kwargs)) or (0,.1))
+        args=SimpleNamespace(phase='prepare',runtime=Path('own-runtime'),game=Path('own-game'))
+        with patch.dict(sys.modules,{'research.native_process005':capsule}),patch.object(runner,'remaining_seconds',return_value=100.),patch.object(runner,'NativeLab') as native:
+            runner.run_contained_child(args)
+            native.assert_not_called()
+        positional,keywords=calls[0]
+        self.assertEqual(positional[0][0],runner.base_python());self.assertIn('--child',positional[0])
+        self.assertEqual(positional[1]['MECH003_CONTAINED_STUDY'],'1')
+        self.assertEqual(keywords,dict(timeout=None,total_timeout=100.,max_processes=10))
+
+    def test_prepare_without_published_gate_never_constructs_native_or_budget(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);(root/'.git').mkdir()
+            with patch.object(runner,'ROOT',root),patch.object(runner,'assert_master'),patch.object(runner,'check_prepare_publication',side_effect=ValueError('No published release')),patch.object(sys,'argv',['run_mech003.py','prepare']),patch.object(runner,'NativeLab') as native,patch.object(runner,'DeadlineBudget') as budget:
+                with self.assertRaises(ValueError):runner.main()
+                native.assert_not_called();budget.assert_not_called()
+
     def test_complete_public_budget_requires_real_keys_fixed_deadline_and_charge(self):
         from datetime import datetime,timedelta,timezone
         start=datetime(2026,11,14,20,tzinfo=timezone.utc)
         operations=[dict(name=name,kind='main' if name=='main' else 'technical',keys=keys,
             start_utc=(start+timedelta(seconds=i*10)).isoformat(),elapsed_seconds=1.,returncode=0,timed_out=False)
-            for i,(name,keys) in enumerate((('prepare',[]),('technical',['t','negative-binary']),('main',['m'])))]
-        budget=dict(experiment=EXPERIMENT,limits={'technical':33,'main':512},limit_seconds=600,wall_limit_seconds=1200,
+            for i,(name,keys) in enumerate((('prepare',['loader-check-image-prepare']),('technical',['loader-check-image-technical','worker-capabilities-technical','t','negative-binary']),('main',['loader-check-image-main','worker-capabilities-main','m'])))]
+        budget=dict(experiment=EXPERIMENT,limits=PROCESS_CAPS,limit_seconds=600,wall_limit_seconds=1200,
             active=None,halted=False,charged_seconds=3.,operations=operations,
-            reserved={'t':'technical','negative-binary':'technical','m':'main'},wall_start_utc=start.isoformat(),
+            reserved={'loader-check-image-prepare':'technical','loader-check-image-technical':'technical','worker-capabilities-technical':'technical','t':'technical','negative-binary':'technical','loader-check-image-main':'main','worker-capabilities-main':'main','m':'main'},wall_start_utc=start.isoformat(),
             wall_deadline_utc=(start+timedelta(seconds=1200)).isoformat(),within_fixed_deadline=True)
         verify_complete_budget(budget,['t','negative-binary'],['m'])
         for field,value in (('charged_seconds',2.),('wall_deadline_utc',(start+timedelta(seconds=1201)).isoformat()),
@@ -215,17 +303,17 @@ class Stamina003Tests(unittest.TestCase):
             with self.assertRaises(ValueError):runner.run_supervised_phase(Budget(),'technical',[],[])
             self.assertEqual(p.read_bytes(),b'original')
 
-    def test_prepare_failure_accounts_all545_slots_before_and_after_seeds(self):
+    def test_prepare_failure_accounts_all550_slots_before_and_after_seeds(self):
         with tempfile.TemporaryDirectory() as temp:
             local=Path(temp)/'private';public=Path(temp)/'public';local.mkdir()
-            budget=dict(experiment=EXPERIMENT,limits={'technical':33,'main':512},limit_seconds=600,charged_seconds=1.,reserved={},halted=True,active=None,operations=[],wall_start_utc='2026-11-14T17:00:00+00:00',wall_deadline_utc='2026-11-14T17:20:00+00:00',wall_limit_seconds=1200)
+            budget=dict(experiment=EXPERIMENT,limits=PROCESS_CAPS,limit_seconds=600,charged_seconds=1.,reserved={},halted=True,active=None,operations=[],wall_start_utc='2026-11-14T17:00:00+00:00',wall_deadline_utc='2026-11-14T17:20:00+00:00',wall_limit_seconds=1200)
             write(local/'budget.json',budget)
             with patch.object(exporter,'LOCAL',local),patch.object(exporter,'PUBLIC',public):exporter.export()
-            account=rows(public/'job-accounting.jsonl');self.assertEqual(len(account),545)
+            account=rows(public/'job-accounting.jsonl');self.assertEqual(len(account),550)
             self.assertTrue(all(r['status']=='not_started' and r['seed'] is None for r in account))
             write(local/'seed-plan.json',dict(main_seeds=list(range(1000,1064)),technical_seeds=[2001,2002]))
             with patch.object(exporter,'LOCAL',local),patch.object(exporter,'PUBLIC',public):exporter.export()
-            self.assertEqual(len({r['seed'] for r in rows(public/'job-accounting.jsonl') if r['kind']=='main'}),64)
+            self.assertEqual(len({r['seed'] for r in rows(public/'job-accounting.jsonl') if r['kind']=='main' and 'probe' not in r}),64)
             self.assertFalse((public/'effects.json').exists())
 
     def test_float_comparison_tolerates_roundoff_but_not_inference_change(self):

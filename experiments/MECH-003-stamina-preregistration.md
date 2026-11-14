@@ -45,7 +45,10 @@ Startzufall, garantieren jedoch keine gleichen Ereignisverläufe.
 Separat32 technische Vollmatches: alle16 Kontext×Seite×Arm-Zellen zweimal,
 16 exakte A/A-Paare. Zwei zusätzliche neue technische Seeds, einer pro Kontext;
 ein ungültiger Binärinput als zusätzlicher Prozessversuch, erwarteter Exit108 ohne
-natürlich beendetes Match. Insgesamt66 neue Seeds und545 Versuchsplätze.
+natürlich beendetes Match. Insgesamt66 neue Seeds,545 Match-/Negativplätze und
+fünf separat reservierte Loader-/Capabilityplätze:550 logische Versuchsplätze.
+Drei reale Loaderchecks (einer je Phase) und zwei reale `--worker-capabilities`-
+Aufrufe (Technik/Main) werden zusätzlich vollständig abgerechnet.
 Namespace `MECH-003-STAMINA-R0`. Nur der zentrale Preparepfad darf atomar unter
 Registrylock reservieren. Alle früheren, technischen, reservierten und lokalen
 Programmseeds werden ausgeschlossen und als gehashte Ausschlussmenge eingefroren.
@@ -98,10 +101,18 @@ SHA256 `2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e`;
 NativeLab bleibt unverändert. Der neue passive Observer ist ausdrücklich kein
 freigegebener Warmworker für diese Studie.
 
+Schon vor Prepare einschließlich erstem Loader: veröffentlichter voller Code-/
+Vorregistrierungscommit, erfolgreiche CI exakt dieses Commits und unabhängiger
+Review mit Dokumenthash im `prepare-gate.json`. Alle Code-, Prereg- und Draftblobs
+müssen mit dem veröffentlichten Commit übereinstimmen. Ohne Gate keine Budgetanlage,
+keine Kapsel, kein NativeLab. Nach Prepare: neue Seeds und Inputmanifest veröffentlichen
+und vor technischen Vollmatches registrieren.
+
 Vor Hauptbeginn: veröffentlichte Vorregistrierung, Vertrag, Code,66er-Seedplan und
 vollständige technische Belege; erfolgreiche CI am exakten Freigabecommit und
 separater Review mit versioniertem Dokument/Hash. Codefreeze umfasst ausdrücklich
-`research/night_control.py` und den zentralen `analysis/night_supervise.py`.
+`research/night_control.py`, den zentralen `analysis/night_supervise.py` und
+`research/native_process005.py`.
 NativeLab prüft46 aktive Spieleridentitäten und alle69 Attributfelder
 (3174 Werte),23 Profilfelder je Spieler (1058), tatsächliche22 IP/OOP-Spielerbindungen;
 der eigene Audit zusätzlich44 Rollen-/Positions-/PI-Zellen und748 PI-Gruppen,
@@ -123,15 +134,30 @@ Ein zentraler Supervisor mit globaler NativeLease, maximal vier Engineworker,
 90 Sekunden ohne Workerfortschritt. Inneres unveränderliches Budget:600 Sekunden
 gesamte überwachte Child-Walltime einschließlich Vorbereitung/Audits und höchstens
 1200 Sekunden ab erstem Studienstart auf UTC-Uhr (Publikationspausen zählen mit).
-Maximal33 technische Prozessslots und512 Hauptmatchslots; maximal2GiB private
+Unveränderte33 technische Match-/Negativslots und512 Hauptmatchslots;
+zusätzlich fünf Probeplätze, daher prozessbezogene Reservierungscaps36 technisch/514 main; maximal2GiB private
 Artefakte, mindestens20GiB freier Datenträger. Zusätzlich gilt der NIGHT-001-Master:
 1800 Childsekunden und harte Deadline2026-11-14T23:00:00Z sowie dessen globale Caps.
 Neustart, Retry oder innerer Supervisorwechsel verlängert keines dieser Budgets.
 
 Nur der Director startet über `analysis/night_supervise.py`. Der innere CLI-Parent
 prüft Mastertoken, lebenden Parent, Phase und vollständige echte Jobkeys vor
-Budgetanlage; der Child prüft erneut vor NativeLab. Phasekeys: Prepare[], Technik33,
-Hauptserie512; globale Keys tragen das Studiennamespace. Worktrees dürfen keinen
+Budgetanlage; der Child prüft erneut vor NativeLab. Phasekeys: Prepare1 (`loader-check-image-prepare`), Technik35 (Loader,
+Capabilities,32 Matches, Negativinput), Hauptserie514 (Loader,Capabilities,512 Matches);
+globale Keys tragen das Studiennamespace.
+
+Jede Phase wird vor Runtimeimport in eine über `contained_call` gestartete
+OS-Jobkapsel eingeschlossen (maximal10 Prozesse: Kapsel,Studienpython,vier
+Warmhostparents,vier Enginechildren; weiterhin maximalvier Worker). Der Negativinput
+verwendet nach Abschluss der Warmworker eine eigene Dreiprozesskapsel. Base-Python
+statt Venvredirector; endliche Gesamtdeadline. Die ursprüngliche90-Sekunden-
+Progressüberwachung bleibt unverändert. Ein Audit vor NativeLab zählt jeden
+Loader/Capability/Warmhoststart; maximalvier technische und64 Haupt-Warmhoststarts
+werden getrennt von Matchslots dokumentiert. Native Launchinventur:74 Hosts
+(3 Loader,2 Capability,68 Warmhostparents,1 Negativhost), keine74 unabhängigen Matches.
+Nur bestätigtes KernelActive0 und beendete Kapsel erlauben Leasefreigabe. Unbekannte
+Bereinigung hinterlässt `native-cleanup-pending.json` und hält die Lease.
+Worktrees dürfen keinen
 Prepare-/Register-/Nativepfad betreten. Retained Lease-/Crashbelege sperren erneute
 Ausführung. Ausführung bleibt blockiert, solange irgendeines dieser Gates offen ist.
 

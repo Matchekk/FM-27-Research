@@ -8,7 +8,7 @@ from scipy.stats import chi2, nct, t
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from research.stamina003 import (EXPERIMENT, ARMS, CONTEXTS, COEFFICIENTS,
-                                 SECONDARY, SECONDARY_PAIRS, matrix, treatment)
+                                 SECONDARY, SECONDARY_PAIRS, PROCESS_CAPS,probe_jobs,matrix, treatment)
 from research.core import config_hash, schedule
 from research.native import read, rows, require, write
 from research.stats import estimate, holm, metrics
@@ -37,6 +37,9 @@ def validate_design(c):
             b['timeout_seconds'] == 90 and b['total_native_wall_seconds'] == 600 and
             b['absolute_study_wall_seconds'] == 1200 and b['raw_artifact_limit_bytes'] == 2*1024**3 and
             b['disk_reserve_bytes'] == 20*1024**3, 'Budget drift')
+    require(c['native_process_plan']==dict(loader_checks=3,capability_checks=2,probe_jobs=probe_jobs(),
+        reservation_caps=PROCESS_CAPS,warm_host_starts=dict(technical=4,main=64),capsule_process_limit=10,
+        containment_before_runtime_import=True,cleanup_required_before_lease_release=True),'Native process accounting drift')
 
 
 def checked(data, receipt):

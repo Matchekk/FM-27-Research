@@ -8,7 +8,7 @@ from pathlib import Path
 import sys
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from research.stamina003 import EXPERIMENT, ARMS, CONTEXTS, matrix, treatment
+from research.stamina003 import EXPERIMENT, ARMS, CONTEXTS, PROCESS_CAPS,probe_jobs,matrix, treatment
 from research.core import config_hash, schedule
 from research.native import read, rows, require
 from research.stats import metrics
@@ -30,13 +30,15 @@ def same(actual, expected):
 
 
 def verify_complete_budget(budget, technical_keys, main_keys):
-    require(budget['experiment']==EXPERIMENT and budget['limits']=={'technical':33,'main':512} and
+    require(budget['experiment']==EXPERIMENT and budget['limits']==PROCESS_CAPS and
             budget['limit_seconds']==600 and budget['wall_limit_seconds']==1200 and
             budget['active'] is None and budget['halted'] is False,'Completed budget limits/state differ')
     operations=budget['operations'];require([o['name'] for o in operations]==['prepare','technical','main'],
                                            'Unexpected/repeated phases')
-    expected={'prepare':[], 'technical':technical_keys, 'main':main_keys}
-    reserved={k:kind for kind,keys in (('technical',technical_keys),('main',main_keys)) for k in keys}
+    expected={'prepare':['loader-check-image-prepare'],
+              'technical':['loader-check-image-technical','worker-capabilities-technical',*technical_keys],
+              'main':['loader-check-image-main','worker-capabilities-main',*main_keys]}
+    reserved={k:'main' if phase=='main' else 'technical' for phase,keys in expected.items() for k in keys}
     require(budget['reserved']==reserved,'Completed reservation keys differ')
     total=sum(o['elapsed_seconds'] for o in operations)
     require(0<=total<600 and isclose(total,budget['charged_seconds'],rel_tol=1e-11,abs_tol=1e-9),
@@ -51,6 +53,17 @@ def verify_complete_budget(budget, technical_keys, main_keys):
                 0<=operation['elapsed_seconds'] and start<=began<=ended<=deadline,
                 'Phase execution/budget receipt differs')
     require(budget['within_fixed_deadline'] is True,'Completed deadline flag false')
+
+
+def verify_containment(proofs):
+    require(set(proofs)=={'prepare','technical','main','negative'},'Missing process containment phases')
+    for phase,proof in proofs.items():
+        policy=proof['job_policy']
+        require(proof['schema']=='fm27.contained-call.v1' and proof['cleanup_confirmed'] is True and
+                proof['capsule_exit_confirmed'] is True and type(proof['kernel_active_processes']) is int and
+                proof['kernel_active_processes']==0 and policy['active_process_limit']==(3 if phase=='negative' else 10) and
+                policy['limit_flags']==0x2008 and policy['kill_on_close'] is True and policy['breakaway_allowed'] is False,
+                'Unconfirmed kernel process-tree cleanup')
 
 
 def verify(directory):
@@ -74,8 +87,8 @@ def verify(directory):
     summary=read(directory/'run-summary.json') if (directory/'run-summary.json').exists() else None
     if summary:
         account=rows(directory/'job-accounting.jsonl')
-        require(len(account)==len({r['key'] for r in account})==545 and
-                {r['key'] for r in account}==set(expected)|set(technical)|{'negative-binary'},'Incomplete accounting')
+        require(len(account)==len({r['key'] for r in account})==550 and
+                {r['key'] for r in account}==set(expected)|set(technical)|{'negative-binary'}|{j['key'] for j in probe_jobs()},'Incomplete accounting')
         calculated={kind:dict(Counter(r['status'] for r in account if r['kind']==kind)) for kind in ('technical','main')}
         require(calculated==summary['counts'],'Accounting summary differs')
         if summary['technical_gate_passed']:
@@ -98,9 +111,17 @@ def verify(directory):
             require(read(directory/'negative-control.json')['status']=='expected_rejection','Negative rejection absent')
         if summary['scientific_series_complete']:
             verify_complete_budget(read(directory/'budget.json'),list(technical)+['negative-binary'],list(expected))
+            verify_containment(read(directory/'phase-containment.json'))
+            launches=rows(directory/'host-starts.jsonl')
+            require(len(launches)==74 and len({(r['phase'],r['key']) for r in launches})==74,'Host launch accounting differs')
+            require(Counter((r['phase'],r['kind']) for r in launches)==Counter({
+                ('prepare','loader'):1,('technical','loader'):1,('main','loader'):1,
+                ('technical','capabilities'):1,('main','capabilities'):1,
+                ('technical','worker_start'):4,('main','worker_start'):64,('technical','negative'):1}),
+                'Native host launch inventory differs')
             data=rows(directory/'main.jsonl');effects,blocks=analyse(data,receipt)
             same(read(directory/'effects.json'),effects);same(rows(directory/'block-contrasts.jsonl'),blocks)
-            require(calculated['main']=={'ok':512} and calculated['technical']=={'ok':32,'expected_rejection':1},'Final job states incomplete')
+            require(calculated['main']=={'ok':514} and calculated['technical']=={'ok':35,'expected_rejection':1},'Final job states incomplete')
     return dict(contract_verified=True,planned_main_matches=512,independent_main_blocks=64,
                 completed=bool(summary and summary['scientific_series_complete']),native_starts_by_verifier=0)
 

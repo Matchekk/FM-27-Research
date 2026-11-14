@@ -13,7 +13,7 @@ Spieleridentitäten, geschützte Bytes oder private Pfade.
 
 Noch keine neuen Matches, Seedreservierungen, Hauptmessungen oder Effektschätzer.
 Die technischen Gates stehen offen. Später darf ausschließlich der zentrale
-Director neue Belege ergänzen; bei Abbruch wird jede der545 vorgesehenen Stellen
+Director neue Belege ergänzen; bei Abbruch wird jede der550 vorgesehenen Stellen
 als abgeschlossen, begonnen/ungeklärt, fehlgeschlagen oder unbegonnen abgerechnet.
 Private Rohlogs/Dumps bleiben außerhalb Git. Öffentliche Effekte sind nur nach
 vollständig gültigen512 Hauptmatches und bestandenen Gates zulässig.

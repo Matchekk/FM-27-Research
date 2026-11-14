@@ -1,6 +1,12 @@
 """Own MECH-003 intentions and strict input audits, never a native launcher."""
 from copy import deepcopy
+from contextlib import contextmanager
+from datetime import datetime,timezone
+import json
+import os
+from pathlib import Path
 import struct
+from threading import Lock
 
 from .core import config_hash
 from .native import event, read, require, rows
@@ -20,6 +26,81 @@ COEFFICIENTS = {'STAMINA': (-.5, .5, -.5, .5),
 SECONDARY = ('points', 'gf', 'ga', 'xgf', 'xga')
 SECONDARY_PAIRS = (*(('STAMINA', m) for m in SECONDARY),
                    ('PRESS', 'xgd'), ('STAMINAxPRESS', 'xgd'))
+PROCESS_CAPS = {'technical':36,'main':514}
+
+
+def probe_jobs():
+    return [dict(key=f'loader-check-image-{p}',kind='main' if p=='main' else 'technical',phase=p,probe='loader')
+            for p in ('prepare','technical','main')]+[
+        dict(key=f'worker-capabilities-{p}',kind='main' if p=='main' else 'technical',phase=p,probe='capabilities')
+        for p in ('technical','main')]
+
+
+class HostLaunchAudit:
+    """Opt-in audit hook installed in the contained study child before server import.
+
+    Records intent before every Python-created native host. Match slots and warm
+    process starts are deliberately separate dimensions. Unknown launches fail
+    before Popen; a launch exception remains a started attempt, never a zero.
+    """
+    def __init__(self,phase,host,ledger,admission):
+        require(phase in ('prepare','technical','main'),'Unknown host-audit phase')
+        self.phase,self.host,self.ledger,self.admission=phase,Path(host).resolve(),Path(ledger),admission
+        self.counts={};self.lock=Lock();self.control_python=None
+
+    @contextmanager
+    def negative_capsule(self,python):
+        require(self.phase=='technical' and self.control_python is None,'Negative capsule phase differs')
+        self.control_python=Path(python).resolve()
+        try:yield
+        finally:self.control_python=None
+
+    def __call__(self,event,args):
+        if event!='subprocess.Popen':return
+        executable,argv,_,_=args
+        path=Path(executable)
+        if path.name.lower() in ('git','git.exe','gh','gh.exe'):return
+        if path.resolve()!=self.host:
+            require(self.control_python is not None and path.resolve()==self.control_python,
+                    'Unexpected executable in contained study')
+            with self.lock:
+                require(self.counts.get('negative_capsule',0)==0,'Repeated negative capsule launcher')
+                self.counts['negative_capsule']=1
+            return
+        require(type(argv) in (list,tuple) and argv,'Unknown native command')
+        if '--check-image' in argv:kind='loader';key=f'loader-check-image-{self.phase}';limit=1
+        elif '--worker-capabilities' in argv:
+            require(self.phase!='prepare','Capabilities in prepare forbidden')
+            kind='capabilities';key=f'worker-capabilities-{self.phase}';limit=1
+        elif '--worker-manifest' in argv:
+            require(self.phase!='prepare','Warmworker in prepare forbidden')
+            kind='worker_start';key=None;limit=4 if self.phase=='technical' else 64
+        else:raise ValueError('Unregistered native command; negative uses contained_call separately')
+        with self.lock:
+            self.admission()
+            count=self.counts.get(kind,0)+1
+            require(count<=limit,'Unexpected/repeated native host launch')
+            self.counts[kind]=count
+            row=dict(phase=self.phase,kind=kind,key=key or f'worker-start-{self.phase}-{count:03d}',
+                     status='started',ordinal=count,utc=datetime.now(timezone.utc).isoformat())
+            with self.ledger.open('a',encoding='utf8') as stream:
+                stream.write(json.dumps(row)+'\n');stream.flush();os.fsync(stream.fileno())
+
+    def negative_permission(self):
+        with self.lock:
+            self.admission()
+            require(self.phase=='technical' and self.counts.get('negative_permission',0)==0,'Repeated negative host permission')
+            self.counts['negative_permission']=1
+            with self.ledger.open('a',encoding='utf8') as stream:
+                stream.write(json.dumps(dict(phase=self.phase,kind='negative',key='negative-binary',
+                    status='start_permission_sent',ordinal=1,utc=datetime.now(timezone.utc).isoformat()))+'\n')
+                stream.flush();os.fsync(stream.fileno())
+
+    def require_complete(self):
+        expected={'loader':1} if self.phase=='prepare' else {'loader':1,'capabilities':1,'worker_start':4 if self.phase=='technical' else 64}
+        if self.phase=='technical':expected.update(negative_capsule=1,negative_permission=1)
+        require(self.counts==expected,'Incomplete/extra native host launch inventory')
+        return self.counts.copy()
 
 
 def matrix():

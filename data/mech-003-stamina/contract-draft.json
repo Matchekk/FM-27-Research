@@ -177,7 +177,7 @@
       "Stamina ten40/80 and pressing native0/66; every other input unchanged",
       "effective seed and natural score/endtick"
     ],
-    "stopping_rule": "512main,32technical+1negative;600supervised child sec/1200immutableUTC;NightMaster1800sec/23UTC also mandatory;max4workers90s;first gate error stops.",
+    "stopping_rule": "512main,32technical+1negative;3loader+2capability probes separately reserved;process caps36technical/514main;600supervised child sec/1200immutableUTC;NightMaster1800sec/23UTC also mandatory;max4workers90s;first gate error stops.",
     "selection_rule": "No final candidate or attribute ranking; estimate controlled total effects only, no fatigue mediation or career transfer.",
     "power_basis": "Unknown new Stamina contrast SD; practical .30xGD, desired full95width .50; no90%power guarantee. Future new-seed planning for .20/.30 from observed and simultaneous normal-model SD upper bounds.",
     "context_weights": [
@@ -208,5 +208,52 @@
     "document_sha256": null,
     "analysis": "analysis/analyse_mech003.py",
     "analysis_sha256": null
+  },
+  "native_process_plan": {
+    "loader_checks": 3,
+    "capability_checks": 2,
+    "probe_jobs": [
+      {
+        "key": "loader-check-image-prepare",
+        "kind": "technical",
+        "phase": "prepare",
+        "probe": "loader"
+      },
+      {
+        "key": "loader-check-image-technical",
+        "kind": "technical",
+        "phase": "technical",
+        "probe": "loader"
+      },
+      {
+        "key": "loader-check-image-main",
+        "kind": "main",
+        "phase": "main",
+        "probe": "loader"
+      },
+      {
+        "key": "worker-capabilities-technical",
+        "kind": "technical",
+        "phase": "technical",
+        "probe": "capabilities"
+      },
+      {
+        "key": "worker-capabilities-main",
+        "kind": "main",
+        "phase": "main",
+        "probe": "capabilities"
+      }
+    ],
+    "reservation_caps": {
+      "technical": 36,
+      "main": 514
+    },
+    "warm_host_starts": {
+      "technical": 4,
+      "main": 64
+    },
+    "capsule_process_limit": 10,
+    "containment_before_runtime_import": true,
+    "cleanup_required_before_lease_release": true
   }
 }
