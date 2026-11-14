@@ -126,7 +126,7 @@ def parse_trace(trace):
             aid = _identity(e["award_id"])
             _require(aid not in awards and not any(a["status"] == "pending" for a in awards.values()), "Duplicate or unresolved previous award")
             _require(e["setpiece_type"] in TYPES, "Unknown standard type")
-            awards[aid] = dict(type=e["setpiece_type"], side=_side(e["side"]), status="pending")
+            awards[aid] = dict(type=e["setpiece_type"], side=_side(e["side"]), status="pending", last_attempt=None)
             active = None
         elif kind == "select":
             pending(e["award_id"]); _side(e["view_side"])
@@ -139,12 +139,17 @@ def parse_trace(trace):
         elif kind == "execute":
             a = pending(e["award_id"]); xid = _identity(e["execution_id"])
             _require(xid not in executions and e["contact_verified"] is True and type(e["legal"]) is bool, "Execution lacks unique contact/legal proof")
-            repeat = e["repeat_of"]
-            if repeat is not None:
-                _identity(repeat)
-                _require(repeat in executions and executions[repeat]["award_id"] == e["award_id"] and not executions[repeat]["legal"], "Invalid repeat reference")
+            repeat, previous = e["repeat_of"], a["last_attempt"]
+            if previous is None:
+                _require(repeat is None, "First contact cannot reference another attempt")
+            else:
+                _require(type(repeat) is str and repeat == previous,
+                         "Repeat must reference immediately preceding illegal contact")
+                _require(previous in executions and executions[previous]["award_id"] == e["award_id"]
+                         and not executions[previous]["legal"], "Invalid repeat predecessor")
             _require(e["reason"] == ("legal" if e["legal"] else "repeat"), "Unresolved final legality")
             executions[xid] = dict(award_id=e["award_id"], type=a["type"], side=a["side"], legal=e["legal"])
+            a["last_attempt"] = xid
             if e["legal"]:
                 a["status"] = "executed"
                 active = dict(execution_id=xid, origin_side=a["side"], owner_side=a["side"], phase="attack", start_ms=e["ms"])

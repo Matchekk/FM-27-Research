@@ -19,6 +19,6 @@
 python -m unittest discover -s tests -p test_set_v0.py -v
 ```
 
-Keine native Runtime/Spielinstallation ist für die zehn Parsertests mit elf Goldfällen erforderlich.
+Keine native Runtime/Spielinstallation ist für die elf Parsertests mit elf Goldfällen erforderlich.
 Ein echter Nativeadapter braucht später ein eigenes gehashtes Mapping und native
 Goldfallvalidierung. Ein caller-supplied `validated=true` kann V0 nicht freischalten.

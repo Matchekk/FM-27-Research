@@ -64,7 +64,10 @@ muss dem Headerendstand exakt entsprechen. Kein angenommener nativer Hz-Faktor.
 Ausführungslegalität wird im normalisierten Enddatensatz endgültig benannt,
 auch wenn ein künftiger Mapper dafür spätere Originaladjudikation lesen müsste.
 Ein zur Wiederholung bestimmter erster Kontakt hat `legal=false,reason=repeat`;
-der neue Versuch verweist via `repeat_of` auf dieselbe Award-ID. Final legale
+der erste Kontakt hat `repeat_of=null`. Jeder spätere Kontakt muss via
+`repeat_of` exakt die unmittelbar vorherige illegale Ausführung **desselben**
+Awards benennen. Fehlende, übersprungene, künftige, awardfremde oder bereits
+legale Vorgänger sind Fehler. Final legale
 Ausführung schließt den Award. Offene Awards am Perioden-/Matchende sind Fehler,
 nicht automatisch Null. Nicht belegte Ballkontakte werden abgelehnt.
 

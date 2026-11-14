@@ -88,6 +88,32 @@ class SetV0Tests(unittest.TestCase):
         for t in variants:
             with self.assertRaises(TraceError):parse_trace(t)
 
+    def test_repeats_require_unbroken_immediate_illegal_predecessor(self):
+        variants=[]
+        # The independently reproduced defect: a later contact omitted its link.
+        t=trace();t['events'][2]['repeat_of']=None;variants.append(t)
+        t=trace();t['events'][1]['repeat_of']='try2';variants.append(t)
+        t=trace();t['events'][2]['repeat_of']='future_contact';variants.append(t)
+        # Three contacts: final contact must name try_mid, never skip back to try1.
+        t=trace();mid=deepcopy(t['events'][1])
+        mid.update(id='middle_event',execution_id='try_mid',repeat_of='try1',ms=150)
+        t['events'].insert(2,mid);variants.append(deepcopy(t))
+        valid=deepcopy(t);valid['events'][3]['repeat_of']='try_mid'
+        result=parse_trace(valid)
+        self.assertEqual(result['attempts'],3);self.assertEqual(result['illegal_attempts'],2)
+        self.assertEqual(result['by_type']['corner']['0']['executed'],1)
+        t=deepcopy(valid);t['events'][2]['repeat_of']=None;variants.append(t)
+        # A first contact of a new award cannot borrow an illegal contact elsewhere.
+        t=trace('same_routine_twice');first=t['events'][2]
+        first.update(legal=False,reason='repeat')
+        abort=dict(id='abort_first',type='abort',period=1,ms=250,award_id='a1',reason='cancelled')
+        t['events'].insert(3,abort);t['events'][-2]['repeat_of']='x1';variants.append(t)
+        # A legal contact closes the award; a later contact cannot reference it.
+        t=trace();t['events'][1].update(legal=True,reason='legal');variants.append(t)
+        for broken in variants:
+            with self.subTest(events=broken['events']):
+                with self.assertRaises(TraceError):parse_trace(broken)
+
     def test_invalid_xg_goal_score_or_var_never_silently_zeroed(self):
         for value in (float('nan'),float('inf'),-1,1.1,True,10**1000):
             t=trace();t['events'][3]['xg']=value

@@ -8,7 +8,7 @@ dieser Agent pusht nicht. Historische Daten/Vorregistrierungen bleiben unveränd
 ## Konkretes Ergebnis
 
 Implementiert: [research/set_v0.py](../../research/set_v0.py), ein eigenständiger
-strikter Offlineparser, [10 Testmethoden](../../tests/test_set_v0.py) mit
+strikter Offlineparser, [11 Testmethoden](../../tests/test_set_v0.py) mit
 [elf eigenen Goldfällen](../../data/set-v0/gold-cases.json),
 [Messvertrag](../../experiments/SET-V0-measurement.md) und
 [Capabilitymanifest](../../data/set-v0/capabilities.json).
@@ -79,8 +79,8 @@ python -m unittest discover -s tests -p test_set_v0.py -v
 python -m unittest discover -s tests -v
 ```
 
-Zehn SET-Testmethoden bestehen mit elf Goldtraces und den beschriebenen negativen
-Varianten. Gesamtsuite im eigenen Worktree:62 Tests bestanden (52 bestehend+10neu).
+Elf SET-Testmethoden bestehen mit elf Goldtraces und den beschriebenen negativen
+Varianten. Gesamtsuite im eigenen Worktree:63 Tests bestanden (52 bestehend+11neu).
 Die Tests importieren weder nativen Server noch Host. Reale Belege nur lesend.
 Keine neue Match-, Power- oder Routineeffektmessung; Nativebudgetverbrauch0.
 Native Goldfall-/Expositionsabnahme bleibt offen. Zentrale CI/Independent Review
@@ -100,3 +100,14 @@ Versionierte Mapping-/Gatehashes und unabhängig annotierte positive/negative
 native Goldfälle vor jeder neuen Freigabe. Fehlende Ereignisklassen blockieren
 zugehörige Behauptungen; keine zusätzlichen Seeds durch Nachsuchen erzwingen.
 Erst danach ein gesonderter technischer Nativevertrag und später SET-002-R0.
+
+## Korrektur nach unabhängigem Review
+
+Der Reviewer reproduzierte eine echte Vertragslücke: ein späterer legaler
+Kontakt konnte `repeat_of=null` verwenden, obwohl bereits ein illegaler Kontakt
+des Awards vorlag. Dies ist jetzt geschlossen: erster Kontakt ohne Vorgänger,
+jeder spätere mit exakt dem unmittelbar vorherigen illegalen Kontakt desselben
+Awards. Ein neuer Negativtest prüft fehlende/übersprungene/künftige/awardfremde/
+legale Vorgänger und eine gültige Drei-Kontakt-Folge. Elf SET-Testmethoden und
+alle elf bisherigen Goldfälle bestehen; Gesamtsuite63/63. Keine Änderung der
+synthetischen Goldresultate, keine native Aktion oder zusätzliche Freigabe.
