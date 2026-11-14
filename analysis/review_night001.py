@@ -560,6 +560,162 @@ def audit_startpolicy_runs(central):
         reviewer_native_starts=0)
 
 
+def audit_startpolicy_public(root=ROOT):
+    """Portable public contract/measurement checks; raw actor proof stays separate."""
+    from datetime import datetime, timedelta
+    from itertools import product
+    from math import isfinite, isclose
+    import re
+    root = Path(root).resolve(); directory = root/'data/mech-002-startpolicy-tech'
+    commit = '0744238cbcbd429dd59602f0470b18a1d9f52057'
+    experiment = 'MECH-002-STARTPOLICY-TECH-V1'
+    def digest(value):
+        return sha256(json.dumps(value, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()).hexdigest()
+    def hash_value(value): return type(value) is str and re.fullmatch('[0-9a-f]{64}', value) is not None
+    def number(value): return type(value) in (int,float) and isfinite(value)
+    def utc(value):
+        need(type(value) is str, 'Missing public UTC time')
+        parsed = datetime.fromisoformat(value)
+        need(parsed.utcoffset() == timedelta(0), 'Public time is not UTC')
+        return parsed
+    def blob_hash(name):
+        raw = subprocess.check_output(['git','show',commit+':'+name],cwd=root)
+        return sha256(raw.replace(b'\r\n', b'\n')).hexdigest()
+    def rows(name):
+        return [json.loads(line) for line in (directory/name).read_text(encoding='utf8').splitlines() if line.strip()]
+    frozen = read(directory/'inputs.json'); seeds = read(directory/'seed-plan.json')
+    plan = read(directory/'job-plan.json'); gate = read(directory/'review-gate.json')
+    registration = read(directory/'registration.json'); summary = read(directory/'technical-summary.json')
+    budget = read(directory/'budget.json'); measurements = rows('measurements.jsonl'); accounting = rows('job-accounting.jsonl')
+    for name in ('inputs.json','seed-plan.json','job-plan.json','review-gate.json'):
+        need(normalized_hash(directory/name) == blob_hash('data/mech-002-startpolicy-tech/'+name), 'Published public input differs: '+name)
+    need(registration['experiment_id'] == frozen['experiment_id'] == gate['experiment_id'] == seeds['experiment_id'] == experiment and
+         registration['preregistration_commit'] == commit and type(registration['ci_run']) is int and registration['ci_run'] > 0 and
+         registration['inputs_sha256'] == gate['inputs_sha256'] == normalized_hash(directory/'inputs.json') and
+         registration['review_gate_sha256'] == normalized_hash(directory/'review-gate.json') and
+         registration['code_sha256'] == frozen['code_sha256'] and len(frozen['code_sha256']) == 22, 'Public release/source binding differs')
+    for name, expected in frozen['code_sha256'].items():
+        need(hash_value(expected) and blob_hash(name) == expected, 'Historical source blob differs: '+name)
+    need(gate['approved_for_technical'] is True and
+         gate['review_sha256'] == blob_hash('docs/night-001/STARTPOLICY-002-REVIEW.md') and
+         gate['observer_results_review_sha256'] == blob_hash('docs/night-001/OBSERVER-RESULTS-REVIEW.md') and
+         gate['input_review_document'] == 'docs/night-001/STARTPOLICY-002-INPUTS-REVIEW.md' and
+         gate['input_review_sha256'] == blob_hash(gate['input_review_document']), 'Public independent review bindings differ')
+    need(frozen['max_workers'] == 1 and frozen['max_processes'] == 3 and frozen['logical_attempts'] == 17 and
+         frozen['full_matches'] == 16 and frozen['negative_probes'] == 1 and frozen['child_seconds'] == 180 and
+         frozen['study_window_seconds'] == 900 and frozen['scientific_main_released'] is frozen['career_released'] is False,
+         'Frozen public resource/release policy differs')
+    need(len(seeds['seeds']) == len(set(seeds['seeds'])) == 4 and all(type(s) is int and 0 < s <= 0xffffffff for s in seeds['seeds']) and
+         seeds['namespace'] == experiment+'/technical-v1' and seeds['excluded_seed_count'] == 2524 and hash_value(seeds['excluded_seed_set_sha256']),
+         'Public seed commitment differs')
+    expected_jobs = [dict(key=f'full-{context}-s{side}-sharp{level}-r{repeat}',kind='full',context=context,side=side,
+                         level_raw=level,repeat=repeat,seed=seeds['seeds'][i])
+                     for i,(context,side) in enumerate(product(('high_press','deep_block'),(0,1)))
+                     for level,repeat in product((10000,7000),(0,1))]
+    expected_jobs.append(dict(key='negative-malformed',kind='negative',seed=None))
+    need(plan == expected_jobs and len(measurements) == len(accounting) == 17 and len({r['key'] for r in measurements}) == 17,
+         'Public attempt inventory differs')
+    indexed = {}; initial_controls = 0; aa_pairs = 0
+    metric_names = {'xg','shots','shots_on_target','passes','completed_passes','possession','possession_ticks'}
+    for job, row, account in zip(plan,measurements,accounting,strict=True):
+        need(all(row[k] == account[k] == v for k,v in job.items()) and account['reserved'] is True and
+             account['status'] == row['status'] and row['native_invocation_started'] is True and
+             number(row['elapsed_seconds']) and row['elapsed_seconds'] > 0 and
+             row['host_sha256'] == frozen['observer_host_sha256'] and row['engine_sha256'] == frozen['identity']['engine_sha256'] and
+             all(hash_value(row[k]) for k in ('setup_sha256','raw_log_sha256','stdout_sha256')), 'Public job provenance/status differs')
+        if job['kind'] == 'negative':
+            need(row['status'] == 'expected_rejection' and type(row['returncode']) is int and row['returncode'] == 108 and
+                 row['setup_sha256'] == sha256(b'MECH002 INVALID INPUT').hexdigest() and 'result' not in row,
+                 'Public negative108 evidence differs')
+            continue
+        label = f"{job['context']}-{job['side']}-sharp{job['level_raw']}"
+        need(row['status'] == 'ok' and type(row['returncode']) is int and row['returncode'] == 0 and
+             row['setup_sha256'] == frozen['setups'][label] and hash_value(row['input_dump_sha256']) and
+             all(type(row[k]) is int and row[k] == expected for k,expected in
+                 (('attribute_values_verified',3174),('profile_fields_verified',1058),('phase_cells_verified',44),('pi_groups_verified',748))),
+             'Public full-match readback differs')
+        result = row['result']
+        need(set(result) == {'seed','score','tick','clock','team_statistics'} and result['seed'] == job['seed'] and
+             type(result['score']) is list and len(result['score']) == 2 and all(type(v) is int and v >= 0 for v in result['score']) and
+             type(result['tick']) is int and 0 < result['tick'] < 47996 and type(result['clock']) is int and result['clock'] > 0 and
+             len(result['team_statistics']) == 2, 'Public natural endpoint differs')
+        for team in result['team_statistics']:
+            need(set(team) == metric_names and all(number(v) and v >= 0 for v in team.values()) and 0 <= team['possession'] <= 1 and
+                 all(type(team[k]) is int for k in metric_names-{'xg','possession'}) and
+                 team['shots_on_target'] <= team['shots'] and team['completed_passes'] <= team['passes'], 'Public original team statistics malformed')
+        passive = row['passive_audit']; start = row['startpolicy_audit']
+        need(passive['structurally_verified'] is passive['identity_binding_verified'] is True and
+             passive['fields_are_raw_storage_observations'] is True and passive['match_version_raw'] == 0x1b000000 and
+             all(passive[k] is False for k in ('new_effectiveness_consumer_execution_proven','consumer_semantics_validated','ui_scale_calibrated',
+                                              'startpolicy_released','career_released','native_release_granted')) and
+             start['start_raw_and_cache_transfer_verified'] is True and
+             all(start[k] is False for k in ('postprep_setter_used','ongoing_clamp_used','execution_used','ui_scale_calibrated',
+                                            'causal_match_performance_released','scientific_main_released','career_released')),
+             'Public raw-storage scope/readback policy differs')
+        need([c['stage'] for c in passive['captures']] == ['prepared','first_advance','finished'] and
+             [c['stage'] for c in start['captures']] == ['prepared','first_advance'], 'Public stage coverage differs')
+        for i, capture in enumerate(passive['captures']):
+            need(capture['players'] == 46 and capture['profile_values'] == 184 and capture['raw_effectiveness_bytes'] == 1518 and
+                 capture['runtime_cache_players'] == 40 and hash_value(capture['capture_sha256']) and
+                 [s['side'] for s in capture['side']] == [0,1] and all(s['count'] == 23 for s in capture['side']), 'Public stage capacity/hash differs')
+            if i == 2: continue
+            transfer = start['captures'][i]
+            need(transfer['players_verified'] == 46 and transfer['changed_outfield_actors'] == 10 and
+                 transfer['starter_caches_verified'] == 22 and transfer['target_cache8a'] == job['level_raw']//100 and
+                 transfer['capture_sha256'] == capture['capture_sha256'], 'Public stage target/cache transfer differs')
+            for side in capture['side']:
+                low = job['level_raw'] == 7000 and side['side'] == job['side']
+                expected_min = 7000 if low else 10000
+                expected_mean = (10*7000+13*10000)/23 if low else 10000
+                for field in ('sharpness_raw','sharpness_secondary_raw'):
+                    values = side[field]
+                    need(values['min'] == expected_min and values['max'] == 10000 and number(values['mean']) and
+                         isclose(values['mean'],expected_mean,rel_tol=0,abs_tol=1e-9), 'Public initial sharpness aggregate differs')
+                need(side['condition_raw'] == dict(min=10000,max=10000,mean=10000.0) and
+                     side['fatigue_raw'] == dict(min=0,max=0,mean=0.0), 'Public initial nonintervened aggregate differs')
+        if job['level_raw'] == 7000:
+            need(row['controls'] == dict(initial_control_fields_and_raw_tf33_equal=True,raw_tf33_has_no_validated_ui_familiarity_label=True),
+                 'Public initial control proof missing')
+            initial_controls += 1
+        indexed[row['key']] = row
+        if job['repeat'] == 1:
+            first = indexed[row['key'][:-1]+'0']; aa = row['aa']
+            need(first['result'] == result and aa['exact_outcomes_and_identified_fields_equal'] is True and
+                 aa['result_sha256'] == digest(result) and hash_value(aa['raw_state_sha256']), 'Public exact A/A outcomes/hash differ')
+            aa_pairs += 1
+    need(aa_pairs == initial_controls == 8, 'Public A/A or initial control count differs')
+    keys = [j['key'] for j in plan]
+    need(budget['experiment'] == experiment and budget['limits'] == {'technical':17,'main':0} and budget['limit_seconds'] == 180 and
+         budget['wall_limit_seconds'] == 900 and budget['reserved'] == {k:'technical' for k in keys} and
+         budget['unrecognized_reserved_key_count'] == 0 and budget['active'] is None and budget['halted'] is False and
+         budget['cleanup_unconfirmed'] is budget['global_native_lease_retained'] is budget['charged_seconds_incomplete'] is False and
+         budget['budget_read_error_type'] is budget['reconciliation_read_error_type'] is None and
+         hash_value(budget['private_budget_sha256']) and len(budget['operations']) == 1, 'Public budget/resource reconciliation differs')
+    op = budget['operations'][0]; start_utc = utc(budget['wall_start_utc']); end_utc = utc(budget['wall_deadline_utc'])
+    began = utc(op['start_utc']); child_end = utc(op['child_deadline_utc']); completed = utc(budget['completed_utc'])
+    elapsed = op['elapsed_seconds']
+    need(op['name'] == op['kind'] == 'technical' and op['keys'] == keys and op['unrecognized_key_count'] == 0 and
+         type(op['returncode']) is int and op['returncode'] == 0 and op['timed_out'] is False and
+         number(elapsed) and 0 < elapsed == budget['charged_seconds'] == budget['recorded_charged_seconds'] <= 180 and
+         end_utc-start_utc == timedelta(seconds=900) and start_utc <= began < child_end <= end_utc and
+         0 < (child_end-began).total_seconds() <= 180 and began < completed <= child_end and
+         (completed-began).total_seconds() >= elapsed and number(budget['actual_study_window_seconds']) and
+         sum(r['elapsed_seconds'] for r in measurements) <= elapsed+1e-8 and
+         isclose(budget['actual_study_window_seconds'],(completed-start_utc).total_seconds(),abs_tol=1e-8), 'Public actual time/accounting differs')
+    expected_gate = dict(passed=True,reasons=[],accounting_reconciled=True,final_reconciliation_present=True,
+                         attempt_limit=17,child_limit_seconds=180,wall_limit_seconds=900)
+    need(budget['acceptance'] == summary['budget_gate'] == expected_gate and summary['passed'] is True and
+         summary['full_matches'] == 16 and summary['aa_pairs'] == summary['initial_control_pairs'] == 8 and
+         summary['negative_rejections'] == 1 and summary['raw_and_cache_transfer_verified'] is True and
+         summary['scientific_main_released'] is summary['career_released'] is summary['ui_scale_calibrated'] is False,
+         'Public final summary differs from checked measurements/accounting')
+    return dict(public_startpolicy_verified=True,source_commit=commit,frozen_source_blobs_verified=22,attempts=17,full_matches=16,
+        aa_pairs=aa_pairs,initial_control_pairs=initial_controls,negative108=1,initial_stage_reports=32,starter_cache_reports=704,
+        attribute_values_reported=50784,profile_fields_reported=16928,phase_cells_reported=704,pi_groups_reported=11968,
+        charged_seconds=elapsed,private_actor_logs_reconstructed_by_this_portable_check=False,
+        scientific_main_released=False,ui_scale_calibrated=False,career_released=False,native_starts=0)
+
+
 def audit_career_r3_results(central):
     """Only retained R3 JSON/text and reader source; never touches a save."""
     from zipfile import ZipFile
@@ -664,7 +820,13 @@ if __name__ == '__main__':
     parser.add_argument('--observer-runs-root', type=Path)
     parser.add_argument('--startpolicy-runs-root', type=Path)
     parser.add_argument('--career-r3-results-root', type=Path)
+    parser.add_argument('--public-startpolicy', nargs='?', const=ROOT, type=Path)
     args = parser.parse_args()
+    if args.public_startpolicy is not None:
+        need(not any((args.observer_directory,args.career_directory,args.upstream,args.career_runs_root,args.verify_private_career_runs,
+                      args.observer_runs_root,args.startpolicy_runs_root,args.career_r3_results_root)), 'Public-only mode cannot include private options')
+        print(json.dumps(audit_startpolicy_public(args.public_startpolicy),indent=2))
+        raise SystemExit(0)
     report = audit_public()
     supplied = [args.observer_directory,args.career_directory,args.upstream]
     need(not any(supplied) or all(supplied), 'All three explicit private directories required')
