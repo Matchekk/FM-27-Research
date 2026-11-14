@@ -1,0 +1,63 @@
+{
+  "origin": "installed_package_static_source_inspection",
+  "package": "fmsave",
+  "version": "0.9.0",
+  "files": {
+    "_save.py": {
+      "sha256": "703da4fd9fa480a7a5cd27d275eb2c8679083b270352824c31665b7691992203",
+      "selected_model_fields": {}
+    },
+    "models/training.py": {
+      "sha256": "b8381c9fa1cc1d2878f7b6d67a1a9c13127d681f6e15e9dbca9a28202304b7a7",
+      "selected_model_fields": {
+        "TrainingDay": [
+          "day",
+          "sessions"
+        ],
+        "TrainingWeek": [
+          "week_start",
+          "schedule_name",
+          "days"
+        ],
+        "TeamTraining": [
+          "team_id",
+          "club_uid",
+          "club_name",
+          "team_slot",
+          "weeks",
+          "schedule_library"
+        ]
+      }
+    },
+    "models/players.py": {
+      "sha256": "3f88cd9200d514f691afb9d09bd0ebdbd3535985cff5e5e0a05c8e0f535c59b8",
+      "selected_model_fields": {}
+    },
+    "models/injuries.py": {
+      "sha256": "ecb73ba735042292cfbcf15fee38084fb0d49613014760af40196db90aad8cb0",
+      "selected_model_fields": {
+        "InjuryRecord": [
+          "kind",
+          "player_uid",
+          "player_name",
+          "date",
+          "team_id",
+          "club_uid",
+          "club_name",
+          "team_slot",
+          "type_id",
+          "type_name",
+          "cause",
+          "severity",
+          "unknown",
+          "UNKNOWN_KEYS"
+        ]
+      }
+    }
+  },
+  "save_files_opened": 0,
+  "native_matches_started": 0,
+  "calendar_advances": 0,
+  "empirical_current_build_reader_validation": false,
+  "career_released": false
+}

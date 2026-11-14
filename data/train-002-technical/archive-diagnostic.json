@@ -1,0 +1,89 @@
+{
+  "origin": "historical_public_archive",
+  "build": "27.0.0+2493426",
+  "decoder": "fmsave 0.10.0",
+  "source_files_sha256": {
+    "manifest.json": "83a64b6dd70c4eeb7cd0cbf43a06a260e27814eac188169c6bd7bcd326189ffc",
+    "player-deltas.jsonl": "459903a049f61347bff6fba0a4dbfc34c6c076c0d85bb47e893a746de8458ede",
+    "exposure.json": "616fc542ad13c06d51d15a381e111fe6e35a3e24381b23a67996b9d58a7c3553",
+    "repeatability.json": "7d4e1b95f84155340ff225e4f6888550e2cb1a4480ea8c4fe16523f1e2003149"
+  },
+  "player_rows": 660,
+  "trial_rows": {
+    "conditioning-heavy": 264,
+    "conditioning-rest": 176,
+    "five-week-plans": 132,
+    "two-week-pilot": 88
+  },
+  "independent_treatment_replicates_verified": null,
+  "individual_participation": null,
+  "injury_days": null,
+  "raw_display_calibration": null,
+  "exploratory_descriptions": [
+    {
+      "trial": "conditioning-heavy",
+      "week": 6,
+      "control": "A",
+      "intervention": "B",
+      "index_mean_raw": [
+        -0.3977272727272727,
+        -0.375
+      ],
+      "index_difference_raw": 0.022727272727272707,
+      "ca_difference": 0.09090909090909088,
+      "observed_exposure_aggregates": {
+        "A": {
+          "match_minutes": 14801,
+          "injury_entries": 9
+        },
+        "B": {
+          "match_minutes": 14731,
+          "injury_entries": 4
+        }
+      }
+    },
+    {
+      "trial": "conditioning-rest",
+      "week": 4,
+      "control": "A",
+      "intervention": "C",
+      "index_mean_raw": [
+        0.19318181818181818,
+        0.1590909090909091
+      ],
+      "index_difference_raw": -0.03409090909090909,
+      "ca_difference": 0.22727272727272718,
+      "observed_exposure_aggregates": {
+        "A": {
+          "match_minutes": 5940,
+          "injury_entries": 4
+        },
+        "C": {
+          "match_minutes": 5850,
+          "injury_entries": 4
+        }
+      }
+    }
+  ],
+  "aa": {
+    "matched": 22,
+    "identicalRawAttributeProfiles": 16,
+    "identicalCA": 22,
+    "identicalCondition": 8,
+    "identicalSharpness": 13
+  },
+  "native_matches_started": 0,
+  "calendar_advances": 0,
+  "seeds_reserved": 0,
+  "native_released": false,
+  "career_released": false,
+  "blocked_gates": [
+    "current_build_reader_mapping",
+    "raw_display_calibration",
+    "career_rng_independence",
+    "individual_session_participation",
+    "coach_focus_intensity",
+    "injury_intervals",
+    "calendar_executor_audit"
+  ]
+}
