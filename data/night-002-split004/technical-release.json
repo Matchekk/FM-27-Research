@@ -1,0 +1,17 @@
+{
+  "experiment_id": "MECH-004-SPLIT-R0",
+  "approved_for_main": true,
+  "summary_sha256": "afac46d26380677b766affc2130fab5cbc3093c5eb77377abc215673e159faf9",
+  "review_sha256": "3ea9c7562b984bf43dda678cf5c9e2e9bda1b40c09967aa44a4ff284c9e6417b",
+  "full_matches": 32,
+  "negative_rejections": 1,
+  "exact_aa_pairs": 16,
+  "independent_raw_fields_preserved": true,
+  "all_cleanup_confirmed": true,
+  "public_and_private_evidence_verified": true,
+  "reviewer_native_calls": 0,
+  "ui_scale_calibrated": false,
+  "consumer_semantics_validated": false,
+  "career_released": false,
+  "scope": "Registered512main only after this release and review are published with successful exact-commitCI and runtime admission gates."
+}

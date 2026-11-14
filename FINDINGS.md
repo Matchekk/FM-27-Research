@@ -1,5 +1,23 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-14 – MECH-004-SPLIT-R0, technische Identifizierbarkeit
+
+FM27 `27.0.1+2503222`, unveränderter Observerhost, synthetischer D00-Kontext.
+32 technische Matches mit vier gekreuzten C90/C7A-Armen, zwei Gegnern,
+beiden Seiten und16 exakten A/A-Paaren bestanden. Beide Rohfelder überstehen
+die ursprüngliche Vorbereitung und den ersten Fortschritt **getrennt**.
+Cache8A ist bei C90=7000 stets70 und bei C90=10000 stets100, unabhängig von
+C7A=7000/10000, für alle zehn Zielstarter in allen geprüften Startaufnahmen.
+
+Das ist ein technischer Transferbefund, **noch kein Leistungsbefund**:
+keine UI-Skala, Consumersemantik oder natürliche Karrierewirkung identifiziert.
+Die32 Technikmatches bilden keine unabhängige Leistungsstichprobe; statistische
+Effektintervalle für Fußballleistung sind hier nicht anwendbar. Eine erwartete
+Exit108-Abweisung;0 unerwartete Fehler,0 Retry/Ersatz, alle Bereinigungen bestätigt.
+[Technischer Bericht](experiments/MECH-004-split-validation.md) ·
+[öffentliche Messungen](data/night-002-split004/technical.jsonl) ·
+[unabhängige Rohabnahme](docs/night-002/SPLIT004-TECHNICAL-REVIEW.md).
+
 **Stand 2026-11-07 · Match- und Karrieredaten für FM27 27.0.0+2493426**
 
 Hier stehen ausschließlich Befunde mit eindeutiger Experiment-ID, verlinktem Protokoll, Buildnummer, Messwerten und Unsicherheit. Ergebnisse aus vorherigen Chat-Zusammenfassungen werden erst nach Einsicht in originale Messdaten und Reproduzierbarkeitsprüfung eingetragen.

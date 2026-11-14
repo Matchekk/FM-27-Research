@@ -16,10 +16,18 @@ dynamischen FMAX-Stand. Externe Zahlen bleiben Autorenangaben, keine eigene Repl
 
 ## B. Tatsächlich ausgeführte Studien
 
-Bis zu diesem Zwischenstand: **0 Hauptmatches,0 technische Matches,0 native
-Aufrufe** in NIGHT-002. MECH-004 ist registriert auf Vorregistrierungscommit
+Bis zu diesem Zwischenstand: **0 Hauptmatches,32 technische Vollmatches,
+1 erwartete Negativabweisung** in NIGHT-002. MECH-004 ist registriert auf Vorregistrierungscommit
 `0e535dc`, [CI43648809178 erfolgreich](https://github.com/Matchekk/FM-27-Research/actions/runs/43648809178).
-Die Veröffentlichung des registrierten vollständigen Jobplans geht Technik voraus.
+Der registrierte vollständige Jobplan wurde vor Technik veröffentlicht.
+Alle32 technischen Matches und16 exakte A/A-Paare bestanden; beide Felder
+überstehen Vorbereitung/Erstfortschritt getrennt. Der Cache8A folgt in allen
+gekreuzten Startaufnahmen C90 (70/100), unabhängig von C7A. Noch kein Matcheffekt.
+[Technischer Bericht](../../experiments/MECH-004-split-validation.md).
+[Unabhängige technische Rohabnahme](SPLIT004-TECHNICAL-REVIEW.md) bestanden;
+Mainfreigabe liegt als konkretes Gate vor und benötigt öffentliche erfolgreiche CI.
+Eigene Phasenchildzeit78,533s, global107,962s; separat110,736 summierte native
+Callsekunden.0 unerwartete Fehler,0 Retries/Ersatzseeds, vollständige Bereinigung.
 Historische MECH-002-Zahlen werden nicht als neue Messungen gezählt.
 
 ## C. Technische Fortschritte
@@ -35,8 +43,9 @@ Vorregistrierung/CI sind veröffentlicht; registrierter Jobplan und native
 Splitabnahme bleiben vor Main erforderlich.
 Der Director hat den von einem anderen Agenten geschriebenen Missionscontroller
 separat auf Authentifizierung, feste Limits, strikte Argumente und Leasegrenzen geprüft.
-Dies ist keine native Validierung. [Sicherheit](SAFETY_ASSESSMENT.md) und konkrete
-Reviewbelege werden vor dem ersten Aufruf veröffentlicht.
+Das tatsächliche neue Transfergate ist nun bestanden; die frühere reine
+Offlinevorbereitung wird davon unterschieden. [Sicherheit](SAFETY_ASSESSMENT.md)
+und konkrete Input-/Runnerreviews lagen vor dem ersten Aufruf vor.
 
 ## D. Praktische Konsequenzen
 

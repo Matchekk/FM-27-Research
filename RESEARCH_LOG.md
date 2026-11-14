@@ -1,5 +1,21 @@
 # Research Log
 
+## 2026-11-14 – MECH-004 getrennte Rohfeldübertragung nativ bestanden
+
+- Nach erfolgreicher CI43649328317 aufb53c56e alle32 technischen Vollmatches
+  und die erwartete Exit108-Negativprobe einmalig ausgeführt.16 exakte A/A-Paare,
+  keine unerwarteten Fehler/Ausschlüsse/Retry/Ersatzseeds oder offene Jobs.
+- C90 und C7A bleiben getrennt in Vorbereitung/Erstfortschritt erhalten.
+  Cache8A ist70 bei C90low und100 bei C90high, unabhängig von C7A, in allen
+  geprüften Zielstartern/Aufnahmen. Technischer Transferbefund, kein UI- oder
+  Consumerbeweis und noch kein Leistungsbefund.
+- Unabhängige private Rohabnahme rekonstruiert32 Matches,16 A/A-Paare und alle
+  33 Kernelbereinigungen. Eigene Phasenchildzeit78,533186s, global107,9617252s;
+  separat110,736s summierte Calls. Sämtliche Limits eingehalten, Lease frei.
+- [Technischer Bericht](experiments/MECH-004-split-validation.md) und
+  [unabhängiger Review](docs/night-002/SPLIT004-TECHNICAL-REVIEW.md).
+  Main erst nach Veröffentlichung und erfolgreicher CI dieser neuen Freigabe.
+
 ## 2026-11-14 – MECH-004 registrierter Splitpilot veröffentlicht
 
 - Vorregistrierung,32 eingefrorene Quellen, konkrete Inputs und unabhängige

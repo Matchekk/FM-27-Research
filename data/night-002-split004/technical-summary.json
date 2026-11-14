@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "phase": "technical",
+  "full_matches": 32,
+  "negative_rejections": 1,
+  "aa_pairs": [
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "C90L-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "6cf6a959ef55731f7ee45a32a7036943dc0f106f9b3d5299e3bbc8c94b4da3b7",
+      "result_sha256": "43b98ad834b0f3e7b74aa3cdb75fae2d5a248672d6f3089eb0618ed9174a36e2"
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "C90H-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "41a8e468445a49b0e1e8a2f80a31e7238cc16dc9040365375a6e0e1e5adcaf55",
+      "result_sha256": "a31a085a4ec2fd16707bac1e0c53418a84d2f17078d3054bef2bd7cf3d9e31e8"
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "C90L-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "78be38404e687634d5bc7b93a7c90d6d12645ad5c0540ac45c1e256f41e3e730",
+      "result_sha256": "f004636aadbe4d04b30ade4372317fb655c93e13cc6df67040ee0e577dc280ae"
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "C90H-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "1c20b74a38c60ec334fc7d70a854cfeac3f2e0667420af4c99665b7fcf03939b",
+      "result_sha256": "e70dbea05726f143ef356787179e3ffbc12d3ce0c8e413c59909bb327402320d"
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "C90L-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "9c2772467588b14efcd956e639c9e6a7200017f642f63b05609ad84d4262beb1",
+      "result_sha256": "d1488a0c8298fdd96ce9088cb5762069166800d770b90f5a3804677304d3e4fa"
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "C90H-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "ae3a6711089c121829371f6bd858826ae295eabcc9da52e5959d763af152e05e",
+      "result_sha256": "e4f9d80782322090af92ddf88e7750848934045f475f96c255a1ba4b7545ab89"
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "C90L-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "b76ea56610999c9cf38d4edb4f7c1536c26a0ae36ea16996a55b99154631a6ba",
+      "result_sha256": "31c8b9c21d41cd21666342ad81553278a788d7f1448ff2608193a91881b1c897"
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "C90H-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "1686e24e1a34bdb4cbe9f9074780bac2d956f092a2d622fed61f06271ac478ad",
+      "result_sha256": "d5ca000dc9279ab6f6b224991cffe4bfc37c40c33ab1883e8779e0abc5d36d7b"
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "C90L-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "2ce68783d15784f08b7293fd8871bde6e746ab42b1fc89ce63a28381028e7785",
+      "result_sha256": "8b7ceb8b4061676080bc8179bacd10fd795f8b822ebdd73fc34c3946b7e9812b"
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "C90H-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "2201970e46753310527c91c142a8b3a8c6070614d521fea70abc4bb58635d778",
+      "result_sha256": "87973807501b5114ffa4ef1a3ffcad4e245c3c8baa65c2257e32975b277922e0"
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "C90L-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "4332635634d98d650915fb5ccf27bcdf9415e8a68acd246b91c3376ef6241da3",
+      "result_sha256": "170800609c897b9b22d48ca6f080b02cbe809a15ea257507b528f87440fd53b2"
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "C90H-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "1f795c3c24b440070d9ac4a9d070521028764d30b24fbb7b20416779b5b5c190",
+      "result_sha256": "24d7b91ec0044e13d0612cd7778e6a5c77a1c7cf63feb4f2e01b725a982d5313"
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "C90L-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "251acf500730f5f76ff42aaac049b3bb91b9ed1e9611d4c01dcd607793a45bf8",
+      "result_sha256": "ac710fef86de4a1eb82d2ccab0be701b87d8b941395273cc80a01f59288554c9"
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "C90H-C7AL",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "9d11eb4fe0aefb1a85065488ae3e676621373889dd6d8c5d3008eb0175a1073a",
+      "result_sha256": "3f99a9984259353b4537dc3da5b88fd11b8791abd2ec5b5283cb3c855af07a79"
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "C90L-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "9b6d1e2288eea08c8f383e9725f33d896856c57ac5939fe17f3d02a2d1923ad3",
+      "result_sha256": "b3e87d651adca771603a55e9a9845716c8afa64236b4ed36f81737d01d9f8a83"
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "C90H-C7AH",
+      "exact_outcomes_and_identified_fields_equal": true,
+      "raw_state_sha256": "bdc0e5970c19a62b161372bd65f8c2f28ae29cd0156e84808059971336bf1f7a",
+      "result_sha256": "4c9a61b8ce3e10c3f983578c9f64bf8eacff756724d67ccdd021b52886509f99"
+    }
+  ],
+  "peak_inflight_claims": 4,
+  "engine_pid_peak_measured": false,
+  "dispatch_summary_sha256": "89c8b6240bc79d5e23fbc66cf2a0c5001455a58d4bd347d354ca7e6604d8fa93",
+  "concurrency_ledger_sha256": "50a45e6f9e429b4b17239b88df1f2689e46e915bcf77a735dadaab72a55957a6",
+  "first_main_admission": null,
+  "scientific_analysis_allowed": false,
+  "career_released": false,
+  "budget_reconciled": true,
+  "complete": true
+}

@@ -1,8 +1,8 @@
 # FM27 Meta Research
 
 > **NIGHT-002, neuer Auftrag:** Quellenrefresh und zehn konkrete Kandidaten;
-> getrennte C90/C7A-Attribution zuerst technisch prüfen. Noch keine neuen
-> nativen Ergebnisse. [Mission](docs/night-002/README.md) ·
+> getrennte C90/C7A-Attribution mit32 Technikmatches freigegeben; Cache8A folgt
+> im Startkontext C90. Noch keine neuen Leistungsergebnisse. [Mission](docs/night-002/README.md) ·
 > [konsolidierter Bericht](docs/night-002/OVERNIGHT_REPORT.md).
 > NIGHT-001 bleibt abgeschlossen; alte Budgets und terminale Studien bleiben erhalten.
 

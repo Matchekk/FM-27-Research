@@ -2,7 +2,8 @@
 
 Separate NIGHT-002-Studie. [Vorregistrierung](../../experiments/MECH-004-split-preregistration.md)
 und [unabhängiger Inputreview](../../docs/night-002/SPLIT004-INPUT-REVIEW.md).
-Noch keine nativen Ergebnisse bei Anlage dieses Indexes.
+Aktuell: TECH32+1 bestanden und unabhängig aus Originalbelegen geprüft.
+Noch keine Hauptmatches. [Technischer Bericht](../../experiments/MECH-004-split-validation.md).
 
 - `contract.json`: eingefrorener Entwurf mit vier C90/C7A-Armen und Grenzen.
 - `inputs.json`: Setup-/Code-/Ressourcen-/Kontrollhashes, tatsächliche Softwareversionen.

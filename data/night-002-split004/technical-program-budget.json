@@ -1,0 +1,31 @@
+{
+  "experiment": "NIGHT-002",
+  "limits": {
+    "technical": 192,
+    "main": 2048
+  },
+  "limit_seconds": 3600,
+  "charged_seconds": 107.96172520000255,
+  "absolute_deadline_utc": "2026-11-15T07:00:00+00:00",
+  "halted": false,
+  "artifact_limit_bytes": 4294967296,
+  "active_operation": null,
+  "reserved_counts": {
+    "technical": 33,
+    "main": 0
+  },
+  "operations": [
+    {
+      "name": "MECH-004-SPLIT-R0/technical",
+      "kind": "technical",
+      "start_utc": "2026-11-14T22:44:40.740805+00:00",
+      "child_deadline_utc": "2026-11-14T23:44:35.740805+00:00",
+      "elapsed_seconds": 107.96172520000255,
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "private_ledger_sha256": "15348f2daaef1ea2d30a466e96c65b288acd6a71f81706f20737010e482973a2",
+  "new_private_artifact_bytes": 19480110,
+  "time_accounting": "Whole supervised phase-child elapsed time; native per-call elapsed sum is reported separately, not added."
+}
