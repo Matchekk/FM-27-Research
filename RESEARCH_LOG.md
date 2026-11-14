@@ -1,5 +1,24 @@
 # Research Log
 
+## 2026-11-14 – TACT-001-P1B vorbereitet und vorregistriert
+
+- Große Variante beauftragt: 2.048 Hauptmatches, 64 unabhängige Seedblöcke.
+  Gemeinsame Designfunktion um explizites `fraction=-1` ergänzt; historischer
+  Standard +1 bleibt unverändert. D00 all-standard, Resolution V und physische
+  Kontrastskalierung automatisiert geprüft. Explizite D00-Kontrollkennung im Schema.
+- DLL27.0.1+2503222, Host, Fixture, Tooltag und Katalog stimmen mit Freigabekontext
+  überein. Native Vorbereitung prüft Ressourcen-/Adapteridentität erneut.
+  64 regelkonforme Eingabezellen erstellt; D00 jeweils binäridentisch zur P0-
+  Baseline. Alle übrigen Binärdifferenzen betreffen nur fünf benannte Instructions.
+- 67 neue Seeds gegen 2.150 historische/reservierte Werte geprüft und dauerhaft
+  reserviert. Noch keine technischen oder wissenschaftlichen Matches gestartet.
+  Vorbereitung 4,769 s, unverrückbare Gesamtdeadline und 2.400-s-Childbudget aktiv.
+- 40 Plattform-/P1A-/P1B-Tests und fünf historische Analysetests bestanden,
+  P0 unabhängig reproduziert. Die feste Testanzahl vorhandener Entwurfsspezifikationen
+  wurde um den achten Vertrag ergänzt. 124 historische Forschungsdateien unverändert.
+  [Vorregistrierung](experiments/TACT-001-P1B-preregistration.md) und Code werden
+  vor dem ersten Prüfmatch gepusht; technische Ergebnisse in separater Freigabe.
+
 ## 2026-11-14 – TACT-001-P1A: Offline-Präzisionsanalyse und Suchdesign
 
 - Sauberer Ausgangsstand `873799a4eb4f233d2b894a579e53e409f64140fb`, origin/main.

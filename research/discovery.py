@@ -17,10 +17,15 @@ def validate_4231(scenario, server, side=0):
     return normalized
 
 
-def fractional_design(names):
-    """2^(5-1), E=ABCD, resolution V: main and two-factor effects separable."""
+def fractional_design(names, *, fraction=1):
+    """2^(5-1), E=fraction*ABCD. Explicit -1 includes the all-low anchor.
+
+    The historical default +1 remains unchanged; physical interaction DoDs
+    are four times the +/-1 regression coefficients, main effects twice.
+    """
     require(len(names)==len(set(names))==5, "Resolution V design needs five distinct factors")
-    return [dict(zip(names,(*levels,int(np.prod(levels))),strict=True)) for levels in product((-1,1),repeat=4)]
+    require(type(fraction) is int and fraction in (-1,1), "Fraction must be explicit +1 or -1")
+    return [dict(zip(names,(*levels,fraction*int(np.prod(levels))),strict=True)) for levels in product((-1,1),repeat=4)]
 
 
 def features(candidate, names):

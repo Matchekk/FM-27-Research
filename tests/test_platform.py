@@ -80,7 +80,7 @@ class PlatformTests(unittest.TestCase):
 
     def test_every_module_draft_is_valid_and_cannot_run(self):
         specs=list((ROOT/"research/specs").glob("*.json"))
-        self.assertEqual(len(specs),7)
+        self.assertEqual(len(specs),8)
         self.assertEqual({read(p)["module"] for p in specs},{"TACT","ATTR","TRAIN","SET","MECH"})
         for path in specs:
             value=read(path)

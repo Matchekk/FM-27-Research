@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "experiment_id": "TACT-001-P1B",
+  "module": "TACT",
+  "kind": "native",
+  "stage": "discovery",
+  "status": "draft",
+  "hypothesis": "Five high-minus-standard xGD main contrasts in the negative resolution-V half-fraction; two equally weighted frozen contexts.",
+  "control": "D00 all-standard own IP4231/OOP4411; identical P0 profiles and management",
+  "intervention": "A more pressing, B higher line, C higher tempo, D shorter passing, E wider attacking width; E=-ABCD",
+  "conditions": "Synthetic equal strength, controlled profiles, own IP4231/OOP4411, fixed native benchmark management, no injected live changes; two opponent styles, both sides.",
+  "seed_namespace": "TACT-001-P1B/main-v1",
+  "identity": {
+    "build": "27.0.1+2503222",
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+    "lab_version": "v1114.6",
+    "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+  },
+  "metrics": {
+    "primary": "xgd",
+    "secondary": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "plausibility": [
+      "shots_for",
+      "shots_against",
+      "sot_for",
+      "sot_against",
+      "possession_for"
+    ]
+  },
+  "design": {
+    "unit": "seed_block",
+    "n_blocks": 32,
+    "sides": [
+      0,
+      1
+    ],
+    "control_arm": "D00",
+    "fraction": -1,
+    "generator": "E=-A*B*C*D",
+    "matrix": [
+      {
+        "id": "D00",
+        "levels": {
+          "A": -1,
+          "B": -1,
+          "C": -1,
+          "D": -1,
+          "E": -1
+        }
+      },
+      {
+        "id": "D01",
+        "levels": {
+          "A": -1,
+          "B": -1,
+          "C": -1,
+          "D": 1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D02",
+        "levels": {
+          "A": -1,
+          "B": -1,
+          "C": 1,
+          "D": -1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D03",
+        "levels": {
+          "A": -1,
+          "B": -1,
+          "C": 1,
+          "D": 1,
+          "E": -1
+        }
+      },
+      {
+        "id": "D04",
+        "levels": {
+          "A": -1,
+          "B": 1,
+          "C": -1,
+          "D": -1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D05",
+        "levels": {
+          "A": -1,
+          "B": 1,
+          "C": -1,
+          "D": 1,
+          "E": -1
+        }
+      },
+      {
+        "id": "D06",
+        "levels": {
+          "A": -1,
+          "B": 1,
+          "C": 1,
+          "D": -1,
+          "E": -1
+        }
+      },
+      {
+        "id": "D07",
+        "levels": {
+          "A": -1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D08",
+        "levels": {
+          "A": 1,
+          "B": -1,
+          "C": -1,
+          "D": -1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D09",
+        "levels": {
+          "A": 1,
+          "B": -1,
+          "C": -1,
+          "D": 1,
+          "E": -1
+        }
+      },
+      {
+        "id": "D10",
+        "levels": {
+          "A": 1,
+          "B": -1,
+          "C": 1,
+          "D": -1,
+          "E": -1
+        }
+      },
+      {
+        "id": "D11",
+        "levels": {
+          "A": 1,
+          "B": -1,
+          "C": 1,
+          "D": 1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D12",
+        "levels": {
+          "A": 1,
+          "B": 1,
+          "C": -1,
+          "D": -1,
+          "E": -1
+        }
+      },
+      {
+        "id": "D13",
+        "levels": {
+          "A": 1,
+          "B": 1,
+          "C": -1,
+          "D": 1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D14",
+        "levels": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": -1,
+          "E": 1
+        }
+      },
+      {
+        "id": "D15",
+        "levels": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": -1
+        }
+      }
+    ],
+    "matrix_sha256": "5c2368cce0f109fcc4776c84e8d1715776ba859694deedda45eba1af0b5a17d8",
+    "factors": [
+      {
+        "code": "A",
+        "group": "TriggerPress",
+        "group_id": 10,
+        "phase": "OOP",
+        "low_id": 1313689463,
+        "high_id": 2000905329,
+        "high_bit": 66,
+        "label": "More Often"
+      },
+      {
+        "code": "B",
+        "group": "DefensiveLine",
+        "group_id": 9,
+        "phase": "OOP",
+        "low_id": 894978671,
+        "high_id": 1329018200,
+        "high_bit": 57,
+        "label": "Higher"
+      },
+      {
+        "code": "C",
+        "group": "Tempo",
+        "group_id": 21,
+        "phase": "IP",
+        "low_id": 1496610426,
+        "high_id": 1345339954,
+        "high_bit": 47,
+        "label": "Higher"
+      },
+      {
+        "code": "D",
+        "group": "PassingDirectness",
+        "group_id": 1,
+        "phase": "IP",
+        "low_id": 1483944022,
+        "high_id": 1146434657,
+        "high_bit": 3,
+        "label": "Shorter"
+      },
+      {
+        "code": "E",
+        "group": "AttackingWidth",
+        "group_id": 4,
+        "phase": "IP",
+        "low_id": 1951095402,
+        "high_id": 1244744824,
+        "high_bit": 51,
+        "label": "Wider"
+      }
+    ],
+    "setups": {
+      "high_press": {
+        "0": {
+          "D00": "2fa5bf530d9c46b88a766e879e63de417130b51758aba9ac8b721b80b3d0a342",
+          "D01": "c1461e39aa0a7cc5272ac7ac8c5191ec561ea796b252bb8d25602eb45dfdd099",
+          "D02": "b38785df4690236ff6053461b9e40c1aa2573235b3e4960e81963cb94e28e7ae",
+          "D03": "22509839d9960b03d9120511f53fa58d79b0be32f1f3a6e6d632433a87acfd34",
+          "D04": "32646b0d0090e9d69da6573e968e4aff9d4a60091786cabddedc87be6dc07b1e",
+          "D05": "81cdf53f077da592fe06cafddb351003dc73f849cbd8bcdb37aa700c7a4eef98",
+          "D06": "4ea9c02b4bc31afc205025bbce95853f3dcb09d4412a1c7406062a7541265fda",
+          "D07": "26e54c07c3cff84541b56b2b5841de8b6219e995a8cec0cf2e25348029920016",
+          "D08": "53e30c4fdc9e865f447fb297acebc6a3d6877dcba843e84d026cb5a29bb94ced",
+          "D09": "21bf55d73c9bba487c98b9f5b4f1da5b1c114d785e2313ce53c23850ac8276af",
+          "D10": "d7cd35e99e75ed4020404666674e9dd11e8e2c3a213d84ce746816a9ce48535e",
+          "D11": "420370d9bd2b4eeba0da9ed27f73799e3ed3b91d25f98128a83e580f7dea1b96",
+          "D12": "dda8771bd3c968af813027ae08a2c4928f7de974e118c34cbe33d09d86b38c6f",
+          "D13": "d3b32826d26520ffee1ecfd7bdacfba9a59d0a6ff91dc39c23bdb1e35c31ac35",
+          "D14": "2ecf706c6adad146b648e0eb51050ddb1ce9b087d1cb36c3014f4665aaa6b00a",
+          "D15": "4e8cdf911173fea5b618ecf8008d96bc36422babb7da3f7f13a2315eeaeafb24"
+        },
+        "1": {
+          "D00": "6215fd8d6c665d00fcd254c8954989b407e6fa4c2b0e2946d7df729ec23c2bc7",
+          "D01": "75a90f9e9a429d3cf74dbe49ec37d7718e0f25ab1961c84ba7748cd4a3795d34",
+          "D02": "325ea5221013b2fb1d6650a25bb7d0a8ddd5edc6234f74d26cec75788e990363",
+          "D03": "33175753ab1b504137e474430b7dc2e48c49c4796a32dd446584232bbda4df05",
+          "D04": "a34f0827a74fedf156904fff7c7a88381e27743ed8d50b3b9658bd18875766a8",
+          "D05": "9dd831b4f0454987bd12b809478fe708650ab1a7d946750eee0bee5b48edc6a0",
+          "D06": "239700b9fd6cf5e8d761367865481e9a825f8b5ae361c880ad20944ca0f64395",
+          "D07": "5377c1d23856e023011b5d1b797092c00f5156312350d105cc6fb8614d5d2933",
+          "D08": "4330839a311fb3cc84cf9999e61f22d3b1f27ac97750fd17e0a4970244fae925",
+          "D09": "90288dda40f61fead0af1ccf7c4aca90db0ff78b79f197ff82691691c0424c59",
+          "D10": "4d3b93754ab8ca998b44997d97303c87317f41a41ae72659270de69f5ec33208",
+          "D11": "eeea644a0572dbedf7fb1975a0770fb857bf24f64ebad1f91b8f760898e51cc7",
+          "D12": "0a789b0b59bc3c88ffc1b4efcd8083b5e2eab9911a63fd6c23b6e56b16063f65",
+          "D13": "e9ff58b4c4b09141a2750a97dad44f819d09680357c4f1377a3943c42e6619b7",
+          "D14": "e342c6a20b532cac0a520e688597a3c41df447d216e86b323c7adaf01a24d617",
+          "D15": "3e8c26361dc3987be320af640897a8836d9341d1d00e7dbec04a20b2863d6e31"
+        }
+      },
+      "deep_block": {
+        "0": {
+          "D00": "c2ddb3a7a99d5e4e415eb541fdb88142ee0d4512d787d879da809e9ae2797ff2",
+          "D01": "8ca8289f9e618f34a0dab52e408ec0f39caeafae09d3811d672ce9463fe98c73",
+          "D02": "b16589836c0c6c877172ce03a3dee944cfe99f5233402461cfb952c950ff5e06",
+          "D03": "79258b1d44d54afded441fe136e0469b2f7d59d27185338e2fcf10b78ba31e69",
+          "D04": "c9ce9efd955a2f013f79dcecd2996eff42ecd8c54faa29174f67d7c71dea1fc0",
+          "D05": "b74281c7fa9a48c8852869e00d45db9ce2df07862b777d99278c81333596c5a1",
+          "D06": "bc91967e864faa53618ec06f53443bd9cdcd4194b5467364037c180ed3205154",
+          "D07": "757b890eaaaea0d1c0bc04527fcfda19400f08dbd5c21064451cb3b11545f5e0",
+          "D08": "577f24f8044f72c06f7c1543191a9943a8183522f46159a0e00e81fce387f5a3",
+          "D09": "119d0d974d1f7d10d4023ac1006c346471a07b446e3e71be3e076dc6dba0028f",
+          "D10": "6f62c900b15ff7dfaca0a797de4aa6694fdf27fc5774641d1127df549c4d56c5",
+          "D11": "e0b60f704e4fb8032f5b6fe4af825b9475fdb34c786bbad75899b3551502196a",
+          "D12": "02e99edcc7c6edff4b9482c2df61b0740b32d1375d7b993b9f409ba6634d97c7",
+          "D13": "98d2c56e70bf75053d2c88f2f0c026f4262e2cf09644cc37c986ca17b3fd4d2b",
+          "D14": "70d3348fd8cbf7a886cf0f4830ddde6d732b7753ef5c54e90361a64685a6382c",
+          "D15": "dc162ae6aba141a594d777064396a53a19610e0547b396ca80342da9d932fede"
+        },
+        "1": {
+          "D00": "f5398503d8305ce38252b20a680151390af73429a44af157c62d99f7e5f8d986",
+          "D01": "a56695c082628300e8031c5b0ef97b2d0aa665b454664483cb12b1912fc7187f",
+          "D02": "70b57374c2f3f1c2a0230336930c58620185ed372b6a77628b92fba209b755cc",
+          "D03": "b9039c2cbecb414216b8c9ec06c179c4d64de5eba153d240140d79e358907ad1",
+          "D04": "9348bc1dcd9176e6936b5badda045b15727edd2993c47e96eabd5e749637d178",
+          "D05": "186882544a63103f3201a421fd5fbc923b713334a698edfa912f5d7888d28731",
+          "D06": "1db3ba7ce9f52b5d4e9a0c30a8a5f729bbb473f7f1ba97c4c3e3c72c2a51812d",
+          "D07": "6ae3a862980102f23a1876e13de2b6c5d7bd9f1848ce6c81ee19245c35da5f8e",
+          "D08": "b5fe3cedd6033daf4e625793f40dbedf1b9057565cf9b24d2812012b6eea1781",
+          "D09": "58ab416a25a8a5ae622ed346f1604f39ef55eecf7918bda193759b11968af4ee",
+          "D10": "18ca919430c1ef04bc7e8b4835c71441ac28246b3f48775920f1dce30963dc8b",
+          "D11": "8afa1f2b8f99da74f3e57d533c989083c90320bb4d8d4c3016fef82c0f89fc14",
+          "D12": "10614dd0644fcf309b7a003acf0ad28e2e55df86dd33d1ba123a2ca285854361",
+          "D13": "de6751bc15b086a580240589d9c44138b6f2389f95cc48f12222bafa1ae39b22",
+          "D14": "2b5f27796823c63383c63f7abe219f75be1215fd04b4bcc7afdc8bda2299fd6f",
+          "D15": "bebd880b60093c21ec2076bc541ea062686a14a4a056909ccb2c5aa4d7fff235"
+        }
+      }
+    },
+    "arms": [
+      {
+        "id": "D00",
+        "setup_sha256": "d8348a6221dec95413bf1a3553657a839a501d1ac2a47936b04cbb22b4292bbe",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D01",
+        "setup_sha256": "0e7099f553fb1beb6294438f77681e2fe0261dcc774ee4dfdbadefec87e1c7d0",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D02",
+        "setup_sha256": "860b0ad95218708cd422f8aff35bc1e8c46a118c8feb046151a567f8fba7aad9",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D03",
+        "setup_sha256": "5f77b040ea1c64870978452401b4928979ddcf47e482458517ffd43ac2a9ec25",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D04",
+        "setup_sha256": "91ef64c64d8ebc9005f224a94170b0b51f20f2ada94d369450df640ed0e6fadf",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D05",
+        "setup_sha256": "a3369a92ab817b994ae3f9611b777ba58e30f5dfc83a73afed8c70da3ff16037",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D06",
+        "setup_sha256": "9dcdd5d829b02a6576b31df80f7f25f8a3c2030f521671deb6599a5b93c41e4f",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D07",
+        "setup_sha256": "acd59c81c8d9997e01f3bb7c6501521a3433060072de13b0a7705dc22f85d7bd",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D08",
+        "setup_sha256": "af44af756c8429f308e21eb0405daa48400d622c8cdb2d71b6b240449a40a3a6",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D09",
+        "setup_sha256": "94e15bff2f661d3fe34f5f7bcb28468fd97c6d89e8595da501d6d037dabfefeb",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D10",
+        "setup_sha256": "451cc6d208c8813629fd83dfc700ac38d7af89c1489de1d47cf5ec10203e461d",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D11",
+        "setup_sha256": "a000dfacb0e984bc5ec143921b407ea4b0e46581a0a5c6c09098250fc4bc573d",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D12",
+        "setup_sha256": "996951172fcbd4ef35538dd82a5778bb019dfd21d52cc73a59807e7b8e364f61",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D13",
+        "setup_sha256": "34bd2d50802a990dbd3bc40cf75811636c8874d85addf4167b6301848e8d67d5",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D14",
+        "setup_sha256": "bd020b7f03c0b41710d9a7c6d91fcee67b3aac459ed76162baf7b4ab3afd54ef",
+        "setup_sha256_type": "cell-map"
+      },
+      {
+        "id": "D15",
+        "setup_sha256": "ce6a3aa78dc4cbb204e176a5a97f6771447feb85f1930897cd94ebc59c845777",
+        "setup_sha256_type": "cell-map"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "high_press",
+        "opponent": "high_press",
+        "strength": "identical_synthetic_profiles",
+        "split": "discovery"
+      },
+      {
+        "id": "deep_block",
+        "opponent": "deep_block",
+        "strength": "identical_synthetic_profiles",
+        "split": "discovery"
+      }
+    ]
+  },
+  "science": {
+    "alpha": 0.05,
+    "power": 0.9,
+    "min_effect": 0.2,
+    "multiple_testing": "holm",
+    "family_size": 5,
+    "analysis": "analysis/analyse_tact001p1b.py: mains coefficient X/8; physical pair DoDs XiXj/4; side mean then context weight 1/2; Welch and 20000 stratified complete-block bootstrap; Holm5/10/25 separate families.",
+    "exclusions": "No result exclusions, replacement seeds or retries; any incomplete block permits technical status only.",
+    "negative_controls": [
+      "64 complete input cell readbacks",
+      "8 exact repeats: both contexts/sides, D00/D01",
+      "invalid binary exit108"
+    ],
+    "readback_fields": [
+      "both phases",
+      "roles/duties/PI",
+      "69 attributes",
+      "23 profile fields per player",
+      "all team instruction bits including C/D/E",
+      "effective seed",
+      "natural finish"
+    ],
+    "stopping_rule": "2048 main and 73 technical attempt caps; fixed 2400s child time and 40min UTC study deadline; max4 workers, timeout90; no retries or effect stopping.",
+    "selection_rule": "At most two measured cells with positive xGD gain over D00 in both contexts, sorted by worst context gain then equally weighted gain then design ID. No confirmation or holdout execution.",
+    "power_basis": "P1A conditional transfer model: SE .0464, marginal95 halfwidth .0929, per-main Bonferroni alpha .01 power .9457 for .20. Unknown new factor variances; no joint90-power claim.",
+    "context_weights": [
+      0.5,
+      0.5
+    ],
+    "side_weights": [
+      0.5,
+      0.5
+    ],
+    "secondary_family_size": 25,
+    "interaction_family_size": 10,
+    "bootstrap_resamples": 20000,
+    "scheduler_rng": 2026111402
+  },
+  "budget": {
+    "max_matches": 2048,
+    "max_workers": 4,
+    "timeout_seconds": 90,
+    "max_technical_attempts": 73,
+    "total_native_wall_seconds": 2400,
+    "absolute_study_wall_seconds": 2400,
+    "raw_artifact_limit_bytes": 4294967296,
+    "disk_reserve_bytes": 21474836480
+  },
+  "execution": {
+    "code_sha256": {
+      "analysis/run_tact001p1b.py": "6de6705e97d45a73e1351a2c1cb7972ff1a2a242abb42fe5ee4d50d457fb5a52",
+      "analysis/analyse_tact001p1b.py": "f871d6ea45c89bf9847491f91d8bbb8a84657ea095238be33cd29e73953ff28a",
+      "analysis/export_tact001p1b.py": "395018e25e8efb98191e1a598d6140e6dbd3b5282787279a8f1cf897e66b6fad",
+      "research/discovery.py": "9642ba29685c900664d8cf7603e568960e787e49cee89a7c1a99763af534d321",
+      "research/study_budget.py": "7d20b2b9fd2ea1addb64bbec8f6976b971e8746d9d9977fc2e87370e45c93608",
+      "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+      "research/core.py": "94ef5c76f56f65adf495df1632da7cb99701d25c64ad6846a6d45872c6730ab6",
+      "research/native.py": "0a9b143d8b51d3e2108c6f60946ca1ea280da4f455299b8718e7303cc168366c",
+      "research/stats.py": "13cc3ae64d85904dd6acaab08fb06425d29b7b8cb9344fad84ee6d32a763a331",
+      "research/cli.py": "8d05e287d2667fb52f6c6a5cb10512560b9e9646ecfa4c80ac03c6a28a1e1bcc"
+    },
+    "public_inputs_sha256": "e05edbed58e4d77ac83c26eb36c1583b5e3df74a25de41ad79cd5c6a60195688",
+    "seed_plan_sha256": "aa1321b5c70826a399667f172390d6d953d380ed915fab05d4e6ab5bd9203987",
+    "matrix_file_sha256": "0580f1bf07334f6d08fc95a9579fea10c8cfcca94a4b2572d3f95a2ea7b8fd65"
+  },
+  "preregistration": {
+    "commit": null,
+    "document": "experiments/TACT-001-P1B-preregistration.md",
+    "document_sha256": null,
+    "analysis": "analysis/analyse_tact001p1b.py",
+    "analysis_sha256": null
+  }
+}

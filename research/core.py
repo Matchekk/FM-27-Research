@@ -38,7 +38,8 @@ def validate(config, executable=False):
     require(design["unit"] == ("seed_block" if config["kind"] == "native" else "career_branch"), "Wrong independent unit")
     require(type(design["n_blocks"]) is int and design["n_blocks"] > 0, "Invalid sample size")
     arms, scenarios = design["arms"], design["scenarios"]
-    require(len(arms) >= 2 and len({a['id'] for a in arms}) == len(arms) and arms[0]["id"] == "baseline", "Invalid arms/control")
+    require(len(arms) >= 2 and len({a['id'] for a in arms}) == len(arms) and
+            arms[0]["id"] == design.get("control_arm", "baseline"), "Invalid arms/control")
     require(scenarios and len({s['id'] for s in scenarios}) == len(scenarios), "Invalid scenarios")
     require(design["sides"] and len(set(design["sides"])) == len(design["sides"]) and
             all(type(s) is int and s in (0,1) for s in design["sides"]), "Invalid team sides")
