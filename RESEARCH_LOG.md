@@ -373,3 +373,8 @@ Identität27.0.1+2503222/Host/Fixture/Katalog/elfRessourcen stimmtVALID002.
 Bisher0nativeProzesse/0neueMatches/0Seeds/0Advances/0Holdouts. Preflightfreigabe
 nur für zentrale ATTR-Vorbereitung/Technik nach Publikation/CI,keine Mainfreigabe.
 [Runde3](docs/round3/README.md),[Review](docs/round3/REVIEW.md).
+
+Der erste Integrationslauf CI43616573611 scheiterte ausschließlich am neuen
+Archivcheck im flachen GitHubcheckout: historische Gitblobs waren nicht verfügbar.
+Checkout auf vollständige Historie korrigiert,kein Hashvergleich abgeschwächt.
+Native Budgets/Seeds waren weiterhin uninitialisiert;kein nativer Retry.
