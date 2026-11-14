@@ -1,0 +1,16 @@
+{
+  "experiment": "NIGHT-001",
+  "limits": {
+    "technical": 192,
+    "main": 2048
+  },
+  "limit_seconds": 1800,
+  "charged_seconds": 0.0,
+  "reserved": {},
+  "operations": [],
+  "active": null,
+  "halted": false,
+  "absolute_deadline_utc": "2026-11-14T23:00:00+00:00",
+  "first_operation_utc": null,
+  "observed_utc": "2026-11-14T17:27:32.489788+00:00"
+}

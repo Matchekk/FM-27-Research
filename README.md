@@ -1,5 +1,12 @@
 # FM27 Meta Research
 
+> **Neuer Nutzerauftrag NIGHT-001:** autonome Forschung bis15.11.2026 00:00CET.
+> Externe FM27-Evidenz,rein lesender Audit der ausdrücklich bereitgestellten
+> Testkarriere und ein eigener passiver Engine-Observer werden getrennt bearbeitet.
+> Keine automatische Freigabe alter blockierter Studien oder Karriereadvances.
+> [Programm/Gates/Budgets](experiments/NIGHT-001-program.md) ·
+> [laufender Stand](docs/night-001/README.md). Frühere Runde3 ist unverändert abgeschlossen.
+
 > **Runde3:** ATTR-009-Bridge mit384Hauptmatches/32Seedblöcken abgeschlossen.
 > Masken×relativerRohattributkontrast−0,162xGD,95-%-KI[−0,488;+0,164],p0,319;
 > kein Primär-/Holm5-Nachweis,Präzisionsziel verfehlt.32Technikmatches/8A/A+

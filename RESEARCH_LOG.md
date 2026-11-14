@@ -419,3 +419,19 @@ MECHStartpolicyoffline/512erPilotblockiert,TRAINReaderdiagnose/0Advancesblockier
 [Runde3](docs/round3/README.md),[Ergebnis](experiments/ATTR-009-results.md),
 [Abnahme](docs/round3/RESULTS-REVIEW.md),[Prioritäten](docs/round3/PRIORITIES.md).
 Nach finaler Integration/CI stoppen,keine automatischeweitereSerie.
+
+## 2026-11-14 – NIGHT-001 aufgrund neuer Nutzerautorisierung begonnen
+
+Nutzer erteilt eigenständige Forschung bis15.11.2026 00:00CET und stellt
+Wegwerfkarriere „Test FM Research“ bereit. Drei neue getrennte Fachworktrees:
+externePrimärevidenz,reinlesenderKarriereaudit,passiverObserver/isolierterMIT-Build.
+Root steuert alle späteren nativen Versuche zentral. BestehendeRunde3 und335
+historischewissenschaftlicheDateien geschützt. Keine altenSeed-/Budgetresets.
+
+ComputerUse erkenntFM27-Fenster,jedoch zweimalCapturetimeout;keineblindenUIinputs.
+ExpliziteTestdatei147.130.636Bytes,lastwrite18:07:38CET gefunden;andereprivate
+Karrieren nicht geöffnet. InstallierteDLLVersion27.0.1+2503222 undfmsave0.9.0
+tatsächlicherneutgelesen. NeuesProgrammbudget mit fixer23:00UTC-Grenze initialisiert,
+0nativeOperationen/0Childsekunden/0reservierteMatches. Obergrenzen1800Childs,
+192Tech/2048Main sind keine Hauptserienfreigabe. Fünf neueZeit-/Restart-/Crash-
+Budgettests,insgesamt129Testsbestanden. Quellen-/Reader-/Observerarbeit inArbeit.
