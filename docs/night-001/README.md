@@ -58,3 +58,19 @@ haben ein Label im eingefrorenen Readerenum;1.244noch keines. Kalender enthalten
 auch Zukunftswochen. Damit fehlt weiterhin der Nenner tatsächlich absolvierter
 Einheiten und individueller Teilnahme; keine Trainingswirkung ableitbar.
 204Repositorytests plus fünf historische Analysetests bestehen lokal.
+
+## VALID-005 abgeschlossen
+
+Die separat vorregistrierte passive Prüfung ist mit16Vollmatches,2Loaderchecks
+und2erwartetenNegativabweisungen erfolgreich. Vier exakte Viermodusgruppen,
+vollständige Eingabe-/Stagebelege und20bestätigteProzessbereinigungen;
+0Ausfälle/Retry/Holdouts. [Ergebnisse](OBSERVER-RESULTS.md) und
+[unabhängige Rekonstruktion](OBSERVER-RESULTS-REVIEW.md).
+Das globale Nachtbudget steht bei60,5217007/1800Childsekunden.
+
+Neue Erkenntnis ist die Trennung statischer Profilfelder von veränderlichen
+Runtimequellen. Der aktuelle Recorder erlaubt keine UI-/Consumer-/Setter- oder
+Karrierefreigabe. Eine neue Startpolicyroute ist ausschließlich technisch;
+Main ist dort strukturell gesperrt. Der Staminaentwurf hat Windows-/Capability-
+und Prozessgates im [Fixreview](MECH003-FIX-REVIEW.md) bestanden; seine native
+Vorbereitung und Studienphasen sind noch nicht ausgeführt.

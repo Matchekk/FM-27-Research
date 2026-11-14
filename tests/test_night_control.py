@@ -126,6 +126,14 @@ class NightControlTests(unittest.TestCase):
         for phase,bad in [('main',keys),('technical',keys[:-1]),('technical',list(reversed(keys)))]:
             with self.assertRaises(ValueError):validate_phase_keys(study,phase,bad)
 
+    def test_unintegrated_route_cannot_consume_program_budget(self):
+        from analysis import night_supervise
+        root=Path(self.temp.name);(root/'.git').mkdir()
+        with patch.object(night_supervise,'ROOT',root),patch.object(night_supervise,'NightBudget') as budget:
+            with self.assertRaisesRegex(ValueError,'not yet integrated'):
+                night_supervise.main(['run','--study','MECH-002-STARTPOLICY-TECH-V1','--phase','prepare'])
+            budget.assert_not_called()
+
 
 if __name__ == '__main__':
     unittest.main()

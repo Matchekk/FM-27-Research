@@ -59,6 +59,7 @@ def main(argv=None):
     require(args.phase=='prepare' or args.keys_file is not None,'Non-preparation phase needs explicit match reservations')
     validate_phase_keys(args.study,args.phase,keys)
     require(not any(a in ('--child','--study-supervisor','--capsule') for a in arguments),'Cannot inject an inner child mode')
+    require((ROOT/ROUTES[args.study]).is_file(),'Selected study runner is not yet integrated; no budget admission')
     if args.command=='admitted':
         # The original token exists only in this authenticated process environment.
         # No token is printed, passed in argv or exported in a public receipt.

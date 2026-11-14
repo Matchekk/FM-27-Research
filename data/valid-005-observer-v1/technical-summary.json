@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "full_matches": 16,
+  "loader_checks": 2,
+  "negative_rejections": 2,
+  "equivalence": [
+    {
+      "context": "high_press",
+      "side": 0,
+      "result_equivalence_verified": true,
+      "modes": [
+        "reference",
+        "observer_off",
+        "observer_on",
+        "observer_on_repeat"
+      ],
+      "result_sha256": "f08468bc1a67ea0a2da23aadfacdc7908d049cbff5ba025f07dd3a92e0c1228b",
+      "native_release_granted": false,
+      "interpretation": "Four exact natural outcomes; full provenance/input/snapshot gates remain separate"
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "result_equivalence_verified": true,
+      "modes": [
+        "reference",
+        "observer_off",
+        "observer_on",
+        "observer_on_repeat"
+      ],
+      "result_sha256": "9624e0c3f6b71a80a9f4f2724445bdfc000faf698b4b3ea13cafe200032525a6",
+      "native_release_granted": false,
+      "interpretation": "Four exact natural outcomes; full provenance/input/snapshot gates remain separate"
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "result_equivalence_verified": true,
+      "modes": [
+        "reference",
+        "observer_off",
+        "observer_on",
+        "observer_on_repeat"
+      ],
+      "result_sha256": "66126d4a4053c5d12707c5696446751d261665b4870775ff6289936e55711a4d",
+      "native_release_granted": false,
+      "interpretation": "Four exact natural outcomes; full provenance/input/snapshot gates remain separate"
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "result_equivalence_verified": true,
+      "modes": [
+        "reference",
+        "observer_off",
+        "observer_on",
+        "observer_on_repeat"
+      ],
+      "result_sha256": "6ba6677b70139fe5f01e012900a836db2c5853f2b8d9c9521c7ac38645319484",
+      "native_release_granted": false,
+      "interpretation": "Four exact natural outcomes; full provenance/input/snapshot gates remain separate"
+    }
+  ],
+  "passive_consumer_semantics_validated": false,
+  "ui_scale_calibrated": false,
+  "startpolicy_released": false,
+  "career_released": false
+}

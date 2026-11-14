@@ -15,3 +15,15 @@ noch nicht enthalten. Wissenschaftliche Main-/Setter-/UI-/Karrierefreigaben fehl
 [Vorregistrierung](../../experiments/VALID-005-passive-observer.md),
 [unabhängiger Codereview](../../docs/night-001/OBSERVER-RUNNER-REVIEW.md).
 Originalspielmaterial, native Dumps und geschützte Binaries bleiben privat.
+
+## Abgeschlossene Technikreihe
+
+Alle20Probes bestanden:16Vollmatches,2Loaderchecks,2erwarteteAbweisungen.
+Vier identische Viermodusgruppen,0Ausfälle/Retry/Ersatz/Exklusion. `measurements.jsonl`
+enthält die erlaubten anonymen Messungen, `job-accounting.jsonl` alle20Plätze;
+`technical-summary.json` und `budget.json` erhalten Ergebnis-/Zeit-/Cleanupstatus.
+`passive-state.json` ist eine zusätzlich gekennzeichnete deskriptive
+Offlinezusammenfassung von vier eindeutigen On-Läufen, keine weiteren Matches.
+[Ergebnisbericht](../../docs/night-001/OBSERVER-RESULTS.md),
+[unabhängiger Rohreview](../../docs/night-001/OBSERVER-RESULTS-REVIEW.md).
+Historische Vorregistrierung und Eingabe-/Seeddateien bleiben unverändert.

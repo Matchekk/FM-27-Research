@@ -1,0 +1,402 @@
+{
+  "schema": "valid005.descriptive-passive-state.v1",
+  "unique_seed_cells": 4,
+  "repeat_runs_used_as_additional_observations": false,
+  "cells": [
+    {
+      "context": "high_press",
+      "side": 0,
+      "seed": 2927073907,
+      "raw_log_sha256": "2ed8d8bbb392c36dff5d10a975abb00e05e36602f6967310c87c759fdcda8269",
+      "stages": [
+        {
+          "stage": "prepared",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "first_advance",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "finished",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 728496,
+            "mean": 792101.3,
+            "max": 847910,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 72,
+            "mean": 78.6,
+            "max": 84,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 22,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        }
+      ]
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "seed": 950824444,
+      "raw_log_sha256": "fb335594f10cb08ec4a1389994e07878f0b8961263bd33d2f4add0f65afbca84",
+      "stages": [
+        {
+          "stage": "prepared",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "first_advance",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "finished",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 637489,
+            "mean": 773160.2,
+            "max": 825891,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 63,
+            "mean": 76.85,
+            "max": 82,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 22,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        }
+      ]
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "seed": 3838865994,
+      "raw_log_sha256": "c8000f2cc9095ac1cda391f68d7ad7daa2d3d1963b03a3756f4dad4f96cf85ab",
+      "stages": [
+        {
+          "stage": "prepared",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "first_advance",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "finished",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 722990,
+            "mean": 805228.45,
+            "max": 871770,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 72,
+            "mean": 80.1,
+            "max": 87,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 22,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        }
+      ]
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "seed": 4071749194,
+      "raw_log_sha256": "1de9732d0337709dd27db0753f86885ba8c832f6329cc766d37fc4bd42b62edc",
+      "stages": [
+        {
+          "stage": "prepared",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "first_advance",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 1000000,
+            "mean": 1000000.0,
+            "max": 1000000,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 0,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        },
+        {
+          "stage": "finished",
+          "starting_outfield_condition_storage": {
+            "min": 10000,
+            "mean": 10000.0,
+            "max": 10000,
+            "n": 20
+          },
+          "starting_outfield_accumulator": {
+            "min": 727187,
+            "mean": 798816.2,
+            "max": 847827,
+            "n": 20
+          },
+          "starting_outfield_cache89": {
+            "min": 72,
+            "mean": 79.3,
+            "max": 84,
+            "n": 20
+          },
+          "starting_outfield_cache8a": {
+            "min": 100,
+            "mean": 100.0,
+            "max": 100,
+            "n": 20
+          },
+          "all_actor_nonzero_raw33": 22,
+          "all_actor_count": 46,
+          "missing_cache_actors": 6
+        }
+      ]
+    }
+  ],
+  "scope": "descriptive technical observations; different raw memory sources; no UI or consumer calibration",
+  "causal_effect_estimate": null,
+  "new_native_matches": 0
+}
