@@ -168,6 +168,7 @@ def cleanup_owned(base, original, temporary_root):
 
 
 def public_data_fingerprint(directory):
+    directory = Path(directory).resolve()
     files = sorted(p for p in directory.rglob('*') if p.is_file())
     require(0 < len(files) <= MAX_FILES, 'Current public measurement file count exceeded')
     digest = sha256(); total = 0

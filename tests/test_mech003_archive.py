@@ -53,6 +53,24 @@ print(json.dumps(dict(contract_verified=True,native_starts_by_verifier=0,importe
 
 
 class MechArchiveTests(unittest.TestCase):
+    def test_public_root_alias_is_canonicalized_before_containment_check(self):
+        with tempfile.TemporaryDirectory() as temp:
+            data=Path(temp)/'public-measurements';data.mkdir()
+            put(data/'value.json','{"value":2}\n')
+            expected=archive.public_data_fingerprint(data)
+            self.assertEqual(archive.public_data_fingerprint(data/'..'/data.name),expected)
+            if sys.platform=='win32':
+                import ctypes
+                from ctypes import wintypes
+                kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+                kernel.GetShortPathNameW.argtypes=[wintypes.LPCWSTR,wintypes.LPWSTR,wintypes.DWORD]
+                kernel.GetShortPathNameW.restype=wintypes.DWORD
+                needed=kernel.GetShortPathNameW(str(data),None,0)
+                self.assertGreater(needed,0)
+                buffer=ctypes.create_unicode_buffer(needed)
+                self.assertGreater(kernel.GetShortPathNameW(str(data),buffer,needed),0)
+                self.assertEqual(archive.public_data_fingerprint(Path(buffer.value)),expected)
+
     def test_historical_imports_and_current_data_are_both_real(self):
         with tempfile.TemporaryDirectory() as temp:
             repo, data, commit = fixture(Path(temp))
