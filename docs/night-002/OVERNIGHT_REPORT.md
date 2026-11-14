@@ -65,6 +65,8 @@ liegen vor.0 neue TACT-Matches;68 neue Seeds gegen2665 frühere/reservierte Wert
 gebunden und16 konkrete Eingaben offline erzeugt.
 [Konkreter unabhängiger Inputreview](STLESS003-INPUT-REVIEW.md) bestanden;
 native Rollen-/Positionslegalität bleibt vor Main zu prüfen.
+Vorregistrierung8fe0c56 und CI43654313116 erfolgreich; Manifest und vollständige
+512+33 Jobpläne sind vor Technik veröffentlicht.
 
 Die überprüfte globale Administrationsfortsetzung wurde nach Veröffentlichung
 `d143d3e` und erfolgreicher CI43653104526 tatsächlich ausgeführt. Kein Reset:

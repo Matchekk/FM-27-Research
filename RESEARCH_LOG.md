@@ -1,5 +1,14 @@
 # Research Log
 
+## 2026-11-15 – TACT-003 registrierter IP/OOP-Pilot
+
+- Konkrete Eingaben, Hypothese und unabhängige Reviews in8fe0c56 veröffentlicht;
+  CI43654313116 erfolgreich. Tatsächliches Manifest und512+33 Jobpläne an diesen
+  Stand gebunden. Noch0 native TACT-Aufrufe.
+- Quellen-/Patchstand vor Technik erneut geprüft; MacHEAD unverändert.
+  Native Rollen-/Positionslegalität und16 A/A-Paare sind das nächste Gate,
+  nicht bereits durch die Offlineprüfung bewiesen.
+
 ## 2026-11-15 – getrennte TACT-003-Vorbereitung nach geprüfter Administration
 
 - Terminalbericht und neue Controller-Epoche ind143d3e auforigin/main;

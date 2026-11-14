@@ -1,0 +1,22 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "phase": "technical",
+  "checked_utc": "2026-11-14T23:43:59.065371+00:00",
+  "checked_local_date": "2026-11-15",
+  "decision": "NOVEL_HYPOTHESIS",
+  "overlap": [
+    "MAC-06",
+    "MAC-07",
+    "MAC-07B",
+    "MAC-19",
+    "FM27-FMAX-LAB",
+    "TACT-002-R0"
+  ],
+  "mac_head": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+  "windows_lab_current_head": "cdda4be7280aa74681f015c02be77d7b47eacc4a",
+  "local_build": "27.0.1+2503222",
+  "validated_adapter_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+  "official_updates_url": "https://community.sports-interactive.com/forums/forum/905-fm27-updates",
+  "source_scope": "Official index rechecked via web; unchanged two English topic listing and27.0.1 launch reference in accessible rendered view. No universal latest-version claim. Local source/resource/DLL identities locked and rehashed before phase. Additional Harvestgreen and creator originals reviewed before seed reservation.",
+  "native_calls_in_this_preflight": 0
+}
