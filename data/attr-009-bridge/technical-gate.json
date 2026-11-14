@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "published_commit": "06f1aeb22c88eb1188c35cae5a7cdb3b453c7740",
+  "ci_run": 43617519052,
+  "independent_review_document": "docs/round3/TECH-REVIEW.md",
+  "independent_review_sha256": "ec8279a3e6f590064a85fd1834d4580e11ef04421caad543c0babe2867cb1fe3",
+  "scope": "384 fixed ATTR009 main matches only; raw60->80; mechanism unidentified; no holdouts/career/MECH"
+}
