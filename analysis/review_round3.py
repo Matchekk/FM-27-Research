@@ -278,8 +278,50 @@ def attr_results(directory):
     adjusted = holm5([effects[m]['p'] for m in ENDPOINTS[1:]])
     for endpoint, p in zip(ENDPOINTS[1:], adjusted, strict=True):
         effects[endpoint]['p_holm'] = p
-    return dict(n_matches=384, independent_blocks=32, effects=effects,
-                planning=future_n(effects['xgd']['context_sd']), blocks=all_blocks)
+    result = dict(n_matches=384, independent_blocks=32, effects=effects,
+                  planning=future_n(effects['xgd']['context_sd']), blocks=all_blocks,
+                  published_effects_verified=False)
+    if (directory/'effects.json').exists():
+        compare_published(result, directory)
+        result['published_effects_verified'] = True
+    return result
+
+
+def compare_published(independent, directory):
+    """Assert equality to publication only after independently building results."""
+    published = read(directory/'effects.json')
+    def equal(a, b, label):
+        if a is None or b is None:
+            need(a is b, 'Published null differs: '+label)
+        elif isinstance(a, list):
+            need(len(a) == len(b), 'Published list shape: '+label)
+            for x, y in zip(a, b, strict=True):
+                equal(x, y, label)
+        else:
+            need(math.isclose(a, b, abs_tol=1e-10, rel_tol=1e-10), 'Published numeric differs: '+label)
+    need(published['n_matches'] == 384 and published['independent_seed_blocks'] == 32, 'Published sample size')
+    for endpoint in ENDPOINTS:
+        source = published['primary'] if endpoint == 'xgd' else published['secondary'][endpoint]
+        direct = independent['effects'][endpoint]
+        for field in ('mean', 'se', 'df', 'ci', 'p', 'bootstrap_ci'):
+            equal(direct[field], source[field], endpoint+':'+field)
+        if endpoint != 'xgd':
+            equal(direct['p_holm'], source['p_holm'], endpoint+':Holm5')
+        for i, h in enumerate(CONTEXTS):
+            equal(direct['context_sd'][i], source['context'][h]['sd'], endpoint+':'+h+':SD')
+            equal(direct['context_mean'][i], source['context'][h]['mean'], endpoint+':'+h+':mean')
+    for assumption, plans in independent['planning'].items():
+        for expected, source in zip(plans, published['planning'][assumption]['power90'], strict=True):
+            need(source['seeds_per_context'] == expected['seeds_per_context'] and
+                 source['matches'] == expected['matches'] and source['independent_blocks'] == 2*expected['seeds_per_context'], 'Future planning minimum/count')
+            for field in ('effect', 'power', 'full_width'):
+                equal(expected[field], source[field], 'Future planning '+field)
+    direct = {(r['scenario'], r['seed'], r['endpoint']): r['value'] for r in independent['blocks']}
+    published_blocks = rows(directory/'block-contrasts.jsonl')
+    indexed = {(r['scenario'], r['seed'], r['endpoint']): r['value'] for r in published_blocks}
+    need(len(published_blocks) == len(indexed) == len(direct) == 192 and indexed.keys() == direct.keys(), 'Published complete blocks')
+    for key, value in direct.items():
+        equal(value, indexed[key], 'Block contrast')
 
 
 def one_event(data, name):
