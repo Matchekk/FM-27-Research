@@ -1,5 +1,14 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Aus dem Multi-Agent-Programm
+
+[Sieben Fach-/Reviewberichte](docs/program-2026-11-14/README.md) priorisieren
+Rollenmechanismen und technische Messgates. Nächster sinnvoller konkreter Auftrag:
+TACT-Rollenmanifest/PI-/Recorddiff-Audit für eigenen ST/AMC-2×2-Suchraum entwickeln
+und technisch vorregistrieren; erst nach Freigabe neuer512-Match-Varianzpilot.
+ATTR-Brücke, MECH-Startpolicy, SET-Exposition und TRAIN-Replikation danach nach
+technischer Reife entscheiden. Keine automatische Hauptserie aus dieser Roadmap.
+
 ## Nach P1C – neue Forschungsfaktoren statt Dauertest
 
 [Unabhängiger D15-Seedpilot](experiments/TACT-001-P1C-results.md) vollständig:

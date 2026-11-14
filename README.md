@@ -1,5 +1,12 @@
 # FM27 Meta Research
 
+> **Multi-Agent-Programm:** sieben tatsächliche Codex-Spezialisten mit getrennten
+> Berichten, unabhängiger Nachrechnung und zentraler Native-/Seedkoordination.
+> [Gesamtauswertung und Budgets](docs/program-2026-11-14/README.md) ·
+> [Review](docs/program-2026-11-14/REVIEW.md) · [aktualisierte Roadmap](docs/ROADMAP.md).
+> Neue Programmarbeit: Recherche/Design und geprüfte Offline-Exklusivlease;
+> keine zusätzliche native Serie, keine Holdoutnutzung oder Karriereausführung.
+
 > **TACT-001-P1C abgeschlossen:**512 gültige Hauptmatches,128 neue Seedblöcke,
 > D15 gegen D00. Punkte+0,098/Match,95-%-KI[−0,137;+0,333],p=0,412.
 > Vorregistrierte Relevanz-/Präzisionsregel nicht erfüllt: neue Rollen/OOP-Strukturen

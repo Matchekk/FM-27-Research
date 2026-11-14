@@ -140,6 +140,62 @@
       "locally_independently_reproduced": false,
       "raw_data_audited": false,
       "caveats": "See docs/EXTERNAL_RESEARCH.md; unknown hashes/seeds/correction remain unknown."
+    },
+    {
+      "id": "EXT-MAC-003",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/03-tactical-familiarity.md",
+      "source_version": "849b16f9c4057598da33b255649c86d8cecb525b",
+      "accessed": "2026-11-14",
+      "author_reported_build": "27.0.1; exact study DLL unknown",
+      "author_reported_matches": null,
+      "count_note": "Author reports6900 first dose-part matches and8400 later area/level sweep matches; combined unique job count not independently reconciled.",
+      "evidence": "external_exploratory",
+      "source_family": "mac-author",
+      "locally_independently_reproduced": false,
+      "raw_data_audited": false,
+      "caveats": "Artificial record components, not career learning per session; see TRAIN/MECH program reports."
+    },
+    {
+      "id": "EXT-MAC-012",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/12-thresholds.md",
+      "source_version": "849b16f9c4057598da33b255649c86d8cecb525b",
+      "accessed": "2026-11-14",
+      "author_reported_build": "27.0.1; exact study DLL unknown",
+      "author_reported_matches": 21000,
+      "count_note": "Author-reported, not locally recounted",
+      "evidence": "external_exploratory",
+      "source_family": "mac-author",
+      "locally_independently_reproduced": false,
+      "raw_data_audited": false,
+      "caveats": "Exploratory dose/knee search; xPts is not actual points and no universal threshold is established."
+    },
+    {
+      "id": "EXT-MAC-017",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/17-positions-in-and-out-of-possession.md",
+      "source_version": "849b16f9c4057598da33b255649c86d8cecb525b",
+      "accessed": "2026-11-14",
+      "author_reported_build": "27.0.1; exact study DLL unknown",
+      "author_reported_matches": 4800,
+      "count_note": "Author-reported, not locally recounted",
+      "evidence": "external_exploratory",
+      "source_family": "mac-author",
+      "locally_independently_reproduced": false,
+      "raw_data_audited": false,
+      "caveats": "Study17/17b: author-reported3200+1600; tested position caps, not crossed JR/Acc/Pace interventions. Same author/tool family; private rawjobs."
+    },
+    {
+      "id": "EXT-MAC-005",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/05-everything-else.md",
+      "source_version": "849b16f9c4057598da33b255649c86d8cecb525b",
+      "accessed": "2026-11-14",
+      "author_reported_build": "27.0.1; exact study DLL unknown",
+      "author_reported_matches": 53700,
+      "count_note": "Author-reported35400 screen plus18300 follow-up matches;125 reported changes not independently reconciled with header counts.",
+      "evidence": "external_exploratory",
+      "source_family": "mac-author",
+      "locally_independently_reproduced": false,
+      "raw_data_audited": false,
+      "caveats": "Both sharpness fields changed together; selected followups, private rawjobs, Mac custom/natural policy differs from Windows controlled defaults. Not career learning evidence."
     }
   ]
 }

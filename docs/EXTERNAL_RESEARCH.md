@@ -30,3 +30,27 @@ Neue Forschung wird bevorzugt, wenn sie einen klaren Mehrwert bietet: kausal
 getrennte Interaktionen, kontrollierte Eckexposition, Trainingsableger, gehaltene
 Gegner und Tore/Punkte dort, wo xG den Mechanismus nicht abbildet. Ein weiteres
 ungeprüftes globales Attributranking ist nachrangig.
+
+## Multi-Agent-Ergänzung14.11.2026
+
+Neue Einträge im maschinenlesbaren Register, bisherige Einträge unverändert:
+
+| ID | Version / Quelle | Datengrundlage / Evidenz | Forschungsentscheidung |
+|---|---|---|---|
+| EXT-MAC-003 | [Study3](https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/03-tactical-familiarity.md),Commit849b16f |6900 im ersten Dosisteil und8400 in späteren Sweeps berichtet, keine unabhängig abgeglichene gemeinsame Jobzahl; künstlich festgesetzte Recordkomponenten | Keine Trainingswochen-/Karriere-Lernwirkung daraus ableiten; [TRAIN](program-2026-11-14/TRAIN.md). |
+| EXT-MAC-012 | [Study12](https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/12-thresholds.md),gleicher Commit |21000 berichtete Matches, explorative Dosis-/Knieanalyse auf xPts | Eigene lokale vorab definierte Inkremente statt universeller Schwellenbehauptung; [ATTR](program-2026-11-14/ATTR.md). |
+| EXT-MAC-017 | [Study17/17b](https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/17-positions-in-and-out-of-possession.md),gleicher Commit |3200+1600 berichtete Positionsrating-Versuche; Definitionscode geprüft, Rohjobs privat | Reiner Positionsrating-Haupteffekt wäre Doppelarbeit. Relative JR-vs-Speed×Ratingmasken-Interaktion fehlt in diesen geprüften Spezifikationen; keine weltweite Neuheitsgarantie. |
+
+[Sieben getrennte Fach-/Reviewberichte und Gesamtauswertung](program-2026-11-14/README.md)
+erweitern die Quellenkritik mit Versions-, Endpunkt-, Stichprobeneinheits- und
+Reproduktionsgrenzen. Derselbe Mac-Autor/Host/Club bleibt eine Quellenfamilie.
+Das Lesen eines Berichts oder Definitionscodes ist keine unabhängige Wiederholung
+seiner Matchdaten. Kein zusätzlicher nativer Lauf oder Holdoutzugriff hier.
+
+EXT-MAC-005: [Everything else](https://github.com/caiograco289/Fm-Match-Lab/blob/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/05-everything-else.md),
+gleicher Mac-Commit. Autor nennt35400Screen-/18300Folgematches; breite Suche,
+selektierte Folgebedingungen und privat gebliebene Rohjobs.125berichtete Änderungen
+sind hier nicht vollständig mit den Kopfzahlen abgeglichen. Beide Schärfefelder
+wurden gemeinsam verändert; keine isolierte Einzelfeld- oder Karriere-Lernwirkung.
+[MECH-Bericht](program-2026-11-14/MECH.md) erklärt die Windows-Normalisierungs-
+und Experimental-API-Grenzen und den neuen, technisch blockierten Schärfepilot.

@@ -193,3 +193,20 @@ die alte Forschungsumgebung erhalten; nie Spiel-DLLs oder Saves in Git aufnehmen
 
 Weitere Planung: [Gesamtroadmap](ROADMAP.md), [externe Evidenz](EXTERNAL_RESEARCH.md),
 [TACT-001](../experiments/TACT-001-discovery.md), [VALID-002](../experiments/VALID-002-adapter.md).
+
+## Multi-Agent-Vorarbeit14.11.2026
+
+[Koordination und Dateiverantwortung](program-2026-11-14/COORDINATION.md),
+[technischer Gap-Bericht](program-2026-11-14/VALID.md) und
+[Gesamtprogramm](program-2026-11-14/README.md) trennen Recherche von Ausführung.
+`research/coordination.py` stellt eine freiwillige lokale Exklusivlease für neue
+kooperierende Supervisoren bereit; vier echte Offline-Tests prüfen Konkurrenz,
+Crashretention, Eigentumsbelege und Workerdeklaration. **Kein bestehender Runner
+ist integriert**, keine aktive globale Prozess-/Seed-/Zeitbegrenzung allein dadurch.
+Director serialisiert weiterhin alle nativen Tätigkeiten. Keine Registryänderung
+oder neue native Simulation durch das Programm.
+
+Der bestehende kontrollierte Startnormalisierer überschreibt unter anderem
+Fitness/Schärfe. Profil-/Stärke-/Mechanikstudien benötigen deshalb eigenen opt-in
+Eingabevertrag und passive Readbacks, keine bloßen JSON-Änderungen. Karriereexecutor,
+RNG-Replikate, individuelle Teilnahme und Standardexposition bleiben separate Gates.

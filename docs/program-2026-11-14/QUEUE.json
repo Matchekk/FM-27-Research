@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "kind": "research_program_plan_not_executable",
+  "date": "2026-11-14",
+  "user_max_concurrent_subagents": 4,
+  "session_total_slots_including_director": 4,
+  "observed_max_concurrent_subagents": 3,
+  "native_policy": {
+    "supervisors": 1,
+    "max_engine_workers": 4,
+    "registry_writer": "director_only",
+    "new_native_matches_in_program": 0,
+    "new_seed_reservations_in_program": 0,
+    "holdout_access": false,
+    "career_execution": false
+  },
+  "prior_authorized_study": {
+    "id": "TACT-001-P1C",
+    "main_matches": 512,
+    "independent_blocks": 128,
+    "technical_full_matches": 16,
+    "expected_rejections": 1,
+    "publication_commit": "a1c85979ecf57ec160954eafb31e1d910728e744",
+    "ci_run": 43606391029,
+    "ci_conclusion": "success"
+  },
+  "dispatch_order": [
+    "tactics_researcher",
+    "attribute_researcher",
+    "validation_engineer",
+    "independent_reviewer:P1C",
+    "training_researcher",
+    "set_piece_researcher",
+    "match_engine_researcher",
+    "attribute_researcher:Study17_followup",
+    "independent_reviewer:final_program"
+  ],
+  "agents": [
+    {
+      "number": 1,
+      "role": "TACT",
+      "actual_codex_task": "/root/tactics_researcher",
+      "status": "complete",
+      "report": "TACT.md",
+      "report_lf_sha256": "b296d777b7ca9eedf87ec2c3105f2b30fb4a35829228bf987a9823e0faabfe00"
+    },
+    {
+      "number": 2,
+      "role": "ATTR",
+      "actual_codex_task": "/root/attribute_researcher",
+      "status": "complete",
+      "report": "ATTR.md",
+      "report_lf_sha256": "e9ba2d988ba218615bbd8ebb9cf561c3ad655a5d7bb32cd34521efed88698f03"
+    },
+    {
+      "number": 3,
+      "role": "TRAIN",
+      "actual_codex_task": "/root/training_researcher",
+      "status": "complete",
+      "report": "TRAIN.md",
+      "report_lf_sha256": "d63a971f7adfa440f792d137f216414c70c87d6b722d31d7f57ab0cfb8d46b50"
+    },
+    {
+      "number": 4,
+      "role": "SET",
+      "actual_codex_task": "/root/set_piece_researcher",
+      "status": "complete",
+      "report": "SET.md",
+      "report_lf_sha256": "46bff24788ec79550cf2237dc0ec6616f1cef3eacb6d86c810107c9d7c445c75"
+    },
+    {
+      "number": 5,
+      "role": "MECH",
+      "actual_codex_task": "/root/match_engine_researcher",
+      "status": "complete",
+      "report": "MECH.md",
+      "report_lf_sha256": "bf6960357fbc647af51264612f81678c564daba9052ef8a65b9cc449a245115b"
+    },
+    {
+      "number": 6,
+      "role": "VALID",
+      "actual_codex_task": "/root/validation_engineer",
+      "status": "complete",
+      "report": "VALID.md",
+      "report_lf_sha256": "869862479fffd7420618d7b27136d6612dfbbf66ddb250e9a71bfdcb9792c9c0"
+    },
+    {
+      "number": 7,
+      "role": "REVIEW",
+      "actual_codex_task": "/root/independent_reviewer",
+      "status": "complete",
+      "report": "REVIEW.md",
+      "report_lf_sha256": "eb45cfc53a40301bb5d30bded303a73a0b5d289707714cb8c6a93f7bbdc35770"
+    }
+  ],
+  "offline_code": {
+    "module": "research/coordination.py",
+    "integrated_with_existing_runners": false,
+    "tests": 4,
+    "tests_native_execution": false,
+    "module_lf_sha256": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e",
+    "test_lf_sha256": "40bd9680b73f7e2744afba7e10161740c275662fec257803ec54c3ccef75662a"
+  },
+  "reviewed_for": "publication of research plans and opt-in offline helper only",
+  "scientific_execution_released": false,
+  "pending_agent_tasks": [],
+  "stop_after_publication": true
+}

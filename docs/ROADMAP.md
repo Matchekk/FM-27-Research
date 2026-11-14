@@ -1,5 +1,36 @@
 # Forschungsroadmap – FM27 Research 2.0
 
+## Aktualisierte Priorität – Multi-Agent-Programm14.11.2026
+
+[Gesamtauswertung mit sieben getrennten Berichten](program-2026-11-14/README.md)
+und [unabhängiger Review](program-2026-11-14/REVIEW.md) ergänzen die ursprüngliche
+Planung unten. Das Programm ist Recherche/Design und Offlinevorarbeit, keine
+Freigabe zusätzlicher nativer Hauptserien.
+
+1. **TACT-Rollenmanifest und kleiner ST/AMC-Pilot:** erst32 technische Vollmatches
+   plus Negativprobe mit vollständigen Rollen-/PI-/Phasenreadbacks; danach eigener
+   neuer512-Match-Vertrag. P1C verfehlt die Punkte-Hinweisregel; D15/D09 archivieren.
+2. **VALID-003 und Startpolicy-Audits:** positionsabhängige Profile/Stärken,
+   kapazitätserhaltende PKM und individuelle Eingriffspfade. Standardnormalisierung
+   überschreibt Fitness/Schärfe; normale JSON-Änderung genügt nicht. Keine bestehende
+   Freigabe still erweitern. Neue opt-in Exklusivlease ist noch nicht in Runner integriert.
+3. **ATTR-Brücke statt globalem Ranking:** JR-vs-Speed×ungenutzte Positionsratings
+   gezielt kreuzen. Externe Study17/17b untersucht Positionsratings bereits;
+   neuer Mehrwert ist die spezifische Attributinteraktion, nicht ihre Haupteffektreplikation.
+  512/1024-Match-Varianzpilot oder nach eigenem Familien-/Technikumbau384/768.
+4. **MECH:** isolierbare Startzustände erst nach Schreib-/Readbackgate; Familiarity
+   und künstliche Executionrecords nicht mit Karriere-Lernwirkung gleichsetzen.
+5. **SET-Messkette:** tatsächliche Ausführung, Schuss-xG, Besitz-/Konterattribution
+   zuerst. Bestehender SET-001-Draft hat64/32-Block- und Endpunktwidersprüche;
+   archivieren und vor neuer Registrierung konsistent versionieren, keine Leistungsserie.
+6. **TRAIN-Karrierefundament:** unabhängige Save-/RNG-Cluster, Kalender-/Teilnahme-
+   receipts und Roh-/Anzeigeeinheiten. Kleine/große Karrierepiloten bleiben blockiert;
+   kein Ersatz durch isolierte Einzelmatches und keine Power aus22 Spielern.
+
+Alle Budgets, SD-Annahmen, Informationsraten und Blocker stehen in den Fachberichten.
+Die folgende Ursprungstabelle bleibt als damalige Modulplanung erhalten; die
+aktuelle Reihenfolge und Freigabereife ergeben sich aus dieser Ergänzung.
+
 Stand 14.11.2026. Keine der folgenden Serien wurde in diesem Auftrag ausgeführt.
 Erkenntnisziel: eigene belastbare Lösungen innerhalb benannter Kontexte entwickeln.
 Ein globales Ranking aller denkbaren Taktiken oder Attribute ist kein identifizierbares

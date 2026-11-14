@@ -265,3 +265,32 @@ Hinweisregel nicht erfüllt; expliziter Wechsel zu Rollen/OOP empfohlen.
 SD-/Powerplanung,128 Blöcke,529 Versuchsplätze und151 historische Dateihashes.
 Nachfolgender Multi-Agent-Auftrag startet ausschließlich Recherche/Planung
 und klar getrennte Offlinevorarbeiten, keine weitere native Hauptserie.
+
+## 2026-11-14 – tatsächliches Multi-Agent Scientific Program abgeschlossen
+
+Sieben eigenständige Codex-Subagents TACT/ATTR/TRAIN/SET/MECH/VALID/Independent
+Review in parallelen Wellen; maximal drei gleichzeitig neben dem Director,
+weitere Aufgaben in Warteschlange. Getrennte Verantwortungsdateien, zentrale
+Registry-/Nativekoordination, keine konkurrierenden Runner-/Seedwrites.
+[Gesamtauswertung](docs/program-2026-11-14/README.md),
+[Agenten-/Hashabschluss](docs/program-2026-11-14/QUEUE.json),
+[unabhängige Schlussprüfung](docs/program-2026-11-14/REVIEW.md).
+
+Neu: kleine optionale Exklusivlease mit vier echten Konkurrenz-/Crash-/Eigentums-
+/Workercap-Tests; bestehende Runner nicht integriert.52 Repositorytests und5
+historische Analysetests bestanden. P0/P1B/P1C-Verifier und Archivschutz bestehen;
+151 historische Forschungsdateien bleiben unverändert. Alle zehn früheren
+Quellenregistereinträge erhalten, vier neue quellenkritisch ergänzt.
+
+Review präzisierte sieben TACT-Sekundärpaare, neutrale xPts-Verwertungsgrenze,
+SET-Bootstrap-Nullnennerregel und getrennte Mac-Study3-Teilzahlen. Kontraste,
+Power-/Kosten-/Replikatarithmetik und ausgewählte Primärquellen unabhängig
+geprüft. Sechs Berichtshashes binden den freigegebenen Stand. Bestehende
+SET-/MECH-Draftwidersprüche dokumentiert; kein historischer Vertrag umgeschrieben.
+
+Keine neue native Simulation, Seedreservierung, Holdoutnutzung oder
+Karrierefortschreibung innerhalb dieses Programms. Der zuvor separat autorisierte
+P1C-Abschluss ist in a1c85979ecf57ec160954eafb31e1d910728e744 veröffentlicht,
+CI43606391029 erfolgreich. Neue Rollen-, Profil-, Startpolicy-, PKM-, Standard-
+und Karrieregates bleiben offen. Nach finalem Diff-/CI-/Pushabschluss stoppen;
+keine automatische Hauptserie oder weitere Optimierung.
