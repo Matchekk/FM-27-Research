@@ -8,9 +8,10 @@ MECH-004-SPLIT-R0 ist nach bestandenem TECH32+1 in der Hauptserie terminal
 abgebrochen.224 akzeptierte Matches sind kein vollständiger Leistungsversuch;
 kein Retry, keine Ersatzseeds und keine Wiederaufnahme. Sämtliche Reservierungen
 und Zeiten bleiben verbraucht. Nächster unabhängiger Gegenstand ist
-TACT-003-STLESS-R0: IP/OOP-Paketinteraktion. Vor dessen eigener Technik sind
-geprüfte administrative Bereinigung des globalen Stopps, separate Code-/Input-
-und CI-Gates erforderlich. Das beendet den alten Studienpfad dauerhaft.
+TACT-003-STLESS-R0: IP/OOP-Paketinteraktion. Administrative Fortsetzung, eigene
+Code-/Input-/CI-Gates und TECH32+1 sind bestanden. Jetzt neue unabhängige
+Technikfreigabe veröffentlichen; erst nach erfolgreicher CI512Mainmatches.
+Der alte Studienpfad bleibt dauerhaft beendet.
 Der gemeinsame MECH-002-Effekt und terminales MECH-003 werden nicht wiederholt.
 [Fortschritt und verbleibende Fragen](docs/night-002/OVERNIGHT_REPORT.md).
 

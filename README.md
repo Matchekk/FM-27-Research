@@ -2,7 +2,8 @@
 
 > **NIGHT-002, neuer Auftrag:** Quellenrefresh und zehn konkrete Kandidaten;
 > C90/C7A-Technik bestanden, Hauptserie nach224 Matches technisch abgebrochen;
-> kein Leistungsbefund. Unabhängiger IP/OOP-Paketpilot vorbereitet. [Mission](docs/night-002/README.md) ·
+> kein Leistungsbefund. Unabhängiger IP/OOP-Paketpilot nativ technisch freigegeben.
+> [Mission](docs/night-002/README.md) ·
 > [konsolidierter Bericht](docs/night-002/OVERNIGHT_REPORT.md).
 > NIGHT-001 bleibt abgeschlossen; alte Budgets und terminale Studien bleiben erhalten.
 

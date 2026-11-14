@@ -1,0 +1,20 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "approved_for_main": true,
+  "summary_sha256": "3cf069aae3c60dcbfd2a3b2fb926645f691076fade567efe7165f3fdc817b2bf",
+  "review_sha256": "f1f11a93058455fa56d70aa970f8b516fb478b365a27130fce0f307cda1212f5",
+  "full_matches": 32,
+  "negative_rejections": 1,
+  "exact_aa_pairs": 16,
+  "actual_actor_phase_cells_verified": 1408,
+  "native_profiles_verified": 33856,
+  "native_attribute_values_verified": 101568,
+  "all_cleanup_confirmed": true,
+  "call_admission_proofs_replayed": 33,
+  "cumulative_call_seconds": 943.2060000000274,
+  "public_and_private_evidence_verified": true,
+  "reviewer_native_calls": 0,
+  "isolated_role_mechanism_identified": false,
+  "career_released": false,
+  "scope": "Registered512main after publication of this review/release and successful exact-commitCI; all runtime admissions and unchanged budgets remain required. No resumption of terminalMECH004."
+}

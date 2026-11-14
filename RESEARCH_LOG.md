@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-11-15 – TACT-003 native Positions-/Rollenabnahme bestanden
+
+- 32 technische Vollmatches und erwartete Exit108-Negativprobe nach erfolgreicher
+  Jobplan-CI43654718507 ausgeführt. Alle vier IP/OOP-Pakete nativ legal und
+  auf den unveränderten Akteuren angekommen;16 exakte A/A-Paare bestanden.
+- Unabhängiger Rohreview bestätigt1408 Akteurphasenzellen,33856 Profilwerte,
+  101568 Attribute,2944 vorbereitete/erste Akteurzustände sowie alle33
+  Kernelbereinigungen und Claim-Envelope-Belege. Keine Leistungsanalyse.
+- Eigene Phasenchildzeit75,6647733s, global697,1870802s; separat943,206s
+  kumulierte Calls einschließlich alter838,064s. Alter MECH-Etat/545Reservierungen
+  unverändert erhalten, keine Livearchivierung, keine neuen Ausfälle/Retry.
+- [Technikbericht](experiments/TACT-003-stless-validation.md),
+  [unabhängiger Review](docs/night-002/STLESS003-TECHNICAL-REVIEW.md).
+  Main erst nach öffentlicher erfolgreicher CI dieser Freigabe.
+
 ## 2026-11-15 – TACT-003 registrierter IP/OOP-Pilot
 
 - Konkrete Eingaben, Hypothese und unabhängige Reviews in8fe0c56 veröffentlicht;

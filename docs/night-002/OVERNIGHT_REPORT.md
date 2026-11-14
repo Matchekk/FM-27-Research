@@ -56,15 +56,15 @@ Vorregistrierung0e535dc/CI43648809178, Registrierungb53c56e/CI43649328317 und
 Technikfreigabe5ea00c8/CI43650461926 lagen jeweils vor ihren freigegebenen
 Aufrufen vor. Der spätere Infrastrukturabbruch wird dadurch nicht beschönigt.
 
-### TACT-003-STLESS-R0: unabhängiger nächster Gegenstand, noch nicht ausgeführt
+### TACT-003-STLESS-R0: Technik bestanden, Mainfreigabe vor Veröffentlichung
 
 Primärfrage: Moderiert das OOP4420-Paket den Effekt des IP4240-Pakets gegenüber
 IP4231/OOP4411? Vorregistrierter2×2-DoD, keine isolierte Rollen-/Positionswirkung.
 [Design](STLESS003-DESIGN.md) und [unabhängiger Neuheitsreview](STLESS003-NOVELTY-REVIEW.md)
-liegen vor.0 neue TACT-Matches;68 neue Seeds gegen2665 frühere/reservierte Werte
-gebunden und16 konkrete Eingaben offline erzeugt.
+liegen vor.32 neue technische TACT-Vollmatches und eine erwartete Negativprobe;
+68 neue Seeds gegen2665 frühere/reservierte Werte gebunden.
 [Konkreter unabhängiger Inputreview](STLESS003-INPUT-REVIEW.md) bestanden;
-native Rollen-/Positionslegalität bleibt vor Main zu prüfen.
+native Rollen-/Positionslegalität ist jetzt für alle16 Zellen bestätigt.
 Vorregistrierung8fe0c56 und CI43654313116 erfolgreich; Manifest und vollständige
 512+33 Jobpläne sind vor Technik veröffentlicht.
 
@@ -74,6 +74,12 @@ bisherige Zeit, alle545 Reservierungen, Fehloperation und eigener MECH-Stopp
 bleiben erhalten. Dauerhaftes MECH-004-Admissionverbot. TACT erhält anschließend
 eigene Input-/Code-/Review-/Publikations-/CI-Gates vor irgendeinem neuen Engineaufruf.
 [Administrativer Receipt](../../data/night-002-stless003/mission-administration.json).
+
+Alle16 A/A-Paare und33 Bereinigungen/Claim-Envelope-Belege bestanden, keine
+unerwarteten TACT-Ausfälle. Eigene Zeit75,665s, global697,187s; separat943,206s
+kumulierte tatsächliche Calls. [Technikbericht](../../experiments/TACT-003-stless-validation.md)
+und [unabhängiger Rohreview](STLESS003-TECHNICAL-REVIEW.md). Noch0 TACT-Mainmatches;
+Main bleibt bis zur erfolgreichen öffentlichen Freigabe-CI gesperrt.
 
 ## C. Technische Fortschritte und Grenzen
 

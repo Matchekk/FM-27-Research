@@ -1,7 +1,8 @@
 # TACT-003-STLESS-R0 – IP/OOP-Paketpilot
 
-Stand vor erster nativer Ausführung:16 konkrete Eingaben offline erzeugt,
-68 neue Seeds gegen2665 frühere/reservierte Werte gebunden. Noch0 TACT-Matches.
+Aktuell: TECH32+1 bestanden und unabhängig geprüft;16 exakte A/A-Paare,
+alle Rollen/Positionen/Akteurzuordnungen nativ bestätigt. Noch0 TACT-Mainmatches.
+68 neue Seeds gegen2665 frühere/reservierte Werte gebunden.
 [Vorregistrierung](../../experiments/TACT-003-stless-preregistration.md) ·
 [Neuheitsprüfung](../../docs/night-002/STLESS003-NOVELTY-REVIEW.md) ·
 [Runnerprüfung](../../docs/night-002/STLESS003-RUNNER-REVIEW.md).
