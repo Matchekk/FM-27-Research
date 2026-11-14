@@ -421,6 +421,36 @@ def technical(public, private, central):
         need(stats_receipt['source'] == 'original_team_statistics', 'Native statistics source')
         for s, team_stats in enumerate(stats_receipt['teams']):
             need(team_stats['side'] == s and all(team_stats[k] == value for k, value in row['team_statistics'][s].items()), 'Native statistics values')
+        # Direct raw profile decoding, independent of the host's success counter.
+        tail_offsets = {9: (0xbb8, 4), 10: (0xbbc, 4), 19: (0x70, 1),
+                        20: (0xca8, 1), 21: (0xca2, 1), 22: (0xca3, 1)}
+        tail_offsets.update({field: (offset, 2) for field, offset in enumerate(
+            (0xc98, 0xc8c, 0xc96, 0xc78, 0xc8a, 0xc90, 0xc7a, 0xc84), 11)})
+        tail_offsets[1] = (0x79, 1)
+        tail_offsets.update({field: (0x72+field-2, 1) for field in range(2, 9)})
+        for kind, s, slot, field, value in recs:
+            if kind != 15:
+                continue
+            player = dump['teams'][s]['players'][slot]
+            if field == 0:
+                need(bytes.fromhex(player['prefix_hex'])[0x6c:0x70] == struct.pack('<f', value/100), 'Native height profile')
+            else:
+                offset, length = tail_offsets[field]
+                blob = bytes.fromhex(player['prefix_hex']) if offset < 0x80 else bytes.fromhex(player['input_tail_hex'])
+                start = offset if offset < 0x80 else offset-0x4c5
+                need(int.from_bytes(blob[start:start+length], 'little') == value, 'Native raw profile field')
+        phases = [e for e in evidence if e.get('event') == 'native_phase_configuration']
+        need(len(phases) == 4 and {(e['side'], e['phase']) for e in phases} == {(s, p) for s in (0, 1) for p in (0, 1)}, 'Actual phase receipt coverage')
+        for phase_receipt in phases:
+            s, phase = phase_receipt['side'], phase_receipt['phase']
+            need(len(phase_receipt['players']) == 11, 'Actual phase players')
+            for logical, actor in enumerate(phase_receipt['players']):
+                cell = config['teams'][s]['phases'][phase][logical]
+                native_slot = inputs['oop_map'][s][logical] if phase else logical
+                native_pi = dump['teams'][s]['personal_instructions'][phase][native_slot]
+                need(actor['slot'] == logical and actor['position'] == positions[cell['position']] and
+                     int(actor['role']) == roles[cell['role']] | int(cell['duty']) and
+                     actor['instruction_flags'] == native_pi['flags'], 'Actual MATCH_PLAYER phase binding')
         for s in (0, 1):
             observed, wanted = dump['teams'][s], config['teams'][s]
             need(observed['side'] == s and observed['count'] == 23 and len(observed['players']) == 23, 'Roster capacity')
@@ -456,6 +486,17 @@ def technical(public, private, central):
     need(negative['status'] == 'expected_rejection' and negative['returncode'] == 108, 'Negative rejection')
     need(hash_file(private/'negative.jsonl') == negative['raw_log_sha256'], 'Negative log hash')
     need(not any(r.get('event') == 'natural_match_finished' for r in rows(private/'negative.jsonl')), 'Negative natural finish')
+    startups = list((private/'technical').glob('part-*/worker_sessions/*/startup_receipt.json'))
+    need(len(startups) == 4, 'Four actual worker startups')
+    hashes = set()
+    for path in startups:
+        receipt = read(path)
+        need(receipt['host_sha256'] == inputs['identity']['adapter_host_sha256'] and
+             receipt['dll_sha256'] == inputs['identity']['engine_sha256'], 'Worker host/engine startup')
+        hashes.add(hash_file(path))
+        lifetime = read(path.with_name('lifetime.json'))
+        need(lifetime['returncode'] == 0 and lifetime['completed'] == lifetime['expected'] == 8 and lifetime['failure'] is None, 'Worker completion')
+    need({r['startup_receipt_sha256'] for r in ledgers} == hashes, 'All worker startup evidence bound')
     return dict(matches=32, readback_cells=24, exact_aa_pairs=8, negative_exit=108,
                 native_attribute_values=32*46*69, profile_fields=32*1058, phase_cells=32*44,
                 pi_groups=32*748, independent_native_execution=False)
