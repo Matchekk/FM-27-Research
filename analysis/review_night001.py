@@ -331,6 +331,235 @@ def audit_observer_runs(central):
         ui_scale_calibrated=False,startpolicy_released=False,career_released=False,reviewer_native_starts=0)
 
 
+def audit_startpolicy_runs(central):
+    """Reconstruct retained technical evidence; never starts a host or reserves seeds."""
+    from datetime import datetime, timedelta
+    from itertools import product
+    central = Path(central).resolve()
+    sys.path.insert(0, str(central))
+    from analysis.run_observer005 import audit_input
+    from research.passive_observer import FIELDS, canonical_hash
+    public = central/'data/mech-002-startpolicy-tech'
+    local = central/'local/mech-002-startpolicy-tech'
+    directory = local/'technical'
+    line_rows = lambda p: [json.loads(v) for v in p.read_text(encoding='utf8').splitlines() if v.strip()]
+    frozen = read(public/'inputs.json'); registration = read(public/'registration.json')
+    commit = registration['preregistration_commit']
+    need(commit == '0744238cbcbd429dd59602f0470b18a1d9f52057', 'Unexpected startpolicy release')
+    need(registration['code_sha256'] == frozen['code_sha256'], 'Registration source inventory drift')
+    current_differences = []
+    for name, wanted in frozen['code_sha256'].items():
+        blob = subprocess.check_output(['git', 'show', commit+':'+name], cwd=central)
+        need(sha256(blob.replace(b'\r\n', b'\n')).hexdigest() == wanted, 'Frozen Gitblob differs: '+name)
+        if normalized_hash(central/name) != wanted: current_differences.append(name)
+    need(normalized_hash(central/'analysis/run_observer005.py') == frozen['code_sha256']['analysis/run_observer005.py'],
+         'Read-only input audit helper source drift')
+    for name in ('inputs.json', 'seed-plan.json', 'job-plan.json', 'review-gate.json'):
+        blob = subprocess.check_output(['git', 'show', commit+':data/mech-002-startpolicy-tech/'+name], cwd=central)
+        need(blob.replace(b'\r\n', b'\n') == (public/name).read_bytes().replace(b'\r\n', b'\n'), 'Published input drift')
+    need(registration['inputs_sha256'] == normalized_hash(public/'inputs.json') and
+         registration['review_gate_sha256'] == normalized_hash(public/'review-gate.json'), 'Registration artifacts differ')
+    seeds = read(public/'seed-plan.json')
+    need(seeds == read(local/'seed-plan.json') == read(central/'local/registry/MECH-002-STARTPOLICY-TECH-V1.reserved.json'),
+         'Seed reservation drift')
+    need(len(seeds['seeds']) == len(set(seeds['seeds'])) == 4, 'Seed uniqueness differs')
+    used = {0}
+    def visit(value, context=False):
+        if isinstance(value, dict):
+            for key, child in value.items(): visit(child, context or key in ('seed','seeds','validation_seeds','effective_seed'))
+        elif isinstance(value, list):
+            for child in value: visit(child, context)
+        elif context and type(value) is int: used.add(value)
+    roots = [p for p in (central/'data').iterdir() if p.is_dir() and p != public]
+    roots += [p for p in (central/'local').iterdir() if p.is_dir() and p != local and
+              p.name.startswith(('valid','tact-','attr-','mech-','platform-smoke'))]
+    for root in roots:
+        for path in root.rglob('*.json*'):
+            if path.suffix == '.json': visit(read(path))
+            elif path.suffix == '.jsonl':
+                for row in line_rows(path): visit(row)
+    for path in (central/'local/registry').glob('*.json'):
+        if path.name != 'MECH-002-STARTPOLICY-TECH-V1.reserved.json': visit(read(path))
+    need(len(used) == seeds['excluded_seed_count'] == 2524 and canonical_hash(sorted(used)) == seeds['excluded_seed_set_sha256'] and
+         not used.intersection(seeds['seeds']), 'Actual historical/reserved seed exclusion differs')
+    expected_seeds = []; counter = 0
+    while len(expected_seeds) < 4:
+        candidate = int.from_bytes(sha256(f"{seeds['namespace']}/{counter}".encode()).digest()[:4], 'little'); counter += 1
+        if candidate not in used and candidate not in expected_seeds: expected_seeds.append(candidate)
+    need(expected_seeds == seeds['seeds'], 'Independent seed allocation reconstruction differs')
+    plan = [dict(key=f'full-{context}-s{side}-sharp{level}-r{repeat}', kind='full', context=context,
+                 side=side, level_raw=level, repeat=repeat, seed=seeds['seeds'][i])
+            for i, (context, side) in enumerate(product(('high_press', 'deep_block'), (0, 1)))
+            for level, repeat in product((10000, 7000), (0, 1))]
+    plan.append(dict(key='negative-malformed', kind='negative', seed=None))
+    need(plan == read(public/'job-plan.json'), 'Independently reconstructed job plan differs')
+    ledger = line_rows(local/'ledger.jsonl')
+    need(len(ledger) == 17 and ledger == line_rows(public/'measurements.jsonl'), 'Measurement ledger differs')
+    accounting = line_rows(public/'job-accounting.jsonl')
+    need(len(accounting) == 17 and len({r['key'] for r in ledger}) == 17, 'Attempt count/retry differs')
+    budget = read(local/'budget.json'); reconciliation = read(local/'technical-reconciled.json')
+    need(file_hash(local/'budget.json') == reconciliation['budget_sha256'] == read(public/'budget.json')['private_budget_sha256'],
+         'Final budget reconciliation digest differs')
+    need(budget['limits'] == {'technical':17, 'main':0} and budget['limit_seconds'] == 180 and
+         budget['wall_limit_seconds'] == 900 and budget['active'] is None and budget['halted'] is False and
+         budget['reserved'] == {j['key']:'technical' for j in plan} and len(budget['operations']) == 1,
+         'Actual fixed budget/state differs')
+    op = budget['operations'][0]; start = datetime.fromisoformat(budget['wall_start_utc'])
+    deadline = datetime.fromisoformat(budget['wall_deadline_utc']); finish = datetime.fromisoformat(reconciliation['completed_utc'])
+    need(op['name'] == op['kind'] == 'technical' and op['keys'] == [j['key'] for j in plan] and
+         op['returncode'] == 0 and op['timed_out'] is False and
+         0 < op['elapsed_seconds'] == budget['charged_seconds'] <= 180 and deadline-start == timedelta(seconds=900) and
+         start <= datetime.fromisoformat(op['start_utc']) < finish <= deadline and
+         (finish-datetime.fromisoformat(op['start_utc'])).total_seconds() >= op['elapsed_seconds'], 'Budget time/accounting differs')
+    need(not (local/'native-cleanup-pending.json').exists() and
+         not (central/'local/global-native/native-execution.lease.json').exists(), 'Unresolved native marker/lease')
+    private_host = read(local/'private-host.json'); host = Path(private_host['observer_host'])
+    build = read(private_host['build_manifest'])
+    need(file_hash(host) == frozen['observer_host_sha256'] and file_hash(Path(private_host['build_manifest'])) == frozen['build_manifest_sha256'] and
+         file_hash(host.parent/'desktop_host.cpp') == build['modified_host_source_sha256'] and
+         file_hash(host.parent/'passive_observer_v1.h') == build['observer_header_sha256'] and
+         normalized_hash(host.parent/'passive_observer_v1.h') == frozen['code_sha256']['adapters/passive_observer_v1.h'],
+         'Actual host/header/modified-source build provenance differs')
+    configs = read(local/'configs.json'); catalog = read(central/'local/runtime-v1114.6/source/tactics_ui/catalog.json')
+    need(file_hash(central/'local/runtime-v1114.6/source/tactics_ui/catalog.json') == frozen['catalog_sha256'], 'Catalog drift')
+    old = central/'local/valid005-observer-v1/inputs'
+    binaries = {}; lineups = {}
+    for context, side in product(('high_press', 'deep_block'), (0, 1)):
+        label = f'{context}-{side}'; baseline = (old/(label+'.bin')).read_bytes()
+        records = tuple(struct.iter_unpack('<5I', baseline[12:]))
+        need(baseline[:8] == b'FM27CFG1' and len(records) == struct.unpack_from('<I', baseline, 8)[0] == 5557,
+             'Original record count/format differs')
+        lineup = {(s,a):v for k,s,a,b,v in records if k == 11 and b == 0}
+        need(len(lineup) == 22, 'Absolute lineup incomplete')
+        affected = {lineup[side,i] for i in range(1,11)}; lineups[label] = lineup, affected
+        for level in (10000, 7000):
+            name = label+f'-sharp{level}'; binary = (local/'inputs'/(name+'.bin')).read_bytes()
+            after = tuple(struct.iter_unpack('<5I', binary[12:]))
+            expected = tuple((k,s,a,b,level) if k == 15 and s == side and a in affected and b in (16,17) else (k,s,a,b,v)
+                             for k,s,a,b,v in records)
+            need(binary[:12] == baseline[:12] and after == expected and not any(r[0] == 61 for r in after) and
+                 sha256(binary).hexdigest() == frozen['setups'][name], 'Unexpected intervention record/source difference')
+            binaries[name] = binary
+    offsets = {1:(0x79,1),9:(0xbb8,4),10:(0xbbc,4),19:(0x70,1),20:(0xca8,1),21:(0xca2,1),22:(0xca3,1)}
+    offsets.update({f:(0x72+f-2,1) for f in range(2,9)})
+    offsets.update({f:(a,2) for f,a in enumerate((0xc98,0xc8c,0xc96,0xc78,0xc8a,0xc90,0xc7a,0xc84),11)})
+    artifacts = {}; traces = {}; results = {}; profile_count = 0; initial_caches = 0; transfers = 0; previous_end = None
+    cache_counts = Counter(); finish_ranges = {k:[] for k in ('sharpness_raw','sharpness_secondary_raw','condition_accumulator_raw')}
+    for job, row, account in zip(plan, ledger, accounting, strict=True):
+        need(all(row[k] == v and account[k] == v for k,v in job.items()) and account['status'] == row['status'] and
+             account['reserved'] is True and row['native_invocation_started'] is True, 'Incomplete job/accounting provenance')
+        key = job['key']; proof = read(directory/(key+'.containment.json')); policy = proof['job_policy']
+        process = read(directory/(key+'.process.json'))
+        need(proof['cleanup_confirmed'] is proof['capsule_exit_confirmed'] is True and proof['kernel_active_processes'] == 0 and
+             policy['active_process_limit'] == 3 and policy['limit_flags'] == 0x2008 and policy['kill_on_close'] is True and
+             policy['breakaway_allowed'] is False and process['membership_verified_before_go'] is True,
+             'Kernel cleanup/admission receipt differs')
+        actual_start = datetime.fromisoformat(process['started_utc'])
+        need(previous_end is None or previous_end <= actual_start, 'Native call timing intervals overlap')
+        previous_end = actual_start+timedelta(seconds=proof['elapsed_seconds'])
+        for suffix in ('.jsonl','.input.json','.stdout','.process.json','.containment.json','.started.json'):
+            path = directory/(key+suffix)
+            if path.is_file(): artifacts['technical/'+path.name] = file_hash(path)
+        need(row['raw_log_sha256'] == file_hash(directory/(key+'.jsonl')) and
+             row['stdout_sha256'] == file_hash(directory/(key+'.stdout')) and
+             row['host_sha256'] == frozen['observer_host_sha256'] and
+             row['engine_sha256'] == frozen['identity']['engine_sha256'], 'Raw artifact/host identity mismatch')
+        evidence = line_rows(directory/(key+'.jsonl'))
+        def one(name):
+            values = [e for e in evidence if e.get('event') == name]
+            need(len(values) == 1, 'Missing/duplicate native event: '+name)
+            return values[0]
+        need(one('native_image_fingerprint')['sha256'] == frozen['identity']['engine_sha256'], 'Actual DLL mismatch')
+        if job['kind'] == 'negative':
+            need(row['status'] == 'expected_rejection' and row['returncode'] == 108 and
+                 one('scenario_rejected')['stage'] == 'initial' and not any(e.get('event') == 'natural_match_finished' for e in evidence),
+                 'Negative cause/exit differs')
+            continue
+        need(row['status'] == 'ok' and row['returncode'] == 0, 'Failed full match')
+        need(one('native_input_seed')['effective_seed'] == job['seed'] and one('native_input_seed')['override'] is True,
+             'Actual seed differs')
+        label = f"{job['context']}-{job['side']}"; name = label+f"-sharp{job['level_raw']}"; binary = binaries[name]
+        need(row['setup_sha256'] == sha256(binary).hexdigest(), 'Actual scenario hash differs')
+        dump = read(directory/(key+'.input.json'))
+        need(file_hash(directory/(key+'.input.json')) == row['input_dump_sha256'], 'Dump hash differs')
+        audit_input(evidence, dump, configs[label], binary, catalog, frozen['oop_map'])
+        for kind, side, slot, field, value in struct.iter_unpack('<5I', binary[12:]):
+            if kind != 15: continue
+            p = dump['teams'][side]['players'][slot]
+            if field == 0: need(bytes.fromhex(p['prefix_hex'])[0x6c:0x70] == struct.pack('<f', value/100), 'Native height differs')
+            else:
+                offset, size = offsets[field]; raw = bytes.fromhex(p['prefix_hex'] if offset < 0x80 else p['input_tail_hex'])
+                at = offset if offset < 0x80 else offset-0x4c5
+                need(int.from_bytes(raw[at:at+size], 'little') == value, 'Native profile differs')
+            profile_count += 1
+        natural = one('natural_match_finished'); stats = one('native_match_statistics')
+        need(natural['full_match_completed'] is True and 0 < natural['tick'] < 47996 and stats['source'] == 'original_team_statistics',
+             'Natural completion/source differs')
+        result = dict(seed=job['seed'], score=natural['score'], tick=natural['tick'], clock=natural['clock'],
+                      team_statistics=[{k:t[k] for k in ('xg','shots','shots_on_target','passes','completed_passes','possession','possession_ticks')}
+                                       for t in stats['teams']])
+        need(result == row['result'], 'Published result differs from native endpoint')
+        results[key] = result; stages = [e for e in evidence if e.get('event') == 'native_passive_state']
+        need([s['stage'] for s in stages] == ['prepared','first_advance','finished'] and stages[0]['tick'] == 0 and
+             stages[1]['advance_ordinal'] == 1 and stages[1]['tick_before'] == 0 and stages[1]['requested_target'] == stages[1]['tick'] == 1 and
+             stages[2]['tick'] == natural['tick'] and stages[2]['clock'] == natural['clock'], 'Actual stages/timing differ')
+        source = {p['id']:p for t in dump['teams'] for p in t['players']}; lineup, affected = lineups[label]
+        selected = []
+        for stage in stages:
+            need(stage['seed'] == job['seed'] and stage['match_version_raw'] == 0x1b000000 and len(stage['players']) == 46,
+                 'Stage identity/version differs')
+            actors = {p['id']:p for p in stage['players']}
+            need(set(actors) == set(source) and {(p['side'],p['roster_index']) for p in actors.values()} == set(product((0,1), range(23))),
+                 'Actor mapping/capacity differs')
+            canonical_players = []
+            for identity, p in sorted(actors.items()):
+                cache = None if p['statistics_cache_region_hex'] is None else bytes.fromhex(p['statistics_cache_region_hex'])[9:11]
+                need(len(bytes.fromhex(p['effectiveness_region_hex'])) == 33, 'TF storage length differs')
+                if stage['stage'] == 'prepared':
+                    tail = bytes.fromhex(source[identity]['input_tail_hex'])
+                    need(all(p[k] == struct.unpack_from('<H', tail, offset-0x4c5)[0] for k,offset in FIELDS.items()) and
+                         p['effectiveness_region_hex'] == tail[0xcba-0x4c5:0xcba-0x4c5+33].hex(), 'Prepared fields not input-dump-bound')
+                if stage['stage'] != 'finished':
+                    expected = job['level_raw'] if p['side'] == job['side'] and p['roster_index'] in affected else 10000
+                    need(p['sharpness_raw'] == p['sharpness_secondary_raw'] == expected and p['condition_raw'] == 10000 and
+                         p['fatigue_raw'] == p['sharpness_penalty_raw'] == 0 and p['condition_accumulator_raw'] == 1000000,
+                         'Initial target/control raw fields differ')
+                    if (p['side'], p['roster_index']) in {(s,lineup[s,i]) for s in (0,1) for i in range(11)}:
+                        need(cache == bytes((100,expected//100)), 'Starting cache transfer differs'); initial_caches += 1
+                    transfers += p['side'] == job['side'] and p['roster_index'] in affected
+                else:
+                    for k in finish_ranges: finish_ranges[k].append(p[k])
+                canonical_players.append({k:p[k] for k in ('id','side','roster_index',*FIELDS,'condition_accumulator_raw',
+                    'sharpness_penalty_raw','effectiveness_region_hex')} | {'cache89_8a': None if cache is None else cache.hex()})
+            cache_counts[sum(p['statistics_cache_region_hex'] is not None for p in actors.values())] += 1
+            selected.append({k:stage[k] for k in ('stage','advance_ordinal','tick_before','requested_target','tick','clock','seed','match_version_raw')} |
+                            {'players':canonical_players})
+        traces[key] = selected
+    for context, side, level in product(('high_press','deep_block'),(0,1),(10000,7000)):
+        prefix = f'full-{context}-s{side}-sharp{level}-r'
+        need(results[prefix+'0'] == results[prefix+'1'] and traces[prefix+'0'] == traces[prefix+'1'], 'Exact A/A mismatch')
+    for context, side, repeat in product(('high_press','deep_block'),(0,1),(0,1)):
+        high = traces[f'full-{context}-s{side}-sharp10000-r{repeat}']; low = traces[f'full-{context}-s{side}-sharp7000-r{repeat}']
+        for h, l in zip(high[:2], low[:2], strict=True):
+            for p, q in zip(h['players'], l['players'], strict=True):
+                need(all(p[k] == q[k] for k in ('id','side','roster_index','condition_raw','fatigue_raw','condition_accumulator_raw',
+                     'sharpness_penalty_raw','effectiveness_region_hex')), 'Initial nonintervened control/TF33 mismatch')
+    need(profile_count == 16928 and transfers == 320 and initial_caches == 704, 'Coverage count differs')
+    for name in ('ledger.jsonl','budget.json','technical-reconciled.json','seed-plan.json','registration.json','configs.json','private-host.json'):
+        artifacts[name] = file_hash(local/name)
+    need(not list(directory.glob('*.failure.json')), 'Retained failed attempt exists')
+    return dict(source_commit=commit, frozen_git_blobs_verified=len(frozen['code_sha256']), current_source_differences=current_differences,
+        full_matches=16, attempts=17, aa_pairs=8, initial_control_pairs=8, negative_initial_108=1,
+        snapshots=48, actor_stage_observations=2208, initial_snapshots=32, target_actor_stage_transfers=transfers,
+        starter_initial_caches=initial_caches, profile_values_verified=profile_count, attribute_values_verified=50784,
+        phase_cells_verified=704, pi_groups_verified=11968, cleanup_receipts=17, cache_counts=dict(cache_counts),
+        charged_seconds=budget['charged_seconds'], private_budget_sha256=file_hash(local/'budget.json'),
+        private_artifact_files=len(artifacts), private_artifact_manifest_sha256=canonical_hash(artifacts),
+        finish_ranges={k:dict(min=min(v),max=max(v)) for k,v in finish_ranges.items()},
+        all_seeds=seeds['seeds'], scientific_main_released=False, ui_scale_calibrated=False, career_released=False,
+        reviewer_native_starts=0)
+
+
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
     parser.add_argument('--observer-directory', type=Path)
@@ -339,6 +568,7 @@ if __name__ == '__main__':
     parser.add_argument('--career-runs-root', type=Path)
     parser.add_argument('--verify-private-career-runs', action='store_true')
     parser.add_argument('--observer-runs-root', type=Path)
+    parser.add_argument('--startpolicy-runs-root', type=Path)
     args = parser.parse_args()
     report = audit_public()
     supplied = [args.observer_directory,args.career_directory,args.upstream]
@@ -350,4 +580,6 @@ if __name__ == '__main__':
         report['career_runs'] = audit_career_runs(args.career_runs_root,args.verify_private_career_runs)
     if args.observer_runs_root:
         report['observer_runs'] = audit_observer_runs(args.observer_runs_root)
+    if args.startpolicy_runs_root:
+        report['startpolicy_runs'] = audit_startpolicy_runs(args.startpolicy_runs_root)
     print(json.dumps(report, indent=2))
