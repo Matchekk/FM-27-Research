@@ -422,7 +422,7 @@ def attr_inputs(public, private, central):
                 full_matches_started_by_review=0, native_gate_passed=False)
 
 
-def technical(public, private, central):
+def technical(public, private, central, study_phase='technical'):
     """Read every actual technical log/dump, compare directly to frozen configs."""
     public, private = Path(public), Path(private)
     inputs, plan = read(public/'inputs.json'), read(public/'seed-plan.json')
@@ -434,15 +434,21 @@ def technical(public, private, central):
     expected = {f'tech-{h}-{s}-{a}-r{repeat}': (h, s, a, plan['technical_seeds'][CONTEXTS.index(h)])
                 for h in CONTEXTS for s in (0, 1) for a in ARMS
                 for repeat in (range(2) if a in ('OJ', 'SJ') else range(1))}
-    ledgers = [r for p in (private/'technical').glob('part-*/ledger.jsonl') for r in rows(p)]
-    need(len(ledgers) == 32 and {r['key'] for r in ledgers} == set(expected), 'Technical coverage')
+    if study_phase == 'main':
+        expected = {f'{h}-{seed}-{s}-{a}': (h, s, a, seed) for j, h in enumerate(CONTEXTS)
+                    for seed in plan['main_seeds'][j*16:(j+1)*16] for s in (0, 1) for a in ARMS}
+    count = 384 if study_phase == 'main' else 32
+    ledgers = [r for p in (private/study_phase).glob('part-*/ledger.jsonl') for r in rows(p)]
+    need(len(ledgers) == count and {r['key'] for r in ledgers} == set(expected), 'Native phase coverage')
     for row in ledgers:
         h, side, arm, seed = expected[row['key']]
         name = f'{h}-{side}-{arm}'
         config = configs[name]
         raw_metrics(row)
+        need(all(row.get(k) == value for k, value in inputs['identity'].items()), 'Native ledger identity')
+        need(row['setup_sha256'] == inputs['setups'][h][str(side)][arm], 'Ledger frozen setup')
         need(row['seed'] == seed and row['tested_side'] == side and row['arm'] == arm, 'Technical seed/binding')
-        paths = list((private/'technical').glob('part-*/'+row['key']+'.jsonl'))
+        paths = list((private/study_phase).glob('part-*/'+row['key']+'.jsonl'))
         need(len(paths) == 1, 'Technical log uniqueness')
         log = paths[0]
         need(hash_file(log) == row['raw_log_sha256'] and hash_file(log.with_suffix('.input.json')) == row['input_dump_sha256'], 'Evidence hash')
@@ -519,17 +525,18 @@ def technical(public, private, central):
             need(attrs[:2] == [0, 0], 'GK/Sweeper untouched')
             need(attrs[2:15] == [20 if arm[0] == 'O' or i in active else 1 for i in range(2, 15)], 'Independent mask union')
             need([attrs[i] for i in (54, 49, 53)] == [80 if arm[1] == a else 60 for a in 'JAP'], 'Independent raw dose')
-    for h in CONTEXTS:
-        for side in (0, 1):
-            for arm in ('OJ', 'SJ'):
-                pair = [r for r in ledgers if r['key'].startswith(f'tech-{h}-{side}-{arm}-')]
-                need(len(pair) == 2 and all(pair[0][k] == pair[1][k] for k in ('score', 'finish_tick', 'team_statistics', 'setup_sha256', 'seed')), 'A/A repeat')
+    if study_phase == 'technical':
+        for h in CONTEXTS:
+            for side in (0, 1):
+                for arm in ('OJ', 'SJ'):
+                    pair = [r for r in ledgers if r['key'].startswith(f'tech-{h}-{side}-{arm}-')]
+                    need(len(pair) == 2 and all(pair[0][k] == pair[1][k] for k in ('score', 'finish_tick', 'team_statistics', 'setup_sha256', 'seed')), 'A/A repeat')
     negative = read(private/'negative-attempt.json')
     need(negative['status'] == 'expected_rejection' and negative['returncode'] == 108, 'Negative rejection')
     need(hash_file(private/'negative.jsonl') == negative['raw_log_sha256'], 'Negative log hash')
     need(not any(r.get('event') == 'natural_match_finished' for r in rows(private/'negative.jsonl')), 'Negative natural finish')
-    startups = list((private/'technical').glob('part-*/worker_sessions/*/startup_receipt.json'))
-    need(len(startups) == 4, 'Four actual worker startups')
+    startups = list((private/study_phase).glob('part-*/worker_sessions/*/startup_receipt.json'))
+    need(len(startups) == count//8, 'Actual worker startup count')
     hashes = set()
     for path in startups:
         receipt = read(path)
@@ -539,14 +546,14 @@ def technical(public, private, central):
         lifetime = read(path.with_name('lifetime.json'))
         need(lifetime['returncode'] == 0 and lifetime['completed'] == lifetime['expected'] == 8 and lifetime['failure'] is None, 'Worker completion')
     need({r['startup_receipt_sha256'] for r in ledgers} == hashes, 'All worker startup evidence bound')
-    return dict(matches=32, readback_cells=24, exact_aa_pairs=8, negative_exit=108,
-                native_attribute_values=32*46*69, profile_fields=32*1058, phase_cells=32*44,
-                pi_groups=32*748, independent_native_execution=False)
+    return dict(matches=count, readback_cells=24, exact_aa_pairs=8 if study_phase == 'technical' else 0, negative_exit=108,
+                native_attribute_values=count*46*69, profile_fields=count*1058, phase_cells=count*44,
+                pi_groups=count*748, independent_native_execution=False)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('phase', choices=('offline', 'inputs', 'technical', 'results'))
+    parser.add_argument('phase', choices=('offline', 'inputs', 'technical', 'main-evidence', 'results'))
     parser.add_argument('--public', type=Path, default=ROOT/'data/attr-009-bridge')
     parser.add_argument('--central', type=Path, default=ROOT)
     parser.add_argument('--game', type=Path)
@@ -559,6 +566,8 @@ def main():
         result = attr_inputs(args.public, args.private or args.central/'local/attr-009-bridge', args.central)
     elif args.phase == 'technical':
         result = technical(args.public, args.private or args.central/'local/attr-009-bridge', args.central)
+    elif args.phase == 'main-evidence':
+        result = technical(args.public, args.private or args.central/'local/attr-009-bridge', args.central, 'main')
     else:
         result = attr_results(args.public)
     print(json.dumps(result, ensure_ascii=False, allow_nan=False, indent=2))
