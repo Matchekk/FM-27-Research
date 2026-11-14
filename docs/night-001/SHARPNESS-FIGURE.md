@@ -68,6 +68,22 @@ tatsächlichen freigegebenen Daten erfolgen; jetzt keine Plotvorlage mit Testzah
   Binär-Goldtest mangels konfiguriertem Pfad übersprungen.
 - Matplotlib 3.10.7 vorhanden. Keine neuen Abhängigkeiten oder alten Dateien.
 - Diff-/Dateigrößenprüfung vor Commit; kein Push durch den Fachagenten.
+
+## Tatsächliche Abnahme nach vollständigem Main
+
+Der Director erzeugte die Grafik nach512 gültigen Matches und der unabhängigen
+Roh-/Mathematiknachrechnung. Actual-Inputgates bestanden. Eine private PNG-Vorschau
+zeigt beide Panels, alle vier Zeilen, Achsen, Kontextkennzeichnung und Fußnoten
+vollständig lesbar. Es wurde keine Benutzeroberfläche bedient.
+
+Der originale Standalone-CLI reproduziert die öffentlich vorgesehene SVG
+bytegleich, SHA256
+`1f177161c85240fe1a3a6971a54451e799200f8965bbecb48f10a57e693d14e0`.
+Eingaben: effects`bb0714ddbd34c2fb478a1b51df54baef7a04cedc101d974c99859ae9c0bfe33a`,
+summary`b59732fc419572e924bf4f222bc9e9744c5c6dcbeeddd324b6d30d71a17ce354`,
+manifest`7b04fbb1505f3f864f0d527117c42f6be1c69be5db06d56e9f1e6a9780ddd264`.
+Nur die eigene Ergebnis-SVG wird veröffentlicht; PNG-Vorschau und native
+Rohartefakte bleiben lokal.
   Director integriert den lokalen Commit auf `main` und prüft die Integrations-CI.
 
 Noch offen: wirkliche Datenpfade/Release, unabhängige Rohbelegprüfung und

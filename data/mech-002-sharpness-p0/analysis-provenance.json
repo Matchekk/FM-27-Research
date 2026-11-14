@@ -1,0 +1,16 @@
+{
+  "experiment_id": "MECH-002-SHARPNESS-P0",
+  "completed_utc": "2026-11-14T21:49:02.335400+00:00",
+  "native_starts_by_analysis": 0,
+  "analysis": "analysis/analyse_sharpness002.py",
+  "source_and_input_sha256": {
+    "analysis/analyse_sharpness002.py": "e9131272561892067abdd1ceb18c02e7267ccb0da2b8680e4db179e8b0f6dec8",
+    "data/mech-002-sharpness-p0/main.jsonl": "593ad0dc202c86339f762e913c15d37d4be85ee4139a1b4cb14a6076c1c670c4",
+    "data/mech-002-sharpness-p0/manifest.json": "7b04fbb1505f3f864f0d527117c42f6be1c69be5db06d56e9f1e6a9780ddd264",
+    "data/mech-002-sharpness-p0/main-summary.json": "4b876e5cc559b044e7402c66dad59f54d447960e2da405de9e837a4207ab7664"
+  },
+  "output_sha256": {
+    "effects.json": "bb0714ddbd34c2fb478a1b51df54baef7a04cedc101d974c99859ae9c0bfe33a",
+    "seed-contrasts.jsonl": "938496e71a82077ac304c4ce2efeb3685e0a9c20110ccc7de6dc6f7c65c575b9"
+  }
+}

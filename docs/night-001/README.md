@@ -138,3 +138,40 @@ Damit96 technische Vollmatches und weiterhin0 wissenschaftliche Hauptmatches
 in NIGHT-001. Die strengere eigene Frist endet23:11:09CET; die globale Nachtfrist
 bleibt00:00CET. Hauptlauf bis unabhängigem Technikreview und dessen erfolgreicher
 Veröffentlichungs-CI gesperrt. Keine UI-, Consumer- oder Karrierefreigabe.
+
+## Hauptlauf abgeschlossen und unabhängig nachgerechnet
+
+Der [Schärfe-Seedpilot](../../experiments/MECH-002-sharpness-results.md) ist mit
+512/512 gültigen Hauptmatches und64 unabhängigen Blöcken vollständig.
+Originales gemeinsames Rohpaket10000 minus7000 bei zehn Startfeldspielern:
++0,477xGD[+0,322;+0,632], tatsächliche Punkte+0,441[+0,242;+0,641],Holm7-p=0,000236.
+Pressing und Wechselwirkung bleiben unklar. Beide Kontextmittel positiv,
+keine finale Taktikauswahl, UI-Skalen- oder Karrierebestätigung.
+
+[Unabhängiger Ergebnisreview](SHARPNESS-RESULTS-REVIEW.md), sämtliche545 Jobs
+und Budgets rekonstruiert:544 Vollmatches plus erwartete Negativabweisung,
+0 unerwartete Ausfälle,0 unbegonnen,0 Ersatz/Retry. Eigene560,5738462/900,
+global792,1520872/1800 Childsekunden; alle Prozesse bereinigt.
+NIGHT-001 insgesamt512 wissenschaftliche Hauptmatches und96 technische
+Vollmatches. Stamina-Main bleibt terminal unbegonnen; die Karriereparsergrenzen
+und sämtlichen historischen Archive bleiben erhalten.
+
+Parallele Atlas-/Scoutingcommits wurden sicher per Merge integriert.
+[Duplikatprüfung](SHARPNESS-DUPLICATE-PREFLIGHT.md) und
+[separate Abnahme](SHARPNESS-DUPLICATE-REVIEW.md) erfolgten vor Main;
+die27 eingefrorenen Quellen blieben unverändert. [Vertiefter externer Audit](EXTERNAL-REPLICATION-AUDIT.md)
+und [Originalquellenreview](EXTERNAL-REPLICATION-REVIEW.md) unterscheiden
+zugänglichen Code von fehlender unabhängiger Rohdatenreplikation.
+
+Die ausdrückliche Abschlussanweisung lautet: kein Computer Use, alle erlaubten
+Änderungen auf main sichern. Keine weitere Recherche, Simulation, Holdout- oder
+Karrierefortschreibung nach dieser Runde. [Technische Prioritäten](PRIORITIES.md)
+sind Folgeplanung und keine automatische Ausführungsfreigabe.
+
+Lokaler Abschluss:381 Repositorytests bestanden, ein optionaler privater
+Goldtest im Standardlauf übersprungen (separat ausdrücklich erfolgreich geprüft),
+fünf historische Analysetests bestanden. Beide Archivprüfungen bestätigen
+340 NIGHT- und272 Round3-Dateien unverändert; ältere Match-/TACT-Analysen und
+der isolierte Stamina-Archivverifier reproduzieren weiterhin die gespeicherten
+Ergebnisse. Öffentliche Main-QA verifiziert nun auch gespeicherte Effekte,
+alle512 abgeleiteten Kontrastzeilen und deren Provenienz unabhängig.

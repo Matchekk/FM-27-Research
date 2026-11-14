@@ -1,4 +1,22 @@
-# MECH-002-SHARPNESS-P0: konkrete Vorbereitung
+# MECH-002-SHARPNESS-P0: abgeschlossener Seedpilot
+
+512/512 gültige Hauptmatches,64 unabhängige Blöcke. Der marginale Effekt des
+gemeinsamen originalen Rohpakets10000 minus7000 beträgt+0,477xGD,
+95-%-KI[+0,322;+0,632]; tatsächliche Punkte+0,441,
+95-%-KI[+0,242;+0,641],Holm7-p=0,000236. Alle Rohbelege und acht Kontraste
+sind unabhängig nachgerechnet. Nur der eingefrorene synthetische Testkontext;
+keine kalibrierte UI-Skala oder Karriere-/Trainingsbestätigung.
+
+[Ergebnisbericht](../../experiments/MECH-002-sharpness-results.md) ·
+[unabhängiger Review](../../docs/night-001/SHARPNESS-RESULTS-REVIEW.md) ·
+[512 Messzeilen](main.jsonl) · [Effekte](effects.json) ·
+[545er-Abrechnung](complete-job-accounting.jsonl) · [Grafik](contrast-intervals.svg).
+545 geplante Jobs vollständig erledigt:544 Vollmatches und eine erwartete
+Negativabweisung;0 unerwartete Ausfälle/Retry/Ersatz/Unbegonnene.
+560,5738462/900 eigene Childsekunden, keine NativeLease/Pendingmarker.
+Der Pilot ist beendet; keine weitere Serie oder Computerbedienung.
+
+## Erhaltener Verlauf der Vorbereitung
 
 Stand 14.11.2026,22:01CET: Das separate TECH17-Transfergate ist tatsächlich
 bestanden und [unabhängig freigegeben](../mech-002-startpolicy-tech/release-gate.json).

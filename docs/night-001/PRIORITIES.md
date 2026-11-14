@@ -5,6 +5,26 @@ Keine automatische Freigabe durch diese Roadmap.
 Keine Holdouts, historischen Seeds oder alten Studienbudgets verwenden.
 Die alten ATTR-/TACT-/TRAIN-Archive bleiben unverändert.
 
+## Aktualisierung nach dem abgeschlossenen Schärfepilot
+
+[512 gültige Hauptmatches](../../experiments/MECH-002-sharpness-results.md)
+belegen einen positiven gemeinsamen Rohpaketeffekt im geprüften D00-Kontext:
++0,477xGD[+0,322;+0,632], tatsächliche Punkte+0,441[+0,242;+0,641].
+Pressing×Paket bleibt unklar. Die unten noch vorgeschlagene512er-Serie ist damit
+erledigt; keine Wiederholung oder automatische Vergrößerung. Globaler Endstand
+792,1520872/1800 Childsekunden; keine laufende native Ausführung.
+
+Die nächste Arbeit braucht einen separaten Auftrag und den aktualisierten
+[Atlas-/Duplikatpreflight](../FM27_EXTERNAL_STUDY_ATLAS_2026-11-14.md).
+ATTR: zuerst realistischere positionsabhängige Profile und deren vollständigen
+nativen Transfer freigeben. SET: tatsächliche Ausführung/Exposition und
+Schuss-/Tor-/Konterzuordnung validieren. TRAIN: Taktikparser, individuelle
+Durchführung und unabhängige Karriere-RNG-Cluster bleiben technische Gates.
+TACT: OOP-/Rollenfragen erst mit klarer zusätzlicher Erkenntnisfrage und
+auditierbaren Profilen. MECH: UI-/Realismus-/Consumertransport klären, statt
+denselben Rohpakethaupteffekt im identischen Fixture unbegrenzt zu wiederholen.
+Keine neue Hypothese oder Seedreservierung wird durch diese Liste gestartet.
+
 ## Aktuelle Entscheidung nach geprüften Ergebnissen
 
 Das [Startpolicy-Transfergate](STARTPOLICY-002-RESULTS.md) ist bestanden und
