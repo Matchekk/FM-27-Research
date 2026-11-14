@@ -158,7 +158,8 @@ def audit_career_runs(central, verify_private=False):
         result = dict(statuses=counts, elapsed_seconds=resources['elapsed_seconds'],
                       peak_job_private_bytes=memory['peak_job_private_bytes'],
                       gates=len(gates), advisory_gates=sum(g['advisory'] for g in gates),
-                      public_coverage_sha256=file_hash(public/profile/'coverage.json'))
+                      public_coverage_sha256=normalized_hash(public/profile/'coverage.json'),
+                      public_coverage_raw_file_sha256=file_hash(public/profile/'coverage.json'))
         if verify_private:
             directory = central/f'local/night-001-career/readonly-{profile.lower()}'
             events = [json.loads(s) for s in (directory/'events.jsonl').read_text(encoding='utf8').splitlines()]
@@ -193,7 +194,7 @@ def audit_career_runs(central, verify_private=False):
         individual_participation_verified=False)
     cross = read(public/'cross-reader.json')
     output['cross_reader_statuses'] = dict(Counter(f['status'] for f in cross['fields']))
-    output['cross_reader_sha256'] = file_hash(public/'cross-reader.json')
+    output['cross_reader_sha256'] = normalized_hash(public/'cross-reader.json')
     output.update(save_opened_or_decoded=False,native_release_granted=False,career_advance_released=False)
     return output
 

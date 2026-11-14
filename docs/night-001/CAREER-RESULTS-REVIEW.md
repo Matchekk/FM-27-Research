@@ -90,11 +90,11 @@ Eine Datei, zwei Reader bleiben ein Quell-Snapshot ohne unabhängige kausale n.
 |attempt.json|`decd3ef29c03c81352b40bac0818dbeb8fc12155b30e1ee2c21b02313a01e18d`|`63269055e0d320b7e9aec94c7058383a02f2f1e8c6e6eb4b13d6ee0b4f161e31`|
 |private-bindings.json|`bf1cf853f5eda409b7d7c8e469238b303bc38f1272ff40293d9ff93f256dd96c`|`bf1cf853f5eda409b7d7c8e469238b303bc38f1272ff40293d9ff93f256dd96c`|
 
-Öffentliche Coveragereceipts: R1
-`db5fe8c2b7c5cc0932f5692fb476be9846e7bec444a3430af7f38b0430fc3315`, R2
-`f9c723f1624b49c1e458b189f96b404f8bf6d11069d292d18c30d518709ce22a`.
+Öffentliche Coveragereceipts, CRLF→LF normalisiert für Gitblobvergleich: R1
+`eded164e2a9ad491a3300e642df2f50cfe48575d99567dc42749bfd879f75987`, R2
+`3880fe39c44c080cd6476c21059724b84292507008343466fa716c21855b4c9f`.
 Cross-reader-Receipt
-`5d5deb67551de91494fba377970c0350ed8f707ef46d425a417dd59c8db4049c`.
+`8851dff415f2108e64f0407def59ae0ab81c087f508269ebf5d765b73af9479f`.
 Quellbelege: [R1](../../data/night-001-career-r1/R1/coverage.json),
 [R2](../../data/night-001-career-r1/R2/coverage.json),
 [Vergleich](../../data/night-001-career-r1/cross-reader.json).
@@ -105,3 +105,16 @@ Er liest ausschließlich öffentliche Receipts und ausdrücklich ausgewählte pr
 JSON-/JSONL-Ledgers, niemals `.fm`. Status-, Ressourcen-, Fehler-, Trainingcode-
 und Ledgerprüfung bestanden. Privattexte und Trägeridentitäten bleiben lokal.
 Alle nativen, UI-, RNG-, Teilnahme-, Replay- und Advancefreigaben bleibenfalse.
+
+## Nachtrag: reine Trainingscode-Abdeckung
+
+Den zusätzlichen Rootaudit gegen das tatsächlich vorhandene0.12.4-Modell
+unabhängig geprüft: Quellenhash
+`d15d0d10430cb1b0e4d8f25721e81ea1e941dec6d8ec9a293277839597fd5fc4`;
+per Python-AST ohne Paketimport genau elf nichtnegative Enumzuordnungen
+extrahiert. Alle Labelpaare stimmen mit dem Audit überein. Separat aus den vier
+R2-Aggregaten summiert:2011 zugeordnete und1244 nicht zugeordnete Slots,
+gesamt3255; Leserlabelabdeckung61,781874%. Drei Audittests bestanden.
+Rawcode0 zählt zutreffend als explizit benannter Code und nicht als Missing.
+Labels bleiben Readersemantik, unbekannte Codes bleiben erhalten; keine
+Expositions-, Teilnahme-, UI- oder Trainingseffektbehauptung. Kein neuer Savezugriff.
