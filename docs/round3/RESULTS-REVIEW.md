@@ -1,8 +1,8 @@
 # Runde 3 – unabhängiger Ergebnisreview
 
 14.11.2026. **ATTR-009 vollständig und unabhängig nachgerechnet. Die tatsächlichen
-Ergebnisse sind mit den unten genannten Grenzen veröffentlichbar, vorbehaltlich
-finaler Directorübersichten und Integrations-CI.** Keine Freigabe zusätzlicher
+Ergebnisse samt finalen Directorübersichten sind mit den unten genannten Grenzen
+veröffentlichbar, vorbehaltlich erfolgreicher Integrations-CI.** Keine Freigabe zusätzlicher
 Studien, Seeds, Holdouts oder Karriereausführung. MECH und TRAIN bleiben gesperrt.
 
 ## Umfang und Unabhängigkeit
@@ -57,6 +57,11 @@ deep_block−0,012768361. Kontrast-SDs nach Seitenmittel0,910348816 bzw0,8978327
 Dies sind erstmals gemessene Varianzen dieser engeren Interaktionsfrage,
 keine übernommenen Rollen-/Instruktionsvarianzen und keine Bestätigung neuer Meta.
 
+Alle deskriptiven Armmittel sowie Seiten-SDs/Kovarianzen und marginale95-%-
+SD-Obergrenzen wurden ebenfalls unabhängig aus den384Rohzeilen geprüft.
+Primärer Leave-one-seed-out-Bereich[−0,226771312;−0,091660559], größte Änderung
+0,070349057; stimmt mit dem Archiv überein. Kein Seed ausgeschlossen.
+
 ## Bedingte Zukunftsplanung, keine neue Ausführung
 
 | SD-Annahme | Effekt gegen0 | neue Seeds/Gegner | unabhängige Blöcke | sechsarmige Matches |
@@ -70,7 +75,7 @@ Alle vier90-%-Minima, zugehörigen Power-/Breitenwerte und Kosten24n unabhängig
 mit linearer ganzzahliger Suche bestätigt. SD-Obergrenzen verwenden je97,5-%-
 einseitige Normalmodell-/Chi-Quadrat-Grenzen mit15df. Nichtzentrale Welch-
 Näherung ist eine bedingte Planung, kein Effektbeweis oder automatische Folgeserie.
-Eine bloße Wiederholung mit mehr bekannten Kontexten ersetzt keine neue
+Eine bloße Vergrößerung derselben Serie ersetzt keine neue
 Messfähigkeit, realistischeren Profile oder unabhängig gehaltene Bestätigung.
 
 ## Direkte Hauptlaufbelege und vollständige Abrechnung
@@ -116,6 +121,12 @@ gebundenen Veröffentlichung. Technische Zusammenfassung im Releasegitblob
 stimmt exakt mit tatsächlicher Datei; unabhängiger Reviewhash stimmt ebenfalls.
 Vorregistrierungs-/Prepare-/Technikchronologie im früheren Technikreview.
 
+Die CI43617730448 des späteren reinen Maschinen-Gateverweises e9ac939 endete
+16:51:22UTC und damit nach Mainstart. Das ist nicht die vor Main verlangte
+Technikrelease-CI: diese war am unveränderten06f1aeb bereits16:48:52 erfolgreich.
+Der Gateverweis selbst war vor Main öffentlich; keine eingefrorene Autorenquelle
+oder Eingabe wurde dadurch geändert. Keine nachträgliche CI als vorgängig behauptet.
+
 ## Zulässige Schlussfolgerung und Abschlussstatus
 
 Der engere totale Masken×Roh60→80-Kontrast ist hier technisch wirksam umgesetzt,
@@ -129,6 +140,31 @@ eigenen Belegprüfers wurde eine lokal beschattete Schleifenvariable korrigiert;
 danach vollständiger384erBeleglauf und erneuter32erTechnikbeleglauf erfolgreich.
 Keine eingefrorene Autorenfunktion oder Ausführungseingabe geändert.
 
-Finale Directorübersichten und Integrations-CI sind nach Abschluss der
-Berichtsintegration noch separat zu lesen/prüfen. Danach stoppen; keine
-zusätzliche native Serie aus den hier berechneten Planungszahlen ableiten.
+Die finalen Directorartefakte wurden anschließend direkt gelesen: vollständiger
+ATTR-Ergebnisbericht, Plotcode und tatsächlich dargestellte Grafik,
+`docs/round3/README.md`, `PRIORITIES.md`, `QUEUE.json`, Root-README/FINDINGS/
+NEXT_STEPS/RESEARCH_LOG, PLATFORM/ROADMAP und der Daten-README. Gemessene Zahlen,
+Präzisionsfehlschlag, Nichtnachweise und Scopegrenzen sind konsistent. Grafik
+trennt Einheiten und kennzeichnet marginale Intervalle. MECH/TRAIN bleiben
+gesperrt; Prioritäten sind künftige technische Vorschläge, kein neuer Auftrag.
+Der erste Shallowcheckout-CIfehler und seine Korrektur vor Vorbereitung sind
+offengelegt. Alte Ergebnisse werden mit Versionsbezug erhalten.
+
+**Finale fachliche Veröffentlichungsfreigabe für diesen gelesenen Stand**, nach
+abschließenden Directorprüfungen/erfolgreicher Integrations-CI. Keine offene
+wissenschaftliche oder Dokumentationsblockade. Danach stoppen; keine zusätzliche
+native Serie aus den hier berechneten Planungszahlen ableiten.
+
+## Geprüfter Rohdaten-/Analyse-Snapshot
+
+SHA256 nach LF-Normalisierung zum Ergebnisreview:
+
+| Datei | SHA256 |
+|---|---|
+| main.jsonl | `f309a507e41007849ab3ea223f8314411ca0d4026c68b5fa43832e64395bc0be` |
+| manifest.json | `e0fad6a55c86da12704a772d78b2183e9adb8edc8d5a83568bbf3fe1e15e42f1` |
+| effects.json | `b38d7275adeebf8821b94a6a769c2f4626e9521007f2f2cf12084a82fb2fcbbd` |
+| block-contrasts.jsonl | `6c83fd6dc8d513e5c80cb7b651a0b42155583696589b6be1d66dcec0d50f8eb3` |
+| job-accounting.jsonl | `1ce65fd23e67d5778d53f1485bc1cdfb36e967eb4ab08e13869b9acc5d8196b8` |
+| budget.json | `a97ac0115b35bbd5791c3655f0edb032a79121115a1827924b910644c82f2883` |
+| run-summary.json | `442eb03d5ca12ff485e595ce36005f26ab2e5c1b9c033c027827e4578b4f8361` |

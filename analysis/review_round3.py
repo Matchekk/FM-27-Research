@@ -278,8 +278,25 @@ def attr_results(directory):
     adjusted = holm5([effects[m]['p'] for m in ENDPOINTS[1:]])
     for endpoint, p in zip(ENDPOINTS[1:], adjusted, strict=True):
         effects[endpoint]['p_holm'] = p
+    diagnostics = {}
+    for j, h in enumerate(CONTEXTS):
+        sides = [[], []]
+        for seed in seeds[j*16:(j+1)*16]:
+            for side in (0, 1):
+                oj, oa, op, sj, sa, sp = [cells[h, seed, side, a][0] for a in ARMS]
+                sides[side].append((sj-(sa+sp)/2)-(oj-(oa+op)/2))
+        diagnostics[h] = dict(side0_sd=statistics.stdev(sides[0]), side1_sd=statistics.stdev(sides[1]),
+            side_covariance=statistics.covariance(*sides),
+            sd_upper95_normal_model=effects['xgd']['context_sd'][j]*math.sqrt(15/chi2.ppf(.05, 15)))
+    leave_one_out = [(statistics.mean(values[:i]+values[i+1:])+statistics.mean(by_endpoint['xgd'][1-j]))/2
+                     for j, values in enumerate(by_endpoint['xgd']) for i in range(16)]
+    arm_means = {h: {a: {m: statistics.mean(cells[h, seed, side, a][k] for seed in seeds[j*16:(j+1)*16] for side in (0, 1))
+                          for k, m in enumerate(ENDPOINTS)} for a in ARMS} for j, h in enumerate(CONTEXTS)}
     result = dict(n_matches=384, independent_blocks=32, effects=effects,
                   planning=future_n(effects['xgd']['context_sd']), blocks=all_blocks,
+                  primary_context_diagnostics=diagnostics, arm_means=arm_means,
+                  leave_one_out=dict(range=[min(leave_one_out), max(leave_one_out)],
+                      max_change=max(abs(value-effects['xgd']['mean']) for value in leave_one_out)),
                   published_effects_verified=False)
     if (directory/'effects.json').exists():
         compare_published(result, directory)
@@ -316,6 +333,15 @@ def compare_published(independent, directory):
                  source['matches'] == expected['matches'] and source['independent_blocks'] == 2*expected['seeds_per_context'], 'Future planning minimum/count')
             for field in ('effect', 'power', 'full_width'):
                 equal(expected[field], source[field], 'Future planning '+field)
+    for h, fields in independent['primary_context_diagnostics'].items():
+        for key, value in fields.items():
+            equal(value, published['primary']['context'][h][key], 'Primary descriptive context '+key)
+    equal(independent['leave_one_out']['range'], published['primary']['leave_one_out']['range'], 'Leave one out range')
+    equal(independent['leave_one_out']['max_change'], published['primary']['leave_one_out']['max_change'], 'Leave one out max change')
+    for h, arms in independent['arm_means'].items():
+        for a, endpoints in arms.items():
+            for endpoint, value in endpoints.items():
+                equal(value, published['arm_means'][h][a][endpoint], 'Descriptive arm mean')
     direct = {(r['scenario'], r['seed'], r['endpoint']): r['value'] for r in independent['blocks']}
     published_blocks = rows(directory/'block-contrasts.jsonl')
     indexed = {(r['scenario'], r['seed'], r['endpoint']): r['value'] for r in published_blocks}
