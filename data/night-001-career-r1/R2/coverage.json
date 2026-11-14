@@ -1,0 +1,1366 @@
+{
+  "profile": "R2",
+  "version": "career-readonly-profiles-v1",
+  "resources": {
+    "status": "completed",
+    "child_returncode": 0,
+    "elapsed_seconds": 14.453000000001339,
+    "wall_limit_seconds": 180,
+    "hard_memory_job": {
+      "process_memory_limit": 3221225472,
+      "job_memory_limit": 3221225472,
+      "limit_flags": 8968,
+      "active_process_limit": 1,
+      "peak_process_private_bytes": 1175113728,
+      "peak_job_private_bytes": 1181728768
+    },
+    "supervisor_error_type": null,
+    "retries": 0,
+    "reader_processes_started": 1,
+    "within_wall_limit": true,
+    "invalid_event_lines_retained": 0
+  },
+  "snapshot_stable": true,
+  "probes": [
+    {
+      "probe": "open",
+      "status": "observed_with_warnings",
+      "coverage": {
+        "game": "FM27",
+        "save_build": "27.0.1+2503222",
+        "known_build": false,
+        "game_date_claim": "2027-01-16",
+        "game_date_semantics_verified": false,
+        "time_slot_raw": 44,
+        "sections": [
+          {
+            "code": "game_info",
+            "schema": 47,
+            "compressed_bytes": 2697,
+            "decompressed_bytes": 7025
+          },
+          {
+            "code": "memory_pools",
+            "schema": 0,
+            "compressed_bytes": 4348,
+            "decompressed_bytes": 12571
+          },
+          {
+            "code": "save_game_summary",
+            "schema": 31,
+            "compressed_bytes": 1091,
+            "decompressed_bytes": 1824
+          },
+          {
+            "code": "game_db",
+            "schema": 4000,
+            "compressed_bytes": 77632110,
+            "decompressed_bytes": 247385795
+          },
+          {
+            "code": "pl_hist_ls",
+            "schema": 4,
+            "compressed_bytes": 33,
+            "decompressed_bytes": 26
+          },
+          {
+            "code": "non_pl_hist_ls",
+            "schema": 4,
+            "compressed_bytes": 33,
+            "decompressed_bytes": 26
+          },
+          {
+            "code": "humans",
+            "schema": 24,
+            "compressed_bytes": 15251,
+            "decompressed_bytes": 60637
+          },
+          {
+            "code": "news",
+            "schema": 2957,
+            "compressed_bytes": 3516614,
+            "decompressed_bytes": 19094759
+          },
+          {
+            "code": "used_player_data",
+            "schema": 35,
+            "compressed_bytes": 2853875,
+            "decompressed_bytes": 11670402
+          },
+          {
+            "code": "transfer_man",
+            "schema": 35,
+            "compressed_bytes": 552456,
+            "decompressed_bytes": 3170505
+          },
+          {
+            "code": "trade_man",
+            "schema": 11,
+            "compressed_bytes": 1825,
+            "decompressed_bytes": 4341
+          },
+          {
+            "code": "shortlist_man",
+            "schema": 50,
+            "compressed_bytes": 2656487,
+            "decompressed_bytes": 5657501
+          },
+          {
+            "code": "manager_manager",
+            "schema": 35,
+            "compressed_bytes": 307104,
+            "decompressed_bytes": 2849413
+          },
+          {
+            "code": "tc_record_man",
+            "schema": 24,
+            "compressed_bytes": 1394584,
+            "decompressed_bytes": 28781615
+          },
+          {
+            "code": "tc_league_history_ls",
+            "schema": 4,
+            "compressed_bytes": 338832,
+            "decompressed_bytes": 1138838
+          },
+          {
+            "code": "tc_cup_history_ls",
+            "schema": 4,
+            "compressed_bytes": 14532,
+            "decompressed_bytes": 43758
+          },
+          {
+            "code": "tc_best_eleven_history_ls",
+            "schema": 4,
+            "compressed_bytes": 644,
+            "decompressed_bytes": 2238
+          },
+          {
+            "code": "tc_manager_history_ls",
+            "schema": 4,
+            "compressed_bytes": 479,
+            "decompressed_bytes": 1314
+          },
+          {
+            "code": "tc_history_ls",
+            "schema": 4,
+            "compressed_bytes": 3446,
+            "decompressed_bytes": 11070
+          },
+          {
+            "code": "tc_extended_club_records_history_ls",
+            "schema": 4,
+            "compressed_bytes": 1503,
+            "decompressed_bytes": 6314
+          },
+          {
+            "code": "tc_extended_nation_records_history_ls",
+            "schema": 4,
+            "compressed_bytes": 995,
+            "decompressed_bytes": 3682
+          },
+          {
+            "code": "tactics_man",
+            "schema": 26,
+            "compressed_bytes": 342894,
+            "decompressed_bytes": 2267258
+          },
+          {
+            "code": "regeneration_manager",
+            "schema": 47,
+            "compressed_bytes": 185331,
+            "decompressed_bytes": 410165
+          },
+          {
+            "code": "retirement_manager",
+            "schema": 2,
+            "compressed_bytes": 444,
+            "decompressed_bytes": 711
+          },
+          {
+            "code": "database_analyser",
+            "schema": 2,
+            "compressed_bytes": 38,
+            "decompressed_bytes": 25
+          },
+          {
+            "code": "edit_session_man",
+            "schema": 176,
+            "compressed_bytes": 33,
+            "decompressed_bytes": 20
+          },
+          {
+            "code": "weather_manager",
+            "schema": 3,
+            "compressed_bytes": 107666,
+            "decompressed_bytes": 292387
+          },
+          {
+            "code": "fog_of_war",
+            "schema": 2,
+            "compressed_bytes": 1241,
+            "decompressed_bytes": 1576
+          },
+          {
+            "code": "injury_manager",
+            "schema": 8,
+            "compressed_bytes": 160338,
+            "decompressed_bytes": 409887
+          },
+          {
+            "code": "injury_histories_ls",
+            "schema": 4,
+            "compressed_bytes": 308527,
+            "decompressed_bytes": 654730
+          },
+          {
+            "code": "training_man",
+            "schema": 32,
+            "compressed_bytes": 39189,
+            "decompressed_bytes": 374700
+          },
+          {
+            "code": "training_camp_man",
+            "schema": 1,
+            "compressed_bytes": 3628,
+            "decompressed_bytes": 9239
+          },
+          {
+            "code": "scout_man",
+            "schema": 31,
+            "compressed_bytes": 9201,
+            "decompressed_bytes": 37153
+          },
+          {
+            "code": "awol",
+            "schema": 1,
+            "compressed_bytes": 204,
+            "decompressed_bytes": 300
+          },
+          {
+            "code": "award_man",
+            "schema": 13,
+            "compressed_bytes": 5116,
+            "decompressed_bytes": 14679
+          },
+          {
+            "code": "award_year_hist_ls",
+            "schema": 4,
+            "compressed_bytes": 5442,
+            "decompressed_bytes": 9282
+          },
+          {
+            "code": "award_club_hist_ls",
+            "schema": 4,
+            "compressed_bytes": 40,
+            "decompressed_bytes": 34
+          },
+          {
+            "code": "fine_manager",
+            "schema": 1,
+            "compressed_bytes": 157,
+            "decompressed_bytes": 196
+          },
+          {
+            "code": "contract_man",
+            "schema": 14,
+            "compressed_bytes": 5559,
+            "decompressed_bytes": 15199
+          },
+          {
+            "code": "person_record_history_ls",
+            "schema": 4,
+            "compressed_bytes": 1172728,
+            "decompressed_bytes": 1669558
+          },
+          {
+            "code": "person_record_manager",
+            "schema": 30,
+            "compressed_bytes": 317265,
+            "decompressed_bytes": 2935938
+          },
+          {
+            "code": "official_manager",
+            "schema": 5,
+            "compressed_bytes": 3415,
+            "decompressed_bytes": 9612
+          },
+          {
+            "code": "agent_manager",
+            "schema": 2,
+            "compressed_bytes": 252,
+            "decompressed_bytes": 360
+          },
+          {
+            "code": "dispute",
+            "schema": 1,
+            "compressed_bytes": 25,
+            "decompressed_bytes": 12
+          },
+          {
+            "code": "finance_manager",
+            "schema": 17,
+            "compressed_bytes": 1211,
+            "decompressed_bytes": 4704
+          },
+          {
+            "code": "network_man",
+            "schema": 25,
+            "compressed_bytes": 87,
+            "decompressed_bytes": 223
+          },
+          {
+            "code": "sim_stats",
+            "schema": 1,
+            "compressed_bytes": 102063,
+            "decompressed_bytes": 197105
+          },
+          {
+            "code": "hall_of_fame",
+            "schema": 10,
+            "compressed_bytes": 288407,
+            "decompressed_bytes": 843906
+          },
+          {
+            "code": "backroom_advice_manager",
+            "schema": 20,
+            "compressed_bytes": 13086,
+            "decompressed_bytes": 137848
+          },
+          {
+            "code": "interaction_manager",
+            "schema": 47,
+            "compressed_bytes": 515242,
+            "decompressed_bytes": 4014880
+          },
+          {
+            "code": "press_conference_manager",
+            "schema": 10,
+            "compressed_bytes": 165668,
+            "decompressed_bytes": 1185154
+          },
+          {
+            "code": "job_centre",
+            "schema": 1,
+            "compressed_bytes": 639,
+            "decompressed_bytes": 1512
+          },
+          {
+            "code": "team_talk_man",
+            "schema": 5,
+            "compressed_bytes": 560,
+            "decompressed_bytes": 1801
+          },
+          {
+            "code": "board_takeover_manager",
+            "schema": 5,
+            "compressed_bytes": 509,
+            "decompressed_bytes": 1700
+          },
+          {
+            "code": "financial_fair_play_manager",
+            "schema": 2,
+            "compressed_bytes": 23,
+            "decompressed_bytes": 10
+          },
+          {
+            "code": "feeder_man",
+            "schema": 5,
+            "compressed_bytes": 1049,
+            "decompressed_bytes": 2248
+          },
+          {
+            "code": "captain_system",
+            "schema": 8,
+            "compressed_bytes": 31,
+            "decompressed_bytes": 25
+          },
+          {
+            "code": "media_man",
+            "schema": 20,
+            "compressed_bytes": 83994,
+            "decompressed_bytes": 295889
+          },
+          {
+            "code": "morale_manager",
+            "schema": 4,
+            "compressed_bytes": 46,
+            "decompressed_bytes": 33
+          },
+          {
+            "code": "matchday_manager",
+            "schema": 8,
+            "compressed_bytes": 965,
+            "decompressed_bytes": 8077
+          },
+          {
+            "code": "play_fixture_manager",
+            "schema": 7,
+            "compressed_bytes": 894041,
+            "decompressed_bytes": 4461424
+          },
+          {
+            "code": "dynamics_pivotal_moments",
+            "schema": 3,
+            "compressed_bytes": 37,
+            "decompressed_bytes": 24
+          },
+          {
+            "code": "virtual_manager",
+            "schema": 1,
+            "compressed_bytes": 25,
+            "decompressed_bytes": 12
+          },
+          {
+            "code": "match_stats_cfg",
+            "schema": 6,
+            "compressed_bytes": 25990398,
+            "decompressed_bytes": 25989791
+          },
+          {
+            "code": "award_club_hist_dt",
+            "schema": 1,
+            "compressed_bytes": 58,
+            "decompressed_bytes": 45
+          },
+          {
+            "code": "award_year_hist_dt",
+            "schema": 1,
+            "compressed_bytes": 40911,
+            "decompressed_bytes": 179916
+          },
+          {
+            "code": "comp_history_dt",
+            "schema": 3,
+            "compressed_bytes": 726743,
+            "decompressed_bytes": 4382628
+          },
+          {
+            "code": "extended_comp_records_dt",
+            "schema": 5,
+            "compressed_bytes": 10230,
+            "decompressed_bytes": 34554
+          },
+          {
+            "code": "injury_histories_dt",
+            "schema": 2,
+            "compressed_bytes": 489006,
+            "decompressed_bytes": 1756168
+          },
+          {
+            "code": "person_db_changes",
+            "schema": 3754,
+            "compressed_bytes": 1155,
+            "decompressed_bytes": 9092
+          },
+          {
+            "code": "person_record_history_dt",
+            "schema": 2,
+            "compressed_bytes": 1751090,
+            "decompressed_bytes": 14048840
+          },
+          {
+            "code": "player_stats_hist_dt",
+            "schema": 7,
+            "compressed_bytes": 1599430,
+            "decompressed_bytes": 8937608
+          },
+          {
+            "code": "starting_club_debt_db",
+            "schema": 3754,
+            "compressed_bytes": 440490,
+            "decompressed_bytes": 2806260
+          },
+          {
+            "code": "tc_best_eleven_history_dt",
+            "schema": 2,
+            "compressed_bytes": 45125,
+            "decompressed_bytes": 141001
+          },
+          {
+            "code": "tc_cup_history_dt",
+            "schema": 1,
+            "compressed_bytes": 49209,
+            "decompressed_bytes": 179126
+          },
+          {
+            "code": "tc_extended_club_records_history_dt",
+            "schema": 5,
+            "compressed_bytes": 77064,
+            "decompressed_bytes": 666536
+          },
+          {
+            "code": "tc_extended_nation_records_history_dt",
+            "schema": 5,
+            "compressed_bytes": 55872,
+            "decompressed_bytes": 323107
+          },
+          {
+            "code": "tc_history_dt",
+            "schema": 1,
+            "compressed_bytes": 7379,
+            "decompressed_bytes": 35120
+          },
+          {
+            "code": "tc_league_history_dt",
+            "schema": 1,
+            "compressed_bytes": 2740693,
+            "decompressed_bytes": 6413336
+          },
+          {
+            "code": "tc_manager_history_dt",
+            "schema": 2,
+            "compressed_bytes": 1702,
+            "decompressed_bytes": 5557
+          }
+        ],
+        "native_semantics_verified": false
+      },
+      "checks": [],
+      "borrowed_layout": null,
+      "warning_types": [
+        "UnknownBuildWarning"
+      ],
+      "warning_count": 1
+    },
+    {
+      "probe": "managed_clubs",
+      "status": "observed",
+      "coverage": {
+        "rows": 1,
+        "record_fields": [
+          "balance",
+          "club_name",
+          "club_short_name",
+          "club_uid",
+          "manager_name",
+          "manager_staff_uid",
+          "scouting_budget",
+          "scouting_budget_remaining"
+        ],
+        "semantics_verified": false,
+        "single_managed_club": true,
+        "manager_identity_resolved": 1,
+        "native_semantics_verified": false
+      },
+      "checks": [
+        {
+          "reader": "managed_clubs",
+          "record_count": 1,
+          "gates": [],
+          "anomalies": {
+            "humans_without_club": 0,
+            "club_route_one_unresolved": 0,
+            "club_route_two_unresolved": 0
+          },
+          "native_semantics_verified": false
+        }
+      ],
+      "borrowed_layout": null,
+      "warning_types": [],
+      "warning_count": 0
+    },
+    {
+      "probe": "clubs",
+      "status": "observed",
+      "coverage": {
+        "rows": 42001,
+        "record_fields": [
+          "city_id",
+          "fa_nation_id",
+          "gender",
+          "last_league_position",
+          "name",
+          "nation_id",
+          "parent_club_name",
+          "parent_club_uid",
+          "reputation",
+          "short_name",
+          "teams",
+          "uid",
+          "unique_id"
+        ],
+        "semantics_verified": false,
+        "managed_team_capacity": 4,
+        "native_semantics_verified": false
+      },
+      "checks": [
+        {
+          "reader": "clubs",
+          "record_count": 42001,
+          "gates": [
+            {
+              "code": "clubs_minimum",
+              "observed": 42001,
+              "minimum": 5000,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "team_lists_found",
+              "observed": 1.0,
+              "minimum": 0.999,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "status_normal",
+              "observed": 0.9991666865074641,
+              "minimum": 0.98,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "status_confirmation",
+              "observed": 0.995591669446695,
+              "minimum": 0.95,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": false
+            },
+            {
+              "code": "affiliate_lists_found",
+              "observed": 0.02416609128354087,
+              "minimum": 0.005,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "affiliate_teams_linked",
+              "observed": 1.0,
+              "minimum": 0.99,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "reputation_found",
+              "observed": 0.9991666865074641,
+              "minimum": 0.9,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "reputation_median",
+              "observed": 1200,
+              "minimum": 200,
+              "maximum": 3000,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            }
+          ],
+          "anomalies": {
+            "unlinked_affiliate_teams": 0,
+            "extended_table_rows": 462,
+            "unanchored_table_rows": 4189,
+            "rejected_table_rows": 375,
+            "clubs_without_main_nation": 0,
+            "teamless_rows_without_main_nation": 372
+          },
+          "native_semantics_verified": false
+        }
+      ],
+      "borrowed_layout": null,
+      "warning_types": [],
+      "warning_count": 0
+    },
+    {
+      "probe": "players",
+      "status": "observed",
+      "coverage": {
+        "rows": 113815,
+        "record_fields": [
+          "ability",
+          "accomplished_positions",
+          "age",
+          "attributes",
+          "birth_date",
+          "club_fa_nation_id",
+          "club_join_date",
+          "club_last_league_position",
+          "club_name",
+          "club_nation_id",
+          "club_reputation",
+          "club_short_name",
+          "club_uid",
+          "common_name",
+          "contract",
+          "first_name",
+          "full_name",
+          "height_cm",
+          "home_grown_club_names",
+          "home_grown_club_uids",
+          "home_grown_nation_ids",
+          "last_name",
+          "left_foot",
+          "legal_name",
+          "loan_end",
+          "loan_parent_club_name",
+          "loan_parent_club_uid",
+          "loan_start",
+          "name",
+          "nation_id",
+          "natural_positions",
+          "on_loan",
+          "personality",
+          "positions",
+          "raw_attributes",
+          "raw_condition",
+          "raw_left_foot",
+          "raw_match_sharpness",
+          "raw_right_foot",
+          "reputation",
+          "right_foot",
+          "second_nation_ids",
+          "suspensions",
+          "team_club_name",
+          "team_club_uid",
+          "team_id",
+          "team_slot",
+          "trait_bits",
+          "traits",
+          "transfer_value",
+          "transfer_value_state",
+          "uid",
+          "unique_id"
+        ],
+        "semantics_verified": false,
+        "managed_squad_records": 77,
+        "attribute_pair_coverage": {
+          "acceleration": {
+            "pairs": 77,
+            "raw_range": [
+              30,
+              85
+            ],
+            "display_range": [
+              6,
+              17
+            ],
+            "parser_derived_only": true,
+            "fm_ui_calibrated": false
+          },
+          "pace": {
+            "pairs": 77,
+            "raw_range": [
+              26,
+              80
+            ],
+            "display_range": [
+              5,
+              16
+            ],
+            "parser_derived_only": true,
+            "fm_ui_calibrated": false
+          },
+          "agility": {
+            "pairs": 77,
+            "raw_range": [
+              35,
+              77
+            ],
+            "display_range": [
+              7,
+              15
+            ],
+            "parser_derived_only": true,
+            "fm_ui_calibrated": false
+          },
+          "stamina": {
+            "pairs": 77,
+            "raw_range": [
+              6,
+              80
+            ],
+            "display_range": [
+              1,
+              16
+            ],
+            "parser_derived_only": true,
+            "fm_ui_calibrated": false
+          }
+        },
+        "native_semantics_verified": false
+      },
+      "checks": [
+        {
+          "reader": "players",
+          "record_count": 113815,
+          "gates": [
+            {
+              "code": "players_minimum",
+              "observed": 113815,
+              "minimum": 5000,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "person_blocks",
+              "observed": 0.9999297104951017,
+              "minimum": 0.99,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "names_resolved",
+              "observed": 1.0,
+              "minimum": 0.995,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "relation_sentinel",
+              "observed": 1.0,
+              "minimum": 0.999,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": false
+            },
+            {
+              "code": "second_nation_qualifier",
+              "observed": 1.0,
+              "minimum": 0.995,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "handling_above_finishing",
+              "observed": 0.18781355708825725,
+              "minimum": 0.1,
+              "maximum": 0.3,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "outfield_goalkeeper_block_low",
+              "observed": 0.9999012248123271,
+              "minimum": 0.8,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "with_natural_position",
+              "observed": 1.0,
+              "minimum": 0.97,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "height_in_range",
+              "observed": 1.0,
+              "minimum": 0.999,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "height_median",
+              "observed": 180,
+              "minimum": 170,
+              "maximum": 190,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "age_median",
+              "observed": 24,
+              "minimum": 20,
+              "maximum": 30,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "aged_in_range",
+              "observed": 0.9994727916560493,
+              "minimum": 0.995,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "condition_sharpness_in_range",
+              "observed": 1.0,
+              "minimum": 0.999,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": false
+            },
+            {
+              "code": "join_date_valid",
+              "observed": 0.9596977551289373,
+              "minimum": 0.05,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "world_not_above_current",
+              "observed": 0.9988314369810658,
+              "minimum": 0.95,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "home_near_current",
+              "observed": 0.9994552563370381,
+              "minimum": 0.95,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "team_resolved",
+              "observed": 1.0,
+              "minimum": 0.98,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "home_grown_club_refs_resolved",
+              "observed": 1.0,
+              "minimum": 0.98,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            }
+          ],
+          "anomalies": {
+            "markerless_players": 917,
+            "unresolved_teams": 0,
+            "edited_attribute_players": 0,
+            "home_grown_refs_to_extended_rows": 0,
+            "home_grown_refs_to_unanchored_rows": 32,
+            "home_grown_refs_to_rejected_rows": 0,
+            "home_grown_refs_out_of_range": 0,
+            "home_grown_refs_empty": 0,
+            "home_grown_refs_other": 0
+          },
+          "native_semantics_verified": false
+        }
+      ],
+      "borrowed_layout": null,
+      "warning_types": [],
+      "warning_count": 0
+    },
+    {
+      "probe": "training",
+      "status": "observed",
+      "coverage": {
+        "rows": 4,
+        "record_fields": [
+          "club_name",
+          "club_uid",
+          "schedule_library",
+          "team_id",
+          "team_slot",
+          "weeks"
+        ],
+        "semantics_verified": false,
+        "teams": [
+          {
+            "team_code": "T00",
+            "weeks": 61,
+            "dated_weeks": 61,
+            "days": 427,
+            "raw_session_counts": {
+              "0": 29,
+              "1": 30,
+              "2": 29,
+              "3": 29,
+              "4": 48,
+              "5": 48,
+              "6": 45,
+              "7": 46,
+              "100": 15,
+              "101": 19,
+              "102": 13,
+              "103": 23,
+              "104": 28,
+              "105": 25,
+              "106": 11,
+              "107": 11,
+              "108": 8,
+              "200": 99,
+              "201": 9,
+              "202": 13,
+              "203": 15,
+              "300": 450,
+              "301": 64,
+              "302": 36,
+              "303": 10,
+              "304": 12,
+              "400": 1,
+              "401": 2,
+              "402": 60,
+              "500": 53
+            },
+            "first_week": "2026-06-22",
+            "last_week": "2027-08-16"
+          },
+          {
+            "team_code": "T01",
+            "weeks": 30,
+            "dated_weeks": 30,
+            "days": 210,
+            "raw_session_counts": {
+              "0": 35,
+              "1": 35,
+              "2": 33,
+              "3": 35,
+              "4": 13,
+              "5": 13,
+              "6": 12,
+              "7": 13,
+              "100": 13,
+              "101": 18,
+              "102": 12,
+              "103": 1,
+              "104": 7,
+              "105": 3,
+              "106": 6,
+              "107": 5,
+              "108": 1,
+              "200": 58,
+              "201": 12,
+              "202": 8,
+              "203": 13,
+              "300": 184,
+              "302": 21,
+              "303": 13,
+              "304": 8,
+              "402": 30,
+              "500": 28
+            },
+            "first_week": "2026-06-29",
+            "last_week": "2027-01-18"
+          },
+          {
+            "team_code": "T02",
+            "weeks": 30,
+            "dated_weeks": 30,
+            "days": 210,
+            "raw_session_counts": {
+              "0": 28,
+              "1": 28,
+              "2": 28,
+              "3": 28,
+              "4": 29,
+              "5": 29,
+              "6": 29,
+              "7": 29,
+              "100": 1,
+              "101": 2,
+              "102": 1,
+              "104": 1,
+              "106": 1,
+              "200": 58,
+              "201": 27,
+              "202": 26,
+              "203": 37,
+              "300": 195,
+              "302": 20,
+              "303": 14,
+              "304": 10,
+              "402": 4,
+              "500": 5
+            },
+            "first_week": "2026-06-29",
+            "last_week": "2027-01-18"
+          },
+          {
+            "team_code": "T03",
+            "weeks": 34,
+            "dated_weeks": 34,
+            "days": 238,
+            "raw_session_counts": {
+              "200": 93,
+              "220": 23,
+              "221": 3,
+              "222": 7,
+              "223": 7,
+              "224": 28,
+              "225": 7,
+              "226": 12,
+              "227": 12,
+              "228": 7,
+              "229": 12,
+              "230": 6,
+              "231": 6,
+              "232": 7,
+              "233": 11,
+              "234": 11,
+              "235": 12,
+              "236": 12,
+              "237": 7,
+              "238": 28,
+              "243": 10,
+              "244": 8,
+              "300": 248,
+              "301": 33,
+              "303": 45,
+              "304": 12,
+              "402": 22,
+              "500": 25
+            },
+            "first_week": "2026-06-22",
+            "last_week": "2027-02-08"
+          }
+        ],
+        "individual_participation": null,
+        "coach_assignment": null,
+        "focus_assignment": null,
+        "intensity_assignment": null,
+        "native_semantics_verified": false
+      },
+      "checks": [
+        {
+          "reader": "training",
+          "record_count": 4,
+          "gates": [
+            {
+              "code": "training_blocks_match_club_teams",
+              "observed": 1.0,
+              "minimum": 1.0,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            },
+            {
+              "code": "training_week_steps",
+              "observed": 1.0,
+              "minimum": 1.0,
+              "maximum": null,
+              "passed": true,
+              "applied": true,
+              "advisory": true
+            }
+          ],
+          "anomalies": {
+            "undated_weeks": 0,
+            "header_entries": 34,
+            "library_entries": 0,
+            "nonzero_block_trailers": 0
+          },
+          "native_semantics_verified": false
+        }
+      ],
+      "borrowed_layout": null,
+      "warning_types": [],
+      "warning_count": 0
+    },
+    {
+      "probe": "tactics",
+      "status": "failed",
+      "checks": [],
+      "warning_types": [],
+      "warning_count": 0,
+      "error_type": "ReaderCheckError"
+    },
+    {
+      "probe": "selections",
+      "status": "not_started"
+    },
+    {
+      "probe": "set_pieces",
+      "status": "not_started"
+    },
+    {
+      "probe": "staff",
+      "status": "not_started"
+    },
+    {
+      "probe": "staff_lists",
+      "status": "not_started"
+    },
+    {
+      "probe": "injuries",
+      "status": "not_started"
+    },
+    {
+      "probe": "fixtures",
+      "status": "not_started"
+    }
+  ],
+  "field_contract": {
+    "open.save_build": {
+      "unit": "last_writer_build_string",
+      "source": "fmsave._version.find_game_version",
+      "native_verified": false
+    },
+    "open.game_date_claim": {
+      "unit": "parser_claimed_ISO_date",
+      "source": "fmsave._version.read_save_info;R1 summary fallback trace",
+      "native_verified": false
+    },
+    "open.sections": {
+      "unit": "schema_and_byte_counts",
+      "source": "fmsave._container.read_index;fmsave._version.section_schema",
+      "native_verified": false
+    },
+    "coverage.rows": {
+      "unit": "decoded_records",
+      "source": "len(fmsave.Table)",
+      "native_verified": false
+    },
+    "coverage.record_fields": {
+      "unit": "parser_model_field_names",
+      "source": "dataclass field inventory, no field values",
+      "native_verified": false
+    },
+    "managed_clubs": {
+      "unit": "decoded_record_count_and_resolution_count",
+      "source": "ManagedClub.club_uid/manager_staff_uid; IDs private",
+      "native_verified": false
+    },
+    "players.managed_squad_records": {
+      "unit": "decoded_records_joined_by_stored_team_id",
+      "source": "Player.team_id joined to Club.teams.team_id; IDs private",
+      "native_verified": false
+    },
+    "players.attribute_pair_coverage": {
+      "unit": "parser_raw_and_parser_display_range",
+      "source": "fmsave.models.players.Player raw_attributes/attributes",
+      "native_verified": false
+    },
+    "training.raw_session_counts": {
+      "unit": "stored_raw_session_code_count",
+      "source": "TrainingWeek.days.TrainingDay.sessions.CodedValue.raw",
+      "native_verified": false
+    },
+    "managed_team_capacity": {
+      "unit": "stored_team_list_length",
+      "source": "Club.teams joined to ManagedClub.club_uid",
+      "native_verified": false
+    },
+    "training.teams": {
+      "unit": "stored_weeks_days_and_parser_claimed_week_dates",
+      "source": "TeamTraining.weeks/TrainingWeek.week_start/days; team codes anonymized",
+      "native_verified": false
+    },
+    "injuries.historical_managed_club_records": {
+      "unit": "HISTORY_records_joined_by_stored_club_uid",
+      "source": "Injury.kind/club_uid; null club is not managed identity",
+      "native_verified": false
+    },
+    "injuries.typed_current_cohort_records": {
+      "unit": "TYPED_records_joined_to_current_parsed_cohort",
+      "source": "Injury.kind/player_uid joined to parsed managed squad; no duration claim",
+      "native_verified": false
+    },
+    "tactics": {
+      "unit": "decoded_records_only",
+      "source": "Save.tactics; active tactic/IP/OOP/effectiveness not established",
+      "native_verified": false
+    },
+    "fixtures": {
+      "unit": "decoded_records_only",
+      "source": "Save.fixtures; authoritative calendar not established",
+      "native_verified": false
+    },
+    "staff": {
+      "unit": "decoded_records_only",
+      "source": "Save.staff/staff_lists; session coach assignment not established",
+      "native_verified": false
+    },
+    "checks": {
+      "unit": "upstream_structural_counts_bounds_and_rates",
+      "source": "Save._reader_check and GateCheckError.checks",
+      "native_verified": false
+    },
+    "borrowed_layout": {
+      "unit": "upstream_layout_selection_claim",
+      "source": "Save._reader_layout in0.12.4",
+      "native_verified": false
+    },
+    "trace": {
+      "unit": "call_count",
+      "source": "own passive wrappers;return values unchanged",
+      "native_verified": false
+    },
+    "individual_participation": {
+      "unit": null,
+      "source": null,
+      "status": "not_available"
+    },
+    "career_rng_independence": {
+      "unit": null,
+      "source": null,
+      "status": "not_available"
+    }
+  },
+  "warnings_require_review": true,
+  "unverified_build_is_not_validation": true,
+  "raw_offset_binding_independently_verified": false,
+  "native_semantics_verified": false,
+  "ui_to_save_binding_verified": false,
+  "career_rng_independence_verified": false,
+  "individual_participation_verified": false,
+  "native_released": false,
+  "career_advance_released": false,
+  "replay_released": false,
+  "native_starts": 0,
+  "calendar_advances": 0,
+  "seeds_reserved": 0,
+  "snapshot_sha256": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+  "release": {
+    "passed": true,
+    "profile": "R2",
+    "published_commit": "2172b76faaeb7db7f38e1dbf693b69e2757cc1fd",
+    "ci_run": 43626055825,
+    "review_document": "docs/night-001/CAREER-R1-REVIEW.md",
+    "review_sha256": "6e0ef5108de2d5189c4bdb39aae9eaa478d227aaebfbf21515e317e5789cba26",
+    "director_decision": "published proceed",
+    "scope": "one bounded read-only pass; no native, no calendar advance, no retry"
+  },
+  "trace": {
+    "summary_calls": 0,
+    "draft_fallback_calls": 0,
+    "draft_fallback_accepted": 0,
+    "draft_fallback_exceptions": 0
+  },
+  "profile_setup": {
+    "status": "profile_loaded",
+    "package_version": "0.12.4",
+    "entry_sha256": "0fc77fdafc72fe7b97c43124b4e8e7a5fc92eec104a730cbac750d462f7af5a3"
+  }
+}

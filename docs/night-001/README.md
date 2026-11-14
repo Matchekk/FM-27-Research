@@ -41,3 +41,20 @@ Prozessbaumbegrenzung gesperrt. Der unabhängige Review entdeckte außerdem
 zusätzliche Loader-/Capabilitiesaufrufe der Warmruntime; diese müssen vor einer
 Staminafreigabe ausdrücklich in den Zählern stehen. Weiterhin null neue native
 NIGHT-Starts und keine reservierten neuen Simulationsseeds.
+
+## Karrierezwischenstand nach erfolgreicher CI2172b76
+
+Die zwei getrennten, vorab freigegebenen Lesepässe wurden einmalig ausgeführt:
+R1 in13,985s, R2 in14,453s, jeweils ein Decoder unter3GiB/180s.
+9der24Probeplätze beobachtet,2gescheitert,13unbegonnen. Beide erkennen
+konsistent77 Kaderrecords; R2 erschließt außerdem vier gespeicherte
+Trainingskalender. Ein Trainingsheader- beziehungsweise Taktikmarkerfehler
+stoppt die jeweilige Folge. Keine Retries oder Karrierefortschreibung.
+[Reale Ergebnisse und Grenzen](CAREER-R1-RESULTS.md),
+[unabhängige Rekonstruktion aus privaten Ledgers](CAREER-RESULTS-REVIEW.md).
+
+Der zusätzliche Offlineaudit zeigt:2.011von3.255 gespeicherten Kalender-Slots
+haben ein Label im eingefrorenen Readerenum;1.244noch keines. Kalender enthalten
+auch Zukunftswochen. Damit fehlt weiterhin der Nenner tatsächlich absolvierter
+Einheiten und individueller Teilnahme; keine Trainingswirkung ableitbar.
+204Repositorytests plus fünf historische Analysetests bestehen lokal.

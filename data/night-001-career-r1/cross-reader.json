@@ -1,0 +1,1251 @@
+{
+  "kind": "same_bytes_cross_reader_diagnostic_not_independent_replicates",
+  "snapshot_sha256": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+  "fields": [
+    {
+      "field": "open.game",
+      "status": "same_parsed_value",
+      "first": "FM27",
+      "second": "FM27",
+      "native_verified": false
+    },
+    {
+      "field": "open.save_build",
+      "status": "same_parsed_value",
+      "first": "27.0.1+2503222",
+      "second": "27.0.1+2503222",
+      "native_verified": false
+    },
+    {
+      "field": "open.game_date_claim",
+      "status": "same_parsed_value",
+      "first": "2027-01-16",
+      "second": "2027-01-16",
+      "native_verified": false
+    },
+    {
+      "field": "open.time_slot_raw",
+      "status": "same_parsed_value",
+      "first": 44,
+      "second": 44,
+      "native_verified": false
+    },
+    {
+      "field": "open.sections",
+      "status": "same_parsed_value",
+      "first": [
+        {
+          "code": "game_info",
+          "schema": 47,
+          "compressed_bytes": 2697,
+          "decompressed_bytes": 7025
+        },
+        {
+          "code": "memory_pools",
+          "schema": 0,
+          "compressed_bytes": 4348,
+          "decompressed_bytes": 12571
+        },
+        {
+          "code": "save_game_summary",
+          "schema": 31,
+          "compressed_bytes": 1091,
+          "decompressed_bytes": 1824
+        },
+        {
+          "code": "game_db",
+          "schema": 4000,
+          "compressed_bytes": 77632110,
+          "decompressed_bytes": 247385795
+        },
+        {
+          "code": "pl_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 33,
+          "decompressed_bytes": 26
+        },
+        {
+          "code": "non_pl_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 33,
+          "decompressed_bytes": 26
+        },
+        {
+          "code": "humans",
+          "schema": 24,
+          "compressed_bytes": 15251,
+          "decompressed_bytes": 60637
+        },
+        {
+          "code": "news",
+          "schema": 2957,
+          "compressed_bytes": 3516614,
+          "decompressed_bytes": 19094759
+        },
+        {
+          "code": "used_player_data",
+          "schema": 35,
+          "compressed_bytes": 2853875,
+          "decompressed_bytes": 11670402
+        },
+        {
+          "code": "transfer_man",
+          "schema": 35,
+          "compressed_bytes": 552456,
+          "decompressed_bytes": 3170505
+        },
+        {
+          "code": "trade_man",
+          "schema": 11,
+          "compressed_bytes": 1825,
+          "decompressed_bytes": 4341
+        },
+        {
+          "code": "shortlist_man",
+          "schema": 50,
+          "compressed_bytes": 2656487,
+          "decompressed_bytes": 5657501
+        },
+        {
+          "code": "manager_manager",
+          "schema": 35,
+          "compressed_bytes": 307104,
+          "decompressed_bytes": 2849413
+        },
+        {
+          "code": "tc_record_man",
+          "schema": 24,
+          "compressed_bytes": 1394584,
+          "decompressed_bytes": 28781615
+        },
+        {
+          "code": "tc_league_history_ls",
+          "schema": 4,
+          "compressed_bytes": 338832,
+          "decompressed_bytes": 1138838
+        },
+        {
+          "code": "tc_cup_history_ls",
+          "schema": 4,
+          "compressed_bytes": 14532,
+          "decompressed_bytes": 43758
+        },
+        {
+          "code": "tc_best_eleven_history_ls",
+          "schema": 4,
+          "compressed_bytes": 644,
+          "decompressed_bytes": 2238
+        },
+        {
+          "code": "tc_manager_history_ls",
+          "schema": 4,
+          "compressed_bytes": 479,
+          "decompressed_bytes": 1314
+        },
+        {
+          "code": "tc_history_ls",
+          "schema": 4,
+          "compressed_bytes": 3446,
+          "decompressed_bytes": 11070
+        },
+        {
+          "code": "tc_extended_club_records_history_ls",
+          "schema": 4,
+          "compressed_bytes": 1503,
+          "decompressed_bytes": 6314
+        },
+        {
+          "code": "tc_extended_nation_records_history_ls",
+          "schema": 4,
+          "compressed_bytes": 995,
+          "decompressed_bytes": 3682
+        },
+        {
+          "code": "tactics_man",
+          "schema": 26,
+          "compressed_bytes": 342894,
+          "decompressed_bytes": 2267258
+        },
+        {
+          "code": "regeneration_manager",
+          "schema": 47,
+          "compressed_bytes": 185331,
+          "decompressed_bytes": 410165
+        },
+        {
+          "code": "retirement_manager",
+          "schema": 2,
+          "compressed_bytes": 444,
+          "decompressed_bytes": 711
+        },
+        {
+          "code": "database_analyser",
+          "schema": 2,
+          "compressed_bytes": 38,
+          "decompressed_bytes": 25
+        },
+        {
+          "code": "edit_session_man",
+          "schema": 176,
+          "compressed_bytes": 33,
+          "decompressed_bytes": 20
+        },
+        {
+          "code": "weather_manager",
+          "schema": 3,
+          "compressed_bytes": 107666,
+          "decompressed_bytes": 292387
+        },
+        {
+          "code": "fog_of_war",
+          "schema": 2,
+          "compressed_bytes": 1241,
+          "decompressed_bytes": 1576
+        },
+        {
+          "code": "injury_manager",
+          "schema": 8,
+          "compressed_bytes": 160338,
+          "decompressed_bytes": 409887
+        },
+        {
+          "code": "injury_histories_ls",
+          "schema": 4,
+          "compressed_bytes": 308527,
+          "decompressed_bytes": 654730
+        },
+        {
+          "code": "training_man",
+          "schema": 32,
+          "compressed_bytes": 39189,
+          "decompressed_bytes": 374700
+        },
+        {
+          "code": "training_camp_man",
+          "schema": 1,
+          "compressed_bytes": 3628,
+          "decompressed_bytes": 9239
+        },
+        {
+          "code": "scout_man",
+          "schema": 31,
+          "compressed_bytes": 9201,
+          "decompressed_bytes": 37153
+        },
+        {
+          "code": "awol",
+          "schema": 1,
+          "compressed_bytes": 204,
+          "decompressed_bytes": 300
+        },
+        {
+          "code": "award_man",
+          "schema": 13,
+          "compressed_bytes": 5116,
+          "decompressed_bytes": 14679
+        },
+        {
+          "code": "award_year_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 5442,
+          "decompressed_bytes": 9282
+        },
+        {
+          "code": "award_club_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 40,
+          "decompressed_bytes": 34
+        },
+        {
+          "code": "fine_manager",
+          "schema": 1,
+          "compressed_bytes": 157,
+          "decompressed_bytes": 196
+        },
+        {
+          "code": "contract_man",
+          "schema": 14,
+          "compressed_bytes": 5559,
+          "decompressed_bytes": 15199
+        },
+        {
+          "code": "person_record_history_ls",
+          "schema": 4,
+          "compressed_bytes": 1172728,
+          "decompressed_bytes": 1669558
+        },
+        {
+          "code": "person_record_manager",
+          "schema": 30,
+          "compressed_bytes": 317265,
+          "decompressed_bytes": 2935938
+        },
+        {
+          "code": "official_manager",
+          "schema": 5,
+          "compressed_bytes": 3415,
+          "decompressed_bytes": 9612
+        },
+        {
+          "code": "agent_manager",
+          "schema": 2,
+          "compressed_bytes": 252,
+          "decompressed_bytes": 360
+        },
+        {
+          "code": "dispute",
+          "schema": 1,
+          "compressed_bytes": 25,
+          "decompressed_bytes": 12
+        },
+        {
+          "code": "finance_manager",
+          "schema": 17,
+          "compressed_bytes": 1211,
+          "decompressed_bytes": 4704
+        },
+        {
+          "code": "network_man",
+          "schema": 25,
+          "compressed_bytes": 87,
+          "decompressed_bytes": 223
+        },
+        {
+          "code": "sim_stats",
+          "schema": 1,
+          "compressed_bytes": 102063,
+          "decompressed_bytes": 197105
+        },
+        {
+          "code": "hall_of_fame",
+          "schema": 10,
+          "compressed_bytes": 288407,
+          "decompressed_bytes": 843906
+        },
+        {
+          "code": "backroom_advice_manager",
+          "schema": 20,
+          "compressed_bytes": 13086,
+          "decompressed_bytes": 137848
+        },
+        {
+          "code": "interaction_manager",
+          "schema": 47,
+          "compressed_bytes": 515242,
+          "decompressed_bytes": 4014880
+        },
+        {
+          "code": "press_conference_manager",
+          "schema": 10,
+          "compressed_bytes": 165668,
+          "decompressed_bytes": 1185154
+        },
+        {
+          "code": "job_centre",
+          "schema": 1,
+          "compressed_bytes": 639,
+          "decompressed_bytes": 1512
+        },
+        {
+          "code": "team_talk_man",
+          "schema": 5,
+          "compressed_bytes": 560,
+          "decompressed_bytes": 1801
+        },
+        {
+          "code": "board_takeover_manager",
+          "schema": 5,
+          "compressed_bytes": 509,
+          "decompressed_bytes": 1700
+        },
+        {
+          "code": "financial_fair_play_manager",
+          "schema": 2,
+          "compressed_bytes": 23,
+          "decompressed_bytes": 10
+        },
+        {
+          "code": "feeder_man",
+          "schema": 5,
+          "compressed_bytes": 1049,
+          "decompressed_bytes": 2248
+        },
+        {
+          "code": "captain_system",
+          "schema": 8,
+          "compressed_bytes": 31,
+          "decompressed_bytes": 25
+        },
+        {
+          "code": "media_man",
+          "schema": 20,
+          "compressed_bytes": 83994,
+          "decompressed_bytes": 295889
+        },
+        {
+          "code": "morale_manager",
+          "schema": 4,
+          "compressed_bytes": 46,
+          "decompressed_bytes": 33
+        },
+        {
+          "code": "matchday_manager",
+          "schema": 8,
+          "compressed_bytes": 965,
+          "decompressed_bytes": 8077
+        },
+        {
+          "code": "play_fixture_manager",
+          "schema": 7,
+          "compressed_bytes": 894041,
+          "decompressed_bytes": 4461424
+        },
+        {
+          "code": "dynamics_pivotal_moments",
+          "schema": 3,
+          "compressed_bytes": 37,
+          "decompressed_bytes": 24
+        },
+        {
+          "code": "virtual_manager",
+          "schema": 1,
+          "compressed_bytes": 25,
+          "decompressed_bytes": 12
+        },
+        {
+          "code": "match_stats_cfg",
+          "schema": 6,
+          "compressed_bytes": 25990398,
+          "decompressed_bytes": 25989791
+        },
+        {
+          "code": "award_club_hist_dt",
+          "schema": 1,
+          "compressed_bytes": 58,
+          "decompressed_bytes": 45
+        },
+        {
+          "code": "award_year_hist_dt",
+          "schema": 1,
+          "compressed_bytes": 40911,
+          "decompressed_bytes": 179916
+        },
+        {
+          "code": "comp_history_dt",
+          "schema": 3,
+          "compressed_bytes": 726743,
+          "decompressed_bytes": 4382628
+        },
+        {
+          "code": "extended_comp_records_dt",
+          "schema": 5,
+          "compressed_bytes": 10230,
+          "decompressed_bytes": 34554
+        },
+        {
+          "code": "injury_histories_dt",
+          "schema": 2,
+          "compressed_bytes": 489006,
+          "decompressed_bytes": 1756168
+        },
+        {
+          "code": "person_db_changes",
+          "schema": 3754,
+          "compressed_bytes": 1155,
+          "decompressed_bytes": 9092
+        },
+        {
+          "code": "person_record_history_dt",
+          "schema": 2,
+          "compressed_bytes": 1751090,
+          "decompressed_bytes": 14048840
+        },
+        {
+          "code": "player_stats_hist_dt",
+          "schema": 7,
+          "compressed_bytes": 1599430,
+          "decompressed_bytes": 8937608
+        },
+        {
+          "code": "starting_club_debt_db",
+          "schema": 3754,
+          "compressed_bytes": 440490,
+          "decompressed_bytes": 2806260
+        },
+        {
+          "code": "tc_best_eleven_history_dt",
+          "schema": 2,
+          "compressed_bytes": 45125,
+          "decompressed_bytes": 141001
+        },
+        {
+          "code": "tc_cup_history_dt",
+          "schema": 1,
+          "compressed_bytes": 49209,
+          "decompressed_bytes": 179126
+        },
+        {
+          "code": "tc_extended_club_records_history_dt",
+          "schema": 5,
+          "compressed_bytes": 77064,
+          "decompressed_bytes": 666536
+        },
+        {
+          "code": "tc_extended_nation_records_history_dt",
+          "schema": 5,
+          "compressed_bytes": 55872,
+          "decompressed_bytes": 323107
+        },
+        {
+          "code": "tc_history_dt",
+          "schema": 1,
+          "compressed_bytes": 7379,
+          "decompressed_bytes": 35120
+        },
+        {
+          "code": "tc_league_history_dt",
+          "schema": 1,
+          "compressed_bytes": 2740693,
+          "decompressed_bytes": 6413336
+        },
+        {
+          "code": "tc_manager_history_dt",
+          "schema": 2,
+          "compressed_bytes": 1702,
+          "decompressed_bytes": 5557
+        }
+      ],
+      "second": [
+        {
+          "code": "game_info",
+          "schema": 47,
+          "compressed_bytes": 2697,
+          "decompressed_bytes": 7025
+        },
+        {
+          "code": "memory_pools",
+          "schema": 0,
+          "compressed_bytes": 4348,
+          "decompressed_bytes": 12571
+        },
+        {
+          "code": "save_game_summary",
+          "schema": 31,
+          "compressed_bytes": 1091,
+          "decompressed_bytes": 1824
+        },
+        {
+          "code": "game_db",
+          "schema": 4000,
+          "compressed_bytes": 77632110,
+          "decompressed_bytes": 247385795
+        },
+        {
+          "code": "pl_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 33,
+          "decompressed_bytes": 26
+        },
+        {
+          "code": "non_pl_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 33,
+          "decompressed_bytes": 26
+        },
+        {
+          "code": "humans",
+          "schema": 24,
+          "compressed_bytes": 15251,
+          "decompressed_bytes": 60637
+        },
+        {
+          "code": "news",
+          "schema": 2957,
+          "compressed_bytes": 3516614,
+          "decompressed_bytes": 19094759
+        },
+        {
+          "code": "used_player_data",
+          "schema": 35,
+          "compressed_bytes": 2853875,
+          "decompressed_bytes": 11670402
+        },
+        {
+          "code": "transfer_man",
+          "schema": 35,
+          "compressed_bytes": 552456,
+          "decompressed_bytes": 3170505
+        },
+        {
+          "code": "trade_man",
+          "schema": 11,
+          "compressed_bytes": 1825,
+          "decompressed_bytes": 4341
+        },
+        {
+          "code": "shortlist_man",
+          "schema": 50,
+          "compressed_bytes": 2656487,
+          "decompressed_bytes": 5657501
+        },
+        {
+          "code": "manager_manager",
+          "schema": 35,
+          "compressed_bytes": 307104,
+          "decompressed_bytes": 2849413
+        },
+        {
+          "code": "tc_record_man",
+          "schema": 24,
+          "compressed_bytes": 1394584,
+          "decompressed_bytes": 28781615
+        },
+        {
+          "code": "tc_league_history_ls",
+          "schema": 4,
+          "compressed_bytes": 338832,
+          "decompressed_bytes": 1138838
+        },
+        {
+          "code": "tc_cup_history_ls",
+          "schema": 4,
+          "compressed_bytes": 14532,
+          "decompressed_bytes": 43758
+        },
+        {
+          "code": "tc_best_eleven_history_ls",
+          "schema": 4,
+          "compressed_bytes": 644,
+          "decompressed_bytes": 2238
+        },
+        {
+          "code": "tc_manager_history_ls",
+          "schema": 4,
+          "compressed_bytes": 479,
+          "decompressed_bytes": 1314
+        },
+        {
+          "code": "tc_history_ls",
+          "schema": 4,
+          "compressed_bytes": 3446,
+          "decompressed_bytes": 11070
+        },
+        {
+          "code": "tc_extended_club_records_history_ls",
+          "schema": 4,
+          "compressed_bytes": 1503,
+          "decompressed_bytes": 6314
+        },
+        {
+          "code": "tc_extended_nation_records_history_ls",
+          "schema": 4,
+          "compressed_bytes": 995,
+          "decompressed_bytes": 3682
+        },
+        {
+          "code": "tactics_man",
+          "schema": 26,
+          "compressed_bytes": 342894,
+          "decompressed_bytes": 2267258
+        },
+        {
+          "code": "regeneration_manager",
+          "schema": 47,
+          "compressed_bytes": 185331,
+          "decompressed_bytes": 410165
+        },
+        {
+          "code": "retirement_manager",
+          "schema": 2,
+          "compressed_bytes": 444,
+          "decompressed_bytes": 711
+        },
+        {
+          "code": "database_analyser",
+          "schema": 2,
+          "compressed_bytes": 38,
+          "decompressed_bytes": 25
+        },
+        {
+          "code": "edit_session_man",
+          "schema": 176,
+          "compressed_bytes": 33,
+          "decompressed_bytes": 20
+        },
+        {
+          "code": "weather_manager",
+          "schema": 3,
+          "compressed_bytes": 107666,
+          "decompressed_bytes": 292387
+        },
+        {
+          "code": "fog_of_war",
+          "schema": 2,
+          "compressed_bytes": 1241,
+          "decompressed_bytes": 1576
+        },
+        {
+          "code": "injury_manager",
+          "schema": 8,
+          "compressed_bytes": 160338,
+          "decompressed_bytes": 409887
+        },
+        {
+          "code": "injury_histories_ls",
+          "schema": 4,
+          "compressed_bytes": 308527,
+          "decompressed_bytes": 654730
+        },
+        {
+          "code": "training_man",
+          "schema": 32,
+          "compressed_bytes": 39189,
+          "decompressed_bytes": 374700
+        },
+        {
+          "code": "training_camp_man",
+          "schema": 1,
+          "compressed_bytes": 3628,
+          "decompressed_bytes": 9239
+        },
+        {
+          "code": "scout_man",
+          "schema": 31,
+          "compressed_bytes": 9201,
+          "decompressed_bytes": 37153
+        },
+        {
+          "code": "awol",
+          "schema": 1,
+          "compressed_bytes": 204,
+          "decompressed_bytes": 300
+        },
+        {
+          "code": "award_man",
+          "schema": 13,
+          "compressed_bytes": 5116,
+          "decompressed_bytes": 14679
+        },
+        {
+          "code": "award_year_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 5442,
+          "decompressed_bytes": 9282
+        },
+        {
+          "code": "award_club_hist_ls",
+          "schema": 4,
+          "compressed_bytes": 40,
+          "decompressed_bytes": 34
+        },
+        {
+          "code": "fine_manager",
+          "schema": 1,
+          "compressed_bytes": 157,
+          "decompressed_bytes": 196
+        },
+        {
+          "code": "contract_man",
+          "schema": 14,
+          "compressed_bytes": 5559,
+          "decompressed_bytes": 15199
+        },
+        {
+          "code": "person_record_history_ls",
+          "schema": 4,
+          "compressed_bytes": 1172728,
+          "decompressed_bytes": 1669558
+        },
+        {
+          "code": "person_record_manager",
+          "schema": 30,
+          "compressed_bytes": 317265,
+          "decompressed_bytes": 2935938
+        },
+        {
+          "code": "official_manager",
+          "schema": 5,
+          "compressed_bytes": 3415,
+          "decompressed_bytes": 9612
+        },
+        {
+          "code": "agent_manager",
+          "schema": 2,
+          "compressed_bytes": 252,
+          "decompressed_bytes": 360
+        },
+        {
+          "code": "dispute",
+          "schema": 1,
+          "compressed_bytes": 25,
+          "decompressed_bytes": 12
+        },
+        {
+          "code": "finance_manager",
+          "schema": 17,
+          "compressed_bytes": 1211,
+          "decompressed_bytes": 4704
+        },
+        {
+          "code": "network_man",
+          "schema": 25,
+          "compressed_bytes": 87,
+          "decompressed_bytes": 223
+        },
+        {
+          "code": "sim_stats",
+          "schema": 1,
+          "compressed_bytes": 102063,
+          "decompressed_bytes": 197105
+        },
+        {
+          "code": "hall_of_fame",
+          "schema": 10,
+          "compressed_bytes": 288407,
+          "decompressed_bytes": 843906
+        },
+        {
+          "code": "backroom_advice_manager",
+          "schema": 20,
+          "compressed_bytes": 13086,
+          "decompressed_bytes": 137848
+        },
+        {
+          "code": "interaction_manager",
+          "schema": 47,
+          "compressed_bytes": 515242,
+          "decompressed_bytes": 4014880
+        },
+        {
+          "code": "press_conference_manager",
+          "schema": 10,
+          "compressed_bytes": 165668,
+          "decompressed_bytes": 1185154
+        },
+        {
+          "code": "job_centre",
+          "schema": 1,
+          "compressed_bytes": 639,
+          "decompressed_bytes": 1512
+        },
+        {
+          "code": "team_talk_man",
+          "schema": 5,
+          "compressed_bytes": 560,
+          "decompressed_bytes": 1801
+        },
+        {
+          "code": "board_takeover_manager",
+          "schema": 5,
+          "compressed_bytes": 509,
+          "decompressed_bytes": 1700
+        },
+        {
+          "code": "financial_fair_play_manager",
+          "schema": 2,
+          "compressed_bytes": 23,
+          "decompressed_bytes": 10
+        },
+        {
+          "code": "feeder_man",
+          "schema": 5,
+          "compressed_bytes": 1049,
+          "decompressed_bytes": 2248
+        },
+        {
+          "code": "captain_system",
+          "schema": 8,
+          "compressed_bytes": 31,
+          "decompressed_bytes": 25
+        },
+        {
+          "code": "media_man",
+          "schema": 20,
+          "compressed_bytes": 83994,
+          "decompressed_bytes": 295889
+        },
+        {
+          "code": "morale_manager",
+          "schema": 4,
+          "compressed_bytes": 46,
+          "decompressed_bytes": 33
+        },
+        {
+          "code": "matchday_manager",
+          "schema": 8,
+          "compressed_bytes": 965,
+          "decompressed_bytes": 8077
+        },
+        {
+          "code": "play_fixture_manager",
+          "schema": 7,
+          "compressed_bytes": 894041,
+          "decompressed_bytes": 4461424
+        },
+        {
+          "code": "dynamics_pivotal_moments",
+          "schema": 3,
+          "compressed_bytes": 37,
+          "decompressed_bytes": 24
+        },
+        {
+          "code": "virtual_manager",
+          "schema": 1,
+          "compressed_bytes": 25,
+          "decompressed_bytes": 12
+        },
+        {
+          "code": "match_stats_cfg",
+          "schema": 6,
+          "compressed_bytes": 25990398,
+          "decompressed_bytes": 25989791
+        },
+        {
+          "code": "award_club_hist_dt",
+          "schema": 1,
+          "compressed_bytes": 58,
+          "decompressed_bytes": 45
+        },
+        {
+          "code": "award_year_hist_dt",
+          "schema": 1,
+          "compressed_bytes": 40911,
+          "decompressed_bytes": 179916
+        },
+        {
+          "code": "comp_history_dt",
+          "schema": 3,
+          "compressed_bytes": 726743,
+          "decompressed_bytes": 4382628
+        },
+        {
+          "code": "extended_comp_records_dt",
+          "schema": 5,
+          "compressed_bytes": 10230,
+          "decompressed_bytes": 34554
+        },
+        {
+          "code": "injury_histories_dt",
+          "schema": 2,
+          "compressed_bytes": 489006,
+          "decompressed_bytes": 1756168
+        },
+        {
+          "code": "person_db_changes",
+          "schema": 3754,
+          "compressed_bytes": 1155,
+          "decompressed_bytes": 9092
+        },
+        {
+          "code": "person_record_history_dt",
+          "schema": 2,
+          "compressed_bytes": 1751090,
+          "decompressed_bytes": 14048840
+        },
+        {
+          "code": "player_stats_hist_dt",
+          "schema": 7,
+          "compressed_bytes": 1599430,
+          "decompressed_bytes": 8937608
+        },
+        {
+          "code": "starting_club_debt_db",
+          "schema": 3754,
+          "compressed_bytes": 440490,
+          "decompressed_bytes": 2806260
+        },
+        {
+          "code": "tc_best_eleven_history_dt",
+          "schema": 2,
+          "compressed_bytes": 45125,
+          "decompressed_bytes": 141001
+        },
+        {
+          "code": "tc_cup_history_dt",
+          "schema": 1,
+          "compressed_bytes": 49209,
+          "decompressed_bytes": 179126
+        },
+        {
+          "code": "tc_extended_club_records_history_dt",
+          "schema": 5,
+          "compressed_bytes": 77064,
+          "decompressed_bytes": 666536
+        },
+        {
+          "code": "tc_extended_nation_records_history_dt",
+          "schema": 5,
+          "compressed_bytes": 55872,
+          "decompressed_bytes": 323107
+        },
+        {
+          "code": "tc_history_dt",
+          "schema": 1,
+          "compressed_bytes": 7379,
+          "decompressed_bytes": 35120
+        },
+        {
+          "code": "tc_league_history_dt",
+          "schema": 1,
+          "compressed_bytes": 2740693,
+          "decompressed_bytes": 6413336
+        },
+        {
+          "code": "tc_manager_history_dt",
+          "schema": 2,
+          "compressed_bytes": 1702,
+          "decompressed_bytes": 5557
+        }
+      ],
+      "native_verified": false
+    },
+    {
+      "field": "managed_clubs.rows",
+      "status": "same_parsed_value",
+      "first": 1,
+      "second": 1,
+      "native_verified": false
+    },
+    {
+      "field": "managed_clubs.single_managed_club",
+      "status": "same_parsed_value",
+      "first": true,
+      "second": true,
+      "native_verified": false
+    },
+    {
+      "field": "managed_clubs.manager_identity_resolved",
+      "status": "same_parsed_value",
+      "first": 1,
+      "second": 1,
+      "native_verified": false
+    },
+    {
+      "field": "clubs.rows",
+      "status": "same_parsed_value",
+      "first": 42001,
+      "second": 42001,
+      "native_verified": false
+    },
+    {
+      "field": "clubs.managed_team_capacity",
+      "status": "same_parsed_value",
+      "first": 4,
+      "second": 4,
+      "native_verified": false
+    },
+    {
+      "field": "players.rows",
+      "status": "same_parsed_value",
+      "first": 113815,
+      "second": 113815,
+      "native_verified": false
+    },
+    {
+      "field": "players.managed_squad_records",
+      "status": "same_parsed_value",
+      "first": 77,
+      "second": 77,
+      "native_verified": false
+    },
+    {
+      "field": "players.attribute_pair_coverage",
+      "status": "same_parsed_value",
+      "first": {
+        "acceleration": {
+          "pairs": 77,
+          "raw_range": [
+            30,
+            85
+          ],
+          "display_range": [
+            6,
+            17
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        },
+        "pace": {
+          "pairs": 77,
+          "raw_range": [
+            26,
+            80
+          ],
+          "display_range": [
+            5,
+            16
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        },
+        "agility": {
+          "pairs": 77,
+          "raw_range": [
+            35,
+            77
+          ],
+          "display_range": [
+            7,
+            15
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        },
+        "stamina": {
+          "pairs": 77,
+          "raw_range": [
+            6,
+            80
+          ],
+          "display_range": [
+            1,
+            16
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        }
+      },
+      "second": {
+        "acceleration": {
+          "pairs": 77,
+          "raw_range": [
+            30,
+            85
+          ],
+          "display_range": [
+            6,
+            17
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        },
+        "pace": {
+          "pairs": 77,
+          "raw_range": [
+            26,
+            80
+          ],
+          "display_range": [
+            5,
+            16
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        },
+        "agility": {
+          "pairs": 77,
+          "raw_range": [
+            35,
+            77
+          ],
+          "display_range": [
+            7,
+            15
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        },
+        "stamina": {
+          "pairs": 77,
+          "raw_range": [
+            6,
+            80
+          ],
+          "display_range": [
+            1,
+            16
+          ],
+          "parser_derived_only": true,
+          "fm_ui_calibrated": false
+        }
+      },
+      "native_verified": false
+    },
+    {
+      "field": "training.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "training.teams",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "tactics.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "selections.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "set_pieces.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "staff.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "staff_lists.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "injuries.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "injuries.historical_managed_club_records",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "injuries.typed_current_cohort_records",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    },
+    {
+      "field": "fixtures.rows",
+      "status": "not_comparable_unavailable",
+      "first": null,
+      "second": null,
+      "native_verified": false
+    }
+  ],
+  "private_binding_comparison": {
+    "managed_uid": "same_private_binding",
+    "team_ids": "same_private_binding",
+    "managed_players": "same_private_binding"
+  },
+  "source_snapshots": 1,
+  "independent_treatment_replicates_verified": null,
+  "native_semantics_verified": false,
+  "career_advance_released": false
+}
