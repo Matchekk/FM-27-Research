@@ -152,6 +152,14 @@ Geheimnisse/CI und pusht. Danach stoppen; keine1024-Erweiterung, Holdouts oder
 Optimierungsrunde. Dies ist keine neue native Re-Ausführung oder externe
 Replikation des Labors.
 
+Die finalen Directorübersichten in `docs/round2/README.md`, README/FINDINGS/
+NEXT_STEPS sowie PLATFORM/ROADMAP wurden anschließend ebenfalls direkt gelesen.
+Resultate und Freigabegrenzen sind konsistent, einschließlich der ausdrücklich
+nicht separat validierten passiven abgeleiteten Rollen-/Effektivitätsgrößen.
+Keine überzogene Wirkungslosigkeits-, Äquivalenz- oder Karrierebehauptung gefunden.
+Veröffentlichung auch dieser Übersichtsergänzungen nach finaler CI freigegeben;
+weitere inhaltliche Designänderungen würden erneutes Review benötigen.
+
 ## Snapshot der final gelesenen Artefakte
 
 SHA256 nach LF-Normalisierung:
