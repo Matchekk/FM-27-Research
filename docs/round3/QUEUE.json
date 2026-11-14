@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "base_commit": "7767d859e3a66a9aedcf9c1574f3e48dc8dc841f",
+  "date_timezone": "Europe/Berlin",
+  "max_parallel_specialists": 3,
+  "max_native_supervisors": 1,
+  "max_native_workers": 4,
+  "agents": [
+    {"agent": "/root/round3_attr", "branch": "codex/round3-attr", "scope": "ATTR-009-Bridge", "status": "working", "native_execution": "director_only"},
+    {"agent": "/root/round3_mech", "branch": "codex/round3-mech", "scope": "MECH-002", "status": "working", "native_execution": "director_only"},
+    {"agent": "/root/round3_train", "branch": "codex/round3-train", "scope": "TRAIN-002", "status": "working", "native_execution": "none"}
+  ],
+  "independent_reviewer": {"status": "queued_after_specialist_work"},
+  "holdouts_executed": 0,
+  "career_advances": 0,
+  "automatic_next_round": false
+}
