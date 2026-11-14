@@ -1,0 +1,14 @@
+{
+  "package": "fmsave",
+  "version": "0.12.4",
+  "filename": "fmsave-0.12.4-py3-none-any.whl",
+  "download_url": "https://files.pythonhosted.org/packages/78/26/ebf32a371495499221ae068e20226d4fd250d4391cfb798905e256b6be72/fmsave-0.12.4-py3-none-any.whl",
+  "wheel_sha256": "2bb7a674decbcb48d0c37e13cafe22d0e6dba995493b97046411e94a74854baa",
+  "release_tag": "v0.12.4",
+  "release_commit": "e0704bc5d7e6bf687fecf85cd48b28c497bdef68",
+  "upload_utc": "2026-11-13T22:54:48.659800Z",
+  "install_no_deps": true,
+  "install_no_compile": true,
+  "base_package_modified": false,
+  "saved_file_opened": false
+}
