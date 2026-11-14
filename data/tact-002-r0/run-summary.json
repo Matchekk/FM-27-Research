@@ -1,6 +1,6 @@
 {
   "experiment_id": "TACT-002-R0",
-  "scientific_series_complete": false,
+  "scientific_series_complete": true,
   "technical_gate_passed": true,
   "counts": {
     "technical": {
@@ -8,15 +8,15 @@
       "expected_rejection": 1
     },
     "main": {
-      "not_started": 512
+      "ok": 512
     }
   },
-  "charged_native_wall_seconds": 29.928955600000336,
+  "charged_native_wall_seconds": 295.7366557000023,
   "limit_seconds": 900,
-  "elapsed_study_window_seconds": 317.996172,
+  "elapsed_study_window_seconds": 851.954045,
   "fixed_utc_deadline": "2026-11-14T16:03:01.170046+00:00",
   "within_fixed_deadline": true,
-  "independent_main_seed_blocks": null,
+  "independent_main_seed_blocks": 64,
   "excluded_matches": 0,
   "retries": 0,
   "holdout_matches": 0,

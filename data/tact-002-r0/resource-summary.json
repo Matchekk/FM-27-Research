@@ -1,0 +1,51 @@
+{
+  "supervised_operations": 3,
+  "coordination_leases": [
+    {
+      "phase": "prepare",
+      "schema": 1,
+      "experiment": "TACT-002-R0",
+      "workers": 4,
+      "owner_pid": 17644,
+      "acquired_utc": "2026-11-14T15:33:01.163047+00:00"
+    },
+    {
+      "phase": "technical",
+      "schema": 1,
+      "experiment": "TACT-002-R0",
+      "workers": 4,
+      "owner_pid": 32008,
+      "acquired_utc": "2026-11-14T15:37:58.970314+00:00"
+    },
+    {
+      "phase": "main",
+      "schema": 1,
+      "experiment": "TACT-002-R0",
+      "workers": 4,
+      "owner_pid": 22852,
+      "acquired_utc": "2026-11-14T15:42:47.305390+00:00"
+    }
+  ],
+  "sessions": [
+    {
+      "kind": "technical",
+      "warm_worker_processes": 4,
+      "completed_matches": 32,
+      "all_returncodes_zero": true,
+      "all_cleanup_ok": true
+    },
+    {
+      "kind": "main",
+      "warm_worker_processes": 32,
+      "completed_matches": 512,
+      "all_returncodes_zero": true,
+      "all_cleanup_ok": true
+    }
+  ],
+  "non_match_native_probe_processes": 5,
+  "probe_basis": "One image check per supervised NativeLab initialization plus one capability-cache miss in each technical/main child",
+  "negative_processes": 1,
+  "private_raw_bytes": 245275533,
+  "maximum_workers": 4,
+  "progress_timeout_seconds": 90
+}

@@ -21,7 +21,9 @@ Nach tatsächlicher Freigabe folgen `manifest.json`,`technical.jsonl`,
 `technical-summary.json`,`technical-gate.json`,später`main.jsonl`,
 `effects.json`,`block-contrasts.jsonl`,`job-accounting.jsonl`,`budget.json`.
 Unvollständige Blöcke erlauben nur technischen Status,keine Teil-Leistungsanalyse.
-Der momentane Vorbereitungsstand enthält keine neuen Vollmatchresultate.
+Die Serie ist vollständig:512Haupt-/32Technikmatches plus erwarteteNegativprobe,keine nativen Ausfälle.
+Alle545Jobs abgerechnet;Daten,Effekte,Budgets und Leasebelege sind veröffentlicht.
+[Ergebnisbericht](../../experiments/TACT-002-R0-results.md) · [unabhängigerReview](../../docs/round2/RESULTS-REVIEW.md).
 
 Offline-Prüfung:
 ```

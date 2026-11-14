@@ -1,5 +1,12 @@
 # FM27 Meta Research
 
+> **Runde2 abgeschlossen:** TACT-002-R0 mit512Hauptmatches/64Seedblöcken.
+> DLF−CF−0,018xGD,95-%-KI[−0,160;+0,124],p0,801;kein Primär-/Holm7-Nachweis.
+> VALID003-Offlinevorarbeit und SET-V0-Synthetikparser geprüft;keine neue Karriere-
+> oder native Standardfreigabe. [Gesamtauswertung](docs/round2/README.md) ·
+> [Rollenbericht](experiments/TACT-002-R0-results.md) ·
+> [nächster ATTR/MECH/TRAIN-Auftrag](experiments/NEXT-ATTR-MECH-TRAIN-round3.md).
+
 > **Multi-Agent-Programm:** sieben tatsächliche Codex-Spezialisten mit getrennten
 > Berichten, unabhängiger Nachrechnung und zentraler Native-/Seedkoordination.
 > [Gesamtauswertung und Budgets](docs/program-2026-11-14/README.md) ·

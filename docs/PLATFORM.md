@@ -210,3 +210,19 @@ Der bestehende kontrollierte Startnormalisierer überschreibt unter anderem
 Fitness/Schärfe. Profil-/Stärke-/Mechanikstudien benötigen deshalb eigenen opt-in
 Eingabevertrag und passive Readbacks, keine bloßen JSON-Änderungen. Karriereexecutor,
 RNG-Replikate, individuelle Teilnahme und Standardexposition bleiben separate Gates.
+
+## Runde2 – tatsächliche erste Leaseintegration und getrennte Offlinepfade
+
+[TACT-002-R0](../experiments/TACT-002-R0-results.md) hat mit dem eigenen neuen
+Runner512Haupt- und32Technikmatches plusNegativprobe abgeschlossen. NativeLease
+hält jede gesamte DeadlineBudget-Childphase;Child validiert Supervisor-/Lease-
+Identität. VierWorker/90s,900sChild/1800sUTC,keinRetry. Historische Runner bleiben
+unverändert;deren frühere Aussagen über fehlendeIntegration waren ihr damaligerStand.
+
+`research/validation003.py` stellt eigene21Rohvektoren,Kapazitäts-/ID-Bindung,
+Hash-Whitelist und Missing/Readbackvergleich bereit. Positionsratings0..20,
+Abilityrohwerte1..100. PKM werden nicht dekodiert,neue Profile nicht nativ freigegeben.
+`research/coordination_testpath.py` integriert dieselbe Lease/Budget ausschließlich
+mit festen harmlosen Python-Probes. `research/set_v0.py` akzeptiert nur eigene
+synthetische Vertragstraces;nativeExecution/Clock/Shot/Possession bleibenblockiert.
+Details: [Runde2](round2/README.md),[VALID](round2/VALID.md),[SET](round2/SET.md).

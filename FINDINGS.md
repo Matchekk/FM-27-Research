@@ -102,3 +102,19 @@ nachträgliche Kandidatenauswahl.16 technische Vollmatches/8 exakte A/A-Paare
 und Exit108-Negativkontrolle bestanden; keine Ausfälle/Retry/Ersatzseeds/Holdouts.
 [Ergebnis](experiments/TACT-001-P1C-results.md) ·
 [Messungen](data/tact-001-p1c/main.jsonl) · [Planung](data/tact-001-p1c/effects.json).
+
+## 2026-11-14 – TACT-002-R0,FM27 27.0.1+2503222
+
+Vorregistrierter Rollenvarianzpilot,512Hauptmatches/64neueSeedblöcke:
+DLF−CF marginal über zweiAMC-Rollen **-0.018xGD**,95-%-KI
+[-0.160;+0.124],p0.80072. VolleBreite0,283 erreicht
+Pilotziel≤0,50. Kein Primärnachweis,keine der siebenSekundärhypothesen nachHolm
+signifikant. AMC+0,049xGD,Interaktion−0,211[−0,544;+0,122]; Richtung unklar.
+ST-Punkteffekt−0,098[−0,283;+0,088]. KeinKandidat/Rollensieger ausgewählt.
+
+32technischeVollmatches/16exakteA/A und Exit108bestanden;alleInputs/Seeds/Rollen/
+PI/Profile nativ geprüft. Keine nativen Ausfälle,Retries,Ersatzseeds oderHoldouts.
+Synthetische omnipotente Profile und feste zweiGegner schränken Übertragung ein;
+kein Beweis universeller Wirkungsfreiheit oder formalerÄquivalenz.
+[Ergebnis](experiments/TACT-002-R0-results.md) ·
+[Rohmessungen](data/tact-002-r0/main.jsonl) · [Runde2](docs/round2/README.md).

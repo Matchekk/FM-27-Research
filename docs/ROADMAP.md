@@ -1,5 +1,18 @@
 # Forschungsroadmap – FM27 Research 2.0
 
+## Aktualisierung nach abgeschlossener Runde2
+
+[TACT-Rollenpilot512Matches](../experiments/TACT-002-R0-results.md) abgeschlossen,
+Präzisionsziel erfüllt,kein Primär-/Holm7-Nachweis. Nicht auf1024aufstocken.
+[VALID003- und SET-V0-Module](round2/README.md) sind geprüfte Offlinevorarbeiten,
+keine native Profil-/Karriere-/Standardfreigabe. Der neue TACT-Runner integriert
+die zentraleLease tatsächlich;alteRunner bleiben unverändert.
+
+Priorität jetzt [ATTR→MECH→TRAIN](../experiments/NEXT-ATTR-MECH-TRAIN-round3.md):
+Masken-/Effektivitäts-/Rohskalenaudit,danach gezielter Attributinteraktionspilot;
+eigener Startpolicy-Pfad vor Schärfeversuch;Karriere-RNG und Teilnahme vor Training.
+Alle weiteren Serien bleiben separate neue Aufträge mit eigenenGates/Budgets.
+
 ## Aktualisierte Priorität – Multi-Agent-Programm14.11.2026
 
 [Gesamtauswertung mit sieben getrennten Berichten](program-2026-11-14/README.md)

@@ -1,0 +1,95 @@
+{
+  "kind": "completed_research_round",
+  "date": "2026-11-14",
+  "initial_parallel_subagents": 3,
+  "observed_max_parallel_subagents": 3,
+  "agents": [
+    {
+      "role": "TACT",
+      "actual_codex_task": "/root/round2_tact",
+      "branch": "codex/tact002-r0",
+      "report": "TACT.md",
+      "report_lf_sha256": "cfc6ac6ffaf5cf9beb928b8368a46baa63968d7622968e80062a84b2c9ce5930",
+      "local_source_commits": [
+        "212189faca40fbb8eed164ea418fc57fd942642b",
+        "dbf5f8f750d7f4cdcbde9ef189877ba5709f8fa7"
+      ],
+      "status": "complete"
+    },
+    {
+      "role": "VALID",
+      "actual_codex_task": "/root/round2_valid",
+      "branch": "codex/valid003-round2",
+      "report": "VALID.md",
+      "report_lf_sha256": "d84efe9f43054cd58cfbf2180f22e7fe2540f65d4b4dadb036630ef8e2f88116",
+      "local_source_commits": [
+        "f83d795afa1493cd21b835db0637acd84d3f17fb"
+      ],
+      "status": "complete"
+    },
+    {
+      "role": "SET",
+      "actual_codex_task": "/root/round2_set",
+      "branch": "codex/set-v0",
+      "report": "SET.md",
+      "report_lf_sha256": "1428caecb46d4403222fc403de5cefc283cda9c16bc308c25a27273c1f47e0bd",
+      "local_source_commits": [
+        "356bde8700a53819de89ac24c2065be1a370a4a9",
+        "10e924788dffa5064b062e9662128dcd8acbcbad"
+      ],
+      "status": "complete"
+    },
+    {
+      "role": "REVIEW",
+      "actual_codex_task": "/root/round2_reviewer",
+      "branch": "codex/round2-review",
+      "report": "RESULTS-REVIEW.md",
+      "report_lf_sha256": "3a05c075f5eb591d86f6d60fb6a79e648f975336792082a4fa92947624423cb1",
+      "local_source_commits": [
+        "2d8f08bbcc1e6f43d1b6007ed5ee25ee27bf329a",
+        "9b07d7b1f9e6ab12516d8633173c55988c8408cb",
+        "4540c28587fe29c16ad3f75c2d770b77d804c043",
+        "f17b487c83dad0bba816efbc784ced6dc303b57c",
+        "063cce50aef33b954b053b404a93c52b25c3f4f2"
+      ],
+      "status": "complete"
+    }
+  ],
+  "native_owner": "director_only",
+  "concurrent_native_supervisors": 1,
+  "max_engine_workers": 4,
+  "main_matches": 512,
+  "technical_full_matches": 32,
+  "expected_native_rejections": 1,
+  "native_failures": 0,
+  "retries": 0,
+  "replacement_seeds": 0,
+  "holdout_matches": 0,
+  "career_execution": false,
+  "preregistration_commit": "1667463286cdcb4c8d139d6d71c496799281882e",
+  "preregistration_ci": 43611014780,
+  "technical_commit": "71886871fb5531ba480751a67a745a35f664f964",
+  "technical_ci": 43611426911,
+  "administrative_events": [
+    {
+      "event": "short_commit_cli_rejected_before_writes",
+      "count": 1,
+      "corrected_to_same_published_full_sha": true,
+      "native_attempts": 0,
+      "seed_or_budget_reset": false
+    }
+  ],
+  "tests": {
+    "repository": 86,
+    "historical_analysis": 5
+  },
+  "historical_files_unchanged": 193,
+  "independent_review": "passed_for_publication",
+  "native_profile_released": false,
+  "pkm_replay_released": false,
+  "set_native_mapping_released": false,
+  "followup_order": "experiments/NEXT-ATTR-MECH-TRAIN-round3.md",
+  "followup_started": false,
+  "pending_agent_tasks": [],
+  "stop_after_publication": true
+}

@@ -1,5 +1,15 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Nach Runde2 – technische Freigabereife entscheidet
+
+[TACT-002-R0](experiments/TACT-002-R0-results.md) abgeschlossen:512Matches/64Blöcke,
+kein Primär-/Holm7-Nachweis,Präzisionsziel erfüllt. Keine automatische1024-Erweiterung.
+[Nächster konkreter Auftrag](experiments/NEXT-ATTR-MECH-TRAIN-round3.md):
+ATTR-Positionsmasken/69er-Rohskalenaudit vor relativerJR/Speed-Brücke;
+MECH opt-inStartpolicy/Readbacks vor Schärfe×Pressing;
+TRAIN Reader/RNG/Teilnahme vor Karrierebenchmark. Native PKM/SET-Zähler weiter
+blockiert;keine weitere Ausführung aus dieser Roadmap.
+
 ## Aus dem Multi-Agent-Programm
 
 [Sieben Fach-/Reviewberichte](docs/program-2026-11-14/README.md) priorisieren
