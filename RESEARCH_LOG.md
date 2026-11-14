@@ -15,6 +15,17 @@
 - 21 Plattform-/Pilot-/Budgettests und fünf bisherige Analysetests bestanden.
   [Eingefrorener Plan](experiments/TACT-001-P0-preregistration.md).
 
+## 2026-11-14 – TACT-001-P0 technisch freigegeben
+
+- Vorregistrierung, Code und Seeds wurden in `650a89a` vor dem ersten Match
+  gepusht. Der tatsächliche Registry-Receipt ist auf diesen Commit gebunden.
+- 23/23 technische Matches, alle 16 Eingabezellen, sieben exakte Wiederholungen
+  und die negative Binärprobe mit Code 108 bestanden. Pro Match 1.058 native
+  Profilfelder und sämtliche deklarierten Eingaben verifiziert.
+- Alle 24 technischen Plätze verbraucht; 128 Hauptjobs noch unbegonnen.
+  Kumulatives Budget 22,553/900 Sekunden, keine Retries oder Ersatzseeds.
+  [Technische Freigabe](experiments/TACT-001-P0-validation.md).
+
 ## 2026-11-14 – Bestandsaufnahme und VALID-002
 
 - Leeres Arbeitsverzeichnis mit dem Forschungsrepository verbunden; sauberer Ausgang

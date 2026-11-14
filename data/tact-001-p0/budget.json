@@ -1,0 +1,101 @@
+{
+  "experiment": "TACT-001-P0",
+  "limits": {
+    "technical": 24,
+    "main": 128
+  },
+  "limit_seconds": 900,
+  "charged_seconds": 22.55299670000204,
+  "reserved": {
+    "tech-high_press-1-combined-r0": "technical",
+    "tech-deep_block-1-baseline-r1": "technical",
+    "tech-high_press-0-press-r1": "technical",
+    "tech-high_press-0-combined-r0": "technical",
+    "tech-high_press-0-line-r1": "technical",
+    "tech-deep_block-0-baseline-r0": "technical",
+    "tech-high_press-0-line-r0": "technical",
+    "tech-deep_block-1-press-r1": "technical",
+    "tech-high_press-0-baseline-r1": "technical",
+    "tech-deep_block-0-combined-r0": "technical",
+    "tech-high_press-0-combined-r1": "technical",
+    "tech-high_press-1-baseline-r0": "technical",
+    "tech-deep_block-1-line-r1": "technical",
+    "tech-deep_block-0-press-r0": "technical",
+    "tech-deep_block-1-line-r0": "technical",
+    "tech-deep_block-1-combined-r0": "technical",
+    "tech-deep_block-0-line-r0": "technical",
+    "tech-high_press-0-press-r0": "technical",
+    "tech-deep_block-1-press-r0": "technical",
+    "tech-high_press-1-press-r0": "technical",
+    "tech-deep_block-1-baseline-r0": "technical",
+    "tech-high_press-1-line-r0": "technical",
+    "tech-high_press-0-baseline-r0": "technical",
+    "negative-binary": "technical"
+  },
+  "halted": false,
+  "operations": [
+    {
+      "name": "prepare",
+      "kind": "technical",
+      "keys": [],
+      "start_utc": "2026-11-14T12:01:54.089360+00:00",
+      "child_deadline_utc": "2026-11-14T12:16:49.089360+00:00",
+      "elapsed_seconds": 0.9888869000005798,
+      "returncode": 1,
+      "timed_out": false
+    },
+    {
+      "name": "prepare-after-auth-fix",
+      "kind": "technical",
+      "keys": [],
+      "start_utc": "2026-11-14T12:02:55.205480+00:00",
+      "child_deadline_utc": "2026-11-14T12:17:49.216593+00:00",
+      "elapsed_seconds": 3.136584900001253,
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "name": "technical",
+      "kind": "technical",
+      "keys": [
+        "tech-high_press-1-combined-r0",
+        "tech-deep_block-1-baseline-r1",
+        "tech-high_press-0-press-r1",
+        "tech-high_press-0-combined-r0",
+        "tech-high_press-0-line-r1",
+        "tech-deep_block-0-baseline-r0",
+        "tech-high_press-0-line-r0",
+        "tech-deep_block-1-press-r1",
+        "tech-high_press-0-baseline-r1",
+        "tech-deep_block-0-combined-r0",
+        "tech-high_press-0-combined-r1",
+        "tech-high_press-1-baseline-r0",
+        "tech-deep_block-1-line-r1",
+        "tech-deep_block-0-press-r0",
+        "tech-deep_block-1-line-r0",
+        "tech-deep_block-1-combined-r0",
+        "tech-deep_block-0-line-r0",
+        "tech-high_press-0-press-r0",
+        "tech-deep_block-1-press-r0",
+        "tech-high_press-1-press-r0",
+        "tech-deep_block-1-baseline-r0",
+        "tech-high_press-1-line-r0",
+        "tech-high_press-0-baseline-r0",
+        "negative-binary"
+      ],
+      "start_utc": "2026-11-14T12:09:32.538110+00:00",
+      "child_deadline_utc": "2026-11-14T12:24:23.412638+00:00",
+      "elapsed_seconds": 18.427524900000208,
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "active": null,
+  "pre_native_auth_repair": {
+    "reason": "Windows venv launcher adds an intermediate parent; authenticated supervisor liveness replaces immediate-PPID equality",
+    "native_calls_started": 0,
+    "elapsed_seconds_refunded": 0,
+    "job_reservations_refunded": 0
+  },
+  "charge_scope": "entire supervised child wall time, including preflight/Python audits; never reset or refunded"
+}

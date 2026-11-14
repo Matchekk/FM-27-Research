@@ -1,0 +1,184 @@
+{
+  "config": {
+    "schema_version": 1,
+    "experiment_id": "TACT-001-P0",
+    "module": "TACT",
+    "kind": "native",
+    "stage": "discovery",
+    "status": "registered",
+    "hypothesis": "Pressing and defensive-line changes interact on xGD within the frozen own IP-4231.",
+    "control": "Standard trigger press, standard defensive line",
+    "intervention": "2x2: trigger press standard/more often and defensive line standard/higher",
+    "conditions": "Synthetic equal strength, controlled profiles, own IP4231/OOP4411, fixed native benchmark management, no injected live changes; two opponent styles, both sides.",
+    "seed_namespace": "TACT-001-P0/main-v1",
+    "identity": {
+      "build": "27.0.1+2503222",
+      "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+      "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+      "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+      "lab_version": "v1114.6",
+      "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+      "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+      "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+    },
+    "metrics": {
+      "primary": "xgd",
+      "secondary": [
+        "points",
+        "gf",
+        "ga",
+        "xgf",
+        "xga",
+        "shots_for",
+        "shots_against",
+        "sot_for",
+        "sot_against",
+        "possession_for"
+      ]
+    },
+    "design": {
+      "unit": "seed_block",
+      "n_blocks": 8,
+      "sides": [
+        0,
+        1
+      ],
+      "arms": [
+        {
+          "id": "baseline",
+          "setup_sha256": "d8348a6221dec95413bf1a3553657a839a501d1ac2a47936b04cbb22b4292bbe",
+          "setup_sha256_type": "cell-map"
+        },
+        {
+          "id": "press",
+          "setup_sha256": "2710f29ce2908bfa43883759cf10ac2a0530eae68ac3a681756559c0415da078",
+          "setup_sha256_type": "cell-map"
+        },
+        {
+          "id": "line",
+          "setup_sha256": "b3bfc323b7de45df63839e88ef8e3efd10ce3555ea8e403afb5d6913d212702f",
+          "setup_sha256_type": "cell-map"
+        },
+        {
+          "id": "combined",
+          "setup_sha256": "996951172fcbd4ef35538dd82a5778bb019dfd21d52cc73a59807e7b8e364f61",
+          "setup_sha256_type": "cell-map"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "high_press",
+          "opponent": "high_press",
+          "strength": "identical_synthetic_profiles",
+          "split": "discovery"
+        },
+        {
+          "id": "deep_block",
+          "opponent": "deep_block",
+          "strength": "identical_synthetic_profiles",
+          "split": "discovery"
+        }
+      ],
+      "setups": {
+        "high_press": {
+          "0": {
+            "baseline": "2fa5bf530d9c46b88a766e879e63de417130b51758aba9ac8b721b80b3d0a342",
+            "press": "9e7f70742f27c77ed4c7e84136be8782488395663e49f2095d97adc68a2ebfb3",
+            "line": "af4091b96f172752fae22b9151913ca8dea03741b4a9cb2372b9b832b72f864e",
+            "combined": "dda8771bd3c968af813027ae08a2c4928f7de974e118c34cbe33d09d86b38c6f"
+          },
+          "1": {
+            "baseline": "6215fd8d6c665d00fcd254c8954989b407e6fa4c2b0e2946d7df729ec23c2bc7",
+            "press": "9f279d2c40b0898ba6d969f6951fd76346711a9f910d1e797116c2caee20dae0",
+            "line": "c624e7b424ea5481f43c7fa01ff3c487077f1b028f1c9a409414f715dd858d7a",
+            "combined": "0a789b0b59bc3c88ffc1b4efcd8083b5e2eab9911a63fd6c23b6e56b16063f65"
+          }
+        },
+        "deep_block": {
+          "0": {
+            "baseline": "c2ddb3a7a99d5e4e415eb541fdb88142ee0d4512d787d879da809e9ae2797ff2",
+            "press": "fe673303d55cdbc18324165a4bda031e43c8fba29c5192fdcd875f5ffe7a3897",
+            "line": "c433494bd8953ed6f0475eab6a1a3a6e299a18c22207becaf9fe2e0be1c1916e",
+            "combined": "02e99edcc7c6edff4b9482c2df61b0740b32d1375d7b993b9f409ba6634d97c7"
+          },
+          "1": {
+            "baseline": "f5398503d8305ce38252b20a680151390af73429a44af157c62d99f7e5f8d986",
+            "press": "b7f7784a890602bd3655ec5c89d75f3070a26b8b9d5122e4c9498f3efe8a2d7e",
+            "line": "431c9398e8696f4e3cd2050314199e50ba4095f90b849d6cc3a13c0fb48d72ac",
+            "combined": "10614dd0644fcf309b7a003acf0ad28e2e55df86dd33d1ba123a2ca285854361"
+          }
+        }
+      }
+    },
+    "science": {
+      "alpha": 0.05,
+      "power": 0.9,
+      "min_effect": 0.1,
+      "multiple_testing": "none",
+      "family_size": 1,
+      "analysis": "analysis/analyse_tact001p0.py: paired DID, side mean, two equally weighted contexts; 20000 stratified bootstrap resamples; ten-secondary Holm family.",
+      "exclusions": "No replacement seeds/outcome exclusions; failed or incomplete blocks block scientific reporting.",
+      "negative_controls": [
+        "7 identical-input repeats/A-A",
+        "invalid binary rejected with 108"
+      ],
+      "readback_fields": [
+        "69 attributes",
+        "23 profile fields",
+        "roles and duties",
+        "both phases",
+        "all encoded instructions",
+        "effective seed"
+      ],
+      "stopping_rule": "128 main jobs, at most 24 technical attempts, four workers, durable 900-second cumulative supervised wall-time cap, no retries.",
+      "selection_rule": "No winner selection, no optimization and no holdout simulation.",
+      "power_basis": "Variance pilot; .9 is target for subsequent planning, not achieved pilot power. Effects .10/.15/.20 xGD DID; one-sided SD upper bounds under normality."
+    },
+    "budget": {
+      "max_matches": 128,
+      "max_workers": 4,
+      "timeout_seconds": 90,
+      "max_technical_attempts": 24,
+      "total_native_wall_seconds": 900
+    },
+    "execution": {
+      "code_sha256": {
+        "analysis/run_tact001p0.py": "0d6252661ae3c41d13724cb878082364f20c44cc5cf003214e33d925c6dcb987",
+        "analysis/analyse_tact001p0.py": "4987f44070daaf9686e82bfddb5583d72a821fea174c911a76a491bd1bfc3ae5",
+        "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+        "research/native.py": "0a9b143d8b51d3e2108c6f60946ca1ea280da4f455299b8718e7303cc168366c",
+        "research/core.py": "f2bcdb0d6a9dce409f014436f8978280aaf8170392c822c7b8ba06ff970cfe86",
+        "research/stats.py": "13cc3ae64d85904dd6acaab08fb06425d29b7b8cb9344fad84ee6d32a763a331",
+        "research/cli.py": "8d05e287d2667fb52f6c6a5cb10512560b9e9646ecfa4c80ac03c6a28a1e1bcc"
+      },
+      "public_inputs_sha256": "e882be111dd9b9412511edeb894239588e61c847c5d472dcaa9023cee519b64c",
+      "seed_plan_sha256": "15f1cff6930422e0ee6497d8b68d5b79f071d087cb2c660ffbaa41a1faf089e5"
+    },
+    "preregistration": {
+      "commit": "650a89af4deada6feb4ea1164e3fc963280d90ed",
+      "document": "experiments/TACT-001-P0-preregistration.md",
+      "document_sha256": "786e791a4343514289485b543b90b136fb4a8721b695d9901ba5ca294bf66226",
+      "analysis": "analysis/analyse_tact001p0.py",
+      "analysis_sha256": "4987f44070daaf9686e82bfddb5583d72a821fea174c911a76a491bd1bfc3ae5"
+    }
+  },
+  "config_sha256": "b5527d72610ac74b435bbc46b48367f047fc75ccef86cb42966d3ff2fcf01b68",
+  "seeds": [
+    3631058533,
+    3217897320,
+    3338590619,
+    2438490623,
+    1309257069,
+    1266378644,
+    1886698441,
+    4174235539,
+    2488464166,
+    3153387712,
+    1494601474,
+    815363476,
+    1656259839,
+    984997709,
+    3863409870,
+    2964785276
+  ]
+}

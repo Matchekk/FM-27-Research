@@ -1,0 +1,22 @@
+{
+  "experiment_id": "TACT-001-P0",
+  "scientific_series_complete": false,
+  "technical_gate_passed": true,
+  "counts": {
+    "technical": {
+      "ok": 23,
+      "expected_rejection": 1
+    },
+    "main": {
+      "not_started": 128
+    }
+  },
+  "charged_native_wall_seconds": 22.55299670000204,
+  "limit_seconds": 900,
+  "independent_main_seed_blocks": null,
+  "excluded_matches": 0,
+  "retries": 0,
+  "holdout_matches": 0,
+  "winner_selected": false,
+  "preregistration_commit": "650a89af4deada6feb4ea1164e3fc963280d90ed"
+}
