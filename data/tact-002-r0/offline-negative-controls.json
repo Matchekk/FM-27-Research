@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "probes": [
+    {
+      "context": "high_press",
+      "side": 0,
+      "probe": "unknown_role",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "probe": "wrong_phase",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "probe": "invalid_pi",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "probe": "unknown_role",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "probe": "wrong_phase",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "probe": "invalid_pi",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "probe": "unknown_role",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "probe": "wrong_phase",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "probe": "invalid_pi",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "probe": "unknown_role",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "probe": "wrong_phase",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "probe": "invalid_pi",
+      "rejected": true
+    }
+  ]
+}

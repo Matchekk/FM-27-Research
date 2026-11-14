@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "experiment_id": "TACT-002-R0",
+  "module": "TACT",
+  "kind": "native",
+  "stage": "discovery",
+  "status": "draft",
+  "hypothesis": "Marginal ST role effect DLF-minus-CF on xGD averaged over the two AMC roles and equally weighted known synthetic opponents.",
+  "control": "R00 byte-identical D00; CF/AttackingMidfielder, existing IP4231/OOP4411",
+  "intervention": "Full2x2 CF/DLF x AttackingMidfielder/SecondStriker, only tested-side IP ST/AMC roles change",
+  "conditions": "Synthetic equal strength, controlled profiles, own IP4231/OOP4411, fixed native benchmark management, no injected live changes; two opponent styles, both sides.",
+  "seed_namespace": "TACT-002-R0/main-v1",
+  "identity": {
+    "build": "27.0.1+2503222",
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+    "lab_version": "v1114.6",
+    "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+  },
+  "metrics": {
+    "primary": "xgd",
+    "secondary": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "plausibility": [
+      "shots_for",
+      "shots_against",
+      "sot_for",
+      "sot_against",
+      "possession_for"
+    ]
+  },
+  "design": {
+    "unit": "seed_block",
+    "n_blocks": 32,
+    "sides": [
+      0,
+      1
+    ],
+    "control_arm": "R00",
+    "matrix": [
+      {
+        "id": "R00",
+        "levels": {
+          "ST": -1,
+          "AMC": -1
+        }
+      },
+      {
+        "id": "R10",
+        "levels": {
+          "ST": 1,
+          "AMC": -1
+        }
+      },
+      {
+        "id": "R01",
+        "levels": {
+          "ST": -1,
+          "AMC": 1
+        }
+      },
+      {
+        "id": "R11",
+        "levels": {
+          "ST": 1,
+          "AMC": 1
+        }
+      }
+    ],
+    "matrix_sha256": "dc395fca5d22a8a27be15e6128562b134607f24838acf784b1f5375aaa28b51e",
+    "factors": [
+      {
+        "code": "ST",
+        "position": "ST",
+        "phase": 0,
+        "low_role": "CentreForward",
+        "low_flags": 2048,
+        "high_role": "DeepLyingForward",
+        "high_flags": 1024
+      },
+      {
+        "code": "AMC",
+        "position": "AMC",
+        "phase": 0,
+        "low_role": "AttackingMidfielder",
+        "low_flags": 512,
+        "high_role": "SecondStriker",
+        "high_flags": 2199023255552
+      }
+    ],
+    "setups": {
+      "high_press": {
+        "0": {
+          "R00": "2fa5bf530d9c46b88a766e879e63de417130b51758aba9ac8b721b80b3d0a342",
+          "R10": "a87c0007a401e204c52131492756613e396893d401b8f0cbefd4ba3cdec5d79c",
+          "R01": "2d2792e0afb0436582eb3418bacc928969b35848b7d823d6aab003d42e84dbbf",
+          "R11": "e55fb78cbe15f879e75e10c9ef67e845c2a0ded6e4205b7f534fbea175f52738"
+        },
+        "1": {
+          "R00": "6215fd8d6c665d00fcd254c8954989b407e6fa4c2b0e2946d7df729ec23c2bc7",
+          "R10": "135ec90c9bddc783ee6394e839cee9b2a79217876b9f609adbfeeee64548a0bb",
+          "R01": "a5415ddd68d0a5030f873e496b846e3c72a5f12e0353c42770eb747ae883bd7b",
+          "R11": "0116fa8cae4087986a7a458b53e39efa6d19c0125333bd3dffb48e8cea00071d"
+        }
+      },
+      "deep_block": {
+        "0": {
+          "R00": "c2ddb3a7a99d5e4e415eb541fdb88142ee0d4512d787d879da809e9ae2797ff2",
+          "R10": "ce95130aadaef124a338ebef9221b7e040a9da85a7f090e100a0dc9d2fd36097",
+          "R01": "a3784496c203caea450a34709a2294a27220f2f294061b25e8cf4413dc519dc5",
+          "R11": "778575635cec34e76ab54053f32d28ca6b06074720e713ef5aaffaad629384c2"
+        },
+        "1": {
+          "R00": "f5398503d8305ce38252b20a680151390af73429a44af157c62d99f7e5f8d986",
+          "R10": "bbc9e08c101fb3090a821af16fcdd27baf2a6385b15bc17cd625f26ea487d90b",
+          "R01": "28ce47a4fb681e8486d2f119d3e24036bd0032cc7e13295f437c1d2420883518",
+          "R11": "06f31d9dec8c3e676c60939574604809f7a23d49f5c745122c3f55d83f6a7f45"
+        }
+      }
+    },
+    "arms": [
+      {
+        "id": "R00",
+        "setup_sha256": "d8348a6221dec95413bf1a3553657a839a501d1ac2a47936b04cbb22b4292bbe"
+      },
+      {
+        "id": "R10",
+        "setup_sha256": "55fdc17d40fc4cdb73261777c10949d2b3c597760636c0d675df597c92eb6bee"
+      },
+      {
+        "id": "R01",
+        "setup_sha256": "92c7035fdf05f04aff82d92d4264011684d474a2111393fb4903876ac007844c"
+      },
+      {
+        "id": "R11",
+        "setup_sha256": "fbbaac43d552df3fb4ecbb21c9409e443aad10113653aac4ec310454869bb20e"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "high_press",
+        "opponent": "high_press",
+        "strength": "identical_synthetic_profiles",
+        "split": "discovery"
+      },
+      {
+        "id": "deep_block",
+        "opponent": "deep_block",
+        "strength": "identical_synthetic_profiles",
+        "split": "discovery"
+      }
+    ]
+  },
+  "science": {
+    "alpha": 0.05,
+    "power": 0.9,
+    "min_effect": 0.3,
+    "multiple_testing": "none",
+    "family_size": 1,
+    "primary_contrast": "ST",
+    "secondary_contrasts": [
+      [
+        "AMC",
+        "xgd"
+      ],
+      [
+        "STxAMC",
+        "xgd"
+      ],
+      [
+        "ST",
+        "points"
+      ],
+      [
+        "ST",
+        "gf"
+      ],
+      [
+        "ST",
+        "ga"
+      ],
+      [
+        "ST",
+        "xgf"
+      ],
+      [
+        "ST",
+        "xga"
+      ]
+    ],
+    "secondary_family_size": 7,
+    "analysis": "analysis/analyse_tact002r0.py: ST(-.5,+.5,-.5,+.5), AMC(-.5,-.5,+.5,+.5), DoD(1,-1,-1,1); side mean then equal context weights; Welch95 and20000 stratified full-block bootstrap; Holm7 secondary.",
+    "exclusions": "None. Incomplete blocks permit technical status only; no replacement seeds, retries, or winner selection.",
+    "negative_controls": [
+      "16input cells twice:32technical full matches and16A/A pairs",
+      "invalid binary exit108",
+      "unknown role/wrong phase/invalid PI offline"
+    ],
+    "readback_fields": [
+      "all coded records after original preparation",
+      "both phases/positions/role64/duty/17PIgroups",
+      "69attributes/1058profiles",
+      "both teams all instructions",
+      "effective seed",
+      "natural finish"
+    ],
+    "stopping_rule": "512main/33technical attempts,900s cumulative supervised child time,1800s immutable UTC window,max4workers,90s progress timeout; error stops; no expansion.",
+    "selection_rule": "No winner or new candidate selected; estimate ST primary, seven frozen secondary contrasts and pilot variance only.",
+    "power_basis": "Unknown role contrastSD. Equal-stratum SD.8/1.2/1.8 imply full95width.400/.600/.900 and power.840/.504/.259 for.30 at64blocks. Not guaranteed90%-powered; future independent planning at effects.20/.30.",
+    "context_weights": [
+      0.5,
+      0.5
+    ],
+    "side_weights": [
+      0.5,
+      0.5
+    ],
+    "desired_full_ci_width": 0.5,
+    "bootstrap_resamples": 20000,
+    "scheduler_rng": 2026111406
+  },
+  "budget": {
+    "max_matches": 512,
+    "max_workers": 4,
+    "timeout_seconds": 90,
+    "max_technical_attempts": 33,
+    "total_native_wall_seconds": 900,
+    "absolute_study_wall_seconds": 1800,
+    "raw_artifact_limit_bytes": 2147483648,
+    "disk_reserve_bytes": 21474836480
+  },
+  "execution": {
+    "code_sha256": {
+      "analysis/verify_tact002r0.py": "ad86a82cdebe1cee2227a0938ac39a41c396d28037a737c869e8640042c9c97f",
+      "analysis/run_tact002r0.py": "f0b1323a84c552fc7c496c9f0d9ff42ea821a5e418ad498987d3eb281eab433a",
+      "analysis/analyse_tact002r0.py": "f71ec48102c9ff3bde7c4f41e32d064601acc2c77aa139d0afcb02f8f5287563",
+      "analysis/export_tact002r0.py": "5138b15147eb4f69f146f947a1f86b406bdd29628722a83bdbf3f7a2d8f80136",
+      "analysis/run_tact001p1b.py": "6de6705e97d45a73e1351a2c1cb7972ff1a2a242abb42fe5ee4d50d457fb5a52",
+      "analysis/analyse_tact001p1b.py": "f871d6ea45c89bf9847491f91d8bbb8a84657ea095238be33cd29e73953ff28a",
+      "research/discovery.py": "9642ba29685c900664d8cf7603e568960e787e49cee89a7c1a99763af534d321",
+      "research/study_budget.py": "7d20b2b9fd2ea1addb64bbec8f6976b971e8746d9d9977fc2e87370e45c93608",
+      "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+      "research/core.py": "94ef5c76f56f65adf495df1632da7cb99701d25c64ad6846a6d45872c6730ab6",
+      "research/native.py": "0a9b143d8b51d3e2108c6f60946ca1ea280da4f455299b8718e7303cc168366c",
+      "research/stats.py": "13cc3ae64d85904dd6acaab08fb06425d29b7b8cb9344fad84ee6d32a763a331",
+      "research/cli.py": "8d05e287d2667fb52f6c6a5cb10512560b9e9646ecfa4c80ac03c6a28a1e1bcc",
+      "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e"
+    },
+    "public_inputs_sha256": "1347f59c5cf4a7274ae585f74f9ad16b9ea0c67eabc8adefff34402dc990f973",
+    "seed_plan_sha256": "e7fd91e43363bb57915b0cdf7d93540cbbf1af1bb0732c422698d732dd969aa6",
+    "matrix_file_sha256": "c0ad221439562c89d1c5fec674d3c24b98f81f6432b61216eb090b01efa8c7a5",
+    "role_manifest_sha256": "4d55a0fa106787a668c882c8b8b37b581b479b84e4e91db4e3fabd6a301163b8",
+    "offline_negative_sha256": "b0abc1544e5cf8728a720a35c637beda7e0b154915fdd442247b4c1dab3b739a",
+    "binary_audit_sha256": "979879e1dd9aa21349d48a03730f6960d897200f296352a2560d97523cf5a809"
+  },
+  "preregistration": {
+    "commit": null,
+    "document": "experiments/TACT-002-R0-preregistration.md",
+    "document_sha256": null,
+    "analysis": "analysis/analyse_tact002r0.py",
+    "analysis_sha256": null
+  }
+}

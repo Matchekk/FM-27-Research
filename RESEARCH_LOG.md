@@ -313,3 +313,15 @@ VALID-Attribute trennen15Positionsratings0..20 und54Abilityrohwerte1..100.
 VALID-Offline-Smoke erzeugte21eigene Vektoren/zweiPythonchildren,0native/0Seeds.
 193altewissenschaftlicheDateien gegen790727f geschützt. Codeveröffentlichung/CI
 vor budgetierter nativer Vorbereitung; keine Holdouts,Karriere oder D15-Optimierung.
+
+## 2026-11-14 – TACT-002-R0 konkrete Vorbereitung bestanden
+
+Nach erfolgreicher Code-CI43610608632 zentrale NativeLease-Vorbereitung:
+16Eingabezellen,alleR00binäridentischP1B-D00,67neue disjunkte reservierteSeeds,
+12offlineSchema-Negativkontrollen. Engine/Host/Fixture/Ressourcen/Katalog/Runtime
+entsprechenVALID002. Keine Vollmatches bisher. Gehashter Rollenmanifest-
+/Recorddiff-/Konfigurations-/Seed-/Analysevertrag wird vor Prüfmatches publiziert.
+Native Vorbereitung verbrauchte9.740/900Child-Sekunden;
+feste Deadline14.11.2026 17:03:01 CET bleibt unverändert.
+86Repositorytests bestehen; generische Speczählung wegen neuem Vertrag9→10,
+keine Änderung eingefrorener wissenschaftlicher Implementierung.
