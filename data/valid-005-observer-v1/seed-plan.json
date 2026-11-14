@@ -1,0 +1,12 @@
+{
+  "experiment_id": "VALID-005-OBSERVER-V1",
+  "namespace": "VALID-005-OBSERVER-V1/technical-v1",
+  "seeds": [
+    2927073907,
+    950824444,
+    3838865994,
+    4071749194
+  ],
+  "excluded_seed_count": 2454,
+  "excluded_seed_set_sha256": "d5f0aec47248664cc16a0fb62bb0cf8ca32cf68389509dcbdae311655cb0f6cd"
+}

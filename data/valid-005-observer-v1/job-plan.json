@@ -1,0 +1,154 @@
+[
+  {
+    "key": "image-reference",
+    "kind": "image",
+    "mode": "reference",
+    "seed": null
+  },
+  {
+    "key": "image-observer_off",
+    "kind": "image",
+    "mode": "observer_off",
+    "seed": null
+  },
+  {
+    "key": "high_press-0-reference",
+    "kind": "full",
+    "context": "high_press",
+    "side": 0,
+    "mode": "reference",
+    "seed": 2927073907
+  },
+  {
+    "key": "high_press-0-observer_off",
+    "kind": "full",
+    "context": "high_press",
+    "side": 0,
+    "mode": "observer_off",
+    "seed": 2927073907
+  },
+  {
+    "key": "high_press-0-observer_on",
+    "kind": "full",
+    "context": "high_press",
+    "side": 0,
+    "mode": "observer_on",
+    "seed": 2927073907
+  },
+  {
+    "key": "high_press-0-observer_on_repeat",
+    "kind": "full",
+    "context": "high_press",
+    "side": 0,
+    "mode": "observer_on_repeat",
+    "seed": 2927073907
+  },
+  {
+    "key": "high_press-1-reference",
+    "kind": "full",
+    "context": "high_press",
+    "side": 1,
+    "mode": "reference",
+    "seed": 950824444
+  },
+  {
+    "key": "high_press-1-observer_off",
+    "kind": "full",
+    "context": "high_press",
+    "side": 1,
+    "mode": "observer_off",
+    "seed": 950824444
+  },
+  {
+    "key": "high_press-1-observer_on",
+    "kind": "full",
+    "context": "high_press",
+    "side": 1,
+    "mode": "observer_on",
+    "seed": 950824444
+  },
+  {
+    "key": "high_press-1-observer_on_repeat",
+    "kind": "full",
+    "context": "high_press",
+    "side": 1,
+    "mode": "observer_on_repeat",
+    "seed": 950824444
+  },
+  {
+    "key": "deep_block-0-reference",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 0,
+    "mode": "reference",
+    "seed": 3838865994
+  },
+  {
+    "key": "deep_block-0-observer_off",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 0,
+    "mode": "observer_off",
+    "seed": 3838865994
+  },
+  {
+    "key": "deep_block-0-observer_on",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 0,
+    "mode": "observer_on",
+    "seed": 3838865994
+  },
+  {
+    "key": "deep_block-0-observer_on_repeat",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 0,
+    "mode": "observer_on_repeat",
+    "seed": 3838865994
+  },
+  {
+    "key": "deep_block-1-reference",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 1,
+    "mode": "reference",
+    "seed": 4071749194
+  },
+  {
+    "key": "deep_block-1-observer_off",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 1,
+    "mode": "observer_off",
+    "seed": 4071749194
+  },
+  {
+    "key": "deep_block-1-observer_on",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 1,
+    "mode": "observer_on",
+    "seed": 4071749194
+  },
+  {
+    "key": "deep_block-1-observer_on_repeat",
+    "kind": "full",
+    "context": "deep_block",
+    "side": 1,
+    "mode": "observer_on_repeat",
+    "seed": 4071749194
+  },
+  {
+    "key": "negative-opt-in",
+    "kind": "negative",
+    "mode": "invalid_opt_in",
+    "seed": 2927073907
+  },
+  {
+    "key": "negative-binary",
+    "kind": "negative",
+    "mode": "invalid_binary",
+    "seed": null
+  }
+]
