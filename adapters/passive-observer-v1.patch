@@ -1,0 +1,42 @@
+--- a/native/desktop_host.cpp
++++ b/native/desktop_host.cpp
+@@ -655,6 +655,7 @@
+ #include "native_source_staff.h"
+ #include "native_coach_presets.h"
+ #include "native_execution_experiment.h"
++#include "passive_observer_v1.h"
+ static int native_match(void* interface_object){
+     fprintf(log_file,"{\"event\":\"native_match_pipeline_started\",\"runtime\":\"native_library_host\",\"full_match_completed\":false}\n");fflush(log_file);
+     std::ifstream input(fixture,std::ios::binary);
+@@ -801,6 +802,7 @@
+     auto fixture_seed=*(uint32_t*)(match+0x20);
+     if(seed_override)*(uint32_t*)(match+0x20)=requested_seed;
+     fprintf(log_file,"{\"event\":\"native_input_seed\",\"fixture_seed\":%u,\"effective_seed\":%u,\"override\":%s}\n",fixture_seed,*(uint32_t*)(match+0x20),seed_override?"true":"false");fflush(log_file);
++    passive_observer_options();
+     source_generation_install(match);
+     execution_install(match);
+     timing_prepare=GetTickCount64();
+@@ -820,6 +822,7 @@
+         desktop_finish_and_exit(0);return 0;
+     }
+     desktop_initial_state_snapshot(match);
++    passive_observer_snapshot(match,"prepared",0,*(int*)(match+0x154ec),*(int*)(match+0x154ec));
+     fprintf(log_file,"{\"event\":\"native_preparation_returned\",\"gates\":[%u,%u,%u]}\n",match[0x15570],match[0x1556e],match[0x15575]);fflush(log_file);
+     if(match[0x15570]!=1||match[0x1556e]!=1||match[0x15575]==0)desktop_finish_and_exit(89);
+     desktop_stats_snapshot(match,"prepared");
+@@ -868,6 +871,7 @@
+         desktop_check_cancel();
+         desktop_episode_step(match);
+         if(flags&4){
++            passive_observer_snapshot(match,"finished",iteration,tick,tick);
+             for(unsigned side=0;side<2;side++)fprintf(log_file,"{\"event\":\"native_phase_coverage\",\"side\":%u,\"in_possession_samples\":%llu,\"out_of_possession_samples\":%llu,\"phase_changes\":%u}\n",side,(unsigned long long)phase_samples[side][0],(unsigned long long)phase_samples[side][1],phase_changes[side]);
+             desktop_stats_snapshot(match,"finished");
+             execution_snapshot(match,"finished");
+@@ -906,6 +910,7 @@
+         int after=*(int*)(match+0x154ec);
+         if(iteration%4096==0){fprintf(log_file,"{\"event\":\"native_match_progress\",\"tick\":%d,\"clock\":%d}\n",after,*(int*)(match+0x15464));fflush(log_file);}
+         if(after==tick){fprintf(log_file,"{\"event\":\"native_match_stalled\",\"tick\":%d}\n",tick);fflush(log_file);desktop_finish_and_exit(91);}
++        if(iteration==0)passive_observer_snapshot(match,"first_advance",1,tick,target);
+     }
+     desktop_finish_and_exit(92);
+ }

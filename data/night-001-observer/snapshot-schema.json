@@ -1,0 +1,79 @@
+{
+  "schema": "fm27.passive-observer.v1",
+  "status": "draft_not_registered",
+  "stages": [
+    "prepared",
+    "first_advance",
+    "finished"
+  ],
+  "controlled_fixture": "bundled_match_pkm_D00",
+  "controlled_active_capacity": [
+    23,
+    23
+  ],
+  "fields": {
+    "condition_raw": {
+      "actor_offset": 3210,
+      "width_bytes": 2,
+      "meaning": "source_named_raw_storage_not_UI_or_consumer_calibrated"
+    },
+    "sharpness_raw": {
+      "actor_offset": 3216,
+      "width_bytes": 2,
+      "meaning": "source_named_raw_storage_not_UI_or_consumer_calibrated"
+    },
+    "sharpness_secondary_raw": {
+      "actor_offset": 3194,
+      "width_bytes": 2,
+      "meaning": "source_named_raw_storage_not_UI_or_consumer_calibrated"
+    },
+    "fatigue_raw": {
+      "actor_offset": 3204,
+      "width_bytes": 2,
+      "meaning": "source_named_raw_storage_not_UI_or_consumer_calibrated"
+    }
+  },
+  "extra_actor_raw_fields": {
+    "condition_accumulator_raw": {
+      "actor_offset": 7284,
+      "width_bytes": 4,
+      "meaning": "static_native_dataflow_candidate_not_calibrated"
+    },
+    "sharpness_penalty_raw": {
+      "actor_offset": 6822,
+      "width_bytes": 2,
+      "meaning": "static_native_dataflow_candidate_not_calibrated"
+    }
+  },
+  "raw_regions": {
+    "effectiveness_region_hex": {
+      "actor_offset": 3258,
+      "length_bytes": 33,
+      "meaning": "uninterpreted_private_raw_region"
+    },
+    "runtime_near_morale_region_hex": {
+      "actor_offset": 7664,
+      "length_bytes": 112,
+      "meaning": "uninterpreted_private_raw_region"
+    }
+  },
+  "statistics_cache_region": {
+    "pointer_actor_offset": 6272,
+    "region_offset": 128,
+    "length_bytes": 16,
+    "nullable_for_bench": true,
+    "observed_candidate_bytes": [
+      137,
+      138
+    ],
+    "ui_semantics_validated": false
+  },
+  "version": {
+    "expected_Kind62_value": 452984832,
+    "sampler_threshold": 436731928,
+    "threshold_alone_proves_consumer_execution": false
+  },
+  "native_release_granted": false,
+  "startpolicy_released": false,
+  "career_released": false
+}

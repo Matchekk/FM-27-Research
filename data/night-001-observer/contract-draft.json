@@ -1,0 +1,105 @@
+{
+  "experiment_id": "VALID-005-OBSERVER-V1",
+  "status": "draft_root_registration_required",
+  "question": "Does an opt-in passive observer capture actual post-original-preparation, first-successful-advance and natural-finish actor/cache/raw-effectiveness states without changing deterministic native outcomes?",
+  "scientific_performance_study": false,
+  "no_setter_or_clamp": true,
+  "baseline": "frozen_P1B_D00",
+  "contexts": [
+    "high_press",
+    "deep_block"
+  ],
+  "sides": [
+    0,
+    1
+  ],
+  "modes": [
+    "reference",
+    "observer_off",
+    "observer_on",
+    "observer_on_repeat"
+  ],
+  "full_match_plan": 16,
+  "comparison_unit": "four_exact_same_seed_same_input_runs_per_context_side",
+  "seeds": {
+    "new_required": 5,
+    "paired_input_cells": 4,
+    "negative_only": 1,
+    "reservation": null,
+    "root_central_registry_required": true,
+    "historical_and_other_namespaces_excluded": true,
+    "namespace": "VALID-005-OBSERVER-V1/technical-v1"
+  },
+  "negative_probes": [
+    {
+      "id": "invalid_observer_value",
+      "host": "observer",
+      "env_value": "2",
+      "expected_exit": 252,
+      "natural_finish_allowed": false
+    },
+    {
+      "id": "invalid_scenario_binary",
+      "host": "observer",
+      "env_value": "1",
+      "expected_exit": 108,
+      "natural_finish_allowed": false
+    }
+  ],
+  "total_match_attempt_cap": 18,
+  "extra_loader_checks_cap": 2,
+  "budget": {
+    "child_seconds": 180,
+    "fixed_UTC_window_seconds": 900,
+    "workers_selected": 1,
+    "global_worker_ceiling": 4,
+    "no_progress_seconds": 90,
+    "private_artifact_limit_bytes": 536870912,
+    "free_bytes_min": 21474836480,
+    "persistent_global_NativeLease_required": true,
+    "persistent_root_program_and_study_budget_required": true,
+    "retries": 0,
+    "replacement_seeds": 0
+  },
+  "required_identity": {
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "original_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "observer_host_sha256": "58e05a46ca65014a227ed1bd61da090d326848d20f39744b59e175c8b7c13d32",
+    "upstream_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "schema": "fm27.passive-observer.v1"
+  },
+  "mandatory_checks": [
+    "publish code/contracts/concrete seeds before native phase",
+    "exact binary D00 inputs, current catalog/resources/fixture/engine hashes",
+    "native scenario readback after original preparation, all records/69attributes/23profiles/both phases/PI/identity/seed",
+    "exact score/endtick/clock/teamstats among all four modes",
+    "no passive snapshots in reference/off; three ordered snapshots in on/repeat",
+    "all46 prepared actor4profile values and33rawbytes equal input dump",
+    "on/repeat identified fields/cachebytes89/8a and raw33bytes equal at each stage",
+    "actual tickstep1 first advance after original call; natural-finish snapshot before teardown",
+    "no execution hooks/generation source inputs/added engine writes/version changes",
+    "missing/null remains visible; fatal input/identity/seed/timeout failure stops whole validation",
+    "all18 attempt slots and2loader slots accounted even when unbegun",
+    "private raw files retained; numeric whitelist and hashes only public"
+  ],
+  "release_scope_if_passed": "read-only observation of the fixed bundled D00 context only; separate independent review required",
+  "still_blocked": [
+    "post_preparation_sharpness_intervention",
+    "sharpness_consumers_or_UI_calibration",
+    "MECH-002_main512",
+    "career_replay_or_calendar_advance",
+    "holdouts"
+  ],
+  "statistical_method": "No power or p-values; exact technical equivalence and coverage gates, no performance inference.",
+  "aa_snapshot_fields": [
+    "condition_raw",
+    "sharpness_raw",
+    "sharpness_secondary_raw",
+    "fatigue_raw",
+    "condition_accumulator_raw",
+    "sharpness_penalty_raw",
+    "effectiveness_region_hex",
+    "statistics_cache_region_hex bytes89/8a"
+  ],
+  "aa_excluded_uninterpreted_region": "runtime_near_morale_region_hex retained and hashed, not an A/A endpoint"
+}

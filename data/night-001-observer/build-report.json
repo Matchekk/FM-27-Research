@@ -1,0 +1,61 @@
+{
+  "schema": "fm27.passive-observer.v1",
+  "build_status": "compiled_not_executed",
+  "upstream_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+  "upstream_license": "MIT",
+  "license_sha256": "dc57ec1af93e4be39dd92279a4ac22b9f145384719fe5cada9fcf85677fef13f",
+  "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+  "compiler_binary_sha256": "42fd88579adc0e2418a0a71ec9adcfcf677d39ff2724c9d6ac9d901264812bf2",
+  "toolset_directory": "14.42.34433",
+  "sdk_directory": "10.0.22621.0",
+  "prepared_utc": "2026-11-14T17:37:42.776961+00:00",
+  "native_starts": 0,
+  "native_release_granted": false,
+  "source_files_sha256": {
+    "desktop_host.cpp": "72025a966fd244933bcec731f0789b7a1eba834e991f6e9bae4762a148bcc43a",
+    "fm27_engine_compat.h": "b89eee01b29b013fcb1dedb126b9c88c28d6ba91a8f9aa7bae7363e75585e562",
+    "fm27_tactic_bindings.h": "bbdfd646235f2e48ee344d97716662ae2934d57a0b16f3b34f86e08c009da65f",
+    "formal_tactic_vector.h": "34c41bc66566a49b5f6cf25e398a2f19aa7396c888faac81e89ad469d43e5af6",
+    "host.manifest": "ed5ed6a3a76dee2709c09d8a149cd8acc953f149d42787d0962949a6058be0c0",
+    "native_ai_tactics.h": "6691ef761446e585068db074eff0fde1ddcbb8190e63232002c46e98ce49b956",
+    "native_coach_presets.h": "0b6961ae398cbee5619376a5a02a48b06fdc05582f11658ec5fa6cb6daa6c3e4",
+    "native_execution_experiment.h": "400d39c359f851591c29436b749cb54fb376057db342c7a63d3beb2f87497f13",
+    "native_fmf_probe.h": "422eec23801ea03f94b207ea9ec6184b3a0d2af44ad69e35b23debcac90fb695",
+    "native_match_events.h": "197cb8c5c8dce17a543eb5886eb15bca9e497a8cec485e9bb1588f56f345f462",
+    "native_saved_fixture.h": "583518998b6f9da99b6206097e05a9f34e0133a3f42f8d7d3134efa1f7ecfeb1",
+    "native_setpiece_episode.h": "311e04ee09de7a08a140908a3918e1344c3259db68dc7cde4be41657c204e49b",
+    "native_setpiece_file.h": "763883af93d323319e335cd2494a12c4855f4aa67f5ac13f72cd4ac978a06637",
+    "native_source_generation.h": "7facf2747d695cd7d5ea8010024e046e223c557821ded149b963ec480648d320",
+    "native_source_staff.h": "34eb30fe2a26f03b75c893a20bc9eee7995fe20c41d2372e9c7b4d0da9c69dcb",
+    "native_statistics.h": "06e38230ef488dbeab91a245974b7bcaf7f8e4c49a14ce6482498451421dae60",
+    "native_steam_lifecycle.h": "fb6008af89d0775fb39d04e6bcc3ceb0b68b17010d9b60f8394a6559eca4988b",
+    "native_tactic_export.h": "ea1543033e53073b4be0d37fbace6781b8fce7ba6c80695f6d63a28477bdd233",
+    "native_tactic_import.h": "d94607c586dafc56d1a9a7f755a63d6ef605b9b5ee2c5399049a096f5fbfea25"
+  },
+  "modified_host_source_sha256": "e1edbec9d45cdfccfbb719a5fe031d1cf86c81a77a644502374dfeee74c61450",
+  "observer_header_sha256": "7d52c726b411051aab3f3299a0583de04c1da0b44de5acd27cfe2f0a636f8c51",
+  "private_compatibility_header_sha256": "bea52265ea0a41936cc2cf29a95a49b90ce9097b138bae921c401ce279ace121",
+  "source_disabled_transform_identical": true,
+  "compiler_returncode": 0,
+  "compiler_stdout_sha256": "ffd70fd89a51fe92db3360819fa0147d7142d604a4c223fbba4f121f48875e95",
+  "observer_host_sha256": "58e05a46ca65014a227ed1bd61da090d326848d20f39744b59e175c8b7c13d32",
+  "observer_host_bytes": 572928,
+  "compiler_observed_file_version": "19.42.34433.0",
+  "compiler_observed_product_version": "14.42.34433.0",
+  "binary_rebuild_identity_proven": false,
+  "earlier_development_attempts": [
+    {
+      "attempt": "build-v1",
+      "status": "failed_link_manifest_tool_not_on_PATH",
+      "compiler_returncode": 2,
+      "new_native_starts": 0,
+      "compiler_stdout_sha256": "b56a708031c1d34599028b7bcd1faaf217a36d407ea0f909f967713182d3babe"
+    },
+    {
+      "attempt": "build-v2",
+      "status": "compiled_not_executed_superseded_before_freeze_by_runtime_cache_fields",
+      "new_native_starts": 0,
+      "host_sha256": "1adc29fd41542453f69ffb47093561725f1c1ac9948577f1d5da3934ca4d6757"
+    }
+  ]
+}

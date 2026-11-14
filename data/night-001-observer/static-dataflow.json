@@ -1,0 +1,65 @@
+{
+  "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+  "method": "read_only_pinned_DLL_PE_exception_ranges_and_bounded_MSVC_dumpbin_disassembly",
+  "dumpbin_file_version": "14.42.34433.0",
+  "raw_disassembly_public": false,
+  "private_artifact_sha256": {
+    "builder.txt": "7fd2322f3340914aa964e92f994955a85a90ed8e9f0ac93d5457e6e11b248c17",
+    "sampler-full.txt": "17a978d5a9f4950269ddc8dfce85e621210cd9ab122510282beb6321d3b08f89",
+    "sampler.txt": "816b1d400f5f1b49eda17cdb4b012d6eda5445020a0f79046a71a02fea85621a",
+    "state-getters.txt": "6127cbab9962725f4d6d14594dd897a0b3a75b3c7092d8222e03cbe167ceacfc"
+  },
+  "observations": [
+    {
+      "function_rva": 223776,
+      "function_end_rva": 225151,
+      "evidence_class": "static_dataflow",
+      "reads_actor_offsets": [
+        3210,
+        3194,
+        7284,
+        6822
+      ],
+      "writes_actor_offsets": [
+        3216
+      ],
+      "stats_pointer_actor_offset": 6272,
+      "writes_stats_offsets": [
+        137,
+        138
+      ],
+      "interpretation": "Original native routine has separate actor storage, accumulator/penalty and statistics cache. Post-preparation storage-only writes cannot be assumed effective. UI units, invocation frequency and all consumers unvalidated."
+    },
+    {
+      "function_rva": 288176,
+      "function_end_rva": 310190,
+      "version_compare_rva": 293377,
+      "threshold": 436731928,
+      "below_threshold_branch_target": 295060,
+      "observed_record_access_rvas": {
+        "overall_load": 293410,
+        "region_address": 293493,
+        "byte31_load": 293500,
+        "byte32_load": 294902
+      },
+      "actor_region_offset": 3258,
+      "interpretation": "Version threshold is one necessary branch condition, not a complete execution proof."
+    },
+    {
+      "source": "native/desktop_host.cpp",
+      "lines": [
+        165,
+        172,
+        380,
+        384
+      ],
+      "record_kind": 62,
+      "sets_match_version_before_preparation": 452984832,
+      "also_sets_manager_PI_versions": true,
+      "native_verifier_checks_same": true,
+      "interpretation": "Carrier26.8 metadata alone does not imply inactive new effectiveness path: existing D00 kind62 sets current match version. Observer changes no version."
+    }
+  ],
+  "native_processes_started": 0,
+  "consumer_effectiveness_proven": false
+}
