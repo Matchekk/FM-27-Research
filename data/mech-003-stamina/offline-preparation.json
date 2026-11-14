@@ -1,0 +1,122 @@
+{
+  "origin": "own_intentions_applied_to_existing_D00_configs_and_binary_records_read_only",
+  "native_encoding_or_execution": false,
+  "native_validation_granted": false,
+  "new_seeds_reserved": 0,
+  "native_starts": 0,
+  "cells": [
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "R00",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "R10",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "R01",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "arm": "R11",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "R00",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "R10",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "R01",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "arm": "R11",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "R00",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "R10",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "R01",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "arm": "R11",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "R00",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "R10",
+      "changed_records": 10,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "R01",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "arm": "R11",
+      "changed_records": 11,
+      "undeclared_changes": 0
+    }
+  ],
+  "matrix_cells": 16
+}

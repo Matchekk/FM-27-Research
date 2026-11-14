@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "experiment_id": "MECH-003-STAMINA-R0",
+  "module": "MECH",
+  "kind": "native",
+  "stage": "discovery",
+  "status": "draft",
+  "hypothesis": "Higher native Stamina improves average xGD over the two frozen pressing levels in the fixed D00 synthetic context.",
+  "control": "R00: ten starting outfield players Stamina52 raw40, Standard pressing; not the original raw60 attribute baseline.",
+  "intervention": "Full2x2 Stamina52 raw40/80 and TriggerPress Standard/MoreOften; only tested-side ten starting outfield ability values and one team instruction differ.",
+  "conditions": "D00 IP4231/OOP4411, same known opponents, phases, roles, PI, positions, profiles, management and all nonintervened abilities; no experimental execution, pool or observer.",
+  "seed_namespace": "MECH-003-STAMINA-R0/main-v1",
+  "identity": null,
+  "metrics": {
+    "primary": "xgd",
+    "secondary": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "plausibility": []
+  },
+  "design": {
+    "unit": "seed_block",
+    "n_blocks": 32,
+    "sides": [
+      0,
+      1
+    ],
+    "control_arm": "R00",
+    "matrix": [
+      {
+        "id": "R00",
+        "levels": {
+          "STAMINA": -1,
+          "PRESS": -1
+        },
+        "stamina_raw": 40,
+        "pressing_id": 1313689463,
+        "pressing_bit": 0
+      },
+      {
+        "id": "R10",
+        "levels": {
+          "STAMINA": 1,
+          "PRESS": -1
+        },
+        "stamina_raw": 80,
+        "pressing_id": 1313689463,
+        "pressing_bit": 0
+      },
+      {
+        "id": "R01",
+        "levels": {
+          "STAMINA": -1,
+          "PRESS": 1
+        },
+        "stamina_raw": 40,
+        "pressing_id": 2000905329,
+        "pressing_bit": 66
+      },
+      {
+        "id": "R11",
+        "levels": {
+          "STAMINA": 1,
+          "PRESS": 1
+        },
+        "stamina_raw": 80,
+        "pressing_id": 2000905329,
+        "pressing_bit": 66
+      }
+    ],
+    "matrix_sha256": "427e323bda523e31e78bfdfb3fd6da28d848222e29fd632fd96189ddecadc458",
+    "setups": null,
+    "arms": [
+      {
+        "id": "R00",
+        "setup_sha256": null
+      },
+      {
+        "id": "R10",
+        "setup_sha256": null
+      },
+      {
+        "id": "R01",
+        "setup_sha256": null
+      },
+      {
+        "id": "R11",
+        "setup_sha256": null
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "high_press",
+        "opponent": "high_press",
+        "strength": "fixed identical synthetic nonintervened profiles; only declared Stamina/pressing treatment differs",
+        "split": "discovery"
+      },
+      {
+        "id": "deep_block",
+        "opponent": "deep_block",
+        "strength": "fixed identical synthetic nonintervened profiles; only declared Stamina/pressing treatment differs",
+        "split": "discovery"
+      }
+    ]
+  },
+  "science": {
+    "alpha": 0.05,
+    "power": 0.9,
+    "min_effect": 0.3,
+    "multiple_testing": "holm",
+    "family_size": 7,
+    "primary_contrast": "STAMINA",
+    "contrast_coefficients": {
+      "STAMINA": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5
+      ],
+      "PRESS": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "STAMINAxPRESS": [
+        1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ]
+    },
+    "secondary_contrasts": [
+      [
+        "STAMINA",
+        "points"
+      ],
+      [
+        "STAMINA",
+        "gf"
+      ],
+      [
+        "STAMINA",
+        "ga"
+      ],
+      [
+        "STAMINA",
+        "xgf"
+      ],
+      [
+        "STAMINA",
+        "xga"
+      ],
+      [
+        "PRESS",
+        "xgd"
+      ],
+      [
+        "STAMINAxPRESS",
+        "xgd"
+      ]
+    ],
+    "analysis": "Stamina marginal raw80-minus40 on xGD primary. Side means per seed, context weights1/2; Welch95 and20000 full-block stratified bootstrap. Exactly Holm7 secondary.",
+    "exclusions": "None; incomplete blocks technical status only. No replacement seed, retry, winner selection or raw60 baseline inference.",
+    "negative_controls": [
+      "16cells twice=32technical full matches/16exactA/A pairs",
+      "invalid binary expected exit108",
+      "Stamina0/101/bool and unknown pressing ID rejected offline"
+    ],
+    "readback_fields": [
+      "all69attribute values and23profile fields for46active players after original preparation",
+      "actual22player IP/OOP bindings;44roles/positions/PI cells;748PIgroups",
+      "Stamina ten40/80 and pressing native0/66; every other input unchanged",
+      "effective seed and natural score/endtick"
+    ],
+    "stopping_rule": "512main,32technical+1negative;600supervised child sec/1200immutableUTC;NightMaster1800sec/23UTC also mandatory;max4workers90s;first gate error stops.",
+    "selection_rule": "No final candidate or attribute ranking; estimate controlled total effects only, no fatigue mediation or career transfer.",
+    "power_basis": "Unknown new Stamina contrast SD; practical .30xGD, desired full95width .50; no90%power guarantee. Future new-seed planning for .20/.30 from observed and simultaneous normal-model SD upper bounds.",
+    "context_weights": [
+      0.5,
+      0.5
+    ],
+    "side_weights": [
+      0.5,
+      0.5
+    ],
+    "desired_full_ci_width": 0.5,
+    "bootstrap_resamples": 20000
+  },
+  "budget": {
+    "max_matches": 512,
+    "max_workers": 4,
+    "timeout_seconds": 90,
+    "max_technical_attempts": 33,
+    "total_native_wall_seconds": 600,
+    "absolute_study_wall_seconds": 1200,
+    "raw_artifact_limit_bytes": 2147483648,
+    "disk_reserve_bytes": 21474836480
+  },
+  "execution": null,
+  "preregistration": {
+    "commit": null,
+    "document": "experiments/MECH-003-stamina-preregistration.md",
+    "document_sha256": null,
+    "analysis": "analysis/analyse_mech003.py",
+    "analysis_sha256": null
+  }
+}
