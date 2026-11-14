@@ -1,0 +1,20 @@
+{
+  "experiment_id": "MECH-004-SPLIT-R0",
+  "phase": "technical",
+  "checked_utc": "2026-11-14T22:35:47.825257+00:00",
+  "decision": "NOVEL_HYPOTHESIS",
+  "overlap": [
+    "MAC-05",
+    "MECH-002-SHARPNESS-P0"
+  ],
+  "mac_head": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+  "windows_lab_current_head": "cdda4be7280aa74681f015c02be77d7b47eacc4a",
+  "validated_local_lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+  "official_updates_url": "https://community.sports-interactive.com/forums/forum/905-fm27-updates",
+  "official_checked_version": "27.0.1",
+  "patch_scope": "Checked official update section and French launch notice again through web; no newer release notice found there. Not proof of global absence. Local DLL/resources separately verified by locked execution gates.",
+  "local_installed_build": "27.0.1+2503222",
+  "source_audit": "research/night002-source-audit.json",
+  "no_automatic_adapter_update": true,
+  "native_calls_in_this_preflight": 0
+}

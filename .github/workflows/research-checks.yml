@@ -32,4 +32,6 @@ jobs:
       - run: if (Test-Path data/mech-002-startpolicy-tech/technical-summary.json) { python -B analysis/review_night001.py --public-startpolicy }
       - run: if (Test-Path data/mech-002-sharpness-p0/technical.jsonl) { python -B analysis/review_sharpness002_results.py public-technical }
       - run: if (Test-Path data/mech-002-sharpness-p0/main.jsonl) { python -B analysis/review_sharpness002_results.py public-main }
+      - run: if (Test-Path data/night-002-split004/technical.jsonl) { python -B analysis/review_split004.py public-technical }
+      - run: if (Test-Path data/night-002-split004/main.jsonl) { python -B analysis/review_split004.py public-main }
       - run: git diff --check

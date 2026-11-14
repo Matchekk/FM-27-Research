@@ -1,5 +1,17 @@
 # Research Log
 
+## 2026-11-14 – MECH-004 registrierter Splitpilot veröffentlicht
+
+- Vorregistrierung,32 eingefrorene Quellen, konkrete Inputs und unabhängige
+  Reviews in0e535dc auforigin/main veröffentlicht; CI43648809178 erfolgreich.
+- Tatsächliches Manifest auf diesen Stand gebunden und vollständige
+  Pläne für32Technik+1Negativ/512Main erzeugt. Noch0native Aufrufe.
+  Quellen-/Patchstand vor Technik erneut geprüft: MacHEAD unverändert,
+  offizielle geprüfte Updatequelle27.0.1; lokale Hashes bleiben separat bindend.
+- Reproduzierbarer öffentlicher Analyseaufruf und unabhängiger Verifier werden
+  gemeinsam mit den Plänen veröffentlicht. Main bleibt bis zu einer neuen
+  nativen Splitabnahme und deren unabhängiger Publikations-/CI-Freigabe gesperrt.
+
 ## 2026-11-14 – NIGHT-002: Quellenrefresh und separate Splitvorbereitung
 
 - `main`/`origin/main` nach Fetch sauber auf062fa7e; CI43646274113 erfolgreich.

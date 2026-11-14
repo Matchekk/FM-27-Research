@@ -17,7 +17,9 @@ dynamischen FMAX-Stand. Externe Zahlen bleiben Autorenangaben, keine eigene Repl
 ## B. Tatsächlich ausgeführte Studien
 
 Bis zu diesem Zwischenstand: **0 Hauptmatches,0 technische Matches,0 native
-Aufrufe** in NIGHT-002. MECH-004 ist geplant, noch nicht nativ freigegeben.
+Aufrufe** in NIGHT-002. MECH-004 ist registriert auf Vorregistrierungscommit
+`0e535dc`, [CI43648809178 erfolgreich](https://github.com/Matchekk/FM-27-Research/actions/runs/43648809178).
+Die Veröffentlichung des registrierten vollständigen Jobplans geht Technik voraus.
 Historische MECH-002-Zahlen werden nicht als neue Messungen gezählt.
 
 ## C. Technische Fortschritte
@@ -29,7 +31,8 @@ bestehenden CI-Archiv-/Ergebnisverifier bestanden.68 neue Seeds wurden gegen2597
 historische/reservierte Werte geprüft; konkrete Inputs sind offline erzeugt.
 Der konkrete [Inputreview](SPLIT004-INPUT-REVIEW.md) hat alle16 Eingaben,
 68disjunkte Seeds und unveränderte Ressourcen unabhängig akzeptiert.
-Veröffentlichung/CI und die native Splitabnahme bleiben erforderlich.
+Vorregistrierung/CI sind veröffentlicht; registrierter Jobplan und native
+Splitabnahme bleiben vor Main erforderlich.
 Der Director hat den von einem anderen Agenten geschriebenen Missionscontroller
 separat auf Authentifizierung, feste Limits, strikte Argumente und Leasegrenzen geprüft.
 Dies ist keine native Validierung. [Sicherheit](SAFETY_ASSESSMENT.md) und konkrete
