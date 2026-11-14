@@ -118,7 +118,7 @@ host initializes that stage before its magic-header check; `header` describes
 the corrupted input, not an emitted stage. Both source and the completed
 VALID-005 malformed-input private log support `initial`; a synthetic `header`
 stage must fail the auditor.
-Offline regression check:14targeted test cases,13passed and one optional private
+Offline regression check:17targeted test cases,16passed and one optional private
 gold skipped in the isolated worktree. The existing private negative log and its
 actual exit108 ledger record were separately read and passed the exact
 `initial` gate. No native command was launched for this correction.
@@ -129,6 +129,21 @@ gate success requires all16full matches, eight exact repeats, eight initial
 control comparisons and the malformed rejection. A partial set supports only a
 technical status report. No effect p-values, tactical winner or scientific-main
 approval are inferred from these small technical outcomes.
+
+The public pass flag additionally requires a fully reconciled parent budget:
+exactly17nonrefunded technical reservations, exactly one completed successful
+technical operation, no active/halted/unknown cleanup state, exact agreement of
+charged and operation time, child charge≤180s and actual completion inside the
+unchanged900s UTC window. The supervisor writes its exclusive private
+`technical-reconciled.json` only after successful child accounting and successful
+lease release, binding the final budget digest and actual UTC completion. The
+export checks that receipt; a child-written `passed=true` summary is insufficient.
+Failed/timeout children, missing operations, retries, refunds, invalid clocks and
+missing reconciliation all force public `passed=false`. Public budget evidence
+allowlists operation keys, UTC timestamps, elapsed time, exit code and timeout
+status while excluding tokens, argv and private paths. Unknown total charged
+time is null; any raw recorded charge remains separately labelled incomplete.
+These regression tests use synthetic ledgers and mocks, with no process launch.
 
 ## Publication and execution handoff
 

@@ -11,6 +11,7 @@ from unittest.mock import Mock, patch
 
 from analysis import run_startpolicy002 as runner
 from analysis.audit_startpolicy002 import rva_slice
+from analysis.startpolicy002_budget import RECONCILIATION, budget_evidence
 from analysis import startpolicy002_gate as gate
 from research.native import read, write
 from research.startpolicy import decode_records, encode_records
@@ -208,6 +209,88 @@ class StartpolicyTechnicalTests(unittest.TestCase):
         observed = [r for r in rows(ledger) if r['key'] == 'negative-binary']
         self.assertEqual(len(observed),1)
         runner.audit_malformed(rows(log),observed[0]['returncode'])
+
+    def test_budget_gate_and_export_reject_postsummary_fail_timeout_unresolved_and_unaccounted(self):
+        keys = gate.technical_keys()
+        operation = dict(name='technical',kind='technical',keys=keys,start_utc='2026-11-14T12:00:01+00:00',
+            child_deadline_utc='2026-11-14T12:02:56+00:00',elapsed_seconds=10.,returncode=0,timed_out=False,
+            token_sha256='PRIVATE-TOKEN',stdout='D:/private/forbidden.save')
+        valid = dict(experiment=gate.EXPERIMENT,limits={'technical':17,'main':0},limit_seconds=180,
+            charged_seconds=10.,reserved={k:'technical' for k in keys},halted=False,active=None,
+            operations=[operation],wall_start_utc='2026-11-14T12:00:00+00:00',
+            wall_deadline_utc='2026-11-14T12:15:00+00:00',wall_limit_seconds=900)
+        receipt = dict(schema=RECONCILIATION,experiment_id=gate.EXPERIMENT,phase='technical',
+            completed_utc='2026-11-14T12:00:12+00:00',budget_sha256='a'*64)
+        variants = ('valid','child_failure','timeout','unresolved','unaccounted','no_receipt',
+                    'charge_refunded','retry','over180','over900','missing_elapsed','missing_budget')
+        for variant in variants:
+            state, reconciled = deepcopy(valid), deepcopy(receipt)
+            if variant == 'child_failure': state['halted']=True; state['operations'][0]['returncode']=1
+            elif variant == 'timeout': state['halted']=True; state['operations'][0]['timed_out']=True
+            elif variant == 'unresolved': state['active']=deepcopy(operation); state['operations']=[]; state['charged_seconds']=0.
+            elif variant == 'unaccounted': state['operations']=[]
+            elif variant == 'no_receipt': reconciled=None
+            elif variant == 'charge_refunded': state['charged_seconds']=0.
+            elif variant == 'retry': state['operations'].append(deepcopy(operation))
+            elif variant == 'over180': state['operations'][0]['elapsed_seconds']=181.; state['charged_seconds']=181.
+            elif variant == 'over900': reconciled['completed_utc']='2026-11-14T12:15:01+00:00'
+            elif variant == 'missing_elapsed': del state['operations'][0]['elapsed_seconds']
+            elif variant == 'missing_budget': state=None
+            with self.subTest(variant=variant), tempfile.TemporaryDirectory() as temp:
+                root=Path(temp); local=root/'private'; public=root/'public'; local.mkdir(); public.mkdir()
+                write(public/'job-plan.json',gate.jobs([1,2,3,4]))
+                records=[]
+                for job in gate.jobs([1,2,3,4]):
+                    row=dict(job,status='ok' if job['kind']=='full' else 'expected_rejection')
+                    if job.get('repeat') == 1: row['aa']=dict(exact_outcomes_and_identified_fields_equal=True)
+                    if job.get('level_raw') == 7000: row['controls']=dict(initial_control_fields_and_raw_tf33_equal=True)
+                    records.append(row)
+                (local/'ledger.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in records))
+                write(local/'technical-summary.json',dict(passed=True))
+                if state is not None:
+                    write(local/'budget.json',state)
+                    from research.native import digest
+                    if reconciled is not None:
+                        reconciled['budget_sha256']=digest(local/'budget.json')
+                        write(local/'technical-reconciled.json',reconciled)
+                with patch.object(runner,'LOCAL',local),patch.object(runner,'PUBLIC',public), \
+                     patch.object(runner.subprocess,'Popen') as process, patch('builtins.print'):
+                    runner.export()
+                process.assert_not_called()
+                result=read(public/'technical-summary.json'); evidence=read(public/'budget.json')
+                self.assertEqual(result['passed'],variant=='valid')
+                self.assertEqual(result['budget_gate']['passed'],variant=='valid')
+                self.assertEqual(evidence['acceptance']['passed'],variant=='valid')
+                self.assertNotIn('PRIVATE-TOKEN',json.dumps(evidence))
+                self.assertNotIn('D:/private',json.dumps(evidence))
+                self.assertIn('active',evidence); self.assertIn('operations',evidence)
+                if variant in ('unaccounted','unresolved','missing_elapsed','missing_budget','retry','charge_refunded'):
+                    self.assertIsNone(evidence['charged_seconds'])
+                    self.assertTrue(evidence['charged_seconds_incomplete'])
+
+    def test_budget_redaction_rejects_unknown_private_fields_and_preserves_missing_values(self):
+        gate_result, public = budget_evidence(dict(active=dict(name='D:/private/hidden',kind='private',
+            keys=['D:/private/key'],token_sha256='PRIVATE-TOKEN'),reserved={'D:/private/reserved':'token'},
+            operations=[dict(name='D:/private/log',keys=['D:/private/key'],token_sha256='PRIVATE-TOKEN')]),None,None,True)
+        self.assertFalse(gate_result['passed'])
+        self.assertIsNone(public['charged_seconds'])
+        self.assertIsNone(public['operations'][0]['elapsed_seconds'])
+        self.assertNotIn('PRIVATE-TOKEN',json.dumps(public))
+        self.assertNotIn('D:/private',json.dumps(public))
+
+    def test_failed_child_after_summary_cannot_create_supervisor_reconciliation(self):
+        with tempfile.TemporaryDirectory() as temp:
+            local=Path(temp); write(local/'technical-summary.json',dict(passed=True))
+            budget=Mock(); budget.load.return_value=dict(active=None,halted=True)
+            budget.run.side_effect=ValueError('child failed after writing its summary')
+            lease=Mock(spec=runner.NativeLease); lease.acquire.return_value=lease
+            lease.assert_owned.return_value=dict(schema=1,experiment=gate.EXPERIMENT,workers=1,
+                                                owner_pid=1,acquired_utc='test')
+            with patch.object(runner,'LOCAL',local),patch.object(runner,'DeadlineBudget',return_value=budget), \
+                 patch.object(runner,'NativeLease',return_value=lease):
+                with self.assertRaises(ValueError): runner.supervise()
+            lease.release.assert_called_once()
+            self.assertFalse((local/'technical-reconciled.json').exists())
 
 
 if __name__ == '__main__':

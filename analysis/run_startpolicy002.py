@@ -25,6 +25,7 @@ from research.night_control import assert_night_admission
 from research.passive_observer import audit_trace, match_result
 from analysis.startpolicy002_gate import (EXPERIMENT, CONTEXTS, LEVELS, audit_start_state,
     compile_cell, initial_control_equivalence, jobs, repeat_equivalence, technical_keys)
+from analysis.startpolicy002_budget import RECONCILIATION, budget_evidence
 from research.study_budget import DeadlineBudget
 
 LOCAL = ROOT/'local/mech-002-startpolicy-tech'
@@ -39,6 +40,7 @@ OBSERVER_REVIEW = 'docs/night-001/OBSERVER-RESULTS-REVIEW.md'
 OBSERVER_COMMIT = '39b6af5422b160ae9bd4fa82d0c987c947f6916a'
 OBSERVER_HOST = '58e05a46ca65014a227ed1bd61da090d326848d20f39744b59e175c8b7c13d32'
 CODE = ('analysis/run_startpolicy002.py', 'analysis/startpolicy002_gate.py', 'analysis/audit_startpolicy002.py',
+    'analysis/startpolicy002_budget.py',
     'tests/test_startpolicy002.py', 'data/mech-002-startpolicy-tech/offline-source-audit.json',
     'analysis/run_observer005.py', 'analysis/night_supervise.py', 'research/startpolicy.py',
     'research/passive_observer.py', 'research/native_process005.py', 'research/night_control.py',
@@ -339,7 +341,8 @@ def technical():
 def supervise():
     budget = DeadlineBudget(LOCAL/'budget.json', experiment=EXPERIMENT, seconds=180,
                             caps={'technical':17, 'main':0}, wall_seconds=900)
-    require(not (LOCAL/'technical.lease.json').exists() and not (LOCAL/'technical.stdout').exists(), 'Retained phase: no retry')
+    require(not (LOCAL/'technical.lease.json').exists() and not (LOCAL/'technical.stdout').exists() and
+            not (LOCAL/'technical-reconciled.json').exists(), 'Retained phase: no retry')
     lease = NativeLease(ROOT/'local/global-native', EXPERIMENT, workers=1).acquire()
     try:
         owned = lease.assert_owned()
@@ -352,6 +355,24 @@ def supervise():
             state.update(halted=True, cleanup_unconfirmed=True, global_native_lease_retained=True); atomic(budget.path, state)
         else:
             lease.release()
+    # Reached only after successful budget.run AND successful lease release.
+    # Child-written summary alone does not prove parent accounting/UTC completion.
+    require(state['halted'] is False and state['active'] is None and
+            not state.get('cleanup_unconfirmed') and not state.get('global_native_lease_retained'),
+            'No cleanly reconciled successful technical operation')
+    reconciliation = dict(schema=RECONCILIATION,
+        experiment_id=EXPERIMENT, phase='technical', completed_utc=datetime.now(timezone.utc).isoformat(),
+        budget_sha256=digest(LOCAL/'budget.json'))
+    exclusive_json(LOCAL/'technical-reconciled.json', reconciliation)
+    gate, _ = budget_evidence(state, reconciliation, reconciliation['budget_sha256'], False)
+    require(gate['passed'], 'Final operation/time reconciliation failed')
+
+
+def optional_evidence(path):
+    try:
+        return read(path), None
+    except (OSError, ValueError) as error:
+        return None, type(error).__name__
 
 
 def export():
@@ -361,12 +382,20 @@ def export():
     actual = {r['key']:r for r in ledger}
     plan = read(PUBLIC/'job-plan.json') if (PUBLIC/'job-plan.json').exists() else [dict(r, seed=None) for r in jobs([1,2,3,4])]
     require(not set(actual)-{j['key'] for j in plan}, 'Unexpected job ledger entry')
-    budget = read(LOCAL/'budget.json') if (LOCAL/'budget.json').exists() else None
-    unresolved = bool((LOCAL/'native-cleanup-pending.json').exists() or (budget and (budget['active'] or budget.get('cleanup_unconfirmed'))))
+    budget, budget_error = optional_evidence(LOCAL/'budget.json')
+    reconciliation, reconciliation_error = optional_evidence(LOCAL/'technical-reconciled.json')
+    try: budget_hash = digest(LOCAL/'budget.json')
+    except OSError: budget_hash = None
+    state = budget if type(budget) is dict else {}
+    unresolved = bool((LOCAL/'native-cleanup-pending.json').exists() or state.get('active') is not None or
+                      state.get('cleanup_unconfirmed') or state.get('global_native_lease_retained'))
+    budget_gate, public_budget = budget_evidence(budget, reconciliation, budget_hash, unresolved)
+    public_budget.update(budget_read_error_type=budget_error, reconciliation_read_error_type=reconciliation_error)
     output = []
     for job in plan:
         row = actual.get(job['key']); status = row['status'] if row else 'started_unresolved' if (LOCAL/'technical'/(job['key']+'.started.json')).exists() else 'not_started'
-        output.append(dict(job, status=status, reserved=bool(budget and job['key'] in budget['reserved'])))
+        reserved = state.get('reserved')
+        output.append(dict(job, status=status, reserved=job['key'] in reserved if type(reserved) is dict else None))
         if row and row.get('raw_log_sha256'):
             require(digest(LOCAL/'technical'/(job['key']+'.jsonl')) == row['raw_log_sha256'], 'Private raw evidence changed')
         if row and row.get('input_dump_sha256'):
@@ -382,13 +411,10 @@ def export():
                 sum(r.get('controls',{}).get('initial_control_fields_and_raw_tf33_equal') is True for r in ledger) == 8)
     if not complete: summary.update(passed=False, technical_set_incomplete=True)
     if unresolved: summary.update(passed=False, cleanup_unconfirmed=True)
+    summary['budget_gate'] = budget_gate
+    if not budget_gate['passed']: summary.update(passed=False, budget_reconciliation_failed=True)
     write(PUBLIC/'technical-summary.json', summary)
-    if budget:
-        public = {k:budget[k] for k in ('experiment', 'limits', 'limit_seconds', 'charged_seconds', 'reserved', 'halted',
-                    'wall_start_utc', 'wall_deadline_utc', 'wall_limit_seconds')}
-        public.update(cleanup_unconfirmed=unresolved, charged_seconds_incomplete=unresolved,
-                      global_native_lease_retained=bool(unresolved or budget.get('global_native_lease_retained')))
-        write(PUBLIC/'budget.json', public)
+    write(PUBLIC/'budget.json', public_budget)
     print(json.dumps(dict(passed=summary['passed'], resolved_jobs=len(ledger), total_jobs=17)))
 
 
