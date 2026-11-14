@@ -1,5 +1,16 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Nach Runde3 – Messbarkeit und neue Faktoren priorisieren
+
+[ATTR-009](experiments/ATTR-009-results.md) abgeschlossen:384Matches/32Blöcke,
+−0,162xGD[−0,488;+0,164],kein Primär-/Holm5-Nachweis,Präzisionsziel verfehlt.
+Keine automatische1176–6216Match-Replikation aus der bedingten Powerplanung.
+[AktuellePrioritäten](docs/round3/PRIORITIES.md):passiverMECH-Start-/Erstschritt-
+undFamiliarityrecorder;realistischerepositionsabhängigeATTR-Profile;echteSET-
+Exposition;TRAIN-RNG/individuelleTeilnahme;danachneueTACT-OOP-/Flügelrollenfragen.
+MECH512erStudie/Karriereadvancesbleibengesperrt,bis eigene technischeVerträge/
+nativeAbnahmevorliegen. KeinD15-Dauertest,HoldoutlaufoderautomatischeRunde4.
+
 ## Nach Runde2 – technische Freigabereife entscheidet
 
 [TACT-002-R0](experiments/TACT-002-R0-results.md) abgeschlossen:512Matches/64Blöcke,

@@ -1,5 +1,14 @@
 # FM27 Meta Research
 
+> **Runde3:** ATTR-009-Bridge mit384Hauptmatches/32Seedblöcken abgeschlossen.
+> Masken×relativerRohattributkontrast−0,162xGD,95-%-KI[−0,488;+0,164],p0,319;
+> kein Primär-/Holm5-Nachweis,Präzisionsziel verfehlt.32Technikmatches/8A/A+
+> Exit108 bestanden. MECH-002-Codec und TRAIN-002-Readerdiagnose offline geprüft;
+> deren native/Karrierehauptstudien bleiben blockiert.
+> [Gesamtauswertung](docs/round3/README.md) · [ATTR-Ergebnis](experiments/ATTR-009-results.md) ·
+> [unabhängiger Review](docs/round3/RESULTS-REVIEW.md) · [Prioritäten](docs/round3/PRIORITIES.md).
+> Keine Holdouts,Karriereadvances,globale Attributrangliste oder automatische Runde4.
+
 > **Runde2 abgeschlossen:** TACT-002-R0 mit512Hauptmatches/64Seedblöcken.
 > DLF−CF−0,018xGD,95-%-KI[−0,160;+0,124],p0,801;kein Primär-/Holm7-Nachweis.
 > VALID003-Offlinevorarbeit und SET-V0-Synthetikparser geprüft;keine neue Karriere-

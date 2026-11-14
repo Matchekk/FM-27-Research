@@ -15,7 +15,7 @@
       "specialist_commit": "887306deaa07e8e98a53ffe1af94e5d6e1ee7c24",
       "new_native_starts": 0,
       "new_seed_reservations": 0,
-      "integration_commit": "7d37cb6"
+      "integration_commit": "7d37cb61c4cf241efcc286994083e494f1cbb99d"
     },
     {
       "agent": "/root/round3_mech",
@@ -26,7 +26,7 @@
       "specialist_commit": "c667ed0dc99f99af36276b46139414486b68940a",
       "new_native_starts": 0,
       "new_seed_reservations": 0,
-      "integration_commit": "19e75af"
+      "integration_commit": "19e75af70963c69863714452362a1fe212594e1d"
     },
     {
       "agent": "/root/round3_train",
@@ -37,16 +37,17 @@
       "specialist_commit": "126fc131aa87a733298546213b2a8f879686277e",
       "new_native_starts": 0,
       "new_seed_reservations": 0,
-      "integration_commit": "2fcc583"
+      "integration_commit": "2fcc5832664945d0e62afb6b4cdf0157cebbf434"
     }
   ],
   "independent_reviewer": {
     "agent": "/root/round3_reviewer",
     "branch": "codex/round3-review",
     "specialist_commit": "a55dd49bd4144ef29d2437ba30a3bbb7a7197abc",
-    "integration_commit": "60ffc8d",
-    "status": "offline_preflight_passed_no_main_release",
-    "new_native_starts": 0
+    "integration_commit": "6251c6480ebba9ff08c74c17693ae58e1b78496a",
+    "status": "offline_inputs_technical_results_passed",
+    "new_native_starts": 0,
+    "specialist_result_commit": "28e52c6a52ab89d6c45b0715609cc3bae3e9054c"
   },
   "holdouts_executed": 0,
   "career_advances": 0,
@@ -55,5 +56,65 @@
     "repository": 124,
     "historical_analysis": 5,
     "protected_prior_files": 272
-  }
+  },
+  "director_execution": {
+    "experiment": "ATTR-009-Bridge",
+    "main_matches_ok": 384,
+    "independent_seed_blocks": 32,
+    "technical_full_matches_ok": 32,
+    "exact_aa_pairs": 8,
+    "expected_negative_rejections": 1,
+    "failed_jobs": 0,
+    "unbegun_registered_jobs": 0,
+    "retries": 0,
+    "replacement_seeds": 0,
+    "exclusions": 0,
+    "reserved_new_seeds": 34,
+    "excluded_prior_seeds": 2418,
+    "child_seconds": 231.55755630000203,
+    "child_limit_seconds": 600,
+    "elapsed_native_study_window_seconds": 753.168374,
+    "utc_window_limit_seconds": 1200,
+    "fixed_deadline_utc": "2026-11-14T17:00:36.422962+00:00",
+    "active_native_lease": false,
+    "private_bytes": 191302779
+  },
+  "branches_blocked": {
+    "MECH-002": {
+      "new_native_starts": 0,
+      "new_seed_reservations": 0,
+      "proposed_unregistered_main_matches_not_started": 512,
+      "proposed_unregistered_technical_attempts_not_started": 35
+    },
+    "TRAIN-002": {
+      "native_matches": 0,
+      "career_advances": 0,
+      "seeds": 0
+    }
+  },
+  "published_milestones": [
+    {
+      "kind": "code_preflight",
+      "commit": "0b354315ccf6babfafcb9d166e204d140f3859e0",
+      "ci": 43616762281
+    },
+    {
+      "kind": "preregistration_inputs_seeds",
+      "commit": "fc14746685f0a1f6475b1968912317d9ffabdfb6",
+      "ci": 43616995356
+    },
+    {
+      "kind": "technical_release_including_independent_review",
+      "commit": "06f1aeb22c88eb1188c35cae5a7cdb3b453c7740",
+      "ci": 43617519052
+    },
+    {
+      "kind": "published_gate_reference",
+      "commit": "e9ac9393a09565366ba249c35aa9142ff13dc507",
+      "ci": 43617730448
+    }
+  ],
+  "specialist_original_commits_are_local_branch_commits": true,
+  "public_integration_branch": "main",
+  "final_ci_reference": "GitHub research-checks.yml main workflow; final observed run reported by Director after push"
 }

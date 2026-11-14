@@ -399,3 +399,23 @@ Vollmatches,24Eingabezellen,8exakteA/A-Paare,Exit108erwartet.69Attribute/
 Alle384Hauptmatches unbegonnen. CumulChild30,9597241/600s,
 Studienfenster200,071489/1200s,Deadlineunverändert18:00:36,423CET.
 UnabhängigerReviewer prüft jetztOriginalbelege;Main erstnachReview+Techpublikation/CI.
+
+## 2026-11-14 – Runde3 vollständig, unabhängige Ergebnisabnahme
+
+Nach echtemTechreview und erfolgreicherTechCI43617519052@06f1aeb wurde
+Gatee9ac939 vorMain veröffentlicht.384/384Main/32volleSeedblöcke,32Tech/8A/A+
+Exit108erwartet;alle417Jobs,0Ausfälle/Retry/Ersatz/Exklusion/Holdouts/Advances.
+PrimärMasken×relativJR/AccPace−0,1620096xGD,95-%-KI[−0,488421;+0,164401],
+p0,318851;Bootstrap[−0,465728;+0,142482]. KeinPrimär-/Holm5-Nachweis;
+volleBreite0,65282 verfehltPilotziel0,50. KeinRanglisten-/Mediations-/Karrierebeweis.
+
+SeparaterReviewer rekonstruiert6Endpunkte,t/Bootstrap/Holm5,192Blockwerte,
+deskriptiveDiagnosen und4Fallzahlminima;prüftalle384privatenOriginalLogs/Dumps
+mit1.218.816Attributwerten/406.272direktdecodiertenProfilfeldern,sowie13frozen
+Quellen/7Inputs/272alteDateien gegenGitblobs,417Jobs und3Leases/CIChronologie.
+Child231,5575563/600s,Studienfenster753,168374/1200s,Deadlineunverändert
+eingehalten. PrivateArtefakte191.302.779Bytes,keinRestprozess/aktiveLease.
+MECHStartpolicyoffline/512erPilotblockiert,TRAINReaderdiagnose/0Advancesblockiert.
+[Runde3](docs/round3/README.md),[Ergebnis](experiments/ATTR-009-results.md),
+[Abnahme](docs/round3/RESULTS-REVIEW.md),[Prioritäten](docs/round3/PRIORITIES.md).
+Nach finaler Integration/CI stoppen,keine automatischeweitereSerie.

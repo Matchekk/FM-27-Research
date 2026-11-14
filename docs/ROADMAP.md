@@ -127,3 +127,15 @@ unabhängige Ausführung mit ausreichender Eingabe-/Buildprovenienz.
 (2) geprüftem Startzustand und Ausführungs-/Komplexitätseinfluss,
 (3) kontrollierten Karriereablegern einschließlich Kalender und Matchmanagement.
 Fehlt eine dieser Stufen, wird die Empfehlung ausdrücklich auf das Labor begrenzt.
+
+## Aktualisierung nach Runde3
+
+[ATTR-009](../experiments/ATTR-009-results.md):384Matches/32Blöcke,Moderator
+−0,162xGD[−0,488;+0,164],unklar,keineGloballiste. Weiterer Erkenntnisgewinn
+zuerst durch passive Zustandsmessung und realistischere positionsabhängige
+Profile,statt automatischeFallzahlvergrößerung derselben Interaktion.
+MECH-002 und TRAIN-002 bleiben wegen tatsächlicher Mess-/Semantikgates blockiert;
+SET braucht echteAusführungsexposition,TACT neueOOP-/Rollenfragen nachProfilabnahme.
+Die [aktuelle priorisierteListe](round3/PRIORITIES.md) nennt technischeAbhängigkeiten,
+getrennteBudgetvorschläge und Freigabekriterien. Keine neue Studie wird daraus
+automatisch gestartet;Holdouts/Karriere-Replays bleiben unangetastet.

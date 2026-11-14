@@ -118,3 +118,22 @@ Synthetische omnipotente Profile und feste zweiGegner schränken Übertragung ei
 kein Beweis universeller Wirkungsfreiheit oder formalerÄquivalenz.
 [Ergebnis](experiments/TACT-002-R0-results.md) ·
 [Rohmessungen](data/tact-002-r0/main.jsonl) · [Runde2](docs/round2/README.md).
+
+## 2026-11-14 – ATTR-009-Bridge, FM27 27.0.1+2503222
+
+Vorregistrierter Masken×Rohattributpilot,384gültigeHauptmatches/32neueSeedblöcke:
+`[JR−(Acc+Pace)/2]spezialisiert−[JR−(Acc+Pace)/2]omni`
+**−0,162010xGD**,95-%-KI[−0,488421;+0,164401],p0,318851.
+Bootstrap[−0,465728;+0,142482]. Primär-/Holm5-Nachweis fehlt;kleinsterHolm-p0,282016.
+Punktekontrast−0,132813[−0,786684;+0,521059]. VollePrimärbreite0,65282
+verfehlt Pilotziel0,50;praktisch relevante negative Effekte bleiben möglich.
+Kein Äquivalenzbeweis und keine Erklärung der internationalen Rankingdiskrepanz.
+
+Native Rohdosen60→80 bei zehn Feldspielern,aktiveIP/OOP-Familien20,
+ungenutzte20versus1;D00,beidebekannteDiscoverygegner undbeideSeiten.
+Keine FM-Anzeige12→16 kalibriert;passive Mechanismuszerlegung unidentifiziert.
+32Technikmatches/8exakteA/A+Exit108 bestanden;alle417Versuchsplätze abgeschlossen,
+0Ausfälle/Retry/Ersatz/Exklusion/Holdouts/Karriere. Unabhängig aus Rohdaten und
+privaten Originalbelegen rekonstruiert. Historische ATTR-001–007 unverändert.
+[Ergebnis](experiments/ATTR-009-results.md) · [Messungen](data/attr-009-bridge/main.jsonl) ·
+[unabhängige Abnahme](docs/round3/RESULTS-REVIEW.md).

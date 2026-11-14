@@ -226,3 +226,26 @@ Abilityrohwerte1..100. PKM werden nicht dekodiert,neue Profile nicht nativ freig
 mit festen harmlosen Python-Probes. `research/set_v0.py` akzeptiert nur eigene
 synthetische Vertragstraces;nativeExecution/Clock/Shot/Possession bleibenblockiert.
 Details: [Runde2](round2/README.md),[VALID](round2/VALID.md),[SET](round2/SET.md).
+
+## Runde3 – native Maskenbrücke und strikt getrennte Offline-Gates
+
+`research/attr009.py` und `analysis/run_attr009.py` ergänzen einen eigenen
+zentralen Lease-/Deadline-Pfad:384Main/32Blöcke,32Tech+1Negative,600Child-/1200UTC-s,
+4Worker/90s. Roh60→80 und ungenutzte Positionsmasken sind nativ geprüft;
+alle69Attribute/23Profilfelder/beidePhasen/Rollen/PI/Seeds nach Originalvorbereitung.
+Default und historische Runner blieben unverändert. Lease ist kooperativ,kein
+nachträglicher OS-Schutz beliebiger historischer Runner. Director serialisierte
+alle nativen Starts. [Ergebnis](../experiments/ATTR-009-results.md).
+
+`research/startpolicy.py` ist ausschließlich ein eigener opt-in Offlinecodec:
+Default/full bytegleich,low genau20 erlaubte Feld16/17-Änderungen. Kein zugelassener
+nativer Startpolicy-Runner. Hostschreiben vor Originalvorbereitung,fehlender
+passiver Erstschritt und fehlende Original-Familiarity blockieren MECH-002.
+Keine experimentelle Understanding-Neutralisierung als Ersatz.
+
+`research/training002.py` liest eigenen normalisierten JSON-Export mit tatsächlichen
+Dateihashreceipts und Missing-/Einheiten-/Kalender-/Teilnahme-/RNG-Klonprüfungen.
+Kein proprietärerSave-Decoder/Executor;Hash und Locator beweisen keine Semantik.
+`native_released`/`career_released` bleiben immerfalse.0Kalenderadvances.
+BestehenderCareeradapter und vollständigeVALID003-/SET-Nativefreigaben unverändert
+gesperrt. [Runde3](round3/README.md),[Prioritäten](round3/PRIORITIES.md).

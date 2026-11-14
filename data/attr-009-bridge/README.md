@@ -20,3 +20,14 @@ Blöcken und bestandenem Gate, sonst keine wissenschaftliche Analyse.
 portabel ohne native Starts. Eine zweite unabhängige Reviewrechnung ist davon
 getrennt notwendig. Keine FM-Anzeigekalibrierung oder Mediation identifiziert;
 Eingriff ist nativeRoh60→80, ausschließlich im kontrollierten D00-Fixture.
+
+## Tatsächlich abgeschlossen
+
+384gültigeHauptmatches/32Seedblöcke,32Technikmatches/8exakteA/A+Exit108erwartet.
+Alle417Jobs abgeschlossen,0Ausfälle/Retry/Ersatz/Exklusion/Holdouts.
+Primär−0,162010xGD,95-%-KI[−0,488421;+0,164401],p0,318851;Hypotheseunklar,
+keinHolm5-Nachweis,Präzisionszielverfehlt. [Ergebnisbericht](../../experiments/ATTR-009-results.md),
+[unabhängigeRohdatennachrechnung](../../docs/round3/RESULTS-REVIEW.md).
+`effects.json` enthält vollständigeUnsicherheit/SD-/Powerplanung,192Zeilen in
+`block-contrasts.jsonl` sind abgeleitet. Grafik `contrast-intervals.png` zeigt
+marginale95-%-t-KI in getrenntenEinheiten. Originalspielmaterial bleibt privat.

@@ -1,25 +1,31 @@
 # Forschungsrunde 3 – ATTR, MECH und TRAIN
 
-Arbeitsstand 14.11.2026, Europe/Berlin. Drei tatsächliche Codex-Fachagenten
-arbeiteten parallel in getrennten Git-Worktrees und Branches. Der Director allein
-integriert und publiziert; native Prozesse werden ausschließlich zentral und
-nacheinander unter NativeLease und persistentem Studienbudget ausgeführt.
-Die drei Facharbeiten und der anschließende separate unabhängige Preflight sind
-integriert. 124 integrierte Repositorytests und fünf historische Analysetests
-bestehen. Zwei Reviewbefunde wurden vor Freeze korrigiert: fehlende unbegonnene
-Technikplätze beim Vorbereitungsexport und unstrenge TRAIN-Session-/Slottypen.
-[Unabhängige Abnahme](REVIEW.md) erlaubt zentrale ATTR-Vorbereitung/Technik,
-noch keine Hauptserie. Dies war der Offline-Preflightstand.
+Geprüfter Abschluss 14.11.2026, Europe/Berlin. Drei tatsächliche Codex-Fachagenten
+arbeiteten parallel in getrennten Worktrees/Branches; danach folgte ein separater
+unabhängiger Reviewer. Director integrierte,publizierte und führte als einziger
+Supervisor die native Forschung unter gemeinsamer NativeLease aus.
 
-Nach erfolgreicher CI43616762281 wurde ATTR zentral vorbereitet:24 konkrete
-Eingabezellen und34 frische Seeds (2Technik/32Main),0Vollmatches. Vorbereitung
-11,190/600Child-Sekunden; feste Frist18:00:36,423CET. Konkrete Artefakte werden
-vor Technik publiziert. Der unabhängige Inputreview und die echte Technik sind
-bestanden:32Vollmatches/24Eingabezellen,8exakteA/A-Paare,Exit108erwartet.
-Unabhängiger Echtdatenreview bestätigte101568Attributwerte,33856Profilfelder,
-1408Phasenzellen und23936PI-Gruppen direkt. CumulChild30,960/600s,
-Studienfenster200,071/1200s. Alle384Mainmatches bleiben bis Techpublikation/CI
-unbegonnen. [Validierung](../../experiments/ATTR-009-validation.md).
+**ATTR-009-Bridge vollständig:384Hauptmatches/32unabhängigeSeedblöcke,
+32Technikmatches/8exakteA/A-Paare plus Exit108-Negativkontrolle.** Alle417Jobs
+erhalten,0Ausfälle/Retry/Ersatz/Exklusion/Holdouts/Karriereadvances. Keine Erweiterung.
+
+Primär `[JR−(Acc+Pace)/2]spezialisiert−[JR−(Acc+Pace)/2]omni`:
+**−0,162xGD**,95-%-KI**[−0,488;+0,164]**,p0,31885. Die Interaktion bleibt
+unklar. VolleBreite0,65282 verfehlt das Pilotziel0,50. Kein sekundärer Holm5-Nachweis;
+Punktekontrast−0,133[−0,787;+0,521]. Kein Äquivalenzbeweis,keine globale neue
+Attributrangliste und keine Erklärung der internationalen Diskrepanz.
+[Ergebnisbericht](../../experiments/ATTR-009-results.md),[Rohmessungen/Provenienz](../../data/attr-009-bridge/README.md).
+
+MECH-002 liefert einen geprüften Offline-Startpolicycodec,bleibt aber wegen
+fehlender Nach-Vorbereitungs-/Erstschritt-/Familiaritybelege blockiert:0nativeStarts,
+0neueSeeds. TRAIN-002 liefert strikte Checkpointdiagnostik ohneSave-Decoder/Executor;
+RNG-/Teilnahme-/Einheitengates bleiben blockiert:0Advances/0Seeds. Keine Ersatzstudien.
+
+124integrierteRepositorytests und5historischeAnalysetests bestehen. Zwei echte
+Reviewbefunde wurden **vor Freeze** korrigiert: fehlende33unbegonneneTechnikplätze
+im Vorbereitungsexport und unstrengeTRAIN-Session-/Slottypen. Die erste CI
+scheiterte am flachen Checkout des neuen Gitblob-Archivvergleichs; vollständige
+Historie korrigiert,kein Hashgate abgeschwächt und kein nativer Retry.
 
 ## Verantwortlichkeiten
 
@@ -28,7 +34,12 @@ unbegonnen. [Validierung](../../experiments/ATTR-009-validation.md).
 | ATTR | `codex/round3-attr` | `research/attr009.py`, eigene ATTR-009-Analyse/Tests/Vertrag, `ATTR.md` | Masken-/Rohdosis-Audit vor 384 Hauptmatches |
 | MECH | `codex/round3-mech` | `research/startpolicy.py`, eigene MECH-002-Dateien, `MECH.md` | Passive erste Fortschreibung und Familiarity zwingend |
 | TRAIN | `codex/round3-train` | `research/training002.py`, eigene TRAIN-002-Dateien, `TRAIN.md` | Keine Kalenderfortschreibung oder Hauptserie |
+| Review | `codex/round3-review` | Eigener `analysis/review_round3.py` und getrennte Reviewberichte | Rohbelege selbst nachrechnen,keine native Ausführung |
 | Director | `main` | Integration, gemeinsame Übersicht/Queue/Baseline, native Ausführung | Ein Supervisor, maximal vier Worker |
+
+Getrennte Fachberichte: [ATTR](ATTR.md),[MECH](MECH.md),[TRAIN](TRAIN.md).
+Diese dokumentieren die jeweiligen ursprünglichen Fachbeiträge;die zentralen
+Ausführungsergebnisse stehen in dieser Übersicht und im Ergebnisbericht.
 
 Verbindlich ist [der Round-3-Auftrag](../../experiments/NEXT-ATTR-MECH-TRAIN-round3.md).
 Keine Holdoutausführung, alten Seeds, Ersatzsimulationen oder automatische
@@ -53,10 +64,11 @@ Auch der erneut aus elf tatsächlichen Dateien berechnete Ressourcenfingerprint
 `6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883`
 stimmt überein. Upstreamquelle sauber auf v1114.6/91f2eba57fac0b7fbd3dff616056907e3ce461be.
 Dies ist ein statischer Identitätscheck, keine vorweggenommene Freigabe neuer
-Eingriffe. Native Loader-/Laufzeitreceipts müssen vor einer Serie folgen.
+Eingriffe. Die nachfolgenden ATTR-Loader-/Input-/Laufzeitgates wurden tatsächlich
+geprüft;MECH/TRAIN bekommen daraus keine zusätzliche Freigabe.
 Private Engine-/Spielmaterialien bleiben lokal.
 
-## Vorläufige technische Abgrenzung
+## Technische Abgrenzung
 
 MECH findet derzeit keine passive Profilaufnahme nach dem ersten Simulationsschritt
 und keine unveränderten Familiarity-Receipts. TRAIN findet keinen validierten
@@ -70,5 +82,29 @@ Auftrag erlaubt einen totalen Masken×Attributkontrast bei ausdrücklich
 unidentifizierter Mechanismuszerlegung; fehlende passive Effektivitätsgrößen
 werden weder synthetisch ergänzt noch experimentell neutralisiert.
 
-Abschlusszahlen, Teststatus, unabhängiger Review und Prioritäten werden nach
-den tatsächlichen Prüfungen ergänzt.
+## Unabhängige Abnahme und Budgets
+
+[Offline-Preflight](REVIEW.md) → [24konkreteInputs/Seeds](INPUT-REVIEW.md) →
+[32echteTechnikmatches](TECH-REVIEW.md) → [384erErgebnis-/Belegprüfung](RESULTS-REVIEW.md).
+Eigener Rechenkern ohne Projektanalyse-/Statistikimporte rekonstruiert6Endpunkte,
+Welch-/Bootstrapintervalle,Holm5,Kontext-SDs,alle192Blockwerte und zukünftige
+Fallzahlminima. Alle384privatenLogs/Dumps zusätzlich geprüft:
+1.218.816Attributwerte/406.272direktdecodierteProfilfelder/16.896Phasenzellen/
+287.232PI-Gruppen. Alle13eingefrorenenAutorenquellen/7Inputs und272historische
+Dateien gegen ihre Gitblobs unverändert.
+
+Preregfc14746685f0a1f6475b1968912317d9ffabdfb6/CI43616995356 vorTechnik;
+Techrelease06f1aeb22c88eb1188c35cae5a7cdb3b453c7740/CI43617519052 und
+unabhängigerReview vorMain. Gateverweis e9ac939 ebenfalls vorMain veröffentlicht.
+Code/Seedplan/Eingriff nach Beginn unverändert. Nur dieser neue Runner nutzt
+den eigenen zentralen Budgetpfad;historische Runner sind nicht nachträglich global gesperrt.
+
+Verbrauch **231,558/600Child-Sekunden**,Studienfenster **753,168/1200s**,
+unverrückbareFrist18:00:36,423CET eingehalten;höchstens4Worker/90sFortschritt.
+PrivateRohartefakte≈182,44MiB unter2GiB,kein verbleibenderaktiverLease/Prozess.
+LizenzierteBytes/privateSpieleridentitäten bleiben lokal.
+
+[Agenten-/Commit-/Statusledger](QUEUE.json),[aktuelleModulprioritäten](PRIORITIES.md).
+Vorrang haben passive Messgates und realistische Profile,SET-Exposition und
+TRAIN-Replikatgrundlagen;danach neueTACT-Rollen/OOP-Fragen. Keine automatische
+1176–6216Match-Bestätigung,Holdouts,Karriere-Replays oder Runde4. Nach finaler CI stoppen.
