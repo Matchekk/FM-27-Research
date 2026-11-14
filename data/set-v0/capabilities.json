@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "adapter": "SET-V0-offline-v1",
+  "synthetic_schema": "SET-V0-synthetic-v1",
+  "synthetic_parser_implemented": true,
+  "native_mapping_implemented": false,
+  "native_validated": false,
+  "performance_ready": false,
+  "native_capabilities": {
+    "execution_contact": false,
+    "final_legality": false,
+    "clock_mapping": false,
+    "shot_xg": false,
+    "final_shot_xg_status": false,
+    "controlled_possession": false,
+    "final_goal_status": false
+  },
+  "native_source_mapping_sha256": null,
+  "native_schema_sha256": null,
+  "native_clock_mapping_sha256": null,
+  "native_gate_sha256": null,
+  "required_native_evidence": "Versioned source/schema/clock mapping plus independently validated native gold cases; absent in V0"
+}

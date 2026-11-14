@@ -1,0 +1,884 @@
+{
+  "origin": "synthetic",
+  "native_validated": false,
+  "performance_ready": false,
+  "cases": [
+    {
+      "name": "no_standard",
+      "description": "No awarded or executed standard; synthetic zero is known from complete trace.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "no_standard",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          0
+        ],
+        "events": [
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          }
+        ]
+      },
+      "expected": {
+        "attempts": 0,
+        "corner/0/executed": 0
+      }
+    },
+    {
+      "name": "selection_abort",
+      "description": "Repeated offence/defence selection views never count as executions.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "selection_abort",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          0
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "select",
+            "award_id": "a1",
+            "view_side": 0,
+            "routine_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "select",
+            "award_id": "a1",
+            "view_side": 1,
+            "routine_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "period": 1,
+            "ms": 200,
+            "id": "e2"
+          },
+          {
+            "type": "select",
+            "award_id": "a1",
+            "view_side": 0,
+            "routine_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "period": 1,
+            "ms": 300,
+            "id": "e3"
+          },
+          {
+            "type": "abort",
+            "award_id": "a1",
+            "reason": "cancelled",
+            "period": 1,
+            "ms": 400,
+            "id": "e4"
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 500,
+            "id": "e5"
+          }
+        ]
+      },
+      "expected": {
+        "selection_messages": 3,
+        "aborted_awards": 1,
+        "corner/0/executed": 0
+      }
+    },
+    {
+      "name": "repeat_goal",
+      "description": "Final adjudication marks repeated first contact illegal; only final legal attempt enters denominator.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "repeat_goal",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          1,
+          0
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "try1",
+            "contact_verified": true,
+            "legal": false,
+            "repeat_of": null,
+            "reason": "repeat",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "try2",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": "try1",
+            "reason": "legal",
+            "period": 1,
+            "ms": 200,
+            "id": "e2"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s1",
+            "side": 0,
+            "xg": 0.2,
+            "period": 1,
+            "ms": 300,
+            "id": "e3",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "goal",
+            "goal_id": "g1",
+            "side": 0,
+            "shot_id": "s1",
+            "own_goal": false,
+            "period": 1,
+            "ms": 400,
+            "id": "e4"
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 500,
+            "id": "e5"
+          }
+        ]
+      },
+      "expected": {
+        "attempts": 2,
+        "illegal_attempts": 1,
+        "corner/0/executed": 1,
+        "corner/0/goals_for": 1,
+        "corner/0/xg_for": 0.2,
+        "corner/1/defended": 1,
+        "corner/1/defensive_goals_conceded": 1
+      }
+    },
+    {
+      "name": "counter_boundary",
+      "description": "Controlled turnover starts [0,10s) counter window; exactly10s shot is not attributed.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "counter_boundary",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          1
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "free_kick",
+            "side": 0,
+            "ms": 0,
+            "period": 1,
+            "id": "e0"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "x1",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "ms": 100,
+            "period": 1,
+            "id": "e1"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s1",
+            "side": 0,
+            "xg": 0.1,
+            "ms": 200,
+            "period": 1,
+            "id": "e2",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "possession",
+            "side": 1,
+            "controlled": false,
+            "ms": 1000,
+            "period": 1,
+            "id": "e3"
+          },
+          {
+            "type": "possession",
+            "side": 1,
+            "controlled": true,
+            "ms": 3000,
+            "period": 1,
+            "id": "e4"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s2",
+            "side": 1,
+            "xg": 0.3,
+            "ms": 12999,
+            "period": 1,
+            "id": "e5",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "goal",
+            "goal_id": "g2",
+            "side": 1,
+            "shot_id": "s2",
+            "own_goal": false,
+            "ms": 12999,
+            "period": 1,
+            "id": "e6"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s3",
+            "side": 1,
+            "xg": 0.2,
+            "ms": 13000,
+            "period": 1,
+            "id": "e7",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "match_end",
+            "ms": 14000,
+            "period": 1,
+            "id": "e8"
+          }
+        ]
+      },
+      "expected": {
+        "free_kick/0/executed": 1,
+        "free_kick/0/xg_for": 0.1,
+        "free_kick/0/counter_xg_against": 0.3,
+        "free_kick/0/counter_goals_against": 1,
+        "free_kick/0/net_xg": -0.2
+      }
+    },
+    {
+      "name": "next_standard",
+      "description": "A new awarded standard closes old attack/counter chain and prevents double attribution.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "next_standard",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          1,
+          0
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "x1",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s1",
+            "side": 0,
+            "xg": 0.1,
+            "period": 1,
+            "ms": 200,
+            "id": "e2",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "award",
+            "award_id": "a2",
+            "setpiece_type": "free_kick",
+            "side": 0,
+            "period": 1,
+            "ms": 300,
+            "id": "e3"
+          },
+          {
+            "type": "execute",
+            "award_id": "a2",
+            "execution_id": "x2",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 400,
+            "id": "e4"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s2",
+            "side": 0,
+            "xg": 0.4,
+            "period": 1,
+            "ms": 500,
+            "id": "e5",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "goal",
+            "goal_id": "g1",
+            "side": 0,
+            "shot_id": "s2",
+            "own_goal": false,
+            "period": 1,
+            "ms": 600,
+            "id": "e6"
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 700,
+            "id": "e7"
+          }
+        ]
+      },
+      "expected": {
+        "corner/0/xg_for": 0.1,
+        "corner/0/goals_for": 0,
+        "free_kick/0/xg_for": 0.4,
+        "free_kick/0/goals_for": 1
+      }
+    },
+    {
+      "name": "var_cancel",
+      "description": "Final VAR cancellation removes goal, not its already observed shot xG.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "var_cancel",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          0
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "x1",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s1",
+            "side": 0,
+            "xg": 0.2,
+            "period": 1,
+            "ms": 200,
+            "id": "e2",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "goal",
+            "goal_id": "g1",
+            "side": 0,
+            "shot_id": "s1",
+            "own_goal": false,
+            "period": 1,
+            "ms": 300,
+            "id": "e3"
+          },
+          {
+            "type": "stoppage",
+            "period": 1,
+            "ms": 400,
+            "id": "e4"
+          },
+          {
+            "type": "cancel_goal",
+            "goal_id": "g1",
+            "reason": "VAR",
+            "period": 1,
+            "ms": 500,
+            "id": "e5"
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 600,
+            "id": "e6"
+          }
+        ]
+      },
+      "expected": {
+        "cancelled_goals": 1,
+        "corner/0/xg_for": 0.2,
+        "corner/0/goals_for": 0
+      }
+    },
+    {
+      "name": "period_boundary",
+      "description": "Explicit period boundary permits period clock reset, but no carryover chain.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "period_boundary",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          1
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "abort",
+            "award_id": "a1",
+            "reason": "period_end",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "period_end",
+            "ms": 1000,
+            "period": 1,
+            "id": "e2"
+          },
+          {
+            "type": "award",
+            "award_id": "a2",
+            "setpiece_type": "free_kick",
+            "side": 1,
+            "period": 2,
+            "ms": 0,
+            "id": "e3"
+          },
+          {
+            "type": "execute",
+            "award_id": "a2",
+            "execution_id": "x2",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 2,
+            "ms": 100,
+            "id": "e4"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s2",
+            "side": 1,
+            "xg": 0.25,
+            "period": 2,
+            "ms": 200,
+            "id": "e5",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "goal",
+            "goal_id": "g2",
+            "side": 1,
+            "shot_id": "s2",
+            "own_goal": false,
+            "period": 2,
+            "ms": 300,
+            "id": "e6"
+          },
+          {
+            "type": "match_end",
+            "period": 2,
+            "ms": 400,
+            "id": "e7"
+          }
+        ]
+      },
+      "expected": {
+        "corner/0/executed": 0,
+        "free_kick/1/executed": 1,
+        "free_kick/1/goals_for": 1
+      }
+    },
+    {
+      "name": "regained_control",
+      "description": "Regained original-team control closes counter; later open-play shot stays unassigned.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "regained_control",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          0
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "throw_in",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "x1",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "possession",
+            "side": 1,
+            "controlled": true,
+            "period": 1,
+            "ms": 200,
+            "id": "e2"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s1",
+            "side": 1,
+            "xg": 0.2,
+            "period": 1,
+            "ms": 300,
+            "id": "e3",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "possession",
+            "side": 0,
+            "controlled": true,
+            "period": 1,
+            "ms": 400,
+            "id": "e4"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s2",
+            "side": 0,
+            "xg": 0.3,
+            "period": 1,
+            "ms": 500,
+            "id": "e5",
+            "counted_in_final_xg": true
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 600,
+            "id": "e6"
+          }
+        ]
+      },
+      "expected": {
+        "throw_in/0/executed": 1,
+        "throw_in/0/counter_xg_against": 0.2,
+        "throw_in/0/xg_for": 0
+      }
+    },
+    {
+      "name": "own_goal",
+      "description": "Own goal may have no shot; never invent a shot or its xG.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "own_goal",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          1
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "x1",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "goal",
+            "goal_id": "g1",
+            "side": 1,
+            "shot_id": null,
+            "own_goal": true,
+            "period": 1,
+            "ms": 200,
+            "id": "e2"
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 300,
+            "id": "e3"
+          }
+        ]
+      },
+      "expected": {
+        "corner/0/goals_against": 1,
+        "corner/0/counter_goals_against": 0,
+        "corner/0/xg_against": 0
+      }
+    },
+    {
+      "name": "same_routine_twice",
+      "description": "Same routine hash in two distinct legal executions is two exposures.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "same_routine_twice",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          0
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "select",
+            "award_id": "a1",
+            "view_side": 0,
+            "routine_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "x1",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 200,
+            "id": "e2"
+          },
+          {
+            "type": "stoppage",
+            "period": 1,
+            "ms": 300,
+            "id": "e3"
+          },
+          {
+            "type": "award",
+            "award_id": "a2",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 400,
+            "id": "e4"
+          },
+          {
+            "type": "select",
+            "award_id": "a2",
+            "view_side": 0,
+            "routine_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "period": 1,
+            "ms": 500,
+            "id": "e5"
+          },
+          {
+            "type": "execute",
+            "award_id": "a2",
+            "execution_id": "x2",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 600,
+            "id": "e6"
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 700,
+            "id": "e7"
+          }
+        ]
+      },
+      "expected": {
+        "selection_messages": 2,
+        "corner/0/executed": 2
+      }
+    },
+    {
+      "name": "offside_xg_excluded",
+      "description": "Final native-xG inclusion status is explicit; an offside-invalidated shot contributes no final xG.",
+      "trace": {
+        "schema": "SET-V0-synthetic-v1",
+        "origin": "synthetic",
+        "match_id": "offside_xg_excluded",
+        "clock": "synthetic_period_milliseconds",
+        "final_score": [
+          0,
+          0
+        ],
+        "events": [
+          {
+            "type": "award",
+            "award_id": "a1",
+            "setpiece_type": "corner",
+            "side": 0,
+            "period": 1,
+            "ms": 0,
+            "id": "e0"
+          },
+          {
+            "type": "execute",
+            "award_id": "a1",
+            "execution_id": "x1",
+            "contact_verified": true,
+            "legal": true,
+            "repeat_of": null,
+            "reason": "legal",
+            "period": 1,
+            "ms": 100,
+            "id": "e1"
+          },
+          {
+            "type": "shot",
+            "shot_id": "s1",
+            "side": 0,
+            "xg": 0.2,
+            "period": 1,
+            "ms": 200,
+            "id": "e2",
+            "counted_in_final_xg": false
+          },
+          {
+            "type": "goal",
+            "goal_id": "g1",
+            "side": 0,
+            "shot_id": "s1",
+            "own_goal": false,
+            "period": 1,
+            "ms": 300,
+            "id": "e3"
+          },
+          {
+            "type": "stoppage",
+            "period": 1,
+            "ms": 400,
+            "id": "e4"
+          },
+          {
+            "type": "cancel_goal",
+            "goal_id": "g1",
+            "reason": "offside",
+            "period": 1,
+            "ms": 500,
+            "id": "e5"
+          },
+          {
+            "type": "match_end",
+            "period": 1,
+            "ms": 600,
+            "id": "e6"
+          }
+        ]
+      },
+      "expected": {
+        "cancelled_goals": 1,
+        "excluded_xg_shots": 1,
+        "corner/0/xg_for": 0,
+        "corner/0/goals_for": 0
+      }
+    }
+  ]
+}

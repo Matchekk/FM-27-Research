@@ -1,0 +1,1367 @@
+{
+  "origin": "synthetic",
+  "native_validated": false,
+  "performance_ready": false,
+  "cases": [
+    {
+      "name": "no_standard",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "88001596d13cbc20a4eb2f2e2e87ceb6b1fc081eb7fbf504a64b2f4f9e81d78c",
+        "events": 1,
+        "selection_messages": 0,
+        "attempts": 0,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          0
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {},
+          "goals": {}
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "selection_abort",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "7f0497665addd8ea58be262a40c188eed4253d3e11c8266326639bb3e6eb08e3",
+        "events": 6,
+        "selection_messages": 3,
+        "attempts": 0,
+        "illegal_attempts": 0,
+        "aborted_awards": 1,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          0
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {},
+          "goals": {}
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "repeat_goal",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "02a540842f4b4b3d0ab99af3462a12244aabc44dae207b23ad482cbdea81c2e5",
+        "events": 6,
+        "selection_messages": 0,
+        "attempts": 2,
+        "illegal_attempts": 1,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0.2,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 1,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0.2
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 1,
+              "defensive_xga": 0.2,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          1,
+          0
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {
+            "s1": {
+              "execution_id": "try2",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 200
+            }
+          },
+          "goals": {
+            "g1": {
+              "execution_id": "try2",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 200
+            }
+          }
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "counter_boundary",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "06e7e2b7cddefe12bcbc6578935e278dbf8384bcebf0763bd8cf4a8c30f11b55",
+        "events": 9,
+        "selection_messages": 0,
+        "attempts": 1,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0.1,
+              "xg_against": 0.3,
+              "counter_xg_against": 0.3,
+              "goals_for": 0,
+              "goals_against": 1,
+              "counter_goals_against": 1,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": -0.19999999999999998
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0.1,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          1
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {
+            "s1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 100
+            },
+            "s2": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 1,
+              "phase": "counter",
+              "start_ms": 3000
+            },
+            "s3": null
+          },
+          "goals": {
+            "g2": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 1,
+              "phase": "counter",
+              "start_ms": 3000
+            }
+          }
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "next_standard",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "b305c8b6c38330785742edf5235d8230250453e2dbf795422548cb09b88d5c1d",
+        "events": 8,
+        "selection_messages": 0,
+        "attempts": 2,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0.1,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0.1
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0.1,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0.4,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 1,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0.4
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 1,
+              "defensive_xga": 0.4,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          1,
+          0
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {
+            "s1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 100
+            },
+            "s2": {
+              "execution_id": "x2",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 400
+            }
+          },
+          "goals": {
+            "g1": {
+              "execution_id": "x2",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 400
+            }
+          }
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "var_cancel",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "7d416c7396818d2dc3149ef1ac876299d93117e3795f4956baaaa7cd178e4785",
+        "events": 7,
+        "selection_messages": 0,
+        "attempts": 1,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0.2,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0.2
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0.2,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          0
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 1,
+        "attribution": {
+          "shots": {
+            "s1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 100
+            }
+          },
+          "goals": {
+            "g1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 100
+            }
+          }
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "period_boundary",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "91c01fc1e4809bba1d153c18c7d0478bf30d8cbfdf663cd5e2e4b39f586f1338",
+        "events": 8,
+        "selection_messages": 0,
+        "attempts": 1,
+        "illegal_attempts": 0,
+        "aborted_awards": 1,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 1,
+              "defensive_xga": 0.25,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 1,
+              "xg_for": 0.25,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 1,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0.25
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          1
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {
+            "s2": {
+              "execution_id": "x2",
+              "origin_side": 1,
+              "owner_side": 1,
+              "phase": "attack",
+              "start_ms": 100
+            }
+          },
+          "goals": {
+            "g2": {
+              "execution_id": "x2",
+              "origin_side": 1,
+              "owner_side": 1,
+              "phase": "attack",
+              "start_ms": 100
+            }
+          }
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "regained_control",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "0966206a7fe574dcf8041f6d287b9cb6c09e2f66d881f75ad0bf5e6b257fcbdf",
+        "events": 7,
+        "selection_messages": 0,
+        "attempts": 1,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0,
+              "xg_against": 0.2,
+              "counter_xg_against": 0.2,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": -0.2
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          0
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {
+            "s1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 1,
+              "phase": "counter",
+              "start_ms": 200
+            },
+            "s2": null
+          },
+          "goals": {}
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "own_goal",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "35e29566fedc1ce45fccec753fa89acc06ed33b1c99b72f8ffc5873fb67bf051",
+        "events": 4,
+        "selection_messages": 0,
+        "attempts": 1,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 1,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          1
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {},
+          "goals": {
+            "g1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 100
+            }
+          }
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "same_routine_twice",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "fcd31cfb23dd4ac614fc32f4e414992e5d4ef57acda46cfb5d4c51a27d202919",
+        "events": 8,
+        "selection_messages": 2,
+        "attempts": 2,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 2,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 2,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          0
+        ],
+        "excluded_xg_shots": 0,
+        "cancelled_goals": 0,
+        "attribution": {
+          "shots": {},
+          "goals": {}
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    },
+    {
+      "name": "offside_xg_excluded",
+      "result": {
+        "status": "synthetic_contract_verified",
+        "origin": "synthetic",
+        "native_validated": false,
+        "performance_ready": false,
+        "trace_sha256": "85ecfd815786e71689d26a60a4de467b370386411f5980ce1075035894726828",
+        "events": 7,
+        "selection_messages": 0,
+        "attempts": 1,
+        "illegal_attempts": 0,
+        "aborted_awards": 0,
+        "by_type": {
+          "corner": {
+            "0": {
+              "executed": 1,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 1,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "free_kick": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          },
+          "throw_in": {
+            "0": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            },
+            "1": {
+              "executed": 0,
+              "xg_for": 0,
+              "xg_against": 0,
+              "counter_xg_against": 0,
+              "goals_for": 0,
+              "goals_against": 0,
+              "counter_goals_against": 0,
+              "defended": 0,
+              "defensive_goals_conceded": 0,
+              "defensive_xga": 0,
+              "net_xg": 0
+            }
+          }
+        },
+        "final_score": [
+          0,
+          0
+        ],
+        "excluded_xg_shots": 1,
+        "cancelled_goals": 1,
+        "attribution": {
+          "shots": {
+            "s1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 100
+            }
+          },
+          "goals": {
+            "g1": {
+              "execution_id": "x1",
+              "origin_side": 0,
+              "owner_side": 0,
+              "phase": "attack",
+              "start_ms": 100
+            }
+          }
+        },
+        "warning": "Own synthetic gold data only; no native execution/exposure/attribution source is validated"
+      }
+    }
+  ]
+}

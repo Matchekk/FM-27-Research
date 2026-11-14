@@ -1,0 +1,73 @@
+{
+  "tool_version": "v1114.6",
+  "tool_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+  "engine_file_version": "27.0.1",
+  "engine_product_version": "27.0.1+2503222",
+  "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+  "native_processes_started": 0,
+  "seed_reservations": 0,
+  "source_byte_sha256": {
+    "fm27_match_events.py": "3a2256a31c2be5dc98fc3d126ae5e861d09b640f75447945848a8c80d11fe3d9",
+    "fm27_setpieces.py": "c1ef500a0591174624db5ad47d17e624284f3cdeb1bde407568bf64aa67f6f65",
+    "desktop_host.cpp": "72025a966fd244933bcec731f0789b7a1eba834e991f6e9bae4762a148bcc43a",
+    "native_setpiece_episode.h": "311e04ee09de7a08a140908a3918e1344c3259db68dc7cde4be41657c204e49b"
+  },
+  "private_evidence": [
+    {
+      "private_artifact_label": "home_baseline-2362620850-r0.jsonl",
+      "sha256": "bd16b50548b28afc71c61d2a32472995b1fc2204ef46f304a8f9bd630d759cd7",
+      "diagnostic": {
+        "status": "unresolved_native_mapping",
+        "native_validated": false,
+        "performance_ready": false,
+        "exposures": null,
+        "attribution": null,
+        "missing_capabilities": [
+          "execution_contact",
+          "final_legality",
+          "clock_mapping",
+          "shot_xg",
+          "final_shot_xg_status",
+          "controlled_possession",
+          "final_goal_status"
+        ],
+        "diagnostics": {
+          "raw_records": 112,
+          "selection_messages": 52,
+          "selection_ticks": 26,
+          "invalid_selection_ticks": 0,
+          "selection_is_execution": false
+        },
+        "reason": "No trusted native execution/clock/shot/possession adapter or gate exists"
+      }
+    },
+    {
+      "private_artifact_label": "home_baseline-2362620850-r1.jsonl",
+      "sha256": "5f4860ee770addac04333a4fa2c5eec42c48468aa7300f01c9e28b131ea066e6",
+      "diagnostic": {
+        "status": "unresolved_native_mapping",
+        "native_validated": false,
+        "performance_ready": false,
+        "exposures": null,
+        "attribution": null,
+        "missing_capabilities": [
+          "execution_contact",
+          "final_legality",
+          "clock_mapping",
+          "shot_xg",
+          "final_shot_xg_status",
+          "controlled_possession",
+          "final_goal_status"
+        ],
+        "diagnostics": {
+          "raw_records": 122,
+          "selection_messages": 52,
+          "selection_ticks": 26,
+          "invalid_selection_ticks": 0,
+          "selection_is_execution": false
+        },
+        "reason": "No trusted native execution/clock/shot/possession adapter or gate exists"
+      }
+    }
+  ]
+}
