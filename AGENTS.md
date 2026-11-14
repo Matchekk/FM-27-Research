@@ -8,6 +8,7 @@ Forsche systematisch zur FM27-Meta und dokumentiere nachvollziehbare, wiederholb
 2. Prüfe `git status`, aktuelles Branch-Tracking und den aktuellen Remote-Stand, bevor du Dateien änderst.
 3. Ermittle tatsächliche Versionsnummern von FM27 und verwendeten Tools. Keine angenommenen Buildnummern als Testfakt ausgeben.
 4. Prüfe die konkrete Quelle lokaler Vorarbeiten; Gesprächszusammenfassungen gelten ohne importierte Belege als **nicht unabhängig verifiziert**.
+5. **Pflicht vor jeder neuen FM27-Hypothese/Seedreservierung:** Prüfe den [externen Studienatlas](docs/FM27_EXTERNAL_STUDY_ATLAS_2026-11-14.md), den [maschinenlesbaren Studienindex](research/fm27-external-study-index-20261114.json) und die originale Quelle zusammen mit den eigenen FINDINGS. Dokumentiere überschneidende Quellen-IDs und wähle `DUPLICATE_STOP`, `REPLICATION_WITH_TRANSFER`, `NOVEL_HYPOTHESIS` oder `UNCERTAIN_SOURCE`. Ein unveränderter Test in gleichem Fixture ohne neue Erkenntnisfrage wird nicht erneut gestartet. Prüfe vor jedem Lauf den heutigen Quellen-/Patchstand neu.
 
 ## Bei Experimenten
 - Definiere vor der Ausführung Hypothese, primäre Zielgröße, Ein-/Ausschlüsse, Variablen, Seed-Strategie, Stichprobengröße und Auswertung.
