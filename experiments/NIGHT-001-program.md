@@ -13,6 +13,12 @@ Gitstatus sauber,origin/main abgeglichen. DLL-Dateiversion27.0.1, Produktversion
 27.0.1+2503222 erneut tatsächlich gelesen. Runtime v1114.6 bleibt unverändert.
 Die alten eigenen Runner,Studienbudgets und reservierten Seeds werden nicht wiederverwendet.
 
+Während der Vorbereitung erschien unabhängig Remotecommit
+`fd954ba442ec64371779f55ed6d124e97fede2f3` mit privatem Capture-/VALID-004-Plan.
+Der erste Push wurde daher regulär zurückgewiesen. Remote wurde ohne Force-Push
+integriert;alle fremden Dateien bleiben erhalten. Die eigene Karriere-Readback-
+Vorarbeit wird als separate Teilstufe dieses VALID-004-Plans geführt.
+
 Die Plattform besteht aus vier getrennten Grenzen:
 
 1. Historisches wissenschaftliches Archiv: ursprüngliche Daten/Code/Protokolle

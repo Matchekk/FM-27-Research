@@ -337,5 +337,17 @@
     "tests/test_training002.py": "20549a7eb87d1f22c7443e207c7d2624148e4bff46c85d60e76a17d061a19c49",
     "tests/test_validation.py": "9f6ef8ee50977a92b566beb4e0f1dfccabcf1c086996b82b891a64f9fdff5a69",
     "tests/test_validation003.py": "c83e6266441283ec78f7276274dc73705ca7480d16949d05c48cd03baf095fcb"
-  }
+  },
+  "parallel_remote_baselines": [
+    {
+      "base_commit": "fd954ba442ec64371779f55ed6d124e97fede2f3",
+      "sha256": {
+        ".gitignore": "c007d15685efa0564c9049b3c829c4cc40e236a94a8fe0a5e170b3fa7c10169e",
+        "analysis/capture_test_fm_research.py": "b35ec4e8ad7daf8ac368d60229e13a8f8e267728f95d9427a46d2a1d3e62dba6",
+        "docs/test-fm-research/README.md": "970446b4f473cb024f4801029e0102be1f51543d96d0aef91c1cf6ded7751b32",
+        "experiments/VALID-004-test-fm-research.md": "8960c5ed0edacef52594a6b1f78cb1cbeccd13fd7e5a63dce463a0f0ac9f1140",
+        "tests/test_testfm_capture.py": "e217527f54abccd517b176a54cf74013ed93210c2076de74a97478ae52b1fee7"
+      }
+    }
+  ]
 }

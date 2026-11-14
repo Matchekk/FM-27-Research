@@ -435,3 +435,7 @@ tatsächlicherneutgelesen. NeuesProgrammbudget mit fixer23:00UTC-Grenze initiali
 0nativeOperationen/0Childsekunden/0reservierteMatches. Obergrenzen1800Childs,
 192Tech/2048Main sind keine Hauptserienfreigabe. Fünf neueZeit-/Restart-/Crash-
 Budgettests,insgesamt129Testsbestanden. Quellen-/Reader-/Observerarbeit inArbeit.
+
+Parallelremote fd954ba brachteCapture-/VALID004-Plan,.rec-Ignore und4Tests.
+Pushkonflikt regulär durch Merge integriert,keinefremdenÄnderungenüberschrieben.
+Die5neuenRemoteDateien werden zusätzlich separat gegenfd954ba geschützt.
