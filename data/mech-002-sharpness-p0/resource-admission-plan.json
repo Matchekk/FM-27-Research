@@ -1,0 +1,49 @@
+{
+  "experiment_id": "MECH-002-SHARPNESS-P0",
+  "kind": "administrative_runtime_projection_only",
+  "interpretation": "Observed technical wall times support admission planning, not a guaranteed upper bound or a scientific performance result. All original900/3600/global limits and >=600s guards remain unchanged.",
+  "observed_technical_blocks": [
+    {
+      "context": "high_press",
+      "team_side": 0,
+      "full_jobs": 8,
+      "elapsed_seconds": 6.31622
+    },
+    {
+      "context": "high_press",
+      "team_side": 1,
+      "full_jobs": 8,
+      "elapsed_seconds": 6.598717
+    },
+    {
+      "context": "deep_block",
+      "team_side": 0,
+      "full_jobs": 8,
+      "elapsed_seconds": 6.24722
+    },
+    {
+      "context": "deep_block",
+      "team_side": 1,
+      "full_jobs": 8,
+      "elapsed_seconds": 6.304882
+    }
+  ],
+  "technical_dispatcher_seconds": 26.554723,
+  "technical_own_charge_seconds": 61.98050679999869,
+  "source_and_phase_overhead_seconds": 35.4257837999987,
+  "first_main_serial_call_allowance_seconds": 3.2030000000013388,
+  "main_blocks": 64,
+  "projection_formula": "64 * maximum observed eight-job technical block wall + measured phase overhead + maximum cold-call duration +90s contingency",
+  "contingency_seconds": 90,
+  "projected_main_seconds": 550.9466718,
+  "own_cumulative_limit_seconds": 900,
+  "own_remaining_after_technical_seconds": 838.0194932000013,
+  "fixed_main_minimum_seconds": 600,
+  "own_wall_deadline_utc": "2026-11-14T22:11:09.377746+00:00",
+  "night_wall_deadline_utc": "2026-11-14T23:00:00+00:00",
+  "evidence_sha256": {
+    "technical.jsonl": "9c55abb41449229d5c13da7d1d666f07f6045c6f1bfbb24f57c3319a95e3b169",
+    "technical-budget.json": "61171286bfd74777c0f8078cf3445011374bbb954e1a72f7769e48e62f283fd7",
+    "technical-summary.json": "c4963e0e55ac9d9cdad844ec4dc679dba38bd54f61488d3d5972c45a64da5cd8"
+  }
+}

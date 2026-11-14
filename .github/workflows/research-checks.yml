@@ -30,4 +30,6 @@ jobs:
       - run: if (Test-Path data/attr-009-bridge/effects.json) { python analysis/review_round3.py results }
       - run: if (Test-Path data/mech-003-stamina/manifest.json) { python analysis/verify_mech003_archive.py }
       - run: if (Test-Path data/mech-002-startpolicy-tech/technical-summary.json) { python -B analysis/review_night001.py --public-startpolicy }
+      - run: if (Test-Path data/mech-002-sharpness-p0/technical.jsonl) { python -B analysis/review_sharpness002_results.py public-technical }
+      - run: if (Test-Path data/mech-002-sharpness-p0/main.jsonl) { python -B analysis/review_sharpness002_results.py public-main }
       - run: git diff --check

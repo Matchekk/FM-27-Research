@@ -24,6 +24,17 @@ Diese Registrierung startet keine Simulation. Vor TECH ist noch die erfolgreiche
 CI genau dieser Manifestveröffentlichung erforderlich; vor Main zusätzlich
 die eigene tatsächliche Technikabnahme und deren Veröffentlichungs-CI.
 
+## Tatsächlicher Techniklauf
+
+32 Vollmatches,16 exakte A/A-Paare und eine erwartete initiale108-Abweisung
+sind vollständig abgeschlossen; keine unerwarteten Ausfälle oder Ersatzseeds.
+[Technikbericht](../../docs/night-001/SHARPNESS-TECH-RESULTS.md),
+[Messungen](technical.jsonl), [Jobstatus](technical-job-accounting.jsonl),
+[Budget](technical-budget.json) und [Summary](technical-summary.json).
+61,9805068/900 eigene Childsekunden abgerechnet. Keine Hauptmatches gestartet;
+Main benötigt weiterhin den veröffentlichten unabhängigen Technikreview,
+Freigabe und erfolgreiche CI dieser Veröffentlichung.
+
 ## Erhaltener ursprünglicher Entwurfsstatus
 
 `contract-draft.json` beschreibt den separaten Raw-Startpaket×Pressing-Pilot:

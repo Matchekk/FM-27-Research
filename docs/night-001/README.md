@@ -125,3 +125,16 @@ Ein eigener [Schärfe×Pressing-Entwurf](SHARPNESS-PLAN.md) wird parallel geprü
 Er ist eine neue Studie mit eigener Vorregistrierung, neuen Seeds und
 eigenständigen Technik-, Publikations- und Budgetgates. Keine Übernahme der
 geschlossenen Stamina-Studie und keine Freigabe durch diesen Zwischenstand.
+
+## Schärfe-Pilot: eigene Technik bestanden
+
+Vorregistrierung und545 Jobplätze sind nach konkretem Inputreview unter
+`f17f0b4` veröffentlicht; CI43641170744 bestand vor dem ersten Aufruf.
+Die [eigene Technikreihe](SHARPNESS-TECH-RESULTS.md) ist mit32 Vollmatches,
+16 exakten A/A-Paaren und einer erwarteten Negativabweisung vollständig.
+Alle Eingabe-, Seed-, Start-/Erstschritt- und Bereinigungsgates bestanden;
+61,9805068/900 eigene Childsekunden,268,9756700/1800 global.
+Damit96 technische Vollmatches und weiterhin0 wissenschaftliche Hauptmatches
+in NIGHT-001. Die strengere eigene Frist endet23:11:09CET; die globale Nachtfrist
+bleibt00:00CET. Hauptlauf bis unabhängigem Technikreview und dessen erfolgreicher
+Veröffentlichungs-CI gesperrt. Keine UI-, Consumer- oder Karrierefreigabe.

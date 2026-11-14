@@ -1,0 +1,15 @@
+{
+  "experiment_id": "MECH-002-SHARPNESS-P0",
+  "approved_for_main": true,
+  "summary_sha256": "c4963e0e55ac9d9cdad844ec4dc679dba38bd54f61488d3d5972c45a64da5cd8",
+  "review_sha256": "baf01bea2c4100bdd62e76c2ca165dbc14e7b60d285d19006b0342e7ea60a8ff",
+  "evidence_projection_sha256": "e4cd046efd79686ffd271b8ea4f128e257a070f308f79a5fa71b05ac25ee2722",
+  "resource_admission_plan_sha256": "e52b175db0696cb0c20a2bb830df9690ba1b7bea2777dfe0554f3ed7ada7a654",
+  "scope": "Exactly512 preregistered full matches/64 new independent seed blocks, unchanged frozen inputs/code. Publication and exact successful CI plus all live >=600s admission checks remain mandatory.",
+  "main_matches_started_at_release_creation": 0,
+  "holdouts_released": false,
+  "career_released": false,
+  "ui_scale_calibrated": false,
+  "consumer_semantics_validated": false,
+  "automatic_extension_allowed": false
+}
