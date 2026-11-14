@@ -3,8 +3,11 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+from hashlib import sha256
+import os
 
-from research.night_control import NightBudget, DEADLINE
+from research.night_control import NightBudget, DEADLINE, assert_night_admission
+from research.budget import atomic
 
 
 class NightControlTests(unittest.TestCase):
@@ -56,6 +59,46 @@ class NightControlTests(unittest.TestCase):
             before = self.path.read_bytes()
             with self.assertRaises(ValueError):
                 NightBudget(self.path).reserve('next', 'technical', ['next-job'])
+
+    def test_admission_binds_outer_token_live_parent_phase_and_exact_keys(self):
+        root=Path(self.temp.name)
+        budget=NightBudget(root/'local/night-001/program-budget.json')
+        when=datetime.fromisoformat('2026-11-14T20:00:00+00:00')
+        with patch('research.night_control.utcnow',return_value=when):
+            budget.reserve('STUDY/technical','technical',['STUDY:job'])
+        state=budget.load()
+        state['active']['token_sha256']=sha256(b'unit-test-token').hexdigest()
+        atomic(budget.path,state)
+        before=budget.path.read_bytes()
+        with patch.dict(os.environ,{'NIGHT_PROGRAM_TOKEN':'unit-test-token'}), \
+             patch('research.night_control.utcnow',return_value=when), \
+             patch('research.night_control.supervisor_alive',return_value=True):
+            proof=assert_night_admission(root,'STUDY','technical',['job'])
+            self.assertEqual(proof['reserved_matches'],1)
+            self.assertNotIn('token',proof)
+            for study,phase,keys in [('OTHER','technical',['job']),('STUDY','main',['job']),
+                                      ('STUDY','technical',[]),('STUDY','technical',['job','job'])]:
+                with self.assertRaises(ValueError):
+                    assert_night_admission(root,study,phase,keys)
+            with patch.dict(os.environ,{'NIGHT_PROGRAM_TOKEN':'incorrect'}):
+                with self.assertRaises(ValueError):
+                    assert_night_admission(root,'STUDY','technical',['job'])
+            with patch('research.night_control.supervisor_alive',return_value=False):
+                with self.assertRaises(ValueError):
+                    assert_night_admission(root,'STUDY','technical',['job'])
+            with patch('research.night_control.utcnow',return_value=datetime.fromisoformat(DEADLINE)):
+                with self.assertRaises(ValueError):
+                    assert_night_admission(root,'STUDY','technical',['job'])
+        self.assertEqual(before,budget.path.read_bytes())
+
+    def test_program_cli_requires_explicit_separator_for_inner_arguments(self):
+        from analysis.night_supervise import parse_cli
+        args,extra=parse_cli(['run','--study','VALID-005-OBSERVER-V1','--phase','prepare',
+                             '--','--observer-host','private-placeholder.exe'])
+        self.assertEqual(args.phase,'prepare')
+        self.assertEqual(extra,['--observer-host','private-placeholder.exe'])
+        with self.assertRaises(SystemExit):
+            parse_cli(['run','--study','VALID-005-OBSERVER-V1','--observer-host','unexpected.exe'])
             self.assertEqual(before, self.path.read_bytes())
             budget.finish(1, 1)
             with self.assertRaises(ValueError):
