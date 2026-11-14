@@ -13,11 +13,19 @@ from research.night_control import NightBudget, assert_night_admission
 ROUTES={
     'VALID-005-OBSERVER-V1':'analysis/run_observer005.py',
     'MECH-003-STAMINA-R0':'analysis/run_mech003.py',
+    'MECH-002-STARTPOLICY-TECH-V1':'analysis/run_startpolicy002.py',
 }
 
 
 def validate_phase_keys(study,phase,keys):
     require(len(keys)==len(set(keys)),'Duplicate program operation keys')
+    if study=='MECH-002-STARTPOLICY-TECH-V1':
+        require(phase!='main','Startpolicy route is a technical gate, with no main authorization')
+        if phase=='technical':
+            expected=[f'full-{context}-s{side}-sharp{level}-r{repeat}'
+                for context in ('high_press','deep_block') for side in (0,1)
+                for level in (10000,7000) for repeat in (0,1)]+['negative-malformed']
+            require(keys==expected,'Startpolicy requires the exact seventeen technical keys')
     if phase=='prepare':
         expected=['loader-check-image-prepare'] if study=='MECH-003-STAMINA-R0' else []
         require(keys==expected,'Preparation must reserve its actual declared native probes')

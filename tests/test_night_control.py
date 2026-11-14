@@ -116,6 +116,16 @@ class NightControlTests(unittest.TestCase):
                 ('MECH-003-STAMINA-R0','technical',['a','a'])]:
             with self.assertRaises(ValueError):validate_phase_keys(study,phase,keys)
 
+    def test_startpolicy_route_forbids_main_and_requires_exact_seventeen_keys(self):
+        from analysis.night_supervise import validate_phase_keys
+        study='MECH-002-STARTPOLICY-TECH-V1'
+        keys=[f'full-{h}-s{s}-sharp{v}-r{r}' for h in ('high_press','deep_block')
+              for s in (0,1) for v in (10000,7000) for r in (0,1)]+['negative-malformed']
+        validate_phase_keys(study,'prepare',[])
+        validate_phase_keys(study,'technical',keys)
+        for phase,bad in [('main',keys),('technical',keys[:-1]),('technical',list(reversed(keys)))]:
+            with self.assertRaises(ValueError):validate_phase_keys(study,phase,bad)
+
 
 if __name__ == '__main__':
     unittest.main()
