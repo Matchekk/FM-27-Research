@@ -325,3 +325,13 @@ Native Vorbereitung verbrauchte9.740/900Child-Sekunden;
 feste Deadline14.11.2026 17:03:01 CET bleibt unverändert.
 86Repositorytests bestehen; generische Speczählung wegen neuem Vertrag9→10,
 keine Änderung eingefrorener wissenschaftlicher Implementierung.
+
+## 2026-11-14 – TACT-002-R0 native Technik vollständig bestanden
+
+32/32Vollmatches,16exakteA/A-Paare,Exit108-Negativprobe;alle16Zellen/44Rollen/
+748PI-Gruppen/1058Profilfelder nachVorbereitung geprüft. Keine nativen Ausfälle,
+Retries,Ersatzseeds oder Exklusionen. Child29.928956/900s,
+Studienfenster317.996172/1800s,Deadline unverändert.
+Alle512Hauptmatches noch unbegonnen. Technikstand vor Main publizieren/CI prüfen.
+Administrativer erster Registeraufruf mit kurzerSHA vor jedemSchreibenabgewiesen;
+anschließend gleicherCommit mit vollerSHA,keine Budget-/Seedmutation/Nativeaktion.
