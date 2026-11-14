@@ -76,6 +76,8 @@ def plot(report):
     fig.suptitle('Vier technische Seedzellen: statische Eingabe und dynamische Runtimequellen',fontsize=12)
     fig.text(.5,.01,'Deskriptiv; keine UI-Skala, kein Nachweis eines bestimmten Consumers, keine Wirkungsschätzung.',ha='center',fontsize=9)
     fig.tight_layout(rect=(0,.04,1,.94));fig.savefig(PUBLIC/'passive-state.svg',metadata={'Date':None})
+    svg=PUBLIC/'passive-state.svg'
+    svg.write_text(''.join(line.rstrip()+'\n' for line in svg.read_text(encoding='utf8').splitlines()),encoding='utf8',newline='\n')
     preview=ROOT/'local/night-001/passive-state.png';preview.parent.mkdir(parents=True,exist_ok=True)
     fig.savefig(preview,dpi=150);plt.close(fig)
 

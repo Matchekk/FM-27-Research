@@ -57,6 +57,10 @@ kalibrierten Tactical-Familiarity-Effekt.
 
 ![Deskriptive, getrennte Rohquellen](../../data/valid-005-observer-v1/passive-state.svg)
 
+Der [Formatreview](PASSIVE-FORMAT-REVIEW.md) bindet die nachträgliche reine
+SVG-Zeilenbereinigung: alle966XML-Elemente und4.667Pfadtokens sowie die
+numerischen JSON-Daten bleiben identisch zum ursprünglich geprüften Bild.
+
 Die ergänzende [Offlinezusammenfassung](../../analysis/summarize_passive005.py)
 verwendet vier eindeutige On-Läufe. Für Kondition/Cache werden ausschließlich die
 20tatsächlichen Feldstarter per eingefrorenem Lineup gejoint; der Rohregionzähler
