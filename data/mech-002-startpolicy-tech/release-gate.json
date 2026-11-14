@@ -1,0 +1,15 @@
+{
+  "experiment_id": "MECH-002-STARTPOLICY-TECH-V1",
+  "passed": true,
+  "independently_released": true,
+  "release_commit": "4011e17b5e5e6aa75fbbabb63329fd63aca2a514",
+  "ci_run": 43638521137,
+  "summary_sha256": "77a62b42ec4c6f00dc0254962db869262036751d9a05ed53195f4f1c3d8e0487",
+  "review_sha256": "996240c9fc924a7784b6dbb29e076f99abab34960165bcc35bc1966d55e4876c",
+  "scope": "Bundled D00 fixture, original two-field raw7000/10000 start package for ten tested starting outfield actors, prepared and first-advance readbacks; serial cold caller only.",
+  "scientific_main_released": false,
+  "ui_scale_calibrated": false,
+  "consumer_semantics_validated": false,
+  "warm_worker_released": false,
+  "career_released": false
+}

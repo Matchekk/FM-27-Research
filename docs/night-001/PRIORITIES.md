@@ -1,8 +1,33 @@
 # Aktualisierte Forschungsprioritäten – Nachtmission
 
-Stand nach VALID-005,14.11.2026. Keine automatische Freigabe durch diese Roadmap.
+Stand 14.11.2026, aktualisiert nach TECH17 und Karriere-R3.
+Keine automatische Freigabe durch diese Roadmap.
 Keine Holdouts, historischen Seeds oder alten Studienbudgets verwenden.
 Die alten ATTR-/TACT-/TRAIN-Archive bleiben unverändert.
+
+## Aktuelle Entscheidung nach geprüften Ergebnissen
+
+Das [Startpolicy-Transfergate](STARTPOLICY-002-RESULTS.md) ist bestanden und
+unabhängig veröffentlicht: originales gemeinsames C90/C7A-Rohpaket7000/10000,
+zehn Feldstarter, Cache8A70/100 nach Originalvorbereitung und erstem Fortschritt.
+Diese enge Freigabe kalibriert keine UI-Skala und belegt noch keinen Matcheffekt.
+Die [Karriere-R3-Diagnose](CAREER-R3-RESULTS.md) bestätigt den erhaltenen
+Taktikmarkerfehler; Parser, Replay und Training bleiben blockiert.
+
+| Rang | Bereich | Nächster begründeter Schritt | Technisches Gate / Budget |
+| --- | --- | --- | --- |
+| 1 | MECH | Separater Schärfe-Rohpaket×Pressing-Varianzpilot, um erstmals den Matcheffekt einer nachgewiesen übertragenen Startzustandsänderung zu schätzen | [Eigener Vertrag](SHARPNESS-PLAN.md): 32 Technikmatches plus Negativkontrolle, dann nur nach unabhängiger Abnahme maximal512 Hauptmatches/64 neue Blöcke;900 Childsekunden/3600s, vier kalte Worker, mindestens600s Rest vor Main. Keine Staminafortsetzung |
+| 2 | ATTR | Positionsabhängige Attributvektoren bei unterschiedlichen Ausgangsniveaus technisch prüfen; anschließend eine klar isolierte JR-gegen-Speed-Moderatorfrage | Erst Profile, beide Phasen, aktive Identitäten und Skalen readbacken. Keine neue globale Rangliste oder automatische Wiederholung der unklaren ATTR-009-Interaktion |
+| 3 | SET | Echte ausgeführte Ecken/Freistöße von bloßer Routinenwahl trennen und mit Schuss-, Tor-, VAR- und Konterketten verbinden | Offline-Goldfälle und echte native Positiv-/Negativbelege;0 Wirksamkeitsmatches bis zur Expositionsfreigabe |
+| 4 | TRAIN | Den Taktikparserfehler separat beheben und tatsächliche individuelle Durchführung, Coach/Fokus/Intensität und unabhängige Karriere-RNG-Zustände erfassen | Gespeicherte Zukunftskalender und77 Kaderrecords sind keine Trainingsdosis.0 Kalenderadvances ohne neuen technischen Vertrag, keine weitere R3-Wiederholung |
+| 5 | TACT | D00 mit begrenzter OOP- oder Außenverteidiger×Flügelrollen-Hypothese vorbereiten, sobald realistischere Profile ausreichend prüfbar sind | Rollen-/Phasen-/PI-Transfer, neue Seeds und eigener Varianzpilot. Keine D15-Dauerschleife, Holdouts oder Siegerbehauptung |
+
+Der globale Stand nach den drei technischen Engineprüfungen beträgt64
+Vollmatches und170,4746041/1800 überwachte Childsekunden; noch keine
+wissenschaftliche Hauptserie dieser Nacht. Die folgende ältere Tabelle hält
+den Planungsstand vor TECH17/R3 fest und erteilt keine erneute Startfreigabe.
+
+## Erhaltener früherer Planungsstand
 
 **Aktualisierung nach MECH-003-Technik:** Der Staminazweig ist nach32gültigen
 Technikmatches aus administrativen Zeitgründen vor jedem Hauptmatch terminal
