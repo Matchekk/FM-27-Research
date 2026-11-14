@@ -5,7 +5,7 @@ from itertools import product
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
-import json, struct, sys, tempfile, unittest
+import json, os, struct, subprocess, sys, tempfile, unittest
 import numpy as np
 from scipy.stats import nct, t
 
@@ -86,6 +86,84 @@ def fake_native(config):
 
 
 class Stamina003Tests(unittest.TestCase):
+    @unittest.skipUnless(os.name=='nt','Windows CommandLineToArgvW and actual Popen audit shape')
+    def test_real_windows_popen_audit_none_and_quoted_commandline(self):
+        command=[runner.base_python(),'-c','pass','path with spaces','embedded"quote','tail\\','two spaces \\"q"']
+        script="""
+import json,subprocess,sys
+from research.stamina003 import parse_popen_event
+events=[]
+def audit(name,args):
+    if name=='subprocess.Popen':
+        path,argv=parse_popen_event(args)
+        events.append(dict(executable_was_none=args[0] is None,argv_was_string=isinstance(args[1],str),path=str(path),argv=argv))
+sys.addaudithook(audit)
+subprocess.run(json.loads(sys.argv[1]),check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+print(json.dumps(events))
+"""
+        result=subprocess.run([sys.executable,'-c',script,json.dumps(command)],cwd=ROOT,capture_output=True,text=True,check=True)
+        events=json.loads(result.stdout);self.assertEqual(len(events),1)
+        self.assertTrue(events[0]['executable_was_none']);self.assertTrue(events[0]['argv_was_string'])
+        self.assertEqual(events[0]['argv'],command);self.assertEqual(Path(events[0]['path']).resolve(),Path(command[0]).resolve())
+        with tempfile.TemporaryDirectory(prefix='mech audit ') as temp:
+            host=Path(temp)/'own synthetic host.exe';dll=Path(temp)/'own image with spaces.dll';ledger=Path(temp)/'starts.jsonl'
+            hook=HostLaunchAudit('prepare',host,ledger,lambda:None,dll)
+            hook('subprocess.Popen',(None,subprocess.list2cmdline([str(host),'--check-image',str(dll)]),None,{}))
+            self.assertEqual(hook.require_complete(),{'loader':1})
+            for bad in ([str(host),'--check-image',str(dll),'--extra'],[str(host),'--check-image',str(dll)+'-wrong']):
+                with self.assertRaises(ValueError):hook('subprocess.Popen',(None,subprocess.list2cmdline(bad),None,{}))
+
+    def test_capability_preflight_is_real_once_and_strict_before_matches(self):
+        from types import ModuleType
+        value=dict(protocol=2,max_jobs=1000000,execution_context_reset=True,per_match_resource_release=True)
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);write(root/'fm27_native/adapter_version.json',dict(version='own-test',reference_dll_sha256='own-dll',
+                native_worker_protocol=2,execution_context_reset=True,session_scope='remaining_batch_lane',max_worker_jobs=1000000))
+            lab=SimpleNamespace(root=root,identity=dict(adapter_host_sha256='own-host',build='own-test',engine_sha256='own-dll'))
+            module=ModuleType('desktop_warm_batch');calls=[]
+            class FakeRunner:
+                _capabilities_cache={}
+                def __init__(self,*args,**kwargs):
+                    calls.append((args,kwargs));self._capabilities_cache['own-host']=deepcopy(value)
+                    self.host_sha256='own-host';self.capabilities=self._capabilities_cache['own-host'];self.counted_sessions=True
+            module.DesktopWarmRunner=FakeRunner
+            with patch.dict(sys.modules,{'desktop_warm_batch':module}),patch.object(runner,'LOCAL',root):
+                expected=runner.preflight_capabilities(lab,'technical')
+                self.assertEqual(calls[0][1],dict(workers=4,retries=0,timeout=90))
+                for _ in range(4):runner.require_cached_capabilities(lab,expected)
+                self.assertEqual(len(calls),1)
+                self.assertTrue(read(root/'technical.capabilities-check.json')['checked_before_first_match'])
+                with self.assertRaises(ValueError):runner.preflight_capabilities(lab,'technical')
+                self.assertEqual(len(calls),1)
+                FakeRunner._capabilities_cache['own-host']={}
+                with self.assertRaises(ValueError):runner.require_cached_capabilities(lab,expected)
+                with self.assertRaises(ValueError):runner.preflight_capabilities(lab,'prepare')
+                def fallback(self,*args,**kwargs):
+                    self._capabilities_cache['own-host']={};self.host_sha256='own-host'
+                    self.capabilities={};self.counted_sessions=False
+                FakeRunner._capabilities_cache={}
+                with patch.object(FakeRunner,'__init__',fallback):
+                    with self.assertRaises(ValueError):runner.preflight_capabilities(lab,'main')
+                self.assertFalse((root/'main.capabilities-check.json').exists())
+        for bad in ({},None,dict(value,protocol=1),dict(value,protocol=2.),dict(value,max_jobs=True),
+                    dict(value,max_jobs=64),dict(value,execution_context_reset=False),dict(value,per_match_resource_release=1)):
+            with self.assertRaises(ValueError):runner.check_capability_values(bad)
+
+    def test_capability_gate_failure_precedes_every_match(self):
+        receipt=dict(config=dict(identity={}))
+        frozen=dict(oop_map=[],catalog_sha256='own-catalog',runtime_source_sha256={})
+        lab=SimpleNamespace(server=SimpleNamespace(OOP_MAP=[]),runtime=Path('own-runtime'),identity={},run=unittest.mock.Mock())
+        with patch.object(runner,'read',side_effect=[receipt,{},frozen]),patch.object(runner,'published_registration'),patch.object(runner,'verify_code'),patch.object(runner,'check_identity'),patch.object(runner,'digest',return_value='own-catalog'),patch.object(runner,'preflight_capabilities',side_effect=ValueError('Missing actual capabilities')),patch.object(runner,'technical_jobs') as jobs:
+            with self.assertRaises(ValueError):runner.execute(lab,'technical',None)
+            lab.run.assert_not_called();jobs.assert_not_called()
+
+    def test_negative_binary_requires_rejection_cause_and_exact_exit(self):
+        evidence=[dict(event='scenario_rejected')]
+        runner.audit_negative_binary(evidence,108)
+        for rows_,code in (([],108),(evidence,0),(evidence+evidence,108),
+                           (evidence+[dict(event='natural_match_finished')],108)):
+            with self.assertRaises(ValueError):runner.audit_negative_binary(rows_,code)
+
     def test_public_containment_requires_kernel_zero_and_capsule_exit(self):
         proofs={phase:dict(schema='fm27.contained-call.v1',cleanup_confirmed=True,capsule_exit_confirmed=True,
             kernel_active_processes=0,job_policy=dict(active_process_limit=3 if phase=='negative' else 10,
@@ -124,9 +202,10 @@ class Stamina003Tests(unittest.TestCase):
             hook=HostLaunchAudit('technical',host,ledger,lambda:calls.append(True))
             hook('subprocess.Popen',(str(host),[str(host),'--check-image','own-synthetic.dll'],None,{}))
             hook('subprocess.Popen',(str(host),[str(host),'--worker-capabilities'],None,{}))
-            for i in range(4):hook('subprocess.Popen',(str(host),[str(host),'--worker-manifest',str(i)],None,{}))
+            for i in range(4):hook('subprocess.Popen',(str(host),[str(host),'--worker-manifest',str(Path(temp)/f'{i}.manifest'),
+                '--output',str(Path(temp)/f'{i}.log'),'--tick-step','1','--cancel-event','Local\\FM27MatchCancel_123_'+'0'*32],None,{}))
             with hook.negative_capsule(runner.base_python()):
-                hook('subprocess.Popen',(runner.base_python(),[runner.base_python(),'-I','capsule.py'],None,{}))
+                hook('subprocess.Popen',(runner.base_python(),[runner.base_python(),'-I',str(ROOT/'research/native_process005.py'),'--capsule'],None,{}))
                 hook.negative_permission()
             self.assertEqual(hook.require_complete()['worker_start'],4)
             self.assertEqual(len(rows(ledger)),7);self.assertEqual(len(calls),7)

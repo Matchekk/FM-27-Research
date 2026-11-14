@@ -13,7 +13,7 @@ from research.core import config_hash, schedule
 from research.native import read, rows, require
 from research.stats import metrics
 from analyse_mech003 import analyse, validate_design
-from run_mech003 import source_hash
+from run_mech003 import source_hash,check_capability_values
 
 
 def same(actual, expected):
@@ -92,6 +92,10 @@ def verify(directory):
         calculated={kind:dict(Counter(r['status'] for r in account if r['kind']==kind)) for kind in ('technical','main')}
         require(calculated==summary['counts'],'Accounting summary differs')
         if summary['technical_gate_passed']:
+            capability=next(r for r in account if r['key']=='worker-capabilities-technical')
+            check_capability_values(capability['capabilities'])
+            require(capability['checked_before_first_match'] is True and capability['counted_sessions'] is True and
+                    capability['host_sha256']==c['identity']['adapter_host_sha256'],'Technical capability preflight absent')
             tech=rows(directory/'technical.jsonl');require(len(tech)==len({r['key'] for r in tech})==32,'Technical measurements incomplete')
             grouped={}
             for row in tech:
@@ -108,8 +112,15 @@ def verify(directory):
                 metrics(row);grouped.setdefault((j['scenario'],j['side'],j['arm']),[]).append(row)
             require(len(grouped)==16 and all(len(pair)==2 and all(pair[0][k]==pair[1][k] for k in
                     ('score','finish_tick','team_statistics','setup_sha256','seed')) for pair in grouped.values()),'A/A repeats differ')
-            require(read(directory/'negative-control.json')['status']=='expected_rejection','Negative rejection absent')
+            negative=read(directory/'negative-control.json')
+            require(negative['status']=='expected_rejection' and negative['returncode']==108 and
+                    negative['scenario_rejected'] is True and negative['natural_match_finished'] is False,
+                    'Negative rejection cause/exit absent')
         if summary['scientific_series_complete']:
+            capability=next(r for r in account if r['key']=='worker-capabilities-main')
+            check_capability_values(capability['capabilities'])
+            require(capability['checked_before_first_match'] is True and capability['counted_sessions'] is True and
+                    capability['host_sha256']==c['identity']['adapter_host_sha256'],'Main capability preflight absent')
             verify_complete_budget(read(directory/'budget.json'),list(technical)+['negative-binary'],list(expected))
             verify_containment(read(directory/'phase-containment.json'))
             launches=rows(directory/'host-starts.jsonl')

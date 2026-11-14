@@ -27,9 +27,14 @@ def probe_accounting(budget):
         path=LOCAL/(job['phase']+('.loader-check.json' if job['probe']=='loader' else '.capabilities-check.json'))
         started=LOCAL/(job['phase']+'.host-starts.jsonl')
         began=started.exists() and any(r['key']==job['key'] for r in rows(started))
-        status=read(path)['status'] if path.exists() else 'started_unresolved' if began else 'not_started'
-        result.append(dict(job,seed=None,status=status,reserved=job['key'] in budget['reserved'],
-                           native_log_present=began,receipt_sha256=digest(path) if path.exists() else None))
+        receipt=read(path) if path.exists() else None
+        if receipt:require(receipt['key']==job['key'] and receipt['phase']==job['phase'],'Native probe receipt identity differs')
+        status=receipt['status'] if receipt else 'started_unresolved' if began else 'not_started'
+        row=dict(job,seed=None,status=status,reserved=job['key'] in budget['reserved'],
+                 native_log_present=began,receipt_sha256=digest(path) if path.exists() else None)
+        if receipt and job['probe']=='capabilities':
+            row.update({k:receipt[k] for k in ('capabilities','counted_sessions','checked_before_first_match','host_sha256','adapter_version_sha256')})
+        result.append(row)
     return result
 
 

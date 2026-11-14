@@ -268,6 +268,50 @@ def check_prepare_publication():
     return gate
 
 
+def check_capability_values(value):
+    require(type(value) is dict and set(value)=={'protocol','max_jobs','execution_context_reset','per_match_resource_release'} and
+            type(value['protocol']) is int and value['protocol']==2 and
+            type(value['max_jobs']) is int and value['max_jobs']==1000000 and
+            value['execution_context_reset'] is True and value['per_match_resource_release'] is True,
+            'Original counted-worker capabilities missing, malformed or changed; no legacy fallback')
+
+
+def preflight_capabilities(lab,phase):
+    """One real capability CLI, before every scientific/technical match phase."""
+    require(phase in ('technical','main'),'No capabilities call permitted in preparation')
+    from desktop_warm_batch import DesktopWarmRunner
+    host=lab.identity['adapter_host_sha256']
+    require(host not in DesktopWarmRunner._capabilities_cache,'Unexpected preexisting capability cache; real probe required')
+    version_path=lab.root/'fm27_native/adapter_version.json';version=read(version_path)
+    require(version['version']==lab.identity['build'] and version['reference_dll_sha256']==lab.identity['engine_sha256'] and
+            type(version['native_worker_protocol']) is int and version['native_worker_protocol']==2 and
+            version['execution_context_reset'] is True and version['session_scope']=='remaining_batch_lane' and
+            type(version['max_worker_jobs']) is int and version['max_worker_jobs']==1000000,
+            'Original counted-worker version declaration changed')
+    probe=DesktopWarmRunner(lab.root,workers=4,retries=0,timeout=90)
+    value=DesktopWarmRunner._capabilities_cache.get(host)
+    check_capability_values(value)
+    require(probe.host_sha256==host and probe.capabilities==value and probe.counted_sessions is True,
+            'Actual capability probe did not enable the validated counted-worker protocol')
+    write(LOCAL/(phase+'.capabilities-check.json'),dict(key=f'worker-capabilities-{phase}',status='ok',
+          phase=phase,capabilities=value,counted_sessions=True,adapter_version_sha256=digest(version_path),
+          host_sha256=host,checked_before_first_match=True))
+    return value.copy()
+
+
+def require_cached_capabilities(lab,expected):
+    from desktop_warm_batch import DesktopWarmRunner
+    current=DesktopWarmRunner._capabilities_cache.get(lab.identity['adapter_host_sha256'])
+    check_capability_values(current)
+    require(current==expected,'Capability cache changed before a match block')
+
+
+def audit_negative_binary(evidence,code):
+    require(type(code) is int and code==108 and not any(r.get('event')=='natural_match_finished' for r in evidence),
+            'Negative input did not reject correctly')
+    event(evidence,'scenario_rejected')
+
+
 def execute(lab,kind,launch_audit):
     receipt=read(LOCAL/'receipt.json');published_registration(receipt['config'],SPEC);verify_code(receipt['config'])
     check_identity(receipt['config']['identity'],lab.identity,read(ROOT/'data/valid-002/validation-summary.json'))
@@ -278,11 +322,13 @@ def execute(lab,kind,launch_audit):
     if kind=='main':
         require(read(LOCAL/'technical-summary.json')['passed'],'Private technical gate absent')
         check_technical_publication()
+    capabilities=preflight_capabilities(lab,kind)
     jobs=ordered_main(receipt) if kind=='main' else technical_jobs();configs=read(LOCAL/'configs.json')
     for job in jobs:
         name=f"{job['scenario']}-{job['side']}-{job['arm']}"
         job.update(config=configs[name],binary=LOCAL/'inputs'/(name+'.bin'))
     for offset in range(0,len(jobs),32):
+        require_cached_capabilities(lab,capabilities)
         require(sum(p.stat().st_size for p in LOCAL.rglob('*') if p.is_file())<2*1024**3,'Private artifact cap')
         require(shutil.disk_usage(LOCAL).free>20*1024**3,'Disk reserve exhausted')
         lab.run(jobs[offset:offset+32],LOCAL/kind/f'part-{offset//32:03d}',workers=4,
@@ -318,11 +364,14 @@ def execute(lab,kind,launch_audit):
                     on_start=launch_audit.negative_permission)
         except Exception as error:
             write(LOCAL/'negative-attempt.json',dict(status='failed',error_type=type(error).__name__));raise
-        accepted=any(r.get('event')=='natural_match_finished' for r in rows(log)) if log.exists() else False
-        negative=dict(status='expected_rejection' if code==108 and log.exists() and not accepted else 'failed',
-                      returncode=code,elapsed_seconds=elapsed,natural_match_finished=accepted,raw_log_sha256=digest(log) if log.exists() else None)
+        evidence=rows(log) if log.exists() else []
+        accepted=any(r.get('event')=='natural_match_finished' for r in evidence)
+        rejected=sum(r.get('event')=='scenario_rejected' for r in evidence)==1
+        negative=dict(status='expected_rejection' if code==108 and log.exists() and not accepted and rejected else 'failed',
+                      returncode=code,elapsed_seconds=elapsed,natural_match_finished=accepted,scenario_rejected=rejected,
+                      raw_log_sha256=digest(log) if log.exists() else None)
         write(LOCAL/'negative-attempt.json',negative)
-        require(negative['status']=='expected_rejection','Negative input did not reject correctly')
+        audit_negative_binary(evidence,code)
         write(LOCAL/'technical-summary.json',dict(passed=True,matches=32,readback_cells=16,repeats=repeats,
               native_identity=lab.identity,matrix_sha256=config_hash(matrix()),raw_dose_comparisons=dose,
               negative=negative,observer_used=False,mechanism_decomposition_identified=False,fm_ui_scale_calibrated=False))
@@ -402,19 +451,13 @@ def main():
                 'Contained study admission missing')
         assert_windows_job()
         audit=HostLaunchAudit(args.phase,args.runtime/'engine/fm27_native/FM27Simulator.exe',LOCAL/(args.phase+'.host-starts.jsonl'),
-                              lambda:assert_master(args.phase,keys))
+                              lambda:assert_master(args.phase,keys),args.game/'fm_Data/Plugins/x86_64/game_plugin.dll')
         sys.addaudithook(audit)  # Before NativeLab -> server import -> real loader host.
         lab=NativeLab(args.runtime,args.game,LOCAL)
         write(LOCAL/(args.phase+'.loader-check.json'),dict(key=f'loader-check-image-{args.phase}',status='ok',
               phase=args.phase,identity=lab.identity,diagnostics=lab.server.ENGINE_COMPATIBILITY['diagnostics']))
         prepare(lab) if args.phase=='prepare' else execute(lab,args.phase,audit)
         inventory=audit.require_complete()
-        if args.phase!='prepare':
-            from desktop_warm_batch import DesktopWarmRunner
-            capabilities=DesktopWarmRunner._capabilities_cache.get(lab.identity['adapter_host_sha256'])
-            require(isinstance(capabilities,dict) and capabilities,'Native capability receipt missing')
-            write(LOCAL/(args.phase+'.capabilities-check.json'),dict(key=f'worker-capabilities-{args.phase}',status='ok',
-                  phase=args.phase,capabilities=capabilities))
         write(LOCAL/(args.phase+'.host-inventory.json'),dict(passed=True,phase=args.phase,counts=inventory))
         return
     if args.phase=='main':

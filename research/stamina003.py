@@ -5,6 +5,7 @@ from datetime import datetime,timezone
 import json
 import os
 from pathlib import Path
+import re
 import struct
 from threading import Lock
 
@@ -36,6 +37,28 @@ def probe_jobs():
         for p in ('technical','main')]
 
 
+def parse_popen_event(args):
+    """CPython Windows emits executable=None and one quoted commandline string."""
+    executable,argv,_,_=args
+    if isinstance(argv,str):
+        require(os.name=='nt' and argv and '\0' not in argv,'Invalid Windows Popen commandline')
+        import ctypes
+        from ctypes import wintypes
+        shell=ctypes.WinDLL('shell32',use_last_error=True);kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+        shell.CommandLineToArgvW.argtypes=[wintypes.LPCWSTR,ctypes.POINTER(ctypes.c_int)]
+        shell.CommandLineToArgvW.restype=ctypes.POINTER(wintypes.LPWSTR)
+        kernel.LocalFree.argtypes=[ctypes.c_void_p];kernel.LocalFree.restype=ctypes.c_void_p
+        count=ctypes.c_int();pointer=shell.CommandLineToArgvW(argv,ctypes.byref(count))
+        if not pointer:raise ctypes.WinError(ctypes.get_last_error())
+        try:values=[pointer[i] for i in range(count.value)]
+        finally:kernel.LocalFree(ctypes.cast(pointer,ctypes.c_void_p))
+    else:
+        require(type(argv) in (list,tuple),'Unknown Popen argument representation')
+        values=list(argv)
+    require(values and all(type(v) is str and '\0' not in v for v in values),'Invalid Popen argument vector')
+    return Path(os.fsdecode(executable) if executable is not None else values[0]),values
+
+
 class HostLaunchAudit:
     """Opt-in audit hook installed in the contained study child before server import.
 
@@ -43,9 +66,10 @@ class HostLaunchAudit:
     process starts are deliberately separate dimensions. Unknown launches fail
     before Popen; a launch exception remains a started attempt, never a zero.
     """
-    def __init__(self,phase,host,ledger,admission):
+    def __init__(self,phase,host,ledger,admission,engine_dll=None):
         require(phase in ('prepare','technical','main'),'Unknown host-audit phase')
         self.phase,self.host,self.ledger,self.admission=phase,Path(host).resolve(),Path(ledger),admission
+        self.engine_dll=Path(engine_dll).resolve() if engine_dll is not None else None
         self.counts={};self.lock=Lock();self.control_python=None
 
     @contextmanager
@@ -57,23 +81,31 @@ class HostLaunchAudit:
 
     def __call__(self,event,args):
         if event!='subprocess.Popen':return
-        executable,argv,_,_=args
-        path=Path(executable)
+        path,argv=parse_popen_event(args)
         if path.name.lower() in ('git','git.exe','gh','gh.exe'):return
         if path.resolve()!=self.host:
             require(self.control_python is not None and path.resolve()==self.control_python,
                     'Unexpected executable in contained study')
+            require(len(argv)==4 and argv[1]=='-I' and
+                    Path(argv[2]).resolve()==Path(__file__).with_name('native_process005.py').resolve() and
+                    argv[3]=='--capsule','Unknown containment launcher grammar')
             with self.lock:
                 require(self.counts.get('negative_capsule',0)==0,'Repeated negative capsule launcher')
                 self.counts['negative_capsule']=1
             return
-        require(type(argv) in (list,tuple) and argv,'Unknown native command')
-        if '--check-image' in argv:kind='loader';key=f'loader-check-image-{self.phase}';limit=1
-        elif '--worker-capabilities' in argv:
+        require(Path(argv[0]).resolve()==self.host,'Native executable/argv0 mismatch')
+        if len(argv)==3 and argv[1]=='--check-image':
+            require(self.engine_dll is None or Path(argv[2]).resolve()==self.engine_dll,'Loader DLL path differs')
+            kind='loader';key=f'loader-check-image-{self.phase}';limit=1
+        elif argv[1:]==['--worker-capabilities']:
             require(self.phase!='prepare','Capabilities in prepare forbidden')
             kind='capabilities';key=f'worker-capabilities-{self.phase}';limit=1
-        elif '--worker-manifest' in argv:
+        elif len(argv)==9 and argv[1]=='--worker-manifest' and argv[3]=='--output' and argv[5:8]==['--tick-step','1','--cancel-event']:
             require(self.phase!='prepare','Warmworker in prepare forbidden')
+            require(Path(argv[2]).resolve().is_relative_to(self.ledger.parent.resolve()) and
+                    Path(argv[4]).resolve().is_relative_to(self.ledger.parent.resolve()) and
+                    re.fullmatch(r'Local\\FM27MatchCancel_[0-9]+_[0-9a-f]{32}',argv[8]),
+                    'Warmworker paths or cancellation identity differ')
             kind='worker_start';key=None;limit=4 if self.phase=='technical' else 64
         else:raise ValueError('Unregistered native command; negative uses contained_call separately')
         with self.lock:
