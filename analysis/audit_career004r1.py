@@ -225,6 +225,7 @@ def export_status(profile,central):
 
 def run(profile,central,release_path):
     require((ROOT/'.git').is_dir(),'Real-save passes only from central checkout after publication')
+    require(Path(central).resolve()==ROOT.resolve(),'Real-save passes require the exact central checkout')
     c=read(PUBLIC/f'{profile}-contract.json');verify_frozen(c,central)
     release=verify_release(c,release_path)
     now=datetime.now(timezone.utc);deadline=datetime.fromisoformat(c['budget']['program_deadline_utc'])

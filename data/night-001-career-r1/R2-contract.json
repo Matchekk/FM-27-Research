@@ -46,7 +46,7 @@
   "document_sha256": "c9568b66bd7aa31dd35217e6ce15b9fcdb64aacd46950da59924feb5aeaf829f",
   "code_sha256": {
     "research/career_reader004r1.py": "a45decb6c656a78732c56aa0e8fd438da4ce89e70a3a55334a094f6950bf6a4b",
-    "analysis/audit_career004r1.py": "751d164c643fe362e5eb85e49c53039ae8cce377bb4487c3c7957002d480bde0",
+    "analysis/audit_career004r1.py": "a1811647ee21a1031999f00e826bfb9f3c05a9dd02ed2e4bb72ca57ae692edab",
     "research/career_readonly004.py": "bb67779acf25c16d50ce316837eb12d54657baa882789a3c8a1f9da4c75a82ee",
     "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e"
   },

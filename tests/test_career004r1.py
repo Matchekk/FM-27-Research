@@ -76,6 +76,14 @@ class ReaderProfileTests(unittest.TestCase):
             runner.write(release,dict(passed=True,profile='R1',published_commit='short',ci_run=1))
             with self.assertRaises(ValueError):runner.verify_release({'profile':'R1'},release)
 
+    def test_other_central_root_rejected_before_release_or_snapshot_access(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);(root/'.git').mkdir()
+            with patch.object(runner,'ROOT',root),patch.object(runner,'verify_frozen') as frozen, \
+                 patch.object(runner,'digest') as hashed,patch.object(runner.subprocess,'Popen') as process:
+                with self.assertRaises(ValueError):runner.run('R1',root/'elsewhere',root/'unused.json')
+                frozen.assert_not_called();hashed.assert_not_called();process.assert_not_called()
+
     def test_crossreader_missing_is_not_agreement_or_independent_replicate(self):
         def report(profile):return dict(snapshot_sha256=EXPECTED_SNAPSHOT,snapshot_stable=True,profile=profile,
             probes=[dict(probe=p,status='not_started') for p in PROBES])

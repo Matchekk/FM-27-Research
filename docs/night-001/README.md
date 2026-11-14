@@ -18,3 +18,26 @@ Testdatei existiert;die aktive ungespeicherte Karriere ist damit nicht verifizie
 Spieldateien und private Identitäten werden nicht veröffentlicht.
 
 Getrennte Spezialberichte und reale Messergebnisse folgen erst nach Prüfung.
+
+## Geprüfter Zwischenstand 19:21CET
+
+Die [Quellenrecherche](EVIDENCE.md) trennt öffentliche Empfehlungen von
+reproduzierbaren Experimenten. Die aktuellen FM-Arena-Einträge ersetzen weder
+eine native Eingabeprüfung noch unabhängige Replikate unseres Versuchs.
+[Karriere-R0](CAREER.md) scheiterte an der exakten Buildzulassung. Für zwei neue
+isolierte Readerpfade liegen [Verträge](CAREER-R1.md) und ein
+[unabhängiger Quellenreview](CAREER-R1-REVIEW.md) vor. Noch kein R1/R2-Lesepass.
+Der zusätzliche zentrale Pfadschutz ist implementiert, die Sourceverträge wurden
+danach ohne Savezugriff neu erzeugt. Veröffentlichung und exakte erfolgreiche CI
+sind vor jedem der zwei getrennten Lesepässe weiterhin zwingend.
+
+200 Repositorytests, fünf historische Analysetests und beide Archivprüfungen
+bestanden:340 NIGHT-Basisdateien sowie272 Round3-Basisdateien unverändert.
+Eine neue Accessibility-Abfrage konnte nur das FM-Fenster als Pane lesen;
+Karriere, Spieltag und Bildinhalt bleiben unverifiziert. Keine UI-Eingaben.
+
+Observer- und Staminaausführung bleiben wegen noch zu prüfender
+Prozessbaumbegrenzung gesperrt. Der unabhängige Review entdeckte außerdem
+zusätzliche Loader-/Capabilitiesaufrufe der Warmruntime; diese müssen vor einer
+Staminafreigabe ausdrücklich in den Zählern stehen. Weiterhin null neue native
+NIGHT-Starts und keine reservierten neuen Simulationsseeds.
