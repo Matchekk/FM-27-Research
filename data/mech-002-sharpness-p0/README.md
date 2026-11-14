@@ -11,6 +11,19 @@ sind zentral reserviert;2528 frühere/reservierte Werte ausgeschlossen.
 Keine Engine wurde dabei gestartet; das eigene3600s-Fenster ist noch ungeöffnet.
 Konkreter Inputreview, Registrierung und eigene Technikfreigabe stehen noch aus.
 
+## Registrierung vor dem ersten neuen Engineaufruf
+
+Der [konkrete Inputreview](../../docs/night-001/SHARPNESS-REVIEW.md) ist bestanden.
+Veröffentlichung `e1de6d0a666987a72dcdd2113eedb5f45fb51e77` samt
+[CI43640761105](https://github.com/Matchekk/FM-27-Research/actions/runs/43640761105)
+ging der Registrierung voraus. Das [Manifest](manifest.json) friert den
+registrierten Vertrag, Analyse, Inputs, Code und Seeds ein;
+[33 Technikplätze](technical-job-plan.json) und
+[512 Hauptplätze](main-job-plan.json) sind vollständig vorab festgelegt.
+Diese Registrierung startet keine Simulation. Vor TECH ist noch die erfolgreiche
+CI genau dieser Manifestveröffentlichung erforderlich; vor Main zusätzlich
+die eigene tatsächliche Technikabnahme und deren Veröffentlichungs-CI.
+
 ## Erhaltener ursprünglicher Entwurfsstatus
 
 `contract-draft.json` beschreibt den separaten Raw-Startpaket×Pressing-Pilot:
