@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "experiment_id": "MECH-002-SHARPNESS-P0",
+  "module": "MECH",
+  "kind": "native",
+  "stage": "discovery",
+  "status": "draft",
+  "hypothesis": "The verified raw10000 versus raw7000 original twenty-record start package changes mean xGD over two pressing levels.",
+  "control": "S70-P0: tested starting ten outfield actors raw7000 in both original sharpness profile fields16/17; Standard pressing.",
+  "intervention": "Full2x2 raw7000/10000 start package and Standard/MoreOften pressing; original stamina60 everywhere.",
+  "conditions": "Frozen D00 IP4231/OOP4411, phases/roles/PI/profiles/positions/GK/bench/opponent/management unchanged except twenty sharpness values and one pressing value. Bundled fixture; no warmworker, Kind61, new setter or clamp.",
+  "seed_namespace": "MECH-002-SHARPNESS-P0/main-v1",
+  "identity": null,
+  "metrics": {
+    "primary": "xgd",
+    "secondary": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "plausibility": [
+      "prepared_condition_cache89_mean",
+      "prepared_sharpness_cache8a_mean",
+      "first_condition_cache89_mean",
+      "first_sharpness_cache8a_mean",
+      "finished_condition_cache89_mean",
+      "finished_sharpness_cache8a_mean",
+      "prepared_tf33_matches_frozen_d00",
+      "first_tf33_matches_frozen_d00",
+      "finished_tf33_distinct_hashes",
+      "finished_condition_raw_mean",
+      "finished_sharpness_raw_mean",
+      "finished_sharpness_secondary_raw_mean",
+      "finished_fatigue_raw_mean",
+      "finished_condition_accumulator_raw_mean",
+      "finished_sharpness_penalty_raw_mean"
+    ]
+  },
+  "design": {
+    "unit": "seed_block",
+    "n_blocks": 32,
+    "sides": [
+      0,
+      1
+    ],
+    "control_arm": "S70-P0",
+    "matrix": [
+      {
+        "id": "S70-P0",
+        "levels": {
+          "SHARPNESS": -1,
+          "PRESS": -1
+        },
+        "sharpness_raw": 7000,
+        "pressing_id": 1313689463,
+        "pressing_bit": 0
+      },
+      {
+        "id": "S100-P0",
+        "levels": {
+          "SHARPNESS": 1,
+          "PRESS": -1
+        },
+        "sharpness_raw": 10000,
+        "pressing_id": 1313689463,
+        "pressing_bit": 0
+      },
+      {
+        "id": "S70-P1",
+        "levels": {
+          "SHARPNESS": -1,
+          "PRESS": 1
+        },
+        "sharpness_raw": 7000,
+        "pressing_id": 2000905329,
+        "pressing_bit": 66
+      },
+      {
+        "id": "S100-P1",
+        "levels": {
+          "SHARPNESS": 1,
+          "PRESS": 1
+        },
+        "sharpness_raw": 10000,
+        "pressing_id": 2000905329,
+        "pressing_bit": 66
+      }
+    ],
+    "matrix_sha256": "9f593bae8421b42a65f9efd6cbd78e9bd09f84aa34f34fa2e93ce9deea2068b2",
+    "arms": [
+      {
+        "id": "S70-P0",
+        "setup_sha256": null
+      },
+      {
+        "id": "S100-P0",
+        "setup_sha256": null
+      },
+      {
+        "id": "S70-P1",
+        "setup_sha256": null
+      },
+      {
+        "id": "S100-P1",
+        "setup_sha256": null
+      }
+    ],
+    "setups": null,
+    "scenarios": [
+      {
+        "id": "high_press",
+        "opponent": "high_press",
+        "strength": "Frozen identical synthetic D00 roster strength",
+        "split": "discovery"
+      },
+      {
+        "id": "deep_block",
+        "opponent": "deep_block",
+        "strength": "Frozen identical synthetic D00 roster strength",
+        "split": "discovery"
+      }
+    ]
+  },
+  "science": {
+    "alpha": 0.05,
+    "power": 0.9,
+    "min_effect": 0.3,
+    "desired_full_ci_width": 0.5,
+    "multiple_testing": "holm",
+    "family_size": 7,
+    "primary_contrast": "SHARPNESS",
+    "contrast_coefficients": {
+      "SHARPNESS": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5
+      ],
+      "PRESS": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "SHARPNESSxPRESS": [
+        1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ]
+    },
+    "secondary_contrasts": [
+      [
+        "SHARPNESS",
+        "points"
+      ],
+      [
+        "SHARPNESS",
+        "gf"
+      ],
+      [
+        "SHARPNESS",
+        "ga"
+      ],
+      [
+        "SHARPNESS",
+        "xgf"
+      ],
+      [
+        "SHARPNESS",
+        "xga"
+      ],
+      [
+        "PRESS",
+        "xgd"
+      ],
+      [
+        "SHARPNESSxPRESS",
+        "xgd"
+      ]
+    ],
+    "context_weights": [
+      0.5,
+      0.5
+    ],
+    "side_weights": [
+      0.5,
+      0.5
+    ],
+    "bootstrap_resamples": 20000,
+    "analysis": "Marginal high-minus-low xGD; paired complete seed blocks, equal contexts, Welch95 and stratified full-block bootstrap20000. Exactly Holm7 secondary. Context/side/leave-one-out/descriptive only exploratory.",
+    "exclusions": "None. Any input/identity/seed/native error stops; no replacement, retry or silent zero. Only complete512 main observations allow effect estimates.",
+    "negative_controls": [
+      "Four fresh technical seeds,32 full matches/16 exact A/A pairs",
+      "One malformed binary: exit108 plus unique scenario_rejected, no natural finish"
+    ],
+    "readback_fields": [
+      "All3174attributes/1058profile fields/44phase cells/748PIgroups",
+      "Original raw C90/C7A plus actual starter cache89/8A prepared and first advance",
+      "Stamina60, press0/66, seed/setup/actor identity, frozen nonsharpness controls and rawTF33",
+      "Natural finished score/xG/statistics"
+    ],
+    "stopping_rule": "512main plus32technical and1negative; one cold supervisor,max4workers90s;900childsec/3600UTCfrom first native technical;main admission>=600sec remaining own/global child/UTC allowance;NIGHT1800sec+23UTC;stop first failed gate.",
+    "selection_rule": "No candidate/winner/holdout/career/UI/consumer/fatigue-mediation claim; total effect of the verified original start package only.",
+    "power_basis": "Unknown contrast variance; practical reference .30xGD and desired full95width .50, no90%power guarantee. Future new-seed planning for .20/.30 using observed SD and simultaneous normal-model95upper SD bounds."
+  },
+  "budget": {
+    "max_matches": 512,
+    "max_workers": 4,
+    "timeout_seconds": 90,
+    "max_technical_attempts": 33,
+    "total_native_wall_seconds": 900,
+    "absolute_study_wall_seconds": 3600,
+    "wall_start_policy": "first_native_technical",
+    "minimum_main_admission_seconds": 600,
+    "raw_artifact_limit_bytes": 2147483648,
+    "disk_reserve_bytes": 21474836480,
+    "worker_mode": "cold",
+    "global_child_seconds": 1800,
+    "global_deadline_utc": "2026-11-14T23:00:00+00:00"
+  },
+  "native_spec": {
+    "observer_host_sha256": "58e05a46ca65014a227ed1bd61da090d326848d20f39744b59e175c8b7c13d32",
+    "record_count": 5557,
+    "profile_fields": [
+      16,
+      17
+    ],
+    "raw_levels": [
+      7000,
+      10000
+    ],
+    "stamina_index": 52,
+    "stamina_raw": 60,
+    "kind61_allowed": false,
+    "new_setter_allowed": false,
+    "ongoing_clamp_allowed": false,
+    "ui_scale_calibrated": false,
+    "consumer_semantics_validated": false
+  },
+  "seed_plan": {
+    "main_blocks": 64,
+    "technical_seeds": 4,
+    "total_new_seeds": 68,
+    "technical_namespace": "MECH-002-SHARPNESS-P0/technical-v1",
+    "technical_seeds_reserved": null,
+    "main_seeds_reserved": null,
+    "excluded_sources": [
+      "All historical/technical/failed/previously reserved namespaces and pending global registry entries",
+      "All four MECH-002-STARTPOLICY-TECH-V1 seeds",
+      "All64 unused terminal MECH-003-STAMINA-R0 main seeds",
+      "All holdout seed metadata; do not open or simulate holdout opponents"
+    ]
+  },
+  "gates": {
+    "tech17": {
+      "experiment_id": "MECH-002-STARTPOLICY-TECH-V1",
+      "passed": false,
+      "independently_released": false,
+      "release_commit": null,
+      "ci_run": null,
+      "summary_sha256": null,
+      "review_sha256": null
+    }
+  },
+  "preregistration": {
+    "commit": null,
+    "document": "experiments/MECH-002-sharpness-pilot.md",
+    "document_sha256": null,
+    "analysis": "analysis/analyse_sharpness002.py",
+    "analysis_sha256": null
+  },
+  "execution": null
+}
