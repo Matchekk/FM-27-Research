@@ -6,6 +6,8 @@
 > Freigabe für das gebündelte kontrollierte Fixture; Karriere-PKM-Transfer noch
 > gesperrt. Keine neue wissenschaftliche Leistungsserie. [Neue Architektur](docs/PLATFORM.md),
 > [Roadmap aller Module](docs/ROADMAP.md), [TACT-001-Entwurf](experiments/TACT-001-discovery.md).
+> Der anschließende [Plattform-Smoke](data/platform-smoke/report.md) bestand mit
+> vier weiteren A/A-Matches; insgesamt 46 akzeptierte technische Matches.
 > Die nachstehenden ATTR-Befunde bleiben unverändert dem alten Build zugeordnet.
 
 Offenes, reproduzierbares Forschungsprojekt zur **Football Manager 2027**-Meta: Spielerattribute, Positionen, Taktiken und Training.

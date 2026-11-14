@@ -150,3 +150,22 @@ voraus; der alte Host allein reicht nicht. Die Spielinstallation wurde nicht ge�
 
 Der abschließende Plattform-Smoke-Test wird separat berichtet und bleibt innerhalb
 des Gesamtlimits von 48 vollständigen technischen Matches dieses Auftrags.
+
+## Abschließender Plattform-Smoke (MECH-000)
+
+Nach Veröffentlichung der vollständigen Grundlage und SVG-Korrektur wurde der
+native Vier-Match-Smoke auf Codecommit `73e5e83a2c5937b24bf41552f3be86811faded33`
+ausgeführt. Zwei frische Seeds, bytegleiche A/A-Eingaben, zwei Worker;
+**4/4 akzeptiert**, beide Seedpaare exakt in Endstand, Endtick und Teamstatistik.
+Laufzeit einschließlich Sessions und Audit **4,659 Sekunden**. Registrierung,
+Scheduler, native Readbacks, vollständige Blöcke und automatischer Bericht wurden
+gemeinsam durchlaufen. Das deskriptive A/A-Delta beträgt null, ohne
+wissenschaftlichen Wirksamkeitsanspruch.
+
+Gesamtabrechnung: **48 geplante technische Matchjobs = 46 akzeptiert + ein
+zurückgewiesener Karriereversuch + ein nicht gestarteter Karrierejob**.
+Der anfängliche Speicherabbruch startete kein Match. Negative Eingabeprobes und
+FMF-Serialisierung/-Parsing sind keine vollständigen Matches.
+[Smoke-Receipt](../data/platform-smoke/manifest.json) ·
+[Smoke-Messungen](../data/platform-smoke/matches.jsonl) ·
+[Automatischer Bericht](../data/platform-smoke/report.md).

@@ -31,6 +31,19 @@
 - Vier-Match-A/A-Smoke ist vorab beschrieben; Ausführung erst nach Veröffentlichung
   der vollständigen Grundlage. [Exakter Folgeauftrag](docs/NEXT_CODEX_TASK.md).
 
+## 2026-11-14 – End-to-End-Abnahme
+
+- Grundlage in `6b3e74e` veröffentlicht; generierte SVG-Leerzeichen anschließend
+  in `73e5e83` normalisiert. Vollständiger Diff-Check gegenüber Ausgangsstand besteht.
+- Vier-Match-A/A-Smoke auf dem veröffentlichten Code `73e5e83` ausgeführt:
+  4/4 akzeptiert, zwei neue Seedblöcke, alle A/A-Resultate exakt gleich,
+  4,659 Sekunden mit zwei Workern. [Automatischer Bericht](data/platform-smoke/report.md).
+- Gesamtbudget: 48 geplante Jobs, 46 akzeptierte technische Matches, ein
+  zurückgewiesener Karrierejob und ein unbegonnener Job. Keine große Suchserie.
+- 14 Plattformtests, fünf bestehende Tests und alle ATTR-004–007-Effektarchive
+  aus unveränderten Rohmessungen erfolgreich nachgerechnet. Ursprüngliche
+  Match-/Trainingsarchive ebenfalls reproduziert. [Abnahmebericht](docs/UPGRADE_REPORT.md).
+
 ## 2026-11-07 – ATTR-007 abgeschlossen
 
 - Alle 1.600 Hauptmatches wurden auf Build `27.0.0+2493426` im ersten Versuch akzeptiert. Die 200 neuen Seed-Blöcke enthalten alle acht Arme. [Manifest](data/attr-007/manifest.json)

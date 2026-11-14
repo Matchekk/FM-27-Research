@@ -25,6 +25,8 @@ data/raw-local/
 *.exe
 *.fm
 *.fmf
+*.pkm
+*.tac
 *.pck
 *.zip
 *.7z
