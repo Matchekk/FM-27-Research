@@ -1,0 +1,35 @@
+{
+  "experiment_id": "MECH-002-SHARPNESS-P0",
+  "decision": "REPLICATION_WITH_TRANSFER",
+  "preflight_stage": "after_parallel_atlas_import_before_first_main_match",
+  "new_hypothesis": false,
+  "new_seed_reservation": false,
+  "overlapping_source_ids": [
+    "MAC-05",
+    "MAC-09",
+    "FM27-SI-ENGINE",
+    "FM26-ZIPPO-CONDITION"
+  ],
+  "main_matches_started": 0,
+  "primary_contrast_changed": false,
+  "secondary_family_changed": false,
+  "protocol_sha256": "9b0751337f5f6e4c17ddc4299ee001d86d1ffd61576cab8c2aadfa69703c11d8",
+  "manifest_sha256": "7b04fbb1505f3f864f0d527117c42f6be1c69be5db06d56e9f1e6a9780ddd264",
+  "atlas_commit": "4add0c0885a0692ff6c2d9894c3aea359f539edb",
+  "evidence_sha256": {
+    "docs/night-001/SHARPNESS-DUPLICATE-PREFLIGHT.md": "67104de25b299f6096a9a19c56ee52e677278bb0e4a8f785737e5670ff5c5c29",
+    "docs/FM27_EXTERNAL_STUDY_ATLAS_2026-11-14.md": "0ffe446087a3b8eb3aa24ca304a5486dd7dcae965a49af0c8f1975f83853830d",
+    "research/fm27-external-study-index-20261114.json": "4210e0402a1fb9ebd80e8a61668c2f69477a1555d58f59f5d3f98f87bb226e92",
+    "FINDINGS.md": "acd5cbec39bf72090f502070a4540aebdcd13b8d3330987f8522ae27846b4bc5",
+    "AGENTS.md": "2fdc9976bafb8c02126b374e1e322fe8766dfe5f6955a8ea9562dc718cc9e4f6"
+  },
+  "mac_head": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+  "native_start_authorized_by_this_file": false,
+  "live_check_utc": "2026-11-14T21:29:21.800410+00:00",
+  "actual_engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+  "frozen_source_files_verified": 27,
+  "unavailable_adjacent_source_ids": [
+    "FM26-ZIPPO-CONDITION"
+  ],
+  "unavailable_sources_used_to_authorize_main": false
+}
