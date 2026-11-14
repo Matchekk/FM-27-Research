@@ -4,6 +4,7 @@ Private optional checks read only source/build/ledger metadata. They never open
 or decode a .fm file, import a runtime server, reserve seeds or grant a release.
 """
 from argparse import ArgumentParser
+from collections import Counter
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -131,15 +132,86 @@ def audit_private(observer_directory, career_directory, upstream):
                 native_release_granted=False)
 
 
+def audit_career_runs(central, verify_private=False):
+    """Reconcile completed R1/R2 receipts only. Never touches a .fm file."""
+    central = Path(central)
+    public = central/'data/night-001-career-r1'
+    output = {}; bindings = []
+    for profile in ('R1','R2'):
+        report = read(public/profile/'coverage.json')
+        resources = report['resources']; memory = resources['hard_memory_job']
+        need(report['snapshot_stable'] is True and report['snapshot_sha256'] ==
+             '1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d',
+             'Unstable career snapshot receipt')
+        need(resources['reader_processes_started'] == 1 and resources['retries'] == 0 and
+             resources['within_wall_limit'] is True and 0 < resources['elapsed_seconds'] <= 180 and
+             memory['process_memory_limit'] == memory['job_memory_limit'] == 3*1024**3 and
+             memory['active_process_limit'] == 1 and memory['limit_flags'] & 0x2308 == 0x2308 and
+             0 < memory['peak_job_private_bytes'] <= 3*1024**3, 'Reader resource receipts differ')
+        need(len(report['probes']) == 12 and
+             all(report[k] is False for k in ('native_semantics_verified','ui_to_save_binding_verified',
+                 'career_rng_independence_verified','individual_participation_verified',
+                 'native_released','career_advance_released','replay_released')), 'Unsupported career release')
+        counts = dict(Counter(p['status'] for p in report['probes']))
+        gates = [g for p in report['probes'] for c in p.get('checks',[]) for g in c['gates']]
+        need(all(g['passed'] is True for g in gates), 'Unexpected failed observed reader gate')
+        result = dict(statuses=counts, elapsed_seconds=resources['elapsed_seconds'],
+                      peak_job_private_bytes=memory['peak_job_private_bytes'],
+                      gates=len(gates), advisory_gates=sum(g['advisory'] for g in gates),
+                      public_coverage_sha256=file_hash(public/profile/'coverage.json'))
+        if verify_private:
+            directory = central/f'local/night-001-career/readonly-{profile.lower()}'
+            events = [json.loads(s) for s in (directory/'events.jsonl').read_text(encoding='utf8').splitlines()]
+            last = {e['probe']:e for e in events}
+            for probe in report['probes']:
+                event = last.get(probe['probe'])
+                need(probe['status'] == (event['status'] if event else 'not_started'), 'Private/public probe status drift')
+                if event:
+                    for key in ('coverage','checks','borrowed_layout','warning_types','warning_count','error_type'):
+                        if key in probe:
+                            need(probe[key] == event[key], 'Private/public coverage drift')
+            attempt = read(directory/'attempt.json')
+            need(attempt['resources'] == {k:v for k,v in resources.items() if k!='invalid_event_lines_retained'} and
+                 attempt['snapshot_sha256_after'] == report['snapshot_sha256'], 'Private resource/snapshot receipt drift')
+            expected_error = ('nonempty training header entries are not supported by this layout' if profile=='R1'
+                              else "a block's set-piece marker is not where fmsave expects it")
+            failures = [e for e in events if e['status']=='failed']
+            need(len(failures)==1 and expected_error in failures[0]['private_error'], 'Failure classification drift')
+            bindings.append(read(directory/'private-bindings.json'))
+            result['private_sha256'] = {name:file_hash(directory/name) for name in
+                ('events.jsonl','attempt.json','private-bindings.json','trace.json','setup.json')}
+        output[profile] = result
+    if verify_private:
+        need(bindings[0] == bindings[1] and len(bindings[0]['team_ids']) == 4 and
+             len(bindings[0]['managed_players']) == 77, 'Private identity binding/count drift')
+    training = next(p for p in read(public/'R2/coverage.json')['probes'] if p['probe']=='training')['coverage']['teams']
+    for team in training:
+        need(team['days']==team['weeks']*7 and sum(team['raw_session_counts'].values())==team['days']*3,
+             'Stored training-code accounting differs')
+    output['stored_training'] = dict(records=len(training),weeks=sum(t['weeks'] for t in training),
+        days=sum(t['days'] for t in training),raw_codes=sum(sum(t['raw_session_counts'].values()) for t in training),
+        individual_participation_verified=False)
+    cross = read(public/'cross-reader.json')
+    output['cross_reader_statuses'] = dict(Counter(f['status'] for f in cross['fields']))
+    output['cross_reader_sha256'] = file_hash(public/'cross-reader.json')
+    output.update(save_opened_or_decoded=False,native_release_granted=False,career_advance_released=False)
+    return output
+
+
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
     parser.add_argument('--observer-directory', type=Path)
     parser.add_argument('--career-directory', type=Path)
     parser.add_argument('--upstream', type=Path)
+    parser.add_argument('--career-runs-root', type=Path)
+    parser.add_argument('--verify-private-career-runs', action='store_true')
     args = parser.parse_args()
     report = audit_public()
     supplied = [args.observer_directory,args.career_directory,args.upstream]
     need(not any(supplied) or all(supplied), 'All three explicit private directories required')
     if all(supplied):
         report['private'] = audit_private(*supplied)
+    need(not args.verify_private_career_runs or args.career_runs_root, 'Explicit career-run root required')
+    if args.career_runs_root:
+        report['career_runs'] = audit_career_runs(args.career_runs_root,args.verify_private_career_runs)
     print(json.dumps(report, indent=2))
