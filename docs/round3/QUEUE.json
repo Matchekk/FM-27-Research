@@ -6,11 +6,40 @@
   "max_native_supervisors": 1,
   "max_native_workers": 4,
   "agents": [
-    {"agent": "/root/round3_attr", "branch": "codex/round3-attr", "scope": "ATTR-009-Bridge", "status": "working", "native_execution": "director_only"},
-    {"agent": "/root/round3_mech", "branch": "codex/round3-mech", "scope": "MECH-002", "status": "working", "native_execution": "director_only"},
-    {"agent": "/root/round3_train", "branch": "codex/round3-train", "scope": "TRAIN-002", "status": "working", "native_execution": "none"}
+    {
+      "agent": "/root/round3_attr",
+      "branch": "codex/round3-attr",
+      "scope": "ATTR-009-Bridge",
+      "status": "specialist_work_complete",
+      "native_execution": "director_only",
+      "specialist_commit": "887306deaa07e8e98a53ffe1af94e5d6e1ee7c24",
+      "new_native_starts": 0,
+      "new_seed_reservations": 0
+    },
+    {
+      "agent": "/root/round3_mech",
+      "branch": "codex/round3-mech",
+      "scope": "MECH-002",
+      "status": "specialist_work_complete",
+      "native_execution": "director_only",
+      "specialist_commit": "c667ed0dc99f99af36276b46139414486b68940a",
+      "new_native_starts": 0,
+      "new_seed_reservations": 0
+    },
+    {
+      "agent": "/root/round3_train",
+      "branch": "codex/round3-train",
+      "scope": "TRAIN-002",
+      "status": "specialist_work_complete",
+      "native_execution": "none",
+      "specialist_commit": "126fc131aa87a733298546213b2a8f879686277e",
+      "new_native_starts": 0,
+      "new_seed_reservations": 0
+    }
   ],
-  "independent_reviewer": {"status": "queued_after_specialist_work"},
+  "independent_reviewer": {
+    "status": "queued_after_specialist_work"
+  },
   "holdouts_executed": 0,
   "career_advances": 0,
   "automatic_next_round": false

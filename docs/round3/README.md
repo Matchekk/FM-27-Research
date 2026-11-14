@@ -1,10 +1,12 @@
 # Forschungsrunde 3 – ATTR, MECH und TRAIN
 
 Arbeitsstand 14.11.2026, Europe/Berlin. Drei tatsächliche Codex-Fachagenten
-arbeiten parallel in getrennten Git-Worktrees und Branches. Der Director allein
+arbeiteten parallel in getrennten Git-Worktrees und Branches. Der Director allein
 integriert und publiziert; native Prozesse werden ausschließlich zentral und
 nacheinander unter NativeLease und persistentem Studienbudget ausgeführt.
-Ein separater unabhängiger Reviewer folgt nach der Facharbeit.
+Die drei Facharbeiten sind integriert; ein separater unabhängiger Reviewer folgt
+nach der Facharbeit. 118 integrierte Repositorytests bestehen. Noch kein neuer
+nativer Prozess und keine neue Seedreservierung in dieser Runde.
 
 ## Verantwortlichkeiten
 
@@ -34,8 +36,11 @@ Fixture und Katalog stimmen im direkten Dateihash mit VALID-002 überein:
 | Fixture | `39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6` |
 | Katalog | `c08a8aa77c371aaafb29956c6c794b1580f7751547720dc6da4b83b63b32480c` |
 
+Auch der erneut aus elf tatsächlichen Dateien berechnete Ressourcenfingerprint
+`6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883`
+stimmt überein. Upstreamquelle sauber auf v1114.6/91f2eba57fac0b7fbd3dff616056907e3ce461be.
 Dies ist ein statischer Identitätscheck, keine vorweggenommene Freigabe neuer
-Eingriffe. Ressourcen-/Laufzeitreceipts müssen vor einer nativen Serie folgen.
+Eingriffe. Native Loader-/Laufzeitreceipts müssen vor einer Serie folgen.
 Private Engine-/Spielmaterialien bleiben lokal.
 
 ## Vorläufige technische Abgrenzung
