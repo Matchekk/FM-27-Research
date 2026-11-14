@@ -1,5 +1,29 @@
 # Research Log
 
+## 2026-11-14 – TACT-001-P1B vollständig abgeschlossen
+
+- Nach gepushter Vorregistrierung `e0b63bd` und technischer Freigabe `9831b2a`
+  alle2.048 Hauptmatches akzeptiert, 64 vollständige unabhängige Seedblöcke.
+  Alle2.121 Versuchsplätze abgerechnet: 2.120 Vollmatches plus erwartete Exit108-
+  Abweisung. Keine Ausfälle, Ausschlüsse, Retries, Ersatzseeds oder Holdouts.
+- Hauptschätzungen A/B/C/D/E: +0,063/−0,007/+0,034/+0,018/+0,026 xGD.
+  Kein Haupttest nach Holm-5, keine Paarinteraktion nach Holm-10 und kein
+  Sekundärtest nach Holm-25 signifikant. B×C +0,177, Holm-p0,134 bleibt explorativ.
+  Alle fünf Hauptintervalle erfüllen die volle Zielbreite≤0,30.
+- Eingefrorene Auswahlregel ergibt D15 und D09 als explorative Vorschläge,
+  xGD-Abstände zu D00 +0,229/+0,180 im Kontextmittel. Keine unabhängige
+  Gewinnerbestätigung; konkrete Optionen und vier Setup-Hashes veröffentlicht.
+- Child-Wall-Time 1.119,500/2.400 s, gesamtes natives Studienzeitfenster
+  1.474,665/2.400 s innerhalb der unveränderten UTC-Deadline. Vier Worker,
+  alle128+8 Warmworkerprozesse erfolgreich und sauber beendet; fünf zusätzliche
+  native Vorbereitungs-/Capabilitiesprozesse innerhalb derselben Zeitreservation.
+- 42 Plattform-/Studientests und fünf historische Analysetests bestanden.
+  Unabhängiger Verifier reproduziert alle40 Effekt-/t-/Bootstrapintervalle,
+  fünf simultane Intervalle, Holm-Familien,960 Seedkontraste und Kandidatenregel.
+  Alle124 historischen Forschungsdateien unverändert; native Leistungsanalyse
+  und Ausführungscode seit Vorregistrierung unverändert. Nach P1B gestoppt.
+  [Ergebnisse](experiments/TACT-001-P1B-results.md).
+
 ## 2026-11-14 – TACT-001-P1B technisch freigegeben
 
 - Vorregistrierung in `e0b63bd` vor dem ersten Prüfmatch veröffentlicht, CI

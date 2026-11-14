@@ -50,3 +50,37 @@ wurde in `650a89a`, die technische Freigabe in `c9a4353` vor der Hauptserie gepu
 [Vorregistrierung](experiments/TACT-001-P0-preregistration.md) ·
 [Matchmessungen](data/tact-001-p0/main.jsonl) ·
 [Effekte und Powerplanung](data/tact-001-p0/effects.json).
+
+## 2026-11-14 – TACT-001-P1B, FM27 27.0.1+2503222
+
+**Exploratives Fünffaktor-Screening**, 2.048 gültige Hauptmatches und 64
+vollständige unabhängige Seedblöcke. Explizite negative Resolution-V-Halbfraction
+E=−ABCD, unveränderte eigene IP-4-2-3-1/OOP-4-4-1-1 und zwei synthetische Gegner.
+
+| Hauptkontrast | xGD | Marginales 95-%-KI | Holm-p (5) |
+|---|---:|---|---:|
+| Häufigeres Pressing | +0,063 | [−0,022; +0,148] | 0,721 |
+| Höhere Defensivlinie | −0,007 | [−0,090; +0,076] | 1,000 |
+| Höheres Tempo | +0,034 | [−0,042; +0,111] | 1,000 |
+| Kürzere Pässe | +0,018 | [−0,056; +0,093] | 1,000 |
+| Größere Angriffsbreite | +0,026 | [−0,056; +0,108] | 1,000 |
+
+Kein Haupttest, keine der zehn explorativen Paar-DoDs und keiner der 25
+Sekundärtests erreicht seine vorregistrierte Holm-Schwelle. Linie×Tempo ist
+mit +0,177 der größte positive Paar-Schätzer, Holm-p=0,134; kein korrigierter
+Nachweis. Alle fünf Hauptintervalle erfüllen die gewünschte volle Breite≤0,30.
+Die Halbfraction aliasiert Haupt-/Paarwirkungen mit Vierfach-/Dreifachinteraktionen.
+
+Die eingefrorene Auswahlregel liefert ausschließlich explorative Vorschläge:
+D15 (häufigeres Pressing, höhere Linie, höheres Tempo, kürzere Pässe,
+Standardbreite) und D09 (häufigeres Pressing, Standardlinie/-tempo, kürzere
+Pässe, Standardbreite). Ihre Kontextmittel-Abstände zu D00 sind +0,229/+0,180
+xGD aus denselben Selektionsdaten. **Keine Siegerbestätigung**, keine Aussage
+zu optimalen realen Karrieretaktiken. Punkte/Tore/Gegentore vollständig berichtet.
+
+72 technische Vollmatches, alle 64 Eingabezellen, acht exakte Wiederholungen
+und erwartete Exit108-Negativprobe bestanden. Keine Hauptausfälle, Ausschlüsse,
+Retries, Ersatzseeds oder Holdoutmatches. Historische ATTR- und P0-Befunde
+bleiben unverändert. [Ergebnisbericht](experiments/TACT-001-P1B-results.md) ·
+[Vorregistrierung](experiments/TACT-001-P1B-preregistration.md) ·
+[Rohmessungen](data/tact-001-p1b/main.jsonl) · [Effekte](data/tact-001-p1b/effects.json).

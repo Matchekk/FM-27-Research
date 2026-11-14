@@ -14,9 +14,33 @@ bedingte Kosten-/Powerprognosen nach `data/tact-001-p1a/`.
 Beide starten weder Host noch Simulation und reservieren keine Matchseeds.
 Die negative Resolution-V-Halbfraction ist eine getrennte Planungsfunktion;
 das bestehende positive `fractional_design()` und eingefrorene P0 bleiben erhalten.
-Der [P1B-Folgeauftrag](../experiments/TACT-001-P1B-order.md) und dessen
-`next-study-plan.json` sind nicht ausführbare Vorschläge. Ein nativer P1B-Runner,
-konkrete neue Setup-Hashes, Seeds und Freigaben müssen erst separat entstehen.
+Der damalige [P1B-Folgeauftrag](../experiments/TACT-001-P1B-order.md) und dessen
+`next-study-plan.json` bleiben als ursprüngliche Planung erhalten. Die tatsächliche
+P1B-Registrierung, Freigabe und abgeschlossene Ausführung stehen im nächsten Abschnitt.
+
+## TACT-001-P1B – explizite Halbfraction und begrenzte Ausführung
+
+`fractional_design(names, fraction=-1)` wählt ausdrücklich E=−ABCD; der historische
+Default `fraction=1` bleibt E=+ABCD. Der gemeinsame Vertrag erlaubt jetzt eine
+explizite `design.control_arm`-Kennung, sonst unverändert `baseline`; P1B nutzt D00.
+Der experimentbezogene Runner und seine eigene Faktor-/Kontrastanalyse prüfen
+dieselbe 16-Zell-Matrix, 64 Setup-Hashes und native Creatorbits. Die generische
+Zweiarmstatistik wird dadurch nicht zu einer Fünffaktoranalyse.
+
+`analysis/run_tact001p1b.py` führt getrennte prepare/register/technical/main-Phasen
+mit der bestehenden NativeLab aus. `research/study_budget.py` ergänzt die bisherige
+Budgetkontrolle um eine unverrückbare UTC-Deadline über sämtliche Phasen hinweg.
+2.048 Hauptversuche, 73 technische Versuche, maximal vier Worker, 90 s ohne
+Fortschritt, 2.400 s Child-Wall-Time und 40 Minuten Gesamtdeadline; kein Retry.
+Keine Upstreamänderung, keine Karriere- oder Holdoutausführung.
+
+Die Serie ist abgeschlossen: 2.048 Haupt- und 72 technische Matches akzeptiert,
+acht exakte Wiederholungen, eine erwartete Abweisung mit Exit108.
+`analysis/export_tact001p1b.py` prüft private Roh-/Dump-/Startuphashes erneut und
+exportiert ausschließlich erlaubte Felder. Der unabhängige
+`analysis/verify_tact001p1b.py` prüft die öffentlichen 40 Kontraste/Intervalle,
+Holm-5/10/25, 960 Blockkontraste, Kandidatenregel und vollständige Jobabrechnung.
+[Ergebnisse und Grenzen](../experiments/TACT-001-P1B-results.md).
 
 ## Architektur und tatsächlicher Implementierungsstand
 

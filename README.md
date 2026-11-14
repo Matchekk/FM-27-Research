@@ -1,5 +1,15 @@
 # FM27 Meta Research
 
+> **TACT-001-P1B abgeschlossen (14.11.2026):** 2.048 gültige Hauptmatches,
+> 64 vollständige Seedblöcke, 72 technische Vollmatches und eine erwartete
+> Negativabweisung. Explizite negative Halbfraction E=−ABCD, D00 all-standard.
+> Kein Haupt-, Interaktions- oder Sekundärtest erreicht seine Holm-Schwelle.
+> D15 und D09 sind ausschließlich explorative Vorschläge, keine bestätigten Sieger.
+> [Ergebnisse](experiments/TACT-001-P1B-results.md) ·
+> [Native Freigabe](experiments/TACT-001-P1B-validation.md) ·
+> [Rohmessungen und Provenienz](data/tact-001-p1b/README.md).
+> Keine Holdouts oder weitere Optimierung ausgeführt; P1B ist beendet.
+
 > **TACT-001-P1A abgeschlossen (14.11.2026, nur offline):** P0 unabhängig
 > reproduziert; alle neuen Analysen explorativ, keine neuen Matches oder Seeds.
 > [Präzisionsanalyse](experiments/TACT-001-P1A-analysis.md),

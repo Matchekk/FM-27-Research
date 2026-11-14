@@ -1,0 +1,30 @@
+{
+  "supervised_operations": 3,
+  "image_check_processes": 3,
+  "capability_probe_processes": 2,
+  "non_match_native_probe_processes": 5,
+  "count_basis": "One desktop_engine --check-image per supervised NativeLab initialization; one DesktopWarmRunner capability-cache miss per technical/main child; successful warm worker processes counted from every sessions.json. All probes inside supervised budget.",
+  "sessions": [
+    {
+      "kind": "technical",
+      "warm_worker_processes": 8,
+      "completed_matches": 72,
+      "all_returncodes_zero": true,
+      "all_cleanup_ok": true
+    },
+    {
+      "kind": "main",
+      "warm_worker_processes": 128,
+      "completed_matches": 2048,
+      "all_returncodes_zero": true,
+      "all_cleanup_ok": true
+    }
+  ],
+  "negative_processes": 1,
+  "raw_private_bytes": 955970281,
+  "charged_child_wall_seconds": 1119.4995350999998,
+  "elapsed_native_study_window_seconds": 1474.664908,
+  "utc_deadline": "2026-11-14T14:09:26.985220+00:00",
+  "maximum_simultaneous_workers": 4,
+  "worker_no_progress_timeout_seconds": 90
+}

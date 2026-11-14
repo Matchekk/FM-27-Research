@@ -9,10 +9,13 @@
    [P1A-Präzisionsanalyse abgeschlossen](experiments/TACT-001-P1A-analysis.md):
    keine neuen Matches. [Designvergleich](docs/TACT-001-P1A-design.md) empfiehlt
    fünf Faktoren gemeinsam in Resolution V statt kleiner Interaktionsbestätigung.
-   [Separat zu erteilender P1B-Auftrag](experiments/TACT-001-P1B-order.md):
-   1.024 Hauptmatches als günstigere Entdeckung oder bevorzugt 2.048 für das
-   bedingte 90-%-Powerziel bei 0,20 xGD je Hauptkontrast. Kein automatischer Start;
-   neue C/D/E-Eingaben, Setup-Hashes, Seeds, technische Freigabe zuerst einfrieren.
+   [P1B abgeschlossen](experiments/TACT-001-P1B-results.md): 2.048 Hauptmatches,
+   64 vollständige Blöcke, native C/D/E-Freigabe und negative Halbfraction geprüft.
+   Kein Haupt-/Interaktions-/Sekundärnachweis nach Holm; alle fünf Hauptintervalle
+   erfüllen die geplante volle Breite ≤0,30. Explorative Vorschläge D15/D09.
+   Nächster Vorschlag ausschließlich separat: einen eingefrorenen Kandidaten gegen
+   D00 mit neuen Seeds und unbenutzten Gegner-/Stärkeprofilen prüfen, tatsächliche
+   Punkte primär und eigene Powerplanung. Kein automatischer Start oder Foldover.
 3. Karriere-PKM-Kapazitätsadapter und Standardsituationszähler sind technische
    Folgearbeiten. TRAIN-Längsschnitt erst nach echtem Kalender-/Teilnahmeaudit.
 4. [Gesamtroadmap](docs/ROADMAP.md) und [externe Studien](docs/EXTERNAL_RESEARCH.md)

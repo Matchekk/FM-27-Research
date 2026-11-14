@@ -49,6 +49,27 @@ def fixture():
 
 
 class FractionAndContractTests(unittest.TestCase):
+    def test_completed_public_series_native_design_and_candidate_hashes(self):
+        status=runner.PUBLIC/"run-summary.json"
+        if not status.exists() or not read(status)["scientific_series_complete"]:return
+        from research.native import rows
+        receipt=read(runner.PUBLIC/"manifest.json")
+        cube=p.checked(rows(runner.PUBLIC/"main.jsonl"),receipt)
+        self.assertEqual(cube.shape,(2,32,2,16,11))
+        self.assertEqual(read(status)["counts"],dict(technical=dict(ok=72,expected_rejection=1),main=dict(ok=2048)))
+        effects=read(runner.PUBLIC/"effects.json")
+        self.assertEqual(len(effects["primary"]),5);self.assertEqual(len(effects["interactions_exploratory"]),10)
+        self.assertEqual(sum(map(len,effects["secondary"].values())),25)
+        proposal=runner.PUBLIC/"candidates.json"
+        if proposal.exists():
+            candidates=read(proposal)["candidates"]
+            self.assertLessEqual(len(candidates),2)
+            self.assertEqual([x["design_id"] for x in candidates],[x["design_id"] for x in effects["candidates_exploratory"]])
+            for c in candidates:
+                for h in p.CONTEXTS:
+                    for s in ("0","1"):
+                        self.assertEqual(c["setup_sha256"][h][s],receipt["config"]["design"]["setups"][h][s][c["design_id"]])
+
     def test_real_public_native_technical_gate_and_archive_when_available(self):
         path=runner.PUBLIC/"technical-summary.json"
         if not path.exists():return
@@ -82,6 +103,10 @@ class FractionAndContractTests(unittest.TestCase):
         self.assertEqual(len(read(runner.PUBLIC/"binary-diff-audit.json")["audits"]),64)
         descriptors=read(runner.PUBLIC/"inputs.json")
         self.assertEqual(descriptors["setups"],c["design"]["setups"])
+        runtime=ROOT/"local/runtime-v1114.6/source"
+        if runtime.exists():
+            for name,value in descriptors["runtime_source_sha256"].items():
+                self.assertEqual(runner.source_hash(runtime/name),value,name)
         for h in p.CONTEXTS:
             for side in (0,1):
                 baseline=read(ROOT/"data/tact-001-p0/inputs.json")["setups"][h][str(side)]["baseline"]

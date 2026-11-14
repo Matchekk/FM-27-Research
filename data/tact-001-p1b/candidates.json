@@ -1,0 +1,127 @@
+{
+  "status": "exploratory_proposals_not_confirmed",
+  "selection_rule": "positive both contexts; worst context then equal context gain then ID",
+  "source_experiment": "TACT-001-P1B",
+  "candidates": [
+    {
+      "design_id": "D15",
+      "levels": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1,
+        "E": -1
+      },
+      "context_gains": {
+        "high_press": 0.18952063121093748,
+        "deep_block": 0.268189262171875
+      },
+      "worst_context_gain": 0.18952063121093748,
+      "equal_context_gain": 0.22885494669140624,
+      "native_options": [
+        {
+          "code": "A",
+          "group": "TriggerPress",
+          "option_id": 2000905329,
+          "native_bit": 66
+        },
+        {
+          "code": "B",
+          "group": "DefensiveLine",
+          "option_id": 1329018200,
+          "native_bit": 57
+        },
+        {
+          "code": "C",
+          "group": "Tempo",
+          "option_id": 1345339954,
+          "native_bit": 47
+        },
+        {
+          "code": "D",
+          "group": "PassingDirectness",
+          "option_id": 1146434657,
+          "native_bit": 3
+        },
+        {
+          "code": "E",
+          "group": "AttackingWidth",
+          "option_id": 1951095402,
+          "native_bit": 0
+        }
+      ],
+      "setup_sha256": {
+        "high_press": {
+          "0": "4e8cdf911173fea5b618ecf8008d96bc36422babb7da3f7f13a2315eeaeafb24",
+          "1": "3e8c26361dc3987be320af640897a8836d9341d1d00e7dbec04a20b2863d6e31"
+        },
+        "deep_block": {
+          "0": "dc162ae6aba141a594d777064396a53a19610e0547b396ca80342da9d932fede",
+          "1": "bebd880b60093c21ec2076bc541ea062686a14a4a056909ccb2c5aa4d7fff235"
+        }
+      },
+      "fixed_contexts_source": "data/tact-001-p1b/inputs.json",
+      "independent_confirmation": false
+    },
+    {
+      "design_id": "D09",
+      "levels": {
+        "A": 1,
+        "B": -1,
+        "C": -1,
+        "D": 1,
+        "E": -1
+      },
+      "context_gains": {
+        "high_press": 0.1352870133343751,
+        "deep_block": 0.225269164421875
+      },
+      "worst_context_gain": 0.1352870133343751,
+      "equal_context_gain": 0.18027808887812505,
+      "native_options": [
+        {
+          "code": "A",
+          "group": "TriggerPress",
+          "option_id": 2000905329,
+          "native_bit": 66
+        },
+        {
+          "code": "B",
+          "group": "DefensiveLine",
+          "option_id": 894978671,
+          "native_bit": 0
+        },
+        {
+          "code": "C",
+          "group": "Tempo",
+          "option_id": 1496610426,
+          "native_bit": 0
+        },
+        {
+          "code": "D",
+          "group": "PassingDirectness",
+          "option_id": 1146434657,
+          "native_bit": 3
+        },
+        {
+          "code": "E",
+          "group": "AttackingWidth",
+          "option_id": 1951095402,
+          "native_bit": 0
+        }
+      ],
+      "setup_sha256": {
+        "high_press": {
+          "0": "21bf55d73c9bba487c98b9f5b4f1da5b1c114d785e2313ce53c23850ac8276af",
+          "1": "90288dda40f61fead0af1ccf7c4aca90db0ff78b79f197ff82691691c0424c59"
+        },
+        "deep_block": {
+          "0": "119d0d974d1f7d10d4023ac1006c346471a07b446e3e71be3e076dc6dba0028f",
+          "1": "58ab416a25a8a5ae622ed346f1604f39ef55eecf7918bda193759b11968af4ee"
+        }
+      },
+      "fixed_contexts_source": "data/tact-001-p1b/inputs.json",
+      "independent_confirmation": false
+    }
+  ]
+}

@@ -15,8 +15,10 @@ def read(path):return json.loads(path.read_text(encoding="utf8"))
 
 def verify():
     if not (DATA/"effects.json").exists():
+        assert not (DATA/"run-summary.json").exists() or not read(DATA/"run-summary.json")["scientific_series_complete"],"Completed P1B is missing its effects archive"
         print("P1B results not yet available; independent verifier awaits complete series.");return
     r=read(DATA/"manifest.json");c=r["config"];result=read(DATA/"effects.json")
+    assert sha256(json.dumps(c,sort_keys=True,separators=(",",":"),allow_nan=False).encode("utf8")).hexdigest()==r["config_sha256"]
     rows=[json.loads(s) for s in (DATA/"main.jsonl").read_text(encoding="utf8").splitlines()]
     contexts=["high_press","deep_block"];arms=[f"D{i:02d}" for i in range(16)]
     names=list("ABCDE");endpoints=["xgd","points","gf","ga","xgf","xga","shots_for","shots_against","sot_for","sot_against","possession_for"]
@@ -30,6 +32,9 @@ def verify():
         assert key not in seen and row["status"]=="ok" and row["input_contract_verified"]
         assert row["setup_sha256"]==c["design"]["setups"][contexts[h]][str(s)][arms[a]]
         assert row["factor_levels"]==dict(zip(names,levels[a].tolist()))
+        assert row["config_sha256"]==r["config_sha256"] and row["profile_fields_verified"]==1058
+        assert row["native_factor_bits"]=={f["code"]:f["high_bit"] if levels[a,names.index(f["code"])]==1 else 0 for f in c["design"]["factors"]}
+        assert row["key"]==f"{contexts[h]}-{row['seed']}-{s}-{arms[a]}"
         assert all(row[k]==v for k,v in c["identity"].items())
         gf,ga=row["score"][s],row["score"][1-s];o,b=row["team_statistics"][s],row["team_statistics"][1-s]
         cube[key]=[o["xg"]-b["xg"],3 if gf>ga else int(gf==ga),gf,ga,o["xg"],b["xg"],o["shots"],b["shots"],o["shots_on_target"],b["shots_on_target"],o["possession"]]

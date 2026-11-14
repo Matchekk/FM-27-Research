@@ -1,6 +1,6 @@
 {
   "experiment_id": "TACT-001-P1B",
-  "scientific_series_complete": false,
+  "scientific_series_complete": true,
   "technical_gate_passed": true,
   "counts": {
     "technical": {
@@ -8,15 +8,15 @@
       "expected_rejection": 1
     },
     "main": {
-      "not_started": 2048
+      "ok": 2048
     }
   },
-  "charged_native_wall_seconds": 47.61587329999929,
+  "charged_native_wall_seconds": 1119.4995350999998,
   "limit_seconds": 2400,
-  "elapsed_study_window_seconds": 233.382438,
+  "elapsed_study_window_seconds": 1474.664908,
   "fixed_utc_deadline": "2026-11-14T14:09:26.985220+00:00",
   "within_fixed_deadline": true,
-  "independent_main_seed_blocks": null,
+  "independent_main_seed_blocks": 64,
   "excluded_matches": 0,
   "retries": 0,
   "holdout_matches": 0,
