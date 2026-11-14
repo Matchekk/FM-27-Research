@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "status": "draft",
+  "stage": "discovery",
+  "kind": "native",
+  "module": "MECH",
+  "experiment_id": "MECH-001",
+  "hypothesis": "Der Verlust durch geringere Spielschärfe hängt vom Pressing ab.",
+  "control": "Eigene kontrollierte 4-2-3-1-Baseline",
+  "intervention": "Spielschärfe 10000 auf 7000 bei zehn Feldspielern; 2x2 mit Pressing",
+  "conditions": "Kontrollierte Startprofile; Gegner und Stärke szenariofest; beide Teamseiten",
+  "seed_namespace": "MECH-001/discovery-v1",
+  "identity": {
+    "build": "27.0.1+2503222",
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+    "lab_version": "v1114.6",
+    "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+  },
+  "metrics": {
+    "primary": "points",
+    "secondary": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ]
+  },
+  "design": {
+    "unit": "seed_block",
+    "n_blocks": 32,
+    "sides": [
+      0,
+      1
+    ],
+    "arms": [
+      {
+        "id": "baseline",
+        "setup_sha256": null
+      },
+      {
+        "id": "low_sharpness",
+        "setup_sha256": null
+      },
+      {
+        "id": "high_press",
+        "setup_sha256": null
+      },
+      {
+        "id": "combined",
+        "setup_sha256": null
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "pressing_equal",
+        "opponent": "frozen-pressing-profile",
+        "strength": "equal",
+        "split": "discovery"
+      }
+    ]
+  },
+  "science": {
+    "alpha": 0.05,
+    "power": 0.9,
+    "min_effect": 0.15,
+    "multiple_testing": "none",
+    "family_size": 1,
+    "analysis": "Modulspezifisch im verlinkten Design; kein Start vor implementiertem Endpunktaudit.",
+    "exclusions": "Keine Ergebnisexklusion; technische Fehler mit unverändertem Seed dokumentieren; unvollständige Blöcke sperren Inferenz.",
+    "negative_controls": [
+      "A/A mit separaten Labels",
+      "Duplikatkodierung",
+      "Katalog- und Rollenvalidierung"
+    ],
+    "readback_fields": [
+      "alle Attribute",
+      "Startprofile",
+      "beide Phasen",
+      "Rollen und Duties",
+      "Team Instructions",
+      "Player Instructions",
+      "effektiver Seed"
+    ],
+    "stopping_rule": "Feste Pilotfallzahl; vor Leistungsanalyse Kandidaten einfrieren; keine Bestätigung aus Pilotseeds.",
+    "selection_rule": "Keine Auswahl im ersten vorregistrierten Vergleich.",
+    "power_basis": "32 Blöcke sind Varianzpilot, kein Nachweis von 0,10 xGD. Bestätigung per nichtzentraler t-Verteilung nach eingefrorener SD-Obergrenze planen."
+  },
+  "budget": {
+    "max_matches": 256,
+    "max_workers": 4,
+    "timeout_seconds": 90
+  },
+  "preregistration": {
+    "commit": null,
+    "document": "experiments/MECH-001-design.md",
+    "document_sha256": null,
+    "analysis": "research/stats.py",
+    "analysis_sha256": null
+  }
+}

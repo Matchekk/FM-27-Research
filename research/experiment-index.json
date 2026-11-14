@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "id": "ATTR-001",
+      "module": "ATTR",
+      "document": "experiments/ATTR-001-screening.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-002",
+      "module": "ATTR",
+      "document": "experiments/ATTR-002-hauptreplikation.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-003",
+      "module": "ATTR",
+      "document": "experiments/ATTR-003-zusatzszenarien.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-004",
+      "module": "ATTR",
+      "document": "experiments/ATTR-004-cross-tactic.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-004",
+      "module": "ATTR",
+      "document": "experiments/ATTR-004-ergebnisse.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-005",
+      "module": "ATTR",
+      "document": "experiments/ATTR-005-ergebnisse.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-005",
+      "module": "ATTR",
+      "document": "experiments/ATTR-005-position-screening.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-006",
+      "module": "ATTR",
+      "document": "experiments/ATTR-006-ergebnisse.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-006",
+      "module": "ATTR",
+      "document": "experiments/ATTR-006-vorregistrierung.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-007",
+      "module": "ATTR",
+      "document": "experiments/ATTR-007-ergebnisse.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-007",
+      "module": "ATTR",
+      "document": "experiments/ATTR-007-vorregistrierung.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "ATTR-008",
+      "module": "ATTR",
+      "document": "experiments/ATTR-008-design.md",
+      "historical": false,
+      "build": null
+    },
+    {
+      "id": "MECH-001",
+      "module": "MECH",
+      "document": "experiments/MECH-001-design.md",
+      "historical": false,
+      "build": null
+    },
+    {
+      "id": "SET-001",
+      "module": "SET",
+      "document": "experiments/SET-001-design.md",
+      "historical": false,
+      "build": null
+    },
+    {
+      "id": "TACT-001",
+      "module": "TACT",
+      "document": "experiments/TACT-001-discovery.md",
+      "historical": false,
+      "build": null
+    },
+    {
+      "id": "TRAIN-001",
+      "module": "TRAIN",
+      "document": "experiments/TRAIN-001-karriere.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "TRAIN-002",
+      "module": "TRAIN",
+      "document": "experiments/TRAIN-002-design.md",
+      "historical": false,
+      "build": null
+    },
+    {
+      "id": "VALID-001",
+      "module": "VALID",
+      "document": "experiments/VALID-001-adapter.md",
+      "historical": true,
+      "build": "27.0.0+2493426"
+    },
+    {
+      "id": "VALID-002",
+      "module": "VALID",
+      "document": "experiments/VALID-002-adapter.md",
+      "historical": false,
+      "build": null
+    }
+  ],
+  "reserved_modules": [
+    "TACT",
+    "ATTR",
+    "TRAIN",
+    "SET",
+    "MECH",
+    "SCOUT"
+  ]
+}

@@ -51,3 +51,43 @@ Sekundär: Tor-/Punktedifferenz, xG für/gegen, Schüsse, Schüsse aufs Tor. Bei
 Jedes Experiment besitzt ein Markdown-Protokoll, ein maschinenlesbares Manifest und Rohmessungen (`.jsonl` oder extern referenzierte, gehashte Daten). Dazu gehören Spiel-Build, Adapter-/Toolversion, Setup-Hash, Seedrange, Zeitstempel, Kontrollfaktoren, Ergebnispfade und Auswertungscode/Commit-SHA. CSV ist abgeleiteter Export, keine maßgebliche Datenquelle.
 
 **Keine im Repo belegten Daten = kein im Repo bestätigter Befund.**
+
+## 7. Plattformstandard 2.0 (Ergänzung vom 14.11.2026)
+
+Historische Methoden und Ergebnisse oben bleiben unverändert ihrem damaligen
+Build zugeordnet. Neue Studien erfüllen vor Start alle folgenden Punkte:
+
+1. Veröffentlichte Hypothese mit eindeutiger ID und eingefrorenem Analysecommit.
+2. Kontrollarm und vollständig deklarierte Intervention.
+3. Genau eine primäre Zielgröße bzw. explizit korrigierte primäre Testfamilie.
+4. Vollständig vorab benannte sekundäre Zielgrößen.
+5. Feste Start-, Team-, Gegner-, Seiten- und Managementbedingungen.
+6. Native Eingabeprüfung nach Originalvorbereitung; JSON allein genügt nicht.
+7. Neue reservierte Seeds, disjunkt zu Archiv, Fehlversuchen und anderen Phasen.
+8. Power-/Präzisionsplan mit Analyse-/Clustereinheit, SD-Annahmen und Sensitivität.
+9. Geeignetes gepaartes oder longitudinales Modell; Abhängigkeiten erhalten.
+10. Effekt in praktischen Einheiten und Konfidenzintervall, nicht nur p-Werte.
+11. Vorab festgelegte Multiple-Testing-Korrektur einschließlich vollständiger Familie.
+12. Strikte Trennung von Entdeckung, Auswahl und gehaltenen Bestätigungsdaten.
+13. A/A, Negativkontrollen, Zähler- und Plausibilitätsprüfungen.
+14. Vollständige Ausfälle, ausstehende Jobs, Ausschlüsse und Retries mit Gründen.
+15. Neue technische Freigabe nach relevantem Engine-, Host-, Ressourcen- oder Eingabewechsel.
+
+Gleiche Seeds verbinden Arme zu Blöcken; sie garantieren keine identischen
+Spielereignisse. Gemeinsame Baselines, Seiten und Spielerkohorten zählen nicht
+mehrfach als unabhängige Beobachtungen. Ein Suchgewinner wird ausschließlich
+mit eingefrorenen Eingaben, unbenutzten Seeds und gehaltenen Gegnern bestätigt.
+Wird auf Bestätigungsdaten weiter optimiert, sind diese danach Entdeckungsdaten.
+
+Evidenzklassen für neue Berichte: **Hypothese**, **explorativ**, **vorläufig
+repliziert**, **bestätigt im Testkontext**, **extern repliziert**. Die letzte
+Klasse verlangt eine unabhängige Ausführung mit überprüfbarer Provenienz;
+ein zweiter Post desselben Experiments genügt nicht. Unklare/negative Befunde
+behalten dieselben Dokumentationspflichten. Fehlende Signifikanz beweist keine
+Äquivalenz; diese braucht eine vorab definierte Spanne und geeignete Prüfung.
+
+In der Taktiksuche sind xGD und modelliertes xPts Screeninghilfen. Bestätigung
+verwendet tatsächliche Punkte sowie Tore/Gegentore. Finishing, Torwartleistung,
+Verletzungen und Training verlangen mechanismengerechte Endpunkte und Exposition.
+Die [Plattform](docs/PLATFORM.md) automatisiert gemeinsame Gates; sie ersetzt
+keine experimentbezogene Analyse oder Karrierevalidierung.

@@ -1,5 +1,20 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Aktueller Einstieg – 14.11.2026
+
+1. [VALID-002](experiments/VALID-002-adapter.md) und den tatsächlich freigegebenen
+   Fixturekontext beachten. Neue Rollen, PI oder Startprofile zuerst nativ auditieren.
+2. [TACT-001-P0](experiments/TACT-001-discovery.md#erster-begrenzter-pilot) mit
+   128 Hauptmatches separat vorregistrieren: eigener 4-2-3-1-Kontrollarm,
+   Pressing × Linie, zwei fixierte Entdeckungsgegner, neue Seeds; keine OP-Aussage.
+3. Karriere-PKM-Kapazitätsadapter und Standardsituationszähler sind technische
+   Folgearbeiten. TRAIN-Längsschnitt erst nach echtem Kalender-/Teilnahmeaudit.
+4. [Gesamtroadmap](docs/ROADMAP.md) und [externe Studien](docs/EXTERNAL_RESEARCH.md)
+   nutzen; keine bloße Wiederholung bekannter globaler Attributranglisten.
+
+Die folgenden Checklisten dokumentieren den bisherigen Forschungsstand auf dem
+alten Build. Sie sind kein Startauftrag für neue Serien auf der aktualisierten Engine.
+
 ## P0 – Arbeitsumgebung und Baseline validieren
 - [x] Lokale Rohdaten inventarisiert, Engine- und Adapterhash geprüft.
 - [x] Baseline, native Eingaben, Wiederholungen und Negativprobe nachvollzogen. [VALID-001](experiments/VALID-001-adapter.md)

@@ -37,3 +37,11 @@ Zusätzlich nach Design: Team/Gegner, taktische Konfiguration, Spieler-IDs in ni
 - Fehlerhafte Läufe mit `status` und Grund protokollieren, nicht als gültige Nullen ausgeben.
 - Große oder geschützte Rohartefakte **nicht** in Git ablegen; nur kontrollierte Auszüge, Zusammenfassungen und Hashes/Verweise.
 - Datensätze erst als wissenschaftlich geprüft markieren, wenn Herkunft, Version und Analyse nachvollziehbar sind.
+
+## Plattformergänzung 14.11.2026
+
+`valid-002/` enthält erlaubte Messfelder und Hashbelege der neuen technischen
+Adapterprüfung. Sie sind keine aktuellen ATTR-Ergebnisse. Neue Spielstände,
+PKM/FMF, Binäreingaben und volle Dumps bleiben ausschließlich lokal.
+Das Schema und die Trennung nativer Matches von Karriere-Checkpoints sind in
+[docs/PLATFORM.md](../docs/PLATFORM.md) beschrieben.

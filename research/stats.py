@@ -91,6 +91,7 @@ def paired_cells(observations, expected_jobs, treatment, endpoint="xgd"):
         require(key in expected and key not in indexed, "Unexpected/duplicate observation")
         require(row["setup_sha256"]==expected[key]["setup_sha256"] and
                 row["config_sha256"]==expected[key]["config_sha256"], "Observation/registration mismatch")
+        require(all(row.get(k)==v for k,v in expected[key].get("identity",{}).items()), "Observation identity drift")
         indexed[key]=metrics(row)
     require(indexed.keys()==expected.keys(), "Incomplete blocks; no silent exclusions")
     cells=defaultdict(lambda:defaultdict(list))

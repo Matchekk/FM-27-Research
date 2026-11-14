@@ -15,6 +15,22 @@
 - 173 Upstreamtests (172 bestanden, ein Skip), fünf bestehende Analysetests sowie
   Nachrechnung des ursprünglichen Archivs bestanden. Alte ATTR-Dateien unverändert.
 
+## 2026-11-14 – modulare Grundlage und Forschungsplanung
+
+- Gemeinsame Bibliothek für Schema/Registry, disjunkte Seedreservierungen,
+  Scheduler, native Audits, Statistik, Karriere-Checkpointimport und Berichte.
+  [Architektur und tatsächliche Grenzen](docs/PLATFORM.md).
+- TACT/ATTR/TRAIN/SET/MECH besitzen Roadmaps und vorregistrierbare erste Designs;
+  SCOUT ist als spätere Anwendung reserviert. [Roadmap](docs/ROADMAP.md).
+- Eigene 4-2-3-1-Suche mit effizientem DoE, benannten Interaktionen, begrenzten
+  Modellvorschlägen und strikter gehaltener Bestätigung entworfen. Keine Suchserie
+  ausgeführt. [TACT-001](experiments/TACT-001-discovery.md).
+- Externe Studien mit Quellenfamilie, Version, Autorenfallzahlen und ungeklärter
+  Reproduktionslage erfasst. Die Mac-Implementierung wird nicht als Windowsadapter
+  behandelt. [Quellenregister](docs/EXTERNAL_RESEARCH.md).
+- Vier-Match-A/A-Smoke ist vorab beschrieben; Ausführung erst nach Veröffentlichung
+  der vollständigen Grundlage. [Exakter Folgeauftrag](docs/NEXT_CODEX_TASK.md).
+
 ## 2026-11-07 – ATTR-007 abgeschlossen
 
 - Alle 1.600 Hauptmatches wurden auf Build `27.0.0+2493426` im ersten Versuch akzeptiert. Die 200 neuen Seed-Blöcke enthalten alle acht Arme. [Manifest](data/attr-007/manifest.json)

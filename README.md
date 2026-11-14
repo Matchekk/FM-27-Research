@@ -1,5 +1,13 @@
 # FM27 Meta Research
 
+> **Plattformstand 14.11.2026:** [VALID-002](experiments/VALID-002-adapter.md)
+> prüft FM27 `27.0.1+2503222` mit Tactics Lab v1114.6: 42 akzeptierte technische
+> Matches, deterministische Wiederholungen, FMF-Roundtrip und Workerchecks.
+> Freigabe für das gebündelte kontrollierte Fixture; Karriere-PKM-Transfer noch
+> gesperrt. Keine neue wissenschaftliche Leistungsserie. [Neue Architektur](docs/PLATFORM.md),
+> [Roadmap aller Module](docs/ROADMAP.md), [TACT-001-Entwurf](experiments/TACT-001-discovery.md).
+> Die nachstehenden ATTR-Befunde bleiben unverändert dem alten Build zugeordnet.
+
 Offenes, reproduzierbares Forschungsprojekt zur **Football Manager 2027**-Meta: Spielerattribute, Positionen, Taktiken und Training.
 
 > **Forschungsstatus (2026-11-07):** Das Archiv enthält die bisherige Serie mit 2.504 geprüften Matchmessungen, die 3.360 Hauptmatches und 96 technischen Prüfläufe von ATTR-004 sowie separate Karriere-Trainingsversuche. ATTR-004 bestätigt die mittleren xGD-Gewinne von Sprunghöhe und Antritt über acht getestete Szenarien. ATTR-005 ergänzt 900 Hauptmatches und 36 Prüfmatches für vier Positionsgruppen. ATTR-006 bestätigt in 600 Hauptmatches den positiven xGD-Effekt einer Sprunghöhenanhebung für drei Angreifer im Standardfixture. ATTR-007 zerlegt diesen gemeinsamen Eingriff in 1.600 weiteren Hauptmatches. [Befunde und Gültigkeitsbereich](FINDINGS.md)
