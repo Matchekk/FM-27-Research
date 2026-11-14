@@ -245,3 +245,11 @@ Vollmatches plus Negativprobe,131 neue reservierte Seeds. Acht native Setups
 bytegleich zu P1B; Identität/Runtimesourcen geprüft. 48+5 Offline-Tests bestanden.
 900s kumulierte Child-Zeit,1800s feste UTC-Frist; keine Retries/Seedersetzung.
 Vorregistrierung/Code/Seeds werden vor Vollmatches publiziert. VALID-003 nur geplant.
+
+## 2026-11-14 – P1C technische Gates bestanden
+
+16/16 Vollmatches,8 exakte A/A-Paare und Exit108-Negativkontrolle bestanden.
+Keine Hauptmatches gestartet. Child-Zeit 24.623/900s; Frist unverändert.
+Erste CI scheiterte an privater Seedpfadabhängigkeit im neuen Test; behoben
+durch Prüfung des öffentlichen Seedplans, keine Änderung eingefrorenen Codes.
+Lokal erneut48 Tests bestanden; Hauptlauf erst nach erfolgreicher Freigabe-CI.

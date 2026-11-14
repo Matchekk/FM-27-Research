@@ -2,6 +2,7 @@
 from copy import deepcopy
 from pathlib import Path
 import sys,unittest
+from unittest.mock import patch
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'analysis'))
 from research.native import read,rows
@@ -54,7 +55,8 @@ class P1CTests(unittest.TestCase):
         if not (runner.PUBLIC/'seed-plan.json').exists():return
         seed=read(runner.PUBLIC/'seed-plan.json');self.assertEqual(len(set(seed['seeds'])),131)
         self.assertFalse(set(seed['seeds'])&set(read(runner.PUBLIC/'excluded-seeds.json')))
-        jobs=runner.technical_jobs();self.assertEqual(len(jobs),16)
+        with patch.object(runner,"LOCAL",runner.PUBLIC):jobs=runner.technical_jobs()
+        self.assertEqual(len(jobs),16)
         self.assertEqual(len({(j['scenario'],j['side'],j['arm']) for j in jobs}),8)
         inputs=read(runner.PUBLIC/'inputs.json');old=read(ROOT/'data/tact-001-p1b/inputs.json')
         for h in p.CONTEXTS:

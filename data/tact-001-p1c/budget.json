@@ -1,0 +1,76 @@
+{
+  "experiment": "TACT-001-P1C",
+  "limits": {
+    "technical": 17,
+    "main": 512
+  },
+  "limit_seconds": 900,
+  "charged_seconds": 24.623237699997844,
+  "reserved": {
+    "tech-deep_block-1-D00-r1": "technical",
+    "tech-deep_block-0-D15-r0": "technical",
+    "tech-deep_block-0-D00-r0": "technical",
+    "tech-deep_block-1-D15-r0": "technical",
+    "tech-high_press-1-D00-r1": "technical",
+    "tech-deep_block-0-D00-r1": "technical",
+    "tech-deep_block-1-D15-r1": "technical",
+    "tech-deep_block-0-D15-r1": "technical",
+    "tech-deep_block-1-D00-r0": "technical",
+    "tech-high_press-0-D00-r0": "technical",
+    "tech-high_press-1-D15-r1": "technical",
+    "tech-high_press-0-D00-r1": "technical",
+    "tech-high_press-0-D15-r0": "technical",
+    "tech-high_press-0-D15-r1": "technical",
+    "tech-high_press-1-D00-r0": "technical",
+    "tech-high_press-1-D15-r0": "technical",
+    "negative-binary": "technical"
+  },
+  "halted": false,
+  "wall_start_utc": "2026-11-14T14:18:16.844148+00:00",
+  "wall_deadline_utc": "2026-11-14T14:48:16.844148+00:00",
+  "wall_limit_seconds": 1800,
+  "operations": [
+    {
+      "name": "prepare",
+      "kind": "technical",
+      "keys": [],
+      "start_utc": "2026-11-14T14:18:16.851151+00:00",
+      "child_deadline_utc": "2026-11-14T14:33:11.859148+00:00",
+      "elapsed_seconds": 10.99612049999996,
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "name": "technical",
+      "kind": "technical",
+      "keys": [
+        "tech-deep_block-1-D00-r1",
+        "tech-deep_block-0-D15-r0",
+        "tech-deep_block-0-D00-r0",
+        "tech-deep_block-1-D15-r0",
+        "tech-high_press-1-D00-r1",
+        "tech-deep_block-0-D00-r1",
+        "tech-deep_block-1-D15-r1",
+        "tech-deep_block-0-D15-r1",
+        "tech-deep_block-1-D00-r0",
+        "tech-high_press-0-D00-r0",
+        "tech-high_press-1-D15-r1",
+        "tech-high_press-0-D00-r1",
+        "tech-high_press-0-D15-r0",
+        "tech-high_press-0-D15-r1",
+        "tech-high_press-1-D00-r0",
+        "tech-high_press-1-D15-r0",
+        "negative-binary"
+      ],
+      "start_utc": "2026-11-14T14:20:08.094743+00:00",
+      "child_deadline_utc": "2026-11-14T14:34:52.107306+00:00",
+      "elapsed_seconds": 13.627117199997883,
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "active": null,
+  "elapsed_study_window_seconds": 124.877712,
+  "within_fixed_deadline": true,
+  "charge_scope": "entire supervised child wall time incl. prep/audits; immutable study-wide UTC deadline also includes time between phases"
+}
