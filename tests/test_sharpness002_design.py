@@ -1,7 +1,9 @@
 """Own synthetic record/math fixtures only; no native, seed or registry calls."""
 from collections import Counter
 from copy import deepcopy
+from hashlib import sha256
 from pathlib import Path
+import os
 import sys
 import json
 import unittest
@@ -17,7 +19,7 @@ from research.startpolicy import PROFILE_LIMITS,decode_records,encode_records
 
 def binary_fixture(side):
     lineup=[2,0,1,3,4,5,6,7,8,9,10]
-    records=[(1,s,a,b,20 if b<15 else 60) for s,n in ((0,23),(1,26)) for a in range(n) for b in range(69)]
+    records=[(1,s,a,b,20 if b<15 else 60) for s in (0,1) for a in range(23) for b in range(69)]
     for s,a in ((s,a) for s in (0,1) for a in range(23)):
         for field,(low,_) in enumerate(PROFILE_LIMITS):
             value={15:10000,16:10000,17:10000,18:0,20:80,21:100,22:20}.get(field,low)
@@ -71,6 +73,27 @@ def receipt_and_data():
 
 
 class SharpnessDesignTests(unittest.TestCase):
+    def test_optional_four_published_binary_gold_cells(self):
+        configured=os.environ.get('FM27_OFFLINE_GOLD_ROOT')
+        if not configured:self.skipTest('Optional private D00/R01 binary gold not configured')
+        root=Path(configured).resolve()
+        baseline=json.loads((root/'data/tact-001-p1b/inputs.json').read_text(encoding='utf8'))
+        pressing=json.loads((root/'data/mech-003-stamina/inputs.json').read_text(encoding='utf8'))
+        for context in design.CONTEXTS:
+            for side in (0,1):
+                d00=(root/'local/tact-002-r0/inputs'/f'{context}-{side}-R00.bin').read_bytes()
+                r01=(root/'local/mech-003-stamina/inputs'/f'{context}-{side}-R01.bin').read_bytes()
+                self.assertEqual(sha256(d00).hexdigest(),baseline['setups'][context][str(side)]['D00'])
+                self.assertEqual(sha256(r01).hexdigest(),pressing['setups'][context][str(side)]['R01'])
+                active=[r for r in decode_records(d00) if r[0]==1 and r[3]==52]
+                self.assertEqual(len(active),46);self.assertEqual(Counter(r[1] for r in active),{0:23,1:23})
+                inputs=design.build_inputs(d00,r01,side)
+                deltas=[sum(a!=b for a,b in zip(decode_records(d00),decode_records(inputs[arm]),strict=True)) for arm in design.ARMS]
+                self.assertEqual(deltas,[20,0,21,1])
+                for payload in inputs.values():
+                    values=[r[4] for r in decode_records(payload) if r[0]==1 and r[3]==52]
+                    self.assertEqual(values,[60]*46)
+
     def test_published_draft_matches_factory_and_reserves_no_seeds(self):
         draft=json.loads((ROOT/'data/mech-002-sharpness-p0/contract-draft.json').read_text(encoding='utf8'))
         self.assertEqual(draft,design.contract_definition())
@@ -98,6 +121,7 @@ class SharpnessDesignTests(unittest.TestCase):
                 differences=[(a,b) for a,b in zip(original,records,strict=True) if a!=b]
                 self.assertEqual(len(differences),(20 if tr['sharpness_raw']==7000 else 0)+int(tr['pressing_bit']==66))
                 self.assertTrue(all(v==60 for k,s,a,b,v in records if k==1 and b==52))
+                self.assertEqual(Counter(s for k,s,a,b,v in records if k==1 and b==52),{0:23,1:23})
                 low={(s,a,b) for k,s,a,b,v in records if k==15 and b in (16,17) and v==7000}
                 expected={(side,a,b) for a in affected for b in (16,17)} if tr['sharpness_raw']==7000 else set()
                 self.assertEqual(low,expected)
@@ -106,14 +130,26 @@ class SharpnessDesignTests(unittest.TestCase):
         base,more,_=binary_fixture(1)
         for target in ('gk','tail','other','execution','baseline'):
             source=list(decode_records(base));intervention=list(decode_records(more))
-            if target in ('gk','tail'):
-                slot=2 if target=='gk' else 25
-                intervention=[(k,s,a,b,40) if (k,s,a,b)==(1,1,slot,52) else (k,s,a,b,v) for k,s,a,b,v in intervention]
+            if target=='gk':
+                intervention=[(k,s,a,b,40) if (k,s,a,b)==(1,1,2,52) else (k,s,a,b,v) for k,s,a,b,v in intervention]
+            elif target=='tail':
+                source[-1]=intervention[-1]=(1,1,25,52,60)
             elif target=='other':intervention[-1]=(0,0,999,0,1)
             elif target=='execution':intervention[-1]=(61,0,0,0,1)
             else:source=[(k,s,a,b,61) if (k,s,a,b)==(1,0,0,52) else (k,s,a,b,v) for k,s,a,b,v in source]
             with self.subTest(target=target),self.assertRaises(ValueError):design.build_inputs(encode_records(source),encode_records(intervention),1)
         with self.assertRaises(ValueError):design.build_inputs(base,more,True)
+
+    def test_encoded_stamina_inventory_is_strict46_without_tail_fallback(self):
+        base,more,_=binary_fixture(0)
+        for kind in ('missing','duplicate','old49'):
+            a=list(decode_records(base));b=list(decode_records(more))
+            if kind=='old49':
+                for i,slot in enumerate((23,24,25)):a[-1-i]=b[-1-i]=(1,1,slot,52,60)
+            else:
+                index=next(i for i,r in enumerate(a) if r[:4]==(1,1,22,52))
+                a[index]=b[index]=(0,0,0,0,0) if kind=='missing' else (1,1,21,52,60)
+            with self.subTest(kind=kind),self.assertRaises(ValueError):design.build_inputs(encode_records(a),encode_records(b),0)
 
     def test_technical_plan_has_four_seeds_sixteen_exact_aa_pairs(self):
         jobs=design.technical_jobs([101,102,103,104]);self.assertEqual(len(jobs),33)

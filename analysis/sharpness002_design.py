@@ -52,9 +52,9 @@ def build_inputs(d00_bytes,more_bytes,tested_side):
     require(all(len({lineups[s,i] for i in range(11)})==11 for s in (0,1)),'Duplicate starting actor')
     affected={lineups[tested_side,i] for i in range(1,11)}
     stamina=[(s,a,v) for k,s,a,b,v in base if k==1 and b==52]
-    require(len(stamina)==49 and {(s,a) for s,a,_ in stamina}==
-            {(s,a) for s,n in ((0,23),(1,26)) for a in range(n)} and all(v==60 for _,_,v in stamina),
-            'Original D00 stamina60, active rosters or carrier tail changed')
+    require(len(stamina)==46 and {(s,a) for s,a,_ in stamina}==
+            {(s,a) for s in (0,1) for a in range(23)} and all(v==60 for _,_,v in stamina),
+            'Exactly46 active encoded D00 stamina60 records,23 per side, required')
     restored=[];changed=0
     for row in more:
         k,s,a,b,v=row
@@ -88,7 +88,7 @@ def contract_definition(identity=None,setups=None):
     c=dict(schema_version=1,experiment_id=EXPERIMENT,module='MECH',kind='native',stage='discovery',status='draft',
         hypothesis='The verified raw10000 versus raw7000 original twenty-record start package changes mean xGD over two pressing levels.',
         control='S70-P0: tested starting ten outfield actors raw7000 in both original sharpness profile fields16/17; Standard pressing.',
-        intervention='Full2x2 raw7000/10000 start package and Standard/MoreOften pressing; original stamina60 everywhere.',
+        intervention='Full2x2 raw7000/10000 start package and Standard/MoreOften pressing; original stamina60 in all46 active encoded player records. No assigned value is claimed for unencoded carrier slots.',
         conditions='Frozen D00 IP4231/OOP4411, phases/roles/PI/profiles/positions/GK/bench/opponent/management unchanged except twenty sharpness values and one pressing value. Bundled fixture; no warmworker, Kind61, new setter or clamp.',
         seed_namespace=EXPERIMENT+'/main-v1',identity=identity,
         metrics=dict(primary='xgd',secondary=list(SECONDARY),plausibility=list(DESCRIPTIVE)),
@@ -110,7 +110,7 @@ def contract_definition(identity=None,setups=None):
             raw_artifact_limit_bytes=2*1024**3,disk_reserve_bytes=20*1024**3,worker_mode='cold',
             global_child_seconds=1800,global_deadline_utc='2026-11-14T23:00:00+00:00'),
         native_spec=dict(observer_host_sha256=OBSERVER_HOST,record_count=5557,profile_fields=[16,17],
-            raw_levels=[7000,10000],stamina_index=52,stamina_raw=60,kind61_allowed=False,new_setter_allowed=False,
+            raw_levels=[7000,10000],stamina_index=52,stamina_raw=60,encoded_stamina_records=46,kind61_allowed=False,new_setter_allowed=False,
             ongoing_clamp_allowed=False,ui_scale_calibrated=False,consumer_semantics_validated=False),
         seed_plan=dict(main_blocks=64,technical_seeds=4,total_new_seeds=68,technical_namespace=EXPERIMENT+'/technical-v1',
             technical_seeds_reserved=None,main_seeds_reserved=None,
@@ -142,7 +142,7 @@ def validate_design(c,executable=False):
         raw_artifact_limit_bytes=2*1024**3,disk_reserve_bytes=20*1024**3,worker_mode='cold',
         global_child_seconds=1800,global_deadline_utc='2026-11-14T23:00:00+00:00'),'Resource/admission drift')
     require(c['native_spec']==dict(observer_host_sha256=OBSERVER_HOST,record_count=5557,profile_fields=[16,17],
-        raw_levels=[7000,10000],stamina_index=52,stamina_raw=60,kind61_allowed=False,new_setter_allowed=False,
+        raw_levels=[7000,10000],stamina_index=52,stamina_raw=60,encoded_stamina_records=46,kind61_allowed=False,new_setter_allowed=False,
         ongoing_clamp_allowed=False,ui_scale_calibrated=False,consumer_semantics_validated=False),'Native intervention drift')
     require(c['seed_namespace']==EXPERIMENT+'/main-v1' and
         c['seed_plan']['technical_namespace']==EXPERIMENT+'/technical-v1' and

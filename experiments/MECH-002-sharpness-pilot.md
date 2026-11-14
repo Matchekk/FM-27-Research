@@ -23,8 +23,10 @@ kein isoliert bewiesener Consumer-, Mental-, Ermüdungs- oder Mediationsmechanis
 Die Namen S70/S100 sind Rohpaket-Kürzel und keine kalibrierte FM-UI-Prozentskala.
 Zehn getestete Startfeldspieler, über absolute `lineup[1:]`-Records identifiziert,
 erhalten beide Rawfelder gemeinsam. Torwart, Bank, Gegner, weitere Profilwerte,
-Attribute und Positionsratings bleiben unverändert. **Stamina52 bleibt überall
-beim ursprünglichen raw60**, einschließlich inaktiver serialisierter Trägerslots.
+Attribute und Positionsratings bleiben unverändert. **Stamina52 bleibt in allen46
+kodierten aktiven Spielern beim ursprünglichen raw60**, genau23 Records je Seite.
+Weitere Trägerslots werden nicht als Attributrecords übergeben; für sie wird kein
+kodierter Staminawert behauptet. Die Factory schreibt keine Records für diese Slots.
 
 D00-IP4-2-3-1 und OOP4-4-1-1, Rollen, PI, Mannschaftsstärke, beide Taktikphasen,
 Aufstellung und Matchmanagement bleiben innerhalb eines Kontexts gleich. Keine

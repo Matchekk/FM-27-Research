@@ -14,8 +14,11 @@ unverändert importiert. Keine Änderung an `research/`, Setter oder C++-Host.
 Die Factory nimmt historische D00- und originale R01-Recordbytes entgegen,
 restauriert ausschließlich zehn Staminawerte40→60 im R01-Carrier und verlangt danach
 genau eine Pressingrecord-Differenz. Low verändert genau20 Profilfeldwerte16/17;
-High/Standard ist bytegleich mit D00. GK, Bank, Gegner und inaktive Auswärtsslots
-bleiben erhalten. Das ist ein Offline-Intentionsbeweis, keine native Abnahme.
+High/Standard ist bytegleich mit D00. Der Guard verlangt exakt46 aktive kodierte
+Stamina52-Records,23 je Seite, alle raw60. Zusätzliche unkodierte Trägerslots sind
+kein Bestandteil dieser Attributrecordliste; für sie wird kein kodierter Wert
+behauptet. GK, Bank, Gegner und weitere Trägerslots bleiben unangetastet.
+Das ist ein Offline-Intentionsbeweis, keine native Abnahme.
 
 `analysis/analyse_sharpness002.py` liest ausschließlich vollständige registrierte
 Seedblöcke, die vereinbarten nativen Auditmarker und Originalresultate. Welch95,
@@ -87,7 +90,24 @@ unvollständige Blöcke, stille Fehlstellen, Budget-/Armdrift und fehlende TECH1
 Abnahme werden abgewiesen. Reale Übertragung7000/10000 in die Engine wird ausschließlich
 im getrennten TECH17-/Studientechnikpfad geprüft, nicht aus diesen Tests gefolgert.
 
-Lokal bestanden:10 eigene Tests innerhalb312 Repositorytests (zwei private
+Lokal bestanden:12 eigene Tests innerhalb314 Repositorytests (zwei private
 Goldprüfungen ohne Dateien im Worktree übersprungen), zusätzlich fünf historische
 Analysetests.340 NIGHT- und272 Round3-Archivdateien unverändert. Dieser Fachagent
 startete0 native Matches und reservierte0 Seeds; keine Registry-/Altdateiänderungen.
+
+## Korrektur der aktiven Recordinventur
+
+Der erste Entwurf verwechselte die Anzahl von Trägerarray-Slots mit tatsächlich
+kodierten aktiven Attributrecords. Die vier echten D00/R01-Zellen enthalten exakt46
+Stamina52-Records,23 je Seite; der falsche49er-Guard wurde strikt ersetzt, ohne
+Fallback. Fehlende, duplizierte oder zusätzlich kodierte Trägerslots werden abgewiesen.
+
+Ein optionaler rein lesender Goldtest prüft die privaten vier D00/R01-Paare gegen
+ihre veröffentlichten Setup-SHA256 aus `data/tact-001-p1b/inputs.json` und
+`data/mech-003-stamina/inputs.json`. Der lokale Nachlauf bestand für alle vier
+Zellen: insgesamt16 kompilierte Inputs,46 aktive Staminawerte60 pro Input,
+Armdifferenzen `[20,0,21,1]` in festgelegter Reihenfolge. Keine Aussage wird über
+Staminawerte außerhalb der kodierten aktiven Spielerliste getroffen.
+Die Prüfung liest ausschließlich bestehende eigene Research-Binaries und startet
+keine Simulation. Ohne expliziten `FM27_OFFLINE_GOLD_ROOT` wird nur diese optionale
+private Goldprüfung übersprungen; die synthetischen Guard-/Kontrasttests bleiben aktiv.
