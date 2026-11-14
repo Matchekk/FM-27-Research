@@ -1,0 +1,45 @@
+{
+  "R1": {
+    "public_sha256": "db5fe8c2b7c5cc0932f5692fb476be9846e7bec444a3430af7f38b0430fc3315",
+    "private_events_sha256": "d92dc6b91810975752f48fcffa228e8aa1228f7a148d8c20bc23fbde99be7e65",
+    "private_attempt_sha256": "decd3ef29c03c81352b40bac0818dbeb8fc12155b30e1ee2c21b02313a01e18d",
+    "public_private_rows_reconstructed": true,
+    "snapshot_receipt_stable": true,
+    "failed_probe": "training",
+    "error_type": "UnsupportedGameError",
+    "failure_signature_matches_frozen_source": true,
+    "counts": {
+      "observed": 3,
+      "observed_with_warnings": 1,
+      "failed": 1,
+      "not_started": 7
+    },
+    "saved_training_aggregate": null
+  },
+  "R2": {
+    "public_sha256": "f9c723f1624b49c1e458b189f96b404f8bf6d11069d292d18c30d518709ce22a",
+    "private_events_sha256": "411a5818b46d8a6f7f168143e7d468192681700613a14aac7d8e656f127de8e7",
+    "private_attempt_sha256": "63269055e0d320b7e9aec94c7058383a02f2f1e8c6e6eb4b13d6ee0b4f161e31",
+    "public_private_rows_reconstructed": true,
+    "snapshot_receipt_stable": true,
+    "failed_probe": "tactics",
+    "error_type": "ReaderCheckError",
+    "failure_signature_matches_frozen_source": true,
+    "counts": {
+      "observed": 4,
+      "observed_with_warnings": 1,
+      "failed": 1,
+      "not_started": 6
+    },
+    "saved_training_aggregate": {
+      "teams": 4,
+      "weeks": 155,
+      "days": 1085,
+      "stored_slots": 3255,
+      "individual_attendance": null,
+      "session_coach_assignment": null,
+      "individual_focus": null,
+      "individual_intensity": null
+    }
+  }
+}

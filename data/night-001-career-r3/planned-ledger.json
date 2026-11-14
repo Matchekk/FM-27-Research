@@ -1,0 +1,35 @@
+{
+  "version": "career-marker-diagnostic-draft-v1",
+  "execution_status": "offline_preparation_no_reader_execution",
+  "stages": [
+    {
+      "stage": "published_source_and_release_gates",
+      "status": "not_started"
+    },
+    {
+      "stage": "snapshot_before",
+      "status": "not_started"
+    },
+    {
+      "stage": "open",
+      "status": "not_started"
+    },
+    {
+      "stage": "tactics_final_call",
+      "status": "not_started"
+    },
+    {
+      "stage": "close_and_snapshot_after",
+      "status": "not_started"
+    }
+  ],
+  "native_starts": 0,
+  "calendar_advances": 0,
+  "seeds_reserved": 0,
+  "reader_processes_started": 0,
+  "native_semantics_verified": false,
+  "tactics_released": false,
+  "replay_released": false,
+  "training_effect_released": false,
+  "career_advance_released": false
+}
