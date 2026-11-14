@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "experiment_id": "ATTR-009-Bridge",
+  "module": "ATTR",
+  "kind": "native",
+  "stage": "discovery",
+  "status": "draft",
+  "hypothesis": "Unused position specialization modifies relative raw Jumping Reach versus Acceleration/Pace benefit.",
+  "control": "Omni unused ratings20; each attribute arm raw60->80; D00 tactics fixed",
+  "intervention": "Specialized unused field ratings1; active IP/OOP families20; same raw60->80 dose; no baseline arm",
+  "conditions": "D00 IP4231/OOP4411, known discovery opponents, identical nonintervened profiles, benchmark management, no experimental_execution or pool",
+  "seed_namespace": "ATTR-009-Bridge/main-v1",
+  "identity": {
+    "build": "27.0.1+2503222",
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+    "lab_version": "v1114.6",
+    "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+  },
+  "metrics": {
+    "primary": "xgd",
+    "secondary": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "plausibility": []
+  },
+  "design": {
+    "unit": "seed_block",
+    "n_blocks": 16,
+    "sides": [
+      0,
+      1
+    ],
+    "control_arm": "OJ",
+    "matrix": [
+      {
+        "id": "OJ",
+        "mask": "omni",
+        "attribute": "J",
+        "attribute_index": 54,
+        "raw_before": 60,
+        "raw_after": 80
+      },
+      {
+        "id": "OA",
+        "mask": "omni",
+        "attribute": "A",
+        "attribute_index": 49,
+        "raw_before": 60,
+        "raw_after": 80
+      },
+      {
+        "id": "OP",
+        "mask": "omni",
+        "attribute": "P",
+        "attribute_index": 53,
+        "raw_before": 60,
+        "raw_after": 80
+      },
+      {
+        "id": "SJ",
+        "mask": "specialized",
+        "attribute": "J",
+        "attribute_index": 54,
+        "raw_before": 60,
+        "raw_after": 80
+      },
+      {
+        "id": "SA",
+        "mask": "specialized",
+        "attribute": "A",
+        "attribute_index": 49,
+        "raw_before": 60,
+        "raw_after": 80
+      },
+      {
+        "id": "SP",
+        "mask": "specialized",
+        "attribute": "P",
+        "attribute_index": 53,
+        "raw_before": 60,
+        "raw_after": 80
+      }
+    ],
+    "matrix_sha256": "064eadb97582f9556771cbc98fde8e282520728068ee911ba08330a67341fc2b",
+    "setups": {
+      "high_press": {
+        "0": {
+          "OJ": "686c3f478b1704e00c18c41c12f41c26030ca72bed02cef0f75274abb8151f01",
+          "OA": "3c9aca763a2ad5f827f446a48e0e496904e55a5fd027f4db30ea07a22d6f1e37",
+          "OP": "a13fabf6e476226a95e3ca3e678d8e210e929532ab9a5e859695b55e9f998cbe",
+          "SJ": "2e9d991ddf16bc6a4d6edfddd5f88995c026893e7b79b850abf2140ad9f2c863",
+          "SA": "725a18aa590f8b4f722b06d0a966d278d01ef1f6105d0e9fb45f6ac4ed71a530",
+          "SP": "13ae15a3d78e659f1d008f17d4d8453e21f4cd0962062bc776238c53399ff920"
+        },
+        "1": {
+          "OJ": "fea44c4b350dab577a5651ce7ca55b5fccf485f9dcc1b6b1416ea74d3e4f89ca",
+          "OA": "bd897ab425cb2f9d013845286f6a7c205f02ce2fac1b458bea9962360951376e",
+          "OP": "933843a2b685c5d375d7bf9b13f2c58646032424ee3e8d4b8073ad5efb902961",
+          "SJ": "e04bb31c7fc7d4cc6c112154799a10a4554fc8849f40890686b3c147b248063c",
+          "SA": "c49fa81515768c8f41b741c87a0bc0e0e55a66bb0fc2b9905bb0f090f6a5fe28",
+          "SP": "1058ca28f1ede53a943ab7e72e43be994a1cde3b06ef14d834568aa86c293a54"
+        }
+      },
+      "deep_block": {
+        "0": {
+          "OJ": "cd1e9151cdf7504619e7a5c2719b4cd9897f54263090004c0b2c2377fe7b992e",
+          "OA": "b6c04611cb7703138296a10add2ac915ecae27e723d01b92c654135c7735c033",
+          "OP": "0e77c84e31d5985734e2adc439c17948e2001f58163dd7f7018e324b13dd4253",
+          "SJ": "29cac79eeeb9b0f84b765e05711255d745e26925c895e699b9f40db09550ad2c",
+          "SA": "91511667b30d33a66c7111819e14325049a8237426af1f16af2b54feeb46dbbc",
+          "SP": "f7b73e855aa73ece9bf4327672a5dea74409843108b0cc956d42e9aa2ab6bbc3"
+        },
+        "1": {
+          "OJ": "42bf2adb16f48eb51da5daba9b1b1c8ece82dad70fc7aed738b721f50688fa3c",
+          "OA": "d22524e344e216bfbf0c85da7410aca353f06274c16180708b01ff6328d4c127",
+          "OP": "8f29f5ee760b17d68b976b4a0e4bd41e6a7904ca42e77404492bc4e036cc8a4d",
+          "SJ": "b8f754386ebe88ecfedb61c84989549dafb325a27e689a31fd22d68c5d302284",
+          "SA": "93f68ace7167861342e49f6677ae33830d27f85eae3d5c48d2724fe38d6196f8",
+          "SP": "0dc5e13bee4e41fe176cc783675ed4cdfa9b70d0de7b9f1bcec9bb8fef63d886"
+        }
+      }
+    },
+    "arms": [
+      {
+        "id": "OJ",
+        "setup_sha256": "22e5f4e5bd4e7fc44012e7242b7b32d46c90fb304df33d42f35e4e61906f4534"
+      },
+      {
+        "id": "OA",
+        "setup_sha256": "bd74472ebe39f128ef5a2d3c16de41f9cc5bdcc1f464491acdb6ac2d722c5776"
+      },
+      {
+        "id": "OP",
+        "setup_sha256": "fe189d51ddc43522f5ba6b174d6a51af4050de1077e32679f053a801d0b9f6c1"
+      },
+      {
+        "id": "SJ",
+        "setup_sha256": "481bd4bf9081e371b1371e19fa562c83e733d56a457f4b10c473ff079c43a631"
+      },
+      {
+        "id": "SA",
+        "setup_sha256": "4635adcd285dff39ee6b10031951793241aca37141c64c2b545cef889619c5ca"
+      },
+      {
+        "id": "SP",
+        "setup_sha256": "b46d6e7030a59eeb7c00cd70b43f76ae2515db3360b6d7d1a3f35aecc4f63cd4"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "high_press",
+        "opponent": "high_press",
+        "strength": "same fixed synthetic roster; only declared mask/dose differs",
+        "split": "discovery"
+      },
+      {
+        "id": "deep_block",
+        "opponent": "deep_block",
+        "strength": "same fixed synthetic roster; only declared mask/dose differs",
+        "split": "discovery"
+      }
+    ]
+  },
+  "science": {
+    "alpha": 0.05,
+    "power": 0.9,
+    "min_effect": 0.3,
+    "multiple_testing": "holm",
+    "family_size": 5,
+    "contrast_coefficients": [
+      -1.0,
+      0.5,
+      0.5,
+      1.0,
+      -0.5,
+      -0.5
+    ],
+    "secondary_endpoints": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "analysis": "One primary xGD contrast S[J-(A+P)/2]-O[J-(A+P)/2]; side means per seed; equal contexts; Welch95 and20000stratified block bootstrap; Holm5 secondary only.",
+    "exclusions": "None; incomplete blocks technical status only; no replacement seeds/retries.",
+    "negative_controls": [
+      "24cells once+8frozen A/A repeats=32fullmatches",
+      "invalid binary expected108",
+      "invalid position/ability/bool offline"
+    ],
+    "readback_fields": [
+      "all69 attributes and23profile fields for46players after original preparation",
+      "44roles/positions/PI748groups",
+      "effective seed/identity/natural finish",
+      "raw60/80 comparison among technical siblingarms",
+      "OOP player bindings"
+    ],
+    "stopping_rule": "384main,32technical+1negative;600child sec/1200immutableUTC;max4workers/90s;first gate error stops.",
+    "selection_rule": "No global attribute ranking or tactic selection; total native raw-dose interaction only; passive mediation unidentified.",
+    "power_basis": "Variance pilot, unknown contrast SD; practical .30xGD,desired full95CIwidth.50; no guaranteed90%power; plan future .20/.30 from observed and upper SD.",
+    "context_weights": [
+      0.5,
+      0.5
+    ],
+    "side_weights": [
+      0.5,
+      0.5
+    ],
+    "bootstrap_resamples": 20000
+  },
+  "budget": {
+    "max_matches": 384,
+    "max_workers": 4,
+    "timeout_seconds": 90,
+    "max_technical_attempts": 33,
+    "total_native_wall_seconds": 600,
+    "absolute_study_wall_seconds": 1200,
+    "raw_artifact_limit_bytes": 2147483648,
+    "disk_reserve_bytes": 21474836480
+  },
+  "execution": {
+    "code_sha256": {
+      "research/attr009.py": "7220b9552e931f11c23398058beb4a07bf5d02a945a04f1cee8e11a6b5dc2cb2",
+      "analysis/run_attr009.py": "e2c7fe591ee2aa801d47fb7f47208933c80186d37255c8db97dfb4f3af66b0ec",
+      "analysis/analyse_attr009.py": "ace45f5cf4ba0884d6f33dff0f321f8796cb67ef208863ab4946c7e2af45bfc0",
+      "analysis/export_attr009.py": "bf9377d655dda7a8f39338bf6f4b08c8f9807b533990c19932befa424add810f",
+      "analysis/verify_attr009.py": "5257a58aa515f0d739c207af01519992c9f5d862cf1c739bdaee4cc78883ab06",
+      "research/native.py": "0a9b143d8b51d3e2108c6f60946ca1ea280da4f455299b8718e7303cc168366c",
+      "research/stats.py": "13cc3ae64d85904dd6acaab08fb06425d29b7b8cb9344fad84ee6d32a763a331",
+      "research/core.py": "94ef5c76f56f65adf495df1632da7cb99701d25c64ad6846a6d45872c6730ab6",
+      "research/cli.py": "8d05e287d2667fb52f6c6a5cb10512560b9e9646ecfa4c80ac03c6a28a1e1bcc",
+      "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+      "research/study_budget.py": "7d20b2b9fd2ea1addb64bbec8f6976b971e8746d9d9977fc2e87370e45c93608",
+      "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e",
+      "research/validation003.py": "5c29945950e21ef183397b92d1cb8d09f38a300ef1de51d9b356f04bd956af1d"
+    },
+    "artifacts": {
+      "inputs.json": "b13b67f81e06936b2d2b34fccc86b2349fff925e9b51d25178f9bb62c7490bf4",
+      "seed-plan.json": "282e6f960e7f6d7bed4ef24cabe8d8f8ba9b26d0fcc407850d6bbf4c2406f8ef",
+      "design-matrix.json": "57d76de7fb67ac4b73124f525745c63ea38cbae96cec6a805d53dc4fca00ee97",
+      "mask-manifest.json": "76affe3263e8ec21210a55df13939e42fcc661bd86440c4a25d18545db244b3b",
+      "offline-negative-controls.json": "6a00bbf2414645598e3a0f49297be0b31fbf4f2105c3737b2ccafa67965524e7",
+      "binary-diff-audit.json": "e7225b953c3e5fae5e5261b78d8dd176add5932c58057dc631a4dc2a783d6695",
+      "capabilities.json": "8e2e3b597cfdfb2927ab7a7c5ecd93739ff6c4925bd9c84bded456ea82c2caf4"
+    }
+  },
+  "preregistration": {
+    "commit": null,
+    "document": "experiments/ATTR-009-preregistration.md",
+    "document_sha256": null,
+    "analysis": "analysis/analyse_attr009.py",
+    "analysis_sha256": null
+  }
+}

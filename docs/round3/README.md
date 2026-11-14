@@ -9,7 +9,12 @@ integriert. 124 integrierte Repositorytests und fünf historische Analysetests
 bestehen. Zwei Reviewbefunde wurden vor Freeze korrigiert: fehlende unbegonnene
 Technikplätze beim Vorbereitungsexport und unstrenge TRAIN-Session-/Slottypen.
 [Unabhängige Abnahme](REVIEW.md) erlaubt zentrale ATTR-Vorbereitung/Technik,
-noch keine Hauptserie. Noch kein neuer nativer Prozess oder Seed in dieser Runde.
+noch keine Hauptserie. Dies war der Offline-Preflightstand.
+
+Nach erfolgreicher CI43616762281 wurde ATTR zentral vorbereitet:24 konkrete
+Eingabezellen und34 frische Seeds (2Technik/32Main),0Vollmatches. Vorbereitung
+11,190/600Child-Sekunden; feste Frist18:00:36,423CET. Konkrete Artefakte werden
+vor Technik publiziert; Inputreview und tatsächliche technische Gates folgen.
 
 ## Verantwortlichkeiten
 

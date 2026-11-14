@@ -1,0 +1,25 @@
+{
+  "experiment_id": "ATTR-009-Bridge",
+  "native_validation_granted": false,
+  "raw_intervention": {
+    "base": 60,
+    "high": 80,
+    "scale": "native integer1..100",
+    "lab_ui_formatter": "raw/5; source-level display only",
+    "fm_in_game_display_calibrated": false
+  },
+  "passive_effectiveness": {
+    "status": "unavailable_without_intervention",
+    "reason": "execution_snapshot returns unless execution_active; enabling kind61 changes version/hooks and final records",
+    "mechanism_decomposition_identified": false
+  },
+  "estimand": "total mask x raw attribute intervention; no mediation claim",
+  "pending": [
+    "current identity",
+    "native after-original-preparation masks/binding/dose readbacks",
+    "all69 attributes/23 profiles/roles/PI/seed",
+    "32 full technical matches+1 negative",
+    "publication+CI+independent review"
+  ],
+  "design_sha256": "064eadb97582f9556771cbc98fde8e282520728068ee911ba08330a67341fc2b"
+}

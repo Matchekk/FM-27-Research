@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "probes": [
+    {
+      "context": "high_press",
+      "side": 0,
+      "kind": "position_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "kind": "ability_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "kind": "bool",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "kind": "position_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "kind": "ability_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "kind": "bool",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "kind": "position_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "kind": "ability_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "kind": "bool",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "kind": "position_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "kind": "ability_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "kind": "bool",
+      "rejected": true
+    }
+  ]
+}

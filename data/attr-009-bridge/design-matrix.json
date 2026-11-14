@@ -1,0 +1,53 @@
+{
+  "matrix": [
+    {
+      "id": "OJ",
+      "mask": "omni",
+      "attribute": "J",
+      "attribute_index": 54,
+      "raw_before": 60,
+      "raw_after": 80
+    },
+    {
+      "id": "OA",
+      "mask": "omni",
+      "attribute": "A",
+      "attribute_index": 49,
+      "raw_before": 60,
+      "raw_after": 80
+    },
+    {
+      "id": "OP",
+      "mask": "omni",
+      "attribute": "P",
+      "attribute_index": 53,
+      "raw_before": 60,
+      "raw_after": 80
+    },
+    {
+      "id": "SJ",
+      "mask": "specialized",
+      "attribute": "J",
+      "attribute_index": 54,
+      "raw_before": 60,
+      "raw_after": 80
+    },
+    {
+      "id": "SA",
+      "mask": "specialized",
+      "attribute": "A",
+      "attribute_index": 49,
+      "raw_before": 60,
+      "raw_after": 80
+    },
+    {
+      "id": "SP",
+      "mask": "specialized",
+      "attribute": "P",
+      "attribute_index": 53,
+      "raw_before": 60,
+      "raw_after": 80
+    }
+  ],
+  "matrix_sha256": "064eadb97582f9556771cbc98fde8e282520728068ee911ba08330a67341fc2b"
+}
