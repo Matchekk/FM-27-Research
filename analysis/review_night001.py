@@ -560,6 +560,100 @@ def audit_startpolicy_runs(central):
         reviewer_native_starts=0)
 
 
+def audit_career_r3_results(central):
+    """Only retained R3 JSON/text and reader source; never touches a save."""
+    from zipfile import ZipFile
+    central = Path(central).resolve(); private = central/'local/night-001-career/readonly-r3'
+    public = read(central/'data/night-001-career-r3/run-status.json')
+    contract_path = central/'data/night-001-career-r3/final-contract.json'; contract = read(contract_path)
+    attempt = read(private/'attempt.json'); release = attempt['release']; commit = release['published_commit']
+    need(commit == '0744238cbcbd429dd59602f0470b18a1d9f52057' and release['director_proceed'] == 'published proceed' and
+         release['passed'] is True and release['reviewed_contract_sha256'] == normalized_hash(contract_path) ==
+         public['contract_sha256_lf'] == '116caf7e203c6a6735218b4f712f4fcf732bba0525cd0e8b6b9ac2087307f5ee',
+         'R3 contract/release provenance differs')
+    need(release == read(central/'local/night-001-career/releases/r3-once.json'), 'Private director release drift')
+    names = {'attempt.json','child-setup.json','close.json','completion.json','events.jsonl','launch.json','marker.json',
+             'snapshot-after.json','snapshot-before.json','stdout.txt','warnings.json'}
+    need(set(public['evidence_sha256']) == names == {p.name for p in private.iterdir() if p.is_file()}, 'R3 evidence inventory differs')
+    hashes = {name:file_hash(private/name) for name in sorted(names)}
+    need(hashes == public['evidence_sha256'], 'R3 actual private evidence hash mismatch')
+    source_inventory = {**contract['code_sha256_lf'], **contract['documents_sha256_lf'], **contract['inputs_sha256_lf'],
+                        release['review_document']:release['review_sha256']}
+    for name, expected in source_inventory.items():
+        blob = subprocess.check_output(['git','show',commit+':'+name],cwd=central)
+        need(sha256(blob.replace(b'\r\n',b'\n')).hexdigest() == expected == normalized_hash(central/name),
+             'R3 historical/current source differs: '+name)
+    frozen_contract = subprocess.check_output(['git','show',commit+':data/night-001-career-r3/final-contract.json'],cwd=central)
+    need(json.loads(frozen_contract) == contract, 'R3 published final contract differs')
+    source = central/'local/night-001-career/reader0124/site/fmsave'
+    wheel = central/'local/night-001-career/reader0124/fmsave-0.12.4-py3-none-any.whl'
+    need(file_hash(wheel) == contract['reader']['wheel_sha256'], 'R3 official wheel differs')
+    with ZipFile(wheel) as archive:
+        for name, expected in contract['reader']['source_sha256'].items():
+            need(file_hash(source/name) == expected == sha256(archive.read('fmsave/'+name)).hexdigest(), 'R3 official source differs')
+    events = [json.loads(v) for v in (private/'events.jsonl').read_text(encoding='utf8').splitlines()]
+    expected_events = [(contract['stages'][0], 'observed')]
+    for i, stage in enumerate(contract['stages'][1:], 1):
+        expected_events += [(stage,'started'),(stage,'failed' if i == 3 else 'observed')]
+    need([(r['stage'],r['status']) for r in events] == expected_events and events[6]['error_type'] == 'ReaderCheckError' and
+         public['stages'] == [r for r in events if r['status'] != 'started'], 'R3 original failure/stage accounting differs')
+    snapshot = dict(sha256=contract['snapshot_sha256'],bytes=contract['snapshot_bytes'])
+    need(read(private/'snapshot-before.json') == read(private/'snapshot-after.json') == snapshot and
+         public['snapshot_stable'] is True, 'R3 retained before/after identity differs')
+    close = read(private/'close.json'); marker = read(private/'marker.json'); completion = read(private/'completion.json')
+    resources = completion['resources']; proof = resources['cleanup']; policy = proof['job_policy']; launch = read(private/'launch.json')
+    need(close == dict(save_opened=True,attempted=True,status='closed',reader_open_calls=1,tactics_calls=1) and
+         resources['reader_processes_started'] == 1 and resources['retries'] == 0 and resources['go_sent'] is True and
+         resources['child_returncode'] == 20 and resources['status'] == 'child_failed' and resources['within_wall_limit'] is True and
+         0 < resources['elapsed_seconds'] <= 180 and not resources['stdout_truncated'] and
+         proof['cleanup_confirmed'] is proof['capsule_exit_confirmed'] is proof['final_policy_verified'] is True and
+         proof['kernel_active_processes'] == 0 and policy['limit_flags'] == 0x2308 and policy['active_process_limit'] == 1 and
+         policy['process_memory_limit'] == policy['job_memory_limit'] == 3*1024**3 and
+         policy['peak_job_private_bytes'] <= 3*1024**3 and launch['membership_verified_before_go'] is True,
+         'R3 resource/admission/cleanup proof differs')
+    need(sum(p.stat().st_size for p in private.iterdir() if p.is_file()) == resources['private_artifact_bytes'] == 7069 and
+         not (central/'local/global-readers/native-execution.lease.json').exists(), 'R3 output bytes/lease differs')
+    warn = read(private/'warnings.json')
+    need(warn['count'] == len(warn['items']) == 1 and warn['items'][0]['category'] == 'UnknownBuildWarning' and
+         warn['truncated'] is False and read(private/'child-setup.json') == dict(status='verified_official_reader',package_version='0.12.4'),
+         'R3 warning/setup differs')
+    expected_resources = {k:resources[k] for k in ('elapsed_seconds','wall_limit_seconds','reader_processes_started','child_returncode',
+        'retries','private_artifact_bytes','stdout_bytes','within_wall_limit','go_sent','stdout_truncated','status')}
+    expected_resources.update(cleanup_confirmed=True,job_policy=policy)
+    need(public['resources'] == expected_resources and public['reader_open_calls'] == public['tactics_calls'] == 1 and
+         public['invalid_event_lines'] == 0 and public['receipt_issues'] == [] and
+         public['warnings'] == dict(count=1,categories={'UnknownBuildWarning':1},truncated=False),
+         'R3 public resource/warning/count projection differs')
+    block_bytes = marker['block_end']-marker['block_start']; remaining = marker['block_end']-marker['cursor']
+    need(marker['section_bytes'] == 2267258 and block_bytes == 9644 and
+         marker['cursor_relative_to_block'] == marker['cursor']-marker['block_start'] and marker['bytes_remaining_in_block'] == remaining and
+         marker['status'] == 'captured_final_target_failure' and marker['target_frame_observed'] is True and
+         marker['grammar_changed'] is marker['scan_performed'] is marker['raw_values_captured'] is False and
+         marker['failure_consistent_with_expected_marker_tests'] is True and
+         marker['marker_checks'] == [dict(marker_index=i, expected_width_bytes=3, fully_inside_block=True,
+                                       equals_expected_at_cursor=False) for i in range(3)], 'R3 bounded marker evidence differs')
+    expected_marker = dict(status='captured_final_target_failure',section_bytes=marker['section_bytes'],block_bytes=block_bytes,
+        cursor_decile_in_block=min(10,10*marker['cursor_relative_to_block']//block_bytes),
+        remaining_bytes_power2_upper=2**((remaining-1).bit_length()), marker_checks=marker['marker_checks'],grammar_changed=False,scan_performed=False)
+    need(public['marker'] == expected_marker and public['diagnostic_status'] == 'captured_expected_marker_failure', 'R3 public marker transform differs')
+    runner = (central/'analysis/run_career004r3.py').read_text(encoding='utf8')
+    need(runner.count("module.open(p['snapshot'],strict=True)") == runner.count('observe_final_call(save.tactics,target,receipt)') == 1 and
+         runner.index('save.close()') < runner.index("after=snapshot_receipt(p['snapshot'])"), 'R3 operation/close ordering source differs')
+    stdout = (private/'stdout.txt').read_text(encoding='utf8')
+    need(stdout.count('fmsave._errors.ReaderCheckError:') == 1 and 'observe_final_call(save.tactics,target,receipt)' in stdout and
+         '_read_selection_part' in stdout and "a block's set-piece marker is not where fmsave expects it" in stdout,
+         'R3 final original traceback identity differs')
+    need(all(public[k] is False for k in ('native_semantics_verified','tactics_released','replay_released',
+                                         'training_effect_released','career_advance_released')), 'R3 false release became true')
+    return dict(source_commit=commit,published_sources_verified=len(source_inventory),official_reader_sources_verified=86,
+        private_evidence_files=11,private_evidence_manifest_sha256=sha256(json.dumps(hashes,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
+        stages_observed=4,stages_failed=1,original_error='ReaderCheckError',reader_open_calls=1,tactics_calls=1,
+        elapsed_seconds=resources['elapsed_seconds'],peak_job_private_bytes=policy['peak_job_private_bytes'],private_artifact_bytes=7069,
+        marker_section_bytes=marker['section_bytes'],marker_block_bytes=block_bytes,cursor_decile=expected_marker['cursor_decile_in_block'],
+        expected_marker_widths=[3,3,3],markers_match=[False,False,False],snapshot_reopened_by_reviewer=False,
+        tactics_released=False,native_semantics_verified=False)
+
+
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
     parser.add_argument('--observer-directory', type=Path)
@@ -569,6 +663,7 @@ if __name__ == '__main__':
     parser.add_argument('--verify-private-career-runs', action='store_true')
     parser.add_argument('--observer-runs-root', type=Path)
     parser.add_argument('--startpolicy-runs-root', type=Path)
+    parser.add_argument('--career-r3-results-root', type=Path)
     args = parser.parse_args()
     report = audit_public()
     supplied = [args.observer_directory,args.career_directory,args.upstream]
@@ -582,4 +677,6 @@ if __name__ == '__main__':
         report['observer_runs'] = audit_observer_runs(args.observer_runs_root)
     if args.startpolicy_runs_root:
         report['startpolicy_runs'] = audit_startpolicy_runs(args.startpolicy_runs_root)
+    if args.career_r3_results_root:
+        report['career_r3_results'] = audit_career_r3_results(args.career_r3_results_root)
     print(json.dumps(report, indent=2))
