@@ -1,5 +1,35 @@
 # Research Log
 
+## 2026-11-14 – TACT-001-P1A: Offline-Präzisionsanalyse und Suchdesign
+
+- Sauberer Ausgangsstand `873799a4eb4f233d2b894a579e53e409f64140fb`, origin/main.
+  P0-Haupt-/Technikmessungen, Eingaben, Budget und Abrechnung erneut gelesen.
+  128 Hauptmatches/16 Blöcke, 23 Technikmatches, sieben exakte Wiederholungen,
+  eine erwartete Negativabweisung und alle 152 Plätze nachvollzogen.
+- P0-Primärergebnis unabhängig exakt reproduziert. Sechs Kontraste × fünf
+  Endpunkte zusätzlich explorativ analysiert; Kontext-/Seiten-/Armpaarung,
+  Seed-Einfluss und Endpunktunterschiede vollständig veröffentlicht.
+  Kein Sieger oder nachträglicher Bestätigungsbefund.
+- Varianzreduktionsalternativen einschließlich Kalibrierungskosten verglichen.
+  Fünffaktor-Resolution-V-Screening E=−ABCD empfohlen; 1.024/2.048 Hauptmatches
+  ergeben unter explizitem Varianztransfer 61,1/94,6 % konservative Power pro
+  0,20-xGD-Haupteffekt. Unbekannte neue Faktorvarianzen begrenzen diese Prognose.
+  Kader-/Stärke-/Gegner-/Karrieretransferplan und ausführlicher separater P1B-Auftrag.
+- Neue native Matches **0**, neue reservierte Seeds **0**, Holdoutmatches **0**.
+  Historische Archive und eingefrorener P0-Code unverändert; Quelltextprüfsummen
+  auf LF normalisiert, um Git-CRLF-Checkouts vergleichbar zu halten.
+  Alle elf P0-Kontraste/Intervalle, Holm, SD-Grenzen/Fallzahlen und das historische
+  Archiv erfolgreich nachgerechnet. 30 Plattform-/Pilot-/P1A-Tests und fünf
+  historische Analysetests bestanden; Analyse-/Bericht-/Grafikausgaben bei
+  erneuter Erzeugung byteidentisch. Alle 113 historischen Dateien unter
+  `analysis/`, `data/`, `experiments/`, `research/specs/` gegen den Ausgangscommit
+  unverändert. Analyse, Tests, Design und Folgeauftrag in `ab14975` auf origin/main
+  veröffentlicht; dieser Folgecommit ergänzt nur Einstieg und Plattformdokumentation.
+- [Analyse](experiments/TACT-001-P1A-analysis.md) ·
+  [Designvergleich](docs/TACT-001-P1A-design.md) ·
+  [Datenausgaben](data/tact-001-p1a/README.md) ·
+  [Folgeauftrag, nicht gestartet](experiments/TACT-001-P1B-order.md).
+
 ## 2026-11-14 – TACT-001-P0 vorbereitet und vorregistriert
 
 - Ausgangscommit `d0e8aae`, sauberer Arbeitsbaum; DLL, Host, Fixture, Ressourcen

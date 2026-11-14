@@ -5,6 +5,19 @@ Die eingefrorenen historischen `analysis/run_attr*.py` und `analyse_attr*.py`
 bleiben unverändert. Neue Module teilen Verträge und Audits; ein Karriereversuch
 wird niemals durch viele voneinander unabhängige Einzelmatches ersetzt.
 
+## Offline-Präzisionsanalyse TACT-001-P1A
+
+`analysis/analyse_tact001p1a.py` liest ausschließlich das öffentliche P0-Archiv,
+prüft historische Identitäten/Abrechnungen und schreibt explorative Effekte sowie
+bedingte Kosten-/Powerprognosen nach `data/tact-001-p1a/`.
+`analysis/report_tact001p1a.py` erzeugt Bericht und wissenschaftliche PNG-Figuren.
+Beide starten weder Host noch Simulation und reservieren keine Matchseeds.
+Die negative Resolution-V-Halbfraction ist eine getrennte Planungsfunktion;
+das bestehende positive `fractional_design()` und eingefrorene P0 bleiben erhalten.
+Der [P1B-Folgeauftrag](../experiments/TACT-001-P1B-order.md) und dessen
+`next-study-plan.json` sind nicht ausführbare Vorschläge. Ein nativer P1B-Runner,
+konkrete neue Setup-Hashes, Seeds und Freigaben müssen erst separat entstehen.
+
 ## Architektur und tatsächlicher Implementierungsstand
 
 ```mermaid

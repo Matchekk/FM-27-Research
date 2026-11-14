@@ -1,5 +1,13 @@
 # FM27 Meta Research
 
+> **TACT-001-P1A abgeschlossen (14.11.2026, nur offline):** P0 unabhängig
+> reproduziert; alle neuen Analysen explorativ, keine neuen Matches oder Seeds.
+> [Präzisionsanalyse](experiments/TACT-001-P1A-analysis.md),
+> [Designvergleich und Transferplan](docs/TACT-001-P1A-design.md),
+> [konkreter Folgeauftrag P1B](experiments/TACT-001-P1B-order.md).
+> Vorschlag: Fünffaktor-Resolution-V-Screening mit 1.024 oder 2.048 Hauptmatches;
+> Power hängt von bislang unbekannter Varianz neuer Faktoren ab. Nicht gestartet.
+
 > **TACT-001-P0 abgeschlossen (14.11.2026):** 128 Hauptmatches und 23 technische
 > Matches akzeptiert. Pressing×Linie: +0,020 xGD-DoD, 95-%-KI [−0,770; +0,809].
 > Die Richtung bleibt offen; kein Taktiksieger ausgewählt.

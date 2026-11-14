@@ -6,9 +6,13 @@
    Fixturekontext beachten. Neue Rollen, PI oder Startprofile zuerst nativ auditieren.
 2. [TACT-001-P0 abgeschlossen](experiments/TACT-001-P0-results.md): 128 Hauptmatches,
    23 technische Matches und Negativprobe. Primärintervall breit, Richtung offen.
-   Nächster separater Planungsschritt: praktisch relevantes Präzisionsziel und
-   Varianzreduktion prüfen, bevor eine größere Interaktionsbestätigung budgetiert
-   wird. Kein automatischer Start der hohen Power-Fallzahlen oder einer Optimierung.
+   [P1A-Präzisionsanalyse abgeschlossen](experiments/TACT-001-P1A-analysis.md):
+   keine neuen Matches. [Designvergleich](docs/TACT-001-P1A-design.md) empfiehlt
+   fünf Faktoren gemeinsam in Resolution V statt kleiner Interaktionsbestätigung.
+   [Separat zu erteilender P1B-Auftrag](experiments/TACT-001-P1B-order.md):
+   1.024 Hauptmatches als günstigere Entdeckung oder bevorzugt 2.048 für das
+   bedingte 90-%-Powerziel bei 0,20 xGD je Hauptkontrast. Kein automatischer Start;
+   neue C/D/E-Eingaben, Setup-Hashes, Seeds, technische Freigabe zuerst einfrieren.
 3. Karriere-PKM-Kapazitätsadapter und Standardsituationszähler sind technische
    Folgearbeiten. TRAIN-Längsschnitt erst nach echtem Kalender-/Teilnahmeaudit.
 4. [Gesamtroadmap](docs/ROADMAP.md) und [externe Studien](docs/EXTERNAL_RESEARCH.md)
