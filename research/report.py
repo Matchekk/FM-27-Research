@@ -41,3 +41,6 @@ def benchmark_figure(summary, path):
     ax.text(0,-.25,"Ein Durchgang je Stufe · einschließlich Start und Audit",transform=ax.transAxes,fontsize=9)
     fig.savefig(path,metadata={"Date":None})
     plt.close(fig)
+    path=Path(path)
+    if path.suffix.lower()==".svg":
+        path.write_text("\n".join(line.rstrip() for line in path.read_text(encoding="utf8").splitlines())+"\n",encoding="utf8")
