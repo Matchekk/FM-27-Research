@@ -48,7 +48,7 @@ class TestFMCaptureTests(unittest.TestCase):
         private = self.root / "local"
         out = private / "test-fm-research" / "capture-001.json"
         written = write_private_receipt(payload, out, private_root=private)
-        self.assertEqual(written, out)
+        self.assertEqual(written.resolve(), out.resolve())
         self.assertEqual(json.loads(out.read_text(encoding="utf8"))["project"], "Test FM Research")
         with self.assertRaises(CaptureError):
             write_private_receipt(payload, out, private_root=private)
