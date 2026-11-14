@@ -296,8 +296,18 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(result['diagnostic_status'],'captured_expected_marker_failure')
         self.assertEqual(result['stages'][3]['status'],'failed');self.assertFalse(result['tactics_released'])
         self.assertNotIn('PRIVATE_NAME',json.dumps(result))
+        marker=m.read(p['private']/'marker.json');marker['marker_checks']=[None]
+        write(p['private']/'marker.json',marker)
+        previous_reads=snapshot.call_count
+        with patch.object(m.subprocess,'Popen') as process:invalid=m.export(self.root)
+        process.assert_not_called();self.assertEqual(snapshot.call_count,previous_reads)
+        self.assertEqual(len(invalid['stages']),5);self.assertEqual(invalid['stages'][3]['status'],'failed')
+        self.assertEqual(invalid['diagnostic_status'],'not_captured_or_not_technically_valid')
+        self.assertIn(dict(receipt='marker.json',status='invalid_retained'),invalid['receipt_issues'])
         (p['private']/'snapshot-after.json').unlink()
-        self.assertEqual(m.export(self.root)['diagnostic_status'],'not_captured_or_not_technically_valid')
+        incomplete=m.export(self.root)
+        self.assertIsNone(incomplete['snapshot_stable'])
+        self.assertIn(dict(receipt='snapshot-after.json',status='missing'),incomplete['receipt_issues'])
 
     def test_close_failure_and_ledger_io_failure_still_attempt_posthash(self):
         p,save,module,snapshot,verify=self.child_fixture();save.close.side_effect=OSError('synthetic close')

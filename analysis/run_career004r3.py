@@ -571,6 +571,7 @@ def public_marker(receipt):
                 values['bytes_remaining_in_block']==values['block_end']-values['cursor'],'Diagnostic bounds inconsistent')
         checks=[]
         for item in receipt.get('marker_checks',[]):
+            require(type(item) is dict,'Invalid marker object')
             require(type(item.get('marker_index')) is int and 0<=item['marker_index']<4 and
                     type(item.get('expected_width_bytes')) is int and 1<=item['expected_width_bytes']<=16 and
                     type(item.get('fully_inside_block')) is bool and type(item.get('equals_expected_at_cursor')) is bool,

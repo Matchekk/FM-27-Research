@@ -60,6 +60,14 @@ späte GO-Fristprüfung und die Möglichkeit gültiger Cacheimporte trotz `-B`.
 Version2 prüft Monoton-/UTC-Restzeit vor GO, isoliert Parent-/Childimports über
 nicht existente private UUID-Cacheprefixe und pinnt `research/__init__.py`.
 Außerdem wird `--release` vor Inhaltslesen auf den festen privaten JSON-Bereich
-`local/night-001-career/releases/` und64KiB begrenzt. Vier unveränderte externe
+`local/night-001-career/releases/` und64KiB begrenzt. Sechs unveränderte externe
 Reviewregressionen bestanden gegen den Fixstand; finaler unabhängiger Review folgt
 nach erneutem Quellenfreeze. Es gab keinen Befund manipulierter Projektcaches.
+
+Ein weiterer enger Exportreview fand `null` als verschachtelten Markereintrag:
+Ein expliziter Dict-Typschutz klassifiziert ihn jetzt als `invalid_retained`.
+Der öffentliche Export erhält alle fünf Stufen und den ursprünglichen Fehlschlag;
+kein pauschales Schlucken zusätzlicher Exceptionklassen und keine Parseränderung.
+Die vollständige synthetische Capture-Regression prüft den beschädigten Beleg
+ohne erneuten Reader-/Snapshotzugriff. Auch nach zusätzlich fehlendem Nachhash
+bleiben beide Messlücken ausdrücklich erhalten.
