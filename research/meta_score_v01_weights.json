@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "model_id": "FM27_META_SCORE_V0_1",
+  "as_of": "2026-11-14",
+  "status": "EXPLORATORY_NOT_OUTCOME_CALIBRATED",
+  "attribute_scale": [
+    1,
+    20
+  ],
+  "score_scale": [
+    0,
+    100
+  ],
+  "formula": "score = sum(weight_percent * (attribute_value-1)) / 19; each position's weight_percent sums to 100",
+  "target": "Within-position screening rank from visible attributes; NOT calibrated win probability, expected points, goals, CA/PA, transfer value, tactical fit, season fitness or form",
+  "methods": {
+    "outfield": "Mean of normalized, positive same-metric goal-difference coefficient shares from Fm-Match-Lab Study 13b and Purity (50:50 methodological choice; not inverse-variance meta-analysis); rounded with largest remainder to exactly 100 percentage points.",
+    "gk": "Normalize Fm-Match-Lab Study 13b actual goals prevented coefficients for Agility, Reflexes, Aerial Reach, Acceleration, Handling.",
+    "sensitivity": "Compute scenario scores from source_weights_fraction (MAC vs Purity) and report heuristic [min(M,P)-3,max(M,P)+3] clamped to 0..100. Not a confidence interval. GK uses [S-5,S+5] because only one high-powered relevant study.",
+    "imputation": "Mac study provides outfield goal-difference table for nine chosen attributes, not Dribbling. Dribbling raw coefficient from Purity borrowed into Mac score normalization as a declared proxy; not a claim of a measured Mac goal-difference effect.",
+    "cm": "60% DM + 40% AM weights, a practical unvalidated heuristic.",
+    "position_mapping": {
+      "CB": "DC",
+      "FB": "DL/DR/WBL/WBR approx: Mac fullbacks vs Purity wingbacks",
+      "DM": "DMC/6",
+      "CM": "MC/8 proxy",
+      "AM": "AML/AMR/AMC proxy: Mac wide attackers vs Purity attacking midfielders",
+      "ST": "ST; Mac 2 forwards vs Purity 1 forward",
+      "GK": "GK"
+    }
+  },
+  "sources": [
+    {
+      "id": "MAC-13b",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/13b-value-by-position-random.md",
+      "matches_reported": 50000,
+      "role": "Source of nine outfield goal-difference coefficients and GK outcomes; outfield Dribbling xPts, not printed GD.",
+      "version": "FM27 27.0.1 external author report",
+      "scope": "One synthetic Gegenpress fixture family, dual-striker shape; other style run pending at publication"
+    },
+    {
+      "id": "PURITY-200K",
+      "url": "https://fm-arena.com/threads/attribute-importance-by-position-in-fm27-a-test-on-my-own-tactic.125/",
+      "matches_reported": 200000,
+      "role": "Second independent author outfield goal-difference coefficients; no GK",
+      "version": "FM27 November 2026 source as reported",
+      "scope": "Brentford 3-4-2-1, 50k random configs ×4 seeds; single striker; one club/tactic"
+    }
+  ],
+  "positions": {
+    "ST": {
+      "weights_pct": {
+        "acceleration": 19,
+        "pace": 21,
+        "jumping_reach": 16,
+        "stamina": 7,
+        "anticipation": 7,
+        "balance": 7,
+        "strength": 6,
+        "finishing": 8,
+        "concentration": 5,
+        "dribbling": 4
+      },
+      "source_weights_fraction": {
+        "mac": {
+          "acceleration": 0.20851063829787234,
+          "pace": 0.19148936170212766,
+          "jumping_reach": 0.1446808510638298,
+          "stamina": 0.06382978723404255,
+          "anticipation": 0.05531914893617021,
+          "balance": 0.08936170212765956,
+          "strength": 0.06808510638297872,
+          "finishing": 0.08936170212765956,
+          "concentration": 0.03404255319148936,
+          "dribbling": 0.05531914893617021
+        },
+        "purity": {
+          "acceleration": 0.1686746987951807,
+          "pace": 0.21686746987951805,
+          "jumping_reach": 0.17590361445783131,
+          "stamina": 0.0819277108433735,
+          "anticipation": 0.08915662650602409,
+          "balance": 0.057831325301204814,
+          "strength": 0.05060240963855421,
+          "finishing": 0.06506024096385542,
+          "concentration": 0.06265060240963854,
+          "dribbling": 0.03132530120481927
+        }
+      },
+      "source_effects_goal_difference_per_38_matches": {
+        "mac": {
+          "acceleration": 0.49,
+          "pace": 0.45,
+          "jumping_reach": 0.34,
+          "stamina": 0.15,
+          "anticipation": 0.13,
+          "balance": 0.21,
+          "strength": 0.16,
+          "finishing": 0.21,
+          "concentration": 0.08,
+          "dribbling": null
+        },
+        "purity": {
+          "acceleration": 0.7,
+          "pace": 0.9,
+          "jumping_reach": 0.73,
+          "stamina": 0.34,
+          "anticipation": 0.37,
+          "balance": 0.24,
+          "strength": 0.21,
+          "finishing": 0.27,
+          "concentration": 0.26,
+          "dribbling": 0.13
+        }
+      },
+      "limitations": [
+        "Mac Study 13b does not print a goal-difference coefficient for Dribbling in its short table; for score normalization ONLY the Purity Dribbling coefficient is temporarily borrowed (not counted as independent Mac replication)."
+      ]
+    },
+    "AM": {
+      "weights_pct": {
+        "acceleration": 17,
+        "pace": 21,
+        "jumping_reach": 9,
+        "stamina": 11,
+        "anticipation": 8,
+        "balance": 3,
+        "strength": 12,
+        "finishing": 6,
+        "concentration": 4,
+        "dribbling": 9
+      },
+      "source_weights_fraction": {
+        "mac": {
+          "acceleration": 0.1726618705035971,
+          "pace": 0.19424460431654675,
+          "jumping_reach": 0.15107913669064746,
+          "stamina": 0.11510791366906474,
+          "anticipation": 0.07913669064748201,
+          "balance": 0,
+          "strength": 0.10071942446043165,
+          "finishing": 0.043165467625899276,
+          "concentration": 0.043165467625899276,
+          "dribbling": 0.10071942446043165
+        },
+        "purity": {
+          "acceleration": 0.16393442622950818,
+          "pace": 0.21311475409836064,
+          "jumping_reach": 0.0273224043715847,
+          "stamina": 0.1092896174863388,
+          "anticipation": 0.08196721311475409,
+          "balance": 0.06557377049180327,
+          "strength": 0.14207650273224043,
+          "finishing": 0.07650273224043716,
+          "concentration": 0.04371584699453552,
+          "dribbling": 0.07650273224043716
+        }
+      },
+      "source_effects_goal_difference_per_38_matches": {
+        "mac": {
+          "acceleration": 0.24,
+          "pace": 0.27,
+          "jumping_reach": 0.21,
+          "stamina": 0.16,
+          "anticipation": 0.11,
+          "balance": 0,
+          "strength": 0.14,
+          "finishing": 0.06,
+          "concentration": 0.06,
+          "dribbling": null
+        },
+        "purity": {
+          "acceleration": 0.3,
+          "pace": 0.39,
+          "jumping_reach": 0.05,
+          "stamina": 0.2,
+          "anticipation": 0.15,
+          "balance": 0.12,
+          "strength": 0.26,
+          "finishing": 0.14,
+          "concentration": 0.08,
+          "dribbling": 0.14
+        }
+      },
+      "limitations": [
+        "Mac Study 13b does not print a goal-difference coefficient for Dribbling in its short table; for score normalization ONLY the Purity Dribbling coefficient is temporarily borrowed (not counted as independent Mac replication)."
+      ]
+    },
+    "DM": {
+      "weights_pct": {
+        "acceleration": 24,
+        "pace": 16,
+        "jumping_reach": 9,
+        "stamina": 13,
+        "anticipation": 5,
+        "balance": 3,
+        "strength": 11,
+        "finishing": 4,
+        "concentration": 7,
+        "dribbling": 8
+      },
+      "source_weights_fraction": {
+        "mac": {
+          "acceleration": 0.20300751879699247,
+          "pace": 0.19548872180451127,
+          "jumping_reach": 0.06766917293233082,
+          "stamina": 0.15037593984962405,
+          "anticipation": 0.07518796992481203,
+          "balance": 0.045112781954887216,
+          "strength": 0.11278195488721804,
+          "finishing": 0.03007518796992481,
+          "concentration": 0.06015037593984962,
+          "dribbling": 0.06015037593984962
+        },
+        "purity": {
+          "acceleration": 0.2804878048780488,
+          "pace": 0.13414634146341464,
+          "jumping_reach": 0.10975609756097561,
+          "stamina": 0.10975609756097561,
+          "anticipation": 0.024390243902439025,
+          "balance": 0.024390243902439025,
+          "strength": 0.0975609756097561,
+          "finishing": 0.04878048780487805,
+          "concentration": 0.07317073170731707,
+          "dribbling": 0.0975609756097561
+        }
+      },
+      "source_effects_goal_difference_per_38_matches": {
+        "mac": {
+          "acceleration": 0.27,
+          "pace": 0.26,
+          "jumping_reach": 0.09,
+          "stamina": 0.2,
+          "anticipation": 0.1,
+          "balance": 0.06,
+          "strength": 0.15,
+          "finishing": 0.04,
+          "concentration": 0.08,
+          "dribbling": null
+        },
+        "purity": {
+          "acceleration": 0.23,
+          "pace": 0.11,
+          "jumping_reach": 0.09,
+          "stamina": 0.09,
+          "anticipation": 0.02,
+          "balance": 0.02,
+          "strength": 0.08,
+          "finishing": 0.04,
+          "concentration": 0.06,
+          "dribbling": 0.08
+        }
+      },
+      "limitations": [
+        "Mac Study 13b does not print a goal-difference coefficient for Dribbling in its short table; for score normalization ONLY the Purity Dribbling coefficient is temporarily borrowed (not counted as independent Mac replication)."
+      ]
+    },
+    "FB": {
+      "weights_pct": {
+        "acceleration": 18,
+        "pace": 22,
+        "jumping_reach": 6,
+        "stamina": 15,
+        "anticipation": 9,
+        "balance": 5,
+        "strength": 7,
+        "finishing": 2,
+        "concentration": 7,
+        "dribbling": 9
+      },
+      "source_weights_fraction": {
+        "mac": {
+          "acceleration": 0.17365269461077845,
+          "pace": 0.2155688622754491,
+          "jumping_reach": 0.0658682634730539,
+          "stamina": 0.14970059880239522,
+          "anticipation": 0.08383233532934133,
+          "balance": 0.05389221556886228,
+          "strength": 0.05389221556886228,
+          "finishing": 0,
+          "concentration": 0.11377245508982037,
+          "dribbling": 0.08982035928143713
+        },
+        "purity": {
+          "acceleration": 0.18750000000000003,
+          "pace": 0.22727272727272732,
+          "jumping_reach": 0.05681818181818183,
+          "stamina": 0.15909090909090912,
+          "anticipation": 0.08522727272727273,
+          "balance": 0.05113636363636364,
+          "strength": 0.08522727272727273,
+          "finishing": 0.034090909090909095,
+          "concentration": 0.028409090909090915,
+          "dribbling": 0.08522727272727273
+        }
+      },
+      "source_effects_goal_difference_per_38_matches": {
+        "mac": {
+          "acceleration": 0.29,
+          "pace": 0.36,
+          "jumping_reach": 0.11,
+          "stamina": 0.25,
+          "anticipation": 0.14,
+          "balance": 0.09,
+          "strength": 0.09,
+          "finishing": 0,
+          "concentration": 0.19,
+          "dribbling": null
+        },
+        "purity": {
+          "acceleration": 0.33,
+          "pace": 0.4,
+          "jumping_reach": 0.1,
+          "stamina": 0.28,
+          "anticipation": 0.15,
+          "balance": 0.09,
+          "strength": 0.15,
+          "finishing": 0.06,
+          "concentration": 0.05,
+          "dribbling": 0.15
+        }
+      },
+      "limitations": [
+        "Mac Study 13b does not print a goal-difference coefficient for Dribbling in its short table; for score normalization ONLY the Purity Dribbling coefficient is temporarily borrowed (not counted as independent Mac replication)."
+      ]
+    },
+    "CB": {
+      "weights_pct": {
+        "acceleration": 21,
+        "pace": 15,
+        "jumping_reach": 22,
+        "stamina": 10,
+        "anticipation": 8,
+        "balance": 8,
+        "strength": 7,
+        "finishing": 1,
+        "concentration": 6,
+        "dribbling": 2
+      },
+      "source_weights_fraction": {
+        "mac": {
+          "acceleration": 0.19339622641509435,
+          "pace": 0.14622641509433965,
+          "jumping_reach": 0.2075471698113208,
+          "stamina": 0.09433962264150945,
+          "anticipation": 0.07075471698113209,
+          "balance": 0.11320754716981134,
+          "strength": 0.08018867924528304,
+          "finishing": 0.01886792452830189,
+          "concentration": 0.05660377358490567,
+          "dribbling": 0.01886792452830189
+        },
+        "purity": {
+          "acceleration": 0.2281879194630872,
+          "pace": 0.15436241610738252,
+          "jumping_reach": 0.2348993288590603,
+          "stamina": 0.09395973154362414,
+          "anticipation": 0.09395973154362414,
+          "balance": 0.05369127516778522,
+          "strength": 0.04697986577181207,
+          "finishing": 0,
+          "concentration": 0.06711409395973153,
+          "dribbling": 0.02684563758389261
+        }
+      },
+      "source_effects_goal_difference_per_38_matches": {
+        "mac": {
+          "acceleration": 0.41,
+          "pace": 0.31,
+          "jumping_reach": 0.44,
+          "stamina": 0.2,
+          "anticipation": 0.15,
+          "balance": 0.24,
+          "strength": 0.17,
+          "finishing": 0.04,
+          "concentration": 0.12,
+          "dribbling": null
+        },
+        "purity": {
+          "acceleration": 0.34,
+          "pace": 0.23,
+          "jumping_reach": 0.35,
+          "stamina": 0.14,
+          "anticipation": 0.14,
+          "balance": 0.08,
+          "strength": 0.07,
+          "finishing": 0,
+          "concentration": 0.1,
+          "dribbling": 0.04
+        }
+      },
+      "limitations": [
+        "Mac Study 13b does not print a goal-difference coefficient for Dribbling in its short table; for score normalization ONLY the Purity Dribbling coefficient is temporarily borrowed (not counted as independent Mac replication)."
+      ]
+    },
+    "CM": {
+      "weights_pct": {
+        "acceleration": 21,
+        "pace": 18,
+        "jumping_reach": 9,
+        "stamina": 12,
+        "anticipation": 6,
+        "balance": 3,
+        "strength": 12,
+        "finishing": 5,
+        "concentration": 6,
+        "dribbling": 8
+      },
+      "limitations": [
+        "CM is NOT a directly tested position in these papers: proxy = 60% DM plus 40% AM; no separate performance validation."
+      ],
+      "source_weights_fraction": {
+        "mac": {
+          "acceleration": 0.19086925947963432,
+          "pace": 0.19499107480932545,
+          "jumping_reach": 0.10103315843565748,
+          "stamina": 0.13626872937740034,
+          "anticipation": 0.07676745821388002,
+          "balance": 0.027067669172932327,
+          "strength": 0.1079569427165035,
+          "finishing": 0.0353112998323146,
+          "concentration": 0.05335641261426948,
+          "dribbling": 0.07637799534808243
+        },
+        "purity": {
+          "acceleration": 0.23386645341863255,
+          "pace": 0.16573370651739305,
+          "jumping_reach": 0.07678262028521925,
+          "stamina": 0.10956950553112088,
+          "anticipation": 0.047421031587365055,
+          "balance": 0.04086365453818472,
+          "strength": 0.11536718645874983,
+          "finishing": 0.059869385579101694,
+          "concentration": 0.06138877782220445,
+          "dribbling": 0.08913767826202852
+        }
+      }
+    },
+    "GK": {
+      "weights_pct": {
+        "agility": 43,
+        "reflexes": 35,
+        "aerial_reach": 10,
+        "acceleration": 7,
+        "handling": 5
+      },
+      "source_effects_goals_prevented_per_38_matches": {
+        "mac": {
+          "agility": 0.93,
+          "reflexes": 0.76,
+          "aerial_reach": 0.23,
+          "acceleration": 0.15,
+          "handling": 0.11
+        }
+      },
+      "limitations": [
+        "Single experimentally tested goalkeeper source; no independent GK randomized replication. GK weights use actual goals against rather than xG against, which misses shot-stopping."
+      ]
+    }
+  },
+  "decision_rules": {
+    "compare": "Intervals disjoint => robust in these two source-sensitivity scenarios only; overlap => gray zone, inspect context, role, sample, readiness.",
+    "absolute_tiers": "None validated: percentiles must be calibrated within league/position cohort in a representative holdout sample.",
+    "ready_state": "Separate flag for match condition, sharpness and position/role availability; no unvalidated arithmetic penalties.",
+    "stop": "Never present this as a model with tested match-prediction accuracy; train/validate on held-out real players/fixtures before use for autonomous purchases."
+  }
+}
