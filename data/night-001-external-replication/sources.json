@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "audit_id": "NIGHT-001-EXTERNAL-REPLICATION",
+  "status": "offline_source_audit_no_local_replication",
+  "base_commit": "95d94a4",
+  "access_window_utc": {
+    "start": "2026-11-14T20:58:59Z",
+    "end": "2026-11-14T21:06:48Z"
+  },
+  "scope": "Targeted original reports/code beyond the earlier ten-page audit; not a systematic literature review.",
+  "native_starts": 0,
+  "native_matches": 0,
+  "seeds_reserved": 0,
+  "career_advances": 0,
+  "game_assets_downloaded": 0,
+  "sources": [
+    {
+      "id": "REP-HG-ORIGINAL",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "HarvestGreen",
+      "role": "original_author_report",
+      "url": "https://sortitoutsi.net/content/78219/fm27-attribute-test-tactical-understanding-training-system-preset-tactics-ai-reverse-engineering-engine-for-test",
+      "publication_displayed": "2026-11-04 11:57:55",
+      "immutable_revision": null,
+      "author_build": "FM27; exact build unknown",
+      "reported_matches": 51000,
+      "population": "Age18, PA150, all attributes12, 180cm/70kg; coaches16, facilities20.",
+      "design": "One attribute set to1,6,18; preset Gegenpress424/442; five opponent formations,100 matches each over12 months; FMRTE state locks.",
+      "endpoints": [
+        "win_rate"
+      ],
+      "rng": "Not published on page",
+      "cluster": "Season/squad/opponent dependence unspecified",
+      "position": "No native position-mask manifest supplied",
+      "raw_access": "Attribute workbook linked at https://pixeldrain.com/u/oR2hwoSU; not downloaded; granularity/hash/license unknown.",
+      "finding": "Direct primary source behind downstream attribute guides; this is not our isolated raw60→80 estimand.",
+      "uncertainty": "No job-level variance or confidence interval audited; author notes limited/rushed sampling.",
+      "position_scope": "No native mask manifest; one preset IP424/OOP442. Constancy of attribute values during the season is not established by the page."
+    },
+    {
+      "id": "REP-MAC-01",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "CaioGraco-Mac",
+      "role": "author_report_plus_code",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/01-attribute-values.md",
+      "git_blob_sha1": "dc5d733d484edf2aeb37f856b094ac33444c0797",
+      "immutable_revision": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+      "publication_displayed": "2026-11-10",
+      "author_build": "27.0.1 (report); full run build unknown",
+      "reported_matches": 32700,
+      "population": "Ten saved fixtures from one newly promoted EPL club; real squads, bench and assistant/AI management.",
+      "design": "All tested-side squad members receive ±25 stored attribute points, clamped;300 matched fixture/seed pairs per contrast.",
+      "endpoints": [
+        "points",
+        "xGD",
+        "goals"
+      ],
+      "rng": "Ten fixtures × seeds1..30; same fixtures previously used on27.0.",
+      "cluster": "Fixed fixture-conditioned RNG precision differs from club/fixture generalization.",
+      "baseline": {
+        "points": 1.79,
+        "xGF": 2.11,
+        "xGA": 1.45
+      },
+      "code": [
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/attr_real.py",
+          "git_blob_sha1": "872282a6ea83578f0b8a0b850fa561391df272d1"
+        }
+      ],
+      "finding": "Baseline is accessible; whole-squad/clamped dose and live tactics differ from our starter-only D00.",
+      "uncertainty": "Previous-build correlation is internal reuse, not independent external replication.",
+      "position_scope": "Stored real-squad positions; full-squad dose, no complete published native mask/readback inventory audited."
+    },
+    {
+      "id": "REP-MAC-02",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "CaioGraco-Mac",
+      "role": "author_report_plus_code",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/02-real-vs-levelled.md",
+      "git_blob_sha1": "1fd4d5f24bcee9ad4bea3f4a8b03615c333e62b2",
+      "immutable_revision": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+      "publication_displayed": "2026-11-11",
+      "author_build": null,
+      "reported_matches": 65400,
+      "reuses_prior_study_arm": true,
+      "population": "A: real squads/ten real fixtures; B: same fixtures, both squads attributes12; C: one bundled synthetic sample.",
+      "design": "300 paired plus/minus contrasts per attribute; result is half the difference, representing+5 display points by author convention.",
+      "endpoints": [
+        "xGD",
+        "points"
+      ],
+      "rng": "A/B:30 seeds per fixture; C:300 seeds on one fixture.",
+      "cluster": "A/B versus C changes masks, body, tactics, fixture and start state together.",
+      "code": [
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/study2_levelled.py",
+          "git_blob_sha1": "fd05c330f36b4b767ef2c548ec8776f162cfcaf8"
+        }
+      ],
+      "finding": "Real-fixture versus synthetic estimates differ materially; positions alone are not isolated.",
+      "uncertainty": "Rounded mean/t allow approximate marginal SD reconstruction only; no cross-attribute covariance or raw pairs.",
+      "position_scope": "A/B retain real-fixture positions; C sets every position natural, alongside other setup changes."
+    },
+    {
+      "id": "REP-MAC-05",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "CaioGraco-Mac",
+      "role": "author_report_plus_code",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/05-everything-else.md",
+      "git_blob_sha1": "7291390869a887c896189820d525f148bf46b35d",
+      "immutable_revision": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+      "publication_displayed": "2026-11-11",
+      "author_build": null,
+      "reported_screen_matches": 35400,
+      "reported_confirmation_and_gk_matches": 18300,
+      "population": "Ten real fixtures, natural sharpness mostly90–100; assistant-managed squads.",
+      "design": "Code jointly sets sharpness and sharpness_secondary to5000/7500/10000 for every active squad member, including goalkeeper/bench.",
+      "endpoints": [
+        "points",
+        "xGD",
+        "GF",
+        "GA"
+      ],
+      "rng": "Screen seeds1..30 per fixture; selected sharpness100% confirmation31..120.",
+      "cluster": "Repeated real fixtures, natural comparator; selected internal confirmation.",
+      "code": [
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/study5_everything.py",
+          "git_blob_sha1": "7e173bf43276bb1d3388bc64bbab197c692578b5"
+        },
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/study5_confirm.py",
+          "git_blob_sha1": "f1d14819ca04bfd703f22acf3c8837ed3a7af3b1"
+        }
+      ],
+      "finding": "100% confirmation reports+0.10 points,+0.11xGD; not our7000→10000 ten-starting-outfield raw package.",
+      "uncertainty": "50%/75% effects are screen results; labels do not calibrate our FM UI or cache semantics.",
+      "position_scope": "Stored real-squad positions; joint state intervention covers active squad including GK and bench."
+    },
+    {
+      "id": "REP-MAC-13B",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "CaioGraco-Mac",
+      "role": "author_report_plus_code",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/13b-value-by-position-random.md",
+      "git_blob_sha1": "659f2b4c14cda759a8036ea44a53500c24b5cb30",
+      "immutable_revision": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+      "publication_displayed": "2026-11-14",
+      "author_build": null,
+      "reported_matches": 50000,
+      "population": "Synthetic EPL middle-eight squads; Gegenpress424; four opponents, both sides, two templates; familiarity80.",
+      "design": "Starter attributes jointly randomized±5 with clamping; position-sum regression and split-half filter.",
+      "endpoints": [
+        "xPts",
+        "goals",
+        "xGF",
+        "xGA"
+      ],
+      "rng": "Source assigns setting=c%16 and engine seed=floor(c/16)+1:3,125 numeric seeds over50,000 configurations.",
+      "cluster": "Repeated numeric seed is neither proof of identical events nor proof of correlation; sampling/cluster justification remains open.",
+      "code": [
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/random_study.py",
+          "git_blob_sha1": "df070c011f10218e7ddd748b176e35f79a8fde34"
+        }
+      ],
+      "finding": "Independent-author attempt to compare with Purity; raw replication not verified.",
+      "uncertainty": "OLS uses homoskedastic covariance; no explicit cluster covariance found. Split-half |t|>2 is not multiplicity-controlled external confirmation.",
+      "position_scope": "Starter positional groups ST/AM/DM/FB/CB and GK; synthetic squads, not a randomized unused-mask experiment."
+    },
+    {
+      "id": "REP-MAC-12",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "CaioGraco-Mac",
+      "role": "author_report_plus_code",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/12-thresholds.md",
+      "git_blob_sha1": "b39b898aae8440fc52712f27d1a952bdeeb5c94a",
+      "immutable_revision": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+      "publication_displayed": "2026-11-13",
+      "author_build": null,
+      "reported_matches": 21000,
+      "population": "Synthetic EPL middle-eight squads, Gegenpress, familiarity80; fixed templates/opponents.",
+      "design": "Thirteen attributes at1,3,6,9,12,15,18,20; shared unchanged baseline;200 paired observations per level.",
+      "endpoints": [
+        "xPts",
+        "points",
+        "goals"
+      ],
+      "rng": "25 seeds across fixed contexts",
+      "cluster": "Shared baselines correlated across doses; author uses GLS.",
+      "code": [
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/dose_response.py",
+          "git_blob_sha1": "2b21cc9ca053ca46b933e6a60133d758f5caa210"
+        }
+      ],
+      "finding": "Author finds different JR/speed dose-response shapes; motivates baseline×dose inquiry, not universal knees.",
+      "uncertainty": "Knees searched across candidate locations; exploratory and context-bound, without independent raw reanalysis.",
+      "position_scope": "Synthetic preset positions; no isolated positional manipulation."
+    },
+    {
+      "id": "REP-MAC-14",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "CaioGraco-Mac",
+      "role": "author_report",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/14-team-strength.md",
+      "git_blob_sha1": "f417883fa511750993ce87d7e1cd0e05591b4d4e",
+      "immutable_revision": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+      "publication_displayed": "2026-11-13",
+      "author_build": null,
+      "reported_matches": 8800,
+      "population": "Five EPL strength pairings, median CA approximately148/138/131; fixed familiarity80.",
+      "design": "Ten whole-squad attributes+5 versus unchanged baseline;160 pairs per condition.",
+      "endpoints": [
+        "xPts",
+        "points"
+      ],
+      "rng": "Matched context/seed comparisons; complete raw seed manifest not audited.",
+      "cluster": "Narrow top-to-bottom EPL strength range; context generalization limited.",
+      "finding": "No detected heterogeneity does not establish equivalent attribute values across strengths.",
+      "uncertainty": "Author reports approximately±0.15xPts resolution; do not discard strength interactions on non-rejection.",
+      "position_scope": "Synthetic preset positions; no isolated positional manipulation."
+    },
+    {
+      "id": "REP-MAC-PROTOCOL",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "CaioGraco-Mac",
+      "role": "original_execution_and_analysis_source",
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/overnight.py",
+      "git_blob_sha1": "d6438d560b6e95276dc502fb89c235754ee9cd42",
+      "immutable_revision": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+      "publication_displayed": null,
+      "author_build": null,
+      "population": null,
+      "design": "Resumable chunk runner; missing/failed match advances cursor and continues; paired analyses intersect available keys.",
+      "endpoints": [],
+      "rng": "Resume identity includes experiment/condition/seed; fixture identity encoded in condition.",
+      "cluster": "Failure/omission accounting requires original jobs, results and logs.",
+      "related_code": [
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/attr_real.py",
+          "git_blob_sha1": "872282a6ea83578f0b8a0b850fa561391df272d1"
+        },
+        {
+          "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/port/validation/study2_levelled.py",
+          "git_blob_sha1": "fd05c330f36b4b767ef2c548ec8776f162cfcaf8"
+        }
+      ],
+      "finding": "Code permits incomplete available-pair analysis; this is a reproducibility risk, not evidence that a reported run actually failed.",
+      "uncertainty": "No tracked raw JSONL/job ledger found at reviewed commit; historical runtime or exclusions not reconstructed.",
+      "position_scope": "Generic study protocol; positional setup is delegated to study builders."
+    },
+    {
+      "id": "REP-EDITOR-SHARP",
+      "access_window_utc": {
+        "start": "2026-11-14T20:58:59Z",
+        "end": "2026-11-14T21:06:48Z"
+      },
+      "author_engine_sha256": null,
+      "author_host_sha256": null,
+      "raw_job_rows_audited": 0,
+      "independently_reproduced": false,
+      "raw_data_license": null,
+      "family": "barak14-fm-editor",
+      "role": "independent_original_memory_mapping_notes",
+      "url": "https://github.com/barak14/fm-editor/blob/c597c89fc4f41b9bf9fd5e12fc6a71045f97c6b6/docs/fm27/memory-layout.md",
+      "git_blob_sha1": "6a1ae43a87fe65e0257afbb1f0cdc59f59b49e0f",
+      "immutable_revision": "c597c89fc4f41b9bf9fd5e12fc6a71045f97c6b6",
+      "publication_displayed": "Sharpness leads dated2026-11-01",
+      "author_build": "Multiple Steam/GamePass build notes; exact sharpness-test build unknown",
+      "population": "Live career-player memory under Proton; no controlled outcome study.",
+      "design": "Original notes explicitly classify condition/sharpness/fatigue as unverified or broken; observed UI words do not establish raw calibration.",
+      "endpoints": [],
+      "rng": null,
+      "cluster": null,
+      "finding": "Independent technical observations, not performance replication and not MATCH_PLAYER cache validation.",
+      "uncertainty": "Career-player offsets cannot establish our raw start-package scale, cache consumer or match effect.",
+      "position_scope": "Live PLAYER structure; not verified MATCH_PLAYER phase/cache correspondence."
+    }
+  ],
+  "repository_inventory": {
+    "repository": "caiograco289/Fm-Match-Lab",
+    "commit": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+    "api_tree_url": "https://api.github.com/repos/caiograco289/Fm-Match-Lab/git/trees/e92cf1416ca5c8c4b13009f8cf7d695f290b0368?recursive=1",
+    "truncated": false,
+    "tracked_entries": 176,
+    "tracked_jsonl_count": 0,
+    "tracked_results_job_table_or_design_npz_found": false,
+    "scope_limit": "Current tracked Git tree only; releases, ignored private files and offsite data not exhaustively inventoried.",
+    "gitignore": {
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/.gitignore",
+      "git_blob_sha1": "24321e3774a91a38354c60184ff5a2392acbd409"
+    },
+    "license": {
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/LICENSE",
+      "git_blob_sha1": "088e1a55d4e27eefcbce09616af8cc55ca39e8bb"
+    },
+    "notices": {
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/THIRD_PARTY_NOTICES.md",
+      "git_blob_sha1": "d1f2976b411bec195882cd165a414eb87d8f3049"
+    },
+    "publication_script": {
+      "url": "https://github.com/caiograco289/Fm-Match-Lab/blob/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/scripts/public_snapshot.py",
+      "git_blob_sha1": "38522a435c51a973bb52b8a8e079fbda7551720d"
+    },
+    "software_license": "MIT; grant does not relicense game-derived inputs/data.",
+    "raw_redistribution_permission_verified": false
+  },
+  "summary_arithmetic": {
+    "source_id": "REP-MAC-02",
+    "formula": "SE=abs(rounded_mean/rounded_t); SD=SE*sqrt(300). Rounding ranges assume displayed mean±0.005 and t±0.05, not sampling confidence intervals.",
+    "endpoint": "xGD; half of paired plus-minus difference representing+5 author-display points",
+    "observations": [
+      {
+        "arm": "A",
+        "attribute": "pace",
+        "n_assumed": 300,
+        "reported_mean": 0.51,
+        "reported_t": 11.1,
+        "approximate_SE": 0.04594594594594595,
+        "approximate_contrast_SD": 0.7958071278019168,
+        "rounding_SD_range": [
+          0.784471441993079,
+          0.8072453990026897
+        ]
+      },
+      {
+        "arm": "A",
+        "attribute": "acceleration",
+        "n_assumed": 300,
+        "reported_mean": 0.47,
+        "reported_t": 10.8,
+        "approximate_SE": 0.04351851851851851,
+        "approximate_contrast_SD": 0.7537628514420114,
+        "rounding_SD_range": [
+          0.7423074889580902,
+          0.765324775437411
+        ]
+      },
+      {
+        "arm": "A",
+        "attribute": "jumping_reach",
+        "n_assumed": 300,
+        "reported_mean": 0.34,
+        "reported_t": 8.2,
+        "approximate_SE": 0.04146341463414635,
+        "approximate_contrast_SD": 0.718167408016364,
+        "rounding_SD_range": [
+          0.7033176006491806,
+          0.7331994216089115
+        ]
+      },
+      {
+        "arm": "B",
+        "attribute": "pace",
+        "n_assumed": 300,
+        "reported_mean": 0.69,
+        "reported_t": 15.3,
+        "approximate_SE": 0.04509803921568627,
+        "approximate_contrast_SD": 0.781120952433023,
+        "rounding_SD_range": [
+          0.7729347252017466,
+          0.7893608598428654
+        ]
+      },
+      {
+        "arm": "B",
+        "attribute": "acceleration",
+        "n_assumed": 300,
+        "reported_mean": 0.44,
+        "reported_t": 10.5,
+        "approximate_SE": 0.0419047619047619,
+        "approximate_contrast_SD": 0.7258117669812438,
+        "rounding_SD_range": [
+          0.7141631291871674,
+          0.7375718749934455
+        ]
+      },
+      {
+        "arm": "B",
+        "attribute": "jumping_reach",
+        "n_assumed": 300,
+        "reported_mean": 0.28,
+        "reported_t": 6.9,
+        "approximate_SE": 0.04057971014492754,
+        "approximate_contrast_SD": 0.7028611972743272,
+        "rounding_SD_range": [
+          0.6853438447214983,
+          0.7206342776016498
+        ]
+      },
+      {
+        "arm": "C",
+        "attribute": "pace",
+        "n_assumed": 300,
+        "reported_mean": 0.15,
+        "reported_t": 7.4,
+        "approximate_SE": 0.020270270270270268,
+        "approximate_contrast_SD": 0.35109137991261025,
+        "rounding_SD_range": [
+          0.3371105598623989,
+          0.36526241520159997
+        ]
+      },
+      {
+        "arm": "C",
+        "attribute": "acceleration",
+        "n_assumed": 300,
+        "reported_mean": 0.26,
+        "reported_t": 13.2,
+        "approximate_SE": 0.0196969696969697,
+        "approximate_contrast_SD": 0.34116152270296074,
+        "rounding_SD_range": [
+          0.333338079947218,
+          0.349044459319964
+        ]
+      },
+      {
+        "arm": "C",
+        "attribute": "jumping_reach",
+        "n_assumed": 300,
+        "reported_mean": 0.32,
+        "reported_t": 14.4,
+        "approximate_SE": 0.022222222222222223,
+        "approximate_contrast_SD": 0.3849001794597506,
+        "rounding_SD_range": [
+          0.37757508953923624,
+          0.3922763153030559
+        ]
+      }
+    ],
+    "cannot_reconstruct": [
+      "covariance between JR, Acceleration and Pace",
+      "SD of JR-(Acceleration+Pace)/2",
+      "position-mask interaction SD",
+      "new Windows raw60→80 power"
+    ],
+    "raw_reproduction": false
+  },
+  "conclusion": {
+    "independent_external_raw_replication_verified": false,
+    "accessible_original_code": true,
+    "accessible_baseline_or_variance_information": true,
+    "raw_job_level_data_available_in_audited_tree": false,
+    "local_ARCHIVE_results_unchanged": true
+  }
+}
