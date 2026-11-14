@@ -1,5 +1,20 @@
 # Research Log
 
+## 2026-11-14 – Bestandsaufnahme und VALID-002
+
+- Leeres Arbeitsverzeichnis mit dem Forschungsrepository verbunden; sauberer Ausgang
+  `0b6a609`. [Bestandsaufnahme](docs/INVENTORY-2026-11-14.md), veröffentlicht in `a898b77`.
+- VALID-002-Prüfplan vor neuen Matchläufen in `894c51f` gepusht. Lokaler Build
+  `27.0.1+2503222`, Tactics Lab v1114.6, offizielle Referenz-DLL und Hosthash geprüft.
+- 42 technische Matches akzeptiert, acht Wiederholungsvergleiche exakt, Ergebnisse
+  bei 1/2/4 Workern identisch. FMF-Roundtrip und vollständige Events bestanden.
+  Karriere-PKM-Reader akzeptiert, Kaderübertragung scheitert mit Code 108;
+  keine Karrierefreigabe. [Reale Ergebnisse und Einschränkungen](experiments/VALID-002-adapter.md).
+- Ein Speicher-Preflightabbruch vor Simulation und die begrenzte lokale Speicherregel
+  sind dokumentiert. Keine wissenschaftlichen Leistungsvergleiche ausgeführt.
+- 173 Upstreamtests (172 bestanden, ein Skip), fünf bestehende Analysetests sowie
+  Nachrechnung des ursprünglichen Archivs bestanden. Alte ATTR-Dateien unverändert.
+
 ## 2026-11-07 – ATTR-007 abgeschlossen
 
 - Alle 1.600 Hauptmatches wurden auf Build `27.0.0+2493426` im ersten Versuch akzeptiert. Die 200 neuen Seed-Blöcke enthalten alle acht Arme. [Manifest](data/attr-007/manifest.json)

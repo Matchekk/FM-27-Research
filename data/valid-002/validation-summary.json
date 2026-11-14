@@ -1,0 +1,166 @@
+{
+  "experiment_id": "VALID-002",
+  "identity": {
+    "build": "27.0.1+2503222",
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+    "lab_version": "v1114.6",
+    "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+  },
+  "passed": true,
+  "allowed_scope": "bundled_fixture_controlled_start; tested_4231_roles_and_pressing",
+  "career_fixture_validated": false,
+  "career_longitudinal_validated": false,
+  "deterministic_comparisons": [
+    {
+      "arm": "home_baseline",
+      "seed": 2362620850,
+      "exact": true
+    },
+    {
+      "arm": "home_baseline",
+      "seed": 4019023467,
+      "exact": true
+    },
+    {
+      "arm": "home_pressing",
+      "seed": 2362620850,
+      "exact": true
+    },
+    {
+      "arm": "home_pressing",
+      "seed": 4019023467,
+      "exact": true
+    },
+    {
+      "arm": "away_baseline",
+      "seed": 2362620850,
+      "exact": true
+    },
+    {
+      "arm": "away_baseline",
+      "seed": 4019023467,
+      "exact": true
+    },
+    {
+      "arm": "away_pressing",
+      "seed": 2362620850,
+      "exact": true
+    },
+    {
+      "arm": "away_pressing",
+      "seed": 4019023467,
+      "exact": true
+    }
+  ],
+  "benchmark": [
+    {
+      "workers": 1,
+      "matches": 8,
+      "wall_seconds": 14.607856500000707,
+      "session_count": 1
+    },
+    {
+      "workers": 2,
+      "matches": 8,
+      "wall_seconds": 8.285127300000568,
+      "session_count": 2
+    },
+    {
+      "workers": 4,
+      "matches": 8,
+      "wall_seconds": 4.998576399999365,
+      "session_count": 4
+    }
+  ],
+  "full_event_audit": {
+    "passed": true,
+    "timing": {
+      "workers": 1,
+      "matches": 2,
+      "wall_seconds": 4.527807300000859,
+      "session_count": 1
+    }
+  },
+  "negative_tests": {
+    "schema": "rejected",
+    "role": "rejected",
+    "fmf": "rejected",
+    "binary": {
+      "returncode": 108,
+      "raw_log_sha256": "2113796c9287aaa0b5f94b0016dbbe4c6e92b33ea8be933aae757fac549bd450"
+    }
+  },
+  "fmf_roundtrip": {
+    "source_sha256": "48a0228760bd1ad79bc94e9e9caf9dd08d5661d6a1aec8e67eebe0c5b2426498",
+    "in_possession": [
+      "GK",
+      "DR",
+      "DCR",
+      "DCL",
+      "DL",
+      "DML",
+      "AMC",
+      "DMR",
+      "AMR",
+      "AML",
+      "ST"
+    ],
+    "out_of_possession": [
+      "GK",
+      "DR",
+      "DCR",
+      "DCL",
+      "DL",
+      "DMC",
+      "MCL",
+      "MCR",
+      "AMR",
+      "AML",
+      "ST"
+    ]
+  },
+  "fmf_export_sha256": "9d87a6bb8bf443b1ebef3f52a16a3cae8822ee26082fb0646dbac48634d3ac8f",
+  "fmf_verified_sections": [
+    "mentality",
+    "instructions",
+    "native_extra_team_bits",
+    "phases"
+  ],
+  "saved_fixture": {
+    "passed": false,
+    "source_sha256": "a4d1d2c14a0ab45ba31e28e4607ade16b1369c3f8ec64d1164c9d7b4f2c9eb1a",
+    "error_type": "RuntimeError",
+    "historical_replay_equivalence": false
+  },
+  "accepted_matches": 42,
+  "failed_match_attempts": 1,
+  "saved_fixture_not_run": 1,
+  "saved_failure": {
+    "native_reader_accepted": true,
+    "rejected_record_kind": 17,
+    "requested_roster_size": 23,
+    "returncode": 108,
+    "reason": "bundled roster exceeds saved fixture capacity"
+  },
+  "preliminary_failure": {
+    "stage": "disk_preflight",
+    "matches_started": 0,
+    "default_reserve_gib": 20,
+    "available_gib_rounded": 18.5
+  },
+  "validation_storage_policy": {
+    "reserve_gib": 2,
+    "artifact_limit_mib": 512,
+    "per_batch_cap": 16
+  },
+  "upstream_tests": {
+    "run": 173,
+    "passed": 172,
+    "skipped": 1
+  },
+  "scientific_performance_claims": false
+}

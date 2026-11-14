@@ -52,4 +52,101 @@ Die alte Engineversion wird nicht wiederhergestellt oder mit der neuen vermischt
 Ein gespeichertes Karriere-Match ist kein Karriere-Längsschnitt und seine erneute
 Simulation beweist noch keine Gleichheit mit dem historischen Spielablauf.
 
-Ergebnisabschnitt und publizierbare Messbelege folgen nach Ausführung.
+## Reale Ergebnisse
+
+**Teilfreigabe:** Der kontrollierte Betrieb auf dem mitgelieferten Fixture ist
+bestanden. Gespeicherte Karrierefixtures und Karriere-Längsschnittversuche sind
+weiterhin nicht freigegeben. Eine Freigabe neuer Rollen-/Anweisungskandidaten
+erfordert deren eigenen nativen Eingabeaudit.
+
+| Prüfung | Beobachtung |
+|---|---|
+| Aktueller Release | GitHub Releases/Tags am 14.11.2026 abgefragt; v1114.6 weiterhin neuester stabiler Tag |
+| Lokaler Build | Spielstartlog vom 13.11.: 27.0.1+2503222; Dateiversion 27.0.1; Steam-Build-ID 26577676 |
+| Native Kompatibilität | verified, null Warnungen, exakter Referenz-DLL-Hash |
+| Kernserie | 16/16 Matches akzeptiert; vier Eingaben × zwei Seeds × zwei Wiederholungen |
+| Wiederholbarkeit | 8/8 Vergleiche exakt in Score, Endtick und vollständiger publizierter Teamstatistik |
+| Phasen / Rollen / Seiten | Beide Phasen und alle 22 Startspieler nativ geprüft; alle 69 Attributwerte pro aktivem Spieler, Rollen/Duties und Positionsmasken; 23 aktive Spieler je Seite |
+| Seed-Override | Für jeden akzeptierten Lauf nativ geprüft; technische Seeds 2362620850 und 4019023467, vorab gegen altes Archiv geprüft |
+| Worker / Wiederverwendung | 24/24 Benchmarkmatches akzeptiert; sämtliche Resultate stimmen mit Kernserie überein; Protokoll 2, natürliche Freigabe pro Match |
+| Quick / vollständige Events | 2/2 vollständige Läufe akzeptiert, native Ereignisaudits bestanden; Endstand, Teamstatistik und Endtick identisch zum Quick-Lauf |
+| FMF | Lokale 4-2-3-1 importiert; native Serialisierung + erneuter nativer Import mit identischen Phasen, Rollen, Team-/Spieleranweisungen, Mentalität und zusätzlichen Teambits |
+| Negativproben | Ungültiges Schema, Rolle und FMF abgelehnt; ungültiges Binärsetup Code 108, kein akzeptiertes Matchresultat |
+| Gespeicherte PKM | Originalreader akzeptiert Datei; Szenarioübertragung verwirft Datensatzart 17 (Kadergröße 23), Code 108; 1 Fehlversuch, zweite geplante Wiederholung nicht gestartet |
+| Upstreamtests | 173 ausgeführt, 172 bestanden, 1 Windows-Symlink-Test übersprungen; keine Suitefehlfunktion |
+
+**42 akzeptierte technische Matches**, ein zurückgewiesener Karriereversuch und
+eine nicht gestartete Karrierewiederholung. Negative Eingaben sind separate Probes,
+keine Matches. Es wurden keine taktischen Effekte geschätzt oder Kandidaten gewählt.
+
+### Laufzeitmessung
+
+Identische acht Jobs; ein Durchgang je Workerzahl, einschließlich Prozessstart,
+nativer Ausführung und Nachverarbeitung. Keine statistische Präzisionsbehauptung.
+
+| Worker | Sessions | Sekunden | Matches/s |
+|---:|---:|---:|---:|
+| 1 | 1 | 14,608 | 0,548 |
+| 2 | 2 | 8,285 | 0,966 |
+| 4 | 4 | 4,999 | 1,600 |
+
+Die Kernserie dauerte mit zwei Workern 15,157 Sekunden. Vier Worker bleiben das
+Forschungslimit; Upstreams mögliche 256 Worker werden nicht übernommen.
+
+### Weitere Provenienz
+
+| Artefakt | SHA256 |
+|---|---|
+| Offizielles Release-EXE | `12be6612326b8264fbb2a9901555bfa1ebc964346b78f05af5854e1b473a8278` |
+| Eingebettetes Payload | `9b4d93d8c3a22beaeaca059a7af49df0a5381b95cc439809a421d5c5dda3c36b` |
+| Fixture | `39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6` |
+| Ressourcenfingerabdruck | `6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883` |
+| Importierte FMF | `48a0228760bd1ad79bc94e9e9caf9dd08d5661d6a1aec8e67eebe0c5b2426498` |
+
+Die 49 Python-Module des Releasepayloads stimmen nach Normalisierung von CRLF/LF
+textlich mit dem Tag überein. Der native Host stammt aus dem gehashten offiziellen
+Release; er wurde hier nicht aus C++ neu kompiliert. MSVC war nicht als nutzbare
+Toolchain im Suchpfad verfügbar. Die GitHub-Asset-Prüfsumme identifiziert das
+verwendete Binärartefakt; sie ist kein unabhängiger Reproducible-Build-Nachweis.
+
+### Fehler und dokumentierte Änderung am Prüfablauf
+
+Der erste Workerstart scheiterte **vor jedem Match** an Upstreams pauschaler
+20-GiB-Speicherreserve (18,5 GiB frei). Dafür bleiben der ursprüngliche Versuch
+und die leere Sessionliste lokal erhalten. Die neue Forschungsanbindung setzt
+ausschließlich für begrenzte technische Batches eine 2-GiB-Reserve, höchstens
+512 MiB Artefakte und 16 Jobs pro Batch. Die Funktion wird nach dem Aufruf
+wiederhergestellt; keine Upstreamdatei wurde geändert. Der neue Lauf verwendet
+ein eigenes Verzeichnis. Das ist eine explizite technische Anpassung nach
+Vorregistrierung, keine Änderung einer wissenschaftlichen Auswertungsregel.
+
+Der PKM-Readerfehler ist **kein Engine-Deserialisierungsfehler**: Die aufgezeichnete
+Mannschaft hat nicht die Kapazität des mitgelieferten Laborfixtures. Für gespeicherte
+Matches muss ein eigener Reader-/Roster-/Phasenadapter entwickelt und auditiert
+werden. Der Fehlversuch wird nicht durch ein anderes Match oder einen Seed ersetzt.
+Es ist weder historisch exaktes Replay noch Gleichheit von Handspiel, Urlaub,
+Instant Result oder Live-Coaching nachgewiesen. Karriereimport von Kadern und
+gespeicherte Match-TAC-Objekte ersetzen keine Karrierefortschreibung.
+
+### Wiederholung und Rollback
+
+`analysis/prepare_lab.py` prüft das Release-EXE gegen den Assetdigest und extrahiert
+nur in ein neues ignoriertes Verzeichnis. `analysis/validate002.py core` und
+`extras` erhalten explizite Runtime-, Spiel- und Artefaktpfade. Bereits vorhandene
+Versuchsverzeichnisse werden nicht überschrieben. Der öffentliche
+`analysis/export_valid002.py` exportiert nur erlaubte Felder und prüft dabei
+Rohlog-, Dump- und Startup-Receipt-Hashes erneut. Ein erneuter Validierungslauf
+benötigt neue Versuchspfade und einen aktualisierten technischen Plan; diese
+Ausführung setzt keine Serie automatisch fort.
+
+Rollback: neuen Runtimepfad abwählen, alten Host erhalten. Eine Rückkehr zu alten
+wissenschaftlichen Experimenten setzt auch deren exakte alte Engine und Ressourcen
+voraus; der alte Host allein reicht nicht. Die Spielinstallation wurde nicht geändert.
+
+[Messungen](../data/valid-002/matches.jsonl) ·
+[Fehlversuch](../data/valid-002/failures.jsonl) ·
+[Maschinenlesbare Teilfreigabe](../data/valid-002/validation-summary.json) ·
+[Hashes lokaler Belege](../data/valid-002/evidence-index.json).
+
+Der abschließende Plattform-Smoke-Test wird separat berichtet und bleibt innerhalb
+des Gesamtlimits von 48 vollständigen technischen Matches dieses Auftrags.

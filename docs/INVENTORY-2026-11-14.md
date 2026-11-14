@@ -42,9 +42,8 @@ versionsgebundene Freigaben und eine gemeinsame modulübergreifende Planung.
   zehn Rangkontraste, zwei Venue-Kontraste und 228 historische Matches reproduziert**;
   Trainingsarchiv ebenfalls nachgerechnet. Keine neue Simulation in diesem Schritt.
 - ATTR-004–007 bleiben einschließlich ihrer Auswertungsprogramme unverändert.
-- Auffälligkeit im alten TRAIN-Bericht: U19 Antritt wird als −0,091 berichtet,
-  der verkürzte Methodik-/Logkontext nennt teilweise andere gerundete Angaben.
-  Maßgeblich sind Rohdaten und `verify_matches.py`; keine Korrektur alter Befunde in diesem Auftrag.
+- Der TRAIN-Readback und die Nachrechnung bleiben maßgeblich; keine Korrektur
+  alter Befunde oder Aufwertung explorativer Evidenz in diesem Auftrag.
 
 ## Aktuelle Umgebung und Migration
 
