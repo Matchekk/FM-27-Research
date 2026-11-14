@@ -39,7 +39,8 @@ in einem separaten zweiten Verzeichnis korrigiert; vor Freeze folgte Build3
 mit Consumer-Cachefenstern. Keine nativen oder wissenschaftlichen Retries.
 
 **Fallzahl/Kosten:** vorgeschlagen16Vollmatches in4gepaarten technischen Zellen,
-2negativeProbes,2separateLoaderchecks.180Child-/900UTC-s,ein Worker,globaleCap4.
+2negativeProbes,2vorangestellteLoaderchecks =20logischeCLI-Probes,genau4neueSeeds.
+180Child-/900UTC-s,ein Worker,globaleCap4.
 Keine Power- oder Wirkungsbehauptung aus technischem Gleichheitstest.
 
 **Blocker bis Rootabnahme:** neue Hostidentität/Loader, originale Inputs und Seeds,

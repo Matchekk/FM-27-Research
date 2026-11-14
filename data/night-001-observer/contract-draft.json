@@ -22,9 +22,9 @@
   "full_match_plan": 16,
   "comparison_unit": "four_exact_same_seed_same_input_runs_per_context_side",
   "seeds": {
-    "new_required": 5,
+    "new_required": 4,
     "paired_input_cells": 4,
-    "negative_only": 1,
+    "negative_only": 0,
     "reservation": null,
     "root_central_registry_required": true,
     "historical_and_other_namespaces_excluded": true,
@@ -36,14 +36,16 @@
       "host": "observer",
       "env_value": "2",
       "expected_exit": 252,
-      "natural_finish_allowed": false
+      "natural_finish_allowed": false,
+      "seed_policy": "reuse_first_reserved_technical_cell_seed_no_additional_seed"
     },
     {
       "id": "invalid_scenario_binary",
       "host": "observer",
       "env_value": "1",
       "expected_exit": 108,
-      "natural_finish_allowed": false
+      "natural_finish_allowed": false,
+      "seed_policy": "no_seed"
     }
   ],
   "total_match_attempt_cap": 18,
@@ -101,5 +103,11 @@
     "effectiveness_region_hex",
     "statistics_cache_region_hex bytes89/8a"
   ],
-  "aa_excluded_uninterpreted_region": "runtime_near_morale_region_hex retained and hashed, not an A/A endpoint"
+  "aa_excluded_uninterpreted_region": "runtime_near_morale_region_hex retained and hashed, not an A/A endpoint",
+  "native_cli_attempt_cap": 20,
+  "logical_probe_order": [
+    "two_loader_checks_original_and_observer",
+    "sixteen_full_matches",
+    "two_expected_negative_rejections"
+  ]
 }

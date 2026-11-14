@@ -99,9 +99,13 @@ Observer an wiederholt. **16Vollmatches**, keine Leistungsinferenz.
 Vier unabhängige technische Seedzellen, keine16 unabhängigen Wirkungsreplikate.
 
 Zwei weitere erwartete Abweisungen: Observerwert2→252 und beschädigtes Binärformat
-→108, ohne natürliches Ende. Fünfter frischer Seed nur für die Negativprobe;
-keine historischen/anderen reservierten Seeds und keine Ersatzseeds. Zwei
-zusätzliche Loader-/Imageprüfungen sind separat vorab begrenzt, keine Vollmatches.
+→108, ohne natürliches Ende. Es werden genau vier frische Seeds reserviert:
+die Umgebungsnegativprobe nutzt den Seed der ersten technischen Zelle ohne
+einen weiteren Seed; die beschädigte Binärprobe verwendet keinen Seed.
+Keine historischen/anderen reservierten Seeds und keine Ersatzseeds. Zwei
+Loader-/Imageprüfungen (Originalhost/neuer Host) erfolgen vor den Vollmatches.
+Damit sind **20logische native CLI-Probes =2Loader+16Vollmatches+2Negative**
+vorab begrenzt; die Loader sind keine zusätzlichen Matches.
 
 Primäres technisches Kriterium: exakt gleiche Scores, Endticks/Clock und sämtliche
 originalen Teamstatistiken zwischen den vier Modi jeder Zelle. Sekundäre Gates:
@@ -118,7 +122,7 @@ CI/Independent Review und alle Identitätsgates prüfen. **180s kumulierte Child
 900s unverrückbare UTC-Frist, ein gewählter Worker (globale Obergrenze4),90s ohne
 Fortschritt,512MiB private Artefakte/20GiB Speicherreserve.** Globales Nachtbudget
 und bestehende zentrale NativeLease zusätzlich zwingend; Root ist alleiniger
-nativer Supervisor. Alle18Match-/Negativplätze und2Loaderplätze erhalten;
+nativer Supervisor. Alle20CLI-Probeplätze (18Match-/Negativplätze und2Loader) erhalten;
 Gatefehler stoppen,kein Retry/Reset/Ersetzen. Kein gebündelter automatischer Mainlauf.
 
 ## Tatsächlicher Implementierungsstand
