@@ -1,0 +1,1554 @@
+{
+  "high_press-0-R00": {
+    "treatment": {
+      "id": "R00",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": -1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "d46d25e64cbbe7106f261fc298dd825d756acda815abe489fb30c90670b008de"
+  },
+  "high_press-0-R10": {
+    "treatment": {
+      "id": "R10",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": -1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "31790ad9c0cad236d5bb5d81da22957a0f12a21370ea4b9e00a338b460af4b19"
+  },
+  "high_press-0-R01": {
+    "treatment": {
+      "id": "R01",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": 1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "e063e59c0d72a24bbcb2c8c5c4d7ec6a87fde578ecc0f63d25b9ce4b90d7e889"
+  },
+  "high_press-0-R11": {
+    "treatment": {
+      "id": "R11",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": 1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "1b10bef3c1c8ffbd143338f71ded7f6aade0a9091504582a42e67eae1c619e74"
+  },
+  "high_press-1-R00": {
+    "treatment": {
+      "id": "R00",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": -1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "87f25c025bcf97df1f3296ac8a32f99ae6aa552eb7baefa23a627ed1fa43422e"
+  },
+  "high_press-1-R10": {
+    "treatment": {
+      "id": "R10",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": -1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "9e8b13317f8d248ab7b8003c1176c3af45aa80102bbf5432ee8c631287cd6f62"
+  },
+  "high_press-1-R01": {
+    "treatment": {
+      "id": "R01",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": 1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "671811e85d9ad872192e8b382adad38ec053158aa50d1ae399048081de17db85"
+  },
+  "high_press-1-R11": {
+    "treatment": {
+      "id": "R11",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": 1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "084495b70c0a6816b30bdaf03e6e9679443ca899d2b3ceba310f018ea22ef10b"
+  },
+  "deep_block-0-R00": {
+    "treatment": {
+      "id": "R00",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": -1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "3ac0c47df1fd4611088ad56db4e72c42a7ef1758b2eb2a8efdaa451bddc4ae15"
+  },
+  "deep_block-0-R10": {
+    "treatment": {
+      "id": "R10",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": -1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "36f12cf40d19f1d8e716cf9524b1afe7b4d658eb6c5ff91495301cf818a33c10"
+  },
+  "deep_block-0-R01": {
+    "treatment": {
+      "id": "R01",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": 1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "1838209c2fba4a1c57df476be3d01aca202f7a3a85386b331a92b9b90f9d03b3"
+  },
+  "deep_block-0-R11": {
+    "treatment": {
+      "id": "R11",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": 1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 0,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 0,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "6a627d8a186f3ecbf179035b8c8204a6b94f6b542250467f70d1ca37f9790caa"
+  },
+  "deep_block-1-R00": {
+    "treatment": {
+      "id": "R00",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": -1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "e62b6e70c6cc48f008fb32c47c3b4f7d47cbfbc8d4f81c2c920ff92df866c7b6"
+  },
+  "deep_block-1-R10": {
+    "treatment": {
+      "id": "R10",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": -1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "686b9b63c523b5eab1d1520c89f9c8d65484d66524d3e2ec3fb1ca121cc350c5"
+  },
+  "deep_block-1-R01": {
+    "treatment": {
+      "id": "R01",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": 1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 40
+      }
+    ],
+    "setup_sha256": "d11b2237d402f355f098d7605d4d4f3d33d0b9304f7154007ca865334e7d972f"
+  },
+  "deep_block-1-R11": {
+    "treatment": {
+      "id": "R11",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": 1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    "starting_outfield_roster_slots": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "changes": [
+      {
+        "side": 1,
+        "roster_slot": 1,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 2,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 3,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 4,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 5,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 6,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 7,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 8,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 9,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      },
+      {
+        "side": 1,
+        "roster_slot": 10,
+        "attribute": 52,
+        "before": 60,
+        "after": 80
+      }
+    ],
+    "setup_sha256": "f694891fb6904871d8b672dbb5b5f23f0132433ff282356a1ede02e420aafb73"
+  }
+}

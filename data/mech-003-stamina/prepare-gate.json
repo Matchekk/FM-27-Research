@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "published_commit": "930d4ac6a496d6b13e1f9f257c587b8e50f9b634",
+  "ci_run": 43630265662,
+  "independent_review_document": "docs/night-001/MECH003-FIX-REVIEW.md",
+  "independent_review_sha256": "ad63eef12735a6bd612fbd26f236d4f6f8f9d035f7313d9d1eb415bae3690b7c",
+  "scope": "one preparation loader only; no technical matches or main release"
+}

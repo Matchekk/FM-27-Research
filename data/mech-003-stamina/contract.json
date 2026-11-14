@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "experiment_id": "MECH-003-STAMINA-R0",
+  "module": "MECH",
+  "kind": "native",
+  "stage": "discovery",
+  "status": "draft",
+  "hypothesis": "Higher native Stamina improves average xGD over the two frozen pressing levels in the fixed D00 synthetic context.",
+  "control": "R00: ten starting outfield players Stamina52 raw40, Standard pressing; not the original raw60 attribute baseline.",
+  "intervention": "Full2x2 Stamina52 raw40/80 and TriggerPress Standard/MoreOften; only tested-side ten starting outfield ability values and one team instruction differ.",
+  "conditions": "D00 IP4231/OOP4411, same known opponents, phases, roles, PI, positions, profiles, management and all nonintervened abilities; no experimental execution, pool or observer.",
+  "seed_namespace": "MECH-003-STAMINA-R0/main-v1",
+  "identity": {
+    "build": "27.0.1+2503222",
+    "engine_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "adapter_host_sha256": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "adapter_version": "fm27_desktop_8c6971ce_adapter_v1",
+    "lab_version": "v1114.6",
+    "lab_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+    "fixture_sha256": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "resource_fingerprint": "6b47303bf12762f83dc0d83485de44ce139363d0a399959bcf496370e18c8883"
+  },
+  "metrics": {
+    "primary": "xgd",
+    "secondary": [
+      "points",
+      "gf",
+      "ga",
+      "xgf",
+      "xga"
+    ],
+    "plausibility": []
+  },
+  "design": {
+    "unit": "seed_block",
+    "n_blocks": 32,
+    "sides": [
+      0,
+      1
+    ],
+    "control_arm": "R00",
+    "matrix": [
+      {
+        "id": "R00",
+        "levels": {
+          "STAMINA": -1,
+          "PRESS": -1
+        },
+        "stamina_raw": 40,
+        "pressing_id": 1313689463,
+        "pressing_bit": 0
+      },
+      {
+        "id": "R10",
+        "levels": {
+          "STAMINA": 1,
+          "PRESS": -1
+        },
+        "stamina_raw": 80,
+        "pressing_id": 1313689463,
+        "pressing_bit": 0
+      },
+      {
+        "id": "R01",
+        "levels": {
+          "STAMINA": -1,
+          "PRESS": 1
+        },
+        "stamina_raw": 40,
+        "pressing_id": 2000905329,
+        "pressing_bit": 66
+      },
+      {
+        "id": "R11",
+        "levels": {
+          "STAMINA": 1,
+          "PRESS": 1
+        },
+        "stamina_raw": 80,
+        "pressing_id": 2000905329,
+        "pressing_bit": 66
+      }
+    ],
+    "matrix_sha256": "427e323bda523e31e78bfdfb3fd6da28d848222e29fd632fd96189ddecadc458",
+    "setups": {
+      "high_press": {
+        "0": {
+          "R00": "d46d25e64cbbe7106f261fc298dd825d756acda815abe489fb30c90670b008de",
+          "R10": "31790ad9c0cad236d5bb5d81da22957a0f12a21370ea4b9e00a338b460af4b19",
+          "R01": "e063e59c0d72a24bbcb2c8c5c4d7ec6a87fde578ecc0f63d25b9ce4b90d7e889",
+          "R11": "1b10bef3c1c8ffbd143338f71ded7f6aade0a9091504582a42e67eae1c619e74"
+        },
+        "1": {
+          "R00": "87f25c025bcf97df1f3296ac8a32f99ae6aa552eb7baefa23a627ed1fa43422e",
+          "R10": "9e8b13317f8d248ab7b8003c1176c3af45aa80102bbf5432ee8c631287cd6f62",
+          "R01": "671811e85d9ad872192e8b382adad38ec053158aa50d1ae399048081de17db85",
+          "R11": "084495b70c0a6816b30bdaf03e6e9679443ca899d2b3ceba310f018ea22ef10b"
+        }
+      },
+      "deep_block": {
+        "0": {
+          "R00": "3ac0c47df1fd4611088ad56db4e72c42a7ef1758b2eb2a8efdaa451bddc4ae15",
+          "R10": "36f12cf40d19f1d8e716cf9524b1afe7b4d658eb6c5ff91495301cf818a33c10",
+          "R01": "1838209c2fba4a1c57df476be3d01aca202f7a3a85386b331a92b9b90f9d03b3",
+          "R11": "6a627d8a186f3ecbf179035b8c8204a6b94f6b542250467f70d1ca37f9790caa"
+        },
+        "1": {
+          "R00": "e62b6e70c6cc48f008fb32c47c3b4f7d47cbfbc8d4f81c2c920ff92df866c7b6",
+          "R10": "686b9b63c523b5eab1d1520c89f9c8d65484d66524d3e2ec3fb1ca121cc350c5",
+          "R01": "d11b2237d402f355f098d7605d4d4f3d33d0b9304f7154007ca865334e7d972f",
+          "R11": "f694891fb6904871d8b672dbb5b5f23f0132433ff282356a1ede02e420aafb73"
+        }
+      }
+    },
+    "arms": [
+      {
+        "id": "R00",
+        "setup_sha256": "80ca44ffdb42a498b206fa149a973701d219cdaed9795d06134fd321974ff801"
+      },
+      {
+        "id": "R10",
+        "setup_sha256": "ce7f4a348f555ae4a1c0e0bd709cec4c34a2de2fb199f379ea281a4d30f9272f"
+      },
+      {
+        "id": "R01",
+        "setup_sha256": "79ede205af44bf2c2f90231c003e68fd1921656ee52f5630d9f1a10d9a198414"
+      },
+      {
+        "id": "R11",
+        "setup_sha256": "88103f5e74dd32f42d4a1f38f82f8189861885ef8fac8182b9e878af979471b4"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "high_press",
+        "opponent": "high_press",
+        "strength": "fixed identical synthetic nonintervened profiles; only declared Stamina/pressing treatment differs",
+        "split": "discovery"
+      },
+      {
+        "id": "deep_block",
+        "opponent": "deep_block",
+        "strength": "fixed identical synthetic nonintervened profiles; only declared Stamina/pressing treatment differs",
+        "split": "discovery"
+      }
+    ]
+  },
+  "science": {
+    "alpha": 0.05,
+    "power": 0.9,
+    "min_effect": 0.3,
+    "multiple_testing": "holm",
+    "family_size": 7,
+    "primary_contrast": "STAMINA",
+    "contrast_coefficients": {
+      "STAMINA": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5
+      ],
+      "PRESS": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "STAMINAxPRESS": [
+        1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ]
+    },
+    "secondary_contrasts": [
+      [
+        "STAMINA",
+        "points"
+      ],
+      [
+        "STAMINA",
+        "gf"
+      ],
+      [
+        "STAMINA",
+        "ga"
+      ],
+      [
+        "STAMINA",
+        "xgf"
+      ],
+      [
+        "STAMINA",
+        "xga"
+      ],
+      [
+        "PRESS",
+        "xgd"
+      ],
+      [
+        "STAMINAxPRESS",
+        "xgd"
+      ]
+    ],
+    "analysis": "Stamina marginal raw80-minus40 on xGD primary. Side means per seed, context weights1/2; Welch95 and20000 full-block stratified bootstrap. Exactly Holm7 secondary.",
+    "exclusions": "None; incomplete blocks technical status only. No replacement seed, retry, winner selection or raw60 baseline inference.",
+    "negative_controls": [
+      "16cells twice=32technical full matches/16exactA/A pairs",
+      "invalid binary expected exit108",
+      "Stamina0/101/bool and unknown pressing ID rejected offline"
+    ],
+    "readback_fields": [
+      "all69attribute values and23profile fields for46active players after original preparation",
+      "actual22player IP/OOP bindings;44roles/positions/PI cells;748PIgroups",
+      "Stamina ten40/80 and pressing native0/66; every other input unchanged",
+      "effective seed and natural score/endtick"
+    ],
+    "stopping_rule": "512main,32technical+1negative;3loader+2capability probes separately reserved;process caps36technical/514main;600supervised child sec/1200immutableUTC;NightMaster1800sec/23UTC also mandatory;max4workers90s;first gate error stops.",
+    "selection_rule": "No final candidate or attribute ranking; estimate controlled total effects only, no fatigue mediation or career transfer.",
+    "power_basis": "Unknown new Stamina contrast SD; practical .30xGD, desired full95width .50; no90%power guarantee. Future new-seed planning for .20/.30 from observed and simultaneous normal-model SD upper bounds.",
+    "context_weights": [
+      0.5,
+      0.5
+    ],
+    "side_weights": [
+      0.5,
+      0.5
+    ],
+    "desired_full_ci_width": 0.5,
+    "bootstrap_resamples": 20000
+  },
+  "budget": {
+    "max_matches": 512,
+    "max_workers": 4,
+    "timeout_seconds": 90,
+    "max_technical_attempts": 33,
+    "total_native_wall_seconds": 600,
+    "absolute_study_wall_seconds": 1200,
+    "raw_artifact_limit_bytes": 2147483648,
+    "disk_reserve_bytes": 21474836480
+  },
+  "execution": {
+    "code_sha256": {
+      "research/stamina003.py": "e27fb099e6217fb8ab902af653eaf3538fec78a8773db8c02396d06141e174c2",
+      "analysis/run_mech003.py": "6ea1215ffedf3bf2dfedf7b668db995aac183c4e1a18434659cb74223a9c81a9",
+      "analysis/analyse_mech003.py": "e9683d92f21ceb26eac4f67255f7a6d65e05bfd9d3af1a501891ff536b8dce6e",
+      "analysis/export_mech003.py": "2df4424d9ea0a90c7eed1b4dc279f68c22dfef6b70c0279e7eea5851a842d16d",
+      "analysis/verify_mech003.py": "264567bdb5221e06eab339423509a75663a784b79f8c041e93aff86826c5e895",
+      "research/native.py": "0a9b143d8b51d3e2108c6f60946ca1ea280da4f455299b8718e7303cc168366c",
+      "research/stats.py": "13cc3ae64d85904dd6acaab08fb06425d29b7b8cb9344fad84ee6d32a763a331",
+      "research/core.py": "94ef5c76f56f65adf495df1632da7cb99701d25c64ad6846a6d45872c6730ab6",
+      "research/cli.py": "8d05e287d2667fb52f6c6a5cb10512560b9e9646ecfa4c80ac03c6a28a1e1bcc",
+      "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+      "research/study_budget.py": "7d20b2b9fd2ea1addb64bbec8f6976b971e8746d9d9977fc2e87370e45c93608",
+      "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e",
+      "research/validation003.py": "5c29945950e21ef183397b92d1cb8d09f38a300ef1de51d9b356f04bd956af1d",
+      "research/night_control.py": "2ebd010b0e5da365780bc315b93c4c662f2496c6cedeba0a2bcc65f4999b5aea",
+      "analysis/night_supervise.py": "63bbf08ce8d19474bba956140deca44ab43cef70f7c719cec229090d10148791",
+      "research/native_process005.py": "03c50200bb46c3daaeeba5901502f9eede04f2bba7ad04884b2d3dd6ebaa8faf"
+    },
+    "artifacts": {
+      "contract-draft.json": "b2668e0632af04402bbf12ecddc40550d14744196f022255d0f5975add43c19b",
+      "inputs.json": "43544d984511579c9042bfe23d1ce964302762a822df6abfe4a359ade419bcc4",
+      "seed-plan.json": "5cba87c85bfe053229138c1af129ea53e9c94ee6813801e1b03bee7bad23f816",
+      "design-matrix.json": "758dc2d066e847b75a0841a726c9d4145eda8355c49aa0aeb99cbc57f14b9007",
+      "intervention-manifest.json": "2e8792742d3430b0f9878a691ea19a1a0dc8ce8c6efdea910c468302782eb4a5",
+      "offline-negative-controls.json": "3d7c6f5e7d3db383e200c396a239a806c67e120cf18ccdb02954328e18981073",
+      "binary-diff-audit.json": "1a44cadf3ef46bb9945e4db220408548fbb55232dd4bb319b1a7eb199a92fc77"
+    }
+  },
+  "preregistration": {
+    "commit": null,
+    "document": "experiments/MECH-003-stamina-preregistration.md",
+    "document_sha256": null,
+    "analysis": "analysis/analyse_mech003.py",
+    "analysis_sha256": null
+  },
+  "native_process_plan": {
+    "loader_checks": 3,
+    "capability_checks": 2,
+    "probe_jobs": [
+      {
+        "key": "loader-check-image-prepare",
+        "kind": "technical",
+        "phase": "prepare",
+        "probe": "loader"
+      },
+      {
+        "key": "loader-check-image-technical",
+        "kind": "technical",
+        "phase": "technical",
+        "probe": "loader"
+      },
+      {
+        "key": "loader-check-image-main",
+        "kind": "main",
+        "phase": "main",
+        "probe": "loader"
+      },
+      {
+        "key": "worker-capabilities-technical",
+        "kind": "technical",
+        "phase": "technical",
+        "probe": "capabilities"
+      },
+      {
+        "key": "worker-capabilities-main",
+        "kind": "main",
+        "phase": "main",
+        "probe": "capabilities"
+      }
+    ],
+    "reservation_caps": {
+      "technical": 36,
+      "main": 514
+    },
+    "warm_host_starts": {
+      "technical": 4,
+      "main": 64
+    },
+    "capsule_process_limit": 10,
+    "containment_before_runtime_import": true,
+    "cleanup_required_before_lease_release": true
+  }
+}

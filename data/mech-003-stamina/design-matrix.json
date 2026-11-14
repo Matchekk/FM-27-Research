@@ -1,0 +1,45 @@
+{
+  "matrix": [
+    {
+      "id": "R00",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": -1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    {
+      "id": "R10",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": -1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 1313689463,
+      "pressing_bit": 0
+    },
+    {
+      "id": "R01",
+      "levels": {
+        "STAMINA": -1,
+        "PRESS": 1
+      },
+      "stamina_raw": 40,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    },
+    {
+      "id": "R11",
+      "levels": {
+        "STAMINA": 1,
+        "PRESS": 1
+      },
+      "stamina_raw": 80,
+      "pressing_id": 2000905329,
+      "pressing_bit": 66
+    }
+  ],
+  "matrix_sha256": "427e323bda523e31e78bfdfb3fd6da28d848222e29fd632fd96189ddecadc458"
+}

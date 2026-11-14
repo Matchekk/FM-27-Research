@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "probes": [
+    {
+      "context": "high_press",
+      "side": 0,
+      "kind": "below_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "kind": "above_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "kind": "bool",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 0,
+      "kind": "unknown_pressing_id",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "kind": "below_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "kind": "above_range",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "kind": "bool",
+      "rejected": true
+    },
+    {
+      "context": "high_press",
+      "side": 1,
+      "kind": "unknown_pressing_id",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "kind": "below_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "kind": "above_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "kind": "bool",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 0,
+      "kind": "unknown_pressing_id",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "kind": "below_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "kind": "above_range",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "kind": "bool",
+      "rejected": true
+    },
+    {
+      "context": "deep_block",
+      "side": 1,
+      "kind": "unknown_pressing_id",
+      "rejected": true
+    }
+  ]
+}
