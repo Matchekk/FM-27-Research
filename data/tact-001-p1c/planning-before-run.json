@@ -1,0 +1,156 @@
+{
+  "source": "P1B D15-D00 points; selected on xGD, conditional planning only",
+  "context_sd": [
+    1.3166696440690442,
+    1.58742221043853
+  ],
+  "projection_64": {
+    "se": 0.12890052223345122,
+    "df": 121.83662914381591,
+    "full_ci_width": 0.5103497707644857,
+    "power": 0.21120539420711243
+  },
+  "future": {
+    "assumptions": "Fixed equal contexts, equal new n per context, paired side means; noncentral Welch-t planning approximation. Chi-square simultaneous upper bounds assume normal seed contrasts (discrete points violate exact normality). SD3 is distribution-free range bound, not exact t-power assurance.",
+    "cases": {
+      "observed": {
+        "sd": [
+          1.3166696440690442,
+          1.58742221043853
+        ],
+        "at_64": {
+          "se": 0.12890052223345122,
+          "df": 121.83662914381591,
+          "full_ci_width": 0.5103497707644857,
+          "power": 0.21120539420711243
+        },
+        "power90": [
+          {
+            "effect": 0.1,
+            "n_per_context": 1119,
+            "independent_blocks": 2238,
+            "matches": 8952
+          },
+          {
+            "effect": 0.15,
+            "n_per_context": 498,
+            "independent_blocks": 996,
+            "matches": 3984
+          },
+          {
+            "effect": 0.2,
+            "n_per_context": 281,
+            "independent_blocks": 562,
+            "matches": 2248
+          }
+        ],
+        "precision": [
+          {
+            "full_width": 0.2,
+            "n_per_context": 410,
+            "independent_blocks": 820,
+            "matches": 3280
+          },
+          {
+            "full_width": 0.3,
+            "n_per_context": 183,
+            "independent_blocks": 366,
+            "matches": 1464
+          }
+        ]
+      },
+      "simultaneous95_normal_model_upper": {
+        "sd": [
+          1.7504853983534512,
+          2.1104454051261565
+        ],
+        "at_64": {
+          "se": 0.1713706114712846,
+          "df": 121.83662914381594,
+          "full_ci_width": 0.6784995961594577,
+          "power": 0.13985399465900114
+        },
+        "power90": [
+          {
+            "effect": 0.1,
+            "n_per_context": 1976,
+            "independent_blocks": 3952,
+            "matches": 15808
+          },
+          {
+            "effect": 0.15,
+            "n_per_context": 879,
+            "independent_blocks": 1758,
+            "matches": 7032
+          },
+          {
+            "effect": 0.2,
+            "n_per_context": 495,
+            "independent_blocks": 990,
+            "matches": 3960
+          }
+        ],
+        "precision": [
+          {
+            "full_width": 0.2,
+            "n_per_context": 724,
+            "independent_blocks": 1448,
+            "matches": 5792
+          },
+          {
+            "full_width": 0.3,
+            "n_per_context": 323,
+            "independent_blocks": 646,
+            "matches": 2584
+          }
+        ]
+      },
+      "bounded_points_sd3": {
+        "sd": [
+          3.0,
+          3.0
+        ],
+        "at_64": {
+          "se": 0.2651650429449553,
+          "df": 125.99999999999999,
+          "full_ci_width": 1.049507649314976,
+          "power": 0.0868149145498961
+        },
+        "power90": [
+          {
+            "effect": 0.1,
+            "n_per_context": 4730,
+            "independent_blocks": 9460,
+            "matches": 37840
+          },
+          {
+            "effect": 0.15,
+            "n_per_context": 2103,
+            "independent_blocks": 4206,
+            "matches": 16824
+          },
+          {
+            "effect": 0.2,
+            "n_per_context": 1184,
+            "independent_blocks": 2368,
+            "matches": 9472
+          }
+        ],
+        "precision": [
+          {
+            "full_width": 0.2,
+            "n_per_context": 1730,
+            "independent_blocks": 3460,
+            "matches": 13840
+          },
+          {
+            "full_width": 0.3,
+            "n_per_context": 770,
+            "independent_blocks": 1540,
+            "matches": 6160
+          }
+        ]
+      }
+    }
+  }
+}

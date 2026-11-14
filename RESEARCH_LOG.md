@@ -236,3 +236,12 @@
 
 ## Neue Einträge
 Für jeden Lauf Datum, Bearbeiter/Tool, Branch+SHA, Build, Experiment-ID, Ergebnis, Einschränkungen und Folgeschritt ergänzen.
+
+## 2026-11-14 – TACT-001-P1C vorregistriert
+
+P1B vollständig unabhängig verifiziert; D15 einziger eingefrorener Kandidat, D09 archiviert.
+Eigener Punkte-Präzisionspilot:512 Hauptmatches/128 neue Seedblöcke,16 technische
+Vollmatches plus Negativprobe,131 neue reservierte Seeds. Acht native Setups
+bytegleich zu P1B; Identität/Runtimesourcen geprüft. 48+5 Offline-Tests bestanden.
+900s kumulierte Child-Zeit,1800s feste UTC-Frist; keine Retries/Seedersetzung.
+Vorregistrierung/Code/Seeds werden vor Vollmatches publiziert. VALID-003 nur geplant.
