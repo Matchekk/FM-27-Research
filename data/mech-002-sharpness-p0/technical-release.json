@@ -11,5 +11,7 @@
   "career_released": false,
   "ui_scale_calibrated": false,
   "consumer_semantics_validated": false,
-  "automatic_extension_allowed": false
+  "automatic_extension_allowed": false,
+  "duplicate_preflight_sha256": "b76802a94e1f3a4ec23499a3972b6a1cee012fcada813597823c953238da0b91",
+  "duplicate_review_sha256": "919cbcaf7b24336b09077e1966fdc47529c62799339754f54c01e7c17c2ab717"
 }
