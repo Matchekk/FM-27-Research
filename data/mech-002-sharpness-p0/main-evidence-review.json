@@ -1,0 +1,356 @@
+{
+  "schema": "fm27.sharpness002.independent-main-evidence.v1",
+  "experiment_id": "MECH-002-SHARPNESS-P0",
+  "publication": {
+    "publication_commit": "0adf47b5a431fd15e9274e12fd470ac113e60a29",
+    "ci_run": 43643614021,
+    "ci_verified": true,
+    "ci_completed_utc": "2026-11-14T21:37:44+00:00",
+    "source_blobs_verified": 45
+  },
+  "raw_evidence": {
+    "phase": "main",
+    "actual_raw_evidence_verified": true,
+    "native_start_authorized": false,
+    "inputs_sha256": "0f1f4e048a1f3f893f47acf21b99b2730341424eb83a70c7ede066402b92f34f",
+    "full_matches": 512,
+    "negative_rejections": 0,
+    "aa_pairs": 0,
+    "snapshots": 1536,
+    "actor_stage_observations": 70656,
+    "attribute_values_verified": 1625088,
+    "profile_values_verified": 541696,
+    "phase_cells_verified": 22528,
+    "pi_groups_verified": 382976,
+    "concurrency": {
+      "claimed": 512,
+      "completed": 512,
+      "peak_inflight_claims": 4,
+      "engine_pid_peak_measured": false
+    },
+    "budget": {
+      "charged_seconds": 560.5738462000008,
+      "wall_start_utc": "2026-11-14T21:11:09.377746+00:00",
+      "wall_deadline_utc": "2026-11-14T22:11:09.377746+00:00",
+      "completed_utc": "2026-11-14T21:48:14.474332+00:00",
+      "snapshot_sha256": "66d6700177e24f979229bcdee03b013594a91dc2a080cf9d888bd31dea826e1b"
+    },
+    "outer_budget": {
+      "global_charged_seconds": 792.1520872000037,
+      "matched_operations": [
+        {
+          "name": "technical",
+          "elapsed_seconds": 86.14242750000267
+        },
+        {
+          "name": "main",
+          "elapsed_seconds": 523.1764171999966
+        }
+      ]
+    },
+    "first_main_admission": {
+      "checked_utc": "2026-11-14T21:40:31.240763+00:00",
+      "independently_reconstructed_seconds": 792.625864
+    },
+    "private_artifact_manifest_sha256": "faea1fc8e9004f3bd77ebc5f4e060fc95b39821737e4258b472b90f7f808825a",
+    "reviewer_native_starts": 0
+  },
+  "independent_public_analysis": {
+    "public_subset_verified": true,
+    "private_raw_evidence_verified": false,
+    "native_start_authorized": false,
+    "phase": "main",
+    "match_rows": 512,
+    "reviewer_native_starts": 0,
+    "independent_seed_blocks": 64,
+    "stored_effects_and_512_derived_blocks_verified": true,
+    "independent_contrasts": {
+      "SHARPNESS:xgd": {
+        "mean": 0.476925052528125,
+        "se": 0.07749465802990697,
+        "df": 57.42549978714711,
+        "p": 7.831071591479964e-08,
+        "ci": [
+          0.32176959213019063,
+          0.6320805129260594
+        ],
+        "bootstrap_ci": [
+          0.325972418158711,
+          0.6239906061509375
+        ],
+        "loo_range": [
+          0.45914977312975047,
+          0.5061515423192666
+        ],
+        "loo_change": 0.02922648979114162,
+        "context_sd": [
+          0.7020151899686691,
+          0.5252320363604055
+        ],
+        "side_covariance": [
+          0.0718391104111742,
+          -0.18970907992446318
+        ]
+      },
+      "SHARPNESS:points": {
+        "mean": 0.44140625,
+        "se": 0.09966186453043846,
+        "df": 61.887851761950444,
+        "p": 3.928345330932716e-05,
+        "ci": [
+          0.24217783994584346,
+          0.6406346600541566
+        ],
+        "bootstrap_ci": [
+          0.25,
+          0.6328125
+        ],
+        "loo_range": [
+          0.4095262096774194,
+          0.47542842741935487
+        ],
+        "loo_change": 0.03402217741935487,
+        "context_sd": [
+          0.7801403409726376,
+          0.8140880881836932
+        ],
+        "side_covariance": [
+          -0.37424395161290325,
+          -0.23941532258064516
+        ]
+      },
+      "SHARPNESS:gf": {
+        "mean": 0.4453125,
+        "se": 0.10692643723060563,
+        "df": 58.78063980310464,
+        "p": 0.0001034506560051787,
+        "ci": [
+          0.23133648553127106,
+          0.6592885144687289
+        ],
+        "bootstrap_ci": [
+          0.23828125,
+          0.65234375
+        ],
+        "loo_range": [
+          0.41330645161290325,
+          0.4778225806451613
+        ],
+        "loo_change": 0.03251008064516131,
+        "context_sd": [
+          0.748654707437108,
+          0.9502493306088569
+        ],
+        "side_covariance": [
+          -0.11869959677419355,
+          0.23790322580645162
+        ]
+      },
+      "SHARPNESS:ga": {
+        "mean": -0.359375,
+        "se": 0.0984018912809164,
+        "df": 56.953123772788636,
+        "p": 0.0005671072623012,
+        "ci": [
+          -0.5564249033627569,
+          -0.16232509663724312
+        ],
+        "bootstrap_ci": [
+          -0.546875,
+          -0.17177734375000853
+        ],
+        "loo_range": [
+          -0.39087701612903225,
+          -0.33442540322580644
+        ],
+        "loo_change": 0.03150201612903225,
+        "context_sd": [
+          0.8967627711618806,
+          0.6597210431983428
+        ],
+        "side_covariance": [
+          0.04435483870967742,
+          -0.07459677419354839
+        ]
+      },
+      "SHARPNESS:xgf": {
+        "mean": 0.27040739065039066,
+        "se": 0.04967670117300893,
+        "df": 51.981609825091745,
+        "p": 1.4359144325923872e-06,
+        "ci": [
+          0.17072295751490424,
+          0.37009182378587707
+        ],
+        "bootstrap_ci": [
+          0.17411110214472655,
+          0.36553940046674777
+        ],
+        "loo_range": [
+          0.2558907851900202,
+          0.2870435218795363
+        ],
+        "loo_change": 0.016636131229145645,
+        "context_sd": [
+          0.4767323189476795,
+          0.2976599568603721
+        ],
+        "side_covariance": [
+          -0.004843347219310632,
+          -0.0962425769533865
+        ]
+      },
+      "SHARPNESS:xga": {
+        "mean": -0.2065176618777344,
+        "se": 0.052279934548124636,
+        "df": 58.86313732576663,
+        "p": 0.0002114253242009351,
+        "ci": [
+          -0.3111346587652452,
+          -0.10190066499022359
+        ],
+        "bootstrap_ci": [
+          -0.30623077781799807,
+          -0.1071597182530274
+        ],
+        "loo_range": [
+          -0.22158516112118198,
+          -0.19131351367763358
+        ],
+        "loo_change": 0.015204148200100825,
+        "context_sd": [
+          0.46400988024325457,
+          0.366801513424132
+        ],
+        "side_covariance": [
+          0.046856465719752355,
+          -0.025720510467206293
+        ]
+      },
+      "PRESS:xgd": {
+        "mean": 0.09704260782578127,
+        "se": 0.07820959323560732,
+        "df": 61.99863094989261,
+        "p": 0.2193537323984724,
+        "ci": [
+          -0.059296210083454606,
+          0.25338142573501715
+        ],
+        "bootstrap_ci": [
+          -0.054898458877802765,
+          0.24564220230600584
+        ],
+        "loo_range": [
+          0.0754790975872354,
+          0.12352568823209427
+        ],
+        "loo_change": 0.026483080406313003,
+        "context_sd": [
+          0.6242049426779381,
+          0.6271450950287051
+        ],
+        "side_covariance": [
+          -0.11676428765176881,
+          -0.02312335006984535
+        ]
+      },
+      "SHARPNESSxPRESS:xgd": {
+        "mean": -0.08908252336562497,
+        "se": 0.18121085036366769,
+        "df": 57.39537779201062,
+        "p": 0.6248798131626467,
+        "ci": [
+          -0.45189682577823687,
+          0.27373177904698687
+        ],
+        "bootstrap_ci": [
+          -0.4275708382473633,
+          0.269373860399082
+        ],
+        "loo_range": [
+          -0.1595854232178175,
+          -0.048109996443623966
+        ],
+        "loo_change": 0.07050289985219252,
+        "context_sd": [
+          1.6422095233830019,
+          1.2273269875502573
+        ],
+        "side_covariance": [
+          0.6855174369865826,
+          0.3203264017917458
+        ]
+      }
+    },
+    "independent_secondary_holm": {
+      "SHARPNESS:xgf": 1.0051401028146711e-05,
+      "SHARPNESS:points": 0.00023570071985596296,
+      "SHARPNESS:gf": 0.0005172532800258935,
+      "SHARPNESS:xga": 0.0008457012968037404,
+      "SHARPNESS:ga": 0.0017013217869036,
+      "PRESS:xgd": 0.4387074647969448,
+      "SHARPNESSxPRESS:xgd": 0.6248798131626467
+    },
+    "independent_conditional_planning": {
+      "observed": {
+        "sd": [
+          0.7020151899686691,
+          0.5252320363604055
+        ],
+        "power90": [
+          {
+            "effect": 0.2,
+            "seeds_per_context": 52,
+            "independent_blocks": 104,
+            "matches": 832,
+            "full_width": 0.24139133659083495,
+            "power": 0.9025690387850857
+          },
+          {
+            "effect": 0.3,
+            "seeds_per_context": 24,
+            "independent_blocks": 48,
+            "matches": 384,
+            "full_width": 0.36101637456149327,
+            "power": 0.9059377506241935
+          }
+        ]
+      },
+      "simultaneous95_sd_upper": {
+        "sd": [
+          0.9333148561584362,
+          0.6982852642937717
+        ],
+        "power90": [
+          {
+            "effect": 0.2,
+            "seeds_per_context": 91,
+            "independent_blocks": 182,
+            "matches": 1456,
+            "full_width": 0.24124027777701532,
+            "power": 0.9022875348327459
+          },
+          {
+            "effect": 0.3,
+            "seeds_per_context": 41,
+            "independent_blocks": 82,
+            "matches": 656,
+            "full_width": 0.36271441458652404,
+            "power": 0.9019956285371303
+          }
+        ]
+      }
+    },
+    "interpretation": "Independent raw-score/xG reconstruction; total two-field package effect in this fixed synthetic context only. No new execution.",
+    "stored_analysis_provenance_verified": true
+  },
+  "complete_job_accounting_sha256": "c077c7df9944bf0337e12a7d5178075e3b3e4ec1e5d7a42720f7cacb7b19a375",
+  "total_planned_jobs": 545,
+  "successful_full_matches": 544,
+  "expected_rejections": 1,
+  "unexpected_failures": 0,
+  "unbegun": 0,
+  "native_execution_authorized": false,
+  "new_study_authorized": false,
+  "reviewer_native_starts": 0
+}

@@ -668,13 +668,121 @@ def audit_public(central,phase):
         result['independent_33_job_projection']=audit_public_projection(
             read(public/'technical-evidence-review.json'),data,plan,file_sha(public/'inputs.json',True))
     if phase=='main':
-        from analysis.review_sharpness002_science import independently_group,independently_summarize,independently_holm,FAMILY
-        grouped=independently_group(data,receipt)
-        contrasts={key:independently_summarize(grouped[key]) for key in ('SHARPNESS:xgd',*FAMILY)}
-        result.update(independent_seed_blocks=64,independent_contrasts=contrasts,
-            independent_secondary_holm=independently_holm({key:contrasts[key]['p'] for key in FAMILY}),
-            interpretation='Independent public-score analysis; native/raw/budget release must be verified separately. No UI/consumer/career claim.')
+        result.update(verify_stored_analysis(data,receipt,read(public/'effects.json'),read(public/'seed-contrasts.jsonl')))
+        provenance=read(public/'analysis-provenance.json')
+        need(provenance['experiment_id']==EXPERIMENT and provenance['native_starts_by_analysis']==0 and
+             provenance['analysis']=='analysis/analyse_sharpness002.py','Analysis provenance identity differs')
+        need(set(provenance['source_and_input_sha256'])=={'analysis/analyse_sharpness002.py',
+            'data/mech-002-sharpness-p0/main.jsonl','data/mech-002-sharpness-p0/manifest.json',
+            'data/mech-002-sharpness-p0/main-summary.json'} and
+            file_sha(Path(central)/'analysis/analyse_sharpness002.py',True)==receipt['config']['preregistration']['analysis_sha256'],
+            'Complete original registered analysis source binding required')
+        for name,wanted in provenance['source_and_input_sha256'].items():
+            need(name in ('analysis/analyse_sharpness002.py','data/mech-002-sharpness-p0/main.jsonl',
+                'data/mech-002-sharpness-p0/manifest.json','data/mech-002-sharpness-p0/main-summary.json') and
+                file_sha(Path(central)/name,True)==wanted,'Analysis input/source provenance hash differs')
+        need(set(provenance['output_sha256'])=={'effects.json','seed-contrasts.jsonl'} and
+             all(file_sha(public/name,True)==wanted for name,wanted in provenance['output_sha256'].items()),
+             'Stored analysis output hash differs')
+        result['stored_analysis_provenance_verified']=True
     return result
+
+
+def compare_numbers(got,wanted,label):
+    if type(wanted) is bool:need(got is wanted,'Stored Boolean differs: '+label)
+    elif type(wanted) in (list,tuple):
+        need(type(got) in (list,tuple) and len(got)==len(wanted),'Stored analysis list differs: '+label)
+        for a,b in zip(got,wanted):compare_numbers(a,b,label)
+    elif wanted is None:need(got is None,'Stored undefined statistic differs: '+label)
+    else:need(number(got) and number(wanted) and math.isclose(got,wanted,rel_tol=1e-10,abs_tol=1e-12),
+              'Stored analysis value differs: '+label)
+
+
+def independent_planning(sd):
+    """Independent linear integer search, not the author's binary-search planner."""
+    from scipy.stats import chi2,nct,t
+    need(len(sd)==2 and all(number(s) and s>=0 for s in sd),'Two finite planning SDs required')
+    result={}
+    for key,factor in (('observed',1.),('simultaneous95_sd_upper',math.sqrt(31/chi2.ppf(.025,31)))):
+        values=[s*factor for s in sd];plans=[]
+        for effect in (.2,.3):
+            for n in range(2,10000001):
+                parts=[s*s/(4*n) for s in values];variance=sum(parts)
+                if variance==0:width=0.;power=1.
+                else:
+                    se=math.sqrt(variance);df=variance**2/sum(p*p/(n-1) for p in parts)
+                    cut=t.ppf(.975,df);width=2*cut*se;shift=effect/se
+                    power=float(nct.cdf(-cut,df,shift)+nct.sf(cut,df,shift))
+                if power>=.9:break
+            else:raise ValueError('Independent conditional planning exceeds search budget')
+            plans.append(dict(effect=effect,seeds_per_context=n,independent_blocks=2*n,matches=16*n,
+                              full_width=float(width),power=power))
+        result[key]=dict(sd=values,power90=plans)
+    return result
+
+
+def verify_stored_analysis(data,receipt,effects,blocks):
+    """Recompute all stored effects/blocks from raw scores/xG, without analyse()."""
+    from statistics import fmean,variance
+    from scipy.stats import chi2
+    from analysis.review_sharpness002_science import independently_group,independently_summarize,independently_holm,FAMILY,raw_metrics,BOOT_SEED
+    need(len(data)==512 and effects['experiment_id']==EXPERIMENT and effects['n_matches']==512 and
+         effects['independent_seed_blocks']==64 and effects['primary_contrast']=='SHARPNESS' and
+         set(effects['secondary'])==set(FAMILY),'Stored result endpoints/sample differs')
+    need(effects['bootstrap']==dict(seed=BOOT_SEED,resamples=20000) and effects['practical_reference']==.3 and
+         effects['desired_full_ci_width']==.5 and effects['exploratory_context_and_side_only'] is True and
+         all(effects[k] is False for k in ('ui_scale_calibrated','consumer_semantics_validated','mediation_identified',
+             'career_transfer_confirmed','winner_selected')),'Stored interpretation/preregistered settings drift')
+    grouped=independently_group(data,receipt)
+    independent={key:independently_summarize(grouped[key]) for key in ('SHARPNESS:xgd',*FAMILY)}
+    published={'SHARPNESS:xgd':effects['primary'],**effects['secondary']}
+    holm=independently_holm({key:independent[key]['p'] for key in FAMILY})
+    expected_blocks=[]
+    for key,wanted in independent.items():
+        got=published[key];name,endpoint=key.split(':')
+        for field in ('mean','se','df','p','ci','bootstrap_ci'):compare_numbers(got[field],wanted[field],key+'/'+field)
+        need(got['n_seed_blocks']==64 and got['n_scenarios']==2 and got['alpha']==.05,'Stored uncertainty sample/alpha differs')
+        compare_numbers(got['leave_one_out']['range'],wanted['loo_range'],key+'/LOO range')
+        compare_numbers(got['leave_one_out']['max_change'],wanted['loo_change'],key+'/LOO change')
+        for h,context in enumerate(CONTEXTS):
+            own=grouped[key][h];values=own['blocks'];a,b=own['sides'];actual=got['context'][context]
+            context_expected=dict(mean=fmean(values),sd=math.sqrt(variance(values)),
+                sd_upper95_normal_model=math.sqrt(variance(values))*math.sqrt(31/chi2.ppf(.05,31)),
+                side0_mean=fmean(a),side1_mean=fmean(b),side0_sd=math.sqrt(variance(a)),side1_sd=math.sqrt(variance(b)),
+                side_covariance=wanted['side_covariance'][h])
+            for field,value in context_expected.items():compare_numbers(actual[field],value,key+'/'+context+'/'+field)
+            for i,value in enumerate(values):expected_blocks.append(dict(context=context,seed=receipt['seeds'][h*32+i],contrast=name,endpoint=endpoint,value=value))
+        if key in FAMILY:
+            compare_numbers(got['p_holm'],holm[key],key+'/Holm')
+            need(got['reject_holm'] is (holm[key]<=.05),'Stored Holm decision differs')
+    need(len(blocks)==len(expected_blocks)==512,'Stored derived block count differs')
+    for actual,wanted in zip(blocks,expected_blocks,strict=True):
+        need(set(actual)==set(wanted) and all(actual[k]==wanted[k] for k in ('context','seed','contrast','endpoint')),
+             'Stored derived block identity/order differs')
+        compare_numbers(actual['value'],wanted['value'],'derived seed contrast')
+    planning=independent_planning(independent['SHARPNESS:xgd']['context_sd'])
+    for key,value in planning.items():
+        compare_numbers(effects['planning'][key]['sd'],value['sd'],'planning/'+key+'/SD')
+        need(len(effects['planning'][key]['power90'])==2,'Stored planning effect family differs')
+        for actual,wanted in zip(effects['planning'][key]['power90'],value['power90'],strict=True):
+            for field in ('effect','full_width','power'):compare_numbers(actual[field],wanted[field],'planning/'+field)
+            need(all(type(actual[k]) is int and actual[k]==wanted[k] for k in ('seeds_per_context','independent_blocks','matches')),
+                 'Stored independent confirmation block/match cost differs')
+    for context,arm in product(CONTEXTS,ARMS):
+        selected=[r for r in data if r['context']==context and r['arm']==arm];need(len(selected)==64,'Stored arm descriptive denominator differs')
+        metrics=[raw_metrics(r) for r in selected]
+        for endpoint in metrics[0]:compare_numbers(effects['arm_means'][context][arm][endpoint],fmean(m[endpoint] for m in metrics),context+'/'+arm+'/'+endpoint)
+        for field in DESCRIPTIVE:
+            observed=[r['descriptive'][field] for r in selected if r['descriptive'][field] is not None]
+            missing=Counter(r['descriptive_missing_reasons'][field] for r in selected if r['descriptive'][field] is None)
+            got=effects['descriptive']['by_context_arm'][context][arm][field]
+            need(got['observed']==len(observed) and got['missing']==sum(missing.values()) and got['missing_reasons']==dict(missing),
+                 'Stored descriptive observation/missing accounting differs')
+            for name,value in (('mean',fmean(observed) if observed else None),('min',min(observed) if observed else None),('max',max(observed) if observed else None)):
+                compare_numbers(got[name],value,'descriptive/'+field+'/'+name)
+    return dict(independent_seed_blocks=64,stored_effects_and_512_derived_blocks_verified=True,
+        independent_contrasts=independent,independent_secondary_holm=holm,independent_conditional_planning=planning,
+        interpretation='Independent raw-score/xG reconstruction; total two-field package effect in this fixed synthetic context only. No new execution.')
 
 
 def audit_public_projection(evidence,measurements,plan,inputs_sha256):
@@ -785,15 +893,52 @@ def technical_evidence(central):
     return output
 
 
+def main_evidence(central):
+    """Final evidence only; never grants execution or creates a new study."""
+    central=Path(central);public=central/'data/mech-002-sharpness-p0';local=central/'local/mech-002-sharpness-p0'
+    raw=audit_phase(central,'main');raw.pop('technical_evidence_projection')
+    analysis=audit_public(central,'main');frozen=read(public/'inputs.json');proof=read(local/'main-reconciled.json')
+    release=read(public/'technical-release.json')
+    need(release['approved_for_main'] is True and release['experiment_id']==EXPERIMENT and
+        release['summary_sha256']==file_sha(public/'technical-summary.json',True) and
+        release['review_sha256']==file_sha(central/'docs/night-001/SHARPNESS-TECHNICAL-REVIEW.md',True) and
+        release['evidence_projection_sha256']==file_sha(public/'technical-evidence-review.json',True) and
+        release['resource_admission_plan_sha256']==file_sha(public/'resource-admission-plan.json',True) and
+        release['duplicate_preflight_sha256']==file_sha(public/'duplicate-preflight.json',True) and
+        release['duplicate_review_sha256']==file_sha(central/'docs/night-001/SHARPNESS-DUPLICATE-REVIEW.md',True),
+        'Actual main release/preflight bindings differ')
+    paths=[*frozen['code_sha256'],*[f'data/mech-002-sharpness-p0/{name}' for name in (
+        'contract.json','inputs.json','seed-plan.json','review-gate.json','manifest.json','main-job-plan.json','technical-job-plan.json',
+        'technical-release.json','technical-summary.json','technical-budget.json','technical-job-accounting.jsonl',
+        'technical-evidence-review.json','resource-admission-plan.json','duplicate-preflight.json')],
+        *[f'docs/night-001/{name}' for name in ('SHARPNESS-REVIEW.md','SHARPNESS-TECHNICAL-REVIEW.md',
+            'SHARPNESS-DUPLICATE-PREFLIGHT.md','SHARPNESS-DUPLICATE-REVIEW.md')]]
+    publication=verify_publication(central,proof['publication_commit'],proof['ci_run'],paths)
+    state=read(local/'main-budget.snapshot.json');main_start=next(o['start_utc'] for o in state['operations'] if o['name']=='main')
+    need(utc(publication['ci_completed_utc'])<utc(main_start),'Successful exact CI did not precede main phase')
+    complete=read(public/'complete-job-accounting.jsonl');expected=[]
+    for phase in ('technical','main'):
+        expected.extend(dict(phase=phase,**row) for row in read(public/(phase+'-job-accounting.jsonl')))
+    # The director's harmless aggregate may order the added phase field anywhere.
+    need(complete==expected and len(complete)==545 and Counter(r['status'] for r in complete)==
+         {'ok':544,'expected_rejection':1},'Complete545 failure accounting differs')
+    return dict(schema='fm27.sharpness002.independent-main-evidence.v1',experiment_id=EXPERIMENT,
+        publication=publication,raw_evidence=raw,independent_public_analysis=analysis,
+        complete_job_accounting_sha256=file_sha(public/'complete-job-accounting.jsonl',True),
+        total_planned_jobs=545,successful_full_matches=544,expected_rejections=1,unexpected_failures=0,unbegun=0,
+        native_execution_authorized=False,new_study_authorized=False,reviewer_native_starts=0)
+
+
 def main():
     from argparse import ArgumentParser
-    parser=ArgumentParser(description=__doc__);parser.add_argument('stage',choices=('seeds','inputs','technical','main','technical-evidence','public-technical','public-main'))
+    parser=ArgumentParser(description=__doc__);parser.add_argument('stage',choices=('seeds','inputs','technical','main','technical-evidence','main-evidence','public-technical','public-main'))
     parser.add_argument('--central',type=Path,default=ROOT);args=parser.parse_args();central=args.central.resolve()
     if args.stage=='seeds':
         excluded,count=reconstruct_exclusions(central);result=audit_seed_plan(read(central/'local/registry'/f'{EXPERIMENT}.reserved.json'),excluded)
         result.update(seed_source_files_read=count,reviewer_native_starts=0,native_start_authorized=False)
     elif args.stage=='inputs':result=audit_prepared(central)
     elif args.stage=='technical-evidence':result=technical_evidence(central)
+    elif args.stage=='main-evidence':result=main_evidence(central)
     elif args.stage.startswith('public-'):result=audit_public(central,args.stage.removeprefix('public-'))
     else:result=audit_phase(central,args.stage)
     print(json.dumps(result,indent=2,allow_nan=False))

@@ -4,6 +4,7 @@ from datetime import datetime,timedelta,timezone
 from pathlib import Path
 import json
 import struct
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -60,6 +61,18 @@ def manufactured_match():
     evidence[3:3]=[dict(event='native_phase_configuration',side=s,phase=p) for s,p in ((0,0),(0,1),(1,0),(1,1))]
     job=dict(key='own-synthetic',side=0,seed=123,arm='S70-P1',identity=dict(engine_sha256='a'*64))
     return evidence,dump,job,binary,config,catalog,[list(range(11)),list(range(11))],controls
+
+
+def stored_analysis_fixture():
+    from analysis.review_sharpness002_science import synthetic
+    from analysis.analyse_sharpness002 import analyse
+    receipt,data=synthetic()
+    for row in data:
+        i=receipt['seeds'].index(row['seed'])%32;s=1 if row['arm'].startswith('S100') else -1
+        row['result']['team_statistics'][row['team_side']]['xg']+=1.1*s*(i-15.5)/15.5
+        for stats in row['result']['team_statistics']:stats['possession_ticks']=50
+    effects,blocks=analyse(data,receipt)
+    return receipt,data,effects,blocks
 
 
 class SharpnessResultReviewer(unittest.TestCase):
@@ -191,6 +204,64 @@ class SharpnessResultReviewer(unittest.TestCase):
             elif edit=='cleanup':evidence['jobs'][0]['kernel_active_processes']=1
             else:evidence['jobs'][0]['raw_state_aa_signature_sha256']='0'*64
             with self.subTest(edit=edit),self.assertRaises(ValueError):review.audit_public_projection(evidence,rows,plan,sha)
+
+    def test_independent_stored_results_reject_numerical_and_interpretation_mutations(self):
+        receipt,data,effects,blocks=stored_analysis_fixture()
+        self.assertTrue(review.verify_stored_analysis(data,receipt,effects,blocks)['stored_effects_and_512_derived_blocks_verified'])
+        for edit in ('mean','holm','bootstrap','sd','covariance','planning','nonfinite_power','block','missing_block','rawscore','claim'):
+            rows,got,derived=deepcopy((data,effects,blocks))
+            if edit=='mean':got['primary']['mean']+=.01
+            elif edit=='holm':got['secondary']['SHARPNESS:points']['p_holm']+=.1
+            elif edit=='bootstrap':got['primary']['bootstrap_ci'][0]+=.01
+            elif edit=='sd':got['primary']['context']['high_press']['sd']+=.1
+            elif edit=='covariance':got['primary']['context']['deep_block']['side_covariance']+=.1
+            elif edit=='planning':got['planning']['observed']['power90'][0]['seeds_per_context']+=1
+            elif edit=='nonfinite_power':got['planning']['observed']['power90'][0]['power']=float('nan')
+            elif edit=='block':derived[0]['value']+=.1
+            elif edit=='missing_block':derived.pop()
+            elif edit=='rawscore':rows[0]['result']['score'][rows[0]['team_side']]+=1
+            else:got['career_transfer_confirmed']=True
+            with self.subTest(edit=edit),self.assertRaises(ValueError):review.verify_stored_analysis(rows,receipt,got,derived)
+
+    def test_public_cli_rechecks_saved_effects_and_blocks_even_when_hashes_are_updated(self):
+        receipt,data,effects,blocks=stored_analysis_fixture()
+        for row in data:
+            row.pop('test_origin');row.update(experiment_id=review.EXPERIMENT,native_invocation_started=True,returncode=0,
+                native_elapsed_seconds=1.,stdout_sha256='a'*64,raw_log_sha256='b'*64,input_dump_sha256='c'*64,
+                containment_receipt_sha256='d'*64)
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);public=root/'data/mech-002-sharpness-p0';public.mkdir(parents=True)
+            (root/'analysis').mkdir();(root/'analysis/analyse_sharpness002.py').write_text('# synthetic software-only source\n',encoding='utf8')
+            receipt['config']['preregistration']['analysis_sha256']=review.file_sha(root/'analysis/analyse_sharpness002.py',True)
+            receipt['config_sha256']=review.canonical(receipt['config'])
+            for row in data:row['config_sha256']=receipt['config_sha256']
+            def write(name,value,jsonl=False):
+                path=public/name;path.write_text(''.join(json.dumps(r)+'\n' for r in value) if jsonl else json.dumps(value)+'\n',encoding='utf8')
+            seedplan=dict(main_seeds=receipt['seeds'])
+            write('inputs.json',dict(identity=receipt['config']['identity'],setups=receipt['config']['design']['setups']))
+            write('seed-plan.json',seedplan);write('manifest.json',receipt)
+            write('main-job-plan.json',review.expected_jobs(seedplan,receipt));write('main.jsonl',data,True)
+            write('effects.json',effects);write('seed-contrasts.jsonl',blocks,True);write('main-summary.json',dict(software_fixture=True))
+            provenance=dict(experiment_id=review.EXPERIMENT,native_starts_by_analysis=0,analysis='analysis/analyse_sharpness002.py',
+                source_and_input_sha256={name:review.file_sha(root/name,True) for name in ('analysis/analyse_sharpness002.py',
+                    'data/mech-002-sharpness-p0/main.jsonl','data/mech-002-sharpness-p0/manifest.json','data/mech-002-sharpness-p0/main-summary.json')})
+            def refresh_hashes():
+                provenance['output_sha256']={name:review.file_sha(public/name,True) for name in ('effects.json','seed-contrasts.jsonl')}
+                write('analysis-provenance.json',provenance)
+            refresh_hashes()
+            with patch.object(sys,'argv',['review','public-main','--central',str(root)]),patch('builtins.print'):
+                review.main()
+                changed=deepcopy(effects);changed['primary']['mean']+=.1;write('effects.json',changed);refresh_hashes()
+                with self.assertRaises(ValueError):review.main()
+                write('effects.json',effects);changed=deepcopy(blocks);changed[0]['value']+=.1
+                write('seed-contrasts.jsonl',changed,True);refresh_hashes()
+                with self.assertRaises(ValueError):review.main()
+
+    def test_published_main_saved_artifacts_are_independently_rechecked_in_repository_ci(self):
+        root=Path(__file__).resolve().parents[1];public=root/'data/mech-002-sharpness-p0'
+        if not any((public/name).exists() for name in ('main.jsonl','effects.json','seed-contrasts.jsonl')):
+            self.skipTest('Main measurements are not yet published in this checkout')
+        self.assertTrue(review.audit_public(root,'main')['stored_effects_and_512_derived_blocks_verified'])
 
 
 if __name__=='__main__':unittest.main()
