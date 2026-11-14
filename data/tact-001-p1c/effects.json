@@ -1,0 +1,503 @@
+{
+  "experiment_id": "TACT-001-P1C",
+  "evidence": "independent_seed_precision_pilot_in_existing_synthetic_context",
+  "n_matches": 512,
+  "independent_seed_blocks": 128,
+  "primary": {
+    "mean": 0.09765625,
+    "se": 0.11875093821423438,
+    "df": 123.33472356679394,
+    "ci": [
+      -0.13739761376492687,
+      0.3327101137649269
+    ],
+    "p": 0.41245799657929083,
+    "alpha": 0.05,
+    "bootstrap_ci": [
+      -0.1328125,
+      0.32421875
+    ],
+    "n_seed_blocks": 128,
+    "n_scenarios": 2,
+    "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+    "context": {
+      "high_press": {
+        "mean": 0.0703125,
+        "sd": 1.4388796002335478,
+        "home_mean": -0.015625,
+        "away_mean": 0.15625,
+        "home_sd": 1.9064817384511237,
+        "away_sd": 1.7294714304004644,
+        "side_covariance": 0.8278769841269841
+      },
+      "deep_block": {
+        "mean": 0.125,
+        "sd": 1.2408394495995603,
+        "home_mean": 0.03125,
+        "away_mean": 0.21875,
+        "home_sd": 1.772530699131916,
+        "away_sd": 1.8470804934291167,
+        "side_covariance": -0.1974206349206349
+      }
+    },
+    "pooled_within_context_sd": 1.3435134989367976,
+    "leave_one_out": {
+      "range": [
+        0.0744047619047619,
+        0.1224578373015873
+      ],
+      "max_change": 0.024801587301587297
+    }
+  },
+  "secondary": {
+    "xgd": {
+      "mean": 0.19603983665234373,
+      "se": 0.08535818264053956,
+      "df": 124.81505106619225,
+      "ci": [
+        0.027102952819835352,
+        0.3649767204848521
+      ],
+      "p": 0.02330383873650815,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        0.026984223776611308,
+        0.3605092464836422
+      ],
+      "n_seed_blocks": 128,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.18619003527343747,
+          "sd": 1.0116717154550328,
+          "home_mean": 0.22796080087499998,
+          "away_mean": 0.14441926967187496,
+          "home_sd": 1.1838264228924773,
+          "away_sd": 1.332762970372764,
+          "side_covariance": 0.4581082523358424
+        },
+        "deep_block": {
+          "mean": 0.20588963803125,
+          "sd": 0.9174645999352633,
+          "home_mean": 0.271707793828125,
+          "away_mean": 0.14007148223437504,
+          "home_sd": 1.5218147865300782,
+          "away_sd": 1.4085586049854666,
+          "side_covariance": -0.46649620982134976
+        }
+      },
+      "pooled_within_context_sd": 0.9657175963981659,
+      "leave_one_out": {
+        "range": [
+          0.17852052366641863,
+          0.2167858800890997
+        ],
+        "max_change": 0.020746043436755957
+      },
+      "p_holm": 0.0932153549460326,
+      "reject_holm": false
+    },
+    "gf": {
+      "mean": -0.02734375,
+      "se": 0.09629759238414601,
+      "df": 125.96643302618428,
+      "ci": [
+        -0.21791434672579488,
+        0.16322684672579488
+      ],
+      "p": 0.7769145124529071,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.21484375,
+        0.16015625
+      ],
+      "n_seed_blocks": 128,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.0,
+          "sd": 1.098339294730552,
+          "home_mean": 0.109375,
+          "away_mean": -0.109375,
+          "home_sd": 1.3929207352190485,
+          "away_sd": 1.6341318504826667,
+          "side_covariance": 0.10739087301587301
+        },
+        "deep_block": {
+          "mean": -0.0546875,
+          "sd": 1.0805538978646443,
+          "home_mean": 0.125,
+          "away_mean": -0.234375,
+          "home_sd": 2.0354009783964297,
+          "away_sd": 1.4225194226921851,
+          "side_covariance": -0.748015873015873
+        }
+      },
+      "pooled_within_context_sd": 1.0894828893882829,
+      "leave_one_out": {
+        "range": [
+          -0.059089781746031744,
+          -0.003534226190476192
+        ],
+        "max_change": 0.031746031746031744
+      },
+      "p_holm": 1.0,
+      "reject_holm": false
+    },
+    "ga": {
+      "mean": -0.1796875,
+      "se": 0.10477408466297515,
+      "df": 125.61292142987935,
+      "ci": [
+        -0.3870385283471808,
+        0.02766352834718075
+      ],
+      "p": 0.08881122673906709,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.37890625,
+        0.02734375
+      ],
+      "n_seed_blocks": 128,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.078125,
+          "sd": 1.1520125591797759,
+          "home_mean": 0.1875,
+          "away_mean": -0.34375,
+          "home_sd": 1.39015815019,
+          "away_sd": 1.6923614571324004,
+          "side_covariance": 0.25595238095238093
+        },
+        "deep_block": {
+          "mean": -0.28125,
+          "sd": 1.2178402689330488,
+          "home_mean": 0.015625,
+          "away_mean": -0.578125,
+          "home_sd": 1.214883722961774,
+          "away_sd": 2.14405555113416,
+          "side_covariance": -0.07018849206349206
+        }
+      },
+      "pooled_within_context_sd": 1.185383452124851,
+      "leave_one_out": {
+        "range": [
+          -0.22160218253968253,
+          -0.15649801587301587
+        ],
+        "max_change": 0.04191468253968253
+      },
+      "p_holm": 0.26643368021720126,
+      "reject_holm": false
+    },
+    "xgf": {
+      "mean": 0.03541803774218751,
+      "se": 0.05550463567386299,
+      "df": 125.87241813466511,
+      "ci": [
+        -0.07442508396883635,
+        0.14526115945321139
+      ],
+      "p": 0.524561581422796,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.0713817491677246,
+        0.14643192744223624
+      ],
+      "n_seed_blocks": 128,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.0780220640234375,
+          "sd": 0.6178862492975202,
+          "home_mean": 0.21135310656249998,
+          "away_mean": -0.055308978515625,
+          "home_sd": 0.8342225643669716,
+          "away_sd": 0.8280884032123537,
+          "side_covariance": 0.07273798892501863
+        },
+        "deep_block": {
+          "mean": -0.0071859885390624795,
+          "sd": 0.6378811141104886,
+          "home_mean": 0.11447422321874998,
+          "away_mean": -0.12884620029687502,
+          "home_sd": 1.0962616903282516,
+          "away_sd": 0.8429141882921041,
+          "side_covariance": -0.14236237977506955
+        }
+      },
+      "pooled_within_context_sd": 0.6279632683564365,
+      "leave_one_out": {
+        "range": [
+          0.019433005095548118,
+          0.046415882107452885
+        ],
+        "max_change": 0.015985032646639395
+      },
+      "p_holm": 1.0,
+      "reject_holm": false
+    },
+    "xga": {
+      "mean": -0.16062179891015624,
+      "se": 0.05681727770355496,
+      "df": 125.51763551511782,
+      "ci": [
+        -0.27306571077666697,
+        -0.048177887043645506
+      ],
+      "p": 0.005470004061908174,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.2708760818658203,
+        -0.0489206373291994
+      ],
+      "n_seed_blocks": 128,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.10816797125,
+          "sd": 0.6624391913794931,
+          "home_mean": -0.016607694312500018,
+          "away_mean": -0.19972824818749998,
+          "home_sd": 0.6681711257886825,
+          "away_sd": 1.0476014206941964,
+          "side_covariance": 0.10569066956192615
+        },
+        "deep_block": {
+          "mean": -0.21307562657031248,
+          "sd": 0.6225707167937321,
+          "home_mean": -0.15723357060937498,
+          "away_mean": -0.26891768253125,
+          "home_sd": 0.829499287306405,
+          "away_sd": 0.9518730066045986,
+          "side_covariance": -0.021877049354033343
+        }
+      },
+      "pooled_within_context_sd": 0.642814117643887,
+      "leave_one_out": {
+        "range": [
+          -0.17694849566865078,
+          -0.14809849779309275
+        ],
+        "max_change": 0.016326696758494547
+      },
+      "p_holm": 0.02735002030954087,
+      "reject_holm": true
+    }
+  },
+  "adequate_preregistered_signal": false,
+  "recommendation": "Switch to new roles and OOP structures; do not indefinitely retest this instruction package",
+  "general_career_transfer_confirmed": false,
+  "candidate_changed": false,
+  "actual_arm_means": {
+    "high_press": {
+      "D00": {
+        "points": 1.2109375,
+        "xgd": -0.29764139036328124,
+        "gf": 1.21875,
+        "ga": 1.484375,
+        "xgf": 1.1502186718710938,
+        "xga": 1.447860062234375,
+        "shots_for": 8.765625,
+        "shots_against": 12.25,
+        "sot_for": 4.4921875,
+        "sot_against": 5.6953125,
+        "possession_for": 0.470310353015625
+      },
+      "D15": {
+        "points": 1.28125,
+        "xgd": -0.1114513550898438,
+        "gf": 1.21875,
+        "ga": 1.40625,
+        "xgf": 1.2282407358945313,
+        "xga": 1.339692090984375,
+        "shots_for": 9.4765625,
+        "shots_against": 11.40625,
+        "sot_for": 4.625,
+        "sot_against": 5.21875,
+        "possession_for": 0.490342270921875
+      }
+    },
+    "deep_block": {
+      "D00": {
+        "points": 1.4296875,
+        "xgd": 0.14848246288281247,
+        "gf": 1.5,
+        "ga": 1.375,
+        "xgf": 1.4853597575,
+        "xga": 1.3368772946171874,
+        "shots_for": 12.9609375,
+        "shots_against": 10.7890625,
+        "sot_for": 6.0,
+        "sot_against": 5.0390625,
+        "possession_for": 0.5195745781171874
+      },
+      "D15": {
+        "points": 1.5546875,
+        "xgd": 0.3543721009140625,
+        "gf": 1.4453125,
+        "ga": 1.09375,
+        "xgf": 1.4781737689609376,
+        "xga": 1.123801668046875,
+        "shots_for": 12.4453125,
+        "shots_against": 9.46875,
+        "sot_for": 5.6640625,
+        "sot_against": 4.2890625,
+        "possession_for": 0.5401117108515625
+      }
+    }
+  },
+  "planning": {
+    "assumptions": "Fixed equal contexts, equal new n per context, paired side means; noncentral Welch-t planning approximation. Chi-square simultaneous upper bounds assume normal seed contrasts (discrete points violate exact normality). SD3 is distribution-free range bound, not exact t-power assurance.",
+    "cases": {
+      "observed": {
+        "sd": [
+          1.4388796002335478,
+          1.2408394495995603
+        ],
+        "at_64": {
+          "se": 0.1187509382142344,
+          "df": 123.33472356679395,
+          "full_ci_width": 0.4701077275298539,
+          "power": 0.24055099670679367
+        },
+        "power90": [
+          {
+            "effect": 0.1,
+            "n_per_context": 950,
+            "independent_blocks": 1900,
+            "matches": 7600
+          },
+          {
+            "effect": 0.15,
+            "n_per_context": 423,
+            "independent_blocks": 846,
+            "matches": 3384
+          },
+          {
+            "effect": 0.2,
+            "n_per_context": 239,
+            "independent_blocks": 478,
+            "matches": 1912
+          }
+        ],
+        "precision": [
+          {
+            "full_width": 0.2,
+            "n_per_context": 348,
+            "independent_blocks": 696,
+            "matches": 2784
+          },
+          {
+            "full_width": 0.3,
+            "n_per_context": 156,
+            "independent_blocks": 312,
+            "matches": 1248
+          }
+        ]
+      },
+      "simultaneous95_normal_model_upper": {
+        "sd": [
+          1.742656362834982,
+          1.5028059065889556
+        ],
+        "at_64": {
+          "se": 0.14382167767064746,
+          "df": 123.33472356679394,
+          "full_ci_width": 0.5693570347823556,
+          "power": 0.17882648588992583
+        },
+        "power90": [
+          {
+            "effect": 0.1,
+            "n_per_context": 1392,
+            "independent_blocks": 2784,
+            "matches": 11136
+          },
+          {
+            "effect": 0.15,
+            "n_per_context": 620,
+            "independent_blocks": 1240,
+            "matches": 4960
+          },
+          {
+            "effect": 0.2,
+            "n_per_context": 349,
+            "independent_blocks": 698,
+            "matches": 2792
+          }
+        ],
+        "precision": [
+          {
+            "full_width": 0.2,
+            "n_per_context": 510,
+            "independent_blocks": 1020,
+            "matches": 4080
+          },
+          {
+            "full_width": 0.3,
+            "n_per_context": 228,
+            "independent_blocks": 456,
+            "matches": 1824
+          }
+        ]
+      },
+      "bounded_points_sd3": {
+        "sd": [
+          3.0,
+          3.0
+        ],
+        "at_64": {
+          "se": 0.2651650429449553,
+          "df": 125.99999999999999,
+          "full_ci_width": 1.049507649314976,
+          "power": 0.0868149145498961
+        },
+        "power90": [
+          {
+            "effect": 0.1,
+            "n_per_context": 4730,
+            "independent_blocks": 9460,
+            "matches": 37840
+          },
+          {
+            "effect": 0.15,
+            "n_per_context": 2103,
+            "independent_blocks": 4206,
+            "matches": 16824
+          },
+          {
+            "effect": 0.2,
+            "n_per_context": 1184,
+            "independent_blocks": 2368,
+            "matches": 9472
+          }
+        ],
+        "precision": [
+          {
+            "full_width": 0.2,
+            "n_per_context": 1730,
+            "independent_blocks": 3460,
+            "matches": 13840
+          },
+          {
+            "full_width": 0.3,
+            "n_per_context": 770,
+            "independent_blocks": 1540,
+            "matches": 6160
+          }
+        ]
+      }
+    }
+  },
+  "bootstrap": {
+    "resamples": 20000,
+    "seed": 6668002178917352027
+  }
+}

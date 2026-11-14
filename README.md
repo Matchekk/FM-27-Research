@@ -1,5 +1,13 @@
 # FM27 Meta Research
 
+> **TACT-001-P1C abgeschlossen:**512 gültige Hauptmatches,128 neue Seedblöcke,
+> D15 gegen D00. Punkte+0,098/Match,95-%-KI[−0,137;+0,333],p=0,412.
+> Vorregistrierte Relevanz-/Präzisionsregel nicht erfüllt: neue Rollen/OOP-Strukturen
+> priorisieren, keine unbegrenzte Wiederholung derselben Instruktionen.
+> [Ergebnis](experiments/TACT-001-P1C-results.md) ·
+> [Daten](data/tact-001-p1c/README.md) · [VALID-003 nur geplant](experiments/VALID-003-plan.md).
+> Keine Holdout-/Karriereausführung oder weitere Optimierung.
+
 > **TACT-001-P1B abgeschlossen (14.11.2026):** 2.048 gültige Hauptmatches,
 > 64 vollständige Seedblöcke, 72 technische Vollmatches und eine erwartete
 > Negativabweisung. Explizite negative Halbfraction E=−ABCD, D00 all-standard.

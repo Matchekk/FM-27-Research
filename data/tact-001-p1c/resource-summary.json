@@ -1,0 +1,27 @@
+{
+  "sessions": [
+    {
+      "kind": "technical",
+      "warm_worker_processes": 4,
+      "completed_matches": 16,
+      "all_returncodes_zero": true,
+      "all_cleanup_ok": true
+    },
+    {
+      "kind": "main",
+      "warm_worker_processes": 32,
+      "completed_matches": 512,
+      "all_returncodes_zero": true,
+      "all_cleanup_ok": true
+    }
+  ],
+  "raw_private_bytes": 235673451,
+  "supervised_operations": 3,
+  "non_match_native_probes": 5,
+  "probe_basis": "One image check per NativeLab child, one capability cache miss per technical/main child; within supervised budget",
+  "negative_processes": 1,
+  "maximum_workers": 4,
+  "progress_timeout_seconds": 90,
+  "charged_native_seconds": 320.44121579999774,
+  "study_window_seconds": 661.419055
+}

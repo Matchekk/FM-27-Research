@@ -253,3 +253,15 @@ Keine Hauptmatches gestartet. Child-Zeit 24.623/900s; Frist unverändert.
 Erste CI scheiterte an privater Seedpfadabhängigkeit im neuen Test; behoben
 durch Prüfung des öffentlichen Seedplans, keine Änderung eingefrorenen Codes.
 Lokal erneut48 Tests bestanden; Hauptlauf erst nach erfolgreicher Freigabe-CI.
+
+## 2026-11-14 – P1C vollständig abgeschlossen
+
+512/512 Hauptmatches,128 neue unabhängige Seedblöcke,16 technische Vollmatches
+und eine Exit108-Abweisung. Keine Ausfälle, Ausschlüsse, Retries, Ersatzseeds
+oder Holdouts. Punkte+0,09765625,95-%-KI[−0,137;+0,333],p0,41246.
+Hinweisregel nicht erfüllt; expliziter Wechsel zu Rollen/OOP empfohlen.
+900s Child-Budget mit320,441s genutzt;1800s Fenster mit661,419s genutzt.
+Öffentlicher unabhängiger Verifier reproduziert sechs Kontraste, Holm5,
+SD-/Powerplanung,128 Blöcke,529 Versuchsplätze und151 historische Dateihashes.
+Nachfolgender Multi-Agent-Auftrag startet ausschließlich Recherche/Planung
+und klar getrennte Offlinevorarbeiten, keine weitere native Hauptserie.

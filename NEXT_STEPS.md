@@ -1,5 +1,15 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Nach P1C – neue Forschungsfaktoren statt Dauertest
+
+[Unabhängiger D15-Seedpilot](experiments/TACT-001-P1C-results.md) vollständig:
+512 Matches/128 Blöcke, Punkte+0,098,95-%-KI[−0,137;+0,333].
+Vorregistrierte Regel nicht erfüllt. D15/D09 archivieren; keine weitere automatische
+Bestätigung oder nachträgliche Auswahl. Rollen und OOP-Strukturen als neue Fragen
+planen. [VALID-003](experiments/VALID-003-plan.md) zunächst technisch freigeben:
+positionsabhängige Profile, Stärken, kapazitätsgerechte Karriere-PKM.
+Bestehende Holdouts und Karriere-Replays bleiben gesperrt/unbenutzt.
+
 ## Aktueller Einstieg – 14.11.2026
 
 1. [VALID-002](experiments/VALID-002-adapter.md) und den tatsächlich freigegebenen

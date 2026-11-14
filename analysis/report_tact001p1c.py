@@ -145,6 +145,8 @@ Simulation, Holdoutstudie oder Optimierungsrunde. **Nach P1C gestoppt.**
 ## Reproduktion und Archivschutz
 
 48 Plattformtests plus5 historische Analysetests, unabhängige P0/P1B/P1C-Verifier.
+Zusätzlich hat ein separater Codex-Subagent P1C ohne Analyse-/Runnerimporte
+[nachgerechnet und zur kontextgebundenen Publikation freigegeben](../docs/program-2026-11-14/P1C-review.md).
 Der unabhängige P1C-Verifier rekonstruiert sechs Kontraste/t-/Bootstrapintervalle,
 Holm5, SD-/Fallzahlminima,128 Seedkontraste und529 Versuchsplätze.
 Alle151 historischen versionierten Analyse-/Daten-/Experiment-/Vertragsdateien

@@ -84,3 +84,21 @@ Retries, Ersatzseeds oder Holdoutmatches. Historische ATTR- und P0-Befunde
 bleiben unverändert. [Ergebnisbericht](experiments/TACT-001-P1B-results.md) ·
 [Vorregistrierung](experiments/TACT-001-P1B-preregistration.md) ·
 [Rohmessungen](data/tact-001-p1b/main.jsonl) · [Effekte](data/tact-001-p1b/effects.json).
+
+## 2026-11-14 – TACT-001-P1C, unabhängiger Seed-/Präzisionspilot
+
+FM27 27.0.1+2503222; D15 als einziges eingefrorenes Paket gegen D00, bekannte
+synthetische Discoverygegner.512 Hauptmatches/128 vollständige neue Seedblöcke.
+Primär tatsächliche Punkte **+0.098/Match**,95-%-KI
+[-0.137; +0.333],p=0.41246.
+Volle Breite0,470 statt Ziel≤0,30, Schätzer unter praktischer Schwelle+0,15.
+**Vorregistrierte Hinweisschwelle nicht erfüllt: Rollen/OOP-Strukturen priorisieren,
+dieses Instruktionspaket nicht unbegrenzt wiederholen.** Keine Äquivalenzbehauptung.
+
+Sekundär xGD+0,196 (Holm5p=0,093); xGA−0,161 (Holm5p=0,027) als
+korrigierter sekundärer Hinweis auf geringere Chancenabgabe. Das bestätigt weder
+Punkteverbesserung noch Karriereübertragbarkeit. D09 bleibt archiviert; keine
+nachträgliche Kandidatenauswahl.16 technische Vollmatches/8 exakte A/A-Paare
+und Exit108-Negativkontrolle bestanden; keine Ausfälle/Retry/Ersatzseeds/Holdouts.
+[Ergebnis](experiments/TACT-001-P1C-results.md) ·
+[Messungen](data/tact-001-p1c/main.jsonl) · [Planung](data/tact-001-p1c/effects.json).

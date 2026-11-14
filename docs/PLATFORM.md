@@ -42,6 +42,27 @@ exportiert ausschließlich erlaubte Felder. Der unabhängige
 Holm-5/10/25, 960 Blockkontraste, Kandidatenregel und vollständige Jobabrechnung.
 [Ergebnisse und Grenzen](../experiments/TACT-001-P1B-results.md).
 
+## TACT-001-P1C – eingefrorener Zweiarm-Punktepilot
+
+`analysis/run_tact001p1c.py` verwendet acht bytegleiche P1B-Eingaben für
+D00/D15, einen eigenen Vertrag/Namespace und getrennte dauerhafte Budgets.
+512 Hauptmatches,64 neue Seeds je bekanntem Gegner, beide Seiten;
+16 technische Vollmatches plus eine Negativprobe. Maximal4Worker,90s ohne
+Fortschritt,900s kumulierte Child-Zeit und1800s unverrückbares UTC-Fenster.
+Kein Retry und keine Ersatzseeds. D09 bleibt archiviert, keine Holdoutausführung.
+
+`analysis/analyse_tact001p1c.py` bildet vollständige Seiten-/Armpaare innerhalb
+neuer Seedblöcke und gewichtet beide Kontexte je½. Primär tatsächliche Punkte,
+sekundär xGD/GF/GA/xGF/xGA mit Holm5; t-/stratifizierte Bootstrapintervalle,
+Kontrast-SDs und bedingte neue Power-/Präzisionsfallzahlen. Kein erneutes
+Kandidatenscreening. Der unabhängige öffentliche Verifier importiert weder
+Runner noch Analyse und startet keine native Engine.
+
+Der [VALID-003-Plan](../experiments/VALID-003-plan.md) trennt eigene
+positionsabhängige Profile, Stärkevarianten und kapazitätsgerechte private
+Karriere-PKM. Er enthält keine ausgeführten neuen Gates und keine Freigabe
+von Karriere-Replays. Bestehende Karriere- und Holdoutgrenzen bleiben bestehen.
+
 ## Architektur und tatsächlicher Implementierungsstand
 
 ```mermaid
