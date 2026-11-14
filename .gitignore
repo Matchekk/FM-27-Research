@@ -26,6 +26,7 @@ data/raw-local/
 *.fm
 *.fmf
 *.pkm
+*.rec
 *.tac
 *.pck
 *.zip
