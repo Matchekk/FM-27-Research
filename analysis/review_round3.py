@@ -288,6 +288,98 @@ def one_event(data, name):
     return found[0]
 
 
+def attr_inputs(public, private, central):
+    """Independent full-record input comparator and archive/registry seed audit."""
+    public, private, central = map(Path, (public, private, central))
+    contract, inputs, plan = [read(public/name) for name in ('contract.json', 'inputs.json', 'seed-plan.json')]
+    original = read(central/'local/tact-001-p1b/configs.json')
+    configs, manifest = read(private/'configs.json'), read(public/'mask-manifest.json')
+    need(inputs['oop_map'] == [[0,1,2,3,4,9,5,6,7,8,10], [0,1,2,3,4,5,6,7,9,8,10]], 'Frozen OOP mapping')
+    diffs = []
+    for h in CONTEXTS:
+        for side in (0, 1):
+            base = original[f'{h}-{side}-D00']
+            baseline_bytes, baseline_records = records(central/'local/tact-001-p1b/inputs'/f'{h}-{side}-D00.bin')
+            for arm in ARMS:
+                name = f'{h}-{side}-{arm}'
+                expected = json.loads(json.dumps(base))
+                need('away_tactic_pool' not in expected and 'experimental_execution' not in expected, 'Forbidden baseline key')
+                changes = {}
+                for logical in range(1, 11):
+                    team = expected['teams'][side]
+                    slot = team['lineup'][logical]
+                    attrs = team['players'][slot]['attributes']
+                    active = {POSITIONS[team['phases'][phase][logical]['position']] for phase in (0, 1)}
+                    if arm[0] == 'S':
+                        attrs[2:15] = [20 if i in active else 1 for i in range(2, 15)]
+                    ability = {'J': 54, 'A': 49, 'P': 53}[arm[1]]
+                    need(attrs[ability] == 60, 'Raw pre-dose')
+                    attrs[ability] = 80
+                    for i, (a, b) in enumerate(zip(base['teams'][side]['players'][slot]['attributes'], attrs, strict=True)):
+                        if a != b:
+                            changes[1, side, slot, i] = (a, b)
+                need(configs[name] == expected, 'Full independent config differs: '+name)
+                payload, actual = records(private/'inputs'/(name+'.bin'))
+                expected_records = []
+                for record in baseline_records:
+                    expected_records.append((*record[:4], changes[record[:4]][1]) if record[:4] in changes else record)
+                need(tuple(expected_records) == actual, 'Undeclared full binary record: '+name)
+                need(len(actual) == 5557 and payload[:12] == baseline_bytes[:12], 'Record/header count')
+                need(sha256(payload).hexdigest() == inputs['setups'][h][str(side)][arm] == contract['design']['setups'][h][str(side)][arm], 'Frozen input hash')
+                declared = {(1, r['side'], r['roster_slot'], r['attribute']): (r['before'], r['after']) for r in manifest[name]['changes']}
+                need(declared == changes, 'Declared mask change differs')
+                for logical, binding in enumerate(manifest[name]['bindings']):
+                    team = base['teams'][side]
+                    need(binding['logical_slot'] == logical and binding['roster_slot'] == team['lineup'][logical] and
+                         binding['ip_native_slot'] == logical and binding['oop_native_slot'] == inputs['oop_map'][side][logical], 'Manifest binding')
+                    need(binding['active_rating_families'] == sorted({POSITIONS[team['phases'][p][logical]['position']] for p in (0, 1)}), 'Manifest active family')
+                diffs.append(len(changes))
+    used = {0}
+    def collect(value, active=False):
+        if isinstance(value, dict):
+            for key, item in value.items():
+                collect(item, active or key in ('seed', 'seeds', 'validation_seeds', 'effective_seed'))
+        elif isinstance(value, list):
+            for item in value:
+                collect(item, active)
+        elif active and type(value) is int:
+            used.add(value)
+    scanned = 0
+    def scan(path):
+        nonlocal scanned
+        candidates = [path] if path.is_file() else list(path.rglob('*.json*'))
+        for file in candidates:
+            if file.suffix == '.json':
+                collect(read(file)); scanned += 1
+            elif file.suffix == '.jsonl':
+                for row in rows(file):
+                    collect(row)
+                scanned += 1
+    for folder in (central/'data').iterdir():
+        if folder.is_dir() and folder.name != 'attr-009-bridge':
+            scan(folder)
+    for file in (central/'local/registry').glob('*.json'):
+        if not file.name.startswith('ATTR-009-Bridge'):
+            scan(file)
+    for folder in (central/'local').iterdir():
+        if folder.is_dir() and folder.name != 'attr-009-bridge' and folder.name.startswith(('valid', 'tact-', 'mech-', 'attr-', 'platform-smoke')):
+            scan(folder)
+    excluded = read(public/'excluded-seeds.json')
+    need(set(excluded) == used and len(excluded) == len(used) == plan['excluded_seed_count'], 'Independent historical exclusion set')
+    need(canonical_hash(sorted(used)) == plan['excluded_seed_set_sha256'], 'Exclusion hash')
+    need(len(plan['seeds']) == len(set(plan['seeds'])) == 34 and not used.intersection(plan['seeds']), 'Fresh unique seeds')
+    need(plan['seeds'] == plan['technical_seeds'] + plan['main_seeds'] and len(plan['technical_seeds']) == 2 and len(plan['main_seeds']) == 32, 'Seed phases')
+    need(read(central/'local/registry/ATTR-009-Bridge.reserved.json') == plan, 'Reservation identity')
+    for name, expected in contract['execution']['code_sha256'].items():
+        need(hash_file(central/name, True) == expected, 'Frozen author code drift')
+    for name, expected in contract['execution']['artifacts'].items():
+        need(hash_file(public/name, True) == expected, 'Frozen public artifact drift')
+    return dict(cells=24, records_per_cell=5557, min_attribute_changes=min(diffs), max_attribute_changes=max(diffs),
+                undeclared_binary_changes=0, historical_seed_count=len(used), historical_json_files_scanned=scanned,
+                fresh_main_seeds=32, fresh_technical_seeds=2, namespace_collision=False,
+                full_matches_started_by_review=0, native_gate_passed=False)
+
+
 def technical(public, private, central):
     """Read every actual technical log/dump, compare directly to frozen configs."""
     public, private = Path(public), Path(private)
@@ -371,7 +463,7 @@ def technical(public, private, central):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('phase', choices=('offline', 'technical', 'results'))
+    parser.add_argument('phase', choices=('offline', 'inputs', 'technical', 'results'))
     parser.add_argument('--public', type=Path, default=ROOT/'data/attr-009-bridge')
     parser.add_argument('--central', type=Path, default=ROOT)
     parser.add_argument('--game', type=Path)
@@ -380,6 +472,8 @@ def main():
     if args.phase == 'offline':
         parser.error('--game is required for offline identity checks') if args.game is None else None
         result = offline(args.central, args.game)
+    elif args.phase == 'inputs':
+        result = attr_inputs(args.public, args.private or args.central/'local/attr-009-bridge', args.central)
     elif args.phase == 'technical':
         result = technical(args.public, args.private or args.central/'local/attr-009-bridge', args.central)
     else:
