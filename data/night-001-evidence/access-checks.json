@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "purpose": "Transport fingerprints only; no copied article text, authentication or scientific validation",
+  "checks": [
+    {
+      "url": "https://www.footballmanager.com/fm27/features/fm27-training-and-tactical-effectiveness",
+      "accessed_utc": "2026-11-14T17:24:52.138622+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://www.footballmanager.com/fm27/features/fm27-training-and-tactical-effectiveness",
+      "body_bytes": 210660,
+      "body_complete": true,
+      "body_sha256": "6a1350f39bb61dbe469e8aabb9f5bd7380d47109e0428f63881f4ea31945a48b",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": []
+    },
+    {
+      "url": "https://www.footballmanager.com/fm27/features/fm27-tactical-tweaks-and-match-engine-upgrades",
+      "accessed_utc": "2026-11-14T17:24:52.138622+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://www.footballmanager.com/fm27/features/fm27-tactical-tweaks-and-match-engine-upgrades",
+      "body_bytes": 219193,
+      "body_complete": true,
+      "body_sha256": "98ab8db93332a59984a1e1bb9fc7acf873de546ff9d93a7568878cc92cf79048",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": []
+    },
+    {
+      "url": "https://fm-arena.com/tactic-testing/aggregators/1/",
+      "accessed_utc": "2026-11-14T17:24:52.138622+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://fm-arena.com/tactic-testing/aggregators/1/",
+      "body_bytes": 35045,
+      "body_complete": true,
+      "body_sha256": "b8ca6f20be886e3159c223d9cfddba7d31f4404b1f0fb73dae7f81bef1881179",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": [
+        "2026-11-10T11:43:19+0000"
+      ]
+    },
+    {
+      "url": "https://fm-arena.com/threads/player-attributes.59/",
+      "accessed_utc": "2026-11-14T17:24:52.474113+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://fm-arena.com/threads/player-attributes.59/",
+      "body_bytes": 155448,
+      "body_complete": true,
+      "body_sha256": "37e08e38e304a621b2fca8c60ef0715ff6db7e1d3d8d620355e553ed9740205f",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": [
+        "2026-11-10T15:49:11+0000",
+        "2026-11-10T15:49:11+0000",
+        "2026-11-10T19:13:54+0000",
+        "2026-11-10T17:50:56+0000"
+      ]
+    },
+    {
+      "url": "https://fm-arena.com/threads/training-schedules.60/",
+      "accessed_utc": "2026-11-14T17:24:52.555114+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://fm-arena.com/threads/training-schedules.60/",
+      "body_bytes": 184827,
+      "body_complete": true,
+      "body_sha256": "982a871adfd348fc03b9b90bb288fff04be2570bdfc1e9992fc9629c146b9bfc",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": [
+        "2026-11-10T15:52:26+0000",
+        "2026-11-10T15:52:26+0000",
+        "2026-11-11T20:18:27+0000",
+        "2026-11-10T17:51:59+0000"
+      ]
+    },
+    {
+      "url": "https://fm-arena.com/threads/set-pieces.61/",
+      "accessed_utc": "2026-11-14T17:24:52.879026+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://fm-arena.com/threads/set-pieces.61/",
+      "body_bytes": 50763,
+      "body_complete": true,
+      "body_sha256": "8a5ca24d15b0bb0fa7725d324211ad9c1efad56ccf6493f8f3ceb3487db6ce60",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": [
+        "2026-11-10T15:56:39+0000",
+        "2026-11-10T15:56:39+0000"
+      ]
+    },
+    {
+      "url": "https://fm-arena.com/threads/attribute-importance-by-position-in-fm27-a-test-on-my-own-tactic.125/",
+      "accessed_utc": "2026-11-14T17:24:53.240017+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://fm-arena.com/threads/attribute-importance-by-position-in-fm27-a-test-on-my-own-tactic.125/",
+      "body_bytes": 125336,
+      "body_complete": true,
+      "body_sha256": "4771c1f8e8a31b5e68ba9eced960b7f46cdbf0b60ca533ad981fca3d70fa10f3",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": [
+        "2026-11-13T18:43:09+0000",
+        "2026-11-13T18:43:09+0000",
+        "2026-11-13T20:35:59+0000",
+        "2026-11-13T21:16:34+0000"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/17-positions-in-and-out-of-possession.md",
+      "accessed_utc": "2026-11-14T17:24:53.425297+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/17-positions-in-and-out-of-possession.md",
+      "body_bytes": 7784,
+      "body_complete": true,
+      "body_sha256": "1a27d13eddc6379af516366d286a4217300ff3bfe44b9976fc8417f7dc2fca04",
+      "content_type": "text/plain; charset=utf-8",
+      "html_time_datetime_sample": []
+    },
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/08-tactical-tweaks.md",
+      "accessed_utc": "2026-11-14T17:24:53.556957+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/849b16f9c4057598da33b255649c86d8cecb525b/docs/studies/08-tactical-tweaks.md",
+      "body_bytes": 10740,
+      "body_complete": true,
+      "body_sha256": "72411cd590ea5bf7c867c0ae387ab4bfb5ce1761605c8a1770aab52fc382c6bb",
+      "content_type": "text/plain; charset=utf-8",
+      "html_time_datetime_sample": []
+    },
+    {
+      "url": "https://fm-arena.com/table/26-player-attributes-testing/",
+      "accessed_utc": "2026-11-14T17:24:53.593082+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 404,
+      "error": "HTTPError"
+    },
+    {
+      "url": "https://fm-arena.com/thread/20917-fm27/",
+      "accessed_utc": "2026-11-14T17:24:53.659186+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 404,
+      "error": "HTTPError"
+    },
+    {
+      "url": "https://fm-arena.com/threads/how-to-get-fm27-pre-game-editor-for-free-and-use-it-to-run-tests-without-fm27.113/",
+      "accessed_utc": "2026-11-14T17:27:46.878759+00:00",
+      "method": "anonymous_standard_library_get",
+      "content_archived": false,
+      "status": 200,
+      "final_url": "https://fm-arena.com/threads/how-to-get-fm27-pre-game-editor-for-free-and-use-it-to-run-tests-without-fm27.113/",
+      "body_bytes": 47363,
+      "body_complete": true,
+      "body_sha256": "40560b08eb064524572b75b187fbd56ffa00bfeae538496706f012ce4ff45627",
+      "content_type": "text/html; charset=utf-8",
+      "html_time_datetime_sample": [
+        "2026-11-13T08:27:25+0000",
+        "2026-11-13T08:27:25+0000"
+      ]
+    }
+  ]
+}
