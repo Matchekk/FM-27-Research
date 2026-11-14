@@ -3,6 +3,7 @@ from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from datetime import datetime, timezone
 from hashlib import sha256
 import json
+import math
 from pathlib import Path
 import re
 from threading import Event, Lock
@@ -16,6 +17,24 @@ EXPERIMENT = 'MECH-002-SHARPNESS-P0'
 OBSERVER_HOST = '58e05a46ca65014a227ed1bd61da090d326848d20f39744b59e175c8b7c13d32'
 CONTEXTS = ('high_press', 'deep_block')
 ARMS = ('S70-P0', 'S100-P0', 'S70-P1', 'S100-P1')
+
+
+class FirstMainCall:
+    """No other cold call may overtake the immediate first-call600s recheck."""
+    def __init__(self):
+        self.lock=Lock();self.attempted=False;self.evidence=None
+
+    def invoke(self,operation,check,allowance):
+        with self.lock:
+            if not self.attempted:
+                limit=allowance()  # Admission/IO occurs after waiting, before the final600s check.
+                remaining=check()
+                require(type(remaining) in (int,float) and math.isfinite(remaining) and remaining>=600,
+                        'Immediate first-main allowance below600s')
+                self.evidence=dict(remaining_seconds=remaining,checked_utc=datetime.now(timezone.utc).isoformat())
+                self.attempted=True
+                return operation(min(limit,remaining))  # First call alone; then normal four-thread dispatch.
+        return operation(allowance())
 
 
 class ReadLeases:

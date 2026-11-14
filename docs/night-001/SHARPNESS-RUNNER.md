@@ -42,6 +42,13 @@ the TECH17 registration commit; its historical master is not compared to this
 new route's current master. Real7000→cache70 must already be proved. Missing
 release evidence blocks preparation; no invented true flags or fallback writer.
 
+Direct entry selects a new absent UUID pycache prefix and disables bytecode
+writes before every project import; `-B` alone would still read stale PYC.
+Preloaded research/analysis modules are rejected in direct CLI mode. The
+versioned research initializer is included in CODE; analysis initializer and
+shadow-module source/legacy-PYC paths must remain absent. Existing caches are
+preserved, and unit-test imports remain supported.
+
 ## Fresh seeds and immutable publications
 
 Root alone reserves `local/registry/MECH-002-SHARPNESS-P0.reserved.json`:
@@ -118,6 +125,13 @@ at least600sremaining in own allowance/window and global allowance/current outer
 deadline immediately before its first native command. Private artifacts≤2GiB,
 free disk>20GiB. Job pending markers are removed only after persisted kernel-zero
 and capsule-exit proof. Any unknown cleanup retains the global lease/crash state.
+The first main API call alone holds an admission lock: fresh resource/UTC IO
+checks precede the final600srecheck, then the containment API is called without
+another IO step. Later calls refresh their own allowance after that lock wait
+and do not repeat the study-start600srequirement. A failed pre-API gate creates
+no containment attempt and leaves no false unknown-cleanup marker. Artifact
+snapshots stat each path once, skipping only files concurrently unlinked by
+normal worker cleanup; other IO errors still stop the phase.
 
 ## Readback, descriptive fields and publication
 
@@ -139,12 +153,16 @@ containment hashes, counter hashes, nonhalted reconciled budget, exact reserved
 keys, successful parent operation(s), cumulative charge≤900and actual UTC finish
 inside the immutable window/night deadline. Private phase budget snapshots and
 post-lease-release reconciliation receipts preserve historical phase epochs.
+Every operation's measured elapsed time must also fit its own child deadline;
+the wider3600swindow alone cannot establish successful reconciliation.
 Unknown charge is null; raw recorded charges and redacted operations remain
 available. Tokens, argv and private paths are excluded from public budget output.
 Incomplete or failed main phases export status/accounting only, not performance
 rows or statistical effects. Only a complete, reconciled512-row phase may create
 `main.jsonl`; the director must check `main-summary.json.passed` before analysis.
 
-The12current specialist tests pass and are pure thread/data/mocked-admission tests. They
+The17current specialist tests pass and are pure thread/data/mocked-admission tests. They
 make no native or harmless child-process starts. Full integration, CI, actual
 TECH17 release, new TECH32+1 and main permission remain Root/reviewer gates.
+Five independent reviewer regressions also pass, including isolated Python
+`--help` cache-poison fixtures; these launch no FM or engine process.

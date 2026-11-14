@@ -4,7 +4,11 @@ from datetime import datetime,timedelta,timezone
 import json
 from pathlib import Path
 import tempfile
+import runpy
+import stat
+import sys
 from threading import Barrier,Event
+from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock,patch
 
@@ -146,6 +150,8 @@ class SharpnessColdTests(unittest.TestCase):
             self.assertFalse(runner.phase_budget_gate('technical',changed,proof,'a'*64,dict(technical=keys)))
         self.assertFalse(runner.phase_budget_gate('technical',state,dict(proof,completed_utc='2026-11-14T21:00:01+00:00'),
                                                   'a'*64,dict(technical=keys)))
+        shortened=deepcopy(state);shortened['operations'][0]['child_deadline_utc']='2026-11-14T20:00:06+00:00'
+        self.assertFalse(runner.phase_budget_gate('technical',shortened,proof,'a'*64,dict(technical=keys)))
 
     def test_postsummary_parent_failure_never_exports_main_performance(self):
         from research.native import digest
@@ -200,6 +206,61 @@ class SharpnessColdTests(unittest.TestCase):
                 with self.assertRaises(ValueError):runner.prepare()
             factory.assert_not_called();seeds.assert_not_called();process.assert_not_called()
             self.assertFalse((root/'private').exists())
+
+    def test_fresh_absent_cache_preserves_old_cache_and_checks_namespace_absence(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);old=root/'analysis/__pycache__/old.pyc';old.parent.mkdir(parents=True);old.write_bytes(b'own-old-cache')
+            with patch.object(sys,'pycache_prefix',None),patch.object(sys,'dont_write_bytecode',False):
+                prefix=runner.fresh_source_cache(root)
+                self.assertEqual(sys.pycache_prefix,prefix);self.assertTrue(sys.dont_write_bytecode)
+                self.assertFalse(Path(prefix).exists());self.assertEqual(old.read_bytes(),b'own-old-cache')
+                (root/'analysis/__init__.pyc').write_bytes(b'own-namespace-shadow')
+                with self.assertRaises(RuntimeError):runner.fresh_source_cache(root)
+        self.assertIn('research/__init__.py',runner.CODE)
+
+    def test_direct_entry_rejects_preloaded_project_modules(self):
+        # runpy executes the direct source entry in this already-loaded test process.
+        # No child process, game import or command dispatch can occur.
+        with self.assertRaisesRegex(RuntimeError,'preloaded project modules'):
+            runpy.run_path(str(Path(runner.__file__)),run_name='__main__')
+
+    def test_first_main_rechecks_after_allowance_and_refreshes_waiting_calls(self):
+        gate=helper.FirstMainCall();events=[]
+        check=Mock(side_effect=lambda:events.append('600-check') or 650.)
+        allowance=Mock(side_effect=lambda:events.append('fresh-allowance') or 700.)
+        def operation(limit):events.append(('call',limit));return limit
+        self.assertEqual(gate.invoke(operation,check,allowance),650.)
+        self.assertEqual(events,['fresh-allowance','600-check',('call',650.)])
+        allowance.side_effect=lambda:events.append('fresh-after-wait') or 590.
+        self.assertEqual(gate.invoke(operation,check,allowance),590.)
+        self.assertEqual(check.call_count,1);self.assertEqual(allowance.call_count,2)
+        self.assertEqual(events[-2:],['fresh-after-wait',('call',590.)])
+
+    def test_delayed_first_main_below600_makes_no_containment_attempt(self):
+        from research.native import digest
+        with tempfile.TemporaryDirectory() as temp:
+            local=Path(temp);write(local/'private-host.json',dict(observer_host='never-executed.exe'))
+            binary=local/'inputs/high_press-0-S70-P0.bin';binary.parent.mkdir();binary.write_bytes(b'own-test-input')
+            job=dict(key='main-own-fixture',scenario='high_press',side=0,arm='S70-P0',seed=7,setup_sha256=digest(binary))
+            with patch.object(runner,'LOCAL',local),patch.object(runner,'admission',return_value=850), \
+                 patch.object(runner,'main_remaining',return_value=599), \
+                 patch.object(runner,'read',return_value=dict(observer_host='never-executed.exe')), \
+                 patch('research.native_process005.contained_call') as invoke:
+                with self.assertRaises(ValueError):runner.native_job(job,'main',[job['key']],
+                    dict(identity=dict(engine_sha256='a'*64)),lambda:None,helper.FirstMainCall())
+            invoke.assert_not_called()
+            self.assertFalse((local/'main/jobs/main-own-fixture/pending.json').exists())
+
+    def test_artifact_snapshot_stats_once_skips_only_removed_files(self):
+        regular=Mock();regular.stat.return_value=SimpleNamespace(st_mode=stat.S_IFREG,st_size=17)
+        removed=Mock();removed.stat.side_effect=FileNotFoundError('own removed pending marker')
+        directory=Mock();directory.stat.return_value=SimpleNamespace(st_mode=stat.S_IFDIR,st_size=4096)
+        with patch.object(Path,'rglob',return_value=iter([regular,removed,directory])):
+            self.assertEqual(runner.artifact_bytes(Path('own-fixture')),17)
+        regular.stat.assert_called_once();removed.stat.assert_called_once();directory.stat.assert_called_once()
+        denied=Mock();denied.stat.side_effect=PermissionError('own IO failure')
+        with patch.object(Path,'rglob',return_value=iter([denied])):
+            with self.assertRaises(PermissionError):runner.artifact_bytes(Path('own-fixture'))
 
 
 if __name__=='__main__':unittest.main()

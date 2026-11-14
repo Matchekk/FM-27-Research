@@ -15,14 +15,33 @@ import os
 from pathlib import Path
 import re
 import shutil
+import stat
 import subprocess
 import sys
+import uuid
 
 ROOT=Path(__file__).resolve().parents[1]
+if __name__=='__main__' and any(name=='research' or name.startswith('research.') or
+                              name=='analysis' or name.startswith('analysis.') for name in sys.modules):
+    raise RuntimeError('Direct entry refuses preloaded project modules')
+# -B alone prevents writes, not reads of timestamp-valid stale project PYC.
+# This executes before every project import, including package initializers.
+ABSENT=('analysis/__init__.py','analysis/__init__.pyc','analysis.py','analysis.pyc')
+def fresh_source_cache(root):
+    root=Path(root).resolve()
+    if any((root/name).exists() or (root/name).is_symlink() for name in ABSENT):
+        raise RuntimeError('The frozen analysis namespace must have no initializer/shadow module')
+    prefix=(root/'local/mech-002-sharpness-p0/import-cache'/uuid.uuid4().hex).resolve()
+    if prefix.exists() or prefix.is_symlink():raise RuntimeError('Import cache prefix is not absent')
+    sys.pycache_prefix=str(prefix);sys.dont_write_bytecode=True
+    importlib.invalidate_caches()
+    return str(prefix)
+
+IMPORT_CACHE_PREFIX=fresh_source_cache(ROOT)
 sys.path.insert(0,str(ROOT))
 from analysis import run_observer005 as observer
 from analysis.run_startpolicy002 import audit_malformed
-from analysis.sharpness002_runner import (EXPERIMENT,OBSERVER_HOST,ARMS,CONTEXTS,ColdScheduler,ReadLeases,
+from analysis.sharpness002_runner import (EXPERIMENT,OBSERVER_HOST,ARMS,CONTEXTS,ColdScheduler,ReadLeases,FirstMainCall,
     audit_job,block_jobs,initial_controls,repeat_equivalence,treatment,write_exclusive)
 from research.budget import atomic,supervisor_alive
 from research.coordination import NativeLease
@@ -46,7 +65,7 @@ CODE=('analysis/run_sharpness002.py','analysis/sharpness002_runner.py','tests/te
     'analysis/startpolicy002_budget.py','analysis/night_supervise.py','research/startpolicy.py',
     'research/passive_observer.py','research/native_process005.py','research/core.py','research/native.py',
     'research/coordination.py','research/budget.py','research/study_budget.py','research/night_control.py',
-    'research/stats.py','requirements.txt','requirements-lock.txt',
+    'research/__init__.py','research/stats.py','requirements.txt','requirements-lock.txt',
     'adapters/passive_observer_v1.h','adapters/passive-observer-v1.patch')
 source_hash=observer.source_hash
 
@@ -157,6 +176,7 @@ def prepare():
     write_exclusive(LOCAL/'configs.json',configs);write_exclusive(LOCAL/'private-host.json',private)
     write_exclusive(PUBLIC/'seed-plan.json',plan);write_exclusive(LOCAL/'seed-plan.json',plan)
     inputs=dict(experiment_id=EXPERIMENT,identity=prior['identity'],observer_host_sha256=OBSERVER_HOST,software=software(),
+        absent_paths=list(ABSENT),import_cache_policy='fresh_absent_UUID_before_project_imports_no_bytecode_writes',
         build_manifest_sha256=prior['build_manifest_sha256'],catalog_sha256=prior['catalog_sha256'],oop_map=prior['oop_map'],
         runtime_source_sha256=prior['runtime_source_sha256'],lease_module_sha256=prior['lease_module_sha256'],
         setups=setups,original_inputs=originals,frozen_controls=controls,configs_sha256=config_hash(configs),
@@ -177,6 +197,10 @@ def prepare():
 def verify_frozen():
     value=read(PUBLIC/'inputs.json')
     require(value['experiment_id']==EXPERIMENT and value['observer_host_sha256']==OBSERVER_HOST,'Input identity changed')
+    require(value['absent_paths']==list(ABSENT) and
+            not any((ROOT/n).exists() or (ROOT/n).is_symlink() for n in ABSENT),'Namespace absence drift')
+    require(sys.dont_write_bytecode is True and sys.pycache_prefix==IMPORT_CACHE_PREFIX and
+            not Path(IMPORT_CACHE_PREFIX).exists() and not Path(IMPORT_CACHE_PREFIX).is_symlink(),'Source-only cache policy changed')
     require(value['software']==software(),'Python/capsule/analysis dependency drift')
     require(all(source_hash(ROOT/n)==h for n,h in value['code_sha256'].items()),'Frozen code changed')
     require(source_hash(PUBLIC/'seed-plan.json')==value['seed_plan_sha256'] and read(PUBLIC/'seed-plan.json')==seed_plan(),'Seed plan drift')
@@ -270,12 +294,21 @@ def admission(phase,keys):
                 (datetime.fromisoformat(state['wall_deadline_utc'])-now).total_seconds(),
                 (datetime.fromisoformat(DEADLINE)-now).total_seconds())-5
     require(seconds>0,'No bounded native allowance')
-    require(sum(p.stat().st_size for p in LOCAL.rglob('*') if p.is_file())<2*1024**3 and
+    require(artifact_bytes(LOCAL)<2*1024**3 and
             shutil.disk_usage(LOCAL).free>20*1024**3,'Private artifact/disk limit')
     return seconds
 
 
-def native_job(job,phase,keys,frozen,on_start):
+def artifact_bytes(directory):
+    total=0
+    for path in Path(directory).rglob('*'):
+        try:value=path.stat()
+        except FileNotFoundError:continue  # Other workers legitimately unlink pending markers.
+        if stat.S_ISREG(value.st_mode):total+=value.st_size
+    return total
+
+
+def native_job(job,phase,keys,frozen,on_start,first_main=None):
     from research.native_process005 import contained_call,confirmed_cleanup,CleanupUnconfirmed
     directory=LOCAL/phase/'jobs'/job['key'];directory.mkdir(parents=True,exist_ok=False)
     pending=directory/'pending.json';write_exclusive(pending,dict(job_id=job['key']))
@@ -293,10 +326,20 @@ def native_job(job,phase,keys,frozen,on_start):
     env={k:v for k,v in os.environ.items() if not k.startswith('FM27_')}
     env.update(FM27_ENGINE_ROOT=str(RUNTIME/'engine'),FM27_GAME_ROOT=str(observer.GAME),
                FM27_EXPECTED_DLL_SHA256=frozen['identity']['engine_sha256'],FM27_PASSIVE_OBSERVER_V1='1')
+    attempted=False
     try:
-        code,elapsed=contained_call(command,env,log,out,timeout=90,on_start=on_start,max_processes=3,
-                                    total_timeout=admission(phase,keys))
+        def invoke(allowance):
+            nonlocal attempted
+            attempted=True
+            return contained_call(command,env,log,out,timeout=90,on_start=on_start,max_processes=3,total_timeout=allowance)
+        if phase=='main':
+            require(isinstance(first_main,FirstMainCall),'Atomic first-main admission gate required')
+            code,elapsed=first_main.invoke(invoke,lambda:main_remaining(read(LOCAL/'budget.json'),
+                read(ROOT/'local/night-001/program-budget.json'),datetime.now(timezone.utc)),lambda:admission(phase,keys))
+        else:code,elapsed=invoke(admission(phase,keys))
     except BaseException as error:
+        if not attempted:
+            pending.unlink();raise  # Guard failed before the containment API could create any process.
         if not confirmed_cleanup(out,expected_limit=3):raise CleanupUnconfirmed(dict(job_id=job['key'])) from error
         pending.unlink();raise
     if not confirmed_cleanup(out,expected_limit=3):raise CleanupUnconfirmed(dict(job_id=job['key']))
@@ -366,7 +409,8 @@ def execute(phase,publication,ci):
                 aa.append(dict(context=pair[0]['scenario'],side=pair[0]['side'],arm=arm,
                                **repeat_equivalence(logs[0],logs[1],pair[0]['seed'])))
         if phase=='main':main_remaining(read(LOCAL/'budget.json'),read(ROOT/'local/night-001/program-budget.json'),datetime.now(timezone.utc))
-        scheduler=ColdScheduler(LOCAL/phase/'dispatch',lambda j,on:native_job(j,phase,keys,frozen,on),
+        first_main=FirstMainCall()
+        scheduler=ColdScheduler(LOCAL/phase/'dispatch',lambda j,on:native_job(j,phase,keys,frozen,on,first_main),
                                 lambda j:admission(phase,keys),check_block)
         data=scheduler.run(block_jobs(plan,technical=phase=='technical'))
         require(len(data)==(33 if phase=='technical' else 512),'Complete phase required')
@@ -377,6 +421,7 @@ def execute(phase,publication,ci):
             aa_pairs=aa,peak_inflight_claims=scheduler.peak,engine_pid_peak_measured=False,
             dispatch_summary_sha256=digest(LOCAL/phase/'dispatch/dispatch-summary.json'),
             concurrency_ledger_sha256=digest(LOCAL/phase/'dispatch/concurrency.jsonl'),
+            first_main_admission=first_main.evidence if phase=='main' else None,
             scientific_analysis_allowed=phase=='main',career_released=False))
     finally:leases.close_leases()
 
@@ -437,7 +482,8 @@ def phase_budget_gate(phase,state,reconciliation,snapshot_sha,expected_keys):
         for op in operations:
             begin=datetime.fromisoformat(op['start_utc']);deadline=datetime.fromisoformat(op['child_deadline_utc'])
             require(begin.utcoffset()==deadline.utcoffset()==timedelta(0) and start<=begin<deadline<=end and
-                    (deadline-begin).total_seconds()<=900 and (finish-begin).total_seconds()>=op['elapsed_seconds'],
+                    op['elapsed_seconds']<=(deadline-begin).total_seconds()<=900 and
+                    (finish-begin).total_seconds()>=op['elapsed_seconds'],
                     'Operation actual/deadline timing evidence invalid')
         return True
     except (KeyError,TypeError,ValueError,OverflowError):return False
