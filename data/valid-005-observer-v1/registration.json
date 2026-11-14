@@ -1,0 +1,30 @@
+{
+  "experiment_id": "VALID-005-OBSERVER-V1",
+  "preregistration_commit": "39b6af5422b160ae9bd4fa82d0c987c947f6916a",
+  "ci_run": 43627888504,
+  "independent_review_document": "docs/night-001/OBSERVER-RUNNER-REVIEW.md",
+  "independent_review_sha256": "7e2ee299373883c14361344a21490419595f9a9dd7fa99652210c101fd04584f",
+  "inputs_sha256": "0fdc19ce4c778bf7e954bbde8446ffbe26b009d925ee44b93b789f4a785880f1",
+  "code_sha256": {
+    "analysis/run_observer005.py": "b9e95950aeb1d11199ac215c740efd88e15a387bfde256e8e48aae076f643c9b",
+    "analysis/night_supervise.py": "7665f6b2f57cdc86dd57be168a98c56233dc1f121370aa1917b1451bb654a21c",
+    "research/passive_observer.py": "f947f9f621ac3fbdb8a5789fb89125c3d9cda7cff82b5b9bbdc08db61d5dcc67",
+    "research/native_process005.py": "03c50200bb46c3daaeeba5901502f9eede04f2bba7ad04884b2d3dd6ebaa8faf",
+    "research/night_control.py": "2ebd010b0e5da365780bc315b93c4c662f2496c6cedeba0a2bcc65f4999b5aea",
+    "research/budget.py": "b228145ed83ab1a57e3413ee00edf073240ce0377979f6dd28c922e254c3af34",
+    "research/study_budget.py": "7d20b2b9fd2ea1addb64bbec8f6976b971e8746d9d9977fc2e87370e45c93608",
+    "research/core.py": "94ef5c76f56f65adf495df1632da7cb99701d25c64ad6846a6d45872c6730ab6",
+    "research/native.py": "0a9b143d8b51d3e2108c6f60946ca1ea280da4f455299b8718e7303cc168366c",
+    "research/coordination.py": "5c331579fa9d9660950627ca5c6a0f41e59d0d188f213ef683dd2816571a4a8e",
+    "adapters/passive_observer_v1.h": "7d52c726b411051aab3f3299a0583de04c1da0b44de5acd27cfe2f0a636f8c51",
+    "adapters/passive-observer-v1.patch": "3874fefd838b85f1ffec9c2715ecea9fb22348b04c125b04d5c38ba37ad24e31",
+    "experiments/VALID-005-passive-observer.md": "1ab5721ed1a424d8050e9886bc45245ffba2b0f03e75d17fcc62144bbcaada30",
+    "docs/night-001/OBSERVER-RUNNER-REVIEW.md": "7e2ee299373883c14361344a21490419595f9a9dd7fa99652210c101fd04584f"
+  },
+  "seeds": [
+    2927073907,
+    950824444,
+    3838865994,
+    4071749194
+  ]
+}
