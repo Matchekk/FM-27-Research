@@ -16,10 +16,11 @@ def require(ok,message):
     if not ok:raise ValueError(message)
 
 
-def source_hash(path):
+def source_hash(path, normalized=False):
     path=Path(path)
     require(path.suffix in ('.py','.md','.json','.jsonl'),'Only source and retained JSON may be inspected')
-    return sha256(path.read_bytes()).hexdigest()
+    raw=path.read_bytes()
+    return sha256(raw.replace(b'\r\n',b'\n') if normalized else raw).hexdigest()
 
 
 def _tree(path):return ast.parse(Path(path).read_text(encoding='utf8'))

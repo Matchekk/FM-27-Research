@@ -101,12 +101,13 @@
     }
   },
   "code_sha256": {
-    "research/career_diag004r3.py": "40352db7903adf08ad96112b5d321067b59d06c3325b7ec907da52c9d360021f",
-    "analysis/prepare_career004r3.py": "c32dc6fad160a1d32f691c14bfca13e1242c2f72756cd9dc83865c02ec8a53f5",
-    "tests/test_career004r3.py": "41e575276b807caed14df99426b5776631c6c38dc3a9d1b4f29addf60f947da2"
+    "research/career_diag004r3.py": "9c7767606f7c273bec8902b0eeed7984d4dbdbf53476048bfcbbae29dd52d326",
+    "analysis/prepare_career004r3.py": "792b3d37bada7d76aa92bd6e1132b64ebd193d9dd59270d337c5fe31ca5eb695",
+    "tests/test_career004r3.py": "81c66edea502caa0d0c5b2953a80cd224fb6e5ae4309547e80f749124676aca3"
   },
   "document": "experiments/VALID-004-career-readonly-R3-DIAG.md",
   "document_sha256": "841dc5f5ea65b187d91757fcd94ec1c139ff87038368713210036da38570a292",
+  "own_source_hash_normalization": "CRLF_to_LF; package and private evidence hashes remain raw",
   "private_field_contract": {
     "section_bytes": {
       "source": "final target frame: len(section)",

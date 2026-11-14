@@ -90,6 +90,13 @@ class PassiveDiagnosticTests(unittest.TestCase):
             with self.assertRaises(ValueError):source_hash('approved.fm')
             read_bytes.assert_not_called()
 
+    def test_own_source_hash_normalization_preserves_raw_evidence_hashes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            lf=Path(tmp)/'lf.py';crlf=Path(tmp)/'crlf.py'
+            lf.write_bytes(b'print(1)\n');crlf.write_bytes(b'print(1)\r\n')
+            self.assertEqual(source_hash(lf,True),source_hash(crlf,True))
+            self.assertNotEqual(source_hash(lf),source_hash(crlf))
+
     def test_layout_and_model_inventory_is_static_not_python_execution(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'_layouts').mkdir()

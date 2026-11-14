@@ -79,7 +79,8 @@ def prepare(central):
         snapshot_source='already frozen R0 private copy only; not opened or hashed in this preparation',
         reader=dict(version='0.12.4',wheel_sha256=WHEEL_SHA,release_commit=RELEASE_COMMIT,
                     source_sha256=contracts['R2']['reader']['source_sha256']),
-        code_sha256={name:source_hash(ROOT/name) for name in OWN},document=DOC,document_sha256=source_hash(ROOT/DOC),
+        code_sha256={name:source_hash(ROOT/name,True) for name in OWN},document=DOC,document_sha256=source_hash(ROOT/DOC,True),
+        own_source_hash_normalization='CRLF_to_LF; package and private evidence hashes remain raw',
         private_field_contract={
             'section_bytes':dict(source='final target frame: len(section)',unit='bytes',native_verified=False),
             'block_start/block_end/cursor':dict(source='final target frame locals',unit='section-relative byte offsets',native_verified=False),
