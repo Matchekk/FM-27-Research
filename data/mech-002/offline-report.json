@@ -1,0 +1,99 @@
+{
+  "kind": "offline_binary_preparation_only",
+  "native_status": {
+    "version": "mech002-startpolicy-offline-v1",
+    "status": "blocked",
+    "native_execution_allowed": false,
+    "blockers": [
+      "no_versioned_startpolicy_runner_binding",
+      "host_applies_profiles_before_not_after_original_preparation",
+      "no_passive_profile_receipt_at_first_progression",
+      "no_passive_original_familiarity_receipts",
+      "no_native_opt_in_startpolicy_acceptance"
+    ]
+  },
+  "new_native_starts": 0,
+  "new_match_seeds_reserved": 0,
+  "baselines": [
+    {
+      "name": "deep_block-0-R00.bin",
+      "baseline_sha256": "c2ddb3a7a99d5e4e415eb541fdb88142ee0d4512d787d879da809e9ae2797ff2",
+      "records": 5557,
+      "default_bytes_identical": true,
+      "sides": [
+        {
+          "tested_side": 0,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "8c9d94451656f0aeaa98e2fe11fdca7201703c2cca0bd88d2a6892c6d5d851ec"
+        },
+        {
+          "tested_side": 1,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "1b013aebe35d58568cb27caf8599078996cab22d7d975a3ef93b4fe96a488baf"
+        }
+      ]
+    },
+    {
+      "name": "deep_block-1-R00.bin",
+      "baseline_sha256": "f5398503d8305ce38252b20a680151390af73429a44af157c62d99f7e5f8d986",
+      "records": 5557,
+      "default_bytes_identical": true,
+      "sides": [
+        {
+          "tested_side": 0,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "c445d4dabede6db6ca7eed3691b9e9e21e101233c4ff5c1ed97a73eb7f5f72f8"
+        },
+        {
+          "tested_side": 1,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "5cf2827de52435603c5f06b2565888393f16f306c4113e10adf92801b62e3112"
+        }
+      ]
+    },
+    {
+      "name": "high_press-0-R00.bin",
+      "baseline_sha256": "2fa5bf530d9c46b88a766e879e63de417130b51758aba9ac8b721b80b3d0a342",
+      "records": 5557,
+      "default_bytes_identical": true,
+      "sides": [
+        {
+          "tested_side": 0,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "3fbc2873cfefef6b37173afc4090c08072adab637d1a83168194d942f4e1faf6"
+        },
+        {
+          "tested_side": 1,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "0579bf4a2846e1927da0b0b90f9b3b6d9175d06b9b821b34ab55b30786ddd09f"
+        }
+      ]
+    },
+    {
+      "name": "high_press-1-R00.bin",
+      "baseline_sha256": "6215fd8d6c665d00fcd254c8954989b407e6fa4c2b0e2946d7df729ec23c2bc7",
+      "records": 5557,
+      "default_bytes_identical": true,
+      "sides": [
+        {
+          "tested_side": 0,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "c769fa80a72b622f7ca36c0ce4a8a9951a83ce3b7c6b07e5b04330c43489ea83"
+        },
+        {
+          "tested_side": 1,
+          "full_bytes_identical": true,
+          "low_changed_records": 20,
+          "low_setup_sha256": "b5fb88556287b68e7dfe69f90978ebcd1d7990657d989ab78acaba32e43949df"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "experiment_id": "MECH-002",
+  "status": "blocked_not_registered",
+  "codec": "mech002-startpolicy-offline-v1",
+  "native_execution_allowed": false,
+  "baseline": "D00",
+  "contexts": ["high_press", "deep_block"],
+  "context_weights": [0.5, 0.5],
+  "holdout_execution": false,
+  "career_execution": false,
+  "intervention": {
+    "profile_fields": [16, 17],
+    "levels_raw": [10000, 7000],
+    "scope": "tested_team_ten_starting_outfield_players",
+    "required_write_timing": "once_after_original_preparation_with_native_effectiveness_proof",
+    "permanent_clamp": false,
+    "experimental_execution": false,
+    "condition_raw": 10000,
+    "fatigue_raw": 0,
+    "pressing": ["Standard", "MoreOften"],
+    "pressing_group": 10,
+    "pressing_ids": [1313689463, 2000905329],
+    "pressing_bits": [0, 66],
+    "unchanged": ["goalkeeper", "bench", "opponent", "attributes", "positions", "roles", "PI", "familiarity", "condition", "fatigue", "other_team_instructions", "management_policy"]
+  },
+  "arms": {
+    "R00": [10000, "Standard"],
+    "R10": [7000, "Standard"],
+    "R01": [10000, "MoreOften"],
+    "R11": [7000, "MoreOften"]
+  },
+  "contrast_arm_order": ["R00", "R10", "R01", "R11"],
+  "contrasts": {
+    "full_advantage": [0.5, -0.5, 0.5, -0.5],
+    "pressing_main": [-0.5, -0.5, 0.5, 0.5],
+    "sharpness_loss_by_pressing": [1, -1, -1, 1]
+  },
+  "primary": {"contrast": "full_advantage", "endpoint": "xgd", "alpha_two_sided": 0.05},
+  "secondary_holm8": [
+    ["full_advantage", "points"], ["full_advantage", "gf"], ["full_advantage", "ga"],
+    ["full_advantage", "xgf"], ["full_advantage", "xga"], ["pressing_main", "xgd"],
+    ["sharpness_loss_by_pressing", "xgd"], ["sharpness_loss_by_pressing", "points"]
+  ],
+  "analysis": {
+    "unit": "complete_seedblock_four_arms_two_sides",
+    "context_seeds": "independent_disjoint_new_namespace_not_yet_reserved",
+    "side_aggregation": "within_seed_mean",
+    "ci": "Welch_Satterthwaite_t_and_stratified_complete_seedblock_bootstrap_20000",
+    "missing_arm_policy": "technical_status_only",
+    "practical_pilot_effect_xgd": 0.3,
+    "desired_full_ci_width_xgd": 0.5,
+    "contrast_sd": null,
+    "power_guaranteed": false
+  },
+  "planned_only": {
+    "main_matches": 512,
+    "independent_blocks": 64,
+    "new_main_seeds_per_context": 32,
+    "technical_full_matches": 32,
+    "technical_aa_pairs": 16,
+    "negative_probes": 3,
+    "total_attempt_cap": 547,
+    "child_seconds_cap": 900,
+    "immutable_utc_window_seconds": 1800,
+    "max_workers": 4,
+    "no_progress_seconds": 90,
+    "private_bytes_cap": 2147483648,
+    "free_bytes_min": 21474836480,
+    "shared_native_lease_required": true,
+    "retries": 0,
+    "replacement_seeds": 0
+  },
+  "actual": {"new_native_starts": 0, "new_seeds_reserved": 0, "main_started": 0, "main_unbegun": 512, "technical_started": 0, "technical_unbegun": 35, "main_failed": 0, "technical_failed": 0, "native_child_seconds": 0},
+  "blockers": [
+    "no_versioned_startpolicy_runner_binding",
+    "host_applies_profiles_before_not_after_original_preparation",
+    "no_passive_profile_receipt_at_first_progression",
+    "no_passive_original_familiarity_receipts",
+    "no_native_opt_in_startpolicy_acceptance"
+  ]
+}

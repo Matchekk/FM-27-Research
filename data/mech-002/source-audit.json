@@ -1,0 +1,52 @@
+{
+  "inspected_utc": "2026-11-14T16:16:15.163455+00:00",
+  "kind": "read_only_source_and_file_hash_audit",
+  "project_base_commit": "7767d859e3a66a9aedcf9c1574f3e48dc8dc841f",
+  "tool_tag": "v1114.6",
+  "tool_commit": "91f2eba57fac0b7fbd3dff616056907e3ce461be",
+  "local_upstream_working_tree_clean": true,
+  "engine_file_version": "27.0.1",
+  "engine_product_version": "27.0.1+2503222",
+  "new_host_loader_or_resource_audit": false,
+  "codec_version": "mech002-startpolicy-offline-v1",
+  "sha256": {
+    "engine_dll": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+    "native_host": "2d5b5f3a49860faa091141e265554e70fd7f41eaced6aab5d263df548fc8500e",
+    "bundled_fixture": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+    "fm27_tactics_server.py": "5f2be140f30d576872351e7c397102b0b5a3de7d0b05f8d4e5011a65e94ea590",
+    "fm27_profiles.py": "28f163f21c9aa80e9323e9b245127c3c48958218c1337cddb6ac6aae399c511f",
+    "desktop_execution.py": "ac1589b5b23aac0ed5771dc8bb3e04b526d21996ba3d25357c9a477569a8311b",
+    "native/desktop_host.cpp": "72025a966fd244933bcec731f0789b7a1eba834e991f6e9bae4762a148bcc43a",
+    "native/native_statistics.h": "06e38230ef488dbeab91a245974b7bcaf7f8e4c49a14ce6482498451421dae60",
+    "native/native_execution_experiment.h": "400d39c359f851591c29436b749cb54fb376057db342c7a63d3beb2f87497f13",
+    "own/research/startpolicy.py": "28a9eb3689e64c12dfb59ed8e1164d578c416d24ecb342073276126ca1ff4ea9",
+    "own/analysis/verify_mech002_preparation.py": "47a1dab2542bd75bdecb6d94622ebd03e2cc6f2c5f449fdbc3f7e1097527ce8b"
+  },
+  "capabilities": {
+    "ordinary_after_preparation_profile_readback": true,
+    "ordinary_after_preparation_profile_write": false,
+    "first_progression_profile_snapshot": false,
+    "passive_original_familiarity_snapshot": false,
+    "experimental_execution_is_passive": false
+  },
+  "native_status": {
+    "version": "mech002-startpolicy-offline-v1",
+    "status": "blocked",
+    "native_execution_allowed": false,
+    "blockers": [
+      "no_versioned_startpolicy_runner_binding",
+      "host_applies_profiles_before_not_after_original_preparation",
+      "no_passive_profile_receipt_at_first_progression",
+      "no_passive_original_familiarity_receipts",
+      "no_native_opt_in_startpolicy_acceptance"
+    ]
+  },
+  "new_native_starts": 0,
+  "new_match_seeds_reserved": 0,
+  "tests": {
+    "repository_tests_passed": 93,
+    "historical_analysis_tests_passed": 5,
+    "new_mech_tests_passed": 7,
+    "new_native_starts": 0
+  }
+}
