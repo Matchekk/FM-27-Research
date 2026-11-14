@@ -150,7 +150,7 @@ class SharpnessResultReviewer(unittest.TestCase):
         commit='a'*40
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'own.py').write_text('OWN\n',encoding='utf8')
-            run=dict(head_sha=commit,status='completed',conclusion='success')
+            run=dict(head_sha=commit,status='completed',conclusion='success',updated_at='2026-11-14T20:00:00Z')
             def command(args,**kwargs):return b'OWN\n' if args[0]=='git' else json.dumps(run)
             with patch.object(review.subprocess,'check_output',side_effect=command):
                 self.assertTrue(review.verify_publication(root,commit,1,['own.py'])['ci_verified'])
@@ -160,6 +160,37 @@ class SharpnessResultReviewer(unittest.TestCase):
     def test_incomplete_unbegun_phase_has_no_pass_or_effect_fallback(self):
         with tempfile.TemporaryDirectory() as tmp:
             with self.assertRaises(FileNotFoundError):review.audit_phase(Path(tmp),'main')
+
+    def public_projection_fixture(self):
+        path=Path(__file__).resolve().parents[1]/'data/mech-002-sharpness-p0/technical-evidence-review.json'
+        evidence=review.read(path)
+        seeds=[next(r['seed'] for r in evidence['jobs'] if r['context']==h and r['team_side']==s)
+               for h in review.CONTEXTS for s in (0,1)]
+        plan=review.expected_jobs(dict(technical_seeds=seeds));rows=[]
+        for row in evidence['jobs']:
+            if row['kind']=='negative':continue
+            rows.append(dict(job_id=row['job_id'],result=row['result'],native_audit=row['native_audit'],
+                input_dump_sha256=row['input_dump_sha256'],setup_sha256=row['input_setup_sha256'],
+                containment_receipt_sha256=row['containment_sha256'],raw_log_sha256=row['raw_log_sha256'],stdout_sha256=row['stdout_sha256']))
+        return evidence,rows,plan,evidence['summary']['inputs_sha256']
+
+    def test_actual_public_33_job_projection_has_explicit_negative_and_no_private_fields(self):
+        evidence,rows,plan,sha=self.public_projection_fixture()
+        result=review.audit_public_projection(evidence,rows,plan,sha)
+        self.assertEqual(result['jobs_verified'],33);self.assertEqual(result['aa_pairs'],16)
+        self.assertFalse(result['private_raw_evidence_verified_by_this_public_check'])
+        self.assertLess(review.utc(evidence['publication']['ci_completed_utc']),
+                        min(review.utc(j['claimed_utc']) for j in evidence['jobs']))
+
+    def test_public_projection_rejects_missing_failed_private_or_nonrepeatable_claims(self):
+        for edit in ('missing','negative_exit','private','cleanup','aa'):
+            evidence,rows,plan,sha=deepcopy(self.public_projection_fixture())
+            if edit=='missing':evidence['jobs'].pop()
+            elif edit=='negative_exit':evidence['jobs'][-1]['returncode']=0
+            elif edit=='private':evidence['jobs'][0]['private_path']='PRIVATE-DO-NOT-EXPORT'
+            elif edit=='cleanup':evidence['jobs'][0]['kernel_active_processes']=1
+            else:evidence['jobs'][0]['raw_state_aa_signature_sha256']='0'*64
+            with self.subTest(edit=edit),self.assertRaises(ValueError):review.audit_public_projection(evidence,rows,plan,sha)
 
 
 if __name__=='__main__':unittest.main()

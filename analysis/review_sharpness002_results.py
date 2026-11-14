@@ -386,8 +386,14 @@ def audit_raw_match(evidence,dump,job,binary,config,catalog,oop_map,frozen_contr
     need(set(description)==set(DESCRIPTIVE),'Independent descriptive field inventory differs')
     audit.update(input_verified=True,seed_verified=True,sharpness_start_verified=True,stamina60_verified=True,
                  pressing_verified=True,controls_verified=True,sharpness_raw=level,pressing_bit=bit)
+    compatible=deepcopy(allstates)
+    for stage in compatible:
+        for player in stage['players']:
+            raw=player['cache89_8a'];player['cache89_8a']=None if raw is None else list(bytes.fromhex(raw))
     return dict(result=result,native_audit=audit,descriptive=description,descriptive_missing_reasons=missing,
-                aa_signature_sha256=canonical(dict(result=result,states=allstates)),snapshots_verified=3,actor_stage_observations=138)
+                aa_signature_sha256=canonical(dict(result=result,states=allstates)),
+                published_raw_state_sha256=canonical(compatible),published_result_sha256=canonical(dict(seed=job['seed'],**result)),
+                snapshots_verified=3,actor_stage_observations=138)
 
 
 def audit_cleanup(proof,process):
@@ -436,7 +442,8 @@ def audit_budget(state,proof,snapshot_sha,phase,plans):
         charged+=op['elapsed_seconds'];reserved.update({key:op['kind'] for key in keys})
     need(number(state['charged_seconds']) and state['charged_seconds']==charged<=900 and state['reserved']==reserved and
          Counter(reserved.values())==({'technical':33} if phase=='technical' else {'technical':33,'main':512}),'Refunded or exceeded own attempt/time budget')
-    return dict(charged_seconds=charged,wall_start_utc=start.isoformat(),completed_utc=finish.isoformat(),snapshot_sha256=snapshot_sha)
+    return dict(charged_seconds=charged,wall_start_utc=start.isoformat(),wall_deadline_utc=deadline.isoformat(),
+                completed_utc=finish.isoformat(),snapshot_sha256=snapshot_sha)
 
 
 def audit_outer_budget(outer,phase,plans,inner):
@@ -546,7 +553,7 @@ def audit_phase(central,phase):
          'Unresolved/failed native attempt retained')
     configs=read(local/'configs.json');catalog=read(central/'local/runtime-v1114.6/source/tactics_ui/catalog.json')
     need(file_sha(central/'local/runtime-v1114.6/source/tactics_ui/catalog.json')==frozen['catalog_sha256'],'Native catalog drift')
-    artifacts={};signatures={};reconstructed=[];projection=[];negative=0
+    artifacts={};signatures={};aa_provenance={};reconstructed=[];projection=[];negative=0
     for job in plan:
         key=job['key'];row=indexed[key];safe_public_row(row,job,frozen,receipt);jobdir=local/phase/'jobs'/key
         paths={'stdout_sha256':jobdir/'native.stdout','raw_log_sha256':jobdir/'native.jsonl',
@@ -590,7 +597,7 @@ def audit_phase(central,phase):
             stamina_values_verified=46,result=actual['result'],passive_snapshot_count=3,
             raw_state_aa_signature_sha256=actual['aa_signature_sha256'])
         projection.append(projected)
-        signatures[key]=actual['aa_signature_sha256'];reconstructed.append(row)
+        signatures[key]=actual['aa_signature_sha256'];aa_provenance[key]=actual;reconstructed.append(row)
     aa=0
     if phase=='technical':
         for h,s,a in product(CONTEXTS,(0,1),ARMS):
@@ -606,6 +613,24 @@ def audit_phase(central,phase):
     need(len(accounting)==len(plan) and all(r==dict(job_id=j['key'],seed=j.get('seed'),
         status='expected_rejection' if j.get('kind')=='negative' else 'ok',admission_error_type=None)
         for r,j in zip(accounting,plan,strict=True)),'Incomplete/changed public failure accounting')
+    summary=read(public/(phase+'-summary.json'));public_budget=read(public/(phase+'-budget.json'))
+    need(summary['passed'] is True and summary['budget_reconciled'] is True and summary['complete'] is True and
+         summary['full_matches']==len(reconstructed) and summary['negative_rejections']==negative and
+         summary['peak_inflight_claims']==concurrency['peak_inflight_claims'] and summary['engine_pid_peak_measured'] is False and
+         summary['dispatch_summary_sha256']==file_sha(directory/'dispatch-summary.json') and
+         summary['concurrency_ledger_sha256']==file_sha(directory/'concurrency.jsonl'),
+         'Published summary disagrees with independently reconstructed raw evidence')
+    need(public_budget['passed'] is True and public_budget['charged_seconds']==own['charged_seconds'] and
+         public_budget['budget_sha256']==own['snapshot_sha256'] and public_budget['limits']=={'technical':33,'main':512} and
+         public_budget['limit_seconds']==900 and public_budget['wall_limit_seconds']==3600,'Public/private budget differs')
+    if phase=='technical':
+        expected_aa=[]
+        for h,s,a in product(CONTEXTS,(0,1),ARMS):
+            proof=aa_provenance[f'tech-{h}-s{s}-{a}-r0']
+            expected_aa.append(dict(context=h,side=s,arm=a,exact_outcomes_and_identified_fields_equal=True,
+                raw_state_sha256=proof['published_raw_state_sha256'],result_sha256=proof['published_result_sha256']))
+        need(sorted(summary['aa_pairs'],key=lambda r:(r['context'],r['side'],r['arm']))==
+             sorted(expected_aa,key=lambda r:(r['context'],r['side'],r['arm'])),'Published A/A provenance differs from independent raw states')
     admission=None
     if phase=='main':admission=audit_first_main_admission(read(local/'main-summary.json')['first_main_admission'],state,outer_state)
     return dict(phase=phase,actual_raw_evidence_verified=True,native_start_authorized=False,
@@ -639,6 +664,9 @@ def audit_public(central,phase):
             'Public declared native audit missing/wrong')
     result=dict(public_subset_verified=True,private_raw_evidence_verified=False,
         native_start_authorized=False,phase=phase,match_rows=len(data),reviewer_native_starts=0)
+    if phase=='technical':
+        result['independent_33_job_projection']=audit_public_projection(
+            read(public/'technical-evidence-review.json'),data,plan,file_sha(public/'inputs.json',True))
     if phase=='main':
         from analysis.review_sharpness002_science import independently_group,independently_summarize,independently_holm,FAMILY
         grouped=independently_group(data,receipt)
@@ -647,6 +675,85 @@ def audit_public(central,phase):
             independent_secondary_holm=independently_holm({key:contrasts[key]['p'] for key in FAMILY}),
             interpretation='Independent public-score analysis; native/raw/budget release must be verified separately. No UI/consumer/career claim.')
     return result
+
+
+def audit_public_projection(evidence,measurements,plan,inputs_sha256):
+    """Public consistency/negative-control QA; no substitute for private raw proof."""
+    need(evidence['schema']=='fm27.sharpness002.independent-technical-evidence.v1' and evidence['experiment_id']==EXPERIMENT and
+         evidence['summary']['inputs_sha256']==inputs_sha256 and len(evidence['jobs'])==33,'Public independent projection identity/count differs')
+    rows={r['job_id']:r for r in measurements};need(len(rows)==32,'Exactly32 public success rows required')
+    common={'job_id','kind','seed','context','team_side','arm','repeat','status','returncode','native_elapsed_seconds',
+        'native_invocation_started','claimed_utc','admitted_utc','raw_log_sha256','input_dump_sha256','stdout_sha256',
+        'containment_sha256','process_receipt_sha256','kernel_active_processes','cleanup_confirmed','process_limit',
+        'membership_verified_before_go','input_setup_sha256'}
+    signatures={};negative=0
+    for job,actual in zip(plan,evidence['jobs'],strict=True):
+        full=job.get('kind')!='negative';extra={'native_audit','stamina_values_verified','result','passive_snapshot_count','raw_state_aa_signature_sha256'} if full else {
+            'negative_initial_rejection','scenario_rejected_count','natural_finish_count','passive_snapshot_count'}
+        need(set(actual)==common|extra and actual['job_id']==job['key'] and actual['seed']==job.get('seed') and
+             actual['context']==job.get('scenario') and actual['team_side']==job.get('side') and actual['arm']==job.get('arm') and
+             actual['repeat']==job.get('repeat') and actual['kind']==('full' if full else 'negative'),
+             'Unexpected/private public projection field or job identity')
+        for key in ('raw_log_sha256','stdout_sha256','containment_sha256','process_receipt_sha256','input_setup_sha256'):
+            need(type(actual[key]) is str and HASH.fullmatch(actual[key]),'Malformed public projection hash')
+        need(actual['native_invocation_started'] is True and actual['membership_verified_before_go'] is True and
+             actual['cleanup_confirmed'] is True and type(actual['kernel_active_processes']) is int and actual['kernel_active_processes']==0 and
+             type(actual['process_limit']) is int and actual['process_limit']==3 and utc(actual['claimed_utc'])<=utc(actual['admitted_utc']) and
+             number(actual['native_elapsed_seconds']) and actual['native_elapsed_seconds']>0,'Public process/claim/cleanup proof differs')
+        if not full:
+            need(actual['status']=='expected_rejection' and type(actual['returncode']) is int and actual['returncode']==108 and
+                 actual['negative_initial_rejection'] is True and actual['scenario_rejected_count']==1 and
+                 actual['natural_finish_count']==actual['passive_snapshot_count']==0 and actual['input_dump_sha256'] is None and
+                 actual['input_setup_sha256']==sha256(b'SHARPNESS INVALID HEADER').hexdigest(),'Public negative108/no-match proof differs')
+            negative+=1;continue
+        row=rows[job['key']]
+        need(actual['status']=='ok' and type(actual['returncode']) is int and actual['returncode']==0 and actual['stamina_values_verified']==46 and
+             actual['passive_snapshot_count']==3 and actual['result']==row['result'] and actual['native_audit']==row['native_audit'] and
+             actual['input_dump_sha256']==row['input_dump_sha256'] and actual['input_setup_sha256']==row['setup_sha256'] and
+             actual['containment_sha256']==row['containment_receipt_sha256'] and actual['raw_log_sha256']==row['raw_log_sha256'] and
+             actual['stdout_sha256']==row['stdout_sha256'],'Public success/projection cross-binding differs')
+        need(type(actual['raw_state_aa_signature_sha256']) is str and HASH.fullmatch(actual['raw_state_aa_signature_sha256']),
+             'Malformed public A/A signature')
+        signatures[job['key']]=actual['raw_state_aa_signature_sha256']
+    for h,s,a in product(CONTEXTS,(0,1),ARMS):
+        key=f'tech-{h}-s{s}-{a}-r';need(signatures[key+'0']==signatures[key+'1'],'Public paired A/A signature differs')
+    need(negative==1,'Public negative not accounted')
+    return dict(jobs_verified=33,full_matches=32,negative_initial108=1,aa_pairs=16,
+                private_raw_evidence_verified_by_this_public_check=False)
+
+
+def audit_resource_plan(central):
+    central=Path(central);public=central/'data/mech-002-sharpness-p0';local=central/'local/mech-002-sharpness-p0'
+    plan=read(public/'resource-admission-plan.json');jobs=read(public/'technical-job-plan.json')
+    events=read(local/'technical/dispatch/concurrency.jsonl');data=read(public/'technical.jsonl');budget=read(local/'technical-budget.snapshot.json')
+    blocks=[]
+    for context,side in product(CONTEXTS,(0,1)):
+        keys={j['key'] for j in jobs if j.get('scenario')==context and j.get('side')==side}
+        selected=[e for e in events if e['job_id'] in keys]
+        begin=min(utc(e['utc']) for e in selected if e['event']=='claimed')
+        end=max(utc(e['utc']) for e in selected if e['event']=='completed')
+        need(len(keys)==8 and len(selected)==16,'Runtime planning lacks complete raw eight-job blocks')
+        blocks.append(dict(context=context,team_side=side,full_jobs=8,elapsed_seconds=(end-begin).total_seconds()))
+    dispatch=(max(utc(e['utc']) for e in events if e['event']=='completed')-
+              min(utc(e['utc']) for e in events if e['event']=='claimed')).total_seconds()
+    overhead=budget['charged_seconds']-dispatch;cold=max(r['native_elapsed_seconds'] for r in data)
+    prediction=64*max(b['elapsed_seconds'] for b in blocks)+overhead+cold+90
+    need(plan['experiment_id']==EXPERIMENT and plan['kind']=='administrative_runtime_projection_only' and
+        plan['observed_technical_blocks']==blocks and plan['main_blocks']==64 and plan['own_cumulative_limit_seconds']==900 and
+        plan['fixed_main_minimum_seconds']==600 and plan['contingency_seconds']==90 and
+        plan['own_wall_deadline_utc']==budget['wall_deadline_utc'] and plan['night_wall_deadline_utc']=='2026-11-14T23:00:00+00:00',
+        'Runtime projection scope, raw block sources or unchanged limits differ')
+    for field,value in (('technical_dispatcher_seconds',dispatch),('technical_own_charge_seconds',budget['charged_seconds']),
+        ('source_and_phase_overhead_seconds',overhead),('first_main_serial_call_allowance_seconds',cold),
+        ('projected_main_seconds',prediction),('own_remaining_after_technical_seconds',900-budget['charged_seconds'])):
+        need(number(plan[field]) and math.isclose(plan[field],value,rel_tol=1e-12,abs_tol=1e-9),'Runtime projection arithmetic differs')
+    for name,digest in plan['evidence_sha256'].items():
+        need(name in ('technical.jsonl','technical-budget.json','technical-summary.json') and file_sha(public/name,True)==digest,
+             'Runtime projection evidence hash differs')
+    return dict(projected_main_seconds=prediction,own_remaining_seconds=900-budget['charged_seconds'],
+        stricter_utc_deadline=min(utc(plan['own_wall_deadline_utc']),utc(plan['night_wall_deadline_utc'])).isoformat(),
+        guaranteed_upper_bound=False,unchanged_minimum_admission_seconds=600,
+        source_sha256=file_sha(public/'resource-admission-plan.json',True))
 
 
 def verify_publication(central,commit,ci,paths):
@@ -659,17 +766,34 @@ def verify_publication(central,commit,ci,paths):
         need(sha256(blob.replace(b'\r\n',b'\n')).hexdigest()==file_sha(path,True),'Published source/artifact differs')
     run=json.loads(subprocess.check_output(['gh','api',f'repos/Matchekk/FM-27-Research/actions/runs/{ci}'],cwd=central,text=True))
     need(run['head_sha']==commit and run['status']=='completed' and run['conclusion']=='success','Actual exact publication CI not successful')
-    return dict(publication_commit=commit,ci_run=ci,ci_verified=True,source_blobs_verified=len(paths))
+    return dict(publication_commit=commit,ci_run=ci,ci_verified=True,
+                ci_completed_utc=utc(run['updated_at']).isoformat(),source_blobs_verified=len(paths))
+
+
+def technical_evidence(central):
+    central=Path(central);public=central/'data/mech-002-sharpness-p0'
+    result=audit_phase(central,'technical');jobs=result.pop('technical_evidence_projection')
+    proof=read(central/'local/mech-002-sharpness-p0/technical-reconciled.json');frozen=read(public/'inputs.json')
+    paths=[*frozen['code_sha256'],'docs/night-001/SHARPNESS-REVIEW.md',*[f'data/mech-002-sharpness-p0/{n}'
+        for n in ('contract.json','inputs.json','seed-plan.json','review-gate.json','manifest.json','main-job-plan.json','technical-job-plan.json')]]
+    publication=verify_publication(central,proof['publication_commit'],proof['ci_run'],paths)
+    need(utc(publication['ci_completed_utc'])<min(utc(j['claimed_utc']) for j in jobs),
+         'Exact successful publication CI did not precede every technical claim')
+    output=dict(schema='fm27.sharpness002.independent-technical-evidence.v1',experiment_id=EXPERIMENT,
+        publication=publication,summary=result,resource_plan_review=audit_resource_plan(central),jobs=jobs)
+    audit_public_projection(output,read(public/'technical.jsonl'),read(public/'technical-job-plan.json'),result['inputs_sha256'])
+    return output
 
 
 def main():
     from argparse import ArgumentParser
-    parser=ArgumentParser(description=__doc__);parser.add_argument('stage',choices=('seeds','inputs','technical','main','public-technical','public-main'))
+    parser=ArgumentParser(description=__doc__);parser.add_argument('stage',choices=('seeds','inputs','technical','main','technical-evidence','public-technical','public-main'))
     parser.add_argument('--central',type=Path,default=ROOT);args=parser.parse_args();central=args.central.resolve()
     if args.stage=='seeds':
         excluded,count=reconstruct_exclusions(central);result=audit_seed_plan(read(central/'local/registry'/f'{EXPERIMENT}.reserved.json'),excluded)
         result.update(seed_source_files_read=count,reviewer_native_starts=0,native_start_authorized=False)
     elif args.stage=='inputs':result=audit_prepared(central)
+    elif args.stage=='technical-evidence':result=technical_evidence(central)
     elif args.stage.startswith('public-'):result=audit_public(central,args.stage.removeprefix('public-'))
     else:result=audit_phase(central,args.stage)
     print(json.dumps(result,indent=2,allow_nan=False))
