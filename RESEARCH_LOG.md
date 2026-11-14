@@ -1,5 +1,16 @@
 # Research Log
 
+## 2026-11-14 – TACT-001-P1B technisch freigegeben
+
+- Vorregistrierung in `e0b63bd` vor dem ersten Prüfmatch veröffentlicht, CI
+  erfolgreich. Alle72 Vollmatches,64 Eingabezellen und acht exakte Wiederholungen
+  bestanden; negative Binärprobe erwartungsgemäß Exit108. Neue C/D/E-Bits nativ
+  in beiden Phasen-/Seitenkontexten und Matrixzuordnung verifiziert.
+- Alle73 technischen Versuchsplätze verbraucht,2.048 Hauptjobs noch unbegonnen,
+  keine Holdouts. 47,616/2.400 s Child-Wall-Time kumuliert; feste UTC-Deadline
+  14:09:26,985 am14.11.2026 bleibt unverändert.
+  [Technische Freigabe](experiments/TACT-001-P1B-validation.md).
+
 ## 2026-11-14 – TACT-001-P1B vorbereitet und vorregistriert
 
 - Große Variante beauftragt: 2.048 Hauptmatches, 64 unabhängige Seedblöcke.

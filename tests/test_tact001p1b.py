@@ -49,6 +49,29 @@ def fixture():
 
 
 class FractionAndContractTests(unittest.TestCase):
+    def test_real_public_native_technical_gate_and_archive_when_available(self):
+        path=runner.PUBLIC/"technical-summary.json"
+        if not path.exists():return
+        gate=read(path);self.assertTrue(gate["passed"]);self.assertEqual(gate["readback_cells"],64)
+        self.assertEqual(gate["negative"]["returncode"],108);self.assertEqual(len(gate["repeats"]),8)
+        from research.native import rows
+        data=rows(runner.PUBLIC/"technical.jsonl");self.assertEqual(len(data),72)
+        grouped={}
+        for row in data:
+            self.assertEqual(row["status"],"ok");self.assertTrue(row["input_contract_verified"])
+            self.assertEqual(row["profile_fields_verified"],1058)
+            levels=p.matrix()[p.ARMS.index(row["arm"])]["levels"]
+            self.assertEqual(row["factor_levels"],levels)
+            self.assertEqual(row["native_factor_bits"],{f["code"]:f["high_bit"] if levels[f["code"]]==1 else 0 for f in p.FACTORS})
+            grouped.setdefault((row["scenario"],row["tested_side"],row["arm"]),[]).append(row)
+        self.assertEqual(len(grouped),64)
+        for pair in grouped.values():
+            if len(pair)==2:
+                for key in ("score","finish_tick","team_statistics","setup_sha256","seed"):self.assertEqual(pair[0][key],pair[1][key])
+        from hashlib import sha256
+        for name,value in read(runner.PUBLIC/"historical-archive.json")["sha256"].items():
+            self.assertEqual(sha256((ROOT/name).read_bytes().replace(b"\r\n",b"\n")).hexdigest(),value,name)
+
     def test_real_prepared_contract_matrix_and_native_binary_hashes_when_available(self):
         spec=ROOT/"research/specs/TACT-001-P1B.json"
         if not spec.exists():return

@@ -18,4 +18,5 @@ jobs:
       - run: python -m unittest discover -s analysis -p 'test*.py' -v
       - run: python analysis/verify_matches.py
       - run: python analysis/verify_tact001p0.py
+      - run: python analysis/verify_tact001p1b.py
       - run: git diff --check
