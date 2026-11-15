@@ -1,10 +1,366 @@
 {
-  "status": "final_archive_ci_pending",
+  "status": "scientific_payload_verified_for_publication",
+  "verified_utc": "2026-11-15T10:59:58.036860+00:00",
   "target_branch": "main",
+  "integration_policy": "Fast-forward only after successful exact-commit CI; no force push",
+  "scientific_payload_commit": "770e2869974b2f66c11094343684c23ad49e82e3",
+  "scientific_payload_ci_run": 43706310134,
+  "ci_url": "https://github.com/Matchekk/FM-27-Research/actions/runs/43706310134",
+  "ci_status": {
+    "conclusion": "success",
+    "headSha": "770e2869974b2f66c11094343684c23ad49e82e3",
+    "status": "completed"
+  },
+  "completed_studies": [
+    "N3-SHARPSTRUCT-C1",
+    "N3-SHARPPOS-C1"
+  ],
+  "terminal_without_scientific_data": [
+    "N3-AMCSHIFT-C1"
+  ],
   "scientific_main_matches": 8192,
   "independent_scientific_blocks": 1536,
   "native_full_matches_including_technical": 8256,
   "expected_negative_rejections": 3,
+  "unbegun_main_jobs": 2048,
   "native_work_complete": true,
-  "background_continuation": false
+  "background_continuation": false,
+  "public_artifacts": {
+    "FINDINGS.md": {
+      "sha256": "8d28c112854bed0fc9158dffa1e74751a7d3bb0fc22e686f37a55ac9533e0cba",
+      "mode": "canonical_LF_text"
+    },
+    "NEXT_STEPS.md": {
+      "sha256": "b8851d6750c1b3bcb38d32f1081dad1e719b59069fc03ce0ef4b2c5c0cbe86d1",
+      "mode": "canonical_LF_text"
+    },
+    "README.md": {
+      "sha256": "674557527835d38917ce4dc6e21c26fd24ff2a7085380a090d087ede14163ed1",
+      "mode": "canonical_LF_text"
+    },
+    "RESEARCH_LOG.md": {
+      "sha256": "66fc133bd3d927b894d3327a655a588b1acebfaaa67ed4b3d84e279c5ba121ce",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/analyse_night003.py": {
+      "sha256": "a6c34fae5520453c6bf5945209e4db2589012aa1851144102c97b86ba040b84a",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/analyse_night003_amc.py": {
+      "sha256": "18ac9100b8558302358a5f12fc78b564a850b1f486d0846f5f8c0723d3197aab",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/analyse_night003_pos.py": {
+      "sha256": "0f88b347d67b6225aafe002ed58528a0e112f1051ad97e4ea3c8ede7de9492f4",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/night003.py": {
+      "sha256": "940216c1d4497dbba75a83fa8d2409faf52f2ce96abbfdca533e9aba7a2e668d",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/night003_amc.py": {
+      "sha256": "c30c5daf42037be19585585a8ed9e9b09d585d2d27a5f18803ca0279f25c54ec",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/night003_pos.py": {
+      "sha256": "f78f887de1c7cf2d14eb9af5dd62bda1b176b169fb6bebffcc8cc01a5646dbcf",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/render_night003.py": {
+      "sha256": "8954ab0139eab9b2f698daa08a9257e696d9181e6351ec0d2ccaf402cfd37517",
+      "mode": "canonical_LF_text"
+    },
+    "analysis/review_night003_results.py": {
+      "sha256": "4e3f4251710c5cd0607e705f7a53f0d500533fa90d8cda2f0bc447df7497e47d",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/inputs.json": {
+      "sha256": "b43e39c7fece0206dcb38a288c1f043d416293eefe7b6e20cd7ff17edce0c765",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/main-plan.json": {
+      "sha256": "14af49f7da081bbdc79b0728af03679145898cd6368512d85ba874b54e000509",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/phase-rechecks.jsonl": {
+      "sha256": "4239c179840f2142977691915e85aae6e9178da8c6d80ea60e3ff7e4c50d45cf",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/planning.json": {
+      "sha256": "ff7b2b00af114faa37adcda25c872be9bb37c75e2f16f30c8073cf6372071a42",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/seed-plan.json": {
+      "sha256": "9781e537c26b30e6c29a1be4ee5ae914d4942be9b433272160c3b25392ff2783",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/source-preflight.json": {
+      "sha256": "d0a36e6fbcbe05b079e778a54bfad7703adac280a3a6f8c0cf38117e4b2a60ba",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/technical-plan.json": {
+      "sha256": "a806174ead689f2086156961d483012bed858cd401ad0d68b73a815d32bcbda5",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/technical-release.json": {
+      "sha256": "1a622460828837c7e57a1566ebd5bf8ba243713173abb47a0d9e5ac95542c302",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/technical-summary.json": {
+      "sha256": "bc3e7de03d55fc4e412044988b2230d31e251055587cbb4a206ed3c052f781b7",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/technical.jsonl": {
+      "sha256": "849709afe785760489b2f7a8b58599f102a76e6bc34bc5a60c1fab2ffb13fae6",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/termination.json": {
+      "sha256": "cbbf650939aa22fceb9534268536fb33b235d2ad7faa7426e1737e1b02005ea2",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-amcshift/unbegun-main-jobs.jsonl": {
+      "sha256": "8cd4cf3e261d6ef109efb8c49b32c00c9ba0372ec0e6e31b9e5840a652fdc153",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/effects.json": {
+      "sha256": "a7797292e2c6cb24cb486d0394af4d24d5baa9a2f964566255e5c73dae0f3c5c",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/execution-provenance.json": {
+      "sha256": "adaad946be80320270bccf954a08b2f1c0c9f477c50b273840edc012bed9ec42",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/independent-recalculation.json": {
+      "sha256": "2ab2c05c45fe95ad096e6be9215d4fa57757b126aa888312444cf1f84b874391",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/independent-statistics-review.json": {
+      "sha256": "b3f56e99bc7ae493cf8ff7704e742a79701f86217b925706ea7785cf996ead2c",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/inputs.json": {
+      "sha256": "87d2d1197b2511f0cd0a2de7faa4250e6259b97c41e144d8632019dbc8872558",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/main-plan.json": {
+      "sha256": "d1b9513d0e3980c53b77146a695515e745e8b558d9890811e1d032c9e5dacebc",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/main-summary.json": {
+      "sha256": "63aad6445245433178ecfcb43cbe3000748c4f9ce418552621b6fb8cf3aded3a",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/main.jsonl": {
+      "sha256": "99fd7ea07d711844c485c7dff4cbb42823ecedee10c02919a2ed08818ed5f7e5",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/phase-rechecks.jsonl": {
+      "sha256": "9c6e8e03dcf8dcb27db02f5dfe20055b13e67eb5a6be06a4a30160d13a616898",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/planning.json": {
+      "sha256": "4d31981ab3b754d9eeab6d25776643585b50d06107147cdf5a83d35402cdb86f",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/seed-contrasts.jsonl": {
+      "sha256": "cce7cf5d1b0c9f66c510dd3e1107bae91d87e4f1226d5b3d15f5684f385dd995",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/seed-plan.json": {
+      "sha256": "9dc72eccfb8cad61297a67000a06fa9ba63b0186a9e093dd4206ff838fcc1c90",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/source-preflight.json": {
+      "sha256": "d4ed7e20e0c6b4ad54b7063c8faa678bed733f01de7c0e12f81d2e9423053f57",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/technical-plan.json": {
+      "sha256": "f1f8dd5b7992fad3f24a83bccf7177d83e7fd63dee652b2ebda3c59911698428",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/technical-release.json": {
+      "sha256": "11451f7c8e303cd9d2dfd4ada65a2647a7cfd31aa0dbc42ce16925163a2bd4be",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/technical-summary.json": {
+      "sha256": "3a0d713c949ad3cb5e08c9e8afe1ef90f6d11ad8371344ba92d0ecebfc058602",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharppos/technical.jsonl": {
+      "sha256": "9497dcdde2ecae80212d1dc3342718a96622112928e2a722407b66267d8a6b95",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/effects.json": {
+      "sha256": "1fa00f1ac05d0a652039ca6f6b6f8aac116724a7af26b9943e1afc9a2fd4060c",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/execution-provenance.json": {
+      "sha256": "d88bd1dd96a99deae4cb7d9de772854266d6698580cebe60c359e513b8c65b91",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/independent-recalculation.json": {
+      "sha256": "424e8990c1e07152c8862bbc5d3a1de557775d9d4cf1d2c0e4977e811291c0f0",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/independent-statistics-review.json": {
+      "sha256": "cb7f26393bdd9fa1e223c83b22ca4a49ea5bd1506d3d8a3d1058df3f9e625d26",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/inputs.json": {
+      "sha256": "f30d0a3c88823eec4e670c7b0dd1765bfa5a36766f098a48ed5cae8db7f2fd5d",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/main-plan.json": {
+      "sha256": "c0bd50ae0019a8cc07eabb9aee0d1a31bdc09299615f983985ee9e199d9868d0",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/main-summary.json": {
+      "sha256": "399f63b428e609cbd04508d379b7259a10d49e615002806a63c2a89338ad489f",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/main.jsonl": {
+      "sha256": "cc7239ebdf45e203870939d047ad472a3d14652ff57a7385565e0cc1169fe7f3",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/planning.json": {
+      "sha256": "b52d8e517a836fe9f9b09f076ea5d686910d25af49594846ca627bb77e822f03",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/seed-contrasts.jsonl": {
+      "sha256": "a6029b350f812610137562a1e94172228d03b0367d6cdb54ecf65a883d07d416",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/seed-plan.json": {
+      "sha256": "db564d7477f304c237ba8828a76419e61b3b015621b91387fd3de8789b683683",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/technical-plan.json": {
+      "sha256": "0820d59ece8d68296c6c685dcfc79b1e21a94c1ba1504cc60bd40c656dad5ed5",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/technical-release.json": {
+      "sha256": "f889980ef4c0b47cb26a4bceedfd1cfeeabecd4ffb814f2b26ecb99a48c28510",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/technical-summary.json": {
+      "sha256": "4ddb4d1c35fbcb4e7621f7b7c15fe6b0eb553e2af7731f67a024a8a134faa212",
+      "mode": "canonical_LF_text"
+    },
+    "data/night-003-sharpstruct/technical.jsonl": {
+      "sha256": "ecd13388bae061f1d8f7e9170558d8e20aff1077697546065e747541423c1c19",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/AMC_TECHNICAL_RELEASE.md": {
+      "sha256": "f776422546dda79dd653f4da91b1ae75f719aad2760bf49b51b97aeecfd58197",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/LITERATURE.md": {
+      "sha256": "96e89499c952ae93d9d07ddfb6d1e54d2a34270dd7a541b5ea987a4bfdee8ec5",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/LITERATURE_AMC.md": {
+      "sha256": "170671aae45aa0c8c4a416f0b4a5c020abc92837c526ddeab2ce04993d029671",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/LITERATURE_POS.md": {
+      "sha256": "84aa63d2ca52f5b3d6f858b3f1417f8a3015b842063e1675bcccc41bbf26282a",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/POSITIONAL_TECHNICAL_RELEASE.md": {
+      "sha256": "fe65a777db2a496ced494149f295255934f8796ebc8dfbe6ab5c9cc334bbfd4e",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/PROGRESS.md": {
+      "sha256": "392be4db47e402c16576edd7568fe6950e33bee9fa3fa1f95303cd36aba4e2ec",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/RESEARCH_REPORT.md": {
+      "sha256": "e6b91172edffb98ac6bd54ab388e96e1aaf808f08dc02060c0fa623fd49abe67",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/TECHNICAL_RELEASE.md": {
+      "sha256": "d041e0ef8c5c3cca6de6c0249a87deb54833b41b105bc17057335392c24dc34c",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/WHAT_WE_LEARNED.md": {
+      "sha256": "c6265809b3a363f188c6bd95f82d09c4d68a52897684e2bdfd7e3b9201265238",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/figure-provenance.json": {
+      "sha256": "78e0c1a3d5be605f770931d91a614b6c20407292640098a37d140b21f9c8e1bd",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/mission-multiplicity-sensitivity.json": {
+      "sha256": "8732123a41cdc099e062288274b465824aa465a4617b124a77d493edfb057844",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/primary-contrasts.png": {
+      "sha256": "0c33182bcbd01e107aa9fcf290284c0d1a67fe9f505c8e58d50965a1b97ea2a4",
+      "mode": "binary"
+    },
+    "docs/night-003/primary-contrasts.svg": {
+      "sha256": "dc2e493b29cff72258f3aedd07640f3cc6ece707b0610a65a2bb7d7138c3f70d",
+      "mode": "canonical_LF_text"
+    },
+    "docs/night-003/seed-and-cleanup-audit.json": {
+      "sha256": "32aec4bb5d96acdb34604c2a54d6ccb74ea60f52ecef05e29b1bfcc0bf1d1ed0",
+      "mode": "canonical_LF_text"
+    },
+    "experiments/N3-AMCSHIFT-C1.md": {
+      "sha256": "ec7c04930f7cad235bcacf4faf6e909d81a0375f243c019ee7968e1762e0e6a3",
+      "mode": "canonical_LF_text"
+    },
+    "experiments/N3-SHARPPOS-C1-results.md": {
+      "sha256": "59e1860c9754f8c6827edf7290beabe94efca11e767a900355475ba01f168e34",
+      "mode": "canonical_LF_text"
+    },
+    "experiments/N3-SHARPPOS-C1.md": {
+      "sha256": "957528c590d22ffbb9e582c006dc68416e77cc5ac2bb1da88abd3fe725225012",
+      "mode": "canonical_LF_text"
+    },
+    "experiments/N3-SHARPSTRUCT-C1-results.md": {
+      "sha256": "3ced97d865d9b26fabc3f8f66aa56125c803b90a72720c8a117203c4d07ebcc5",
+      "mode": "canonical_LF_text"
+    },
+    "experiments/N3-SHARPSTRUCT-C1.md": {
+      "sha256": "4e0db2d6cdf39618877b1a08f70b73b1284bb8d139515ac76de27e3542ac7564",
+      "mode": "canonical_LF_text"
+    },
+    "research/night003-source-audit.json": {
+      "sha256": "76e6bcb06ab93e620327c6637ca6a31dfff97af7745492e0cdacd660ded62662",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003.py": {
+      "sha256": "e8b0ce566bcfafa66be17ce97222ce321759e1d094261a2480939861f1260733",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003_amc.py": {
+      "sha256": "a474b440e79ee497aeedafce8ad84315740f18f829182563bb90ad86e576c4d7",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003_amc_results.py": {
+      "sha256": "f1f59d2b14e991214b68bcf6ef1befb92c8102c578b6f4c67a6858def901c33d",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003_full_review.py": {
+      "sha256": "6fe4fef45018c35e42b94fa7f2ce7fb43b8155ad4cc5012471244fd43d710b8d",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003_pos.py": {
+      "sha256": "f7b49001426d372695297de23e00e5c10611e22fc22c2651685d7ba05a9f1f16",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003_pos_results.py": {
+      "sha256": "0cdbabf9a0856c30193c04192d0208cbde9f3413721c730865a4587059eb1d70",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003_results.py": {
+      "sha256": "2fabcc5c82e36b67c46a47686f5091af79304b160ce7fa716be05ceb168934b8",
+      "mode": "canonical_LF_text"
+    },
+    "tests/test_night003_terminal.py": {
+      "sha256": "1cb5d9fc1beb52768fdc9028421fc5ec82f71cf3b9c3310937cb98dc4df62ed7",
+      "mode": "canonical_LF_text"
+    }
+  }
 }
