@@ -142,6 +142,13 @@ Holm7,512 abgeleitete Kontrastzeilen und bedingte Planung. Er prüft sämtliche
 512 Kernelbereinigungen und tatsächlichen Ein-/Ausgabebelege. Die öffentliche
 [Nachrechnung](../analysis/review_stless003.py) benötigt keine privaten Spielressourcen.
 
+Ergebnisse veröffentlicht auf `origin/main` im Commit
+`307d36734ad81d26c8b22067215e7473a0b8906a`;
+[CI43659699133 erfolgreich](https://github.com/Matchekk/FM-27-Research/actions/runs/43659699133).
+[Publikations-/Artefaktbeleg](../data/night-002-publication.json). Lokal432 Tests
+ohne Fehler (2 übersprungen) plus5 Analysetests; Analyse und Grafik bytegleich
+reproduziert. Historische Archive unverändert.
+
 ## Praktische Konsequenz
 
 Das konkret getestete IP-Paket verschlechtert hier die marginale xGD gegenüber

@@ -1,5 +1,16 @@
 # Research Log
 
+## 2026-11-15 – NIGHT-002 veröffentlicht und CI bestätigt
+
+Numerischer Release307d36734ad81d26c8b22067215e7473a0b8906a auf `origin/main`,
+[CI43659699133 erfolgreich](https://github.com/Matchekk/FM-27-Research/actions/runs/43659699133)
+einschließlich vollständiger öffentlicher TACT-Nachrechnung/MECH-Terminalprüfung.
+Lokal430 Tests bestanden,2 übersprungen, zusätzlich5 Analysetests bestanden;
+10 historische Verifier und29 lokale Berichtlinks geprüft. Wissenschaftliche
+Auswertung und Grafik bytegleich reproduziert; keine nativen Prüfläufe.
+[Publikationsbeleg](data/night-002-publication.json) bindet18 veröffentlichte
+Artefakte. Keine weitere native Serie dieser Mission, keine Karrierefreigabe.
+
 ## 2026-11-15 – TACT-003 vollständig und unabhängig ausgewertet
 
 - Alle512 Hauptmatches/64 neuen Seedblöcke einmalig akzeptiert. Primär

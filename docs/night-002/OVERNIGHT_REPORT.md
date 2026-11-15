@@ -171,7 +171,13 @@ bestanden, darunter272 unveränderte Runde3-Dateien und340 NIGHT-001-Dateien.
 Öffentliche TACT-Mainnachrechnung und terminaler MECH-Verifier bestanden.
 Erneute Produzentenauswertung und Renderlauf erzeugen alle sechs wissenschaftlichen
 JSON/JSONL-/Provenienz-/Grafikartefakte bytegleich. Keine dieser Prüfungen startet
-native Matches. Der öffentliche CI-/Commitnachweis folgt im Publikationsbeleg.
+native Matches. Numerischer Releasecommit
+`307d36734ad81d26c8b22067215e7473a0b8906a` ist auf `origin/main` veröffentlicht;
+[CI43659699133](https://github.com/Matchekk/FM-27-Research/actions/runs/43659699133)
+ist erfolgreich, einschließlich öffentlicher Mainnachrechnung und terminalem
+MECH-Verifier. Der [Publikationsbeleg](../../data/night-002-publication.json)
+bindet18 Ergebnis-/Review-/Grafik-/Terminalartefakte an diesen Commit. Spätere
+redaktionelle Receiptänderungen verändern keine wissenschaftlichen Messungen.
 
 [SET-Readiness](SET-READINESS.md): Drei vorhandene Logs und Originalcode zeigen
 fehlende echte Kontakt-/Retake-/Shot-xG-/Finaltor-/Besitzketten, konkurrierende

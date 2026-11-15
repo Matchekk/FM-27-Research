@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "mission": "NIGHT-002",
+  "recorded_utc": "2026-11-15T00:48:26.855355+00:00",
+  "publication_commit": "307d36734ad81d26c8b22067215e7473a0b8906a",
+  "remote": "https://github.com/Matchekk/FM-27-Research.git",
+  "branch": "main",
+  "ci": {
+    "run_id": 43659699133,
+    "url": "https://github.com/Matchekk/FM-27-Research/actions/runs/43659699133",
+    "head_sha": "307d36734ad81d26c8b22067215e7473a0b8906a",
+    "status": "completed",
+    "conclusion": "success",
+    "updated_at": "2026-11-15T00:47:12Z",
+    "completed_steps": 29
+  },
+  "local_validation": {
+    "unittest_tests": 432,
+    "unittest_passed": 430,
+    "unittest_skipped": 2,
+    "analysis_tests_passed": 5,
+    "historical_statistic_archive_verifiers_passed": 10,
+    "round3_files_unchanged": 272,
+    "night001_files_unchanged": 340,
+    "public_main_independent_reconstruction": true,
+    "terminal_split_verifier": true,
+    "scientific_outputs_and_figures_byte_identical_on_rerun": true,
+    "svg_xml_parsed": true,
+    "local_report_links_checked": 31,
+    "publication_path_size_secret_id_check": "PASS",
+    "engine_calls_by_final_validation": 0
+  },
+  "scope": {
+    "complete_scientific_main_matches": 512,
+    "independent_seed_blocks": 64,
+    "retired_main_matches_without_scientific_analysis": 224,
+    "first_study_resumed": false,
+    "new_series_authorized": false,
+    "career_released": false,
+    "meta_score_changed": false
+  },
+  "artifact_hash_policy": "SHA-256 of exact git blob bytes at publication_commit; does not refer to later editorial receipt changes",
+  "artifact_sha256": {
+    "data/night-002-stless003/main.jsonl": "069f3ec504cb472c979403d7b0d9c56a2dfe008fdb56efee8b7e4646cd335265",
+    "data/night-002-stless003/effects.json": "af2d22c5bfef0614be174f838b401bc31773e0f8545c7fee6aa1a14aebdcdf68",
+    "data/night-002-stless003/seed-contrasts.jsonl": "2642375a9bc436ed18333fd32c5c1b80037ba237778bfc1f248e201f7b61e919",
+    "data/night-002-stless003/analysis-provenance.json": "c83d5ce882b71640765e7b9fcc54105842e5381ea49f1529771056a050741f96",
+    "data/night-002-stless003/main-summary.json": "469a4a154f2dd7b68a044b76f6df0a464ae964b9ed7fc850766b065f250b16b4",
+    "data/night-002-stless003/main-budget.json": "13e0c1ac89688ab77681adaea189d8977422b2660a73633cb31324c12c28c69d",
+    "data/night-002-stless003/main-program-budget.json": "0a1e738319ecf768d9c73026aa2952e369a87030cf6b1da4f49d8eb8cfcd0bc4",
+    "data/night-002-stless003/complete-job-accounting.jsonl": "f63a66767a6c6a72c24d3a13edb2d05b1ebb985bb1102a0e7c30cffc1b1dcce6",
+    "data/night-002-stless003/main-job-accounting.jsonl": "b0e71b4b4abdac6054ad2153175eec743441d4dd77ee2d75564f828f1e3c4ab9",
+    "data/night-002-stless003/native-call-time.json": "6455a59a004fec6489bdc37af252628ea070abc14672212c5b39ca63925667c1",
+    "data/night-002-stless003/result-review.json": "56e5d02010ee25eb53d2161663f58894ca8253a74fb09e65b9da2bc325f14873",
+    "data/night-002-stless003/interaction.png": "5057d6b36f7c56d6ec8cc84af4fdf319c7a9d15f8b491d96a07b950311377819",
+    "data/night-002-stless003/interaction.svg": "24dc04ddf75539d56127e5ec49158addeca290dd431475043aac193f9de8da53",
+    "data/night-002-stless003/figure-provenance.json": "56ec5261df17ee9ba89d6256ba69c8e138496e22d3df2263fc8467d2574736d9",
+    "docs/night-002/STLESS003-RESULTS-REVIEW.md": "ef91d356c425dfe82cb0f35c8c1b747953fe7b1c80b609439d6398b18717bf15",
+    "experiments/TACT-003-stless-results.md": "a5293f3d76dc2bea2f61e91988370830a76ab763275adddd4a04d5562b79377c",
+    "data/night-002-split004/termination.json": "f119e024f85668c395e8fed0bcd1cdd5e386bf5046e147a1af57813bb77fd7d6",
+    "data/night-002-split004/termination-review.json": "e60a169a92f9147f39ee4c2abcecededb1123a19c408031a6ce275d8c5aef73f"
+  }
+}
