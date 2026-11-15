@@ -6,7 +6,7 @@ from hashlib import sha256
 from analysis.analyse_night003 import analyse, independent_check
 
 P=Path(__file__).resolve().parents[1]/'data/night-003-sharpstruct'
-def read(name):return json.loads((P/name).read_text(encoding='utf8-sig'))
+def read(name):return json.loads((P/name).read_text(encoding='utf-8-sig'))
 def rows(name):return [json.loads(line) for line in (P/name).read_text().splitlines()]
 
 class Night003ArchiveTest(unittest.TestCase):
