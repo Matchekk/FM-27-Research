@@ -2,6 +2,8 @@
 
 ## 2026-11-15 – Spielerentwicklung002: Originaltraining und RCA-Modelldiagnose
 
+Wissenschaftlicher Commit `5350d0c` nach erfolgreicher [exakter CI43744773010](https://github.com/Matchekk/FM-27-Research/actions/runs/43744773010) per Fast-forward auf `origin/main` veröffentlicht.
+
 Sauberer Ausgangsstand 20ebc48 nach Fetch identisch mit origin/main. Neue
 CA-002-Vorregistrierung cecf9f0 vor Matrixlauf gepusht; keine Match-/Karriereläufe.
 1.539 einzigartige Modellinterventionen über zehn Positionsfamilien ausgewertet;

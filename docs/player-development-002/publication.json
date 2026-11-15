@@ -1,5 +1,5 @@
 {
-  "status": "SCIENTIFIC_ARCHIVE_READY_CI_PENDING",
+  "status": "SCIENTIFIC_ARCHIVE_PUBLISHED_ON_MAIN_AFTER_SUCCESSFUL_EXACT_CI",
   "base_commit": "20ebc48a6d85fcf1f05e93cdd3c72d4c9c8af308",
   "branch": "codex/player-development-002",
   "preregistration_commit": "cecf9f0d9b6084a4f3822822254eac94027b4a05",
@@ -18,8 +18,56 @@
     "independent_training_review_passed": true,
     "git_diff_check": "passed"
   },
-  "scientific_archive_commit": null,
-  "scientific_archive_ci": null,
-  "main_integration": "pending",
-  "protected_resources_published": false
+  "scientific_archive_commit": "5350d0c6b67f60b543b31aa02d0753fb11656e5c",
+  "scientific_archive_ci": {
+    "run_id": 43744773010,
+    "head_sha": "5350d0c6b67f60b543b31aa02d0753fb11656e5c",
+    "conclusion": "success",
+    "url": "https://github.com/Matchekk/FM-27-Research/actions/runs/43744773010"
+  },
+  "main_integration": {
+    "scientific_archive_sha": "5350d0c6b67f60b543b31aa02d0753fb11656e5c",
+    "remote_ref_verified": "refs/heads/main",
+    "mode": "fast-forward",
+    "force_push": false,
+    "verified_on": "2026-11-15",
+    "note": "This evidence commit may follow the scientific archive; scientific content remains bound to the exact tested SHA."
+  },
+  "protected_resources_published": false,
+  "scientific_archive_git_blob_sha256": {
+    ".gitattributes": "9c3180090a0af2b31d09d3e36f714ab9ac78995253ba00eb81ca9250929a2a57",
+    "FINDINGS.md": "76ca95146b64f3e3734e0c1fb4ac8b8b3035d2db53d7bb36a3acc0b169e66399",
+    "NEXT_STEPS.md": "8e57c8ec1efe6d273d1f6919fecd4794999fb91f3afa1e856645fc50ab0ecfaf",
+    "README.md": "87da1b5fae51a714ec4d558c5877821bab9e8b9ab3e7a25fbbc926c808b1b015",
+    "RESEARCH_LOG.md": "24f52668f9debc299708c8f16dc89718a2936190b2b1e9f0290fd93cbd3a766a",
+    "analysis/audit_training003_source.py": "cd010695b43da09a6810cf35c27b49d092133f91be25e957b98ebc0af80750e4",
+    "analysis/ca_costs002.py": "5a0b5316ec1f21309c9ca89f3cbbf0904cf09c3f263adf3465e596beb8369cf0",
+    "analysis/playerdev002_implications.py": "2b6b1c9e807b2e32d1820c476e395b8467e5560305437bbd8fa40d4ce0955e24",
+    "analysis/run_rca002.mjs": "4a7c1955654cf78cd8e4768ac9cbdef24023c43b9a1982ee82791d4d069a1c51",
+    "data/player-development-002-ca/execution-ledger.json": "05687a6c969e5da0f4ffabf95dcfc05a0ec952ef3c1e1ace5fa5beb398b77aec",
+    "data/player-development-002-ca/export-diagnostic.json": "cb2e51faabbc2cb96608d083b2893c9a75b14eb4b254a6633ccc403f1e9dc307",
+    "data/player-development-002-ca/independent-review.json": "e80703b990288cca04e420b1ea713bdd429490daae3e5474bf5a56db9e32696f",
+    "data/player-development-002-ca/manifest.json": "09317ce2b173abe3edd241cc4303ae6eb8f234711dc91686ac8b4469a3ff1dfd",
+    "data/player-development-002-ca/model-interventions.jsonl": "2f6a678d00bf283810675f0a5a6fa83818209927ff5315509cad7e7b917c6874",
+    "data/player-development-002-ca/summary.json": "e67cb5f3d3dcc5dc5cacf24c2a450be1b4b980cc4cd5fe27b5729f8fa8050342",
+    "data/player-development-002-training/conditional-index.json": "b3cfe5f2b27fdd606c85e01aec12a7be964314c6714e05d41e2c894cc6743815",
+    "data/player-development-002-training/independent-review.json": "bae41e53a3c009215b98da68b8c4c88cf8dd59911b24ec5e826cb63ee5004434",
+    "data/player-development-002-training/source-table-audit.json": "77bb6ff4248d08f54d5906bb2588cdab5591044d9eb1ea2678204407dc392634",
+    "docs/player-development-002/CA_ACCESS_AUDIT.md": "e264e268bd7072914489f0fadb362f7225bd7e7e029c19978b87fbef1fe7c0c5",
+    "docs/player-development-002/CA_COSTS.md": "f6eff93ff7cc4f98f9eb09bf42b09298baaaf5ebdaefcc196a58393de2cb73ad",
+    "docs/player-development-002/INDEPENDENT_REVIEW.md": "b77d099ab6075046c09bda2e13b4103d92e6b7f4a3f49ab97d0338227a69ebfc",
+    "docs/player-development-002/MODEL_IMPLICATIONS.md": "102cd546e7d65331e8b9a66c4ee67ec3ceac16e195c664548df367737803436e",
+    "docs/player-development-002/NEXT_STEPS.md": "ad1f5869e87153e2850d8e959d0d47ad1fa88a273590388b33fe723a1563d8c1",
+    "docs/player-development-002/PA_ANALYSIS.md": "86d04e6fe4ec7ec1b468936867d812858295d3315a9b5a60db77cf1277043bb0",
+    "docs/player-development-002/RESEARCH_REPORT.md": "a1cd16a5fbd6c4698f20c6ffa5e0222cb47b113d69ddee78f224ee33723a6932",
+    "docs/player-development-002/TRAINING_EXPERIMENT.md": "9c88b67897e6f6ac2864abe2a6d0b3e135d3bca12a2e2a4f7da5da4ca570de20",
+    "docs/player-development-002/ca-access-source-audit.json": "13d9cf1840f9bb6ba8008c787730996c51d7c8d00f4d2dd2e63529b4723c9ece",
+    "docs/player-development-002/tool-versions.json": "57f87e94b637261fe94c28a7e758519f367a8e2a3e9759883440053fd5365291",
+    "experiments/CA-002-model-diagnostic.md": "c73a8f8ccc269dbaa3f06f916323362dfd5cd5c189aad00928d3cea269997182",
+    "experiments/TRAIN-003-source-audit.md": "ad023994b1c3fc8bf8c6f77d6d92ff70dd4ca30c3032713b1bbdfbeed1a8dd26",
+    "research/playerdev002-career-sources.json": "bff18a159b0ac2e16831be54bd36fc6f3d6a1d533a36afbd27ee4da434a775fb",
+    "research/playerdev002-editor-evidence.json": "84e6373107003efb57fe5e88ffc5e603d05940ad97cf59025a7009525b673a60",
+    "tests/test_ca_costs002.py": "b3f55d4730198f0bb22a7fdac13ab85d86fd345812cc076cc9f151da4bb76838",
+    "tests/test_training003_source.py": "7ea7590b85eb257dc1d8c4aa7174a17c3e36d3487b3bd2f81acebaae868f95f5"
+  }
 }
