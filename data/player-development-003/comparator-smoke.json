@@ -1,0 +1,14 @@
+{
+  "purpose": "Existing comparator readiness check; replay of one archived CA-002 input, not new FM27 data",
+  "source_sha256": "13fe8593b297f0ea5047967ed75c08b71118f730bbb63f48f9db344f1982721b",
+  "input_sha256": "adcc18e56c86abcd967443d80df75903c4cb00ace68e27bb71d832738bf7e6f6",
+  "archive_reference": "data/player-development-002-ca/model-interventions.jsonl:1 before",
+  "model_rca": 107,
+  "editor_rca": null,
+  "stored_ca": null,
+  "matches_archived_output": true,
+  "requests": 1,
+  "source_calls_including_AA": 2,
+  "new_unique_profiles": 0,
+  "gold_observations": 0
+}

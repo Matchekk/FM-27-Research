@@ -1,5 +1,14 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Spielerentwicklung003 – Zugang vor weiterer Modellrechnung
+
+Kein unabhängiges Editor-RCA und kein kontrollierter Fokus-/Karriereworkflow
+nachgewiesen; keine Studie gestartet. [Höchstens drei nächste Schritte](docs/player-development-003/NEXT_STEPS.md)
+benennen die Gold-, Rückanpassungs- und Quickness-Messung. Die
+[Erfassungsvorlage](docs/player-development-003/CAPTURE_PROTOCOL.md) ist eine
+technische Übergabe, kein Ergebnis. Neue IDs CA-003-GOLD/CA-004-EXEMPT/
+TRAIN-004-QUICKNESS ersetzen oder reaktivieren keine terminalen Altverträge.
+
 ## Spielerentwicklung002 – neuer Stand 15.11.2026
 
 Neue Original-Trainingsauswertung und vollständiger Modell-RCA-Rechner liegen

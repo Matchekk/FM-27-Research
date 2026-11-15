@@ -1,0 +1,3 @@
+{"experiment": "CA-003-GOLD", "state": "NOT_STARTED_ACCESS_BLOCKED", "started": 0, "completed": 0, "aborted_after_start": 0, "excluded": 0, "outcomes": null, "reason": "No verified independent editor RCA; AX pane only, two capture timeouts"}
+{"experiment": "CA-004-EXEMPT", "state": "NOT_STARTED_ACCESS_BLOCKED", "started": 0, "completed": 0, "aborted_after_start": 0, "excluded": 0, "outcomes": null, "reason": "No independent RCA or controlled disposable-career executor"}
+{"experiment": "TRAIN-004-QUICKNESS", "state": "NOT_STARTED_ACCESS_BLOCKED", "started": 0, "completed": 0, "aborted_after_start": 0, "excluded": 0, "outcomes": null, "reason": "No verified focus setter/readback, executor or independent-start corpus"}

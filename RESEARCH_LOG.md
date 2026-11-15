@@ -1,5 +1,18 @@
 # Research Log
 
+## 2026-11-15 – Spielerentwicklung003: Zugangscheck und technische Übergabe
+
+Sauberer Ausgangsstand `8035085622ec3cd93fa93e13e33751e1ce2bccea` nach
+Fetch/Pull identisch mit origin/main. FM27 vorhanden, installierte DLL erneut
+27.0.1+2503222 gemessen. GUI nur AX-Pane, zwei Bildcapture-Timeouts; kein
+unabhängig verifizierter Editor-RCA-/Fokus-/Kalenderworkflow. Alle drei neuen
+Studien vor Start blockiert, null neue FM27-Messungen und Karrierearme.
+Ein bereits archivierter Comparatorinput reproduziert; keine Modellmatrix
+oder Trainingsmappe wiederholt. Drei getrennte Verträge und externe JSONL-
+Erfassung als technische Übergabe, keine Kosten-/Trainingsschlussfolgerung.
+[Bericht](docs/player-development-003/RESEARCH_REPORT.md),
+[Test-/CI-/Pushbeleg](docs/player-development-003/publication.json).
+
 ## 2026-11-15 – Spielerentwicklung002: Originaltraining und RCA-Modelldiagnose
 
 Wissenschaftlicher Commit `5350d0c` nach erfolgreicher [exakter CI43744773010](https://github.com/Matchekk/FM-27-Research/actions/runs/43744773010) per Fast-forward auf `origin/main` veröffentlicht.

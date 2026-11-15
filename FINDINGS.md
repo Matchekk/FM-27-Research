@@ -1,5 +1,16 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-15 – Spielerentwicklung003: technische Übergabe, kein neuer Befund
+
+CA-003-GOLD: **INDEPENDENT_EDITOR_RCA_UNAVAILABLE** im begrenzten lokalen
+Zugangscheck. CA-004-EXEMPT und TRAIN-004-QUICKNESS vor Start blockiert.
+0 neue Goldprofile, 0 Interventionen, 0 Karrierearme; alle wissenschaftlichen
+Fehler-/Effektschätzer null, keine Aussage über Exaktheit, Nullkosten oder
+Trainingswirkung. [Belege/Grenzen](docs/player-development-003/RESEARCH_REPORT.md),
+[maschineller Status](data/player-development-003/status.json),
+[externe Erfassungsvorlage](docs/player-development-003/CAPTURE_PROTOCOL.md).
+Historische Modell-/Quellenanalysen unten bleiben unverändert.
+
 ## 2026-11-15 – Spielerentwicklung002: neue Originaldaten, keine echten Kosten
 
 TRAIN-003-SOURCE: Originalworkbook erstmals maschinenlesbar nachgerechnet,

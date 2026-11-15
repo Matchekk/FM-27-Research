@@ -1,0 +1,110 @@
+{
+  "status": "READY_FOR_BRANCH_CI",
+  "base_commit": "8035085622ec3cd93fa93e13e33751e1ce2bccea",
+  "evidence_class": "TECHNICAL_HANDOFF_NO_NEW_EMPIRICAL_RESULT",
+  "local_tests": {
+    "unittest_tests": {
+      "run": 477,
+      "passed": 474,
+      "skipped": 3,
+      "failed": 0
+    },
+    "analysis_tests": {
+      "run": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "existing_ci_archive_commands": [
+      {
+        "command": "python analysis/review_playerdev001.py role",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_matches.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_tact001p0.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_tact001p1b.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_tact001p1c.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_tact002r0.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/review_tact002.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_round3_archive.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_night_archive.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_attr009.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/review_round3.py results",
+        "exit_code": 0
+      },
+      {
+        "command": "python analysis/verify_mech003_archive.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python -B analysis/review_night001.py --public-startpolicy",
+        "exit_code": 0
+      },
+      {
+        "command": "python -B analysis/review_sharpness002_results.py public-technical",
+        "exit_code": 0
+      },
+      {
+        "command": "python -B analysis/review_sharpness002_results.py public-main",
+        "exit_code": 0
+      },
+      {
+        "command": "python -B analysis/review_split004.py public-technical",
+        "exit_code": 0
+      },
+      {
+        "command": "python -B analysis/review_split004.py public-terminal",
+        "exit_code": 0
+      },
+      {
+        "command": "python -B analysis/review_stless003.py public-technical",
+        "exit_code": 0
+      },
+      {
+        "command": "python -B analysis/review_stless003.py public-main",
+        "exit_code": 0
+      }
+    ]
+  },
+  "review": {
+    "independent_agent_source_and_document_review": true,
+    "template_rejected_before_model_execution": true,
+    "capture_example_compiles": true,
+    "changes_addressed": [
+      "explicit JSON null versus numeric zero",
+      "M02 fixed baseline MC20 DM0 to DM15",
+      "MODEL_RCA output explicit"
+    ]
+  },
+  "archive_commit": null,
+  "archive_ci": null,
+  "main_integration_policy": "Only fast-forward after successful exact-commit GitHub CI and content/provenance review",
+  "published_scope": "Technical access report, three unstarted contracts, null status ledger and empty capture template; no new FM27 scientific measurements"
+}

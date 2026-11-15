@@ -1,0 +1,72 @@
+{
+  "schema": "playerdev003.source-refresh.v1",
+  "accessed_utc": "2026-11-15T18:47:51.0187347Z",
+  "scout": {
+    "repository": "https://github.com/shlk20/fm27-scout-code",
+    "current_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa",
+    "commit_time": "2026-11-15T13:05:43Z",
+    "version": "v1.6.0",
+    "pinned_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa",
+    "current_equals_pinned": true
+  },
+  "fmsave": {
+    "tag": "v0.12.5",
+    "published": "2026-11-14T19:43:27Z",
+    "commit": "f4f70f62cccae27c63c8dc9610f50c16d5ddcc29",
+    "release_url": "https://github.com/rhiever/fmsave/releases/tag/v0.12.5",
+    "release_notes": "\n### Fixed\n\n- Warn and keep reading players with unique UIDs when other player records share a UID.\n  References to those records stay unresolved. Strict mode still raises. (#102)\n\nThanks to @absalom12 for the report. Refs #102.\n\n"
+  },
+  "files": [
+    {
+      "file": "ca-current.ts",
+      "bytes": 11454,
+      "sha256": "13fe8593b297f0ea5047967ed75c08b71118f730bbb63f48f9db344f1982721b"
+    },
+    {
+      "file": "ca-pinned.ts",
+      "bytes": 11454,
+      "sha256": "13fe8593b297f0ea5047967ed75c08b71118f730bbb63f48f9db344f1982721b"
+    },
+    {
+      "file": "editor-test-plan-current.md",
+      "bytes": 6444,
+      "sha256": "429ed04736473c4580da14d828ea68e7a9ee01cfc2b419c23493f5966fb50812"
+    },
+    {
+      "file": "editor-test-plan-pinned.md",
+      "bytes": 6444,
+      "sha256": "429ed04736473c4580da14d828ea68e7a9ee01cfc2b419c23493f5966fb50812"
+    },
+    {
+      "file": "fmsave-0125-players.py",
+      "bytes": 19964,
+      "sha256": "385b184221ba3adde2368a43712119f9ff6450201cc6105181ab208d9aa269e9"
+    },
+    {
+      "file": "fmsave-0125-save.py",
+      "bytes": 157650,
+      "sha256": "5d146bb1d98354428d7777648d47ad308604857ab44fb98b5fbca6702956b5f8"
+    },
+    {
+      "file": "fmsave-0125-training.py",
+      "bytes": 8539,
+      "sha256": "d15d0d10430cb1b0e4d8f25721e81ea1e941dec6d8ec9a293277839597fd5fc4"
+    }
+  ],
+  "additional_sources": [
+    {
+      "url": "https://docs.fmrte.com/players/ability/",
+      "access": "web.open 2026-11-15",
+      "id": "FMRTE-ABILITY-DOCS",
+      "finding": "RCA is an FMRTE estimate using configurable Ability Weights; no engine-oracle independence established"
+    },
+    {
+      "url": "https://community.sports-interactive.com/forums/topic/612978-actualizaci%C3%B3n-de-lanzamiento-de-fm27-2701-es/",
+      "access": "web.open 2026-11-15",
+      "id": "SI-FM27-LAUNCH-2701",
+      "finding": "Official launch 27.0.1 notes; no independently measured installed-build implication"
+    }
+  ],
+  "interventions": 0,
+  "gold_observations": 0
+}

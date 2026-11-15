@@ -1,5 +1,12 @@
 # FM27 Meta Research
 
+> **PLAYER-DEVELOPMENT-003 (15.11.):** unabhängiger Editor-RCA-Zugang und
+> kontrollierter Karriereexecutor weiterhin nicht nachgewiesen. FM27 läuft,
+> GUI-Erfassung scheitert; keine Goldprofile, Edits oder Karrierearme gestartet.
+> [Zugangsbericht und Grenzen](docs/player-development-003/RESEARCH_REPORT.md) ·
+> [befüllbare externe Erfassung](docs/player-development-003/CAPTURE_PROTOCOL.md).
+> Technische Übergabe, keine neuen empirischen FM27-Ergebnisse.
+
 > **PLAYER-DEVELOPMENT-002 (15.11.):** Original-Trainingstabelle mit 51 Plänen
 > nachgerechnet: Plan 46 gegenüber 38 meldet +2,10 CA, aber −0,15 Antritt und
 > −0,20 Tempo. Keine kausale Rangfolge ohne Karrierezahl/Streuung/Build.

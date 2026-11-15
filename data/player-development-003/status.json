@@ -1,0 +1,81 @@
+{
+  "as_of": "2026-11-15",
+  "evidence_class": "TECHNICAL_HANDOFF_NO_NEW_EMPIRICAL_RESULT",
+  "base_commit": "8035085622ec3cd93fa93e13e33751e1ce2bccea",
+  "measurement_classes": [
+    "STORED_CA",
+    "EDITOR_RCA",
+    "MODEL_RCA",
+    "POST_ADVANCE_CA",
+    "POST_ADVANCE_ATTRIBUTES"
+  ],
+  "CA-003-GOLD": {
+    "conclusion": "INDEPENDENT_EDITOR_RCA_UNAVAILABLE",
+    "status": "NOT_STARTED_ACCESS_BLOCKED",
+    "planned_pilot_interventions": 12,
+    "planned_additional_main_minimum": 48,
+    "main_cases_frozen": false,
+    "unique_measured_base_profiles": 0,
+    "gold_states": 0,
+    "started_interventions": 0,
+    "exact_matches": null,
+    "exact_match_denominator": 0,
+    "mae": null,
+    "rmse": null,
+    "bias_model_minus_editor": null,
+    "max_absolute_error": null,
+    "errors_by_position": null,
+    "errors_by_level": null,
+    "errors_by_feet_and_multiposition": null,
+    "exact_delta_matches": null,
+    "delta_metrics": null,
+    "sign_conflicts": null,
+    "one_point_discrepancies": null
+  },
+  "CA-004-EXEMPT": {
+    "status": "NOT_STARTED_ACCESS_BLOCKED",
+    "static_interventions": 0,
+    "career_arms_started": 0,
+    "candidate_status": {
+      "determination": "NOT_MEASURED",
+      "natural_fitness": "NOT_MEASURED",
+      "flair": "NOT_MEASURED",
+      "aggression": "NOT_MEASURED"
+    },
+    "independent_rca_deltas": null,
+    "retention_effects": null
+  },
+  "TRAIN-004-QUICKNESS": {
+    "status": "NOT_STARTED_ACCESS_BLOCKED",
+    "planned_independent_pairs": 12,
+    "planned_arms": 24,
+    "planned_weeks_per_arm": 8,
+    "independent_pairs_observed": 0,
+    "arms_started": 0,
+    "arms_completed": 0,
+    "arms_aborted": 0,
+    "arms_excluded": 0,
+    "arm_weeks": 0,
+    "mean_paired_delta_quickness": null,
+    "sd_between_pairs": null,
+    "ci95": null,
+    "secondary_endpoints": null
+  },
+  "resources": {
+    "new_native_simulation_calls": 0,
+    "saves_opened": 0,
+    "saves_modified": 0,
+    "calendar_advances": 0,
+    "seeds_reserved": 0,
+    "gui_capture_attempts": 2,
+    "gui_capture_failures": 2,
+    "offline_comparator_requests": 1,
+    "pure_source_calls_with_aa": 2,
+    "new_unique_model_profiles": 0,
+    "training_workbook_reanalyses": 0,
+    "processes_started_for_game_experiments": 0,
+    "peak_cpu": null,
+    "peak_memory": null
+  },
+  "access_decision_utc": "2026-11-15T18:54:22.825443+00:00"
+}
