@@ -1,0 +1,35 @@
+{
+  "assumptions": "Equal independent context-seed blocks; normal Welch approximation; role x role is only a variance anchor for role x attribute, never a guarantee.",
+  "sensitivity": {
+    "0.6": {
+      "block_sd": 0.6,
+      "full95width": 0.10419004702907857,
+      "power_for_point15": 0.9998861911762335
+    },
+    "1.0": {
+      "block_sd": 1.0,
+      "full95width": 0.17365007838179763,
+      "power_for_point15": 0.923318166995431
+    },
+    "1.2": {
+      "block_sd": 1.2,
+      "full95width": 0.20838009405815713,
+      "power_for_point15": 0.8059687294335751
+    },
+    "1.5": {
+      "block_sd": 1.5,
+      "full95width": 0.2604751175726964,
+      "power_for_point15": 0.6173573329711968
+    }
+  },
+  "prior_role_interaction_sd": {
+    "high_press": 1.4900750283271371,
+    "deep_block": 1.1486571472799738
+  },
+  "n_per_context": 256,
+  "independent_blocks": 512,
+  "matches": 4096,
+  "practical_reference": 0.15,
+  "desired_full95width": 0.2,
+  "stop": "4096 scientific calls, no interim outcomes or outcome-dependent expansion."
+}

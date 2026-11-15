@@ -1,5 +1,11 @@
 # FM27 Meta Research
 
+> **PLAYER-DEVELOPMENT-001 (15.11.):** Neuer Forschungsbereich zu CA-Kosten,
+> Entwicklung und Training. Eine neue CF/DLF×Sprunghöhe-Interaktion ist
+> vorregistriert; noch keine wissenschaftlichen Resultate.
+> [Programmbericht](docs/player-development-001/RESEARCH_REPORT.md) ·
+> [Versuchsvertrag](experiments/PD-ROLE-001.md).
+
 > **NIGHT-003 abgeschlossen (15.11.):** zwei vollständige Hauptstudien mit
 > **8.192 Matches / 1.536 unabhängigen Blöcken**. Schärfe×IP −0,013xGD
 > [−0,119; +0,092]; Positionsnutzen AMC/ST−CB +0,054 [−0,004; +0,111].

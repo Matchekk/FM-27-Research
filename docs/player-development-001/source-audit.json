@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "as_of": "2026-11-15",
+  "base_commit": "3cd43178e9eeb48e279e8551d410c526b4b396e0",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/jamiebolden/fm-scoring/b5928ba2b9aba3c4c40a8f32118401eafb6f4c99/docs/ca_costs_fm27.csv",
+      "sha256": "b42727041a0779bc6bcc76272b0ae67ee323338f5bbdf1a348abd51769f08180",
+      "bytes": 3701,
+      "cached_file_mtime_utc": "2026-11-15T16:12:16.941538+00:00",
+      "accessed_utc": "2026-11-15T16:17:42.237810+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jamiebolden/fm-scoring/b5928ba2b9aba3c4c40a8f32118401eafb6f4c99/docs/README.md",
+      "sha256": "ee3edab95ad68e6065f343ded01463438f1d4f9caad6fd4c20e32c5c04eb6971",
+      "bytes": 845,
+      "cached_file_mtime_utc": "2026-11-15T16:12:17.438326+00:00",
+      "accessed_utc": "2026-11-15T16:17:42.237810+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jamiebolden/fm-scoring/b5928ba2b9aba3c4c40a8f32118401eafb6f4c99/README.md",
+      "sha256": "74677e3dcf603d43561f2c0f854fbac2c92e8d0be6a4fcc8b445488d26eb180d",
+      "bytes": 12573,
+      "cached_file_mtime_utc": "2026-11-15T16:12:17.893519+00:00",
+      "accessed_utc": "2026-11-15T16:17:42.237810+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/9bc29019adc87cf45138c462e96c4e19077a0381/docs/studies/README.md",
+      "sha256": "104d4b8b156729d397c77b5e55119b5f1285c002d0ef72c19bb9e649a7788e09",
+      "bytes": 13077,
+      "cached_file_mtime_utc": "2026-11-15T16:12:16.707977+00:00",
+      "accessed_utc": "2026-11-15T16:17:42.237810+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/9bc29019adc87cf45138c462e96c4e19077a0381/docs/studies/20-current-ability.md",
+      "sha256": "ab3ed43bbedd8316627544ddd77877001b9a55dec61b1099059b28bf64157e83",
+      "bytes": 6235,
+      "cached_file_mtime_utc": "2026-11-15T16:12:17.667452+00:00",
+      "accessed_utc": "2026-11-15T16:17:42.237810+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/9bc29019adc87cf45138c462e96c4e19077a0381/docs/studies/13b-value-by-position-random.md",
+      "sha256": "5c96806861360aed67643a2d197be1ef06c79f74803af1075ab5cb0f8b0f774b",
+      "bytes": 19266,
+      "cached_file_mtime_utc": "2026-11-15T16:12:17.210993+00:00",
+      "accessed_utc": "2026-11-15T16:17:42.238810+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://fm-arena.com/threads/attribute-importance-by-position-in-fm27-a-test-on-my-own-tactic.125/",
+      "sha256": "38a8fa564274dc391c10e092c918c60ef510eb6293d5754b5734cebb7c710396",
+      "bytes": 124712,
+      "cached_file_mtime_utc": "2026-11-15T16:17:43.205166+00:00",
+      "accessed_utc": "2026-11-15T16:17:43.241165+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://sortitoutsi.net/content/78219/fm27-attribute-test-tactical-understanding-training-system-preset-tactics-ai-reverse-engineering-engine-for-test",
+      "sha256": "fea54fca2c2afdff731254ca8d5f631aeb9394ba81078a47592b9f4b845b225d",
+      "bytes": 116164,
+      "cached_file_mtime_utc": "2026-11-15T16:17:43.475165+00:00",
+      "accessed_utc": "2026-11-15T16:17:43.508163+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://sortitoutsi.net/content/78226/optimal-training-schedules",
+      "sha256": "7bbb35628711718d0f1c1a30909df9f925b838bd81f3adace1a7c50f7b27993a",
+      "bytes": 168989,
+      "cached_file_mtime_utc": "2026-11-15T16:17:43.762367+00:00",
+      "accessed_utc": "2026-11-15T16:17:43.793866+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://fm-arena.com/threads/training-schedules.60/",
+      "sha256": "e31cdc414748dd28fc4b39f95026a12d9ccfd5a49dfaf3bd70449478551cd67f",
+      "bytes": 178256,
+      "cached_file_mtime_utc": "2026-11-15T16:17:44.750067+00:00",
+      "accessed_utc": "2026-11-15T16:17:44.790072+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rhiever/fmsave/f4f70f62cccae27c63c8dc9610f50c16d5ddcc29/src/fmsave/models/players.py",
+      "sha256": "385b184221ba3adde2368a43712119f9ff6450201cc6105181ab208d9aa269e9",
+      "bytes": 19964,
+      "cached_file_mtime_utc": "2026-11-15T16:17:45.094414+00:00",
+      "accessed_utc": "2026-11-15T16:17:45.099914+00:00",
+      "status": "read",
+      "independently_replicated": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rhiever/fmsave/f4f70f62cccae27c63c8dc9610f50c16d5ddcc29/src/fmsave/models/training.py",
+      "sha256": "d15d0d10430cb1b0e4d8f25721e81ea1e941dec6d8ec9a293277839597fd5fc4",
+      "bytes": 8539,
+      "cached_file_mtime_utc": "2026-11-15T16:17:45.336459+00:00",
+      "accessed_utc": "2026-11-15T16:17:45.342457+00:00",
+      "status": "read",
+      "independently_replicated": false
+    }
+  ],
+  "tools": {
+    "python": "3.12.10",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3",
+    "installed_fmsave": "0.9.0",
+    "audited_fmsave_upstream": "f4f70f62cccae27c63c8dc9610f50c16d5ddcc29",
+    "git": "2.45.1.windows.1",
+    "gh": "2.86.0"
+  },
+  "installed_build": {
+    "file_version": "27.0.1",
+    "product_version": "27.0.1+2503222",
+    "dll_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340"
+  },
+  "training_career_decision": {
+    "status": "METHODOLOGY_BLOCKED",
+    "native_advances": 0,
+    "private_saves_opened": 0,
+    "reasons": [
+      "No validated individual training participation",
+      "No verified independent career RNG replicates",
+      "No authorized isolated disposable longitudinal save cohort",
+      "No multi-season validation data"
+    ]
+  },
+  "scientific_program": {
+    "max_native_main_matches": 4096,
+    "allocated_study": "PD-ROLE-001",
+    "other_scientific_matches": 0
+  }
+}

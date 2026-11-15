@@ -648,3 +648,14 @@ Keine Limits zurückgesetzt, alle512Mainseeds gesperrt. Insgesamt8.256Vollmatche
 inklusive64Technik plus3erwarteteNegativabweisungen; keine unerwarteten Ausfälle.
 Keine offeneNativephase; Rohbelege unverändert, Abbildung visuell geprüft und
 bytegleich reproduziert. Abschlussbericht und kurze Erkenntniszusammenfassung erstellt.
+# 15.11.2026 – PLAYER-DEVELOPMENT-001, Vorregistrierung
+
+Sauberer Ausgangsstand3cd4317=origin/main nach Fetch. Neuer Forschungsbranch,
+aktuelle externe Quellen und reale DLL27.0.1+2503222 geprüft. TRAIN/PA bereits
+im ersten Machbarkeitscheck blockiert; keine private Saveöffnung oder Advances.
+Neue CF/DLF×JR-Frage vorregistriert,516disjunkte Seeds und16Inputzellen
+vorbereitet. Noch0native Aufrufe und0wissenschaftliche Resultate. Offline:
+457Tests,453bestanden/4erwartete Skips; ein synthetischer Testfixture-Aliasfehler
+vor Veröffentlichung behoben. System-Python ohne numpy wurde erkannt;
+maßgeblich ist vorhandene .venv mit eingefrorenen Abhängigkeiten.
+[Vertrag](experiments/PD-ROLE-001.md) · [Bericht](docs/player-development-001/RESEARCH_REPORT.md).
