@@ -1,5 +1,14 @@
 # FM27 Meta Research
 
+> **PLAYER-DEVELOPMENT-002 (15.11.):** Original-Trainingstabelle mit 51 Plänen
+> nachgerechnet: Plan 46 gegenüber 38 meldet +2,10 CA, aber −0,15 Antritt und
+> −0,20 Tempo. Keine kausale Rangfolge ohne Karrierezahl/Streuung/Build.
+> Neuer RCA-Rechner an 1.539 einzigartigen konstruierten Interventionen geprüft;
+> tatsächliche CA-Kosten weiterhin unbekannt. Keine neuen Matches oder Karrieren.
+> [Forschungsbericht](docs/player-development-002/RESEARCH_REPORT.md) ·
+> [Modell-RCA-Differenzen](docs/player-development-002/CA_COSTS.md) ·
+> [Original-Trainingsauswertung](docs/player-development-002/TRAINING_EXPERIMENT.md).
+
 > **PLAYER-DEVELOPMENT-001 (15.11.):** Neuer Forschungsbereich zu CA-Kosten,
 > Entwicklung und Training.109öffentliche GK-Exportprofile explorativ mit
 > Spielertrennung geprüft: CA-Proxy-Holdout-MAE1,606 gegenüber4,630 ungewichtet.

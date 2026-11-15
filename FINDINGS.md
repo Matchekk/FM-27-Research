@@ -1,5 +1,26 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-15 – Spielerentwicklung002: neue Originaldaten, keine echten Kosten
+
+TRAIN-003-SOURCE: Originalworkbook erstmals maschinenlesbar nachgerechnet,
+51 Pläne × 37 Endpunkte = 1.887 Zahlen, keine Missing Values/Formeln.
+Vorab benannter Quellenkontrast 46−38: CA +2,10, Antritt −0,15, Tempo −0,20,
+Ausdauer −0,30, Antizipation +0,65. Keine kausale Rangfolge: Karrierezahl,
+Streuung/Build fehlen, PA 130/150 widersprüchlich. Getrennter Parser bestätigt
+die ausgewählten Zellen. [Quellenplan](experiments/TRAIN-003-source-audit.md),
+[Ergebnis](docs/player-development-002/TRAINING_EXPERIMENT.md),
+[Messausgabe](data/player-development-002-training/source-table-audit.json).
+
+CA-002: neue externe RCA-Rekonstruktion mit 1.539 einzigartigen konstruierten
+Attributinterventionen auditiert, 81 Aliaswiederholungen erhalten. 339/513
+Leveltripel liefern unterschiedliche ganzzahlige Differenzen, Spanne 0–4.
+**MODEL_RCA, keine tatsächlichen CA-Kosten oder validiertes Editor-RCA.**
+109 alte GK-Profile wegen qualitativer Fußwerte unzulässig, keine Imputation,
+MAE=null. Vollständiger unabhängiger Software-Replay bestätigt alle Ausgaben.
+[Protokoll](experiments/CA-002-model-diagnostic.md),
+[Tabellen/Grenzen](docs/player-development-002/CA_COSTS.md).
+Keine Karrierefortschreibung, keine neue PA-Prognose oder Matchmessung.
+
 ## 2026-11-15 – N3-SHARPPOS-C1, marginaler Zweispieler-Schärfenutzen
 
 **4.096 gültige Hauptmatches,1.024 unabhängige neue Blöcke**, FM27 27.0.1+2503222.

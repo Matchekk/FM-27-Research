@@ -1,0 +1,25 @@
+{
+  "status": "SCIENTIFIC_ARCHIVE_READY_CI_PENDING",
+  "base_commit": "20ebc48a6d85fcf1f05e93cdd3c72d4c9c8af308",
+  "branch": "codex/player-development-002",
+  "preregistration_commit": "cecf9f0d9b6084a4f3822822254eac94027b4a05",
+  "preregistration_ci": {
+    "run_id": 43743654368,
+    "conclusion": "success",
+    "url": "https://github.com/Matchekk/FM-27-Research/actions/runs/43743654368"
+  },
+  "local_validation": {
+    "unittest_cases": 477,
+    "passed": 474,
+    "expected_historical_skips": 3,
+    "analysis_tests_passed": 5,
+    "targeted_cases_included": 11,
+    "independent_rca_replay_mismatches": 0,
+    "independent_training_review_passed": true,
+    "git_diff_check": "passed"
+  },
+  "scientific_archive_commit": null,
+  "scientific_archive_ci": null,
+  "main_integration": "pending",
+  "protected_resources_published": false
+}

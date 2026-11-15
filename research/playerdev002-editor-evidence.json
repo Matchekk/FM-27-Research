@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "evidence_id": "PD002-EXT-EDITOR-ABCD",
+  "classification": "EXTERNAL_AUTHOR_REPORT_NOT_INDEPENDENTLY_REPLICATED",
+  "source": {
+    "url": "https://github.com/shlk20/fm27-scout-code/blob/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/docs/editor-test-plan.md",
+    "commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa",
+    "sha256": "429ed04736473c4580da14d828ea68e7a9ee01cfc2b419c23493f5966fb50812",
+    "accessed": "2026-11-15",
+    "author_reported_save_build": "27.0.0+2486695",
+    "engine_binary_hash": null,
+    "raw_saves_available_in_public_source": false,
+    "ui_rca_observations_available": false,
+    "source_identities_republished": false
+  },
+  "design": {
+    "author_reported_players": 1,
+    "shared_source_careers": 1,
+    "reported_completed_arms": 4,
+    "independent_career_replicates_verified": null,
+    "start_date": "2026-07-25",
+    "actual_end_date": "2026-08-27",
+    "planned_end_date_in_instructions": "2026-08-28",
+    "elapsed_days": 33,
+    "source_baseline_ca": 110,
+    "source_baseline_pa": 160,
+    "source_baseline_raw_attribute_sum": 2378,
+    "arm_pa": 200,
+    "common_six_attributes": ["finishing", "pace", "acceleration", "dribbling", "passing", "technique"],
+    "common_six_source_raw_values": [64, 64, 65, 59, 59, 49],
+    "training_plan": null,
+    "coaches_and_facilities": null,
+    "minutes_and_injuries": null,
+    "rng_pairing": null
+  },
+  "reported_arms": [
+    {
+      "arm": "A",
+      "intervention_relative_to_shared_pa200_copy": "CA set to 150; attributes unchanged",
+      "ca_before": 150,
+      "ca_after": 152,
+      "ca_delta_during_followup": 2,
+      "raw_attribute_sum_before": 2378,
+      "raw_attribute_sum_after": 2736,
+      "raw_attribute_sum_delta": 358,
+      "six_attributes_after_exact": null,
+      "six_attributes_reported_change_range": [11, 13]
+    },
+    {
+      "arm": "B",
+      "intervention_relative_to_shared_pa200_copy": "Six attributes set to raw 100; CA retained at 110",
+      "ca_before": 110,
+      "ca_after": 110,
+      "ca_delta_during_followup": 0,
+      "raw_attribute_sum_before": 2618,
+      "raw_attribute_sum_after": 2181,
+      "raw_attribute_sum_delta": -437,
+      "six_attributes_before_each": 100,
+      "six_attributes_after_each": 85,
+      "six_attributes_delta_each": -15,
+      "six_attributes_sum_delta": -90
+    },
+    {
+      "arm": "C",
+      "intervention_relative_to_shared_pa200_copy": "CA set to 150 and six attributes set to raw 100",
+      "ca_before": 150,
+      "ca_after": 150,
+      "ca_delta_during_followup": 0,
+      "raw_attribute_sum_before": 2618,
+      "raw_attribute_sum_after": 2504,
+      "raw_attribute_sum_delta": -114,
+      "six_attributes_before_each": 100,
+      "six_attributes_after_each": 96,
+      "six_attributes_delta_each": -4,
+      "six_attributes_sum_delta": -24
+    },
+    {
+      "arm": "D",
+      "intervention_relative_to_shared_pa200_copy": "Natural Fitness, Determination, Flair, Aggression, Stamina and Strength set to raw 100; CA retained at 110",
+      "ca_before": 110,
+      "ca_after": 113,
+      "ca_delta_during_followup": 3,
+      "raw_attribute_sum_before": null,
+      "raw_attribute_sum_after": null,
+      "raw_attribute_sum_delta": null,
+      "four_candidate_exempt_attributes": ["natural_fitness", "determination", "flair", "aggression"],
+      "four_candidate_exempt_attributes_before_each": 100,
+      "four_candidate_exempt_attributes_after_each": 100,
+      "stamina_before": 100,
+      "stamina_after": 94,
+      "strength_before": 100,
+      "strength_after": 94
+    }
+  ],
+  "derived_descriptive_contrasts": {
+    "C_minus_B_same_six_start_values": {
+      "ca_start_gap": 40,
+      "ca_end_gap": 40,
+      "key_attribute_end_gap_each_raw": 11,
+      "six_attribute_sum_end_gap_raw": 66,
+      "all_attribute_sum_end_gap_raw": 323,
+      "interpretation": "Reported attribute retention after different assigned CA; not marginal CA cost and not a training treatment"
+    }
+  },
+  "uncertainty": {
+    "confidence_intervals": null,
+    "p_values": null,
+    "reason": "Single author-reported shared-save player; no independent career replication or publicly inspectable raw before/after saves"
+  },
+  "limits": [
+    "Not an experiment executed by FM-27-Research; external narrative and tables only",
+    "Source save build is older than local 27.0.1+2503222; exact runtime engine build/hash unverified",
+    "Original PA160 changed to PA200 in all arms; no unedited PA200 control reported",
+    "No documented randomized order, career RNG pairing, controlled minutes, training plan or injuries",
+    "Six attributes and whole-profile rebalancing cannot identify a one-attribute CA gradient",
+    "Stability over 33 days does not prove universal CA exemption or long-term development rule",
+    "Raw attribute sums are not CA or match-performance endpoints",
+    "No PA-attainment fraction, training superiority or RCA-engine equivalence established"
+  ]
+}

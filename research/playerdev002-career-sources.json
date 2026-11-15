@@ -1,0 +1,79 @@
+{
+  "schema": "playerdev002.career-source-audit.v1",
+  "as_of": "2026-11-15",
+  "installed_python": "3.12.10",
+  "installed_fmsave": "0.9.0",
+  "sources": [
+    {
+      "id": "fmsave-players",
+      "url": "https://raw.githubusercontent.com/rhiever/fmsave/f4f70f62cccae27c63c8dc9610f50c16d5ddcc29/src/fmsave/models/players.py",
+      "sha256": "385b184221ba3adde2368a43712119f9ff6450201cc6105181ab208d9aa269e9",
+      "bytes": 19964,
+      "accessed_utc": "2026-11-15T17:56:23.432589+00:00",
+      "status": "read",
+      "independently_validated_game_data": false
+    },
+    {
+      "id": "analyzer-history",
+      "url": "https://raw.githubusercontent.com/ElectroHugin/FM-Player-Analyzer/eeef907400ac2d3c340d2e2cec0bd478884bafa3/desktop/src/core/ImportHistory.cpp",
+      "sha256": "f906a20150004b7f5586a82ac5c86907bac6c2033344c4d57af1ffd42eefadda",
+      "bytes": 8017,
+      "accessed_utc": "2026-11-15T17:56:23.753617+00:00",
+      "status": "read",
+      "independently_validated_game_data": false
+    },
+    {
+      "id": "analyzer-readme",
+      "url": "https://raw.githubusercontent.com/ElectroHugin/FM-Player-Analyzer/eeef907400ac2d3c340d2e2cec0bd478884bafa3/README.md",
+      "sha256": "581490cc4c869ce9ab120b73b2da0998ddc07a1c22fb13575b76802c0593be79",
+      "bytes": 27291,
+      "accessed_utc": "2026-11-15T17:56:24.021599+00:00",
+      "status": "read",
+      "independently_validated_game_data": false
+    },
+    {
+      "id": "superscout-readme",
+      "url": "https://raw.githubusercontent.com/mavarobli/FMSuperScout/4dc3abb8f94e2ea882ccbfe58be35e689703b874/README.md",
+      "sha256": "e52a8d4deef97c7f768537c4427f9e5cbdae612757f82d690a6b641e8ed0beb9",
+      "bytes": 12987,
+      "accessed_utc": "2026-11-15T17:56:24.268586+00:00",
+      "status": "read",
+      "independently_validated_game_data": false
+    },
+    {
+      "id": "training-workbook-info",
+      "url": "https://pixeldrain.com/api/file/92NJyBDb/info",
+      "sha256": "15e4238121e0fee77efe9a930ed7161e0d6cfdc99b1c34205aa1df65449d2c16",
+      "bytes": 714,
+      "accessed_utc": "2026-11-15T17:56:24.326807+00:00",
+      "status": "read",
+      "independently_validated_game_data": false
+    }
+  ],
+  "progression_page": {
+    "url": "https://www.fmscout.com/a-progression-factor-in-football-manager.html",
+    "direct_web_status": "403",
+    "search_index_date": "2020-10-07",
+    "fm27_provenance_verified": false
+  },
+  "decision": {
+    "option_B": "BLOCKED_NO_VALIDATED_FOCUS_ASSIGNMENT_EXECUTOR_OR_INDEPENDENT_CLUSTER_CORPUS",
+    "option_C": "NO_SUITABLE_INDEPENDENT_SEASON_CA_PA_COHORT_IDENTIFIED",
+    "training_attendance_required_for_ITT": false,
+    "actual_dose_response_supported": false,
+    "new_career_arms": 0,
+    "calendar_advances": 0,
+    "private_saves_opened": 0
+  },
+  "bounded_search": {
+    "repositories": [
+      "ElectroHugin/FM-Player-Analyzer",
+      "mavarobli/FMSuperScout",
+      "rhiever/fmsave",
+      "barak14/fm-editor"
+    ],
+    "paths": "recursive pinned GitHub trees, development/history/test paths, original README",
+    "exhaustive": false
+  },
+  "training_audit": "data/player-development-002-training/source-table-audit.json"
+}

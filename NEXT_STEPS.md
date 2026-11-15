@@ -1,5 +1,15 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Spielerentwicklung002 – neuer Stand 15.11.2026
+
+Neue Original-Trainingsauswertung und vollständiger Modell-RCA-Rechner liegen
+vor; echte Grenzkosten bleiben offen. Zuerst RCA gegen FM27-Editor-Gold prüfen,
+danach begrenzter Quickness-Fokus-ITT-Pilot und echte Jahresverläufe über
+Historienexporte. [Höchstens drei konkrete Folgeversuche](docs/player-development-002/NEXT_STEPS.md).
+Die neue ITT-Frage verlangt keine vollständige individuelle Teilnahmehistorie,
+wohl aber Fokusreadback, verlässlichen Executor/Endpunkte und unabhängige Starts.
+Historische Abschnitte unten und terminale Verträge bleiben erhalten.
+
 ## Spielerentwicklung001 – neuer Fokus15.11.2026
 
 CA-Grenzkosten vor bloßer Attributrangliste, danach natürliche Rollenprofile

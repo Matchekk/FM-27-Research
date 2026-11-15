@@ -1,0 +1,2202 @@
+{
+  "planned_cells": 1620,
+  "interventions": 1539,
+  "alias_repetitions": 81,
+  "unique_level_triplets": 513,
+  "level_dependent_triplets": 339,
+  "delta_range": [
+    0,
+    4
+  ],
+  "zero_deltas": 470,
+  "negative_deltas": 0,
+  "outputs_at_ceiling": 0,
+  "source_iteration_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "base_single_position_weakfoot5": [
+    {
+      "position": "GK",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 107,
+      "after": 109,
+      "delta": 2
+    },
+    {
+      "position": "GK",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 112,
+      "after": 113,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 119,
+      "after": 120,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "pace",
+      "level": 8,
+      "before": 110,
+      "after": 110,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "pace",
+      "level": 12,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "pace",
+      "level": 17,
+      "before": 114,
+      "after": 115,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 111,
+      "after": 111,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 112,
+      "after": 113,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 111,
+      "after": 111,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 112,
+      "after": 113,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 110,
+      "after": 110,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 114,
+      "after": 115,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "strength",
+      "level": 8,
+      "before": 109,
+      "after": 110,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "strength",
+      "level": 12,
+      "before": 112,
+      "after": 112,
+      "delta": 0
+    },
+    {
+      "position": "GK",
+      "attribute": "strength",
+      "level": 17,
+      "before": 116,
+      "after": 117,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "agility",
+      "level": 8,
+      "before": 105,
+      "after": 107,
+      "delta": 2
+    },
+    {
+      "position": "GK",
+      "attribute": "agility",
+      "level": 12,
+      "before": 112,
+      "after": 113,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "agility",
+      "level": 17,
+      "before": 121,
+      "after": 123,
+      "delta": 2
+    },
+    {
+      "position": "GK",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 105,
+      "after": 107,
+      "delta": 2
+    },
+    {
+      "position": "GK",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 112,
+      "after": 113,
+      "delta": 1
+    },
+    {
+      "position": "GK",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 121,
+      "after": 123,
+      "delta": 2
+    },
+    {
+      "position": "DL",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 97,
+      "after": 100,
+      "delta": 3
+    },
+    {
+      "position": "DL",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 116,
+      "after": 119,
+      "delta": 3
+    },
+    {
+      "position": "DL",
+      "attribute": "pace",
+      "level": 8,
+      "before": 100,
+      "after": 102,
+      "delta": 2
+    },
+    {
+      "position": "DL",
+      "attribute": "pace",
+      "level": 12,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "pace",
+      "level": 17,
+      "before": 113,
+      "after": 114,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 103,
+      "after": 103,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 105,
+      "after": 105,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 107,
+      "after": 108,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 98,
+      "after": 101,
+      "delta": 3
+    },
+    {
+      "position": "DL",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 115,
+      "after": 117,
+      "delta": 2
+    },
+    {
+      "position": "DL",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 102,
+      "after": 103,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 105,
+      "after": 105,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 109,
+      "after": 110,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 105,
+      "after": 105,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "strength",
+      "level": 8,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "strength",
+      "level": 12,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "strength",
+      "level": 17,
+      "before": 111,
+      "after": 112,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "agility",
+      "level": 8,
+      "before": 98,
+      "after": 101,
+      "delta": 3
+    },
+    {
+      "position": "DL",
+      "attribute": "agility",
+      "level": 12,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "DL",
+      "attribute": "agility",
+      "level": 17,
+      "before": 115,
+      "after": 117,
+      "delta": 2
+    },
+    {
+      "position": "DL",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 105,
+      "after": 105,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 105,
+      "after": 105,
+      "delta": 0
+    },
+    {
+      "position": "DL",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 105,
+      "after": 105,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 100,
+      "after": 102,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 114,
+      "after": 115,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "pace",
+      "level": 8,
+      "before": 101,
+      "after": 103,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "pace",
+      "level": 12,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "pace",
+      "level": 17,
+      "before": 112,
+      "after": 114,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 100,
+      "after": 102,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 114,
+      "after": 115,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 109,
+      "after": 110,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 101,
+      "after": 103,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 112,
+      "after": 114,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 105,
+      "after": 105,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "strength",
+      "level": 8,
+      "before": 100,
+      "after": 102,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "strength",
+      "level": 12,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "strength",
+      "level": 17,
+      "before": 114,
+      "after": 115,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "agility",
+      "level": 8,
+      "before": 100,
+      "after": 102,
+      "delta": 2
+    },
+    {
+      "position": "DC",
+      "attribute": "agility",
+      "level": 12,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "agility",
+      "level": 17,
+      "before": 114,
+      "after": 115,
+      "delta": 1
+    },
+    {
+      "position": "DC",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "DC",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 106,
+      "after": 106,
+      "delta": 0
+    },
+    {
+      "position": "WBL",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 95,
+      "after": 98,
+      "delta": 3
+    },
+    {
+      "position": "WBL",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 104,
+      "after": 107,
+      "delta": 3
+    },
+    {
+      "position": "WBL",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 118,
+      "after": 120,
+      "delta": 2
+    },
+    {
+      "position": "WBL",
+      "attribute": "pace",
+      "level": 8,
+      "before": 98,
+      "after": 100,
+      "delta": 2
+    },
+    {
+      "position": "WBL",
+      "attribute": "pace",
+      "level": 12,
+      "before": 104,
+      "after": 106,
+      "delta": 2
+    },
+    {
+      "position": "WBL",
+      "attribute": "pace",
+      "level": 17,
+      "before": 114,
+      "after": 117,
+      "delta": 3
+    },
+    {
+      "position": "WBL",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "WBL",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 104,
+      "after": 105,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 97,
+      "after": 99,
+      "delta": 2
+    },
+    {
+      "position": "WBL",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 104,
+      "after": 106,
+      "delta": 2
+    },
+    {
+      "position": "WBL",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 116,
+      "after": 119,
+      "delta": 3
+    },
+    {
+      "position": "WBL",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 102,
+      "after": 102,
+      "delta": 0
+    },
+    {
+      "position": "WBL",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 104,
+      "after": 105,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 109,
+      "after": 110,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "WBL",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 104,
+      "after": 105,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "strength",
+      "level": 8,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "strength",
+      "level": 12,
+      "before": 104,
+      "after": 105,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "strength",
+      "level": 17,
+      "before": 111,
+      "after": 112,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "agility",
+      "level": 8,
+      "before": 99,
+      "after": 101,
+      "delta": 2
+    },
+    {
+      "position": "WBL",
+      "attribute": "agility",
+      "level": 12,
+      "before": 104,
+      "after": 105,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "agility",
+      "level": 17,
+      "before": 113,
+      "after": 114,
+      "delta": 1
+    },
+    {
+      "position": "WBL",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "WBL",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "WBL",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "DM",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 98,
+      "after": 100,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 112,
+      "after": 114,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "pace",
+      "level": 8,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "pace",
+      "level": 12,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "pace",
+      "level": 17,
+      "before": 108,
+      "after": 110,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 102,
+      "after": 103,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 103,
+      "after": 103,
+      "delta": 0
+    },
+    {
+      "position": "DM",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "DM",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 108,
+      "after": 110,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 110,
+      "after": 112,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 102,
+      "after": 102,
+      "delta": 0
+    },
+    {
+      "position": "DM",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 103,
+      "after": 103,
+      "delta": 0
+    },
+    {
+      "position": "DM",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "strength",
+      "level": 8,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "strength",
+      "level": 12,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "strength",
+      "level": 17,
+      "before": 110,
+      "after": 112,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "agility",
+      "level": 8,
+      "before": 98,
+      "after": 100,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "agility",
+      "level": 12,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "DM",
+      "attribute": "agility",
+      "level": 17,
+      "before": 112,
+      "after": 114,
+      "delta": 2
+    },
+    {
+      "position": "DM",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 103,
+      "after": 103,
+      "delta": 0
+    },
+    {
+      "position": "DM",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 103,
+      "after": 103,
+      "delta": 0
+    },
+    {
+      "position": "DM",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 103,
+      "after": 103,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 93,
+      "after": 96,
+      "delta": 3
+    },
+    {
+      "position": "ML",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 101,
+      "after": 103,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 114,
+      "after": 117,
+      "delta": 3
+    },
+    {
+      "position": "ML",
+      "attribute": "pace",
+      "level": 8,
+      "before": 95,
+      "after": 97,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "pace",
+      "level": 12,
+      "before": 101,
+      "after": 103,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "pace",
+      "level": 17,
+      "before": 111,
+      "after": 113,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 102,
+      "after": 102,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 97,
+      "after": 98,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 109,
+      "after": 111,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 99,
+      "after": 99,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 100,
+      "after": 100,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "strength",
+      "level": 8,
+      "before": 99,
+      "after": 99,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "strength",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "strength",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "ML",
+      "attribute": "agility",
+      "level": 8,
+      "before": 95,
+      "after": 97,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "agility",
+      "level": 12,
+      "before": 101,
+      "after": 103,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "agility",
+      "level": 17,
+      "before": 111,
+      "after": 113,
+      "delta": 2
+    },
+    {
+      "position": "ML",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "ML",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 95,
+      "after": 97,
+      "delta": 2
+    },
+    {
+      "position": "MC",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 108,
+      "after": 110,
+      "delta": 2
+    },
+    {
+      "position": "MC",
+      "attribute": "pace",
+      "level": 8,
+      "before": 96,
+      "after": 97,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "pace",
+      "level": 12,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "pace",
+      "level": 17,
+      "before": 107,
+      "after": 108,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 99,
+      "after": 99,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 100,
+      "after": 100,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 95,
+      "after": 97,
+      "delta": 2
+    },
+    {
+      "position": "MC",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 108,
+      "after": 110,
+      "delta": 2
+    },
+    {
+      "position": "MC",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 98,
+      "after": 98,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 104,
+      "after": 104,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 99,
+      "after": 99,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 100,
+      "after": 100,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 102,
+      "after": 102,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "strength",
+      "level": 8,
+      "before": 97,
+      "after": 98,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "strength",
+      "level": 12,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "strength",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "agility",
+      "level": 8,
+      "before": 95,
+      "after": 97,
+      "delta": 2
+    },
+    {
+      "position": "MC",
+      "attribute": "agility",
+      "level": 12,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "MC",
+      "attribute": "agility",
+      "level": 17,
+      "before": 108,
+      "after": 110,
+      "delta": 2
+    },
+    {
+      "position": "MC",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 100,
+      "after": 100,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 100,
+      "after": 100,
+      "delta": 0
+    },
+    {
+      "position": "MC",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 100,
+      "after": 100,
+      "delta": 0
+    },
+    {
+      "position": "AML",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 92,
+      "after": 95,
+      "delta": 3
+    },
+    {
+      "position": "AML",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 101,
+      "after": 104,
+      "delta": 3
+    },
+    {
+      "position": "AML",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 116,
+      "after": 119,
+      "delta": 3
+    },
+    {
+      "position": "AML",
+      "attribute": "pace",
+      "level": 8,
+      "before": 92,
+      "after": 95,
+      "delta": 3
+    },
+    {
+      "position": "AML",
+      "attribute": "pace",
+      "level": 12,
+      "before": 101,
+      "after": 104,
+      "delta": 3
+    },
+    {
+      "position": "AML",
+      "attribute": "pace",
+      "level": 17,
+      "before": 116,
+      "after": 119,
+      "delta": 3
+    },
+    {
+      "position": "AML",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "AML",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 102,
+      "after": 103,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 95,
+      "after": 97,
+      "delta": 2
+    },
+    {
+      "position": "AML",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 101,
+      "after": 103,
+      "delta": 2
+    },
+    {
+      "position": "AML",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 112,
+      "after": 114,
+      "delta": 2
+    },
+    {
+      "position": "AML",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 100,
+      "after": 100,
+      "delta": 0
+    },
+    {
+      "position": "AML",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 103,
+      "after": 104,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "strength",
+      "level": 8,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "strength",
+      "level": 12,
+      "before": 101,
+      "after": 102,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "strength",
+      "level": 17,
+      "before": 105,
+      "after": 106,
+      "delta": 1
+    },
+    {
+      "position": "AML",
+      "attribute": "agility",
+      "level": 8,
+      "before": 96,
+      "after": 98,
+      "delta": 2
+    },
+    {
+      "position": "AML",
+      "attribute": "agility",
+      "level": 12,
+      "before": 101,
+      "after": 103,
+      "delta": 2
+    },
+    {
+      "position": "AML",
+      "attribute": "agility",
+      "level": 17,
+      "before": 110,
+      "after": 112,
+      "delta": 2
+    },
+    {
+      "position": "AML",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "AML",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "AML",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 101,
+      "after": 101,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 89,
+      "after": 91,
+      "delta": 2
+    },
+    {
+      "position": "AMC",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 97,
+      "after": 99,
+      "delta": 2
+    },
+    {
+      "position": "AMC",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 110,
+      "after": 113,
+      "delta": 3
+    },
+    {
+      "position": "AMC",
+      "attribute": "pace",
+      "level": 8,
+      "before": 91,
+      "after": 93,
+      "delta": 2
+    },
+    {
+      "position": "AMC",
+      "attribute": "pace",
+      "level": 12,
+      "before": 97,
+      "after": 98,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "pace",
+      "level": 17,
+      "before": 107,
+      "after": 109,
+      "delta": 2
+    },
+    {
+      "position": "AMC",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 96,
+      "after": 96,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 97,
+      "after": 97,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 98,
+      "after": 98,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 92,
+      "after": 93,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 97,
+      "after": 98,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 105,
+      "after": 107,
+      "delta": 2
+    },
+    {
+      "position": "AMC",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 95,
+      "after": 95,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 97,
+      "after": 97,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 95,
+      "after": 95,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 97,
+      "after": 97,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "strength",
+      "level": 8,
+      "before": 95,
+      "after": 95,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "strength",
+      "level": 12,
+      "before": 97,
+      "after": 97,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "strength",
+      "level": 17,
+      "before": 100,
+      "after": 101,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "agility",
+      "level": 8,
+      "before": 92,
+      "after": 93,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "agility",
+      "level": 12,
+      "before": 97,
+      "after": 98,
+      "delta": 1
+    },
+    {
+      "position": "AMC",
+      "attribute": "agility",
+      "level": 17,
+      "before": 105,
+      "after": 107,
+      "delta": 2
+    },
+    {
+      "position": "AMC",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 97,
+      "after": 97,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 97,
+      "after": 97,
+      "delta": 0
+    },
+    {
+      "position": "AMC",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 97,
+      "after": 97,
+      "delta": 0
+    },
+    {
+      "position": "STC",
+      "attribute": "acceleration",
+      "level": 8,
+      "before": 91,
+      "after": 94,
+      "delta": 3
+    },
+    {
+      "position": "STC",
+      "attribute": "acceleration",
+      "level": 12,
+      "before": 99,
+      "after": 101,
+      "delta": 2
+    },
+    {
+      "position": "STC",
+      "attribute": "acceleration",
+      "level": 17,
+      "before": 111,
+      "after": 114,
+      "delta": 3
+    },
+    {
+      "position": "STC",
+      "attribute": "pace",
+      "level": 8,
+      "before": 94,
+      "after": 96,
+      "delta": 2
+    },
+    {
+      "position": "STC",
+      "attribute": "pace",
+      "level": 12,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "pace",
+      "level": 17,
+      "before": 107,
+      "after": 109,
+      "delta": 2
+    },
+    {
+      "position": "STC",
+      "attribute": "jumping_reach",
+      "level": 8,
+      "before": 96,
+      "after": 96,
+      "delta": 0
+    },
+    {
+      "position": "STC",
+      "attribute": "jumping_reach",
+      "level": 12,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "jumping_reach",
+      "level": 17,
+      "before": 104,
+      "after": 106,
+      "delta": 2
+    },
+    {
+      "position": "STC",
+      "attribute": "stamina",
+      "level": 8,
+      "before": 95,
+      "after": 96,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "stamina",
+      "level": 12,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "stamina",
+      "level": 17,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "anticipation",
+      "level": 8,
+      "before": 96,
+      "after": 96,
+      "delta": 0
+    },
+    {
+      "position": "STC",
+      "attribute": "anticipation",
+      "level": 12,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "anticipation",
+      "level": 17,
+      "before": 104,
+      "after": 106,
+      "delta": 2
+    },
+    {
+      "position": "STC",
+      "attribute": "finishing",
+      "level": 8,
+      "before": 93,
+      "after": 95,
+      "delta": 2
+    },
+    {
+      "position": "STC",
+      "attribute": "finishing",
+      "level": 12,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "finishing",
+      "level": 17,
+      "before": 108,
+      "after": 111,
+      "delta": 3
+    },
+    {
+      "position": "STC",
+      "attribute": "strength",
+      "level": 8,
+      "before": 95,
+      "after": 96,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "strength",
+      "level": 12,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "strength",
+      "level": 17,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "agility",
+      "level": 8,
+      "before": 95,
+      "after": 96,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "agility",
+      "level": 12,
+      "before": 99,
+      "after": 100,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "agility",
+      "level": 17,
+      "before": 106,
+      "after": 107,
+      "delta": 1
+    },
+    {
+      "position": "STC",
+      "attribute": "reflexes",
+      "level": 8,
+      "before": 99,
+      "after": 99,
+      "delta": 0
+    },
+    {
+      "position": "STC",
+      "attribute": "reflexes",
+      "level": 12,
+      "before": 99,
+      "after": 99,
+      "delta": 0
+    },
+    {
+      "position": "STC",
+      "attribute": "reflexes",
+      "level": 17,
+      "before": 99,
+      "after": 99,
+      "delta": 0
+    }
+  ],
+  "uncertainty": "Deterministic finite grid. No sampling CI; unknown transfer/model error.",
+  "actual_ca_costs_identified": false,
+  "editor_rca_gold_validated": false
+}

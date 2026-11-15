@@ -1,0 +1,30 @@
+{
+  "status": "POSTINSPECTION_CONDITIONAL_INDEX_ARITHMETIC",
+  "condition": "Source attribute-change units must equal visible1..20 units; not independently verified",
+  "source_sha256": "005a704ed0f9205b8003c150ab182f0944d7cea2f8c8745078344eac612c3552",
+  "baseline_weights_sha256": "71324d856ec4296fec02be61d04275341aa6c4e899e1a057e50f979f001a7bd8",
+  "baseline_hash_encoding": "UTF-8 LF normalized",
+  "index_gain_differences": {
+    "prespecified_46_minus_38": {
+      "ST": 0.05526315789473724,
+      "AM": 0.07368421052631614,
+      "DM": 0.01842105263157928,
+      "FB": 0.050000000000000475,
+      "CB": 0.07105263157894762,
+      "CM": 0.04473684210526348
+    },
+    "postinspection_exploratory_1_minus_0": {
+      "ST": 1.1842105263157892,
+      "AM": 0.9389473684210521,
+      "DM": 1.025964912280701,
+      "FB": 1.121754385964912,
+      "CB": 0.6729824561403505,
+      "CM": 0.9638596491228066
+    }
+  },
+  "actual_match_gain": null,
+  "actual_ca_efficiency": null,
+  "pa_feasibility": null,
+  "weights_changed": false,
+  "prediction_improvement_validated": false
+}

@@ -1,0 +1,155 @@
+{
+  "as_of": "2026-11-15",
+  "accessed_utc": "2026-11-15T17:52:59.424844+00:00",
+  "decision": "UNCERTAIN_SOURCE",
+  "measurement_class": "MODEL_RCA",
+  "engine_ca_costs_verified": false,
+  "fm27_ui_rca_verified": false,
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/README.md",
+      "sha256": "dc267de65a58e94be5e2374fd664629d3a8fef02f1bd7ea9595d201577c19177",
+      "bytes": 4432,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/LICENSE",
+      "sha256": "4fef85b25cc1fce800fa92e2fa13412da6e5271769c10e473bb6df039dd1c623",
+      "bytes": 1080,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/crates/fm27-core/src/ability.rs",
+      "sha256": "d4075b47e015e3224bfcd60e4c04946604bb779012ef7419c8e12c19d9f80ebf",
+      "bytes": 26446,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/crates/fm27-core/tests/ability_real_save.rs",
+      "sha256": "930df4c06e4639a63d1c59648248711abc3f6ce1d6f838069f20781b58d2b1e5",
+      "bytes": 2939,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/apps/desktop/src/lib/ca.ts",
+      "sha256": "13fe8593b297f0ea5047967ed75c08b71118f730bbb63f48f9db344f1982721b",
+      "bytes": 11454,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/apps/desktop/src/lib/ca.test.ts",
+      "sha256": "fede3c97771698675fe34a49d294719cf3500de8752a4c0bfe5fce28baaf8578",
+      "bytes": 3582,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/docs/editor.md",
+      "sha256": "c1e85c597034156a2dcab37f3172c47b41016c215fdcef26f7bbdb9986e18492",
+      "bytes": 12399,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/docs/editor-test-plan.md",
+      "sha256": "429ed04736473c4580da14d828ea68e7a9ee01cfc2b419c23493f5966fb50812",
+      "bytes": 6444,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/shlk20/fm27-scout-code/084d7f0a18ac790d7c4087c5b6bdff008186d4fa/docs/validation.md",
+      "sha256": "5783bc12409f05bc94a6aa30ab9fa25e7be439a8bea1938a8419a69c11831755",
+      "bytes": 10009,
+      "status": "read",
+      "source_family": "SHLK20-SCOUT-RCA",
+      "source_commit": "084d7f0a18ac790d7c4087c5b6bdff008186d4fa"
+    },
+    {
+      "url": "https://www.playgm.cc/thread-986285-1-1.html",
+      "sha256": "fad6507fb16582c49445570c9383bd122618c2b1bdbd3c4de6c8d54241b79ce2",
+      "bytes": 85425,
+      "status": "read"
+    },
+    {
+      "url": "https://sortitoutsi.net/content/78140/talent-seer-is-here-a-free-scouting-and-editing-tool-for-football-manager-27",
+      "status": "direct_http_failed; primary_author_content_read_via_web_tool",
+      "error_type": "HTTPError"
+    },
+    {
+      "url": "https://hexase1-ship-it.github.io/fmle/en/faq.html",
+      "sha256": "d7f08598e5c251be6df0121e8af6c796a3969691ee03dba863b2b6bdd1f8b060",
+      "bytes": 456,
+      "status": "redirect_page_only_direct_http; content_read_via_web_tool",
+      "redirect_target": "https://getfmax.com/en/guide/faq",
+      "redirect_target_status": "web_tool_inaccessible"
+    }
+  ],
+  "upstream_reported_validation": {
+    "target": "stored_CA_not_UI_RCA",
+    "n_description": "over48000 players",
+    "MAE_CA": 0.8,
+    "within5_percent": 100,
+    "independently_reproduced": false
+  },
+  "new_source_evidence": {
+    "source": "docs/editor-test-plan.md",
+    "build_author_reported": "27.0.0+2486695",
+    "career_clusters": 1,
+    "source_players": 1,
+    "arms": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "start": "2026-07-25",
+    "end": "2026-08-27",
+    "paired_randomness_verified": false,
+    "raw_saves_publicly_available": false
+  },
+  "original_playgm_claim": {
+    "publication_date": "2026-11-04",
+    "original_reverse_engineering_target": "FM26 pregame editor",
+    "fm27_transfer_claim": true,
+    "single_position_players_reported": 200,
+    "multi_position_players_reported": 500,
+    "reported_error": "zero",
+    "exact_build": null,
+    "raw_readbacks_available": false,
+    "independently_verified": false
+  },
+  "overlap_source_ids": [
+    "MAC-20",
+    "PD-EXT-SCOUT-CA",
+    "fm-scoring-CA-table"
+  ],
+  "new_source_ids": [
+    "SHLK20-SCOUT-RCA",
+    "PLAYGM-RCA-20261104",
+    "SHLK20-EDITOR-ABC"
+  ],
+  "official_patch_refresh": {
+    "url": "https://community.sports-interactive.com/forums/forum/905-fm27-updates/",
+    "accessed": "2026-11-15",
+    "status": "read_via_web_tool",
+    "observed_topics": [
+      "Launch patch notes2026-11-09",
+      "Minor Update1 2026-11-02"
+    ],
+    "limit": "Forum index is not an exhaustive proof of all platform patch versions; no game executed"
+  }
+}

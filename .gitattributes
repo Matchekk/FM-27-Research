@@ -1,0 +1,5 @@
+# New hashed research artifacts use stable bytes across Windows/Linux checkouts.
+data/player-development-002-ca/* text eol=lf
+data/player-development-002-training/* text eol=lf
+docs/player-development-002/*.json text eol=lf
+research/playerdev002*.json text eol=lf

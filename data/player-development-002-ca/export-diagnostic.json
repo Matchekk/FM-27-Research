@@ -1,0 +1,450 @@
+{
+  "evidence": "BLOCKED_NUMERIC_FOOT_INPUT_UNAVAILABLE",
+  "rows": 109,
+  "eligible_rows": 0,
+  "failures": [
+    {
+      "row_number": 2,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 3,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 4,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 5,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 6,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 7,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 8,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 9,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 10,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 11,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 12,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 13,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 14,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 15,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 16,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 17,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 18,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 19,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 20,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 21,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 22,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 23,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 24,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 25,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 26,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 27,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 28,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 29,
+      "reason": "could not convert string to float: 'Very Strong'"
+    },
+    {
+      "row_number": 30,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 31,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 32,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 33,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 34,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 35,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 36,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 37,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 38,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 39,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 40,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 41,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 42,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 43,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 44,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 45,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 46,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 47,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 48,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 49,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 50,
+      "reason": "could not convert string to float: 'Very Strong'"
+    },
+    {
+      "row_number": 51,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 52,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 53,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 54,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 55,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 56,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 57,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 58,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 59,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 60,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 61,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 62,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 63,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 64,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 65,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 66,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 67,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 68,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 69,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 70,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 71,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 72,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 73,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 74,
+      "reason": "could not convert string to float: 'Strong'"
+    },
+    {
+      "row_number": 75,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 76,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 77,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 78,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 79,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 80,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 81,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 82,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 83,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 84,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 85,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 86,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 87,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 88,
+      "reason": "could not convert string to float: 'Fairly Strong'"
+    },
+    {
+      "row_number": 89,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 90,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 91,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 92,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 93,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 94,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 95,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 96,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 97,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 98,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 99,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 100,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 101,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 102,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 103,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 104,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 105,
+      "reason": "could not convert string to float: 'Weak'"
+    },
+    {
+      "row_number": 106,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 107,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 108,
+      "reason": "could not convert string to float: 'Reasonable'"
+    },
+    {
+      "row_number": 109,
+      "reason": "could not convert string to float: 'Very Weak'"
+    },
+    {
+      "row_number": 110,
+      "reason": "could not convert string to float: 'Weak'"
+    }
+  ],
+  "source_sha256": "31c1efc4da93fb23ec380b8a6e6c3b5956fb3290e5a51bc39d836bb1fc42f3b9",
+  "source_evaluations": 0,
+  "mae": null,
+  "bias": null,
+  "conditional95_interval": null,
+  "reason": "Feet are qualitative labels. No verified numeric mapping; no midpoint imputation.",
+  "actual_ca_costs_identified": false
+}

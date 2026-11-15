@@ -1,0 +1,34 @@
+{
+  "classification": "SOFTWARE_AUDIT_NOT_FM_EXPERIMENT",
+  "attempts": [
+    {
+      "ordinal": 1,
+      "source_calls": 6480,
+      "status": "STOP_SUMMARY_UNEXPECTED_DUPLICATE_INPUT_HASH",
+      "retained": "Same source outputs as final matrix; metadata later gained explicit alias flag",
+      "outcomes_examined_before_amendment": false
+    },
+    {
+      "ordinal": 2,
+      "source_calls": 6480,
+      "status": "MATRIX_COMPLETE_EXPORT_STOP_109_QUALITATIVE_FEET",
+      "retained": "Final matrix numerically identical; all missingness reasons retained"
+    },
+    {
+      "ordinal": 3,
+      "source_calls": 6480,
+      "status": "MATRIX_COMPLETE_EXPORT_STRUCTURED_BLOCK_REPORT",
+      "retained": "Published matrix, summary and109failure records"
+    }
+  ],
+  "independent_reviewer_source_calls": 3240,
+  "total_source_calls": 22680,
+  "total_native_calls": 0,
+  "total_career_advances": 0,
+  "source_aa_mismatches": 0,
+  "source_mutations": 0,
+  "alias_rows_preserved": 81,
+  "unique_interventions": 1539,
+  "scientific_missing_cost_measurements": null,
+  "reason": "No true CA cost or UI RCA gold observations exist. Unknown is not zero."
+}

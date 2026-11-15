@@ -1,0 +1,58 @@
+{
+  "reviewer": "separate Codex specialist; not independent human or engine implementation",
+  "status": "PASS_MODEL_AUDIT_ONLY",
+  "input_and_output_reconstruction": "All 3240 before/after requests independently reconstructed and hashes checked; exact pinned original function replayed directly without importing analysis wrapper",
+  "checks": {
+    "planned_cells": 1620,
+    "interventions": 1539,
+    "alias_repetitions": 81,
+    "unique_level_triplets": 513,
+    "level_dependent_triplets": 339,
+    "delta_range": [
+      0,
+      4
+    ],
+    "zero_deltas": 470,
+    "negative_deltas": 0,
+    "outputs_at_ceiling": 0,
+    "source_iteration_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ]
+  },
+  "delta_frequency": {
+    "0": 470,
+    "1": 570,
+    "2": 413,
+    "3": 84,
+    "4": 2
+  },
+  "exact_original_source_replay_outputs": 3240,
+  "output_mismatches": 0,
+  "request_hash_mismatches": 0,
+  "export_failures_preserved": 109,
+  "model_matrix_sha256": "2f6a678d00bf283810675f0a5a6fa83818209927ff5315509cad7e7b917c6874",
+  "true_ca_costs_verified": false,
+  "ui_rca_gold_verified": false,
+  "uncertainty": "deterministic finite matrix; independent software replay does not validate FM27 semantics",
+  "matrix_hash_encoding": "UTF-8 with LF newlines; canonical content unchanged by CRLF-to-LF normalization"
+}

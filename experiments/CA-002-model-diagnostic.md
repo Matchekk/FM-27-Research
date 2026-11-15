@@ -87,3 +87,15 @@ konstruiert und enthalten keine privaten Spieler. Original-Quellcode wird
 nicht in das Forschungsarchiv kopiert. Tools/Quellhash im Manifest.
 Gezielte Checks für unveränderte Requests, Vollständigkeit, Hashes,
 Fehlerbehandlung und unabhängige Nachrechnung der Summaries.
+
+## Struktureller Nachtrag vor Ergebnisansicht
+
+Der erste Lauf erreichte den Vollständigkeitscheck, der die geplante Matrix
+wegen identischer Request-Hashes zurückwies. DC20+MC20 und MC20+DC20 sind
+unter AUTO identische Eingaben: 81 der 1.620 Zellen sind Beschriftungsaliasse.
+Alle 1.620 ursprünglichen Messzeilen bleiben erhalten; die 81 Wiederholungen
+werden explizit markiert und ergeben **1.539 einzigartige Interventionen**.
+Keine Zahlenanalyse war vor diesem Nachtrag erzeugt oder betrachtet worden.
+Primäre Leveldiagnose nutzt nur einzigartige Requests; beide beschrifteten
+Basisprofile bleiben für Tabellen erhalten. Der Fehler ist ein gestoppter
+Auswertungsschritt, kein fehlgeschlagener FM-Lauf. Kein Ersatzdatensatz.

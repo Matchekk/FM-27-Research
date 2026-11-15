@@ -1,5 +1,23 @@
 # Research Log
 
+## 2026-11-15 – Spielerentwicklung002: Originaltraining und RCA-Modelldiagnose
+
+Sauberer Ausgangsstand 20ebc48 nach Fetch identisch mit origin/main. Neue
+CA-002-Vorregistrierung cecf9f0 vor Matrixlauf gepusht; keine Match-/Karriereläufe.
+1.539 einzigartige Modellinterventionen über zehn Positionsfamilien ausgewertet;
+339/513 Leveltripel variieren, keine echten Kosten daraus identifiziert.
+81 beschriftete Aliaswiederholungen explizit erhalten. Zwei gestoppte
+Auswertungsschritte (Aliascheck/qualitative Exportfüße) dokumentiert, kein
+Nullersatz. Alle 109 Exportprofile für den neuen Rechner nicht zulässig.
+
+Harvestgreen-Originalworkbook: 51 Pläne/1.887 Zahlen, 46−38 mit CA +2,10 bei
+Quickness-Mittel −0,175; Streuung/Clusterzahl/Build fehlen, PA-Widerspruch
+130/150 erhalten. Neuer externer Editor-Karrierebeleg auf altem Build als
+ein Cluster eingeordnet. Quellen-/Softwareausgaben getrennt nachgerechnet;
+kein optimales Profil, kein kausaler Trainingssieger oder PA-Modell behauptet.
+[Bericht](docs/player-development-002/RESEARCH_REPORT.md),
+[Publikationsstatus](docs/player-development-002/publication.json).
+
 ## 2026-11-15 – NIGHT-002 veröffentlicht und CI bestätigt
 
 Numerischer Release307d36734ad81d26c8b22067215e7473a0b8906a auf `origin/main`,

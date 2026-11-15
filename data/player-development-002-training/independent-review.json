@@ -1,0 +1,561 @@
+{
+  "schema": "train003.independent-zip-xml-review.v1",
+  "reviewed_utc": "2026-11-15T17:59:14.846938+00:00",
+  "reviewer": "separate_ca_access_agent",
+  "independence_limit": "Same research team; independent extraction code, not independent FM career execution. No import or execution of author analysis.",
+  "method": "Python standard-library ZIP/XML; sharedStrings decoded directly; Decimal arithmetic for contrasts; tolerance1e-12 against published JSON.",
+  "source_sha256": "005a704ed0f9205b8003c150ab182f0944d7cea2f8c8745078344eac612c3552",
+  "expected_audit_sha256": "77bb6ff4248d08f54d5906bb2588cdab5591044d9eb1ea2678204407dc392634",
+  "sheet_names": [
+    "Sheet1"
+  ],
+  "sheet_xml": "xl/worksheets/sheet1.xml",
+  "plan_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "plan_count": 51,
+  "endpoint_column_range": "J:AT",
+  "endpoint_columns": 37,
+  "numeric_endpoints": 1887,
+  "missing_endpoint_cells": [],
+  "formula_cells": 0,
+  "selected_values_checked": 48,
+  "selected_values": [
+    {
+      "plan_id": 0,
+      "cell": "J14",
+      "header_cell": "J12",
+      "header": "CA",
+      "endpoint": "ca_gain",
+      "value": 10.699999999999998,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AM14",
+      "header_cell": "AM12",
+      "header": "Acceleration",
+      "endpoint": "acceleration",
+      "value": 1.5400000000000003,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AS14",
+      "header_cell": "AS12",
+      "header": "Pace",
+      "endpoint": "pace",
+      "value": 1.64,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AN14",
+      "header_cell": "AN12",
+      "header": "Jumping reach",
+      "endpoint": "jumping_reach",
+      "value": 1.48,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AP14",
+      "header_cell": "AP12",
+      "header": "Stamina",
+      "endpoint": "stamina",
+      "value": 1.7800000000000005,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AK14",
+      "header_cell": "AK12",
+      "header": "Anticipation",
+      "endpoint": "anticipation",
+      "value": 0.54,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "U14",
+      "header_cell": "U12",
+      "header": "Finishing",
+      "endpoint": "finishing",
+      "value": -0.4200000000000001,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AR14",
+      "header_cell": "AR12",
+      "header": "Strengh",
+      "endpoint": "strength",
+      "value": 1.86,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AO14",
+      "header_cell": "AO12",
+      "header": "Agility",
+      "endpoint": "agility",
+      "value": 1.3799999999999997,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AQ14",
+      "header_cell": "AQ12",
+      "header": "Balance",
+      "endpoint": "balance",
+      "value": 1.6199999999999999,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "AB14",
+      "header_cell": "AB12",
+      "header": "Concentration",
+      "endpoint": "concentration",
+      "value": -0.6199999999999999,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 0,
+      "cell": "R14",
+      "header_cell": "R12",
+      "header": "Dribbling",
+      "endpoint": "dribbling",
+      "value": -0.43999999999999995,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "J15",
+      "header_cell": "J12",
+      "header": "CA",
+      "endpoint": "ca_gain",
+      "value": 11.266666666666667,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AM15",
+      "header_cell": "AM12",
+      "header": "Acceleration",
+      "endpoint": "acceleration",
+      "value": 2.6666666666666665,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AS15",
+      "header_cell": "AS12",
+      "header": "Pace",
+      "endpoint": "pace",
+      "value": 2.7,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AN15",
+      "header_cell": "AN12",
+      "header": "Jumping reach",
+      "endpoint": "jumping_reach",
+      "value": 1.0,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AP15",
+      "header_cell": "AP12",
+      "header": "Stamina",
+      "endpoint": "stamina",
+      "value": 1.1,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AK15",
+      "header_cell": "AK12",
+      "header": "Anticipation",
+      "endpoint": "anticipation",
+      "value": 0.5666666666666668,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "U15",
+      "header_cell": "U12",
+      "header": "Finishing",
+      "endpoint": "finishing",
+      "value": -0.4666666666666667,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AR15",
+      "header_cell": "AR12",
+      "header": "Strengh",
+      "endpoint": "strength",
+      "value": 1.1333333333333333,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AO15",
+      "header_cell": "AO12",
+      "header": "Agility",
+      "endpoint": "agility",
+      "value": 1.0666666666666664,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AQ15",
+      "header_cell": "AQ12",
+      "header": "Balance",
+      "endpoint": "balance",
+      "value": 1.2,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "AB15",
+      "header_cell": "AB12",
+      "header": "Concentration",
+      "endpoint": "concentration",
+      "value": -0.7666666666666668,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 1,
+      "cell": "R15",
+      "header_cell": "R12",
+      "header": "Dribbling",
+      "endpoint": "dribbling",
+      "value": -0.5666666666666667,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "J52",
+      "header_cell": "J12",
+      "header": "CA",
+      "endpoint": "ca_gain",
+      "value": 31.15,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AM52",
+      "header_cell": "AM12",
+      "header": "Acceleration",
+      "endpoint": "acceleration",
+      "value": 2.9,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AS52",
+      "header_cell": "AS12",
+      "header": "Pace",
+      "endpoint": "pace",
+      "value": 3.05,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AN52",
+      "header_cell": "AN12",
+      "header": "Jumping reach",
+      "endpoint": "jumping_reach",
+      "value": 1.3,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AP52",
+      "header_cell": "AP12",
+      "header": "Stamina",
+      "endpoint": "stamina",
+      "value": 2.15,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AK52",
+      "header_cell": "AK12",
+      "header": "Anticipation",
+      "endpoint": "anticipation",
+      "value": 2.1,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "U52",
+      "header_cell": "U12",
+      "header": "Finishing",
+      "endpoint": "finishing",
+      "value": 1.2,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AR52",
+      "header_cell": "AR12",
+      "header": "Strengh",
+      "endpoint": "strength",
+      "value": 2.25,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AO52",
+      "header_cell": "AO12",
+      "header": "Agility",
+      "endpoint": "agility",
+      "value": 2.05,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AQ52",
+      "header_cell": "AQ12",
+      "header": "Balance",
+      "endpoint": "balance",
+      "value": 2.05,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "AB52",
+      "header_cell": "AB12",
+      "header": "Concentration",
+      "endpoint": "concentration",
+      "value": 0.35,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 38,
+      "cell": "R52",
+      "header_cell": "R12",
+      "header": "Dribbling",
+      "endpoint": "dribbling",
+      "value": 1.1,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "J60",
+      "header_cell": "J12",
+      "header": "CA",
+      "endpoint": "ca_gain",
+      "value": 33.25,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AM60",
+      "header_cell": "AM12",
+      "header": "Acceleration",
+      "endpoint": "acceleration",
+      "value": 2.75,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AS60",
+      "header_cell": "AS12",
+      "header": "Pace",
+      "endpoint": "pace",
+      "value": 2.85,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AN60",
+      "header_cell": "AN12",
+      "header": "Jumping reach",
+      "endpoint": "jumping_reach",
+      "value": 1.4,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AP60",
+      "header_cell": "AP12",
+      "header": "Stamina",
+      "endpoint": "stamina",
+      "value": 1.85,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AK60",
+      "header_cell": "AK12",
+      "header": "Anticipation",
+      "endpoint": "anticipation",
+      "value": 2.75,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "U60",
+      "header_cell": "U12",
+      "header": "Finishing",
+      "endpoint": "finishing",
+      "value": 1.35,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AR60",
+      "header_cell": "AR12",
+      "header": "Strengh",
+      "endpoint": "strength",
+      "value": 2.3,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AO60",
+      "header_cell": "AO12",
+      "header": "Agility",
+      "endpoint": "agility",
+      "value": 2.2,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AQ60",
+      "header_cell": "AQ12",
+      "header": "Balance",
+      "endpoint": "balance",
+      "value": 1.8,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "AB60",
+      "header_cell": "AB12",
+      "header": "Concentration",
+      "endpoint": "concentration",
+      "value": 1.05,
+      "absolute_difference": 0.0
+    },
+    {
+      "plan_id": 46,
+      "cell": "R60",
+      "header_cell": "R12",
+      "header": "Dribbling",
+      "endpoint": "dribbling",
+      "value": 1.3,
+      "absolute_difference": 0.0
+    }
+  ],
+  "mismatches": [],
+  "pa_claim_conflict_confirmed": {
+    "A1_chinese_PA": 130,
+    "A2_english_PA": 150,
+    "resolved": false
+  },
+  "author_reported_sample_range_confirmed": [
+    20,
+    30
+  ],
+  "author_reported_months_confirmed": 12,
+  "author_reported_matches_confirmed": 100,
+  "contrasts": {
+    "prespecified_46_minus_38": {
+      "differences": {
+        "ca_gain": 2.1,
+        "acceleration": -0.15,
+        "pace": -0.2,
+        "jumping_reach": 0.1,
+        "stamina": -0.3,
+        "anticipation": 0.65,
+        "finishing": 0.15,
+        "strength": 0.0499999999999998,
+        "agility": 0.1500000000000004,
+        "balance": -0.2499999999999998,
+        "concentration": 0.7,
+        "dribbling": 0.1999999999999999
+      },
+      "quickness_mean_difference": -0.175,
+      "passed": true
+    },
+    "postinspection_exploratory_1_minus_0": {
+      "differences": {
+        "ca_gain": 0.566666666666669,
+        "acceleration": 1.1266666666666663,
+        "pace": 1.06,
+        "jumping_reach": -0.48,
+        "stamina": -0.6800000000000004,
+        "anticipation": 0.02666666666666676,
+        "finishing": -0.04666666666666657,
+        "strength": -0.7266666666666667,
+        "agility": -0.3133333333333333,
+        "balance": -0.4199999999999999,
+        "concentration": -0.14666666666666694,
+        "dribbling": -0.1266666666666667
+      },
+      "quickness_mean_difference": 1.0933333333333333,
+      "passed": true
+    }
+  },
+  "causal_effect_verified": false,
+  "new_career_execution": false,
+  "passed": true,
+  "artifact_encoding": "UTF-8 LF; numeric content unchanged from review"
+}
