@@ -1,11 +1,12 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
-## Spielerentwicklung004 – echter Karrierepilot läuft
+## Spielerentwicklung004 – echter Karrierepilot auf Nutzerwunsch pausiert
 
 [TRAIN-005](docs/player-development-004/RESEARCH_REPORT.md) hat nun nachgewiesenen
-Code-Zugang und einen echten Kontrollverlauf: nach 14 Kalendertagen CA 134→135,
+Code-Zugang und einen echten Kontrollverlauf: bis Tag19 CA 134→135,
 47 gerundete Attributanzeigen unverändert. Der Achtwochenvergleich ist noch
-unvollständig; kein Quickness-Effekt geschätzt. Zuerst beide Arme abschließen.
+unvollständig; kein Quickness-Effekt geschätzt. A ist am 04.02.2027 gespeichert; FM/Controller sind beendet. Nur auf erneuten
+Nutzerauftrag A fortsetzen und danach B vollständig messen.
 Die folgenden Zugangsdiagnosen dokumentieren ihren jeweiligen früheren Stand.
 
 ## Spielerentwicklung003 – Zugang vor weiterer Modellrechnung

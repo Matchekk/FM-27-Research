@@ -306,10 +306,10 @@ Prognosevalidierung. [Ergebnisse](experiments/PD-ROLE-001-results.md) ·
 
 ## 15.11.2026 – TRAIN-005, erster echter Karriere-Zwischenverlauf
 
-Ein Spieler, ein gemeinsamer Karrierecluster, bisher vier publizierte A-Zeitpunkte
-bis 14 Tage: STORED_CA 134→135, PA 160→160, alle 47 verwertbaren gerundeten
+Ein Spieler, ein gemeinsamer Karrierecluster, fünf publizierte A-Zeitpunkte
+bis zum Nutzerstopp an Tag19: STORED_CA 134→135, PA 160→160, alle 47 verwertbaren gerundeten
 Attributanzeigen unverändert (Antritt/Tempo 14/14). Native Live-CA und separate
 UI-Identität geprüft; kein Modell-RCA als Messwert verwendet. Tatsächlicher
 Kalenderfortschritt mit regulärem Fortfahren und angebotenen Sofortergebnissen.
-**Laufender, unvollständiger Einpaarpilot; kein B−A-Effekt, kein KI/p-Wert und
+**Auf Nutzerwunsch pausierter, unvollständiger Einpaarpilot; kein B−A-Effekt, kein KI/p-Wert und
 keine identifizierten marginalen CA-Kosten.** [Messungen und Grenzen](docs/player-development-004/TRAINING_PILOT.md).

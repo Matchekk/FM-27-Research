@@ -1,0 +1,28 @@
+{
+  "status": "PAUSED_BY_EXPLICIT_USER_SHUTDOWN_REQUEST",
+  "last_game_date": "2027-02-04",
+  "A_elapsed_days": 19,
+  "B_elapsed_days": 0,
+  "started_calendar_arms": 1,
+  "completed_56_day_arms": 0,
+  "independent_career_clusters": 1,
+  "players_in_training_sample": 1,
+  "command_ledger_entries": 759,
+  "command_status_counts": {
+    "completed": 752,
+    "stopped": 7
+  },
+  "command_ledger_sha256": "db00b62345da349fb5ef60e6c1362808418cdf9d6374e02ed9b8e5b456d9fa8b",
+  "private_files_count": 3090,
+  "private_artifact_bytes": 571481346,
+  "main_thread_bridge_closed": true,
+  "game_process_closed": true,
+  "original_save_unchanged": true,
+  "B_source_copy_unchanged": true,
+  "A_saved_sha256": "c67eab6aea1642887d83c2e6955841235889d31be45927110239b69ec02c279c",
+  "original_and_B_sha256": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+  "temporary_loader_config_restored": true,
+  "installed_labhost_restored": true,
+  "engine_editor_rca_measurements": 0,
+  "primary_training_contrast": null
+}

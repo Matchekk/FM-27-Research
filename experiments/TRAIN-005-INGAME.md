@@ -69,3 +69,11 @@ absagen, Verletzte dem Vereinsphysio überlassen. Andere Pflichtentscheidungen
 zunächst einzeln inspizieren. Vorherige Antworten und Abweichungen bleiben
 in den privaten, gehashten Belegen erhalten. A erreichte bereits den 20.01.;
 B bleibt noch am gemeinsamen Ausgangszustand, kein abgeschlossener A/B-Kontrast.
+
+
+## Expliziter Nutzerstopp
+
+Zum Ausschalten wurde der Versuch auf Nutzerwunsch pausiert. Gesicherter Stand:
+A 04.02.2027 / Tag19, B noch Startdatei. Keine automatische Fortsetzung oder
+Wiederholung. Beide Achtwochenendpunkte und der Primärkontrast bleiben fehlend.
+[Stoppabrechnung](../data/player-development-004/shutdown.json).

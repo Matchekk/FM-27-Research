@@ -1,6 +1,6 @@
 # TRAIN-005 – nachgewiesener Code-Zugang
 
-Stand 15.11.2026; laufender Einpaarpilot, noch kein fertiger Trainingseffekt.
+Stand 15.11.2026; pausierter Einpaarpilot, noch kein fertiger Trainingseffekt.
 Die Wegwerfkarriere wurde ausdrücklich für Code-Eingriffe autorisiert. Nach der
 Nutzerkorrektur wurde keine weitere Windows-Desktopsteuerung verwendet.
 
@@ -43,4 +43,4 @@ und private Messbelege bleiben außerhalb des öffentlichen Repositories.
 Das Laden/Speichern allein ersetzt keinen Persistenznachweis des Fokus. Der
 Ladezyklus für die endgültige B-Zuweisung und die Achtwochenendpunkte sind noch
 ausstehende Gates. Temporäre Loader-Konfiguration und eingesetzte Labhost-Datei
-werden nach Sicherung des Versuchs gegen ihre privaten Sicherungen abgerechnet.
+wurden nach Sicherung des Versuchs bytegenau aus ihren privaten Sicherungen restauriert. FM ist beendet, kein Controller läuft.

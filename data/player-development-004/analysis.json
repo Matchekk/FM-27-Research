@@ -11,9 +11,9 @@
   "arms": {
     "A": {
       "status": "INCOMPLETE",
-      "observations": 4,
-      "last_elapsed_days": 14,
-      "last_game_date": "2027-01-30",
+      "observations": 5,
+      "last_elapsed_days": 19,
+      "last_game_date": "2027-02-04",
       "delta_acceleration_ui": 0,
       "delta_pace_ui": 0,
       "delta_quickness_ui_at_last_observation": 0.0,

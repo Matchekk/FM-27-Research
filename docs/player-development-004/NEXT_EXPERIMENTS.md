@@ -1,6 +1,6 @@
 # Nächste Versuche
 
-1. Den laufenden TRAIN-005-Piloten vollständig beenden: beide 56-Tage-Arme,
+1. Nur nach erneutem Nutzerauftrag den pausierten TRAIN-005-Piloten ab A-Tag 19 fortsetzen: beide 56-Tage-Arme,
    gespeicherten Fokus nach Ladezyklus prüfen, Minuten/Verletzungen abrechnen
    und den vorregistrierten B−A-Kontrast berichten. Kein Ersatzprofil auswählen.
 2. Bei verfügbaren tatsächlich unabhängigen Ausgangskarrieren dieselbe
