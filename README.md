@@ -1,8 +1,9 @@
 # FM27 Meta Research
 
 > **PLAYER-DEVELOPMENT-001 (15.11.):** Neuer Forschungsbereich zu CA-Kosten,
-> Entwicklung und Training. Eine neue CF/DLF×Sprunghöhe-Interaktion ist
-> vorregistriert; noch keine wissenschaftlichen Resultate.
+> Entwicklung und Training.109öffentliche GK-Exportprofile explorativ mit
+> Spielertrennung geprüft: CA-Proxy-Holdout-MAE1,606 gegenüber4,630 unge­wichtet.
+> Keine tatsächliche Kostenfunktion. Neue CF/DLF×JR-Hauptserie läuft.
 > [Programmbericht](docs/player-development-001/RESEARCH_REPORT.md) ·
 > [Versuchsvertrag](experiments/PD-ROLE-001.md).
 

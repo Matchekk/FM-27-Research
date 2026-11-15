@@ -233,3 +233,20 @@ Keine FM-Anzeige12→16 kalibriert;passive Mechanismuszerlegung unidentifiziert.
 privaten Originalbelegen rekonstruiert. Historische ATTR-001–007 unverändert.
 [Ergebnis](experiments/ATTR-009-results.md) · [Messungen](data/attr-009-bridge/main.jsonl) ·
 [unabhängige Abnahme](docs/round3/RESULTS-REVIEW.md).
+# 15.11.2026 – PD-CA-001, retrospektive Exportdiagnose
+
+**Beobachtungsbasiert/explorativ; keine tatsächlichen CA-Grenzkosten.**
+109öffentliche GK-Exportprofile,80Training/29diagnostischerHoldout, keine
+Spielerüberschneidung/Missing/Ausschlüsse. Positionstabellen-Summenproxy mit
+OLS: Holdout-MAE1,606,RMSE2,010,Bias+0,845 exportierteCA-Punkte. Gleich
+komplexe OLS auf ungewichtetem Mittel derselben22Attribute: MAE4,630.
+MAE-Abstand−3,024,bedingtes95-%-Spielerbootstrapintervall[−4,139;−1,908].
+
+Der Autor hatte dieselben109Profile bereits analysiert; dies ist keine neu
+gesammelte unabhängige Validierungskohorte. Build-/Save-/UI-Provenienz nicht
+unabhängig abgenommen. BeobachteteCA15–118, Holdout41–109; keine Übertragung
+auf Feldspieler/Eliteprofile/PA. Der Proxy identifiziert weder kausalen
+Attributverbrauch noch nichtlineare Kosten oder Matchleistung proCA.
+[Protokoll](experiments/PD-CA-001.md) ·
+[Ergebnis und Grenzen](docs/player-development-001/CA_EFFICIENCY.md) ·
+[Messauswertung](data/player-development-001-ca/profile-diagnostic.json).

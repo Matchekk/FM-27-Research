@@ -1,0 +1,19 @@
+{
+  "experiment_id": "PD-CA-001",
+  "protocol_commit": "8f26064aa60a9a5b62756cd4cf76d11f86fad1a6",
+  "native_calls": 0,
+  "career_advances": 0,
+  "scientific_match_seeds": 0,
+  "source_profile_sha256": "31c1efc4da93fb23ec380b8a6e6c3b5956fb3290e5a51bc39d836bb1fc42f3b9",
+  "source_table_sha256": "b42727041a0779bc6bcc76272b0ae67ee323338f5bbdf1a348abd51769f08180",
+  "files_lf_sha256": {
+    "experiments/PD-CA-001.md": "da7b1a8f3428a8263aed113f1ab2082e2614671785316a278700ae28f2bddbc9",
+    "analysis/ca_profile001.py": "fd1594a2e2c051c9d1d01df6590774324f409380bc4291706d24cac53f1ddc89",
+    "analysis/ca_efficiency001.py": "978bfb1650030697b527c60eec9d139312c7d3b78d7fc8e589557c517420e8ef",
+    "tests/test_ca_profile001.py": "6fe972e227a26074d0e6936e5803eed97d4f2899538234866b83512e1305fc18",
+    "data/player-development-001-ca/profile-diagnostic.json": "74745ed6f7ab26bf322531c97a75bd5d64acf2a98eff7e7b354331a50cd2a6f7"
+  },
+  "public_player_rows": 0,
+  "public_player_ids": 0,
+  "status": "Completed exploratory public-export diagnostic, not actual CA cost validation"
+}

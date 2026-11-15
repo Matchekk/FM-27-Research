@@ -119,6 +119,65 @@
       "status": "read",
       "publication_date": "2020-10-07",
       "fm27_code_proof": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SebastianFoder/fm-scoutreporter/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fm27/ca-costs.ts",
+      "sha256": "a24bbc30703003ed6997c8ece972fb7f829c250b18921dd9e40b1a6dcd2b6d5b",
+      "bytes": 4726,
+      "accessed_utc": "2026-11-15T16:38:16.414581+00:00",
+      "status": "read",
+      "source_family": "ScoutReporter using fm-scoring cost weights",
+      "game_build_independently_verified": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SebastianFoder/fm-scoutreporter/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fm27/potential.ts",
+      "sha256": "b9a5538729bddae5ff7e45951b043d6cea91a4f1773d5d7f718ef3faa9c3ea50",
+      "bytes": 10658,
+      "accessed_utc": "2026-11-15T16:38:16.414581+00:00",
+      "status": "read",
+      "source_family": "ScoutReporter using fm-scoring cost weights",
+      "game_build_independently_verified": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SebastianFoder/fm-scoutreporter/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fixtures/attribute-fm27-hidden.csv",
+      "sha256": "31c1efc4da93fb23ec380b8a6e6c3b5956fb3290e5a51bc39d836bb1fc42f3b9",
+      "bytes": 22767,
+      "accessed_utc": "2026-11-15T16:38:16.414581+00:00",
+      "status": "read",
+      "source_family": "ScoutReporter using fm-scoring cost weights",
+      "game_build_independently_verified": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SebastianFoder/fm-scoutreporter/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fixtures/attribute-fm27-outfield.csv",
+      "sha256": "2acef0abdebd5d89e8d1c40e068e722ed15c2f5ebcf781d15048b55ab761d362",
+      "bytes": 15867,
+      "accessed_utc": "2026-11-15T16:38:16.414581+00:00",
+      "status": "read",
+      "source_family": "ScoutReporter using fm-scoring cost weights",
+      "game_build_independently_verified": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SebastianFoder/fm-scoutreporter/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fixtures/attribute-fm27.csv",
+      "sha256": "da8c5babced01520c9f91d3b010df692459ba0243279f7f9e42ce0f96e163473",
+      "bytes": 21698,
+      "accessed_utc": "2026-11-15T16:38:16.414581+00:00",
+      "status": "read",
+      "source_family": "ScoutReporter using fm-scoring cost weights",
+      "game_build_independently_verified": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/SebastianFoder/fm-scoutreporter/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fm27/fm27.test.ts",
+      "sha256": "316c21af8e1258255918165966ac51c10157d424c7b0433ac7ee5cf061719ca2",
+      "bytes": 12481,
+      "accessed_utc": "2026-11-15T16:38:16.414581+00:00",
+      "status": "read",
+      "source_family": "ScoutReporter using fm-scoring cost weights",
+      "game_build_independently_verified": false
+    },
+    {
+      "url": "https://www.fmscout.com/f-current-ability-calculator.html",
+      "status": "web_tool_fetch_failed_HTTP403",
+      "sha256": null
     }
   ],
   "tools": {

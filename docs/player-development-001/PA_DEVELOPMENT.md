@@ -57,3 +57,10 @@ Coverage/Schärfe der Vorhersageintervalle auf gehaltenen Verläufen berichten.
 **Heute n=0geeignete saisonübergreifende Testverläufe; MAE/Brier/Coverage=null.**
 Kein Modellfit, keine Zukunfts-CA-Verteilung und keine PA-Erreichungsquote
 veröffentlicht. Development Potential bleibt im Komponentenmodell unbekannt.
+
+Die neu geprüfte [Scout-Reporter-Potenzialprojektion](https://github.com/SebastianFoder/fm-scoutreporter/blob/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fm27/potential.ts)
+verteilt einen unterstellten CA→PA-Spielraum nach Tabellen- und Wachstumsgewichten.
+Eine109-GK-Querschnittsanpassung ist keine saisonübergreifende Testkohorte.
+Die Projektion beschreibt ein Szenario bei voller Potenzialausschöpfung;
+sie liefert keine beobachtete Wahrscheinlichkeit, dass ein Spieler dort ankommt.
+Auch unser neuer CA-Exportdiagnosetest ändert diesen PA-Status nicht.

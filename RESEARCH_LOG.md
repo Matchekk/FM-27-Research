@@ -681,3 +681,14 @@ oder Trainingskausalität behauptet. Getrennte Meta-Score-Komponentenausgabe
 und separate skalare Nachrechnung aller sieben formalen Rollenschätzer
 implementiert; sieben gezielte Tests bestanden. Hauptserie unter927f2f5/
 CI43735167774 seit16:26UTC aktiv; keine Interim-Leistungsauswertung.
+
+## PD-CA-001 – explorative Exportauswertung abgeschlossen
+
+Nach Fund einer zusätzlichen öffentlichen109-GK-Fixture in8f26064 vor eigener
+Modellanpassung/Auswertung protokolliert. Alle109Zeilen zulässig;80Trainings- und
+29diagnostischeHoldoutspieler, keine Identitätsüberschneidung oder Missing.
+GewichteterOLS-Proxy: MAE1,606/RMSE2,010/Bias+0,845; ungewichtete gleich
+komplexe BaselineMAE4,630. MAE-Abstand−3,024 mit bedingtem95-%-Bootstrap
+[−4,139;−1,908]. NumPy-Löser bestätigt skalare OLS; zwei gezielte Tests bestanden.
+Kein neues unabhängiges Gesamtsample, keine Gold-Build-/Saveprovenienz, kein
+CA-Grenzpreis oder PA-Modell behauptet. Hauptserie unverändert parallel aktiv.

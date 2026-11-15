@@ -74,7 +74,13 @@ def execution_summary():
 
 def main():
     effects=read(PUB/'effects.json');review=read(PUB/'independent-statistics-review.json')
-    write(ROOT/'research/meta_score_v02_components.json',components(effects,review))
+    card=components(effects,review)
+    proxy=read(ROOT/'data/player-development-001-ca/profile-diagnostic.json')
+    card['ca_export_proxy_diagnostic']=dict(status=proxy['evidence'],players=109,train_players=80,holdout_players=29,
+        coefficients=proxy['models']['W']['coefficients'],holdout=proxy['models']['W']['holdout'],
+        observed_ca_range=proxy['coverage']['exported_ca_range'],actual_marginal_costs_identified=False,
+        limit='Public GK export, retrospective split, unverified game provenance; no outfield, elite, role or PA transfer')
+    write(ROOT/'research/meta_score_v02_components.json',card)
     result=execution_summary()
     print(json.dumps({k:result[k] for k in ('main_matches','independent_blocks','native_calls','charged_supervised_seconds')}))
 

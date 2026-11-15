@@ -1,0 +1,153 @@
+{
+  "experiment_id": "PD-CA-001",
+  "evidence": "EXPLORATORY_RETROSPECTIVE_PUBLIC_EXPORT_DIAGNOSTIC",
+  "source_url": "https://raw.githubusercontent.com/SebastianFoder/fm-scoutreporter/3144dd0a45eb4f994230700c8faee64d33665273/packages/core/fixtures/attribute-fm27-hidden.csv",
+  "profile_source_sha256": "31c1efc4da93fb23ec380b8a6e6c3b5956fb3290e5a51bc39d836bb1fc42f3b9",
+  "table_sha256": "b42727041a0779bc6bcc76272b0ae67ee323338f5bbdf1a348abd51769f08180",
+  "native_build_independently_verified": false,
+  "real_game_gold_profiles": 0,
+  "profile_rows": 109,
+  "eligible_rows": 109,
+  "missing_or_excluded": [],
+  "train_players": 80,
+  "holdout_players": 29,
+  "identity_overlap": 0,
+  "source_contexts": "One public fixture file; save/club contexts unknown; no save-cluster holdout possible",
+  "coverage": {
+    "exported_ca_range": [
+      15.0,
+      118.0
+    ],
+    "train_ca_range": [
+      15.0,
+      118.0
+    ],
+    "holdout_ca_range": [
+      41.0,
+      109.0
+    ],
+    "attribute_columns": 22,
+    "sum_reference_weights": 107
+  },
+  "split": {
+    "salt": "PD-CA-001/player-split/v1:",
+    "method": "Sorted SHA256(salt+UniqueID), first80 train; remaining29 diagnostic holdout",
+    "membership_sha256": "8a2e5d912a11bef52adf8e2d59043fe20ffafb969246e7baf03ec82698bc1159"
+  },
+  "primary": {
+    "estimand": "Holdout MAE(W) minus MAE(U), exported CA units; negative favors W",
+    "difference": -3.0240199566698114,
+    "conditional95_interval": [
+      -4.138860250038431,
+      -1.908484354917049
+    ]
+  },
+  "models": {
+    "W": {
+      "coefficients": {
+        "intercept": -99.46507543481462,
+        "slope": 0.16517863201236166
+      },
+      "train_mae": 2.052362671890668,
+      "train_rmse": 2.6456489051276253,
+      "holdout": {
+        "mae": 1.6064074089115492,
+        "rmse": 2.0096787349218905,
+        "bias": 0.8454890754270683,
+        "conditional95_intervals": {
+          "mae": [
+            1.1825031432707074,
+            2.063612497971499
+          ],
+          "rmse": [
+            1.5027698131050868,
+            2.4815932513273387
+          ],
+          "bias": [
+            0.17784433722550613,
+            1.5062194297991929
+          ]
+        }
+      },
+      "holdout_calibration_observed_CA_on_prediction": {
+        "intercept": -0.188481536053132,
+        "slope": 0.9917643999754547
+      }
+    },
+    "U": {
+      "coefficients": {
+        "intercept": -59.915111715306836,
+        "slope": 14.449092244611572
+      },
+      "train_mae": 5.053608958054684,
+      "train_rmse": 6.108795582414283,
+      "holdout": {
+        "mae": 4.63042736558136,
+        "rmse": 5.525032246468265,
+        "bias": 1.3644025266841384,
+        "conditional95_intervals": {
+          "mae": [
+            3.553661862724501,
+            5.758106133794496
+          ],
+          "rmse": [
+            4.354704113670706,
+            6.597110031977467
+          ],
+          "bias": [
+            -0.5643167228752554,
+            3.3170759479602077
+          ]
+        }
+      },
+      "holdout_calibration_observed_CA_on_prediction": {
+        "intercept": 5.709223976762175,
+        "slope": 0.9119050002478415
+      }
+    },
+    "C": {
+      "coefficients": {
+        "constant": 75.775
+      },
+      "holdout": {
+        "mae": 11.36810344827586,
+        "rmse": 14.353562726063327,
+        "bias": -3.156034482758615,
+        "conditional95_intervals": {
+          "mae": [
+            8.352586206896552,
+            14.659568965517234
+          ],
+          "rmse": [
+            10.378775796595743,
+            18.063511634931857
+          ],
+          "bias": [
+            -8.190517241379304,
+            2.050862068965523
+          ]
+        }
+      }
+    }
+  },
+  "independent_ols_reconstruction": {
+    "W": {
+      "max_coefficient_difference": 2.842170943040401e-14,
+      "passed": true
+    },
+    "U": {
+      "max_coefficient_difference": 3.552713678800501e-14,
+      "passed": true
+    }
+  },
+  "bootstrap": {
+    "resamples": 20000,
+    "seed": 2026111541,
+    "unit": "holdout player",
+    "limitation": "Conditional on fixed training sample/split and exchangeability within this export; excludes training and save/club uncertainty"
+  },
+  "actual_marginal_costs_identified": false,
+  "nonlinear_costs_identified": false,
+  "pa_forecast_validated": false,
+  "warning": "Author already analyzed all109 profiles. This retrospective split is not a newly collected independent validation cohort. Predicting an export field does not identify causal attribute costs."
+}

@@ -1,5 +1,13 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Spielerentwicklung001 – neuer Fokus15.11.2026
+
+CA-Grenzkosten vor bloßer Attributrangliste, danach natürliche Rollenprofile
+und kontrolliertes Training. [Drei konkrete Folgestudien](docs/player-development-001/NEXT_EXPERIMENTS.md).
+PD-CA-001 liefert eine begrenzte öffentliche Exportdiagnose; echte Kosten
+weiter unbekannt. PD-ROLE-001 läuft unter festem4.096-Mainlimit. Die folgenden
+historischen Roadmaps öffnen keine alten terminalen Studien oder Reservierungen.
+
 ## Nach NIGHT-003 – aktuelle Prioritäten
 
 Zwei vollständige Hauptstudien mit8.192Matches/1.536Blöcken. Primäre

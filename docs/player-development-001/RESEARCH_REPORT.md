@@ -38,3 +38,15 @@ unbegonnen; es folgt die Veröffentlichung dieser konkreten Freigabebelege.
 Die Dispatcherreihenfolge ist wie im bestehenden Runner sortiert nach
 Kontext/Seed; die vorgelagerte Planmischung ändert sie nicht. Alle acht Zellen
 eines Blocks bleiben zusammen. Keine datenabhängige Blockreihenfolge.
+
+## Neue empirische CA-Exportauswertung abgeschlossen
+
+PD-CA-001:109bereitgestellte GK-Exportprofile,80Trainingsspieler und29fest
+getrennte diagnostische Holdoutspieler. Gewichteter Summenproxy W erzielt
+MAE1,606 gegen4,630 einer gleich komplexen ungewichteten OLS; Abstand−3,024,
+bedingtes95-%-Bootstrapintervall[−4,139;−1,908]. Keine Missing/Duplikate/
+Ausschlüsse. Getrennter OLS-Löser bestätigt beide Koeffizientenanpassungen.
+**Explorativ, vorher vom Quellautor analysiertes Gesamtsample, Build-/Save-
+Provenienz ungeprüft, CA-Spanne15–118.** Keine tatsächliche Grenzkostenfunktion,
+kein Transfer auf Feldspieler oder zukünftige Entwicklung.
+[Vollständige Ergebnisse](CA_EFFICIENCY.md#pd-ca-001-zusätzliche-empirische-exportdiagnose).
