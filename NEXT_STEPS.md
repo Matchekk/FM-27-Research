@@ -1,5 +1,13 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## Spielerentwicklung004 – echter Karrierepilot läuft
+
+[TRAIN-005](docs/player-development-004/RESEARCH_REPORT.md) hat nun nachgewiesenen
+Code-Zugang und einen echten Kontrollverlauf: nach 14 Kalendertagen CA 134→135,
+47 gerundete Attributanzeigen unverändert. Der Achtwochenvergleich ist noch
+unvollständig; kein Quickness-Effekt geschätzt. Zuerst beide Arme abschließen.
+Die folgenden Zugangsdiagnosen dokumentieren ihren jeweiligen früheren Stand.
+
 ## Spielerentwicklung003 – Zugang vor weiterer Modellrechnung
 
 Kein unabhängiges Editor-RCA und kein kontrollierter Fokus-/Karriereworkflow

@@ -51,3 +51,21 @@ eingefroren. Jede während des Laufs beobachtete Planabweichung bleibt sichtbar
 und begrenzt eine isolierte kausale Interpretation; nicht nachträglich als
 identisch ausgeben. Pro Arm Tages-/Wochenfortschritt und Pflichtentscheidungen
 protokollieren; bei verlorener Kontrolle den Lauf als unvollständig ausweisen.
+
+
+## Ergänzung vor dem ersten Pilotspiel
+
+Am 20.01.2027 zeigt die laufende Engine in der Mannschaftsauswahl einen
+sichtbaren, aktivierten nativen Steuerknopf „Sofortergebnis“. Für beide Arme
+wird derselbe angebotene In-Game-Weg eingefroren: reguläres Fortfahren zwischen
+Spielen, eingebaute Sofortergebnisse an Spieltagen; notwendige Aufstellung
+über die reguläre Auto-Auswahl. Keine Urlaubsfortschreibung. Das ist ausdrücklich
+keine nachgewiesene Gleichheit mit manuell betreuten Partien oder externen
+Matchadaptern. Spielminuten und Verletzungen bleiben mögliche Vermittler bzw.
+Störgrößen. Keine Taktikanweisungen gezielt ändern.
+
+Pflichtantworten: eingehende Transfers ablehnen, neue Vertragsforderungen
+absagen, Verletzte dem Vereinsphysio überlassen. Andere Pflichtentscheidungen
+zunächst einzeln inspizieren. Vorherige Antworten und Abweichungen bleiben
+in den privaten, gehashten Belegen erhalten. A erreichte bereits den 20.01.;
+B bleibt noch am gemeinsamen Ausgangszustand, kein abgeschlossener A/B-Kontrast.

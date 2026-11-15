@@ -1,0 +1,33 @@
+{
+  "experiment": "TRAIN-005-INGAME",
+  "independent_career_clusters": 1,
+  "players": 1,
+  "planned_arms": 2,
+  "completed_arms": 0,
+  "complete_career_pairs": 0,
+  "primary_contrast_B_minus_A": null,
+  "confidence_interval": null,
+  "p_value": null,
+  "arms": {
+    "A": {
+      "status": "INCOMPLETE",
+      "observations": 4,
+      "last_elapsed_days": 14,
+      "last_game_date": "2027-01-30",
+      "delta_acceleration_ui": 0,
+      "delta_pace_ui": 0,
+      "delta_quickness_ui_at_last_observation": 0.0,
+      "delta_stored_ca": 1,
+      "delta_stored_pa": 0,
+      "delta_minutes_current_season": null,
+      "pilot_injury_days": null,
+      "observed_focus_codes": [
+        -1
+      ]
+    },
+    "B": {
+      "status": "NOT_YET_MEASURED"
+    }
+  },
+  "status": "INCOMPLETE_NO_PRIMARY_CONTRAST"
+}
