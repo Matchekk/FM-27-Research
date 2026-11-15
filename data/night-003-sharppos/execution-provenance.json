@@ -1,0 +1,53 @@
+{
+  "experiment_id": "N3-SHARPPOS-C1",
+  "checked_utc": "2026-11-15T10:29:19.403256+00:00",
+  "all_jobs_reconciled": true,
+  "native_processes_cleaned": true,
+  "stages": {
+    "technical": {
+      "planned": 17,
+      "resolved": 17,
+      "status_counts": {
+        "ok": 16,
+        "expected_rejection": 1
+      },
+      "unbegun": [],
+      "unresolved": [],
+      "peak_inflight_claims": 4,
+      "sum_native_call_seconds": 51.99899999999616,
+      "public_lf_sha256": "9497dcdde2ecae80212d1dc3342718a96622112928e2a722407b66267d8a6b95"
+    },
+    "main": {
+      "planned": 4096,
+      "resolved": 4096,
+      "status_counts": {
+        "ok": 4096
+      },
+      "unbegun": [],
+      "unresolved": [],
+      "peak_inflight_claims": 4,
+      "sum_native_call_seconds": 12991.76100000074,
+      "public_lf_sha256": "99fd7ea07d711844c485c7dff4cbb42823ecedee10c02919a2ed08818ed5f7e5"
+    }
+  },
+  "budget": {
+    "limit_seconds": 7200,
+    "charged_seconds": 3438.2296148000023,
+    "wall_start_utc": "2026-11-15T09:15:10.655240+00:00",
+    "wall_deadline_utc": "2026-11-15T12:15:10.655240+00:00",
+    "phase_elapsed_seconds": {
+      "technical": 15.060272799993982,
+      "main": 3423.1693420000083
+    }
+  },
+  "private_artifact_bytes": 2233180915,
+  "free_disk_bytes": 414215393280,
+  "missing_descriptive": {},
+  "software": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3"
+  },
+  "independent_arithmetic_passed": true,
+  "engine_pid_peak_measured": false
+}

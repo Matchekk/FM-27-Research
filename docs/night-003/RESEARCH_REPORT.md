@@ -16,8 +16,8 @@ Wechselwirkung, keine erneute Entdeckung des bekannten Schärfe-Haupteffekts.
 | Studie | Wissenschaftliche Matches / unabhängige Blöcke | Stand |
 |---|---|---|
 | N3-SHARPSTRUCT-C1: Schärfe×IP bei fester OOP | 4.096 / 512 | vollständig, Rohbelege geprüft, beide Rechenwege stimmen überein |
-| N3-SHARPPOS-C1: marginaler Nutzen zweier Positionsgruppen | 4.096 / 1.024 geplant | Main läuft seit09:27UTC nach eigener Technik16+1/achtA/A und erfolgreicher CI; noch keine Leistungsanalyse |
-| N3-AMCSHIFT-C1: isolierte AMC→AMCL-Zuweisung | 2.048 / 512 geplant | offline vorbereitet; 0 native Matches, nur bei ausreichendem Rest nach Studie2 |
+| N3-SHARPPOS-C1: marginaler Nutzen zweier Positionsgruppen | 4.096 / 1.024 | vollständig; +0,053613xGD[−0,003894;+0,111120],p0,067629; separat nachgerechnet |
+| N3-AMCSHIFT-C1: isolierte AMC→AMCL-Zuweisung | 2.048 / 512 geplant | eigene16Technik+Exit108 bestanden; Main nachCI/Restzeitgate |
 
 Erste Studie zusätzlich32 technische Vollmatches/16 A/A und eine erwartete
 Negativabweisung. Keine unerwarteten nativen Fehler, Ausschlüsse, Retries,
@@ -79,3 +79,14 @@ Branch `codex/night-003`; Integration auf main nach vollständiger Validierung.
 
 [Zeit-/Fortschrittsprotokoll](PROGRESS.md) · [Literatur](LITERATURE.md) ·
 [Positionsvertrag](../../experiments/N3-SHARPPOS-C1.md).
+
+## Zweite Hauptstudie vollständig
+
+[Positionsbericht](../../experiments/N3-SHARPPOS-C1-results.md):4.096Matches/1.024Blöcke,
++0,053613xGD[−0,003894;+0,111120],p0,067629, gesamteKIinnerhalb±0,15.
+Tore undxGF bestehen die sekundäreHolm6-Familie, tatsächliche Punkte nicht.
+Alle sieben formalen Schätzer separat reproduziert. Keine separate absolute
+Gruppenwirkung und keine universelle Positionspriorität identifiziert.
+
+Dritte Technik16+1/achtA/A vollständig bestanden;
+[Freigabe](AMC_TECHNICAL_RELEASE.md). Main ausschließlich nachCI undRestzeitgate.

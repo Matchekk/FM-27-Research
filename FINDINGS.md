@@ -1,5 +1,21 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-15 – N3-SHARPPOS-C1, marginaler Zweispieler-Schärfenutzen
+
+**4.096 gültige Hauptmatches,1.024 unabhängige neue Blöcke**, FM27 27.0.1+2503222.
+AMC/ST-Nutzen minus CB-Nutzen **0,053613xGD/Match**,
+95%-KI **[-0,003894; 0,111120]**,p=0.0676289; innerhalb vorab±0,15.
+Volle Breite0,115014 erreicht Ziel≤0,15. Kleinere Vorteile
+bei AMC/ST bleiben möglich; kein Primärnachweis und keine universelle Positionsregel.
+Sekundär Tore+0,133789 undxGF+0,085995 bestehenHolm6, Punkte+0,075684 nicht.
+Separate absolute Gruppennutzen nicht identifiziert; feste Akteure/Rollen,
+omnipotente Positionsratings und zwei feste Gegner begrenzen Übertragung.
+16Technik/achtA/A+Exit108 und alle4.113Jobs vollständig,0unerwarteteAusfälle,
+keine Ausschlüsse/Retry/Ersatz. Rohbelege zweimal geprüft, alle sieben formalen
+Statistiken separat skalar reproduziert. [Ergebnisse](experiments/N3-SHARPPOS-C1-results.md) ·
+[Messungen](data/night-003-sharppos/main.jsonl) ·
+[Nachrechnung](data/night-003-sharppos/independent-statistics-review.json).
+
 ## 2026-11-15 – N3-SHARPSTRUCT-C1, Schärfe×IP bei fester OOP
 
 **4.096 gültige Hauptmatches, 512 unabhängige neue Kontext-Seedblöcke.**

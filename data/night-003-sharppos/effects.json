@@ -1,0 +1,243 @@
+{
+  "experiment_id": "N3-SHARPPOS-C1",
+  "n_matches": 4096,
+  "independent_blocks": 1024,
+  "primary": {
+    "mean": 0.053612980457929685,
+    "se": 0.029306104606134576,
+    "df": 1021.9513352215341,
+    "ci": [
+      -0.003894037076471263,
+      0.11111999799233063
+    ],
+    "p": 0.0676289386530732,
+    "alpha": 0.05,
+    "bootstrap_ci": [
+      -0.003662560757604972,
+      0.11109840418162693
+    ],
+    "n_seed_blocks": 1024,
+    "n_scenarios": 2,
+    "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+    "context": {
+      "high_press": {
+        "mean": 0.06058932769183595,
+        "sd": 0.9410255000321359
+      },
+      "deep_block": {
+        "mean": 0.04663663322402342,
+        "sd": 0.9345540302655521
+      }
+    },
+    "practical_reference": 0.15,
+    "full_ci_width": 0.1150140350688019,
+    "excludes_effects_outside_point15": true
+  },
+  "secondary": {
+    "points": {
+      "mean": 0.07568359375,
+      "se": 0.03823324078771643,
+      "df": 1021.9681112851584,
+      "ci": [
+        0.0006589654300525466,
+        0.15070822206994744
+      ],
+      "p": 0.04802510399718398,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        0.0009643554687500111,
+        0.150390625
+      ],
+      "n_seed_blocks": 1024,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.025390625,
+          "sd": 1.2268760719963454
+        },
+        "deep_block": {
+          "mean": 0.1259765625,
+          "sd": 1.2200417943169557
+        }
+      },
+      "p_holm": 0.19210041598873592
+    },
+    "gf": {
+      "mean": 0.1337890625,
+      "se": 0.0355624369300657,
+      "df": 1021.6270161138979,
+      "ci": [
+        0.06400529282523744,
+        0.20357283217476257
+      ],
+      "p": 0.00017807970592045627,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        0.06494140625,
+        0.20458984375
+      ],
+      "n_seed_blocks": 1024,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.1220703125,
+          "sd": 1.1270735233092455
+        },
+        "deep_block": {
+          "mean": 0.1455078125,
+          "sd": 1.148818560976676
+        }
+      },
+      "p_holm": 0.0008903985296022813
+    },
+    "ga": {
+      "mean": 0.033203125,
+      "se": 0.03595226785781558,
+      "df": 1009.8077446949123,
+      "ci": [
+        -0.037346584933741364,
+        0.10375283493374136
+      ],
+      "p": 0.3559498504474008,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.037109375,
+        0.10400390625
+      ],
+      "n_seed_blocks": 1024,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.0458984375,
+          "sd": 1.2120331019217707
+        },
+        "deep_block": {
+          "mean": 0.0205078125,
+          "sd": 1.085426199777716
+        }
+      },
+      "p_holm": 0.7118997008948016
+    },
+    "xgf": {
+      "mean": 0.08599467140895509,
+      "se": 0.02009115155536386,
+      "df": 1006.8344617326865,
+      "ci": [
+        0.04656934383198947,
+        0.1254199989859207
+      ],
+      "p": 2.0452873519101873e-05,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        0.04683340929085767,
+        0.1253775779742302
+      ],
+      "n_seed_blocks": 1024,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.10582270751136719,
+          "sd": 0.6021733161746531
+        },
+        "deep_block": {
+          "mean": 0.06616663530654297,
+          "sd": 0.6812278977903132
+        }
+      },
+      "p_holm": 0.00012271724111461124
+    },
+    "xga": {
+      "mean": 0.03238169095102539,
+      "se": 0.020087484784585184,
+      "df": 1013.5465619357835,
+      "ci": [
+        -0.007036127063882881,
+        0.07179950896593365
+      ],
+      "p": 0.10726605104483482,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.007305867330295413,
+        0.07236319692824827
+      ],
+      "n_seed_blocks": 1024,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.045233379819531246,
+          "sd": 0.6715104984394916
+        },
+        "deep_block": {
+          "mean": 0.01953000208251953,
+          "sd": 0.6127447091456876
+        }
+      },
+      "p_holm": 0.32179815313450444
+    },
+    "CONTEXT_DIFFERENCE:xgd": {
+      "mean": 0.013952694467812526,
+      "se": 0.05861220921226915,
+      "df": 1021.9513352215341,
+      "ci": [
+        -0.10106134060098937,
+        0.12896672953661442
+      ],
+      "p": 0.8118892655876958,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.09807782812682371,
+        0.12700663256096528
+      ],
+      "n_seed_blocks": 1024,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "p_holm": 0.8118892655876958
+    }
+  },
+  "arm_means": {
+    "high_press": {
+      "ATTACK_LOW": {
+        "xgd": -0.35018889635501954,
+        "points": 1.2216796875,
+        "gf": 1.15625,
+        "ga": 1.4345703125,
+        "xgf": 1.0858895169104101,
+        "xga": 1.4360784132654296
+      },
+      "DEFENCE_LOW": {
+        "xgd": -0.2895995686631836,
+        "points": 1.2470703125,
+        "gf": 1.2783203125,
+        "ga": 1.48046875,
+        "xgf": 1.1917122244217775,
+        "xga": 1.481311793084961
+      }
+    },
+    "deep_block": {
+      "ATTACK_LOW": {
+        "xgd": 0.12602911673808592,
+        "points": 1.3505859375,
+        "gf": 1.2421875,
+        "ga": 1.201171875,
+        "xgf": 1.3575330989987304,
+        "xga": 1.2315039822606444
+      },
+      "DEFENCE_LOW": {
+        "xgd": 0.17266574996210937,
+        "points": 1.4765625,
+        "gf": 1.3876953125,
+        "ga": 1.2216796875,
+        "xgf": 1.4236997343052735,
+        "xga": 1.251033984343164
+      }
+    }
+  },
+  "interpretation": "DEFENCE_LOW minus ATTACK_LOW = (common-high minus attack-low) minus (common-high minus defence-low). Separate absolute group benefits unidentifiable; fixed actors and roles, no universal position rule.",
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 2026111504
+}

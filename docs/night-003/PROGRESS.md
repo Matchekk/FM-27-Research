@@ -59,3 +59,7 @@ das Webwerkzeug geprüft. Kein lokaler Inhalts-Hash für diesen Abruf behauptet.
 Aktive Technikfrist: spätestens08:28:36UTC Gateentscheidung bzw. Wechsel.
 Zeitzuordnung folgt den tatsächlichen Abschnitten; keine behauptete dauerhafte
 Hintergrundausführung. Eigener Phasensupervisor liefert Checkpoints und Fristen.
+
+Zweite Serie10:24:14UTC vollständig simuliert; Rohpass und beide Rechenwege
+bestanden. Dritte Technik10:26:36UTC mit16+1/achtA/A bestanden; mindestens2.700s
+Rest vor dieser Phase eingehalten. Veröffentlichung/CI vor dritter Mainadmission.
