@@ -105,5 +105,9 @@ kein behaupteter separater Gutachter. Historische terminale Studien unverändert
 Vorregistrierung ac5b993, Freigabe/Korrektur f57c193 und erfolgreiche
 [CI43693487274](https://github.com/Matchekk/FM-27-Research/actions/runs/43693487274)
 lagen vor Main vor. Portable Ergebnistests rekonstruieren alle 4.096 Messungen
-und den Primäreffekt in beiden Rechenwegen. Ergebnisveröffentlichungs-CI wird
-im [Missionsbericht](../docs/night-003/RESEARCH_REPORT.md) nachgetragen.
+und den Primäreffekt in beiden Rechenwegen. Ergebniscommit
+`a58e11d59cf8b75f366197e56282c471247f2bc8` besteht
+[CI43699039037](https://github.com/Matchekk/FM-27-Research/actions/runs/43699039037).
+Eine zusätzliche [unabhängige skalare Statistikprüfung](../data/night-003-sharpstruct/independent-statistics-review.json)
+rekonstruiert alle sieben formalen Schätzer, deren Welch-Intervalle und Holm6
+ohne die ursprünglichen Analyse-/Statistikmodule. Gleicher Analyst.

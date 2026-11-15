@@ -16,7 +16,7 @@ Wechselwirkung, keine erneute Entdeckung des bekannten Schärfe-Haupteffekts.
 | Studie | Wissenschaftliche Matches / unabhängige Blöcke | Stand |
 |---|---|---|
 | N3-SHARPSTRUCT-C1: Schärfe×IP bei fester OOP | 4.096 / 512 | vollständig, Rohbelege geprüft, beide Rechenwege stimmen überein |
-| N3-SHARPPOS-C1: marginaler Nutzen zweier Positionsgruppen | 0 / 0 | eigene Technik16+1 und acht A/A-Paare bestanden; Main folgt nach CI |
+| N3-SHARPPOS-C1: marginaler Nutzen zweier Positionsgruppen | 4.096 / 1.024 geplant | Main läuft seit09:27UTC nach eigener Technik16+1/achtA/A und erfolgreicher CI; noch keine Leistungsanalyse |
 
 Erste Studie zusätzlich32 technische Vollmatches/16 A/A und eine erwartete
 Negativabweisung. Keine unerwarteten nativen Fehler, Ausschlüsse, Retries,
@@ -37,7 +37,7 @@ Das konkrete STLESS-IP-Paket hat deskriptiv bei beiden Schärfestufen einen
 Kontext keine besondere STLESS-Freischaltung durch volle gemeinsame Startschärfe.
 Andere STLESS-Pakete und kleinere Interaktionen bleiben offen. Scoutinggewichte
 werden aus diesem Eingriff nicht verändert. Die Positionsfrage wird separat
-untersucht und hat zu diesem Berichtsstand noch keine wissenschaftlichen Daten.
+untersucht; ihre noch laufende Serie wird erst nach vollständigem Abschluss ausgewertet.
 
 Ein gebündeltes Fixture, zwei feste bekannte Gegner, synthetische Profile mit
 omnipotenten Positionsratings, FM27 27.0.1+2503222. Kein universeller Formations-
@@ -61,8 +61,10 @@ Analyst, kein separater Gutachter behauptet. Native Originalbelege bleiben priva
 | Erste Vorregistrierung | ac5b993330b49734d49088045ea55fd6a6a3385d | [43693138863](https://github.com/Matchekk/FM-27-Research/actions/runs/43693138863) |
 | Erste Mainfreigabe | f57c193489a4824dc76f4cb5ead828408e5fc84c | [43693487274](https://github.com/Matchekk/FM-27-Research/actions/runs/43693487274) |
 | Zweite Vorregistrierung | 0a2089e758fceb51033f7fd3161c111d4e29107f | [43695266210](https://github.com/Matchekk/FM-27-Research/actions/runs/43695266210) |
+| Erstes Ergebnis / zweite Mainfreigabe | a58e11d59cf8b75f366197e56282c471247f2bc8 | [43699039037](https://github.com/Matchekk/FM-27-Research/actions/runs/43699039037) |
 
-Ergebnis-/zweite Freigabe-CI folgt mit dem nächsten veröffentlichten Commit.
+Alle sieben formalen Schätzer der ersten Studie einschließlich Holm6 wurden
+zusätzlich [separat skalar nachgerechnet](../../data/night-003-sharpstruct/independent-statistics-review.json).
 Branch `codex/night-003`; Integration auf main nach vollständiger Validierung.
 
 ## Drei wertvollste nächsten Forschungsfragen

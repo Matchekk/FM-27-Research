@@ -1,0 +1,88 @@
+{
+  "experiment_id": "N3-SHARPSTRUCT-C1",
+  "passed": true,
+  "matches": 4096,
+  "independent_blocks": 512,
+  "primary": {
+    "mean": -0.013320026380517576,
+    "se": 0.05358222578472044,
+    "df": 502.4760439762667,
+    "ci": [
+      -0.11859282962028238,
+      0.09195277685924723
+    ],
+    "p": 0.8037792115032512
+  },
+  "secondary": {
+    "INTERACTION:points": {
+      "mean": -0.080078125,
+      "se": 0.07737301812719183,
+      "df": 504.58509486663297,
+      "ci": [
+        -0.23209107697010165,
+        0.07193482697010165
+      ],
+      "p": 0.30118246157164597,
+      "p_holm": 1.0
+    },
+    "INTERACTION:gf": {
+      "mean": -0.0908203125,
+      "se": 0.0609488590292178,
+      "df": 508.30399778480796,
+      "ci": [
+        -0.21056299839690837,
+        0.02892237339690837
+      ],
+      "p": 0.13681637422051043,
+      "p_holm": 0.8208982453230627
+    },
+    "INTERACTION:ga": {
+      "mean": -0.005859375,
+      "se": 0.07336843184450652,
+      "df": 496.4074005132706,
+      "ci": [
+        -0.1500103198211962,
+        0.1382915698211962
+      ],
+      "p": 0.9363789233790771,
+      "p_holm": 1.0
+    },
+    "INTERACTION:xgf": {
+      "mean": -0.00804573176645508,
+      "se": 0.033789664699478424,
+      "df": 509.8915277282144,
+      "ci": [
+        -0.07442983158148188,
+        0.05833836804857172
+      ],
+      "p": 0.8118897200412168,
+      "p_holm": 1.0
+    },
+    "INTERACTION:xga": {
+      "mean": 0.005274294614062498,
+      "se": 0.03957447068523365,
+      "df": 488.9470168056819,
+      "ci": [
+        -0.07248271798936032,
+        0.0830313072174853
+      ],
+      "p": 0.8940305910335262,
+      "p_holm": 1.0
+    },
+    "CONTEXT_DIFFERENCE:xgd": {
+      "mean": -0.07310124984228517,
+      "se": 0.10716445156944088,
+      "df": 502.4760439762667,
+      "ci": [
+        -0.28364685632181474,
+        0.13744435663724444
+      ],
+      "p": 0.49546421013078257,
+      "p_holm": 1.0
+    }
+  },
+  "formal_estimands_checked": 7,
+  "measurement_lf_sha256": "cc7239ebdf45e203870939d047ad472a3d14652ff57a7385565e0cc1169fe7f3",
+  "review_source_lf_sha256": "0d4539aca1a7dc3b28bf4a8686a85b8ac36a705bcca3bb36fccba0e56f3baaf1",
+  "method": "Separate scalar score/xG reconstruction, fixed paired blocks, Welch moments and independent Holm6; same analyst, no independent-person claim. Bootstrap checked by frozen reproducibility tests separately."
+}

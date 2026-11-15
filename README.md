@@ -2,7 +2,7 @@
 
 > **NIGHT-003 (15.11.):** 4.096 neue Hauptmatches/512 unabhängige Blöcke vollständig:
 > Schärfe×IP-Interaktion −0,013 xGD [−0,119; +0,092], präzise innerhalb ±0,20.
-> Zweite Positionsschärfe-Studie technisch freigegeben, noch keine Mainbefunde.
+> Zweite Positionsschärfe-Hauptserie läuft mit weiteren4.096Matches; noch keine Mainbefunde.
 > [Ergebnis](experiments/N3-SHARPSTRUCT-C1-results.md) ·
 > [Forschungsbericht](docs/night-003/RESEARCH_REPORT.md) · [Fortschritt](docs/night-003/PROGRESS.md).
 

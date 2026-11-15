@@ -16,6 +16,9 @@
 |09:11:27|Erste Hauptsimulation vollständig|4.096Matches/512Blöcke, keine nativen Fehler; Rohbelege unverändert.|
 |09:14:21|Erste Studie angenommen/ausgewertet|Zweiter Rohpass bestanden, alle Prozesse bereinigt.−0,013320xGD[−0,118593;+0,091953], separate Arithmetik stimmt überein.|
 |09:15:25|Zweite technische Phase bestanden|Nach vollständiger erster Auswertung:16Vollmatches+Exit108,achtA/A,korrekteZweispielerbindung.15,060s Phasenzeit;Main0.|
+|09:26|Erste Ergebnis-/zweite Freigabe-CI erfolgreich|a58e11d/CI43699039037:445Tests lokal bestanden,drei bedingteSkips;publizierte4.096Messungen undzweiteTechnik geprüft.|
+|09:27|Zweite Hauptserie gestartet|4.096neueMatches/1.024Blöcke;Quellenstand unverändert,Missionsrest über4.200s. Nur aktive Sitzung gemäß Nutzerantwort.|
+|09:29:50|Vollständige separate Statistikprüfung Studie1|Alle sieben formalen Welch-Schätzer einschließlich sechsSekundärtests und unabhängigerHolm6-Rechnung stimmen überein.|
 
 Die [zweite Vorregistrierung](../../experiments/N3-SHARPPOS-C1.md) wurde ohne
 Einblick in wissenschaftliche Ergebnisse der ersten Serie vorbereitet. Eigene
