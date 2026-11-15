@@ -83,3 +83,10 @@ Alle wissenschaftlichen Fehler-/Effektschätzer sind null/NOT_MEASURED.
 Vorhandenen Analysecode wiederverwenden; kein neues VALID-System und keine
 erneute Berechnung der Trainingsmappe. [Prüf-/Publikationsbeleg](publication.json)
 führt den tatsächlichen Test-, Commit-, CI- und Pushstatus.
+
+Archivcommit `3f51379bd3f9a9ca5eec2798f874cbe35bcb3c8f` ist auf dem Forschungsbranch veröffentlicht und hat
+[exakte CI 43749649506](https://github.com/Matchekk/FM-27-Research/actions/runs/43749649506)
+bestanden. Lokal: 477 Testfälle (474 bestanden, drei bestehende Skips), fünf
+Analysetests und alle 19 vorhandenen Archivprüfungen erfolgreich. Die folgende
+Publikationsnotiz ändert keine Messwerte; sie benötigt vor Mainintegration
+ebenfalls erfolgreiche CI auf ihrem exakten Commit.

@@ -1,5 +1,5 @@
 {
-  "status": "READY_FOR_BRANCH_CI",
+  "status": "ARCHIVE_VERIFIED_AND_PUSHED",
   "base_commit": "8035085622ec3cd93fa93e13e33751e1ce2bccea",
   "evidence_class": "TECHNICAL_HANDOFF_NO_NEW_EMPIRICAL_RESULT",
   "local_tests": {
@@ -103,8 +103,37 @@
       "MODEL_RCA output explicit"
     ]
   },
-  "archive_commit": null,
-  "archive_ci": null,
+  "archive_commit": "3f51379bd3f9a9ca5eec2798f874cbe35bcb3c8f",
+  "archive_ci": {
+    "run_id": 43749649506,
+    "head_sha": "3f51379bd3f9a9ca5eec2798f874cbe35bcb3c8f",
+    "conclusion": "success",
+    "url": "https://github.com/Matchekk/FM-27-Research/actions/runs/43749649506"
+  },
   "main_integration_policy": "Only fast-forward after successful exact-commit GitHub CI and content/provenance review",
-  "published_scope": "Technical access report, three unstarted contracts, null status ledger and empty capture template; no new FM27 scientific measurements"
+  "published_scope": "Technical access report, three unstarted contracts, null status ledger and empty capture template; no new FM27 scientific measurements",
+  "archive_remote_branch": "origin/codex/player-development-003",
+  "integration_rule": "The following documentation-only publication commit must also pass exact-commit CI before fast-forward to origin/main. Verify published HEAD with git; its own SHA cannot be embedded in itself.",
+  "archive_git_blob_sha256": {
+    "FINDINGS.md": "48861d3d38ca5528303fac773ae84a2cc68f5199958f828db8c344a412115805",
+    "NEXT_STEPS.md": "1d6f0ba96a8bc03ac1f8bb2475d1f48a5bb0c804e08ff05a94d9038cef0f1723",
+    "README.md": "9ba9c96db9b8614deb737ffb09fc7f4291581fdb39ae3620e7d1f43f054eaae6",
+    "RESEARCH_LOG.md": "bcde95b5bb89db97888bbd71a3fb3079464f4935c9dcd01232b240824fde2978",
+    "data/player-development-003/comparator-smoke.json": "a26641c13ef81edab37c212d1c0efeaec0dc60f190137a869eb63afe7a3a8f5d",
+    "data/player-development-003/editor-capture.template.jsonl": "08191428d1c800804a8d1d20e80b9683767683b6af24044234c93cefc8438d02",
+    "data/player-development-003/execution-ledger.jsonl": "e4c4cc7a6a7601549772369d0f6b67d41cc65f17fabd12e167cb5866ff0de3e7",
+    "data/player-development-003/status.json": "7cb825f005df85df644a85ee620f2ee39650a5a7b5b7194570c326bc6ad757c9",
+    "docs/player-development-003/CAPTURE_PROTOCOL.md": "f77435823fd588dc630a2d696ae771935e545f725b2678294edf22bc3c962516",
+    "docs/player-development-003/CA_EXEMPT_ATTRIBUTES.md": "abf70461401fac0763743a54f6078d90e32311349479399d183e5b844334da07",
+    "docs/player-development-003/EDITOR_GOLD_VALIDATION.md": "0e6e29cd272d622b16647e5405094fa98b84dcff38e5b67d035d55865756bd6a",
+    "docs/player-development-003/NEXT_STEPS.md": "dda69d458cdf51e784a4ec2a39d78ffd833de149aa78e4fb485f1e72c42a961a",
+    "docs/player-development-003/RESEARCH_REPORT.md": "c1690375243d455ba9595f9c603f82d5a3e5a8bce1249b18716e1ca86b5e3ee1",
+    "docs/player-development-003/TRAINING_PILOT.md": "a9fdbafc1d61fe3c19f7918343f0e75a3a070b1b4e31691b186cefd2fde65254",
+    "docs/player-development-003/publication.json": "d455942815cc70796b170fc6cc4bc719c40b7b1f917c8fc508b2554cb917a975",
+    "docs/player-development-003/source-refresh.json": "57e8b0b543dcdaa9e47eb6b2c6bc5bf83b612d5d3b058a964e64d04405ae99ff",
+    "docs/player-development-003/tool-versions.json": "aef3a8b3c2121473853e059cc6384ffb65a848cbe8cbc9ae7ffcbed4233cef9f",
+    "experiments/CA-003-GOLD.md": "a6f37c6f38d28a80dde1410ccfc65725fa014a5c60f4f6168a6d674be6adb88e",
+    "experiments/CA-004-EXEMPT.md": "da70829d71d174cab58725edf5bb2a129efc899b6f5cb3d3798363de2ce9fc46",
+    "experiments/TRAIN-004-QUICKNESS.md": "657c542ec14f16537af46bfc8dcaf54628e9c0257098fe4f739c53e7d360ba71"
+  }
 }
