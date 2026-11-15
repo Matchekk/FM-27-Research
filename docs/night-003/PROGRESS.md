@@ -19,6 +19,14 @@
 |09:26|Erste Ergebnis-/zweite Freigabe-CI erfolgreich|a58e11d/CI43699039037:445Tests lokal bestanden,drei bedingteSkips;publizierte4.096Messungen undzweiteTechnik geprüft.|
 |09:27|Zweite Hauptserie gestartet|4.096neueMatches/1.024Blöcke;Quellenstand unverändert,Missionsrest über4.200s. Nur aktive Sitzung gemäß Nutzerantwort.|
 |09:29:50|Vollständige separate Statistikprüfung Studie1|Alle sieben formalen Welch-Schätzer einschließlich sechsSekundärtests und unabhängigerHolm6-Rechnung stimmen überein.|
+|09:43–09:55|Bedingte dritte Frage vorbereitet|AMC→AMCL allein, Rolle/ST/OOP und alle Startzustände gleich.2.048Matches/512Blöcke geplant,516neueSeeds reserviert,0Nativecalls.3gezielteTests und synthetische Nachrechnung bestanden;8Inputs geprüft mit genau0/1Recorddiff.|
+
+Dritte Nativeadmission ausschließlich nach vollständiger zweiter Studie:
+mindestens2.700s Missionsrest vor Technik,2.400s vor Main. Keine Anpassung
+nach Kenntnis zweiter Leistungsdaten und keine Verlängerung der Frist.
+Die separate Skalarprüfung wurde um den neuen2.048er-Plan ergänzt; alle sieben
+bereits veröffentlichten Schätzer der ersten Studie bleiben numerisch unverändert
+und wurden unter dem neuen Prüfsourcenhash erneut reproduziert.
 
 Die [zweite Vorregistrierung](../../experiments/N3-SHARPPOS-C1.md) wurde ohne
 Einblick in wissenschaftliche Ergebnisse der ersten Serie vorbereitet. Eigene

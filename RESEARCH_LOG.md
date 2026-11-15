@@ -627,3 +627,12 @@ Der Nutzer begrenzt die Mission auf diese aktive Sitzung. Keine Hintergrund-
 Fortsetzung eingeplant; eigene feste Missionsfrist11:11:21UTC bleibt bindend.
 [Erster Ergebnisbericht](experiments/N3-SHARPSTRUCT-C1-results.md) ·
 [zweite Technikfreigabe](docs/night-003/POSITIONAL_TECHNICAL_RELEASE.md).
+
+Während der zweiten Hauptserie vor deren Ergebniskenntnis wurde eine dritte
+eigenständige Komponentenfrage vorregistriert:ein PositionsrecordAMC→AMCL,
+gleiche Rolle, unveränderter ST/OOP und raw10000.2.048Matches/512Blöcke geplant;
+Vorbereitungsdiff0/1Record in allen Zellen geprüft,516neueSeeds reserviert,
+0Nativecalls. Neue native Phasen erst nach vollständiger zweiter Auswertung
+und festen Restzeitgates2.700sTechnik/2.400sMain, ohne Fristverlängerung.
+Die abgeschlossenen Paketstudien werden nicht wiederholt.
+[Vertrag](experiments/N3-AMCSHIFT-C1.md) · [Quellen](docs/night-003/LITERATURE_AMC.md).

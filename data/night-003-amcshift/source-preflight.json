@@ -1,0 +1,34 @@
+{
+  "experiment_id": "N3-AMCSHIFT-C1",
+  "decision": "NOVEL_HYPOTHESIS",
+  "checked_utc": "2026-11-15T09:53:05.4892051Z",
+  "source_commit": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+  "overlap_ids": [
+    "MAC-07",
+    "MAC-07B",
+    "MAC-08",
+    "MAC-17",
+    "MAC-19",
+    "TACT-003-STLESS-R0",
+    "N3-SHARPSTRUCT-C1"
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/07b-tactic-league-18.md",
+      "sha256": "2190a27f19995e2725bfe9c5615e30c7a57c6dce73948118f122e3edd395d862"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/17-positions-in-and-out-of-possession.md",
+      "sha256": "1a27d13eddc6379af516366d286a4217300ff3bfe44b9976fc8417f7dc2fca04"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/08-tactical-tweaks.md",
+      "sha256": "72411cd590ea5bf7c867c0ae387ab4bfb5ce1761605c8a1770aab52fc382c6bb"
+    }
+  ],
+  "findings_sha256": "93f81006108571ac55e507437e77c7508e306435067e5fc1a2f961cbd4a9449c",
+  "atlas_sha256": "f0b3bd49cb779aadf85a8a1d46b78bcb848e35daade09099c90ceaec01b73d52",
+  "index_sha256": "7c9215dbf2c232b982d7572c246b810240030c5e931892598c563ac4d886fbc3",
+  "second_study_outcomes_used": false,
+  "conditional_native_window": "technical >=2700s; main >=2400s before unchanged11:11:21UTC"
+}

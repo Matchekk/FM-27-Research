@@ -16,6 +16,7 @@ ROOT=Path(__file__).resolve().parents[1]
 CONFIG={
     'structure':('night-003-sharpstruct','N3-SHARPSTRUCT-C1',('A','B','C','D'),(-1,1,1,-1),256),
     'positions':('night-003-sharppos','N3-SHARPPOS-C1',('ATTACK_LOW','DEFENCE_LOW'),(-1,1),512),
+    'amc':('night-003-amcshift','N3-AMCSHIFT-C1',('BASE','AMC_LEFT'),(-1,1),256),
 }
 METRICS=('xgd','points','gf','ga','xgf','xga')
 CONTEXTS=('high_press','deep_block')
@@ -49,7 +50,7 @@ def review(study):
     folder,identity,arms,weights,n=CONFIG[study];p=ROOT/'data'/folder
     data=[json.loads(s) for s in (p/'main.jsonl').read_text(encoding='utf8').splitlines()]
     plan={j['key']:j for j in read(p/'main-plan.json')};expected=read(p/'effects.json')
-    require(len(data)==len(plan)==4096,'All4096 observations required')
+    require(len(data)==len(plan)==4*n*len(arms),'Entire declared match sample required')
     seen=set();blocks=defaultdict(dict)
     for row in data:
         key=row['job_id'];require(key in plan and key not in seen,'Unexpected/duplicate job');seen.add(key);j=plan[key]

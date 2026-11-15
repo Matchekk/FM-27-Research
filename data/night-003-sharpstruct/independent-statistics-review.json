@@ -83,6 +83,6 @@
   },
   "formal_estimands_checked": 7,
   "measurement_lf_sha256": "cc7239ebdf45e203870939d047ad472a3d14652ff57a7385565e0cc1169fe7f3",
-  "review_source_lf_sha256": "0d4539aca1a7dc3b28bf4a8686a85b8ac36a705bcca3bb36fccba0e56f3baaf1",
+  "review_source_lf_sha256": "4e3f4251710c5cd0607e705f7a53f0d500533fa90d8cda2f0bc447df7497e47d",
   "method": "Separate scalar score/xG reconstruction, fixed paired blocks, Welch moments and independent Holm6; same analyst, no independent-person claim. Bootstrap checked by frozen reproducibility tests separately."
 }

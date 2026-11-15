@@ -17,6 +17,7 @@ Wechselwirkung, keine erneute Entdeckung des bekannten Schärfe-Haupteffekts.
 |---|---|---|
 | N3-SHARPSTRUCT-C1: Schärfe×IP bei fester OOP | 4.096 / 512 | vollständig, Rohbelege geprüft, beide Rechenwege stimmen überein |
 | N3-SHARPPOS-C1: marginaler Nutzen zweier Positionsgruppen | 4.096 / 1.024 geplant | Main läuft seit09:27UTC nach eigener Technik16+1/achtA/A und erfolgreicher CI; noch keine Leistungsanalyse |
+| N3-AMCSHIFT-C1: isolierte AMC→AMCL-Zuweisung | 2.048 / 512 geplant | offline vorbereitet; 0 native Matches, nur bei ausreichendem Rest nach Studie2 |
 
 Erste Studie zusätzlich32 technische Vollmatches/16 A/A und eine erwartete
 Negativabweisung. Keine unerwarteten nativen Fehler, Ausschlüsse, Retries,

@@ -1,0 +1,30 @@
+{
+  "n_per_context": 256,
+  "blocks": 512,
+  "matches": 2048,
+  "anchors": {
+    "observed": {
+      "sd": [
+        0.8762679151483551,
+        0.8264816535842033
+      ],
+      "full95width": 0.14790568066404708,
+      "power": {
+        "0.15": 0.9781740503853285,
+        "0.2": 0.9995859143536449
+      }
+    },
+    "joint95_SD_upper": {
+      "sd": [
+        0.9595390176242392,
+        0.9050216038440466
+      ],
+      "full95width": 0.16196104989350937,
+      "power": {
+        "0.15": 0.952762772637616,
+        "0.2": 0.9980303667098387
+      }
+    }
+  },
+  "source": "Completed N3-SHARPSTRUCT IP_HIGH side-averaged full-package contrast,256seeds/context. Variance proxy for a new isolated position intervention; no AMC-only outcomes used."
+}
