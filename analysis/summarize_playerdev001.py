@@ -3,7 +3,7 @@
 No host calls; invoke only after the full frozen analysis and scalar review.
 """
 from collections import Counter
-from datetime import datetime,timezone
+from datetime import datetime,timedelta,timezone
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -40,11 +40,12 @@ def components(effects,review):
 def execution_summary():
     budget=read(LOC/'budget.json')
     if budget['active'] or budget['halted']:raise ValueError('Unreconciled/halted budget; no completed-result summary')
-    accounting=[]
+    accounting=[];missing={}
     for phase in ('technical','main'):
         plan=read(PUB/(phase+'-plan.json'))
         data=[json.loads(line) for line in (PUB/(phase+'.jsonl')).read_text(encoding='utf8').splitlines()]
         index={r['job_id']:r for r in data}
+        missing[phase]=dict(Counter(k for row in data for k in row.get('descriptive_missing_reasons',{})))
         if len(index)!=len(plan) or set(index)!={j['key'] for j in plan}:raise ValueError('Incomplete/duplicate phase')
         for job in plan:
             row=index[job['key']]
@@ -56,6 +57,9 @@ def execution_summary():
     summaries={phase:read(PUB/(phase+'-summary.json')) for phase in ('technical','main')}
     if not all(s['all_cleanup_confirmed'] and s['passed'] for s in summaries.values()):raise ValueError('Cleanup/gate missing')
     if (ROOT/'local/global-native/native-execution.lease.json').exists():raise ValueError('Native lease still active')
+    phase_end=max(datetime.fromisoformat(o['start_utc'])+timedelta(seconds=o['elapsed_seconds']) for o in operations)
+    within=phase_end<=datetime.fromisoformat(budget['wall_deadline_utc'])
+    if not within:raise ValueError('Phase exceeded immutable study window')
     provenance=dict(experiment_id='PD-ROLE-001',scientific_series_complete=True,counts=dict(Counter(r['status'] for r in accounting)),
         native_calls=4129,full_simulations=4128,technical_full_matches=32,main_matches=4096,independent_blocks=512,
         expected_negative_rejections=1,failures=0,retries=0,replacement_seeds=0,exclusions=0,unbegun_jobs=0,
@@ -63,8 +67,10 @@ def execution_summary():
         charged_supervised_seconds=budget['charged_seconds'],charged_seconds_limit=budget['limit_seconds'],
         fixed_window_start_utc=budget['wall_start_utc'],fixed_deadline_utc=budget['wall_deadline_utc'],
         window_limit_seconds=budget['wall_limit_seconds'],operations=operations,
+        within_fixed_deadline=within,elapsed_phase_window_seconds=(phase_end-datetime.fromisoformat(budget['wall_start_utc'])).total_seconds(),
         peak_inflight_claims=max(s['peak_inflight_claims'] for s in summaries.values()),engine_pid_peak_measured=False,
         all_cleanup_confirmed=True,global_native_lease_present=False,
+        descriptive_missing_counts=missing,
         private_original_evidence_bytes=sum(p.stat().st_size for phase in ('technical','main') for p in (LOC/phase).rglob('*') if p.is_file()),
         evidence='Second-pass raw/input re-audit after all calls is enforced by the frozen supervisor; private originals retained.',
         exported_utc=datetime.now(timezone.utc).isoformat())

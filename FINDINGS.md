@@ -250,3 +250,23 @@ Attributverbrauch noch nichtlineare Kosten oder Matchleistung proCA.
 [Protokoll](experiments/PD-CA-001.md) ·
 [Ergebnis und Grenzen](docs/player-development-001/CA_EFFICIENCY.md) ·
 [Messauswertung](data/player-development-001-ca/profile-diagnostic.json).
+
+## 15.11.2026 – PD-ROLE-001, Rollenpaket×JR im identischen ST
+
+FM27 27.0.1+2503222;4.096Hauptmatches/512unabhängige Seedblöcke.
+`(DLF80−DLF60)−(CF80−CF60)` auf xGD **+0,031461**,
+95-%-KI **[−0,081658;+0,144580]**,p=0,585028; Bootstrap
+[−0,081990;+0,143865]. Innerhalb der vorab±0,15; große mittlere Interaktionen
+eingegrenzt, kleinere weiter möglich. Volle Breite0,226238 verfehlt Ziel≤0,20.
+Kein Holm6-Sekundärnachweis; tatsächliche Punkte+0,084961
+[−0,075594;+0,245516],Holm-p1,0. Keine Siegerauswahl aus deskriptiven Ansichten.
+
+32Technikmatches/16exakteA/A+Exit108 bestanden; alle nativen Eingaben und
+Originalbelege nach Cleanup erneut geprüft.0Ausfälle/Retry/Ersatz/Ausschlüsse/
+Missing;4.096ist die vollständige wissenschaftliche Programmobergrenze.
+Ein synthetisches Fixture,zwei feste Gegner,omnipotente Positionsratings,
+konstantes OOP und nominaleCA120. Rollenpaket, keine reale CA-Gleichheit,
+Karriereentwicklung, universelle Rollen-/Attributrangliste oder Meta-Score-
+Prognosevalidierung. [Ergebnisse](experiments/PD-ROLE-001-results.md) ·
+[Messungen](data/player-development-001-role/main.jsonl) ·
+[Skalarprüfung](data/player-development-001-role/independent-statistics-review.json).

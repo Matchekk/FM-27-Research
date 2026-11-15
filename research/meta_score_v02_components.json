@@ -1,0 +1,166 @@
+{
+  "model_id": "FM27_META_SCORE_2_RESEARCH_COMPONENTS",
+  "status": "NO_COMBINED_SUCCESS_SCORE",
+  "current_performance": {
+    "status": "MEASURED_LOCAL_ROLE_ATTRIBUTE_CONTRAST_NOT_PLAYER_FORECAST",
+    "build": "27.0.1+2503222",
+    "roles": [
+      "CentreForward",
+      "DeepLyingForward"
+    ],
+    "intervention": "One ST raw JR60->80; OOP fixed",
+    "primary_role_attribute_interaction": {
+      "mean": 0.03146073387089843,
+      "se": 0.05757789153598985,
+      "df": 509.9976022135941,
+      "ci": [
+        -0.08165831129876383,
+        0.14457977904056069
+      ],
+      "p": 0.5850278896726624,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.08198958329369387,
+        0.14386482678224835
+      ],
+      "n_seed_blocks": 512,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.11737188907792967,
+          "sd": 1.301425716398121
+        },
+        "deep_block": {
+          "mean": -0.054450421336132815,
+          "sd": 1.3042506755518182
+        }
+      },
+      "practical_reference": 0.15,
+      "full_ci_width": 0.22623809033932452,
+      "excludes_effects_outside_point15": true
+    },
+    "conditional_attribute_effects_descriptive": {
+      "JR_CF": {
+        "mean": 0.112286473725,
+        "se": 0.04073928077321276,
+        "df": 509.8002650753675,
+        "ci": [
+          0.032248933927936124,
+          0.19232401352206388
+        ],
+        "p": 0.006056793085213011,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.03280345831205813,
+          0.1924312877565527
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.04002097999843751,
+            "sd": 0.9126559360009322
+          },
+          "deep_block": {
+            "mean": 0.1845519674515625,
+            "sd": 0.9309031508975427
+          }
+        }
+      },
+      "JR_DLF": {
+        "mean": 0.14374720759589843,
+        "se": 0.03979428764391734,
+        "df": 509.97390402877767,
+        "ci": [
+          0.06556629129302091,
+          0.22192812389877595
+        ],
+        "p": 0.0003335943974966046,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.06571273604525145,
+          0.22212841373452383
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.15739286907636718,
+            "sd": 0.8972155478688377
+          },
+          "deep_block": {
+            "mean": 0.1301015461154297,
+            "sd": 0.9036568140878138
+          }
+        }
+      }
+    },
+    "actual_ca_efficiency": null,
+    "player_holdout_prediction_accuracy": null
+  },
+  "development_potential": {
+    "status": "UNKNOWN_NO_LONGITUDINAL_HOLDOUT",
+    "ca_after_one_season": null,
+    "ca_after_two_seasons": null,
+    "probability_reaching_pa": null,
+    "calibrated_distribution": null
+  },
+  "training_efficiency": {
+    "status": "UNKNOWN_NO_VALIDATED_CAREER_EXPOSURE",
+    "expected_role_match_gain": null,
+    "ca_gain": null,
+    "injury_risk": null
+  },
+  "baseline_comparison": {
+    "meta_score_v01": "Preserved; uncalibrated position index",
+    "attribute_mean": "Not outcome calibrated",
+    "ca": "Nominal CA held constant120 in this experiment",
+    "public_position_weights": "Different sources/fixtures; not a held-out player validation",
+    "verified_improvement_over_baselines": false,
+    "mae": null,
+    "calibration": null
+  },
+  "limits": [
+    "One bundled fixture, two fixed known opponents, omnipotent synthetic position ratings",
+    "Role package and one raw dose only; not a global attribute or role ranking",
+    "No genuine equal-CA optimization, career prediction or training-causality calibration"
+  ],
+  "ca_export_proxy_diagnostic": {
+    "status": "EXPLORATORY_RETROSPECTIVE_PUBLIC_EXPORT_DIAGNOSTIC",
+    "players": 109,
+    "train_players": 80,
+    "holdout_players": 29,
+    "coefficients": {
+      "intercept": -99.46507543481462,
+      "slope": 0.16517863201236166
+    },
+    "holdout": {
+      "mae": 1.6064074089115492,
+      "rmse": 2.0096787349218905,
+      "bias": 0.8454890754270683,
+      "conditional95_intervals": {
+        "mae": [
+          1.1825031432707074,
+          2.063612497971499
+        ],
+        "rmse": [
+          1.5027698131050868,
+          2.4815932513273387
+        ],
+        "bias": [
+          0.17784433722550613,
+          1.5062194297991929
+        ]
+      }
+    },
+    "observed_ca_range": [
+      15.0,
+      118.0
+    ],
+    "actual_marginal_costs_identified": false,
+    "limit": "Public GK export, retrospective split, unverified game provenance; no outfield, elite, role or PA transfer"
+  }
+}

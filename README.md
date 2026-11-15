@@ -2,8 +2,10 @@
 
 > **PLAYER-DEVELOPMENT-001 (15.11.):** Neuer Forschungsbereich zu CA-Kosten,
 > Entwicklung und Training.109öffentliche GK-Exportprofile explorativ mit
-> Spielertrennung geprüft: CA-Proxy-Holdout-MAE1,606 gegenüber4,630 unge­wichtet.
-> Keine tatsächliche Kostenfunktion. Neue CF/DLF×JR-Hauptserie läuft.
+> Spielertrennung geprüft: CA-Proxy-Holdout-MAE1,606 gegenüber4,630 ungewichtet.
+> Keine tatsächliche Kostenfunktion. CF/DLF×JR vollständig:4.096Matches,
+> Interaktion+0,031xGD[−0,082;+0,145]; große mittlere Unterschiede im
+> getesteten Kontext eingegrenzt, kleinere weiterhin offen.
 > [Programmbericht](docs/player-development-001/RESEARCH_REPORT.md) ·
 > [Versuchsvertrag](experiments/PD-ROLE-001.md).
 

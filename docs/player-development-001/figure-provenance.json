@@ -1,0 +1,10 @@
+{
+  "measurement": "data/player-development-001-role/effects.json",
+  "source_sha256": "66110f0173da69f87d6fb547c76951e750ef14b705375708ff1e637445ac3a89",
+  "renderer_sha256": "0079a55afbf751cb293ebdfa107b2e71c88f469b9c3110a1f8d94f38a76c5036",
+  "files": {
+    "svg": "c2ae185e2b611e6596662052648190411c4798dadf5fd6b9777a240ac2e13222",
+    "png": "934c9bb3fac4c9dbb6414ed734842ef37b4e965b1b8b1fd2129b1aef05275640"
+  },
+  "warning": "Conditional effects share blocks and are descriptive; no player-outcome or CA calibration."
+}

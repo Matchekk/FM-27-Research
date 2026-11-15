@@ -692,3 +692,22 @@ komplexe BaselineMAE4,630. MAE-Abstand−3,024 mit bedingtem95-%-Bootstrap
 [−4,139;−1,908]. NumPy-Löser bestätigt skalare OLS; zwei gezielte Tests bestanden.
 Kein neues unabhängiges Gesamtsample, keine Gold-Build-/Saveprovenienz, kein
 CA-Grenzpreis oder PA-Modell behauptet. Hauptserie unverändert parallel aktiv.
+
+## PD-ROLE-001 – wissenschaftliche Hauptserie abgeschlossen
+
+4.096gültigeHauptmatches/512unabhängigeKontext-Seedblöcke. Rollen×JR:
++0,031461xGD,95-%-KI[−0,081658;+0,144580],p0,585028;
+Bootstrap[−0,081990;+0,143865]. Intervall innerhalb vorab±0,15, aber volle
+Breite0,226238 verfehlt gewünschte≤0,20. Keine Ergebnisverlängerung und kein
+Holm6-Sekundärnachweis. Kleine mittlere oder größere einzelne Kontexteffekte
+bleiben möglich; kein Rollen-/Attributsieger oder reales CA-Optimierungsmodell.
+
+32Technikmatches/16exakteA/A+Exit108;4.129Aufrufe vollständig abgerechnet,
+0Ausfälle/Retry/Ersatz/Ausschlüsse/Missing/unbegonneneJobs. NativeCleanup und
+zweiter Originalbelegpass bestanden. Alle sieben formalen Welchschätzer/Holm6
+getrennt skalar nachgerechnet; gleicher Analyst.4.096scientificCap verbraucht,
+keine weiteren Läufe.3441,182s beaufsichtigte Phasenzeit, private2,240GB
+Rohbelege erhalten, Lease frei.466Tests:463bestanden/3erwarteteSkips sowie
+5Analysetests bestanden. Ergebnisfigur visuell geprüft. Sechs Fachberichte,
+separates Komponentenmodell und getesteter Modellcode vervollständigt.
+[Forschungsbericht](docs/player-development-001/RESEARCH_REPORT.md).

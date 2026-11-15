@@ -1,0 +1,956 @@
+{
+  "experiment_id": "PD-ROLE-001",
+  "n_matches": 4096,
+  "independent_blocks": 512,
+  "primary": {
+    "mean": 0.03146073387089843,
+    "se": 0.05757789153598985,
+    "df": 509.9976022135941,
+    "ci": [
+      -0.08165831129876383,
+      0.14457977904056069
+    ],
+    "p": 0.5850278896726624,
+    "alpha": 0.05,
+    "bootstrap_ci": [
+      -0.08198958329369387,
+      0.14386482678224835
+    ],
+    "n_seed_blocks": 512,
+    "n_scenarios": 2,
+    "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+    "context": {
+      "high_press": {
+        "mean": 0.11737188907792967,
+        "sd": 1.301425716398121
+      },
+      "deep_block": {
+        "mean": -0.054450421336132815,
+        "sd": 1.3042506755518182
+      }
+    },
+    "practical_reference": 0.15,
+    "full_ci_width": 0.22623809033932452,
+    "excludes_effects_outside_point15": true
+  },
+  "secondary": {
+    "INTERACTION:points": {
+      "mean": 0.0849609375,
+      "se": 0.08172025310818859,
+      "df": 502.97654678618284,
+      "ci": [
+        -0.07559415948233306,
+        0.24551603448233306
+      ],
+      "p": 0.29899933132236056,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.076171875,
+        0.244140625
+      ],
+      "n_seed_blocks": 512,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.123046875,
+          "sd": 1.7364308937514645
+        },
+        "deep_block": {
+          "mean": 0.046875,
+          "sd": 1.955322048595957
+        }
+      },
+      "p_holm": 1.0
+    },
+    "INTERACTION:gf": {
+      "mean": 0.1103515625,
+      "se": 0.0749905200028226,
+      "df": 499.2026390835253,
+      "ci": [
+        -0.036984370787164045,
+        0.25768749578716404
+      ],
+      "p": 0.14177518624557378,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.0390625,
+        0.2578125
+      ],
+      "n_seed_blocks": 512,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.0546875,
+          "sd": 1.5671059563511884
+        },
+        "deep_block": {
+          "mean": 0.166015625,
+          "sd": 1.817339507640059
+        }
+      },
+      "p_holm": 0.8177697128907555
+    },
+    "INTERACTION:ga": {
+      "mean": -0.0029296875,
+      "se": 0.06978176494374323,
+      "df": 507.45890426939286,
+      "ci": [
+        -0.14002641589692089,
+        0.13416704089692089
+      ],
+      "p": 0.9665283103785349,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.13671875,
+        0.1357421875
+      ],
+      "n_seed_blocks": 512,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.09375,
+          "sd": 1.6338934613790628
+        },
+        "deep_block": {
+          "mean": 0.087890625,
+          "sd": 1.5220889424650945
+        }
+      },
+      "p_holm": 1.0
+    },
+    "INTERACTION:xgf": {
+      "mean": 0.005950714792773443,
+      "se": 0.03985713303495584,
+      "df": 504.98953259864726,
+      "ci": [
+        -0.07235550783887224,
+        0.08425693742441911
+      ],
+      "p": 0.8813756331419074,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.07188079755766358,
+        0.08404924276896221
+      ],
+      "n_seed_blocks": 512,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.041646935341601556,
+          "sd": 0.8557691871267997
+        },
+        "deep_block": {
+          "mean": -0.02974550575605467,
+          "sd": 0.9457147230644624
+        }
+      },
+      "p_holm": 1.0
+    },
+    "INTERACTION:xga": {
+      "mean": -0.025510019078125,
+      "se": 0.03956006040507282,
+      "df": 493.74857143057136,
+      "ci": [
+        -0.10323684236816115,
+        0.05221680421191115
+      ],
+      "p": 0.5193285713545004,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.10171529966709475,
+        0.05111908492540276
+      ],
+      "n_seed_blocks": 512,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.07572495373632812,
+          "sd": 0.9729593048676204
+        },
+        "deep_block": {
+          "mean": 0.024704915580078115,
+          "sd": 0.809881800898501
+        }
+      },
+      "p_holm": 1.0
+    },
+    "CONTEXT_DIFFERENCE:xgd": {
+      "mean": 0.17182231041406248,
+      "se": 0.1151557830719797,
+      "df": 509.9976022135941,
+      "ci": [
+        -0.05441577992526203,
+        0.398060400753387
+      ],
+      "p": 0.13629495214845924,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.05327675353140139,
+        0.39663939578858365
+      ],
+      "n_seed_blocks": 512,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "p_holm": 0.8177697128907555
+    }
+  },
+  "descriptive_only": {
+    "JR_CF": {
+      "xgd": {
+        "mean": 0.112286473725,
+        "se": 0.04073928077321276,
+        "df": 509.8002650753675,
+        "ci": [
+          0.032248933927936124,
+          0.19232401352206388
+        ],
+        "p": 0.006056793085213011,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.03280345831205813,
+          0.1924312877565527
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.04002097999843751,
+            "sd": 0.9126559360009322
+          },
+          "deep_block": {
+            "mean": 0.1845519674515625,
+            "sd": 0.9309031508975427
+          }
+        }
+      },
+      "points": {
+        "mean": 0.0439453125,
+        "se": 0.05776097721313538,
+        "df": 508.7423357069287,
+        "ci": [
+          -0.06953409365949566,
+          0.15742471865949564
+        ],
+        "p": 0.4471211415294626,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.068359375,
+          0.1591796875
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.001953125,
+            "sd": 1.339079319997549
+          },
+          "deep_block": {
+            "mean": 0.08984375,
+            "sd": 1.27407574150756
+          }
+        }
+      },
+      "gf": {
+        "mean": 0.1337890625,
+        "se": 0.053950210688835265,
+        "df": 507.3858285033707,
+        "ci": [
+          0.02779575702275315,
+          0.23978236797724684
+        ],
+        "p": 0.013466810750688224,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.0283203125,
+          0.240234375
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.0703125,
+            "sd": 1.1761258686142098
+          },
+          "deep_block": {
+            "mean": 0.197265625,
+            "sd": 1.2638070185542802
+          }
+        }
+      },
+      "ga": {
+        "mean": 0.029296875,
+        "se": 0.050199864667792436,
+        "df": 500.88540144642434,
+        "ci": [
+          -0.06933137192750526,
+          0.12792512192750527
+        ],
+        "p": 0.5597490193594552,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.0693359375,
+          0.1259765625
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.037109375,
+            "sd": 1.2100841988813642
+          },
+          "deep_block": {
+            "mean": 0.021484375,
+            "sd": 1.0565052191949997
+          }
+        }
+      },
+      "xgf": {
+        "mean": 0.11550099095947267,
+        "se": 0.02876793390783594,
+        "df": 509.81222474623985,
+        "ci": [
+          0.0589826999442274,
+          0.17201928197471794
+        ],
+        "p": 6.840425914384301e-05,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.059314695627543955,
+          0.17227234541837397
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.05999637941835938,
+            "sd": 0.6446674058563183
+          },
+          "deep_block": {
+            "mean": 0.17100560250058594,
+            "sd": 0.6571607213337668
+          }
+        }
+      },
+      "xga": {
+        "mean": 0.0032145172344726584,
+        "se": 0.02687190402809079,
+        "df": 504.4553012976392,
+        "ci": [
+          -0.04958011430758257,
+          0.056009148776527885
+        ],
+        "p": 0.904828849876533,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.05002365344075195,
+          0.05536306889179193
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.019975399419921866,
+            "sd": 0.6391210831889601
+          },
+          "deep_block": {
+            "mean": -0.01354636495097655,
+            "sd": 0.5752858841867845
+          }
+        }
+      }
+    },
+    "JR_DLF": {
+      "xgd": {
+        "mean": 0.14374720759589843,
+        "se": 0.03979428764391734,
+        "df": 509.97390402877767,
+        "ci": [
+          0.06556629129302091,
+          0.22192812389877595
+        ],
+        "p": 0.0003335943974966046,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.06571273604525145,
+          0.22212841373452383
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.15739286907636718,
+            "sd": 0.8972155478688377
+          },
+          "deep_block": {
+            "mean": 0.1301015461154297,
+            "sd": 0.9036568140878138
+          }
+        }
+      },
+      "points": {
+        "mean": 0.12890625,
+        "se": 0.05767068049991188,
+        "df": 504.9363634525961,
+        "ci": [
+          0.015602207660294048,
+          0.24221029233970595
+        ],
+        "p": 0.025839838023613934,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.0146484375,
+          0.2421875
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.12109375,
+            "sd": 1.2378762549419144
+          },
+          "deep_block": {
+            "mean": 0.13671875,
+            "sd": 1.3687189427043256
+          }
+        }
+      },
+      "gf": {
+        "mean": 0.244140625,
+        "se": 0.050015884568946234,
+        "df": 502.04696800173076,
+        "ci": [
+          0.14587439654682668,
+          0.34240685345317334
+        ],
+        "p": 1.4184337361311214e-06,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.1455078125,
+          0.341796875
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.125,
+            "sd": 1.058115231502342
+          },
+          "deep_block": {
+            "mean": 0.36328125,
+            "sd": 1.2008409532898348
+          }
+        }
+      },
+      "ga": {
+        "mean": 0.0263671875,
+        "se": 0.050079066274209584,
+        "df": 509.25833534791843,
+        "ci": [
+          -0.07201980740721822,
+          0.12475418240721822
+        ],
+        "p": 0.5987623322742486,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.0703125,
+          0.1259765625
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.056640625,
+            "sd": 1.1545794768582858
+          },
+          "deep_block": {
+            "mean": 0.109375,
+            "sd": 1.1113275932900448
+          }
+        }
+      },
+      "xgf": {
+        "mean": 0.1214517057522461,
+        "se": 0.02729835013875575,
+        "df": 495.4817563837364,
+        "ci": [
+          0.067816908980545,
+          0.1750865025239472
+        ],
+        "p": 1.0659847458162077e-05,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.06852815650770752,
+          0.17532073742672116
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.10164331475996094,
+            "sd": 0.5623445691031352
+          },
+          "deep_block": {
+            "mean": 0.14126009674453127,
+            "sd": 0.6684708699602919
+          }
+        }
+      },
+      "xga": {
+        "mean": -0.02229550184365234,
+        "se": 0.028132894064606367,
+        "df": 502.60967690649943,
+        "ci": [
+          -0.07756806054893366,
+          0.03297705686162897
+        ],
+        "p": 0.42843929876211784,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.07683429355987548,
+          0.03287401151304438
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.055749554316406255,
+            "sd": 0.6740661013749536
+          },
+          "deep_block": {
+            "mean": 0.011158550629101573,
+            "sd": 0.5967324801871805
+          }
+        }
+      }
+    },
+    "ROLE": {
+      "xgd": {
+        "mean": -0.07354873035205078,
+        "se": 0.028300574907591806,
+        "df": 509.1488355563761,
+        "ci": [
+          -0.129149007133843,
+          -0.017948453570258566
+        ],
+        "p": 0.009625092281803062,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.12874099711979248,
+          -0.018947198234658322
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.08968590178583985,
+            "sd": 0.6271409307254829
+          },
+          "deep_block": {
+            "mean": -0.05741155891826172,
+            "sd": 0.6533291161974913
+          }
+        }
+      },
+      "points": {
+        "mean": 0.01513671875,
+        "se": 0.037343392570325463,
+        "df": 506.95234636762285,
+        "ci": [
+          -0.05823014410536173,
+          0.08850358160536173
+        ],
+        "p": 0.685399631046859,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.05859375,
+          0.0888671875
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.0302734375,
+            "sd": 0.8115656156270652
+          },
+          "deep_block": {
+            "mean": 0.060546875,
+            "sd": 0.8771310708447037
+          }
+        }
+      },
+      "gf": {
+        "mean": -0.04931640625,
+        "se": 0.037184569211437174,
+        "df": 507.6292822581071,
+        "ci": [
+          -0.12237100295430926,
+          0.023738190454309263
+        ],
+        "p": 0.1853499886998955,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.12158203125,
+          0.0234375
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.140625,
+            "sd": 0.8121322697254504
+          },
+          "deep_block": {
+            "mean": 0.0419921875,
+            "sd": 0.8696654393554534
+          }
+        }
+      },
+      "ga": {
+        "mean": -0.01513671875,
+        "se": 0.03421975231931251,
+        "df": 509.4218911411584,
+        "ci": [
+          -0.08236592793156669,
+          0.05209249043156669
+        ],
+        "p": 0.6584319110378555,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.08154296875,
+          0.0517578125
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.0546875,
+            "sd": 0.7611507670600342
+          },
+          "deep_block": {
+            "mean": 0.0244140625,
+            "sd": 0.787238688943892
+          }
+        }
+      },
+      "xgf": {
+        "mean": -0.04534128193544922,
+        "se": 0.02093614746497223,
+        "df": 504.5432178529363,
+        "ci": [
+          -0.0864740474804159,
+          -0.004208516390482538
+        ],
+        "p": 0.03080238856503227,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.08594513148970337,
+          -0.005159810006654059
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.07586288094169921,
+            "sd": 0.448421656921514
+          },
+          "deep_block": {
+            "mean": -0.014819682929199236,
+            "sd": 0.4977549826722266
+          }
+        }
+      },
+      "xga": {
+        "mean": 0.02820744841660156,
+        "se": 0.020121057673004705,
+        "df": 509.5076050759295,
+        "ci": [
+          -0.011323002905746945,
+          0.06773789973895006
+        ],
+        "p": 0.16155790663475894,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.011459926226568605,
+          0.06704232967595335
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.013823020844140626,
+            "sd": 0.44815488587887026
+          },
+          "deep_block": {
+            "mean": 0.04259187598906249,
+            "sd": 0.4623102067101779
+          }
+        }
+      }
+    },
+    "JR": {
+      "xgd": {
+        "mean": 0.12801684066044922,
+        "se": 0.028157303938235897,
+        "df": 509.66611490271237,
+        "ci": [
+          0.07269817269844879,
+          0.18333550862244963
+        ],
+        "p": 6.821750428801675e-06,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.07371950342560668,
+          0.18341539053815306
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.09870692453740235,
+            "sd": 0.6289205630300756
+          },
+          "deep_block": {
+            "mean": 0.1573267567834961,
+            "sd": 0.6452291847319152
+          }
+        }
+      },
+      "points": {
+        "mean": 0.08642578125,
+        "se": 0.040762347785094875,
+        "df": 507.6230417905663,
+        "ci": [
+          0.006342105983603213,
+          0.1665094565163968
+        ],
+        "p": 0.034470619744599286,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.00634765625,
+          0.16748046875
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.0595703125,
+            "sd": 0.9533821173608362
+          },
+          "deep_block": {
+            "mean": 0.11328125,
+            "sd": 0.8902298530022853
+          }
+        }
+      },
+      "gf": {
+        "mean": 0.18896484375,
+        "se": 0.0360584587679299,
+        "df": 509.084914579517,
+        "ci": [
+          0.11812314197655327,
+          0.25980654552344673
+        ],
+        "p": 2.3496893431706552e-07,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.11865234375,
+          0.259765625
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.09765625,
+            "sd": 0.7984263781793215
+          },
+          "deep_block": {
+            "mean": 0.2802734375,
+            "sd": 0.8330263297850772
+          }
+        }
+      },
+      "ga": {
+        "mean": 0.02783203125,
+        "se": 0.036008276355786836,
+        "df": 504.79359599530954,
+        "ci": [
+          -0.04291251356515248,
+          0.09857657606515248
+        ],
+        "p": 0.43992303727995374,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.04296875,
+          0.09765625
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.009765625,
+            "sd": 0.8551472432265915
+          },
+          "deep_block": {
+            "mean": 0.0654296875,
+            "sd": 0.7722936369694051
+          }
+        }
+      },
+      "xgf": {
+        "mean": 0.11847634835585936,
+        "se": 0.0197293995694324,
+        "df": 506.54177632491206,
+        "ci": [
+          0.07971482026722138,
+          0.15723787644449735
+        ],
+        "p": 3.652045206424109e-09,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          0.0805416369710962,
+          0.15720670475769288
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": 0.08081984708916015,
+            "sd": 0.42758451080194315
+          },
+          "deep_block": {
+            "mean": 0.15613284962255858,
+            "sd": 0.4645026097552843
+          }
+        }
+      },
+      "xga": {
+        "mean": -0.009540492304589846,
+        "se": 0.019118835802929807,
+        "df": 509.15887964613546,
+        "ci": [
+          -0.04710200884249598,
+          0.028021024233316295
+        ],
+        "p": 0.6179877889841879,
+        "alpha": 0.05,
+        "bootstrap_ci": [
+          -0.046864827855988764,
+          0.027571144536248773
+        ],
+        "n_seed_blocks": 512,
+        "n_scenarios": 2,
+        "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+        "context": {
+          "high_press": {
+            "mean": -0.017887077448242188,
+            "sd": 0.4413139265507136
+          },
+          "deep_block": {
+            "mean": -0.0011939071609375026,
+            "sd": 0.42372705586356807
+          }
+        }
+      }
+    }
+  },
+  "arm_means": {
+    "high_press": {
+      "A": {
+        "xgd": -0.1874710428564453,
+        "points": 1.318359375,
+        "gf": 1.3203125,
+        "ga": 1.408203125,
+        "xgf": 1.1970386454000002,
+        "xga": 1.3845096882564454
+      },
+      "B": {
+        "xgd": -0.1474500628580078,
+        "points": 1.31640625,
+        "gf": 1.390625,
+        "ga": 1.4453125,
+        "xgf": 1.2570350248183595,
+        "xga": 1.4044850876763673
+      },
+      "C": {
+        "xgd": -0.33584288918125,
+        "points": 1.2265625,
+        "gf": 1.15234375,
+        "ga": 1.400390625,
+        "xgf": 1.1003522967875,
+        "xga": 1.43619518596875
+      },
+      "D": {
+        "xgd": -0.1784500201048828,
+        "points": 1.34765625,
+        "gf": 1.27734375,
+        "ga": 1.34375,
+        "xgf": 1.2019956115474608,
+        "xga": 1.3804456316523437
+      }
+    },
+    "deep_block": {
+      "A": {
+        "xgd": 0.25889767452539064,
+        "points": 1.482421875,
+        "gf": 1.376953125,
+        "ga": 1.17578125,
+        "xgf": 1.4422739561386722,
+        "xga": 1.1833762816132811
+      },
+      "B": {
+        "xgd": 0.44344964197695314,
+        "points": 1.572265625,
+        "gf": 1.57421875,
+        "ga": 1.197265625,
+        "xgf": 1.6132795586392576,
+        "xga": 1.1698299166623047
+      },
+      "C": {
+        "xgd": 0.2287113262751953,
+        "points": 1.51953125,
+        "gf": 1.3359375,
+        "ga": 1.15625,
+        "xgf": 1.4423270260875,
+        "xga": 1.2136156998123047
+      },
+      "D": {
+        "xgd": 0.358812872390625,
+        "points": 1.65625,
+        "gf": 1.69921875,
+        "ga": 1.265625,
+        "xgf": 1.5835871228320313,
+        "xga": 1.2247742504414063
+      }
+    }
+  },
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 2026111540
+}

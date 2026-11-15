@@ -1,0 +1,59 @@
+{
+  "experiment_id": "PD-ROLE-001",
+  "scientific_series_complete": true,
+  "counts": {
+    "ok": 4128,
+    "expected_rejection": 1
+  },
+  "native_calls": 4129,
+  "full_simulations": 4128,
+  "technical_full_matches": 32,
+  "main_matches": 4096,
+  "independent_blocks": 512,
+  "expected_negative_rejections": 1,
+  "failures": 0,
+  "retries": 0,
+  "replacement_seeds": 0,
+  "exclusions": 0,
+  "unbegun_jobs": 0,
+  "career_advances": 0,
+  "holdout_matches": 0,
+  "main_program_cap": 4096,
+  "other_scientific_matches": 0,
+  "charged_supervised_seconds": 3441.1823932000116,
+  "charged_seconds_limit": 7200,
+  "fixed_window_start_utc": "2026-11-15T16:21:19.938946+00:00",
+  "fixed_deadline_utc": "2026-11-15T19:21:19.938946+00:00",
+  "window_limit_seconds": 10800,
+  "operations": [
+    {
+      "name": "technical",
+      "kind": "technical",
+      "start_utc": "2026-11-15T16:21:19.943934+00:00",
+      "elapsed_seconds": 28.471456500003114,
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "name": "main",
+      "kind": "main",
+      "start_utc": "2026-11-15T16:26:01.276208+00:00",
+      "elapsed_seconds": 3412.7109367000085,
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "within_fixed_deadline": true,
+  "elapsed_phase_window_seconds": 3694.048199,
+  "peak_inflight_claims": 4,
+  "engine_pid_peak_measured": false,
+  "all_cleanup_confirmed": true,
+  "global_native_lease_present": false,
+  "descriptive_missing_counts": {
+    "technical": {},
+    "main": {}
+  },
+  "private_original_evidence_bytes": 2240025429,
+  "evidence": "Second-pass raw/input re-audit after all calls is enforced by the frozen supervisor; private originals retained.",
+  "exported_utc": "2026-11-15T17:25:40.874923+00:00"
+}
