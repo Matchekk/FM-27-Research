@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "phase": "main",
+  "full_matches": 512,
+  "negative_rejections": 0,
+  "aa_pairs": [],
+  "peak_inflight_claims": 4,
+  "engine_pid_peak_measured": false,
+  "dispatch_summary_sha256": "071e51d843be9849a98d7bc8c588e0703b44693a6ad6b99ed8cd11a535d7c96b",
+  "concurrency_ledger_sha256": "97defcbf440ed76f7dcf154310d10340c11e0ccd9decc18c8694f691438dfc25",
+  "first_main_admission": {
+    "remaining_seconds": 767.628073,
+    "checked_utc": "2026-11-15T00:03:54.760821+00:00"
+  },
+  "native_call_budget": {
+    "recorded_native_call_seconds": 2553.0900000000693,
+    "unresolved_claims": 0,
+    "new_claim_envelope_seconds": 40,
+    "resulting_bound_seconds": 2553.0900000000693,
+    "limit_seconds": 3600
+  },
+  "scientific_analysis_allowed": true,
+  "career_released": false,
+  "budget_reconciled": true,
+  "complete": true
+}

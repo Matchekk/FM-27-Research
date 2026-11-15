@@ -1,0 +1,76 @@
+{
+  "experiment": "NIGHT-002",
+  "limits": {
+    "technical": 192,
+    "main": 2048
+  },
+  "limit_seconds": 3600,
+  "charged_seconds": 1310.219345599995,
+  "absolute_deadline_utc": "2026-11-15T07:00:00+00:00",
+  "halted": false,
+  "artifact_limit_bytes": 4294967296,
+  "terminal_studies": [
+    "MECH-004-SPLIT-R0"
+  ],
+  "active_operation": null,
+  "reserved_counts": {
+    "technical": 66,
+    "main": 1024
+  },
+  "operations": [
+    {
+      "name": "MECH-004-SPLIT-R0/technical",
+      "kind": "technical",
+      "start_utc": "2026-11-14T22:44:40.740805+00:00",
+      "child_deadline_utc": "2026-11-14T23:44:35.740805+00:00",
+      "elapsed_seconds": 107.96172520000255,
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "name": "MECH-004-SPLIT-R0/main",
+      "kind": "main",
+      "start_utc": "2026-11-14T22:57:26.772886+00:00",
+      "child_deadline_utc": "2026-11-14T23:55:33.810162+00:00",
+      "elapsed_seconds": 481.77362549999816,
+      "returncode": 1,
+      "timed_out": false
+    },
+    {
+      "name": "TACT-003-STLESS-R0/technical",
+      "kind": "technical",
+      "start_utc": "2026-11-14T23:48:37.482983+00:00",
+      "child_deadline_utc": "2026-11-15T00:38:42.747632+00:00",
+      "elapsed_seconds": 107.45172949999687,
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "name": "TACT-003-STLESS-R0/main",
+      "kind": "main",
+      "start_utc": "2026-11-15T00:02:37.410241+00:00",
+      "child_deadline_utc": "2026-11-15T00:50:55.222161+00:00",
+      "elapsed_seconds": 613.0322653999974,
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "reconciliations": [
+    {
+      "failed_study": "MECH-004-SPLIT-R0",
+      "independent_study_only": "TACT-003-STLESS-R0",
+      "before_budget_sha256": "dad11f1be95f9bbccff8e9b62079d943af63cbd3828790e96f07809986bad114",
+      "termination_sha256": "f119e024f85668c395e8fed0bcd1cdd5e386bf5046e147a1af57813bb77fd7d6",
+      "review_sha256": "ab5cbcdb3dad637c437b5c4f58e697f6fb7e44a45da2414cb7e95cf98ea351aa",
+      "review_gate_sha256": "e60a169a92f9147f39ee4c2abcecededb1123a19c408031a6ce275d8c5aef73f",
+      "publication_commit": "d143d3ed22b58ecda484ae12803bf89f70fcc8e4",
+      "ci_run": 43653104526,
+      "checked_utc": "2026-11-14T23:27:37.648738+00:00"
+    }
+  ],
+  "private_ledger_sha256": "9d7675df979131ae7766f29708714cf51e760ec563ccadf6277f53a745e9dcba",
+  "new_private_artifact_bytes": 445429523,
+  "actual_cumulative_native_calls": 802,
+  "actual_cumulative_native_call_seconds": 2553.0900000000693,
+  "old_failed_accounting_preserved": true
+}

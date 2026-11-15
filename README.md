@@ -1,8 +1,10 @@
 # FM27 Meta Research
 
-> **NIGHT-002, neuer Auftrag:** Quellenrefresh und zehn konkrete Kandidaten;
-> C90/C7A-Technik bestanden, Hauptserie nach224 Matches technisch abgebrochen;
-> kein Leistungsbefund. Unabhängiger IP/OOP-Paketpilot nativ technisch freigegeben.
+> **NIGHT-002:**512 neue IP/OOP-Hauptmatches/64 Seedblöcke vollständig.
+> Konkretes stürmerloses IP-Paket−0,350xGD[−0,502;−0,198],Holm7-p0,000162;
+> primäre IP×OOP-Interaktion+0,074[−0,191;+0,340] unklar. Keine globale Taktikregel.
+> Erster Schärfe-Hauptlauf nach Director-Archivierungsfehler terminal gestoppt,
+> keine Teilserienauswertung. [Ergebnis](experiments/TACT-003-stless-results.md) ·
 > [Mission](docs/night-002/README.md) ·
 > [konsolidierter Bericht](docs/night-002/OVERNIGHT_REPORT.md).
 > NIGHT-001 bleibt abgeschlossen; alte Budgets und terminale Studien bleiben erhalten.

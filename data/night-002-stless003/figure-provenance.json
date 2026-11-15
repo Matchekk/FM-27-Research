@@ -1,0 +1,8 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "command": "python -B analysis/render_stless003.py",
+  "source_sha256": "18eaae18429e0ddda172742d22ef9282c619687fcf2b4f76126e6e316c15023c",
+  "effects_sha256": "af2d22c5bfef0614be174f838b401bc31773e0f8545c7fee6aa1a14aebdcdf68",
+  "inference": "Only the preregistered primary interval is shown; four arm means are descriptive.",
+  "matplotlib_version": "3.10.7"
+}

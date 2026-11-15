@@ -1,11 +1,19 @@
 # TACT-003-STLESS-R0 – IP/OOP-Paketpilot
 
-Aktuell: TECH32+1 bestanden und unabhängig geprüft;16 exakte A/A-Paare,
-alle Rollen/Positionen/Akteurzuordnungen nativ bestätigt. Noch0 TACT-Mainmatches.
+Aktuell:512/512 Mainmatches mit64 neuen Seedblöcken vollständig und unabhängig
+nachgerechnet. TECH32+1 und16 exakte A/A-Paare bestanden; alle Rollen-/Positions-
+zuordnungen nativ bestätigt. Keine unerwarteten Ausfälle, Missing Values oder Retries.
 68 neue Seeds gegen2665 frühere/reservierte Werte gebunden.
 [Vorregistrierung](../../experiments/TACT-003-stless-preregistration.md) ·
 [Neuheitsprüfung](../../docs/night-002/STLESS003-NOVELTY-REVIEW.md) ·
 [Runnerprüfung](../../docs/night-002/STLESS003-RUNNER-REVIEW.md).
+
+Primäre IP×OOP-Interaktion+0,074xGD-DoD[−0,191;+0,340] bleibt unklar;
+konkretes marginales IP-Paket−0,350xGD[−0,502;−0,198],Holm7-p0,000162.
+[Ergebnisbericht](../../experiments/TACT-003-stless-results.md) ·
+[unabhängiger Ergebnisreview](../../docs/night-002/STLESS003-RESULTS-REVIEW.md).
+`main.jsonl` enthält ausschließlich zulässige kompakte Matchmessungen;
+`effects.json`,512 abgeleitete Kontrastzeilen und Provenienz sind reproduzierbar.
 
 Vier Arme: unveränderte IP4231/OOP4411, IP4240 allein, OOP4420 allein und beide
 Pakete. Es ändern sich ausschließlich0/3/3/6 ursprüngliche Positions-/Rollen-

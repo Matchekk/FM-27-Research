@@ -1,0 +1,1518 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "n_matches": 512,
+  "independent_seed_blocks": 64,
+  "primary_contrast": "INTERACTION",
+  "primary": {
+    "mean": 0.07428189549140626,
+    "se": 0.13259119089068336,
+    "df": 59.35787290114404,
+    "ci": [
+      -0.1909989997817693,
+      0.33956279076458185
+    ],
+    "p": 0.5774292430569843,
+    "alpha": 0.05,
+    "bootstrap_ci": [
+      -0.1856303361510352,
+      0.32857220009023425
+    ],
+    "n_seed_blocks": 64,
+    "n_scenarios": 2,
+    "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+    "context": {
+      "high_press": {
+        "mean": 0.2644869945921875,
+        "sd": 1.1672740481030017,
+        "sd_upper95_normal_model": 1.4801092018581037,
+        "side0_mean": 0.026361930087499985,
+        "side1_mean": 0.5026120590968749,
+        "side0_sd": 1.4308634180132567,
+        "side1_sd": 1.9187107456792794,
+        "side_covariance": -0.13935311654732052
+      },
+      "deep_block": {
+        "mean": -0.11592320360937497,
+        "sd": 0.9422131160501132,
+        "sd_upper95_normal_model": 1.1947308392948273,
+        "side0_mean": 0.10670469049999998,
+        "side1_mean": -0.33855109771875,
+        "side0_sd": 1.7250963716076566,
+        "side1_sd": 1.8025797791558689,
+        "side_covariance": -1.337094563664033
+      }
+    },
+    "leave_one_out": {
+      "range": [
+        0.039611132146118944,
+        0.11571958435579638
+      ],
+      "max_change": 0.041437688864390115
+    }
+  },
+  "secondary": {
+    "IP:xgd": {
+      "mean": -0.3498275456847656,
+      "se": 0.07594712282594618,
+      "df": 57.65742782039554,
+      "ci": [
+        -0.501871463165658,
+        -0.19778362820387324
+      ],
+      "p": 2.310646116901208e-05,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.49546424796272465,
+        -0.20072671446880863
+      ],
+      "n_seed_blocks": 64,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.41859839883046873,
+          "sd": 0.5175332607719014,
+          "sd_upper95_normal_model": 0.6562347057925232,
+          "side0_mean": -0.64090345970625,
+          "side1_mean": -0.19629333795468756,
+          "side0_sd": 0.9328550547177291,
+          "side1_sd": 0.904648679757454,
+          "side_covariance": -0.3086225414392672
+        },
+        "deep_block": {
+          "mean": -0.2810566925390625,
+          "sd": 0.6859000682197375,
+          "sd_upper95_normal_model": 0.8697246410789314,
+          "side0_mean": -0.33086029456250005,
+          "side1_mean": -0.231253090515625,
+          "side0_sd": 0.9698691906234119,
+          "side1_sd": 0.8728492478517422,
+          "side_covariance": 0.08966177896974882
+        }
+      },
+      "leave_one_out": {
+        "range": [
+          -0.3766018904192666,
+          -0.33073121630219254
+        ],
+        "max_change": 0.02677434473450102
+      },
+      "p_holm": 0.00016174522818308455,
+      "reject_holm": true
+    },
+    "OOP:xgd": {
+      "mean": -0.1666360756207031,
+      "se": 0.0667125117081845,
+      "df": 60.34521536599149,
+      "ci": [
+        -0.30006526786228094,
+        -0.03320688337912528
+      ],
+      "p": 0.015238843307679646,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.2923473405849316,
+        -0.03573771064916021
+      ],
+      "n_seed_blocks": 64,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.03949656295234373,
+          "sd": 0.4875122350482204,
+          "sd_upper95_normal_model": 0.6181678983491025,
+          "side0_mean": 0.028052480018749992,
+          "side1_mean": -0.10704560592343748,
+          "side0_sd": 0.8793439135579779,
+          "side1_sd": 0.8820266285383788,
+          "side_covariance": -0.30027198723769727
+        },
+        "deep_block": {
+          "mean": -0.2937755882890625,
+          "sd": 0.576197362572378,
+          "sd_upper95_normal_model": 0.7306210737878852,
+          "side0_mean": -0.20580890628124995,
+          "side1_mean": -0.381742270296875,
+          "side0_sd": 1.0634697020787778,
+          "side1_sd": 0.819499729707015,
+          "side_covariance": -0.2372670058439689
+        }
+      },
+      "leave_one_out": {
+        "range": [
+          -0.1928850041858493,
+          -0.15146415685783768
+        ],
+        "max_change": 0.026248928565146212
+      },
+      "p_holm": 0.09143305984607787,
+      "reject_holm": false
+    },
+    "INTERACTION:points": {
+      "mean": 0.2734375,
+      "se": 0.19787631786643653,
+      "df": 60.23219479474963,
+      "ci": [
+        -0.1223426865250643,
+        0.6692176865250643
+      ],
+      "p": 0.17211837866431715,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.109375,
+        0.65625
+      ],
+      "n_seed_blocks": 64,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.234375,
+          "sd": 1.7132518363739493,
+          "sd_upper95_normal_model": 2.1724117076349274,
+          "side0_mean": 0.0625,
+          "side1_mean": 0.40625,
+          "side0_sd": 2.368305505576072,
+          "side1_sd": 2.22680698643567,
+          "side_covariance": 0.5866935483870968
+        },
+        "deep_block": {
+          "mean": 0.3125,
+          "sd": 1.4410457672210852,
+          "sd_upper95_normal_model": 1.827253080653078,
+          "side0_mean": 0.21875,
+          "side1_mean": 0.40625,
+          "side0_sd": 1.9466161707252492,
+          "side1_sd": 2.3398287089222523,
+          "side_covariance": -0.4788306451612903
+        }
+      },
+      "leave_one_out": {
+        "range": [
+          0.2127016129032258,
+          0.3256048387096774
+        ],
+        "max_change": 0.06073588709677419
+      },
+      "p_holm": 0.8605918933215857,
+      "reject_holm": false
+    },
+    "INTERACTION:gf": {
+      "mean": 0.109375,
+      "se": 0.16647491910049433,
+      "df": 61.274167461422735,
+      "ci": [
+        -0.2234820534247685,
+        0.4422320534247685
+      ],
+      "p": 0.5136373950674205,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.21113281249999982,
+        0.4296875
+      ],
+      "n_seed_blocks": 64,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.03125,
+          "sd": 1.4024028918138118,
+          "sd_upper95_normal_model": 1.7782537256434183,
+          "side0_mean": -0.375,
+          "side1_mean": 0.3125,
+          "side0_sd": 2.3244839871359866,
+          "side1_sd": 1.7308864035330234,
+          "side_covariance": -0.2661290322580645
+        },
+        "deep_block": {
+          "mean": 0.25,
+          "sd": 1.2572371141874243,
+          "sd_upper95_normal_model": 1.5941828096414001,
+          "side0_mean": 0.21875,
+          "side1_mean": 0.28125,
+          "side0_sd": 2.2538050263441587,
+          "side1_sd": 1.727096668755344,
+          "side_covariance": -0.8699596774193548
+        }
+      },
+      "leave_one_out": {
+        "range": [
+          0.06048387096774194,
+          0.1537298387096774
+        ],
+        "max_change": 0.04889112903225806
+      },
+      "p_holm": 1.0,
+      "reject_holm": false
+    },
+    "INTERACTION:ga": {
+      "mean": -0.1875,
+      "se": 0.164296348317802,
+      "df": 58.947205972731204,
+      "ci": [
+        -0.5162623943836735,
+        0.14126239438367344
+      ],
+      "p": 0.2583891426061351,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.5,
+        0.1328125
+      ],
+      "n_seed_blocks": 64,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.484375,
+          "sd": 1.4562677383662839,
+          "sd_upper95_normal_model": 1.8465546145122793,
+          "side0_mean": -0.34375,
+          "side1_mean": -0.625,
+          "side0_sd": 2.193970844044225,
+          "side1_sd": 2.8820915344421705,
+          "side_covariance": -2.318548387096774
+        },
+        "deep_block": {
+          "mean": 0.109375,
+          "sd": 1.1551733217252753,
+          "sd_upper95_normal_model": 1.464765421629333,
+          "side0_mean": -0.0625,
+          "side1_mean": 0.28125,
+          "side0_sd": 1.3663584756098845,
+          "side1_sd": 2.082714961991493,
+          "side_covariance": -0.4334677419354839
+        }
+      },
+      "leave_one_out": {
+        "range": [
+          -0.24369959677419356,
+          -0.14692540322580644
+        ],
+        "max_change": 0.05619959677419356
+      },
+      "p_holm": 1.0,
+      "reject_holm": false
+    },
+    "INTERACTION:xgf": {
+      "mean": 0.002353601696093763,
+      "se": 0.101934098150535,
+      "df": 60.19615693382718,
+      "ci": [
+        -0.2015312877951933,
+        0.20623849118738086
+      ],
+      "p": 0.9816552948434727,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.19476360906173826,
+        0.20107464985171833
+      ],
+      "n_seed_blocks": 64,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": 0.07827842729843748,
+          "sd": 0.7415391616832923,
+          "sd_upper95_normal_model": 0.9402752837084707,
+          "side0_mean": -0.08614632028125001,
+          "side1_mean": 0.24270317487812498,
+          "side0_sd": 1.1146664415667347,
+          "side1_sd": 0.9612766205009412,
+          "side_covariance": 0.016493648081541027
+        },
+        "deep_block": {
+          "mean": -0.07357122390624996,
+          "sd": 0.8832391513671095,
+          "sd_upper95_normal_model": 1.119951563648954,
+          "side0_mean": 0.012989395843750001,
+          "side1_mean": -0.16013184365625,
+          "side0_sd": 1.3067125174135743,
+          "side1_sd": 1.1144595988992934,
+          "side_covariance": 0.08546389664333622
+        }
+      },
+      "leave_one_out": {
+        "range": [
+          -0.031023453278200608,
+          0.02635358798792843
+        ],
+        "max_change": 0.03337705497429437
+      },
+      "p_holm": 1.0,
+      "reject_holm": false
+    },
+    "INTERACTION:xga": {
+      "mean": -0.07192829379531251,
+      "se": 0.11313221686780167,
+      "df": 61.982857304582424,
+      "ci": [
+        -0.2980776171478948,
+        0.15422102955726982
+      ],
+      "p": 0.5272541322152466,
+      "alpha": 0.05,
+      "bootstrap_ci": [
+        -0.2882924003691797,
+        0.14643479290011652
+      ],
+      "n_seed_blocks": 64,
+      "n_scenarios": 2,
+      "weighting": "equal_scenarios_then_equal_seeds; sides averaged within seed",
+      "context": {
+        "high_press": {
+          "mean": -0.18620856729375002,
+          "sd": 0.9125524577899329,
+          "sd_upper95_normal_model": 1.1571209795575983,
+          "side0_mean": -0.11250825036874999,
+          "side1_mean": -0.25990888421874997,
+          "side0_sd": 1.0314231971502266,
+          "side1_sd": 1.5705104905100726,
+          "side_covariance": -0.09966452977399752
+        },
+        "deep_block": {
+          "mean": 0.04235197970312499,
+          "sd": 0.8975004283785809,
+          "sd_upper95_normal_model": 1.1380349326480597,
+          "side0_mean": -0.09371529465625003,
+          "side1_mean": 0.17841925406250003,
+          "side0_sd": 1.2588550647360937,
+          "side1_sd": 1.5592970323020836,
+          "side_covariance": -0.3970476165994272
+        }
+      },
+      "leave_one_out": {
+        "range": [
+          -0.10617785325166335,
+          -0.04233145279203631
+        ],
+        "max_change": 0.03424955945635083
+      },
+      "p_holm": 1.0,
+      "reject_holm": false
+    }
+  },
+  "planning": {
+    "assumptions": "Conditional noncentral-Welch planning with new seeds in the two existing contexts; joint95 SD upper bounds assume normal seed contrasts, each97.5percent/df31. No automatic followup.",
+    "observed": {
+      "sd": [
+        1.1672740481030017,
+        0.9422131160501132
+      ],
+      "power90": [
+        {
+          "effect": 0.2,
+          "seeds_per_context": 149,
+          "independent_blocks": 298,
+          "matches": 2384,
+          "full_width": 0.2418985971145562,
+          "power": 0.9004036629800284
+        },
+        {
+          "effect": 0.3,
+          "seeds_per_context": 67,
+          "independent_blocks": 134,
+          "matches": 1072,
+          "full_width": 0.362667892748135,
+          "power": 0.9012981515183422
+        }
+      ]
+    },
+    "simultaneous95_sd_upper": {
+      "sd": [
+        1.5518670049737102,
+        1.2526530927573662
+      ],
+      "power90": [
+        {
+          "effect": 0.2,
+          "seeds_per_context": 263,
+          "independent_blocks": 526,
+          "matches": 4208,
+          "full_width": 0.2416131537495023,
+          "power": 0.9008565600668554
+        },
+        {
+          "effect": 0.3,
+          "seeds_per_context": 118,
+          "independent_blocks": 236,
+          "matches": 1888,
+          "full_width": 0.3617936334237073,
+          "power": 0.9021779709721354
+        }
+      ]
+    }
+  },
+  "descriptive": {
+    "interpretation": "Descriptive raw/cache quantities only: no pvalues, UI, consumer or mediation interpretation.",
+    "by_context_arm": {
+      "high_press": {
+        "I0-O0": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.41875,
+            "min": 74.9,
+            "max": 81.5
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.015625,
+            "min": 3,
+            "max": 4
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 789214.63125,
+            "min": 753768.7,
+            "max": 818035.7
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "I1-O0": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.57343750000001,
+            "min": 73.2,
+            "max": 81.2
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 790722.490625,
+            "min": 737712.5,
+            "max": 817175.7
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "I0-O1": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.575,
+            "min": 76.6,
+            "max": 80.7
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 790725.240625,
+            "min": 769894.6,
+            "max": 812071.1
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "I1-O1": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.765625,
+            "min": 76.5,
+            "max": 81.1
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 792736.628125,
+            "min": 772059.4,
+            "max": 816213.0
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "deep_block": {
+        "I0-O0": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.47500000000001,
+            "min": 76.6,
+            "max": 80.4
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 789808.7015625,
+            "min": 770819.7,
+            "max": 809046.8
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "I1-O0": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.5859375,
+            "min": 76.6,
+            "max": 80.7
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.015625,
+            "min": 3,
+            "max": 4
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 790863.2046875,
+            "min": 769599.0,
+            "max": 812272.6
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "I0-O1": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.69218749999999,
+            "min": 76.3,
+            "max": 81.1
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 791956.0140625,
+            "min": 767040.3,
+            "max": 816732.6
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "I1-O1": {
+          "prepared_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "first_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "finished_condition_cache89_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 78.8359375,
+            "min": 76.1,
+            "max": 80.8
+          },
+          "finished_sharpness_cache8a_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 100.0,
+            "min": 100.0,
+            "max": 100.0
+          },
+          "prepared_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "first_tf33_matches_frozen_d00": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 1.0,
+            "min": true,
+            "max": true
+          },
+          "finished_tf33_distinct_hashes": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "finished_condition_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_sharpness_secondary_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 10000.0,
+            "min": 10000.0,
+            "max": 10000.0
+          },
+          "finished_fatigue_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          },
+          "finished_condition_accumulator_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 793233.671875,
+            "min": 764422.5,
+            "max": 813078.1
+          },
+          "finished_sharpness_penalty_raw_mean": {
+            "observed": 64,
+            "missing": 0,
+            "missing_reasons": {},
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      }
+    }
+  },
+  "arm_means": {
+    "high_press": {
+      "I0-O0": {
+        "xgd": -0.04323441557656248,
+        "points": 1.34375,
+        "gf": 1.3125,
+        "ga": 1.4375,
+        "xgf": 1.3176577186890626,
+        "xga": 1.360892134265625
+      },
+      "I1-O0": {
+        "xgd": -0.5940763117031249,
+        "points": 0.859375,
+        "gf": 1.078125,
+        "ga": 1.75,
+        "xgf": 0.9437971720625,
+        "xga": 1.5378734837656252
+      },
+      "I0-O1": {
+        "xgd": -0.214974475825,
+        "points": 1.34375,
+        "gf": 1.1875,
+        "ga": 1.484375,
+        "xgf": 1.1553299641406252,
+        "xga": 1.3703044399656248
+      },
+      "I1-O1": {
+        "xgd": -0.501329377359375,
+        "points": 1.09375,
+        "gf": 0.921875,
+        "ga": 1.3125,
+        "xgf": 0.8597478448125,
+        "xga": 1.361077222171875
+      }
+    },
+    "deep_block": {
+      "I0-O0": {
+        "xgd": 0.35117430259375004,
+        "points": 1.671875,
+        "gf": 1.65625,
+        "ga": 1.328125,
+        "xgf": 1.4837104835625001,
+        "xga": 1.13253618096875
+      },
+      "I1-O0": {
+        "xgd": 0.128079211859375,
+        "points": 1.34375,
+        "gf": 1.25,
+        "ga": 1.1875,
+        "xgf": 1.3166722943593752,
+        "xga": 1.1885930825
+      },
+      "I0-O1": {
+        "xgd": 0.11536031610937503,
+        "points": 1.109375,
+        "gf": 1.171875,
+        "ga": 1.375,
+        "xgf": 1.283082553765625,
+        "xga": 1.16772223765625
+      },
+      "I1-O1": {
+        "xgd": -0.223657978234375,
+        "points": 1.09375,
+        "gf": 1.015625,
+        "ga": 1.34375,
+        "xgf": 1.04247314065625,
+        "xga": 1.266131118890625
+      }
+    }
+  },
+  "practical_reference": 0.2,
+  "desired_full_ci_width": 0.5,
+  "bootstrap": {
+    "seed": 4773275660306070691,
+    "resamples": 20000
+  },
+  "intervention": "Physical IP4240-versus4231 by OOP4420-versus4411 package interaction; other inputs fixed",
+  "exploratory_context_and_side_only": true,
+  "ui_scale_calibrated": false,
+  "consumer_semantics_validated": false,
+  "mediation_identified": false,
+  "isolated_role_mechanism_identified": false,
+  "career_transfer_confirmed": false,
+  "winner_selected": false
+}

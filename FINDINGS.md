@@ -1,5 +1,35 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-15 – TACT-003-STLESS-R0, kontrollierte IP/OOP-Pakete
+
+FM27 `27.0.1+2503222`, synthetische identische Rohprofile, zwei feste
+Discoverygegner.512 gültige Hauptmatches bilden64 unabhängige neue Seedblöcke;
+Seiten im Seed gemittelt. Primär IP×OOP **+0,074 xGD-DoD**,95-%-KI
+**[−0,191;+0,340]**,p=0,577429. Präzisionsziel0,50 mit voller Breite0,530562
+verfehlt. Praktisch positive Moderation+0,20 bleibt möglich; keine Äquivalenz.
+
+Vorregistrierter Sekundärbefund: Das konkrete IP4231→IP4240-Paket senkt xGD
+marginal über beide OOP-Stellungen um **−0,350/Match**,95-%-KI
+**[−0,502;−0,198]**,Holm7-p=0,000162. Nur dieser Sekundärtest besteht Holm7.
+OOP−0,167,Holm-p0,091; Punkteinteraktion+0,273[−0,122;+0,669],Holm-p0,861.
+Tore/Gegentore/xGF/xGA vollständig berichtet, kein korrigierter Interaktionsnachweis.
+
+Das IP-Paket verschiebt AMC→AMCL und ST→AMCR/SecondStriker; das OOP-Paket
+verschiebt dieselben Akteure nach AMCL/AMCR mit OPAM. Es handelt sich um
+Positions-/Rollenpakete einschließlich lateraler Neuordnung, keinen isolierten
+ST-Abwesenheits- oder Laufwegmechanismus und keine Aussage gegen sämtliche
+stürmerlosen Taktiken. Keine neue Scoutinggewichtung oder Karrierebestätigung.
+
+32 technische Vollmatches+erwartete Exit108-Probe,16 exakte A/A-Paare bestanden.
+545/545 eigene Jobs vollständig;0 unerwartete Fehler/Ausschlüsse/Missing Values/
+Retry/Ersatz/Holdouts. Sämtliche512 Rohresultate,64 Blöcke, Welch-/Bootstrap-
+intervalle, Holm7 und Bereinigungen unabhängig nachgerechnet. Alte terminale
+MECH-004-Teilserie wurde nicht ausgewertet oder fortgesetzt.
+[Ergebnis](experiments/TACT-003-stless-results.md) ·
+[Rohmessungen](data/night-002-stless003/main.jsonl) ·
+[unabhängiger Review](docs/night-002/STLESS003-RESULTS-REVIEW.md) ·
+[Nachtbericht](docs/night-002/OVERNIGHT_REPORT.md).
+
 ## 2026-11-14 – MECH-004-SPLIT-R0, technische Identifizierbarkeit
 
 FM27 `27.0.1+2503222`, unveränderter Observerhost, synthetischer D00-Kontext.

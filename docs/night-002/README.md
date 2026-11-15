@@ -4,12 +4,14 @@ Beginn14.11.2026, Ausgangscommit062fa7e. Frist15.11.2026 08:00Europe/Berlin.
 Der eingefügte Nutzerauftrag ist die Autorisierung; keine NIGHT-001-Verträge
 werden verlängert. [Konsolidierter Bericht](OVERNIGHT_REPORT.md).
 
-**Aktueller Stand15.11.2026:** MECH-004 nach bestandener Technik in Main terminal
-abgebrochen;224 akzeptierte Matches liefern keine freigegebene Leistungsschätzung.
-Alle Belege restauriert/überprüft, alle Reservierungen und Zeiten erhalten.
-Die neue Controller-Epoche darf nur die unabhängige TACT-003-Frage weiterführen,
-erst nach [geprüfter administrativer Transition](RECONCILIATION-REVIEW.md) und
-deren öffentlicher erfolgreicher CI. Kein MECH-Retry und keine Livearchivierung.
+**Abschluss15.11.2026:** TACT-003 mit512 gültigen Hauptmatches/64 Blöcken
+vollständig und unabhängig nachgerechnet. Konkreter IP-Paketeffekt−0,350xGD,
+Holm7-p0,000162; primäre Moderation unklar. MECH-004 bleibt nach224 akzeptierten
+Mainmatches terminal ohne Leistungsanalyse. Alle Belege restauriert/überprüft,
+alle alten Reservierungen/Zeitwerte erhalten. Die geprüfte administrative
+Transition erlaubte ausschließlich die andere TACT-Frage. Kein MECH-Retry,
+keine Livearchivierung in TACT und keine weiteren nativen Serien dieser Mission.
+[Vollständige Ergebnisse](../../experiments/TACT-003-stless-results.md).
 
 ## Forschungsentscheidung und Architektur
 

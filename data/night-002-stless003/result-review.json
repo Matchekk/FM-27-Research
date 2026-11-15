@@ -1,0 +1,60 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "passed": true,
+  "scientific_analysis_verified": true,
+  "public_and_private_evidence_verified": true,
+  "independent_raw_score_xg_reconstructions": 512,
+  "complete_main_matches": 512,
+  "independent_seed_blocks": 64,
+  "contexts": 2,
+  "seeds_per_context": 32,
+  "sides_averaged_within_seed": true,
+  "missing_main_jobs": 0,
+  "excluded_main_jobs": 0,
+  "all512_cleanup_confirmed": true,
+  "call_admission_proofs_replayed": 512,
+  "all36_frozen_sources_unchanged": true,
+  "main_rows_sha256": "069f3ec504cb472c979403d7b0d9c56a2dfe008fdb56efee8b7e4646cd335265",
+  "summary_sha256": "469a4a154f2dd7b68a044b76f6df0a464ae964b9ed7fc850766b065f250b16b4",
+  "effects_sha256": "af2d22c5bfef0614be174f838b401bc31773e0f8545c7fee6aa1a14aebdcdf68",
+  "seed_contrasts_sha256": "2642375a9bc436ed18333fd32c5c1b80037ba237778bfc1f248e201f7b61e919",
+  "analysis_provenance_sha256": "c83d5ce882b71640765e7b9fcc54105842e5381ea49f1529771056a050741f96",
+  "review_sha256": "ef91d356c425dfe82cb0f35c8c1b747953fe7b1c80b609439d6398b18717bf15",
+  "primary": {
+    "mean": 0.07428189549140621,
+    "ci": [
+      -0.19099899978176935,
+      0.33956279076458173
+    ],
+    "p": 0.5774292430569847,
+    "bootstrap_ci": [
+      -0.18563033615103522,
+      0.32857220009023425
+    ],
+    "full_ci_width": 0.5305617905463511,
+    "precision_target_met": false
+  },
+  "holm7": {
+    "IP:xgd": 0.00016174522818308455,
+    "OOP:xgd": 0.09143305984607787,
+    "INTERACTION:points": 0.8605918933215857,
+    "INTERACTION:gf": 1,
+    "INTERACTION:ga": 1,
+    "INTERACTION:xgf": 1,
+    "INTERACTION:xga": 1
+  },
+  "bootstrap_resamples": 20000,
+  "main_native_call_seconds": 1609.8840000000419,
+  "cumulative_native_call_seconds": 2553.0900000000693,
+  "max_main_call_seconds": 3.813000000001921,
+  "max_main_claim_bound_seconds": 2700.387000000075,
+  "prior_terminal_calls_retained": 257,
+  "prior_terminal_call_seconds": 838.0640000000058,
+  "no_terminal_mech004_scientific_outcomes_used": true,
+  "no_original_study_resumption": true,
+  "winner_selected": false,
+  "isolated_role_mechanism_identified": false,
+  "career_released": false,
+  "reviewer_native_calls": 0,
+  "scope": "Full preregistered package-pilot analysis accepted for publication. Primary interaction uncertain; only marginal IP-xGD rejects Holm7. No equivalence, general tactic ranking, new seeds, native allowance or terminal-study resumption."
+}

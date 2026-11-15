@@ -1,0 +1,14 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "phase": "main",
+  "checked_utc": "2026-11-15T00:02:36.477894+00:00",
+  "checked_local_date": "2026-11-15",
+  "decision": "NOVEL_HYPOTHESIS",
+  "mac_head": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+  "windows_lab_current_head": "cdda4be7280aa74681f015c02be77d7b47eacc4a",
+  "declared_local_build": "27.0.1+2503222",
+  "official_update_source": "https://community.sports-interactive.com/forums/forum/905-fm27-updates",
+  "source_scope": "Same original-source audit and added creator/effectiveness primary reports; no new Mac study commit found. Official accessible update index retains27.0.1 launch reference. This is not proof of absence of all newer releases. Local build/host/fixture/resource hashes rechecked under read leases before phase.",
+  "native_calls_in_preflight": 0,
+  "first_study_permanently_terminal": true
+}

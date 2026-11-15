@@ -1,19 +1,26 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
-## NIGHT-002 – neuer separater Auftrag
+## Nach NIGHT-002 – drei aktuelle Prioritäten
 
 [Zehn geprüfte Kandidaten](docs/night-002/NOVELTY_MATRIX.md), beste drei und
 [aktueller Quellenrefresh](docs/night-002/LITERATURE_AUDIT.md) liegen vor.
-MECH-004-SPLIT-R0 ist nach bestandenem TECH32+1 in der Hauptserie terminal
-abgebrochen.224 akzeptierte Matches sind kein vollständiger Leistungsversuch;
-kein Retry, keine Ersatzseeds und keine Wiederaufnahme. Sämtliche Reservierungen
-und Zeiten bleiben verbraucht. Nächster unabhängiger Gegenstand ist
-TACT-003-STLESS-R0: IP/OOP-Paketinteraktion. Administrative Fortsetzung, eigene
-Code-/Input-/CI-Gates und TECH32+1 sind bestanden. Jetzt neue unabhängige
-Technikfreigabe veröffentlichen; erst nach erfolgreicher CI512Mainmatches.
-Der alte Studienpfad bleibt dauerhaft beendet.
+TACT-003-STLESS-R0 ist mit512 Hauptmatches/64 Blöcken abgeschlossen: primäre
+IP×OOP-Interaktion unklar; konkreter negativer IP-Paketeffekt nach Holm7.
+MECH-004 bleibt nach224 akzeptierten Teilserienmatches terminal, ohne
+Leistungsauswertung oder Wiederaufnahme. Alle Reservierungen/Zeitwerte erhalten.
 Der gemeinsame MECH-002-Effekt und terminales MECH-003 werden nicht wiederholt.
-[Fortschritt und verbleibende Fragen](docs/night-002/OVERNIGHT_REPORT.md).
+[Ergebnisse und kritischer Nachtbericht](docs/night-002/OVERNIGHT_REPORT.md).
+
+1. Native positionsspezifische Profile/Skalen und Actorjoins unter VALID-003
+   abnehmen; danach gezielte Role×Profil-Transferfrage zum IP-Paketeffekt,
+   keine globale Attributrangliste oder Erweiterung desselben OOP-Piloten.
+2. Echte SET-Kontakte/Legalität/Retakes und Schuss-/Finaltor-/Besitzketten mit
+   unabhängigen Goldfällen freigeben;0 Wirkungsmatches ohne Nennergate.
+3. Neue passive UI-/Profil-/Runtimebrücke für natürliche Schärfesemantik
+   identitygebunden prüfen; kein Neustart des terminalen MECH-004-Vertrags.
+
+Die folgenden Abschnitte bewahren frühere Planungsstände; sie sind keine
+zusätzliche aktuelle Wunschliste oder automatische Ausführungsfreigabe.
 
 ## Nach Runde3 – Messbarkeit und neue Faktoren priorisieren
 

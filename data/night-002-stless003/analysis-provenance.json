@@ -1,0 +1,12 @@
+{
+  "experiment_id": "TACT-003-STLESS-R0",
+  "preregistration_commit": "8fe0c56bbc225317c085eb06ae78cc95ca390265",
+  "frozen_analysis_sha256": "58da6f79cb1e262f113158455e9767f2bc88b6e9d8999b8b3d5d4a4fc14166b6",
+  "report_source_sha256": "b4b0e1e5cc7e26253678a46314dccbc923a59a121ca6508f81c2a0354d052e81",
+  "main_rows_sha256": "069f3ec504cb472c979403d7b0d9c56a2dfe008fdb56efee8b7e4646cd335265",
+  "manifest_sha256": "d0b97eba2ea5cd33da6379103b14edb5142905beb9bc6a39f2a8f38f3ca10185",
+  "effects_sha256": "af2d22c5bfef0614be174f838b401bc31773e0f8545c7fee6aa1a14aebdcdf68",
+  "seed_contrasts_sha256": "2642375a9bc436ed18333fd32c5c1b80037ba237778bfc1f248e201f7b61e919",
+  "command": "python -B analysis/report_stless003.py",
+  "native_calls": 0
+}

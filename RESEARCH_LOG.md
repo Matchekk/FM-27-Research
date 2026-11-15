@@ -1,5 +1,27 @@
 # Research Log
 
+## 2026-11-15 – TACT-003 vollständig und unabhängig ausgewertet
+
+- Alle512 Hauptmatches/64 neuen Seedblöcke einmalig akzeptiert. Primär
+  IP×OOP+0,074282xGD-DoD,95-%-KI[−0,190999;+0,339563],p0,577429.
+  Volle Breite0,530562 verfehlt Ziel0,50; keine Äquivalenz oder Wirkungslosigkeit.
+- Einziger Holm7-Sekundärnachweis: konkretes IP-Paket−0,349828xGD/Match,
+  KI[−0,501871;−0,197784],Holm-p0,000161745. Kein universelles STless-Urteil;
+  Positions-/Rollen-/Seitenpaket, keine isolierten Laufwege oder neuen Scoutgewichte.
+- Alle512 Originalresultate/64Blöcke, Intervalle, Bootstrap20k, Holm7,
+  512 Kontrastzeilen und bedingte Planung unabhängig reproduziert.0 Ausfälle,
+  Ausschlüsse, Missing Values, Retry/Ersatz/Holdouts.545 eigene Jobs vollständig;
+  sämtliche Bereinigungen/Claimbelege bestätigt, keine Lease/Pendingmarker.
+- Eigene Childzeit658,0032682s, global1310,2193456s; separat2553,090s
+  kumulierte Calls.1090 Reservierungen inklusive unverändert545 alter Plätze,
+  445.429.523 private Bytes am Abschlussmesspunkt. Alter MECH-Etat bleibt `halted`.
+- Keine weitere Mainserie zur Budgetfüllung: SET-Nenner blockiert, Profile/Skalen
+  benötigen native Gates. Bereits bedingte0,30-DoD-Bestätigung1072 Matches
+  überschreitet verbleibende Mainreservierung und Callzeitbudget; keine automatische
+  Pilotvergrößerung. [Ergebnis](experiments/TACT-003-stless-results.md),
+  [Review](docs/night-002/STLESS003-RESULTS-REVIEW.md),
+  [konsolidierter Bericht](docs/night-002/OVERNIGHT_REPORT.md).
+
 ## 2026-11-15 – TACT-003 native Positions-/Rollenabnahme bestanden
 
 - 32 technische Vollmatches und erwartete Exit108-Negativprobe nach erfolgreicher
