@@ -1,0 +1,32 @@
+{
+  "n_per_context": 512,
+  "blocks": 1024,
+  "matches": 4096,
+  "anchors": {
+    "observed": {
+      "sd": [
+        0.9428479271305457,
+        0.8542656144414724
+      ],
+      "full95width": 0.11033675166638975,
+      "power": {
+        "0.1": 0.9444879904360581,
+        "0.15": 0.9996246903900389,
+        "0.2": 0.9999998677775421
+      }
+    },
+    "joint95_SD_upper": {
+      "sd": [
+        1.2534970611225638,
+        1.1357286857270488
+      ],
+      "full95width": 0.14669045767385971,
+      "power": {
+        "0.1": 0.7620605536680588,
+        "0.15": 0.9797880669534444,
+        "0.2": 0.9996451973857992
+      }
+    }
+  },
+  "source": "MECH002 S100-P0 minus S70-P0, side means,32seeds per fixed context; ten-player contrast only a variance proxy for new two-player group contrast."
+}

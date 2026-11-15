@@ -12,6 +12,15 @@
 |08:11:48|Native Technik abgeschlossen|32Vollmatches+Exit108;16exakteA/A;alleReadbacks und zweiterRohpass bestanden. Keine wissenschaftlichen Matches.|
 |08:13–08:15|Publikation/CI|Archivtest-Encodingfehler im neuen Test korrigiert (0f997d5→f57c193), keine nativen Änderungen. CI43693487274 fürf57c193 erfolgreich; vorherigeCI43693468796 scheiterte am Testtippfehler.|
 |08:15:52|Hauptserie gestartet|4096neueMatches,512Blöcke; neuer Quellen-/Patchcheck unverändert. Beginn nach rund17Minuten Vorbereitung, innerhalb30-Minuten-Grenze.|
+|08:29–08:35|Während Main: nächste Frage vorbereitet|N3-SHARPPOS-C1:4096geplanteMatches/1024Blöcke, zwei feste Zweispielergruppen.5gezielteTests und synthetische separate Nachrechnung bestanden.1028disjunkte neueSeeds reserviert;0Nativecalls der zweitenStudie. ErsterMain unverändert aktiv.|
+
+Die [zweite Vorregistrierung](../../experiments/N3-SHARPPOS-C1.md) wurde ohne
+Einblick in wissenschaftliche Ergebnisse der ersten Serie vorbereitet. Eigene
+vier Profilrecords je Arm; kein neuer nativer Setter. Native Phasen der zweiten
+Studie verlangen vollständige erste Hauptserie plus deren Auswertung und
+skalare Nachrechnung. Gemeinsame feste Missionsfrist bleibt11:11:21UTC;
+keine Verlängerung durch ein neues Studienbudget. Zweite Mainadmission verlangt
+mindestens4200s Rest, um4096Matches realistisch vollständig ausführen zu können.
 
 Die [Vor-Main-Änderung zur tatsächlichen sortierten Dispatchreihenfolge](TECHNICAL_RELEASE.md)
 ist veröffentlicht. Primär-/Sekundäranalyse, Arme und Seeds unverändert.

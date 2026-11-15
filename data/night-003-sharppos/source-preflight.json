@@ -1,0 +1,21 @@
+{
+  "experiment_id": "N3-SHARPPOS-C1",
+  "decision": "NOVEL_HYPOTHESIS",
+  "checked_utc": "2026-11-15T08:34:59.7376256Z",
+  "source_commit": "e92cf1416ca5c8c4b13009f8cf7d695f290b0368",
+  "overlap_ids": [
+    "MAC-05",
+    "MAC-13",
+    "MAC-13B",
+    "FM27-PURITY-POS",
+    "MECH-002-SHARPNESS-P0",
+    "ATTR-005",
+    "ATTR-007",
+    "N3-SHARPSTRUCT-C1"
+  ],
+  "findings_sha256": "3554639c4007f98e09051703e885e05c41d5797dd35533cd92bffe483ba70586",
+  "atlas_sha256": "f0b3bd49cb779aadf85a8a1d46b78bcb848e35daade09099c90ceaec01b73d52",
+  "index_sha256": "7c9215dbf2c232b982d7572c246b810240030c5e931892598c563ac4d886fbc3",
+  "first_study_outcomes_used": false,
+  "native_admission": "Only after complete first main plus analysis and independent arithmetic; no overlapping native phases"
+}

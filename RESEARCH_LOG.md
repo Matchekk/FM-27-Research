@@ -606,3 +606,11 @@ Planungsanker und konservative Unsicherheit dokumentiert. Bestehende Compiler,
 ColdScheduler, Windows-Containment und exklusive Lease werden wiederverwendet;
 kein neuer Setter und keine alten Budgetresets. Noch keine neuen Messbefunde.
 [Vorregistrierung](experiments/N3-SHARPSTRUCT-C1.md) · [Protokoll](docs/night-003/PROGRESS.md).
+
+Während der kontrollierten ersten Hauptserie wurde eine unabhängige
+[Positionsfrage](experiments/N3-SHARPPOS-C1.md) offline vorbereitet:
+genau zwei AMC/ST- gegen zwei CB-Akteure mit derselben gemeinsamen Startschärfe.
+Primär Differenz marginaler Nutzen,4096Matches/1024Blöcke auf eigenen1028Seeds
+geplant; keine neue native Phase vor vollständiger erster Auswertung.
+Fünf gezielte Tests und separate synthetische Arithmetik bestanden, noch keine
+Leistungsmessung der zweiten Studie. Alte Studien/Budgets unverändert.
