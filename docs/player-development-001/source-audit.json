@@ -110,6 +110,15 @@
       "accessed_utc": "2026-11-15T16:17:45.342457+00:00",
       "status": "read",
       "independently_replicated": false
+    },
+    {
+      "url": "https://www.fmscout.com/a-progression-factor-in-football-manager.html",
+      "sha256": "0e895c319011255ca76fae19296e1ec0ae11b4410c36eb8fe08a480d08afb694",
+      "bytes": 33809,
+      "accessed_utc": "2026-11-15T16:25:05.901270+00:00",
+      "status": "read",
+      "publication_date": "2020-10-07",
+      "fm27_code_proof": false
     }
   ],
   "tools": {
@@ -141,5 +150,19 @@
     "max_native_main_matches": 4096,
     "allocated_study": "PD-ROLE-001",
     "other_scientific_matches": 0
+  },
+  "additional_web_checks": [
+    {
+      "url": "https://community.sports-interactive.com/forums/topic/612924-details-on-fm27-launch-patch-notes-and-first-post-launch-update/",
+      "status": "read_via_web_tool",
+      "publication_date": "2026-11-09",
+      "local_hash": null
+    }
+  ],
+  "pre_main_remote_refresh": {
+    "accessed_utc": "2026-11-15T16:25:05.901270+00:00",
+    "mac": "9bc29019adc87cf45138c462e96c4e19077a0381",
+    "lab": "cdda4be7280aa74681f015c02be77d7b47eacc4a",
+    "new_duplicate_found": false
   }
 }

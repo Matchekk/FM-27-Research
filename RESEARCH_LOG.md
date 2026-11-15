@@ -670,3 +670,14 @@ Main noch nicht begonnen. Zusätzlich öffentliche CA-Tabelle mit221Zellen
 über10Positionen auditiert: Gewichtssummen75–107; keine identifizierte
 Grenzkostenfunktion. Getesteter Referenzeinheiten-Optimierer bleibt ausdrücklich
 Szenariomodell und beansprucht keine reale CA-/Matchkalibrierung.
+
+## PLAYER-DEVELOPMENT-001 – Quellen- und Modellabschnitt abgeschlossen
+
+CA-Referenzaudit, drei Fachberichte zu CA/PA/Training und maximal drei nächste
+Experimente dokumentiert. Progression-Factor-Originalseite vom7.10.2020
+identifiziert; kein FM27-Codebeweis daraus. Aktuelle fmsave-Ability-Felder
+quellenseitig unconfirmed. Reale Langzeit-Holdout-Verläufe0; keine Prognose-
+oder Trainingskausalität behauptet. Getrennte Meta-Score-Komponentenausgabe
+und separate skalare Nachrechnung aller sieben formalen Rollenschätzer
+implementiert; sieben gezielte Tests bestanden. Hauptserie unter927f2f5/
+CI43735167774 seit16:26UTC aktiv; keine Interim-Leistungsauswertung.
