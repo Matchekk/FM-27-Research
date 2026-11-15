@@ -659,3 +659,14 @@ vorbereitet. Noch0native Aufrufe und0wissenschaftliche Resultate. Offline:
 vor Veröffentlichung behoben. System-Python ohne numpy wurde erkannt;
 maßgeblich ist vorhandene .venv mit eingefrorenen Abhängigkeiten.
 [Vertrag](experiments/PD-ROLE-001.md) · [Bericht](docs/player-development-001/RESEARCH_REPORT.md).
+
+## PLAYER-DEVELOPMENT-001 – native Technik abgeschlossen
+
+197527d/CI43734775642 grün.32Technikmatches,16exakteA/A-Paare und erwartete
+Exit108-Abweisung bestanden; alle16Inputzellen samt3.174Attributen,
+1.058Profilfeldern,44Phasen/748PI pro Match geprüft. Zweiter Originalbelegpass
+nach Cleanup bestanden,28,471s beaufsichtigte Phase, keine Ausfälle/Retry.
+Main noch nicht begonnen. Zusätzlich öffentliche CA-Tabelle mit221Zellen
+über10Positionen auditiert: Gewichtssummen75–107; keine identifizierte
+Grenzkostenfunktion. Getesteter Referenzeinheiten-Optimierer bleibt ausdrücklich
+Szenariomodell und beansprucht keine reale CA-/Matchkalibrierung.

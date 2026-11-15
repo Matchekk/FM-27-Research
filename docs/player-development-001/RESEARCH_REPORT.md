@@ -24,3 +24,17 @@ Negativprobe, (3) nur nach Freigabe feste Hauptserie, (4) Nachrechnung,
 sechs Fachberichte, getestete Modelle, Veröffentlichung/Integration.
 
 [Quellenabgleich](LITERATURE.md) · [Abrufe/Versionen](source-audit.json).
+
+## Abgeschlossener technischer Abschnitt
+
+Vorregistrierung197527d und [exakte CI43734775642](https://github.com/Matchekk/FM-27-Research/actions/runs/43734775642)
+bestanden. Tatsächlich32vollständige Technikmatches,16exakteA/A und eine
+erwartete Exit108-Abweisung. Alle16Zellen native geprüft; vollständiger zweiter
+Pass gegen unveränderte private Rohbelege nach Prozessbereinigung bestanden.
+28,471s beaufsichtigte Technikphase; Peak4Claims, keine Ausfälle/Retry.
+Kein wissenschaftlicher Effekt aus Technikdaten geschätzt. Hauptserie noch
+unbegonnen; es folgt die Veröffentlichung dieser konkreten Freigabebelege.
+
+Die Dispatcherreihenfolge ist wie im bestehenden Runner sortiert nach
+Kontext/Seed; die vorgelagerte Planmischung ändert sie nicht. Alle acht Zellen
+eines Blocks bleiben zusammen. Keine datenabhängige Blockreihenfolge.

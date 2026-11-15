@@ -1,0 +1,1 @@
+{"passed": true, "summary_sha256": "9fc9ce96a68a6692cf83e2a029441b5ea4981e57af1a8762b413d5df21a92c1b", "method": "Full native readback per call;16 exact A/A pairs and malformed exit108; independently re-audited from raw files before main."}

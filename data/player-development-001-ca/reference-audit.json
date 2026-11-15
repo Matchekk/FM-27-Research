@@ -1,0 +1,93 @@
+{
+  "status": "REFERENCE_TABLE_AUDIT_NOT_CA_CALIBRATION",
+  "source_sha256": "b42727041a0779bc6bcc76272b0ae67ee323338f5bbdf1a348abd51769f08180",
+  "source": "https://github.com/jamiebolden/fm-scoring/blob/b5928ba2b9aba3c4c40a8f32118401eafb6f4c99/docs/ca_costs_fm27.csv",
+  "cells": 221,
+  "positions": {
+    "GK": {
+      "listed_attributes": 22,
+      "sum_reference_weights": 107,
+      "minimum": 2,
+      "maximum": 10
+    },
+    "CB": {
+      "listed_attributes": 20,
+      "sum_reference_weights": 91,
+      "minimum": 2,
+      "maximum": 10
+    },
+    "DL/DR": {
+      "listed_attributes": 23,
+      "sum_reference_weights": 78,
+      "minimum": 2,
+      "maximum": 7
+    },
+    "DM": {
+      "listed_attributes": 22,
+      "sum_reference_weights": 88,
+      "minimum": 2,
+      "maximum": 8
+    },
+    "WBL/WBR": {
+      "listed_attributes": 22,
+      "sum_reference_weights": 75,
+      "minimum": 2,
+      "maximum": 8
+    },
+    "CM": {
+      "listed_attributes": 23,
+      "sum_reference_weights": 90,
+      "minimum": 2,
+      "maximum": 7
+    },
+    "ML/MR": {
+      "listed_attributes": 22,
+      "sum_reference_weights": 78,
+      "minimum": 2,
+      "maximum": 8
+    },
+    "AMC": {
+      "listed_attributes": 22,
+      "sum_reference_weights": 88,
+      "minimum": 2,
+      "maximum": 9
+    },
+    "AML/AMR": {
+      "listed_attributes": 22,
+      "sum_reference_weights": 88,
+      "minimum": 2,
+      "maximum": 10
+    },
+    "ST": {
+      "listed_attributes": 23,
+      "sum_reference_weights": 107,
+      "minimum": 2,
+      "maximum": 10
+    }
+  },
+  "actual_marginal_ca_identified": false,
+  "nonlinearity_identified": false,
+  "independent_real_profiles": 0,
+  "holdout_mae": null,
+  "holdout_bias": null,
+  "calibration": null,
+  "note": "A repeated weight at levels8 and17 is a model assumption, not evidence of equal engine costs. Missing cells remain unknown, never zero.",
+  "meta_score_baseline": "FM27_META_SCORE_V0_1",
+  "illustrative_ST_scenario": {
+    "start_display_level": 12,
+    "max_display_level": 20,
+    "benefit": "v0.1 ST score numerator units; not match outcomes",
+    "status": "MODELED_REFERENCE_UNITS_ONLY",
+    "spent_reference_units": 20,
+    "budget_reference_units": 20,
+    "proxy_gain": 64.0,
+    "increments": {
+      "Acceleration": 0,
+      "Finishing": 0,
+      "Jumping Reach": 4,
+      "Pace": 0
+    },
+    "actual_ca_spent": null,
+    "expected_match_gain": null
+  }
+}
