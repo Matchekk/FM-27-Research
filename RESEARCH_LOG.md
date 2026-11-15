@@ -636,3 +636,15 @@ Vorbereitungsdiff0/1Record in allen Zellen geprüft,516neueSeeds reserviert,
 und festen Restzeitgates2.700sTechnik/2.400sMain, ohne Fristverlängerung.
 Die abgeschlossenen Paketstudien werden nicht wiederholt.
 [Vertrag](experiments/N3-AMCSHIFT-C1.md) · [Quellen](docs/night-003/LITERATURE_AMC.md).
+
+NIGHT-003: beide Hauptstudien vollständig mit8.192Matches/1.536Blöcken,
+alle14formalen Schätzer separat skalar nachgerechnet. Positionsdelta+0,053613xGD
+[−0,003894;+0,111120],p0,067629; praktische±0,15 eingegrenzt. SekundärTore/xGF
+bestehenHolm6, tatsächliche Punkte nicht. Erste Interaktion−0,013320xGD,
+praktische±0,20 eingegrenzt. Beide vorab definierten Präzisionsziele erreicht.
+AMC-Technik16+1/achtA/A bestanden, Main blieb wegen festem2.400s-Restzeitgate
+vor erforderlicherCI unbegonnen; terminaleAbrechnung/alle2.048Jobs dokumentiert.
+Keine Limits zurückgesetzt, alle512Mainseeds gesperrt. Insgesamt8.256Vollmatches
+inklusive64Technik plus3erwarteteNegativabweisungen; keine unerwarteten Ausfälle.
+Keine offeneNativephase; Rohbelege unverändert, Abbildung visuell geprüft und
+bytegleich reproduziert. Abschlussbericht und kurze Erkenntniszusammenfassung erstellt.

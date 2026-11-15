@@ -1,0 +1,90 @@
+{
+  "preregistered": false,
+  "interpretation": "Additional post-hoc conservative Holm14 sensitivity over all formal tests of the two complete studies; original preregistered analyses unchanged. No p-value imputed for unstarted AMC study.",
+  "tests": [
+    {
+      "study": "N3-SHARPSTRUCT-C1",
+      "endpoint": "primary:xgd",
+      "p": 0.803779211503251,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPSTRUCT-C1",
+      "endpoint": "INTERACTION:points",
+      "p": 0.30118246157164597,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPSTRUCT-C1",
+      "endpoint": "INTERACTION:gf",
+      "p": 0.13681637422051043,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPSTRUCT-C1",
+      "endpoint": "INTERACTION:ga",
+      "p": 0.9363789233790771,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPSTRUCT-C1",
+      "endpoint": "INTERACTION:xgf",
+      "p": 0.8118897200412171,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPSTRUCT-C1",
+      "endpoint": "INTERACTION:xga",
+      "p": 0.8940305910335264,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPSTRUCT-C1",
+      "endpoint": "CONTEXT_DIFFERENCE:xgd",
+      "p": 0.49546421013078257,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPPOS-C1",
+      "endpoint": "primary:xgd",
+      "p": 0.0676289386530732,
+      "p_holm14_sensitivity": 0.7439183251838053
+    },
+    {
+      "study": "N3-SHARPPOS-C1",
+      "endpoint": "points",
+      "p": 0.04802510399718398,
+      "p_holm14_sensitivity": 0.5763012479662077
+    },
+    {
+      "study": "N3-SHARPPOS-C1",
+      "endpoint": "gf",
+      "p": 0.00017807970592045627,
+      "p_holm14_sensitivity": 0.0023150361769659314
+    },
+    {
+      "study": "N3-SHARPPOS-C1",
+      "endpoint": "ga",
+      "p": 0.3559498504474008,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPPOS-C1",
+      "endpoint": "xgf",
+      "p": 2.0452873519101873e-05,
+      "p_holm14_sensitivity": 0.0002863402292674262
+    },
+    {
+      "study": "N3-SHARPPOS-C1",
+      "endpoint": "xga",
+      "p": 0.10726605104483482,
+      "p_holm14_sensitivity": 1.0
+    },
+    {
+      "study": "N3-SHARPPOS-C1",
+      "endpoint": "CONTEXT_DIFFERENCE:xgd",
+      "p": 0.8118892655876958,
+      "p_holm14_sensitivity": 1.0
+    }
+  ]
+}

@@ -1,10 +1,12 @@
 # FM27 Meta Research
 
-> **NIGHT-003 (15.11.):** 4.096 neue Hauptmatches/512 unabhängige Blöcke vollständig:
-> Schärfe×IP-Interaktion −0,013 xGD [−0,119; +0,092], präzise innerhalb ±0,20.
-> Zweite Positionsschärfe-Hauptserie läuft mit weiteren4.096Matches; noch keine Mainbefunde.
-> [Ergebnis](experiments/N3-SHARPSTRUCT-C1-results.md) ·
-> [Forschungsbericht](docs/night-003/RESEARCH_REPORT.md) · [Fortschritt](docs/night-003/PROGRESS.md).
+> **NIGHT-003 abgeschlossen (15.11.):** zwei vollständige Hauptstudien mit
+> **8.192 Matches / 1.536 unabhängigen Blöcken**. Schärfe×IP −0,013xGD
+> [−0,119; +0,092]; Positionsnutzen AMC/ST−CB +0,054 [−0,004; +0,111].
+> Beide primären Intervalle innerhalb der vorab definierten praktischen Referenz.
+> Dritte Komponentenfrage technisch bestanden, Main zeitbedingt ungestartet.
+> [Forschungsbericht](docs/night-003/RESEARCH_REPORT.md) ·
+> [Was wir neu wissen](docs/night-003/WHAT_WE_LEARNED.md).
 
 > **NIGHT-002:**512 neue IP/OOP-Hauptmatches/64 Seedblöcke vollständig.
 > Konkretes stürmerloses IP-Paket−0,350xGD[−0,502;−0,198],Holm7-p0,000162;

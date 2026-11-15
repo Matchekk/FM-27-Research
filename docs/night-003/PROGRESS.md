@@ -63,3 +63,11 @@ Hintergrundausführung. Eigener Phasensupervisor liefert Checkpoints und Fristen
 Zweite Serie10:24:14UTC vollständig simuliert; Rohpass und beide Rechenwege
 bestanden. Dritte Technik10:26:36UTC mit16+1/achtA/A bestanden; mindestens2.700s
 Rest vor dieser Phase eingehalten. Veröffentlichung/CI vor dritter Mainadmission.
+
+10:31:27UTC: erforderlicheCI43704319489 nochin_progress; vorab spätester
+AMC-Mainstart10:31:21UTC bereits vorbei. Keine Mainadmission/keinCallversuch.
+10:35:08UTC: N3-AMCSHIFT-C1 terminal geschlossen,2.048Jobs/512Mainseeds erhalten.
+Zwei wissenschaftliche Serien vollständig; zusammen1.536 unabhängigeMainblöcke.
+Alle8259nativenAufrufe abgerechnet (8192Main+64Technik+3Negativabweisungen).
+113,568Minuten beaufsichtigtePhasenzeit; keine offeneNativephase.
+Abbildung beider Primärkontraste visuell geprüft und SVG bytegleich reproduziert.

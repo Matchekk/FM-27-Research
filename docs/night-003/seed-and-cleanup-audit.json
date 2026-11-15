@@ -1,0 +1,33 @@
+{
+  "all_new_seed_sets_disjoint": true,
+  "total_new_reserved_uint32_seeds": 2060,
+  "overlap_with_prior_registry": 0,
+  "prior_registry_seed_values_checked": 609,
+  "completed_scientific_main_seed_blocks": 1536,
+  "terminal_unbegun_main_seed_blocks": 512,
+  "all_reservations_retained_unchanged": true,
+  "studies": {
+    "N3-SHARPSTRUCT-C1": {
+      "main_seed_blocks": 512,
+      "technical_seeds": 4,
+      "total_seeds": 516,
+      "seed_plan_lf_sha256": "db564d7477f304c237ba8828a76419e61b3b015621b91387fd3de8789b683683"
+    },
+    "N3-SHARPPOS-C1": {
+      "main_seed_blocks": 1024,
+      "technical_seeds": 4,
+      "total_seeds": 1028,
+      "seed_plan_lf_sha256": "9dc72eccfb8cad61297a67000a06fa9ba63b0186a9e093dd4206ff838fcc1c90"
+    },
+    "N3-AMCSHIFT-C1": {
+      "main_seed_blocks": 512,
+      "technical_seeds": 4,
+      "total_seeds": 516,
+      "seed_plan_lf_sha256": "9781e537c26b30e6c29a1be4ee5ae914d4942be9b433272160c3b25392ff2783"
+    }
+  },
+  "all_native_phases_reconciled": true,
+  "global_native_lease_absent": true,
+  "prior_archived_seed_like_values_checked": 2734,
+  "overlap_with_prior_archived_data": 0
+}

@@ -1,0 +1,10 @@
+{
+  "status": "final_archive_ci_pending",
+  "target_branch": "main",
+  "scientific_main_matches": 8192,
+  "independent_scientific_blocks": 1536,
+  "native_full_matches_including_technical": 8256,
+  "expected_negative_rejections": 3,
+  "native_work_complete": true,
+  "background_continuation": false
+}

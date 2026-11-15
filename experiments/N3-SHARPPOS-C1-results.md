@@ -73,4 +73,6 @@ Independenter Arithmetikpfad, gleicher Analyst; kein separater Gutachter behaupt
 
 Vorregistrierung0a2089e/CI43695266210; Mainfreigabea58e11d mit erfolgreicher
 [CI43699039037](https://github.com/Matchekk/FM-27-Research/actions/runs/43699039037).
-Ergebnis-CI wird im [Missionsbericht](../docs/night-003/RESEARCH_REPORT.md) ergänzt.
+Ergebniscommit `e7efa277960b747499e51a01da03374f39077528` besteht
+[CI43704319489](https://github.com/Matchekk/FM-27-Research/actions/runs/43704319489).
+Abschluss und Grenzen im [Missionsbericht](../docs/night-003/RESEARCH_REPORT.md).

@@ -1,0 +1,9 @@
+{
+  "source_lf_sha256": "8954ab0139eab9b2f698daa08a9257e696d9181e6351ec0d2ccaf402cfd37517",
+  "matplotlib": "3.10.7",
+  "inputs": {
+    "night-003-sharpstruct": "1fa00f1ac05d0a652039ca6f6b6f8aac116724a7af26b9943e1afc9a2fd4060c",
+    "night-003-sharppos": "a7797292e2c6cb24cb486d0394af4d24d5baa9a2f964566255e5c73dae0f3c5c"
+  },
+  "svg_sha256": "8e11c65ccacf012093f4dea0b5b5502452b5919a6e91171e2d4210c39629f187"
+}

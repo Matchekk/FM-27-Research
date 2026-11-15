@@ -1,14 +1,19 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
-## NIGHT-003 – aktueller Ausführungsauftrag,15.11.2026
+## Nach NIGHT-003 – aktuelle Prioritäten
 
-Die [Schärfe×IP-Bestätigungsstudie](experiments/N3-SHARPSTRUCT-C1-results.md)
-ist mit4.096Matches/512Blöcken vollständig:−0,013xGD[−0,119;+0,092],
-präzise innerhalb±0,20. Keine Erweiterung derselben Frage.
-Nächste unabhängige [Positionsschärfe-Studie](experiments/N3-SHARPPOS-C1.md):
-16+1Technik/eigeneAkteurbindung bestanden;4.096Main/1.024Blöcke nachCI geplant.
-Keine Wiederaufnahme terminaler Studien, keine Fortsetzung nach aktiver Sitzung.
-Aktueller [Zeit-/Fortschrittsnachweis](docs/night-003/PROGRESS.md).
+Zwei vollständige Hauptstudien mit8.192Matches/1.536Blöcken. Primäre
+Schärfe×IP-Interaktion−0,013xGD[−0,119;+0,092], marginale Positionsdifferenz
++0,054[−0,004;+0,111]; innerhalb vorab±0,20 beziehungsweise±0,15.
+[Ergebnisse, Grenzen und nächste drei Fragen](docs/night-003/RESEARCH_REPORT.md).
+
+1. Transfer auf neue Gegner/Stärken und natürliche Positionsratings kontrolliert prüfen.
+2. Positionsgruppe×IP-Struktur als neue Interaktion planen, statt bekannte Haupteffekte zu verlängern.
+3. AMC-/ST-Paketkomponenten in einem neuen vollständigen2×2-Vertrag kausal trennen.
+
+N3-AMCSHIFT-C1 ist nach16Technikmatches ohne Mainzulassung terminal geschlossen;
+alle2.048Mainjobs und512Mainseeds bleiben unbegonnen/gesperrt. Keine Wiederaufnahme,
+Budgetverlängerung oder Hintergrundfortsetzung nach der aktiven Sitzung.
 
 ## Nach NIGHT-002 – drei aktuelle Prioritäten
 

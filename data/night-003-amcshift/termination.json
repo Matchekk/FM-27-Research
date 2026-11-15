@@ -1,0 +1,32 @@
+{
+  "experiment_id": "N3-AMCSHIFT-C1",
+  "terminal_closed": true,
+  "closed_utc": "2026-11-15T10:35:08.546682+00:00",
+  "reason": "minimum_main_admission_window_not_met_before_required_CI",
+  "scientific_series_started": false,
+  "scientific_series_complete": false,
+  "scientific_statistics_available": false,
+  "planned_main_matches": 2048,
+  "completed_main_matches": 0,
+  "independent_scientific_blocks": 0,
+  "planned_main_seed_blocks": 512,
+  "all_2048_main_jobs_unbegun": true,
+  "main_calls_attempted": 0,
+  "retries": 0,
+  "replacement_seeds": 0,
+  "technical_full_matches": 16,
+  "expected_negative_rejections": 1,
+  "technical_gate_passed": true,
+  "minimum_main_admission_seconds": 2400,
+  "fixed_mission_deadline_utc": "2026-11-15T11:11:21.064611+00:00",
+  "latest_main_admission_utc": "2026-11-15T10:31:21.064611+00:00",
+  "ci_at_time_gate_check": {
+    "run": 43704319489,
+    "observed_utc": "2026-11-15T10:31:27+00:00",
+    "status": "in_progress"
+  },
+  "seed_plan_lf_sha256": "9781e537c26b30e6c29a1be4ee5ae914d4942be9b433272160c3b25392ff2783",
+  "private_budget_sha256": "efb08223150a81e0fd56c96265f3a6c141d8f70c754a56e9c869f153c8394f48",
+  "reservations_retained_unchanged": true,
+  "performance_missing_reason": "No scientific match admitted; technical matches excluded from performance inference"
+}
