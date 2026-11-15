@@ -8,6 +8,8 @@
 |08:00:09|Machbarkeit|Unveränderte IP-/Startpolicycompiler und Vier-Worker-Containment identifiziert. Kein neuer nativer Setter nötig.|
 |08:04:20|Gezielte Vorbereitung|Feste Kombination und Analyse implementiert; Systempython ohne numpy erkannt, vorhandene .venv wird verwendet. Keine Simulation bisher.|
 |08:08:09|Vorregistrierung geprüft|436 lokale Tests bestanden (2 bedingte Skips),5 Analysetests bestanden.516 neue disjunkte Seeds reserviert;0 Nativecalls.|
+|08:11:15|Native Technik gestartet|Vorregistrierungs-CI43693138863 erfolgreich; eigener neuer Supervisor/exklusive Lease.|
+|08:11:48|Native Technik abgeschlossen|32Vollmatches+Exit108;16exakteA/A;alleReadbacks und zweiterRohpass bestanden. Keine wissenschaftlichen Matches.|
 
 Vorabplanung bei4096: TACT-003-Interaktionsvarianz ergibt98,9% Power für0,20,
 volle KI-Breite0,184; mit simultanen SD-Obergrenzen89,3%/0,245. Der größere

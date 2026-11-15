@@ -606,4 +606,3 @@ Planungsanker und konservative Unsicherheit dokumentiert. Bestehende Compiler,
 ColdScheduler, Windows-Containment und exklusive Lease werden wiederverwendet;
 kein neuer Setter und keine alten Budgetresets. Noch keine neuen Messbefunde.
 [Vorregistrierung](experiments/N3-SHARPSTRUCT-C1.md) · [Protokoll](docs/night-003/PROGRESS.md).
-
