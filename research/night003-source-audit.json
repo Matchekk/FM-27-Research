@@ -1,0 +1,44 @@
+[
+  {
+    "url": "https://fm-arena.com/threads/fm27-match-engine-what-we-know-so-far.122/",
+    "accessed_utc": "2026-11-15T08:06:55.2010274Z",
+    "sha256": "0850c07e4413688f2bcde5b7e04cb8f5a8ab94a151b494c22cf73bbf8de9fa29",
+    "bytes": 198527
+  },
+  {
+    "url": "https://fm-arena.com/threads/attribute-importance-by-position-in-fm27-a-test-on-my-own-tactic.125/",
+    "accessed_utc": "2026-11-15T08:06:55.4691416Z",
+    "sha256": "cdfd37e86648f41c056920cc2b0b0bc743d537c24c1f78b77d05c1a543bafbeb",
+    "bytes": 124715
+  },
+  {
+    "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/03-tactical-familiarity.md",
+    "accessed_utc": "2026-11-15T08:06:56.0284862Z",
+    "sha256": "a93a9cbfdca04a710b891289ae0de9fe1ef937322bf7d4ce993540c5f86a32c0",
+    "bytes": 16329
+  },
+  {
+    "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/05-everything-else.md",
+    "accessed_utc": "2026-11-15T08:06:56.2399062Z",
+    "sha256": "2bf92b8eda055050fa493c8475abd5673f57313484a87ad205317242a855d2ee",
+    "bytes": 16901
+  },
+  {
+    "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/06-tactics-x-familiarity.md",
+    "accessed_utc": "2026-11-15T08:06:56.4737628Z",
+    "sha256": "862c284d6e7d7d7acefabea0fee37915b5f4ddfbdb751b527bcf7d9ffe25447c",
+    "bytes": 10446
+  },
+  {
+    "url": "https://raw.githubusercontent.com/caiograco289/Fm-Match-Lab/e92cf1416ca5c8c4b13009f8cf7d695f290b0368/docs/studies/13b-value-by-position-random.md",
+    "accessed_utc": "2026-11-15T08:06:56.6931057Z",
+    "sha256": "303b975f2f453fa71db492f32ab410e7d4da0f977adb418ea78e5d34b741f8d4",
+    "bytes": 12934
+  },
+  {
+    "url": "https://community.sports-interactive.com/forums/forum/905-fm27-updates",
+    "accessed_utc": "2026-11-15T08:07:48.7578742Z",
+    "status": "Direct HTTP challenge; content verified through web browser tool; no local content hash claimed",
+    "sha256": null
+  }
+]

@@ -1,0 +1,26 @@
+# NIGHT-003 – Zeit- und Fortschrittsprotokoll
+
+15.11.2026, alle Zeiten UTC (CET=UTC+1).
+
+| Zeit | Abschnitt | Tatsächlicher Stand |
+|---|---|---|
+|07:58:36|Beginn/Inventur|Fetch erfolgreich; main und origin/main764764b, sauber. Neue Mission, kein altes Budget reaktiviert.|
+|08:00:09|Machbarkeit|Unveränderte IP-/Startpolicycompiler und Vier-Worker-Containment identifiziert. Kein neuer nativer Setter nötig.|
+|08:04:20|Gezielte Vorbereitung|Feste Kombination und Analyse implementiert; Systempython ohne numpy erkannt, vorhandene .venv wird verwendet. Keine Simulation bisher.|
+|08:08:09|Vorregistrierung geprüft|436 lokale Tests bestanden (2 bedingte Skips),5 Analysetests bestanden.516 neue disjunkte Seeds reserviert;0 Nativecalls.|
+
+Vorabplanung bei4096: TACT-003-Interaktionsvarianz ergibt98,9% Power für0,20,
+volle KI-Breite0,184; mit simultanen SD-Obergrenzen89,3%/0,245. Der größere
+MECH-002-Interaktionsanker ergibt87,6%/0,252, konservativ64,9%/0,335.
+Das ist keine garantierte90%-Power.4096 ist ein sinnvoller großer neuer
+Interaktionstest; kein offensichtlich aussichtsloser Umfang, keine datengesteuerte
+Vergrößerung. Der Haupteffektanker wird ausdrücklich nicht als Interaktions-
+Powergarantie benutzt. Vorbereitete Inputs haben je Arm0/20/3/23 geänderte
+Records, unveränderte OOP und keine fremden Attribute.
+
+HTTP-Direktabruf des SI-Forums traf eine Challenge; lesbarer Inhalt wurde über
+das Webwerkzeug geprüft. Kein lokaler Inhalts-Hash für diesen Abruf behauptet.
+
+Aktive Technikfrist: spätestens08:28:36UTC Gateentscheidung bzw. Wechsel.
+Zeitzuordnung folgt den tatsächlichen Abschnitten; keine behauptete dauerhafte
+Hintergrundausführung. Eigener Phasensupervisor liefert Checkpoints und Fristen.

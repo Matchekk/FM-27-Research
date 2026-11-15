@@ -1,5 +1,13 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## NIGHT-003 – aktueller Ausführungsauftrag,15.11.2026
+
+Neue [Schärfe×IP-Bestätigungsstudie](experiments/N3-SHARPSTRUCT-C1.md),
+4096Hauptmatches/512neueBlöcke; gezielte Kombinationstechnik32+1 vor Main.
+Keine Wiederaufnahme terminaler Studien. Danach positionsabhängige gemeinsame
+Schärfeänderung bei identischem Akteurumfang auf kurzfristige Machbarkeit prüfen.
+Aktueller [Zeit-/Fortschrittsnachweis](docs/night-003/PROGRESS.md).
+
 ## Nach NIGHT-002 – drei aktuelle Prioritäten
 
 [Zehn geprüfte Kandidaten](docs/night-002/NOVELTY_MATRIX.md), beste drei und

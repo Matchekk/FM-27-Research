@@ -1,5 +1,9 @@
 # FM27 Meta Research
 
+> **NIGHT-003 gestartet (15.11.):** neue Schärfe×IP-Struktur-Interaktion,
+> 4096 Hauptmatches/512 unabhängige Blöcke vorregistriert; noch keine Ergebnisse.
+> [Vertrag](experiments/N3-SHARPSTRUCT-C1.md) · [Fortschritt](docs/night-003/PROGRESS.md).
+
 > **NIGHT-002:**512 neue IP/OOP-Hauptmatches/64 Seedblöcke vollständig.
 > Konkretes stürmerloses IP-Paket−0,350xGD[−0,502;−0,198],Holm7-p0,000162;
 > primäre IP×OOP-Interaktion+0,074[−0,191;+0,340] unklar. Keine globale Taktikregel.

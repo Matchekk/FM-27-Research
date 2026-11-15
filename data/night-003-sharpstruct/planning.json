@@ -1,0 +1,68 @@
+{
+  "anchors": {
+    "TACT003_interaction_observed": {
+      "sd": [
+        1.1672740481030017,
+        0.9422131160501132
+      ],
+      "se": 0.04687806510220109,
+      "full95width": 0.18421527032076992,
+      "power_for_point20": 0.9892196113933508,
+      "source": "data/night-002-stless003/effects.json"
+    },
+    "TACT003_interaction_joint95_SD_upper": {
+      "sd": [
+        1.5518670049737102,
+        1.2526530927573662
+      ],
+      "se": 0.06232343005255951,
+      "full95width": 0.24491043923036782,
+      "power_for_point20": 0.8930263533833428,
+      "source": "data/night-002-stless003/effects.json"
+    },
+    "MECH002_interaction_observed": {
+      "sd": [
+        1.642209523383002,
+        1.227326987550257
+      ],
+      "se": 0.06406771055836509,
+      "full95width": 0.25178627644680684,
+      "power_for_point20": 0.876032172727721,
+      "source": "data/mech-002-sharpness-p0/effects.json"
+    },
+    "MECH002_interaction_joint95_SD_upper": {
+      "sd": [
+        2.183284018635872,
+        1.6317061613666193
+      ],
+      "se": 0.08517671258203047,
+      "full95width": 0.3347447117135851,
+      "power_for_point20": 0.6492661184480775,
+      "source": "data/mech-002-sharpness-p0/effects.json"
+    },
+    "MECH002_main_observed": {
+      "sd": [
+        0.7020151899686691,
+        0.5252320363604055
+      ],
+      "se": 0.02739849909933988,
+      "full95width": 0.1076760306954155,
+      "power_for_point20": 0.9999999494700617,
+      "source": "data/mech-002-sharpness-p0/effects.json"
+    },
+    "MECH002_main_joint95_SD_upper": {
+      "sd": [
+        0.9333148561584362,
+        0.6982852642937717
+      ],
+      "se": 0.03642574492867982,
+      "full95width": 0.14315308348910255,
+      "power_for_point20": 0.999783791772239,
+      "source": "data/mech-002-sharpness-p0/effects.json"
+    }
+  },
+  "n_per_context": 256,
+  "independent_blocks": 512,
+  "matches": 4096,
+  "warning": "Different contrasts: variance anchors, never a guarantee for the new interaction. No outcome-dependent extension."
+}

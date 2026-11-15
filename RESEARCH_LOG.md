@@ -595,3 +595,15 @@ Budgettests,insgesamt129Testsbestanden. Quellen-/Reader-/Observerarbeit inArbeit
 Parallelremote fd954ba brachteCapture-/VALID004-Plan,.rec-Ignore und4Tests.
 Pushkonflikt regulär durch Merge integriert,keinefremdenÄnderungenüberschrieben.
 Die5neuenRemoteDateien werden zusätzlich separat gegenfd954ba geschützt.
+# 2026-11-15 – NIGHT-003: eigenständige Schärfe×IP-Interaktion vorregistriert
+
+Remote nach Fetch unverändert764764b, sauberer Start; eigener Branch codex/night-003.
+Atlas,35er-Index und aktuelle Originalquellen geprüft, NOVEL_HYPOTHESIS:
+MAC-05/06/07/07B/19, MECH-002 und TACT-003 überschneiden sich mit Faktoren,
+beantworten aber nicht den neuen Interaktionskontrast bei fester OOP.
+Neue516Seeds,32+1Technikjobs und4096Hauptmatches,512unabhängigeBlöcke geplant.
+Planungsanker und konservative Unsicherheit dokumentiert. Bestehende Compiler,
+ColdScheduler, Windows-Containment und exklusive Lease werden wiederverwendet;
+kein neuer Setter und keine alten Budgetresets. Noch keine neuen Messbefunde.
+[Vorregistrierung](experiments/N3-SHARPSTRUCT-C1.md) · [Protokoll](docs/night-003/PROGRESS.md).
+
