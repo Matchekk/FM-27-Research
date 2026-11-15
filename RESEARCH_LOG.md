@@ -711,3 +711,11 @@ Rohbelege erhalten, Lease frei.466Tests:463bestanden/3erwarteteSkips sowie
 5Analysetests bestanden. Ergebnisfigur visuell geprüft. Sechs Fachberichte,
 separates Komponentenmodell und getesteter Modellcode vervollständigt.
 [Forschungsbericht](docs/player-development-001/RESEARCH_REPORT.md).
+
+## PLAYER-DEVELOPMENT-001 – Exportformat vor Integration korrigiert
+
+Matplotlib-SVG enthielt im Archivcommit60707be generierte Endleerzeichen;
+der lokale Diff-Prüfbefund wurde vor diesem Commit übersehen. Exporter
+normalisiert jetzt deterministisch die SVG-Zeilen, Abbildungsprovenienz neu
+erzeugt. Keine Messung, Analyse, wissenschaftliche Aussage oder Native-
+Reservierung verändert. Abschließende Diff-Prüfung wird vor Integration erzwungen.

@@ -34,6 +34,8 @@ def main():
     fig.supxlabel('FM27 27.0.1+2503222 · 4.096 Matches / 512 Seedblöcke · marginale 95-%-Welch-Intervalle',fontsize=9)
     for ext in ('svg','png'):fig.savefig(OUT/('role-contrasts.'+ext),dpi=160,metadata={'Date':None} if ext=='svg' else {})
     plt.close(fig)
+    svg=OUT/'role-contrasts.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text(encoding='utf8').splitlines())+'\n',encoding='utf8',newline='\n')
     provenance=dict(measurement='data/player-development-001-role/effects.json',source_sha256=sha256(DATA.read_bytes()).hexdigest(),
         renderer_sha256=sha256(Path(__file__).read_bytes().replace(b'\r\n',b'\n')).hexdigest(),
         files={ext:sha256((OUT/('role-contrasts.'+ext)).read_bytes()).hexdigest() for ext in ('svg','png')},
