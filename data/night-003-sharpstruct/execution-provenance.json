@@ -1,0 +1,54 @@
+{
+  "experiment_id": "N3-SHARPSTRUCT-C1",
+  "checked_utc": "2026-11-15T09:16:52.037006+00:00",
+  "all_jobs_reconciled": true,
+  "native_processes_cleaned": true,
+  "stages": {
+    "technical": {
+      "planned": 33,
+      "resolved": 33,
+      "status_counts": {
+        "ok": 32,
+        "expected_rejection": 1
+      },
+      "unbegun": [],
+      "unresolved": [],
+      "peak_inflight_claims": 4,
+      "sum_native_call_seconds": 100.75100000006205,
+      "public_lf_sha256": "ecd13388bae061f1d8f7e9170558d8e20aff1077697546065e747541423c1c19"
+    },
+    "main": {
+      "planned": 4096,
+      "resolved": 4096,
+      "status_counts": {
+        "ok": 4096
+      },
+      "unbegun": [],
+      "unresolved": [],
+      "peak_inflight_claims": 4,
+      "sum_native_call_seconds": 12737.828999999561,
+      "public_lf_sha256": "cc7239ebdf45e203870939d047ad472a3d14652ff57a7385565e0cc1169fe7f3"
+    }
+  },
+  "budget": {
+    "limit_seconds": 7200,
+    "charged_seconds": 3360.474126099987,
+    "wall_start_utc": "2026-11-15T08:11:21.064611+00:00",
+    "wall_deadline_utc": "2026-11-15T11:11:21.064611+00:00",
+    "phase_elapsed_seconds": {
+      "technical": 27.681191199997556,
+      "main": 3332.7929348999896
+    }
+  },
+  "private_artifact_bytes": 2242155322,
+  "free_disk_bytes": 416501522432,
+  "missing_descriptive": {},
+  "software": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "scipy": "1.16.3"
+  },
+  "independent_arithmetic_passed": true,
+  "engine_pid_peak_measured": false,
+  "privacy": "Public text LF hashes; native raw hashes refer to unchanged private originals. No protected binaries, dumps or player identities exported."
+}

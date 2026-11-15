@@ -1,5 +1,28 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-15 – N3-SHARPSTRUCT-C1, Schärfe×IP bei fester OOP
+
+**4.096 gültige Hauptmatches, 512 unabhängige neue Kontext-Seedblöcke.**
+FM27 27.0.1+2503222, zwei feste synthetische Gegner, beide Teamseiten.
+Vorregistrierte Interaktion `[STLESS10000−BASE10000]−[STLESS7000−BASE7000]`
+bei originalem OOP4411: **−0,013320 xGD/Match**, 95-%-Welch-KI
+**[−0,118593; +0,091953]**, p=0,803779; Bootstrap
+[−0,118783; +0,090835]. Volle Breite0,210546 erreicht Ziel≤0,25.
+Das gesamte Intervall liegt innerhalb der vorab festgelegten ±0,20:
+praktisch große Interaktionen dieser Größenordnung werden im getesteten
+Kontext nicht gestützt; kleinere Effekte und Übertragung bleiben offen.
+
+Keine Holm6-Sekundärhypothese signifikant; Punkteinteraktion
+−0,080078[−0,232091;+0,071935], Holm-p1,0. Keine globale Wirkungslosigkeit,
+kein allgemeiner STLESS-Sieger und keine neuen Scoutinggewichte abgeleitet.
+Omnipotente Positionsratings und zwei bekannte Gegner begrenzen die Aussage.
+32 technische Vollmatches/16exakteA/A+Exit108, alle4.129Calls abgerechnet,
+0 unerwartete Fehler/Fehlstellen/Ausschlüsse/Retry/Ersatz. Unveränderte Rohbelege
+zweimal geprüft; Primäreffekt über separate skalare Arithmetik reproduziert.
+[Vollständiger Ergebnisbericht](experiments/N3-SHARPSTRUCT-C1-results.md) ·
+[Messungen](data/night-003-sharpstruct/main.jsonl) ·
+[Nachrechnung](data/night-003-sharpstruct/independent-recalculation.json).
+
 ## 2026-11-15 – TACT-003-STLESS-R0, kontrollierte IP/OOP-Pakete
 
 FM27 `27.0.1+2503222`, synthetische identische Rohprofile, zwei feste

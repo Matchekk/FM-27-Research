@@ -614,3 +614,16 @@ Primär Differenz marginaler Nutzen,4096Matches/1024Blöcke auf eigenen1028Seeds
 geplant; keine neue native Phase vor vollständiger erster Auswertung.
 Fünf gezielte Tests und separate synthetische Arithmetik bestanden, noch keine
 Leistungsmessung der zweiten Studie. Alte Studien/Budgets unverändert.
+
+09:11:27UTC endete die erste Hauptsimulation vollständig:4.096gültigeMatches,
+512unabhängigeBlöcke. Zweiter Rohbelegpass und Prozessbereinigung bestanden;
+eingefrorene Analyse und separate skalare Nachrechnung stimmen überein.
+Interaktion−0,013320xGD,95%-KI[−0,118593;+0,091953],p0,803779,
+innerhalb der vorab festgelegten±0,20. Kein Holm6-Sekundärnachweis.
+Keine Ausfälle, Ausschlüsse, fehlenden Messwerte oder Retries.
+Die zweite eigenständige Positionsfrage begann anschließend mit16nativen
+Technikmatches+Exit108;achtA/A und konkrete Zweispielerbindung bestanden.
+Der Nutzer begrenzt die Mission auf diese aktive Sitzung. Keine Hintergrund-
+Fortsetzung eingeplant; eigene feste Missionsfrist11:11:21UTC bleibt bindend.
+[Erster Ergebnisbericht](experiments/N3-SHARPSTRUCT-C1-results.md) ·
+[zweite Technikfreigabe](docs/night-003/POSITIONAL_TECHNICAL_RELEASE.md).

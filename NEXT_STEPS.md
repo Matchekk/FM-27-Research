@@ -2,10 +2,12 @@
 
 ## NIGHT-003 – aktueller Ausführungsauftrag,15.11.2026
 
-Neue [Schärfe×IP-Bestätigungsstudie](experiments/N3-SHARPSTRUCT-C1.md),
-4096Hauptmatches/512neueBlöcke; gezielte Kombinationstechnik32+1 vor Main.
-Keine Wiederaufnahme terminaler Studien. Danach positionsabhängige gemeinsame
-Schärfeänderung bei identischem Akteurumfang auf kurzfristige Machbarkeit prüfen.
+Die [Schärfe×IP-Bestätigungsstudie](experiments/N3-SHARPSTRUCT-C1-results.md)
+ist mit4.096Matches/512Blöcken vollständig:−0,013xGD[−0,119;+0,092],
+präzise innerhalb±0,20. Keine Erweiterung derselben Frage.
+Nächste unabhängige [Positionsschärfe-Studie](experiments/N3-SHARPPOS-C1.md):
+16+1Technik/eigeneAkteurbindung bestanden;4.096Main/1.024Blöcke nachCI geplant.
+Keine Wiederaufnahme terminaler Studien, keine Fortsetzung nach aktiver Sitzung.
 Aktueller [Zeit-/Fortschrittsnachweis](docs/night-003/PROGRESS.md).
 
 ## Nach NIGHT-002 – drei aktuelle Prioritäten

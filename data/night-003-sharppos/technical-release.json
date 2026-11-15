@@ -1,0 +1,1 @@
+{"passed": true, "summary_sha256": "3a0d713c949ad3cb5e08c9e8afe1ef90f6d11ad8371344ba92d0ecebfc058602", "method": "Full native readback and exactly two declared positional actors per call;8 exact A/A pairs and malformed exit108; independently re-audited from raw files before main."}
