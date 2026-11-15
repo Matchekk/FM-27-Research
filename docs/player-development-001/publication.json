@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "program": "PLAYER-DEVELOPMENT-001",
+  "status": "SCIENTIFIC_ARCHIVE_COMPLETE",
+  "scientific_archive_commit": "22b2a437121334c171076764faa170504f5aef48",
+  "successful_exact_ci": {
+    "run_id": 43741692217,
+    "url": "https://github.com/Matchekk/FM-27-Research/actions/runs/43741692217",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "target_branch": "origin/main",
+  "research_branch": "codex/player-development-001",
+  "base_commit": "3cd43178e9eeb48e279e8551d410c526b4b396e0",
+  "scope": "Hashes bind the tested scientific archive. Subsequent publication receipt/log only; no scientific files changed.",
+  "bound_files": {
+    ".github/workflows/research-checks.yml": {
+      "sha256": "ddbd87e24b8a844e81773ec66081e748f716e8178f93185d92e67c7058b92942",
+      "bytes": 2427
+    },
+    "FINDINGS.md": {
+      "sha256": "88b6c841032195e7338144c3d1e0c91d45b0bca5c2eba8874d4599f44625737d",
+      "bytes": 19935
+    },
+    "NEXT_STEPS.md": {
+      "sha256": "670d46d63e4ce135ea596a9c4c884aab42fdbeb598df000c1b56c2c17f423417",
+      "bytes": 10485
+    },
+    "README.md": {
+      "sha256": "e67f25f4120516dc5a784eab66b6d508c1ca872cb8d2ff5ed6e73447ac015bf1",
+      "bytes": 10183
+    },
+    "analysis/analyse_playerdev001.py": {
+      "sha256": "013f34c97bddc8bf2bca8d40ecc67ff8792416d171e0c2bdc8ffd294591b2af2",
+      "bytes": 7482
+    },
+    "analysis/ca_efficiency001.py": {
+      "sha256": "978bfb1650030697b527c60eec9d139312c7d3b78d7fc8e589557c517420e8ef",
+      "bytes": 4806
+    },
+    "analysis/ca_profile001.py": {
+      "sha256": "fd1594a2e2c051c9d1d01df6590774324f409380bc4291706d24cac53f1ddc89",
+      "bytes": 7785
+    },
+    "analysis/playerdev001.py": {
+      "sha256": "81fe3b5e81234e81bed7b4ad3e35514e48f8c16b95a061b5697d73e015cfe866",
+      "bytes": 20521
+    },
+    "analysis/playerdev001_design.py": {
+      "sha256": "4a542859e320bf8c651681b0a2a7e9924ceb626924fd8057a2ab8f486f9068be",
+      "bytes": 2601
+    },
+    "analysis/render_playerdev001.py": {
+      "sha256": "31904ddbccf200feda85df84b441abb34c2b7723d64d35a94dfba3b0909f90b6",
+      "bytes": 3101
+    },
+    "analysis/review_playerdev001.py": {
+      "sha256": "d6291da620ce9fe51851a8e56052957104306da677cba57930fdc84c248ac7d8",
+      "bytes": 5540
+    },
+    "analysis/summarize_playerdev001.py": {
+      "sha256": "ed997b4471efd2e16c35c990ebe873a62d0b5756248ee140776db52160a7b116",
+      "bytes": 7070
+    },
+    "data/player-development-001-ca/profile-diagnostic.json": {
+      "sha256": "74745ed6f7ab26bf322531c97a75bd5d64acf2a98eff7e7b354331a50cd2a6f7",
+      "bytes": 4525
+    },
+    "data/player-development-001-ca/provenance.json": {
+      "sha256": "b602e5a560d9306d5565e233cd8b9be0bbb298396fd0e9fec789319e3fa80a36",
+      "bytes": 1075
+    },
+    "data/player-development-001-ca/reference-audit.json": {
+      "sha256": "a70823cc60be4749915892768505fdf042df26015635101076555e9f25faa835",
+      "bytes": 2431
+    },
+    "data/player-development-001-role/effects.json": {
+      "sha256": "318fd455de242a3f882009638befe21ec607280be596ee11c5add5432203dfcb",
+      "bytes": 25262
+    },
+    "data/player-development-001-role/execution-provenance.json": {
+      "sha256": "a13f3ee774ad37a529d9ddcebbc6b2d7db10e829241b97a7d769db7a9de00465",
+      "bytes": 1731
+    },
+    "data/player-development-001-role/independent-recalculation.json": {
+      "sha256": "a76c7d1d1bd543f0ee3b5a727d07cfc02ba2a19b0c04d787947a2f8380149ab5",
+      "bytes": 236
+    },
+    "data/player-development-001-role/independent-statistics-review.json": {
+      "sha256": "3baa9da55c593b0412907c1050af10fa1341d28968d8a2f30b9581e3768cb3c8",
+      "bytes": 2383
+    },
+    "data/player-development-001-role/inputs.json": {
+      "sha256": "93683e48c393646d56b81f1bb2dfaea23cd603b33a5e00ad28cec579692744f6",
+      "bytes": 14131
+    },
+    "data/player-development-001-role/job-accounting.jsonl": {
+      "sha256": "4bde7b6e13e893c6e7869e293fc8a8c418de4e83ffad62f19ceb1431373e8cd5",
+      "bytes": 646221
+    },
+    "data/player-development-001-role/main-plan.json": {
+      "sha256": "7cbcfe8ec1f5e2fd18a97500f40aa5873c9a5606d9180b48a60214b4473b277b",
+      "bytes": 501745
+    },
+    "data/player-development-001-role/main-summary.json": {
+      "sha256": "71ecf3f3ee0b774928dc599c4c854a0c09cff76694b67dbd9f9f6f27027a6043",
+      "bytes": 406
+    },
+    "data/player-development-001-role/main.jsonl": {
+      "sha256": "60ec50b532cd66dab630bf53b935af7332ba5bde58073ba55814f4a083015a3b",
+      "bytes": 10760970
+    },
+    "data/player-development-001-role/planning.json": {
+      "sha256": "a8995100c2ecee4a05194f1ef26842cde6334d2c29e19b60176b89180907cdba",
+      "bytes": 1048
+    },
+    "data/player-development-001-role/seed-contrasts.jsonl": {
+      "sha256": "c99f2294098bfb90f06362a3dfd621237df05edf4c93bccd677b80f84bce96ff",
+      "bytes": 42787
+    },
+    "data/player-development-001-role/seed-plan.json": {
+      "sha256": "5335a019b752b2e50abdf060f467ffa4ccd5bb961d5784ae67643fc1b475347b",
+      "bytes": 12283
+    },
+    "data/player-development-001-role/technical-plan.json": {
+      "sha256": "cbd2c77e53812416e361753a86b16e1907e7a957bd9c499ddc29acc4c7ceef3b",
+      "bytes": 4282
+    },
+    "data/player-development-001-role/technical-release.json": {
+      "sha256": "2e70719de67840ed7bfc8abb19877d1870a84fc06cd83fb2b12451e750536682",
+      "bytes": 241
+    },
+    "data/player-development-001-role/technical-summary.json": {
+      "sha256": "9fc9ce96a68a6692cf83e2a029441b5ea4981e57af1a8762b413d5df21a92c1b",
+      "bytes": 4800
+    },
+    "data/player-development-001-role/technical.jsonl": {
+      "sha256": "00a0bdbd6c69a92e1ae701cf0551a4b4d74f8eedacf039793a4cc9ed39a8bd61",
+      "bytes": 84325
+    },
+    "docs/player-development-001/CA_EFFICIENCY.md": {
+      "sha256": "231ad04938740ceb3748a94a470b64e390fa183c55bafa06c9280762c8409169",
+      "bytes": 7799
+    },
+    "docs/player-development-001/LITERATURE.md": {
+      "sha256": "d8825480fb4fd172ced7a538424ad95067ecdf3ef2133c7798219d10442ce32d",
+      "bytes": 3936
+    },
+    "docs/player-development-001/NEXT_EXPERIMENTS.md": {
+      "sha256": "1fb2ed0e8bd0a9785c6da7255c8b482da7da0f517bcd4527514bb0910786aafc",
+      "bytes": 2866
+    },
+    "docs/player-development-001/PA_DEVELOPMENT.md": {
+      "sha256": "6c11e2010110340a9086c4bfe872025d1d5a307d8e66f3a4b1dd1ff90093b64f",
+      "bytes": 4522
+    },
+    "docs/player-development-001/RESEARCH_REPORT.md": {
+      "sha256": "a800a7b01d7e982531bea249ec3c1d2ff1fdf966365e1e699c1c79fccd8a0733",
+      "bytes": 9933
+    },
+    "docs/player-development-001/ROLE_ATTRIBUTE_RESEARCH.md": {
+      "sha256": "228d5e5b4401367ccefce9cf4051868c015692a3cb5eb6c2eee6d5df2115afd9",
+      "bytes": 4604
+    },
+    "docs/player-development-001/TRAINING_EVIDENCE.md": {
+      "sha256": "b712c690c1f93b8875864a332e279e25fed0df868a84781e6bfe121739574758",
+      "bytes": 4092
+    },
+    "docs/player-development-001/figure-provenance.json": {
+      "sha256": "52b3f445c7b9511e8f0e8682141c6b04582e937db8f820813dd021ce70ce5ec7",
+      "bytes": 527
+    },
+    "docs/player-development-001/role-contrasts.png": {
+      "sha256": "934c9bb3fac4c9dbb6414ed734842ef37b4e965b1b8b1fd2129b1aef05275640",
+      "bytes": 89000
+    },
+    "docs/player-development-001/role-contrasts.svg": {
+      "sha256": "76502fb4477cc0cc12efb0693a52a0602251719e2a42cb635dadab76703e7fc8",
+      "bytes": 84239
+    },
+    "docs/player-development-001/source-audit.json": {
+      "sha256": "a82acb671a46b17836a2a5cbb0fad148caec639ada77b4ba81605fecf7e582bc",
+      "bytes": 10241
+    },
+    "experiments/PD-CA-001.md": {
+      "sha256": "da7b1a8f3428a8263aed113f1ab2082e2614671785316a278700ae28f2bddbc9",
+      "bytes": 4457
+    },
+    "experiments/PD-ROLE-001-results.md": {
+      "sha256": "0d8d1e59da060b4346f8cd1f0bce956dc16878dc242f2b0a6f3e77c30a9d5008",
+      "bytes": 2491
+    },
+    "experiments/PD-ROLE-001.md": {
+      "sha256": "a16107979d5b5cd826bbea5a6342284eefeae82ce89ba02d724a5ca5ec9ac6b0",
+      "bytes": 5771
+    },
+    "research/meta_score_v02_components.json": {
+      "sha256": "e928bdfe01a60759108d2cbc48e61d1ec47ec01e7d66f9b17950ff03a1576f72",
+      "bytes": 4944
+    },
+    "tests/test_ca_efficiency001.py": {
+      "sha256": "15101dbefe10c64c65705422154cd01b2b586c16bbceb053470a8cebce9c7a1b",
+      "bytes": 2028
+    },
+    "tests/test_ca_profile001.py": {
+      "sha256": "6fe972e227a26074d0e6936e5803eed97d4f2899538234866b83512e1305fc18",
+      "bytes": 1452
+    },
+    "tests/test_playerdev001.py": {
+      "sha256": "8e2ce6aa99d69d2bc7c110688e954f2115c4143e23adcbed6f678d9a4711fc3b",
+      "bytes": 4458
+    },
+    "tests/test_playerdev001_archive.py": {
+      "sha256": "e754d03b7bf9d24f6583986d095406a7948bf774a79982202f8381c615e54029",
+      "bytes": 2978
+    },
+    "tests/test_playerdev001_components.py": {
+      "sha256": "365ef69b386f1ce381469c4bca0fdffec0461b2aaa651c3d0ba8eba891134a39",
+      "bytes": 1472
+    }
+  },
+  "scientific_main_matches": 4096,
+  "independent_seed_blocks": 512,
+  "additional_public_export_profiles": 109,
+  "ca_train_players": 80,
+  "ca_diagnostic_holdout_players": 29,
+  "causal_ca_costs_validated": false,
+  "pa_forecast_validated": false,
+  "training_career_experiment_run": false,
+  "local_tests": {
+    "total": 466,
+    "passed": 463,
+    "expected_skips": 3,
+    "additional_analysis_passed": 5
+  },
+  "private_protected_assets_published": false,
+  "private_player_ids_published": false,
+  "native_cleanup_confirmed": true,
+  "recorded_utc": "2026-11-15T17:38:05.813595+00:00"
+}

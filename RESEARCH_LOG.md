@@ -719,3 +719,11 @@ der lokale Diff-Prüfbefund wurde vor diesem Commit übersehen. Exporter
 normalisiert jetzt deterministisch die SVG-Zeilen, Abbildungsprovenienz neu
 erzeugt. Keine Messung, Analyse, wissenschaftliche Aussage oder Native-
 Reservierung verändert. Abschließende Diff-Prüfung wird vor Integration erzwungen.
+
+## PLAYER-DEVELOPMENT-001 – exakte Publikationsquittung
+
+Wissenschaftlicher Archivstand22b2a437121334c171076764faa170504f5aef48, vollständige CI43741692217 erfolgreich.
+Hashbindung sämtlicher wissenschaftlicher Veröffentlichungsdateien in
+[publication.json](docs/player-development-001/publication.json); dieser
+Quittungsschritt ändert nur Publikationsmetadaten/Journal, keine Messungen oder
+Analysen. Fast-forward-Integration nach origin/main vorgesehen, kein Force-Push.
