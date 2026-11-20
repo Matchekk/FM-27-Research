@@ -1,5 +1,7 @@
 # Kausale Wirkung von Entwicklungsmaßnahmen
 
+Der vorab ausgewählte Zubieta-Spieler trainierte am Ausgangstag bereits „Schnelligkeit“. Die getrennt registrierte Prüfung eines möglichen Fokusentzugs begann deshalb mit zwei identisch behandelten Arbeitskopien. Nach sieben echten Spieltagen unterschieden sich ohne jede Fokusänderung bereits CA bei vier und Rohattribute bei fünf von 13 Spielern. Die beiden Kopien lieferten außerdem unterschiedliche Match-/Ergebniskombinationen. Gemäß Vorabplan endete der Test nach A/A. Die Wirkung des Fokus blieb ungemessen. [Abnahme des ursprünglich geplanten Eingriffs](../../experiments/PA-REACH-001-TRAIN-FOCUS.md) · [Sieben-Tage-Vergleich](../../experiments/PA-REACH-001-TRAIN-WITHDRAW.md)
+
 **Für die beiden ausgewerteten Kalenderverläufe ist keine durchschnittliche kausale Wirkung auf CA, volle PA oder Peak-Meta identifiziert.** Die historischen Zubieta-Stichtage beschreiben eine tatsächlich gespielte Laufbahn. TRAIN005-A ist ein einziger Kontrollarm. Die Byteänderungen und Vereinswechsel entstanden im laufenden Spiel. Gruppenunterschiede können aus Alter, Kaderselektion, Training, Minuten, Verträgen und Verletzungen gleichzeitig folgen. [Ereignisabgleich](PROGRESSION_FACTOR_VALIDATION.md) · [Bedingte Zusammenhänge](CORRELATION_REPORT.md)
 
 | Forschungsfrage | Beobachtbare Messung | Bedingung für einen kausalen Schätzer |

@@ -1,0 +1,93 @@
+{
+  "ab_executed": false,
+  "all_cohort_fields_verified_equal": false,
+  "baseline_save_sha256": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9",
+  "ca_repeat_deviation": {
+    "abs_ca_difference_frequency": {
+      "0": 9,
+      "1": 3,
+      "2": 1
+    },
+    "max_abs_ca_difference": 2,
+    "mean_abs_ca_difference": 0.38461538461538464,
+    "median_abs_ca_difference": 0,
+    "n": 13,
+    "sum_abs_ca_difference": 5
+  },
+  "calendar_regime": "delegated_holiday",
+  "days_per_arm": 7,
+  "effect_estimate": null,
+  "end": "2027-05-07",
+  "engine_build": "27.1.0+2505117",
+  "fields": {
+    "ca": {
+      "different": 4,
+      "unverified": 0,
+      "verified": 13
+    },
+    "factor": {
+      "different": 0,
+      "unverified": 0,
+      "verified": 13
+    },
+    "minutes_starts_subs": {
+      "different": 4,
+      "unverified": 0,
+      "verified": 13
+    },
+    "pa": {
+      "different": 0,
+      "unverified": 0,
+      "verified": 13
+    },
+    "personality": {
+      "different": 0,
+      "unverified": 0,
+      "verified": 13
+    },
+    "positions": {
+      "different": 0,
+      "unverified": 0,
+      "verified": 13
+    },
+    "raw_attributes": {
+      "different": 5,
+      "unverified": 0,
+      "verified": 13
+    },
+    "verified_contract": {
+      "different": 0,
+      "unverified": 0,
+      "verified": 13
+    }
+  },
+  "first_team_fixtures": {
+    "left_played_with_results": 2,
+    "right_played_with_results": 2,
+    "same_matches_and_scores": false
+  },
+  "native_module_sha256": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
+  "paired": 13,
+  "predeclared": 13,
+  "protocol": "TRAIN-WITHDRAW",
+  "reader_version": "0.14.1",
+  "schema": "pa-reach-training-aa/v1",
+  "source_hashes": [
+    {
+      "after": "59cbc170e05e2455e938048075e6e40ededd6e33ef2b79301c887d79b766c4fa",
+      "before": "59cbc170e05e2455e938048075e6e40ededd6e33ef2b79301c887d79b766c4fa",
+      "native": "8be393f4a88d05e6c018825c5d61aba36fd6e9536bdeddbb21cb196ac3eed4aa",
+      "save": "bdfdf4effbc4eba826df0880760a4026af4c81f2e12032196a1987f9ce2ed2a7",
+      "scout": "2a649088beeb481fab8eadd5b76a8261d6cfc3e26400f8cb416b7d43b27785f0"
+    },
+    {
+      "after": "8b39296201f4a9de83923ac4ba86fd86d6677697672fb33f6b2563124e69adb7",
+      "before": "8b39296201f4a9de83923ac4ba86fd86d6677697672fb33f6b2563124e69adb7",
+      "native": "a9c9e0b6a6976cb4d2f3ffad442e3c66c32c2942022d0fb9637b86692c6581da",
+      "save": "9f3fa2b0a7a57a82d9e0abf568a93a69eca9aa08ebdc1daf8eb39041bfcf6c37",
+      "scout": "b693995592f7f1ad4677e84900ddfaf3805d119cef01f0097ed55fe092187af4"
+    }
+  ],
+  "start": "2027-04-30",
+  "technical_status": "FAILED_AA_EQUALITY"
+}
