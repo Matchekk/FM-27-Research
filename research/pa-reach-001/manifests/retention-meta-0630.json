@@ -1,0 +1,231 @@
+{
+  "schema": "pa-reach-retention-meta/v1",
+  "independent_career_roots": 1,
+  "calendar_days": 61,
+  "snapshots": {
+    "2027-04-30": {
+      "controller_day": "2027-04-30",
+      "scanner_reported_day": "2027-04-28",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3",
+        "after": "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3",
+        "loaded_copy": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9",
+        "dump": "f9beee1b5686be282c478c93d279b39ae7cad588c59675eca50e5369898eac3e"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 106095,
+        "invalid_scanner_attribute": 7747,
+        "unmatched_identity_or_ability": 20
+      }
+    },
+    "2027-06-30": {
+      "controller_day": "2027-06-30",
+      "scanner_reported_day": "2027-05-30",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "b930d7a7e4b3275ec74e8669f52e3223477934170ee14e9ca0c28d87578d4e99",
+        "after": "b930d7a7e4b3275ec74e8669f52e3223477934170ee14e9ca0c28d87578d4e99",
+        "loaded_copy": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088",
+        "dump": "c8c221b87039de644435efc731c5ddc4b94271572b98c0bd63b441670cbb4d87"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 105257,
+        "invalid_scanner_attribute": 7560,
+        "unmatched_identity_or_ability": 139
+      }
+    }
+  },
+  "intake_identity_manifest_sha256": "1dcc8637e4d8047872e16607df854393702d3fa3c9396522c7186ab2048b5973",
+  "intake": {
+    "baseline_n": 16,
+    "excluded_before_scoring": {
+      "baseline_goalkeeper": 1
+    },
+    "eligible_at_baseline_after_input_checks": 15,
+    "missing_followup_identity_or_attributes": 0,
+    "meta_delta": {
+      "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+      "modelVersion": "FM27_OUTFIELD_META_V2_1",
+      "scoreable": {
+        "n": 15,
+        "up": 6,
+        "equal": 6,
+        "down": 3,
+        "sumDelta": -0.16386486028856684
+      },
+      "caGain": {
+        "n": 8,
+        "up": 5,
+        "equal": 2,
+        "down": 1,
+        "sumDelta": 0.5103027213933
+      },
+      "positionUnavailable": 0,
+      "positionChanged": 0,
+      "cannotScore": 0,
+      "pairedCA": {
+        "n": 15,
+        "up": 8,
+        "equal": 7,
+        "down": 0,
+        "sumDelta": 12
+      },
+      "caUnchanged": {
+        "n": 7,
+        "up": 1,
+        "equal": 4,
+        "down": 2,
+        "sumDelta": -0.6741675816818669
+      },
+      "caLoss": {
+        "n": 0,
+        "up": 0,
+        "equal": 0,
+        "down": 0,
+        "sumDelta": 0
+      }
+    },
+    "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+  },
+  "global_outfield_under_28": {
+    "eligible_at_baseline_after_input_checks": 69477,
+    "missing_followup_identity_or_attributes": 181,
+    "meta_delta": {
+      "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+      "modelVersion": "FM27_OUTFIELD_META_V2_1",
+      "scoreable": {
+        "n": 69268,
+        "up": 20727,
+        "equal": 41656,
+        "down": 6885,
+        "sumDelta": 1939.5311432037793
+      },
+      "caGain": {
+        "n": 13708,
+        "up": 9244,
+        "equal": 3260,
+        "down": 1204,
+        "sumDelta": 1700.643122204079
+      },
+      "byPosition": {
+        "ST": {
+          "n": 10447,
+          "up": 3069,
+          "equal": 6350,
+          "down": 1028,
+          "sumDelta": 280.0134377286134
+        },
+        "DM": {
+          "n": 7131,
+          "up": 2133,
+          "equal": 4294,
+          "down": 704,
+          "sumDelta": 192.69507820190296
+        },
+        "DL": {
+          "n": 5273,
+          "up": 1544,
+          "equal": 3266,
+          "down": 463,
+          "sumDelta": 142.5693652509282
+        },
+        "AMC": {
+          "n": 5506,
+          "up": 1592,
+          "equal": 3388,
+          "down": 526,
+          "sumDelta": 145.86380082824834
+        },
+        "DC": {
+          "n": 10870,
+          "up": 3441,
+          "equal": 6387,
+          "down": 1042,
+          "sumDelta": 413.51981713493365
+        },
+        "MC": {
+          "n": 10325,
+          "up": 3216,
+          "equal": 6059,
+          "down": 1050,
+          "sumDelta": 276.9748395202991
+        },
+        "AML": {
+          "n": 6361,
+          "up": 1769,
+          "equal": 3913,
+          "down": 679,
+          "sumDelta": 139.13177014874168
+        },
+        "MR": {
+          "n": 1335,
+          "up": 400,
+          "equal": 792,
+          "down": 143,
+          "sumDelta": 31.667891857970975
+        },
+        "DR": {
+          "n": 5336,
+          "up": 1560,
+          "equal": 3299,
+          "down": 477,
+          "sumDelta": 144.2091102194953
+        },
+        "AMR": {
+          "n": 4568,
+          "up": 1396,
+          "equal": 2676,
+          "down": 496,
+          "sumDelta": 136.3709507216543
+        },
+        "WBL": {
+          "n": 686,
+          "up": 199,
+          "equal": 372,
+          "down": 115,
+          "sumDelta": 8.685496545583272
+        },
+        "WBR": {
+          "n": 301,
+          "up": 87,
+          "equal": 189,
+          "down": 25,
+          "sumDelta": 4.155015609243252
+        },
+        "ML": {
+          "n": 1129,
+          "up": 321,
+          "equal": 671,
+          "down": 137,
+          "sumDelta": 23.67456943615909
+        }
+      },
+      "positionUnavailable": 0,
+      "positionChanged": 28,
+      "cannotScore": 0,
+      "pairedCA": {
+        "n": 69268,
+        "up": 13708,
+        "equal": 53336,
+        "down": 2224,
+        "sumDelta": 19200
+      },
+      "caUnchanged": {
+        "n": 53336,
+        "up": 11314,
+        "equal": 37887,
+        "down": 4135,
+        "sumDelta": 659.5639332539291
+      },
+      "caLoss": {
+        "n": 2224,
+        "up": 169,
+        "equal": 509,
+        "down": 1546,
+        "sumDelta": -420.67591225423865
+      }
+    },
+    "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+  }
+}

@@ -22,6 +22,8 @@ function tally(target, delta) {
 async function main() {
   const result = {modelBlob: blob, modelVersion: model.version, scoreable: group(),
     caGain: group(), byPosition: {}, positionUnavailable: 0, positionChanged: 0, cannotScore: 0};
+  const withCA = process.argv.includes('--with-ca');
+  if (withCA) Object.assign(result, {pairedCA: group(), caUnchanged: group(), caLoss: group()});
   for await (const line of readline.createInterface({input: process.stdin})) {
     const [a, b, deltaCA] = JSON.parse(line);
     const position = model.defaultPosition(a);
@@ -35,6 +37,11 @@ async function main() {
     tally(result.scoreable, delta);
     tally(result.byPosition[position] ??= group(), delta);
     if (deltaCA > 0) tally(result.caGain, delta);
+    if (withCA) {
+      tally(result.pairedCA, deltaCA);
+      if (deltaCA === 0) tally(result.caUnchanged, delta);
+      if (deltaCA < 0) tally(result.caLoss, delta);
+    }
   }
   process.stdout.write(JSON.stringify(result));
 }

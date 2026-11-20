@@ -6,10 +6,19 @@
 |---|---|---|
 | Vorhandene Zubieta-Historie | 31.01.–30.03.2027, 58 Tage, 94.585 beidseitig bestätigte Spieler | Alter, Geburtsdatum und zwei echte Endzustände. Beide gespeicherten CA/PA-Werte separat nativ geprüft. |
 | Neu ausgeführte Kontrolle | 30.03.–30.04.2027, 31 simulierte Tage, 97.062 gepaarte Spieler | Private Kopie, regulärer Urlaub mit delegierten Matches. Die 58 historischen Tage kommen als eigene Beobachtungszeit hinzu. Der gemeinsame Märzstand wird einmal gezählt. |
+| Retentionszweig bis zum Sommer | 30.03.–30.06.2027, 92 Spieltage, 83.716 gepaarte Spieler aller Altersgruppen | 45 neue Treffer auf die volle März-PA bis zum Altershorizont und 152 auf mindestens 95 %. 434 Feldspieler lagen schon im März auf ihrer vollen PA. Am 02.07. folgte ein weiterer gesicherter Stichtag. |
 | Entwicklung bis 28 | Historisch 434 schon am Ziel, 37 neue positive Treffer auf die feste PA, 59.432 rechtszensiert, 732 mit unvollständig erfasstem Horizont | Die meisten relevanten Zukunftsverläufe sind noch offen. Auch die 25 neuen Treffer im Kontrollmonat ergeben keine individuelle Wahrscheinlichkeit. |
 | Qualität des Readers | Der Save und unabhängige Vollscans bestätigen an drei Stichtagen jeweils Millionen gültiger Vergleiche von Attribut-/Persönlichkeitswerten | Eingebettete Scanner-Kalendertage lagen bei allen drei nachgeprüften Scans falsch. Die tatsächliche Spieluhr vor und nach dem Scan bindet die Daten an den Save. |
 
 [Datenherkunft und Ausfälle](LONGITUDINAL_ANALYSIS.md) · [Kontrollmonat](PROSPECTIVE_CONTROL.md) · [Technischer Lauf](NATIVE_BRIDGE_VALIDATION.md) · [Endpunkte und Kalibrierung](CALIBRATION_REPORT.md)
+
+Im ersten gemessenen Quartal gewannen Feldspieler mit mehr als 30 CA-Punkten Abstand zur PA je nach Ausgangsalter im Mittel 2,80 CA (unter 18), 1,61 CA (18–20), 0,66 CA (21–23) und 0,26 CA (24–27). Für 59.784 Spieler stehen die Einzelprognosen für den 30. März 2028 bereits fest. [Quartalsmessung, Streuungen und Messausfälle](RETENTION_FIRST_QUARTER.md) · [Vorab festgelegter Jahresvergleich](PROSPECTIVE_CA_YEAR.md)
+
+### Was hat den ersten prospektiven Test bestanden?
+
+Für 61.540 Spieler waren am 30. April zwei einfache CA-Prognosen für den 30. Juni festgeschrieben. 60.863 Spieler hatten einen verwertbaren Endwert, bei 677 fehlt er. Über alle Paare lag die unveränderte April-CA im Mittel um **0,396 CA-Punkte** daneben, der fortgeschriebene jüngste Trend um **0,532**. Bei 4.109 Unter-18-Jährigen mit über 30 Punkten Ausgangslücke war die Reihenfolge umgekehrt (1,732 gegenüber 1,510). Die Fehler beziehen sich auf 61 Tage in einer einzigen Karriere. [Vorhersagen, Fehlermaße und Ausschlüsse](CALIBRATION_REPORT.md)
+
+Die im April festgelegte Gruppe stagnierender Talente blieb bis Juni komplett beobachtbar. Bei sechs von 299 Spielern stieg die CA um mindestens drei Punkte. Bei den zuvor wachsenden Talenten geschah das in 66 von 262 Fällen. Unter den 13.708 Feldspielern mit CA-Gewinn und vergleichbaren Meta-Eingaben blieb der Meta-Index bei 3.260 gleich und fiel bei 1.204. Die 15 auswertbaren Feldspieler des eigenen Jugendjahrgangs gewannen im Mittel 0,80 CA, ihr mittlerer Meta-Index sank um 0,0109 Punkte. [Stagnationsverlauf](STAGNATION.md) · [Direkt gemessene Meta-Entwicklung](RETENTION_META_SEASON1.md)
 
 ### Welche Spieler legten zu?
 
@@ -17,7 +26,7 @@ Bei einer Ausgangslücke von mehr als 30 CA-Punkten gewann ein Feldspieler unter
 
 Für 38.633 Spieler im historischen Fenster und 40.451 im Kontrollmonat ließen sich teamgleiche, explizite Einsatzminutenzähler verfolgen. Die mittlere CA-Änderung nahm über die Minutengruppen in den beiden Fenstern nicht konsistent zu. Spielpraxis hängt auch von Alter, Können, Gesundheit und Aufstellung ab. Dokumentierte Verletzungsereignisse belegen keine vollständige Zahl ausgefallener Tage. [Minuten, Verletzungen und Ausschlüsse](LONGITUDINAL_ANALYSIS.md)
 
-Bei hoher PA und erheblicher verbleibender Lücke hatten 299 von 562 dreifach gemessenen Feldspielern im Retentionsverlauf von Januar bis April fast unveränderte CA. Unter den 18- bis 20-Jährigen betraf dies 28 von 29 nahe der postulierten Stufengrenze und 48 von 164 mit mehr als zehn Punkten Spielraum. Diese Aprilkohorte ist vor der Juni-Auswertung festgelegt. [Stagnationskohorte und Ausfälle](STAGNATION.md)
+Bei hoher PA und erheblicher verbleibender Lücke hatten 299 von 562 dreifach gemessenen Feldspielern im Retentionsverlauf von Januar bis April fast unveränderte CA. Unter den 18- bis 20-Jährigen betraf dies 28 von 29 nahe der postulierten Stufengrenze und 48 von 164 mit mehr als zehn Punkten Spielraum. [Stagnationskohorte und Ausfälle](STAGNATION.md)
 
 ### Was spricht für einen Entwicklungszustand?
 

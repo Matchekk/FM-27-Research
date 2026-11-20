@@ -14,7 +14,8 @@ KEYS = ("Acceleration", "Pace", "JumpingReach", "Stamina", "Anticipation",
 TAGS = {"2027-01-31":"ZD-HIST-02", "2027-03-30":"ZD-ROOT-01", "2027-04-30":"ZD-CONTROL-APR"}
 
 
-def read_scan(conn, day, scan, before, after):
+def read_scan(conn, day, scan, before, after, *, tag=None, exclusions=None):
+    tag = tag or TAGS[day]
     context = []
     public_hashes = {}
     for label, path in (("before",before),("after",after)):
@@ -28,7 +29,7 @@ def read_scan(conn, day, scan, before, after):
         public_hashes[label] = hashlib.sha256(raw).hexdigest()
     if context[0] != context[1] or not before.stat().st_mtime <= scan.stat().st_mtime <= after.stat().st_mtime:
         raise ValueError("Scanner not bracketed by consistent controller state")
-    source = conn.execute("SELECT build,game_date,sha256 FROM capture WHERE tag=?", (TAGS[day],)).fetchone()
+    source = conn.execute("SELECT build,game_date,sha256 FROM capture WHERE tag=?", (tag,)).fetchone()
     with Path(context[0][1]).open("rb") as stream:
         public_hashes["loaded_copy"] = hashlib.file_digest(stream, "sha256").hexdigest()
     if source != ("27.1.0+2505117",day,public_hashes["loaded_copy"]):
@@ -47,30 +48,35 @@ def read_scan(conn, day, scan, before, after):
     players = {p["id"]:p for p in dump["players"] if freq[p["id"]] == 1}
     accepted = {}
     ledger = Counter()
+    def reject(reason, uid, birth):
+        ledger[reason] += 1
+        if exclusions is not None:
+            exclusions[uid,birth] = reason
+
     for uid,birth,age,pos,ca,pa,names,raw,ratings in conn.execute(
-            "SELECT uid,birth,age,pos,ca,pa,name_check,raw_attrs,positions FROM player WHERE tag=?", (TAGS[day],)):
+            "SELECT uid,birth,age,pos,ca,pa,name_check,raw_attrs,positions FROM player WHERE tag=?", (tag,)):
         p = players.get(uid)
         dt = date.fromisoformat(birth)
         if not p or (p["birthYear"],p["birthDoy"]) != (dt.year,dt.timetuple().tm_yday) or (p["ca"],p["pa"]) != (ca,pa):
-            ledger["unmatched_identity_or_ability"] += 1
+            reject("unmatched_identity_or_ability",uid,birth)
             continue
         if not names:
-            ledger["missing_name_check"] += 1
+            reject("missing_name_check",uid,birth)
             continue
         attrs = {k:p["attrs"].get(k) for k in KEYS}
         # The score accepts displayed 1..20 inputs. A scanner zero is missing for this purpose.
         if any(not isinstance(x,int) or not 1 <= x <= 20 for x in attrs.values()):
-            ledger["invalid_scanner_attribute"] += 1
+            reject("invalid_scanner_attribute",uid,birth)
             continue
         if any(attrs[k] != max(1,(raw[i]+2)//5) for k,i in zip(KEYS,indices,strict=True)):
-            ledger["attribute_disagreement"] += 1
+            reject("attribute_disagreement",uid,birth)
             continue
         ranked = sorted(zip(position_codes,ratings,strict=True), key=lambda x:-x[1])
         natural = [code for code,rating in ranked if rating>=max(15,ranked[0][1]-2)] or [ranked[0][0]]
         selected = [code for code,rating in ranked if rating>=15] or natural
         if (set(selected) != set(p["posArr"]) or set(natural) != set(p.get("posNat",p["posArr"]))
                 or p["pos"] != ", ".join(p["posArr"])):
-            ledger["position_disagreement"] += 1
+            reject("position_disagreement",uid,birth)
             continue
         record = {k:p[k] for k in ("pos", "posArr", "posNat") if k in p}
         record["attrs"] = attrs
@@ -80,10 +86,13 @@ def read_scan(conn, day, scan, before, after):
                       "scanner_version":meta["pluginVersion"],"hashes":public_hashes,"accounting":dict(ledger)}
 
 
-def score_pairs(start, end, model):
+def score_pairs(start, end, model, *, extended=False):
     eligible = [k for k,(age,pos,_,_) in start.items() if age<28 and pos and pos!="GK"]
     js = Path(__file__).with_suffix(".cjs")
-    with subprocess.Popen(["node",str(js),str(model)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+    command = ["node", str(js), str(model)]
+    if extended:
+        command.append("--with-ca")
+    with subprocess.Popen(command,stdin=subprocess.PIPE,stdout=subprocess.PIPE,
                           text=True,encoding="utf-8") as child:
         for k in eligible:
             if k in end:

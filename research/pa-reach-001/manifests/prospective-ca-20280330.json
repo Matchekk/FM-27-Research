@@ -1,0 +1,46 @@
+{
+  "engine_build": "27.1.0+2505117",
+  "forecast_days": 366,
+  "forecast_file_sha256": "c82760f4ac145abc23cbd38f224dd881e3423d900a5e553ca839e672f5af1dfe",
+  "frozen_counts": {
+    "18\u201320|0\u201310": 2511,
+    "18\u201320|11\u201330": 12034,
+    "18\u201320|>30": 4421,
+    "21\u201323|0\u201310": 2870,
+    "21\u201323|11\u201330": 12787,
+    "21\u201323|>30": 1416,
+    "24\u201327|0\u201310": 8722,
+    "24\u201327|11\u201330": 9532,
+    "24\u201327|>30": 427,
+    "U18|0\u201310": 230,
+    "U18|11\u201330": 2118,
+    "U18|>30": 2716
+  },
+  "frozen_total": 59784,
+  "history_days": 58,
+  "independent_test_careers": 0,
+  "origin": "2027-03-30",
+  "predictor_sources": {
+    "2027-01-31": {
+      "native_sha256": "5a6ea8883b73ffc66f43e6f1d9a22de2c95c2d4a04306b8ff1cfc13505e580ef",
+      "save_sha256": "7f0c59ed72dc6c07eac3e15ec44fc32507f9caae396fa5b27116d02fa415fb07"
+    },
+    "2027-03-30": {
+      "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+      "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    }
+  },
+  "previous": "2027-01-31",
+  "private_columns": [
+    "uid",
+    "birth",
+    "age_group",
+    "gap_group",
+    "carry_forward_ca",
+    "trend_numerator"
+  ],
+  "schema": "pa-reach-frozen-annual-ca/v1",
+  "target": "2028-03-30",
+  "target_branch": "ZD-RETENTION-01",
+  "target_observed_at_freeze": false
+}

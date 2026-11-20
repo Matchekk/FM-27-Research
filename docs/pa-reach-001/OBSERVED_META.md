@@ -8,6 +8,10 @@
 | Davon mit CA-Gewinn | 14.793 | 10.248 | 3.164 | 1.381 | +0,1346 |
 | 30.03.–30.04.2027, fortgeschriebener Kontrollmonat | 60.011 | 13.476 | 41.183 | 5.352 | +0,0169 |
 | Davon mit CA-Gewinn | 11.619 | 6.865 | 3.831 | 923 | +0,0902 |
+| 30.04.–30.06.2027, Retentionszweig | 69.268 | 20.727 | 41.656 | 6.885 | +0,0280 |
+| Davon mit CA-Gewinn | 13.708 | 9.244 | 3.260 | 1.204 | +0,1241 |
+
+Im 61-Tage-Fenster des Retentionszweigs stieg die CA der 15 auswertbaren Jugendfeldspieler im Mittel um 0,80. Der mittlere Meta-Index änderte sich um −0,0109. Alle Zweige stammen aus derselben Karriere. [Saisonstichtag, Jugendjahrgang und Reproduktion](RETENTION_META_SEASON1.md)
 
 Gleichstand bedeutet identische Indexwerte bis auf eine numerische Rechentoleranz von 10⁻¹². Die Werte gehen vor einer etwaigen Darstellungskürzung im UI ein. Änderungen der sichtbaren Attribute sind selbst diskret. Kleine Änderungen der Rohattribute können deshalb beim angezeigten Index unauffällig bleiben. Der Index gewichtet ausgewählte Attribute je Einsatzposition. Die Gruppenmittel fassen ausschließlich Änderungen innerhalb desselben Spielers auf derselben Position zusammen. Die beiden Zeitfenster gehören zum selben Karriereuniversum. Eine zwischen Karrieren gültige Unsicherheit ist nicht schätzbar. [Zählungen nach Einsatzposition](../../research/pa-reach-001/manifests/observed-meta.json)
 
