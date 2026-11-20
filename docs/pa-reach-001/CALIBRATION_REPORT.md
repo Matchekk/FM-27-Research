@@ -1,5 +1,7 @@
 # Kalibrierungsbericht · noch kein freigegebenes Modell
 
+Im Zielbuild liegt ein datierter Jahresendpunkt vor. Bei 55.079 vorab festgelegten und später bestätigten Spielerpaaren erreichte konstante März-CA einen Jahres-MAE von 2,932, der linear verlängerte 58-Tage-Trend 4,108. Eine getrennt eingefrorene Alters-/Lückentabelle senkte beim Halbjahresvergleich über 67.050 Spieler den MAE von 1,995 auf 1,814. Diese Ergebnisse messen **CA-Punktfehler**. Für die Wahrscheinlichkeit, vor 28 die volle PA zu erreichen, gibt es weiterhin null unabhängige Testkarrieren und keine gemessene Kalibrierung. [Jahrestest](PROSPECTIVE_CA_YEAR.md) · [Halbjahrestest](PROSPECTIVE_CA_GROUPS.md)
+
 Im bestätigten historischen TRAIN-005-Kontrollarm gibt es 59.730 Feldspieler unter 28 an der Baseline. Der feste Zielwert ist ihre jeweilige Start-PA. Das folgende Ergebnis beruht auf maximal vier tatsächlichen Spieltagen über 19 Tage auf 27.0.1+2503222. [Maschinenlesbare Zählung](../../data/pa-reach-001/summary.json)
 
 | Ziel | Bereits an Baseline | Erstmals später beobachtet | Letzter Tag vor Horizont, Ziel offen | Geburtstag erreicht/überschritten, kein Treffer beobachtet, Verlauf lückenhaft |

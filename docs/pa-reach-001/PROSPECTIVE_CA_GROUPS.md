@@ -11,3 +11,16 @@ Für genau den 30.03.2028 auf demselben Build und Retentionszweig werden je Zell
 ```text
 python research/pa-reach-001/analysis/prospective_ca_groups.py score RETENTION_PANEL FORECAST_LIST --save-sha256 SAVE_SHA256 --native-sha256 NATIVE_SHA256
 ```
+
+## Gemessen am 30.03.2028
+
+Bei **67.050 von 68.485** Spielern war die exakte Ziel-CA messbar. **1.435** Zielwerte fehlten. Der MAE sank von **1,995 CA** für unveränderte September-CA auf **1,814 CA** mit der Wachstumstabelle. Die gepaarte Differenz beträgt **−0,181 CA**. Der RMSE sank von 3,961 auf 2,844, der mittlere Fehler änderte sich von −1,926 auf +0,097 CA. [Zielauswertung mit Quellhashes und Zellnennern](../../research/pa-reach-001/manifests/prospective-ca-groups-20280330-score.json)
+
+| Septemberalter | PA−CA 0–10 | PA−CA 11–30 | PA−CA >30 |
+|---|---:|---:|---:|
+| U18 | 0,647 → 0,833 | 2,616 → 2,493 | 5,611 → 4,131 |
+| 18–20 | 0,412 → 0,595 | 1,626 → 1,848 | 2,934 → 2,487 |
+| 21–23 | 0,294 → 0,518 | 0,862 → 1,202 | 1,604 → 1,964 |
+| 24–27 | 0,262 → 0,283 | 0,486 → 0,604 | 1,122 → 1,313 |
+
+Die Zellen zeigen den MAE der unveränderten CA gefolgt von der Wachstumstabelle. Drei der zwölf Zellen verbesserten sich. Den größten Rückgang hatte U18 mit `PA−CA > 30`, um 1,479 CA. Der gemeinsame Fehler sank, obwohl er in neun Zellen stieg. Das Ergebnis beschreibt ausschließlich den späteren Zeitraum derselben Karriere.

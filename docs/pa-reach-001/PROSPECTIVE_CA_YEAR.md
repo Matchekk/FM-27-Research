@@ -16,3 +16,16 @@ Nach Übernahme des exakten und bestätigten Ziel-Snapshots erzeugt der CLI-Aufr
 ```text
 python research/pa-reach-001/analysis/prospective_ca_year.py score RETENTION_PANEL FORECAST_LIST --save-sha256 SAVE_SHA256 --native-sha256 NATIVE_SHA256
 ```
+
+## Gemessen am 30.03.2028
+
+Bei **55.079 von 59.784** Spielern war die exakte Jahres-CA messbar. **4.705** Zielwerte fehlten. Unveränderte März-CA ergab einen MAE von **2,932 CA**, die Fortschreibung der 58-Tage-Rate **4,108 CA**. Die individuelle Rate erhöhte den MAE um 1,176 Punkte. Auch der RMSE stieg von 5,432 auf 7,588. Der mittlere Fehler wechselte von −1,798 auf +2,019 CA. [Zielauswertung mit Quellhashes und Zellnennern](../../research/pa-reach-001/manifests/prospective-ca-20280330-score.json)
+
+| Ausgangsalter | PA−CA 0–10 | PA−CA 11–30 | PA−CA >30 |
+|---|---:|---:|---:|
+| U18 | 0,854 → 4,979 | 5,452 → 8,491 | 10,553 → 8,049 |
+| 18–20 | 0,593 → 2,503 | 2,886 → 5,154 | 6,015 → 6,617 |
+| 21–23 | 0,798 → 2,616 | 1,876 → 3,032 | 3,554 → 4,126 |
+| 24–27 | 1,388 → 2,109 | 2,395 → 3,129 | 4,006 → 4,828 |
+
+Die Zellen zeigen den MAE der unveränderten CA gefolgt von der individuellen Rate. Bei U18-Spielern mit mehr als 30 CA-Punkten zur PA verbesserte die Rate den Fehler um 2,503 Punkte. In den elf übrigen Gruppen erhöhte sie ihn. Die Zeitprüfung betrifft eine Karrierewurzel.

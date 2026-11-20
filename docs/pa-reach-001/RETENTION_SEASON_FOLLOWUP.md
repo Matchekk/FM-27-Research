@@ -29,6 +29,36 @@ Im 91-Tage-Fenster ab 30. September sind 91.522 Personen nativ gepaart. Von 469 
 
 Von 69.821 anfangs qualifizierten U28-Profilen sind 69.570 anhand der zehn Anzeigeattribute am Dezemberstichtag abgeglichen. In der gepaarten Auswahl steigt im Mittel die Stärke um +0,1039, das Tempo um +0,0290 und der Antritt um +0,0141. Bei den 22.358 Spielern mit CA-Gewinn betragen die entsprechenden Werte +0,3110, +0,1797 und +0,1514. Die vollständige Attributtabelle und Ausfallliste stehen im Manifest. [Messmanifest Dezember](../../research/pa-reach-001/manifests/zubieta-retention-december.json)
 
+## 30. März 2028 · Exakter Jahrestag
+
+Das beobachtete Jahr umfasst **366 Spieltage** ab der März-Wurzel. Unter 97.258 nativ bestätigten Baseline-Identitäten sind 75.239 am Jahrestag erneut bestätigt. 14.572 der 22.019 nativ fehlenden Identitäten bleiben im strukturellen Weltsave auffindbar. 7.447 fehlen in beiden Messwegen. Bei 41.925 Paaren änderte sich die CA, bei 23.358 der gespeicherte Faktor. Für alle gepaarten Spieler blieb die PA unverändert. Am Jahrestag gibt es 109.660 akzeptierte strukturelle Spielerdatensätze und 93.906 native CA-/PA-Bestätigungen. [Jahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-one.json)
+
+57.315 der 62.047 geeigneten Baseline-Feldspieler sind am Jahrestag gepaart. Bei 53.438 liegt die exakt jährliche CA bis einschließlich Alter 28 vor. Ein exakter 24-Monatswert fehlt zu diesem Messstand. Der beobachtete Altersverlauf bei mehr als 30 CA-Punkten Ausgangslücke fällt zwischen den Gruppen unterschiedlich aus.
+
+| Alter am 30.03.2027 | Baseline | Jahrespaare | Nativ fehlend, im Save vorhanden | In beiden fehlend | Mittlere ΔCA | Median | SD |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Unter 18 | 4.435 | 4.407 | 10 | 18 | +11,3808 | 11 | 7,5758 |
+| 18–20 | 4.439 | 4.351 | 46 | 42 | +5,9853 | 5 | 5,1296 |
+| 21–23 | 1.422 | 1.280 | 87 | 55 | +2,9945 | 1 | 4,8893 |
+| 24–27 | 432 | 353 | 54 | 25 | −1,3994 | 0 | 6,8502 |
+
+Bei den 353 älteren Jahres­paaren verloren 49 mindestens 10 CA, davon acht mindestens 20. Der geringste Endwert ist 14 CA. Der unabhängige Scout-Abgleich stimmt für alle 353 mit Save und nativem Inventar überein, einschließlich aller starken Rückgänge. 38 der 49 Spieler mit starkem Verlust haben ein vom Scout geliefertes Vertragsende. Das genügt nicht für eine Einstufung des Karriereendes. Bei auf unter 28 am Jahresendtag eingeschränkter Auswahl beträgt die mittlere Änderung −0,9574 CA (n=282, Median 0, SD 6,7023). Eine zusätzliche deskriptive Rechnung ohne die 49 starken Verluste ergibt +1,0691 (n=304, Median 0). [Jahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-one.json)
+
+Die scheinbare Umkehr gegenüber Dezember hängt mit der nativen Abdeckung zusammen. Alle 49 mit starkem Verlust waren im Dezember-Save vorhanden, aber im damaligen nativen Inventar nicht enthalten. Von den 353 Jahres­paaren weisen die 302 mit nativer Dezemberbeobachtung im Jahresvergleich +1,1358 CA auf und die 51 ohne diese Beobachtung −16,4118. Save-only hatten 47 der 49 bereits im Dezember mindestens 10 CA verloren, am 5. März waren es alle 49. Diese Zwischenmessungen haben für die Gruppe keinen unabhängigen Dezember-Abgleich. [Jahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-one.json)
+
+Der bis einschließlich zum 28. Geburtstag beobachtete maximale CA-Gewinn verwendet alle verfügbaren nativen Messpunkte einschließlich Baseline. Die Werte sind Untergrenzen möglicher tatsächlicher Höchstwerte zwischen Erhebungen. Die Tabelle zeigt die Mediane sowie das 10. und 90. empirische Perzentil bei Ausgangslücke über 30.
+
+| Baseline-Alter | Spieler | P10 | Median | P90 | Erstmals Höchstwert am Jahrestag | Letzter vorgesehener Messpunkt fehlt | Mindestens ein Messpunkt fehlt |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Unter 18 | 4.435 | 2 | 11 | 21 | 2.094 | 28 | 47 |
+| 18–20 | 4.439 | 0 | 5 | 13 | 1.089 | 88 | 326 |
+| 21–23 | 1.422 | 0 | 1 | 9 | 233 | 142 | 331 |
+| 24–27 | 432 | 0 | 0 | 5 | 30 | 81 | 176 |
+
+Bei Gleichstand zählt der erste Stichtag mit dem beobachteten Maximum. Für ältere Spieler kann der letzte vorgesehene Stichtag vor dem Jahrestag liegen, falls ihr 28. Geburtstag davor liegt. Insgesamt erreichten 153 Spieler neu die volle Ausgangs-PA und 673 neu mindestens 95 %. Für volle PA verbleiben 57.514 rechtszensierte und 3.946 mit abgelaufenem Horizont ohne beobachteten Treffer bei unvollständiger Abdeckung. Diese Zählungen gehören zu einem Karriereursprung. [Jahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-one.json)
+
+Die Jahresmessung der Anzeigeattribute umfasst 56.467 U28-Paare (6.534 fehlende qualifizierte Folgeprofile). Bei allen Paaren bzw. den 24.628 mit CA-Gewinn änderten sich im Mittel Stärke um +0,2974 bzw. +0,6817, Tempo um +0,0955 bzw. +0,3421, Antritt um +0,0293 bzw. +0,2428, Sprunghöhe um −0,0211 bzw. +0,1218 und Abschluss um −0,0515 bzw. +0,1083. Zwischen dem 30. Dezember und dem 30. März liegen 91 Tage und 68.010 qualifizierte Attributpaare. [Jahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-one.json)
+
 ## Reproduktion
 
 Der CLI-Aufruf verwendet das private native SQLite-Panel, das private strukturelle SQLite-Panel, das datierte native Eingabemanifest, den gewünschten Endtag und das zugehörige Struktur-Tag. Er prüft Build, Datum und Quellen-Hashes und beschränkt die Auswertung explizit auf die damals verfügbaren Stichtage. Die Identität beim Strukturabgleich verwendet Datenbank-ID und Geburtsdatum für die gesamte Spielwelt.

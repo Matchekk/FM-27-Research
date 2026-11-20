@@ -41,3 +41,12 @@ Im ersten Intervall erfüllen 67.210 Feldspieler die Eingangskriterien. 5.691 da
 Von 63.001 geeigneten März-Ausgangsprofilen fehlten im Dezember 4.049 bei der strukturellen Identitätsprüfung, und 323 hatten mindestens ein ungültiges Anzeigeattribut. Bei 91 weiteren Paaren wechselte die vom App-Modell gewählte Bewertungsposition. Bei den 22.983 auswertbaren Feldspielern mit CA-Gewinn stieg der Index im Mittel um 0,3376 Punkte und sank bei 1.918. Von den 16 gebundenen Jugendspielern fiel der Torwart außerhalb des Feldspielerindex. Die 15 Feldspieler haben keine fehlenden oder gewechselten Bewertungspositionen. Die identische Scoringfunktion reproduzierte auch die frühere Juni-Auswertung. [Dezember-Abrechnung](../../research/pa-reach-001/manifests/retention-meta-1230.json) · [Juni-Abrechnung](RETENTION_META_SEASON1.md)
 
 Der gehashte Retentionssave und ruhende Kontextabfragen vor und nach dem Scan bestätigen den 30.12.2027. Der Scout-Header nennt den 18.12. Der CLI-Lauf verwendet dieselben März-/April-Baselines für die exakten Folgetage 30.03.2028 und 30.03.2029. Er benötigt je Stichtag Panel, bestätigten Snapshot-Tag, Scan und beide Kontextbelege sowie für den Zieltag den bestätigten Save-Hash. Die Ergebnisse zeigen beobachtete Indexdifferenzen zwischen festen Stichtagen. Das höchste tatsächlich erreichte Meta zwischen diesen Tagen und künftiger Peak-Meta bleiben unbekannt. [Wiederverwendbarer CLI-Lauf](../../research/pa-reach-001/analysis/retention_meta_long.py)
+
+### Erster Jahresstichtag im Retentionszweig
+
+| Ausgangsgruppe bis 30.03.2028 | Tage | Gültige Paare | Mittlere ΔCA | Mittlere ΔMeta | Meta gestiegen / gleich / gesunken |
+|---|---:|---:|---:|---:|---:|
+| Feldspieler unter 28 am 30.03.2027 | 366 | 56.346 | +1,5532 | +0,1250 | 33.153 / 9.187 / 14.006 |
+| Fester Jugendjahrgang ab 30.04.2027 | 335 | 14 | +9,4286 | +0,6996 | 13 / 0 / 1 |
+
+Von 63.001 geeigneten März-Ausgangsprofilen fehlten zum Jahresstichtag 6.157 im strukturellen Folgeabgleich, 377 hatten ungültige Anzeigeattribute und 121 eine andere App-Bewertungsposition. Bei 24.573 Spielern mit CA-Zuwachs stieg der Index im Mittel um 0,3899 Punkte. Unter ihnen sank er bei 2.106. Im festen Jugendjahrgang entfallen ein Torwart und ein Spieler mit geänderter Bewertungsposition. Der Scout-Header meldete den 22.03.2028. Die Save-Prüfsumme und die beidseitige Kontextklammer bestätigen den 30.03.2028. [Jahresabrechnung](../../research/pa-reach-001/manifests/retention-meta-20280330.json)
