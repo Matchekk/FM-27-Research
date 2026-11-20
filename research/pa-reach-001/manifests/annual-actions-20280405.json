@@ -1,0 +1,26 @@
+{
+  "build": "27.1.0+2505117",
+  "census_date": "2028-04-05",
+  "contract_signature_outcome": null,
+  "expiring_by_june": 3,
+  "expiring_legacy_exempt": 3,
+  "expiring_untouched_outside_exempt": 0,
+  "identities_with_repeated_started_attempt": 0,
+  "intake_offers_submitted": 16,
+  "last_ledger_status": {
+    "DIRECTOR_NEGOTIATION_CONFIRMED_UI": 38,
+    "IDENTITY_UNCONFIRMED": 3,
+    "PREVIOUSLY_UNRESOLVED_NO_RETRY": 18,
+    "UNRESOLVED_NO_RETRY": 36,
+    "UNTOUCHED": 3
+  },
+  "legacy_exempt": 18,
+  "owned_incumbents": 98,
+  "schema": "pa-reach-annual-contract-actions/v1",
+  "source_sha256": {
+    "actions": "7056c08bac9d31dfc3855cf249588abd08fefa09f2d398636ff0b198a96a173a",
+    "census": "fb2f565673c684c349373d39df909fd6d104ca9bb995fa4ef9b798d5238c6168",
+    "exemption_list": "ec4cf3d2153fa6065eaf4b741f517859b6a3870f1322c3070ed1c23584777d61",
+    "offers": "30a4395763542e59c49e33de8f5d3b0fdefa419143b81e8aa7d5d625aa2dd821"
+  }
+}
