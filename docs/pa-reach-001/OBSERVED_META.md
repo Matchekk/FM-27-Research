@@ -30,3 +30,14 @@ An allen drei Tagen bestätigen die vor und nach dem Scan abgefragten Spiel-Brid
 | 30.04.2027 | 106.135 | 7.704 | 20 |
 
 Im ersten Intervall erfüllen 67.210 Feldspieler die Eingangskriterien. 5.691 davon fehlen beim qualifizierten Folgeabgleich, bei 36 wechselt die vom Fork gewählte Einsatzposition. Im Kontrollmonat sind es 63.001 Ausgangsspieler, davon fehlen 2.971 beim Folgeabgleich und bei 19 wechselt die Einsatzposition. Für alle verbleibenden Paare war der Originalscore berechenbar. Die CA-Wachstumsanalyse verwendet ein anderes Referenzinventar. Ihre Fallzahlen können deshalb abweichen. Das März–April-Aggregat wurde eigenständig und im Drei-Stichtage-Lauf reproduziert. [Vollständige Abrechnung und Hashes](../../research/pa-reach-001/manifests/observed-meta.json)
+
+### Längere Verläufe im Retentionszweig
+
+| Ausgangsgruppe bis 30.12.2027 | Tage | Gültige Paare | Mittlere ΔCA | Mittlere ΔMeta | Meta gestiegen / gleich / gesunken |
+|---|---:|---:|---:|---:|---:|
+| Feldspieler unter 28 am 30.03.2027 | 275 | 58.538 | +1,0149 | +0,0869 | 31.512 / 12.675 / 14.351 |
+| Fester Jugendjahrgang ab 30.04.2027 | 244 | 15 | +7,4667 | +0,6090 | 14 / 1 / 0 |
+
+Von 63.001 geeigneten März-Ausgangsprofilen fehlten im Dezember 4.049 bei der strukturellen Identitätsprüfung, und 323 hatten mindestens ein ungültiges Anzeigeattribut. Bei 91 weiteren Paaren wechselte die vom App-Modell gewählte Bewertungsposition. Bei den 22.983 auswertbaren Feldspielern mit CA-Gewinn stieg der Index im Mittel um 0,3376 Punkte und sank bei 1.918. Von den 16 gebundenen Jugendspielern fiel der Torwart außerhalb des Feldspielerindex. Die 15 Feldspieler haben keine fehlenden oder gewechselten Bewertungspositionen. Die identische Scoringfunktion reproduzierte auch die frühere Juni-Auswertung. [Dezember-Abrechnung](../../research/pa-reach-001/manifests/retention-meta-1230.json) · [Juni-Abrechnung](RETENTION_META_SEASON1.md)
+
+Der gehashte Retentionssave und ruhende Kontextabfragen vor und nach dem Scan bestätigen den 30.12.2027. Der Scout-Header nennt den 18.12. Der CLI-Lauf verwendet dieselben März-/April-Baselines für die exakten Folgetage 30.03.2028 und 30.03.2029. Er benötigt je Stichtag Panel, bestätigten Snapshot-Tag, Scan und beide Kontextbelege sowie für den Zieltag den bestätigten Save-Hash. Die Ergebnisse zeigen beobachtete Indexdifferenzen zwischen festen Stichtagen. Das höchste tatsächlich erreichte Meta zwischen diesen Tagen und künftiger Peak-Meta bleiben unbekannt. [Wiederverwendbarer CLI-Lauf](../../research/pa-reach-001/analysis/retention_meta_long.py)

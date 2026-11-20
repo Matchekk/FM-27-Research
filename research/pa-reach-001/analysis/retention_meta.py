@@ -43,28 +43,34 @@ def intake_results(start, end, intake, issues, model):
     return {"baseline_n": len(members), "excluded_before_scoring": dict(excluded), **output}
 
 
-def compare(args):
-    snapshots, audits, issues = [], {}, []
-    for day, inputs in (("2027-04-30", args.april), ("2027-06-30", args.june)):
-        panel, tag, scan, before, after = inputs
-        absent = {}
-        with sqlite3.connect(Path(panel).resolve().as_uri()+"?mode=ro", uri=True) as conn:
-            snapshot, audits[day] = read_scan(conn, day, *map(Path, (scan, before, after)),
-                                              tag=tag, exclusions=absent)
-        snapshots.append(snapshot)
-        issues.append(absent)
-        if audits[day]["hashes"]["loaded_copy"] != RETENTION_CHECKPOINTS[day]:
-            raise ValueError(f"Expected the frozen retention checkpoint for {day}")
-    intake_raw = args.intake.read_bytes()
+def load_snapshot(day, inputs, expected_hash):
+    panel, tag, scan, before, after = inputs
+    absent = {}
+    with sqlite3.connect(Path(panel).resolve().as_uri()+"?mode=ro", uri=True) as conn:
+        snapshot, audit = read_scan(conn, day, *map(Path, (scan, before, after)), tag=tag, exclusions=absent)
+    if audit["hashes"]["loaded_copy"] != expected_hash:
+        raise ValueError(f"Expected the frozen retention checkpoint for {day}")
+    return snapshot, audit, absent
+
+
+def load_intake(path):
+    intake_raw = path.read_bytes()
     intake_digest = hashlib.sha256(intake_raw).hexdigest()
     if intake_digest != INTAKE_SHA256:
         raise ValueError("Expected the frozen youth intake identity list")
-    start, end = snapshots
+    return json.loads(intake_raw), intake_digest
+
+
+def compare(args):
+    april, june = RETENTION_CHECKPOINTS
+    start, first_audit, first_issues = load_snapshot(april, args.april, RETENTION_CHECKPOINTS[april])
+    end, last_audit, last_issues = load_snapshot(june, args.june, RETENTION_CHECKPOINTS[june])
+    intake, intake_digest = load_intake(args.intake)
     global_end = {k: v for k, v in end.items() if v[1] and v[1] != "GK"}
     return {"schema": "pa-reach-retention-meta/v1", "independent_career_roots": 1,
-            "calendar_days": 61, "snapshots": audits,
+            "calendar_days": 61, "snapshots": {april: first_audit, june: last_audit},
             "intake_identity_manifest_sha256": intake_digest,
-            "intake": intake_results(start, end, json.loads(intake_raw), issues, args.model),
+            "intake": intake_results(start, end, intake, (first_issues, last_issues), args.model),
             "global_outfield_under_28": score_pairs(start, global_end, args.model, extended=True)}
 
 

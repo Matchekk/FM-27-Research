@@ -1,0 +1,252 @@
+{
+  "schema": "pa-reach-retention-meta-long/v1",
+  "independent_career_roots": 1,
+  "snapshots": {
+    "2027-03-30": {
+      "controller_day": "2027-03-30",
+      "scanner_reported_day": "2027-03-20",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+        "after": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+        "loaded_copy": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+        "dump": "19782dd0793840acae9a06eeaa83ad6d050a1912067303a34b02e9ee4617e3cd"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 100544,
+        "invalid_scanner_attribute": 6669,
+        "unmatched_identity_or_ability": 18
+      }
+    },
+    "2027-04-30": {
+      "controller_day": "2027-04-30",
+      "scanner_reported_day": "2027-04-28",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3",
+        "after": "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3",
+        "loaded_copy": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9",
+        "dump": "f9beee1b5686be282c478c93d279b39ae7cad588c59675eca50e5369898eac3e"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 106095,
+        "invalid_scanner_attribute": 7747,
+        "unmatched_identity_or_ability": 20
+      }
+    },
+    "2027-12-30": {
+      "controller_day": "2027-12-30",
+      "scanner_reported_day": "2027-12-18",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "2d1261e543945dba29b6f12144e5d96948e02da501643979a5f8b95c170c8571",
+        "after": "2d1261e543945dba29b6f12144e5d96948e02da501643979a5f8b95c170c8571",
+        "loaded_copy": "121cdf2c90abcf9f765d8e84939dbfceb49062682d18632e36d8252c78d3835c",
+        "dump": "773fef18e96541481e80e9343de901ab46dda728af617a4a5022874b3212040f"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 105398,
+        "invalid_scanner_attribute": 6507,
+        "unmatched_identity_or_ability": 202
+      }
+    }
+  },
+  "intake_identity_manifest_sha256": "1dcc8637e4d8047872e16607df854393702d3fa3c9396522c7186ab2048b5973",
+  "global_calendar_days": 275,
+  "intake_calendar_days": 244,
+  "global_outfield_under_28": {
+    "followup_exclusions": {
+      "no_structural_followup_identity": 4049,
+      "invalid_scanner_attribute": 323
+    },
+    "eligible_at_baseline_after_input_checks": 63001,
+    "missing_followup_identity_or_attributes": 4372,
+    "meta_delta": {
+      "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+      "modelVersion": "FM27_OUTFIELD_META_V2_1",
+      "scoreable": {
+        "n": 58538,
+        "up": 31512,
+        "equal": 12675,
+        "down": 14351,
+        "sumDelta": 5087.237002414607
+      },
+      "caGain": {
+        "n": 22983,
+        "up": 19493,
+        "equal": 1572,
+        "down": 1918,
+        "sumDelta": 7760.154688102393
+      },
+      "byPosition": {
+        "ST": {
+          "n": 8867,
+          "up": 4534,
+          "equal": 1931,
+          "down": 2402,
+          "sumDelta": 535.3060225875016
+        },
+        "DM": {
+          "n": 6309,
+          "up": 3502,
+          "equal": 1408,
+          "down": 1399,
+          "sumDelta": 640.8443176200378
+        },
+        "DL": {
+          "n": 4442,
+          "up": 2398,
+          "equal": 1020,
+          "down": 1024,
+          "sumDelta": 357.5309616849402
+        },
+        "AMC": {
+          "n": 4645,
+          "up": 2379,
+          "equal": 1040,
+          "down": 1226,
+          "sumDelta": 359.7713137788225
+        },
+        "MC": {
+          "n": 8444,
+          "up": 4654,
+          "equal": 1671,
+          "down": 2119,
+          "sumDelta": 810.1952476203733
+        },
+        "AML": {
+          "n": 5560,
+          "up": 2842,
+          "equal": 1288,
+          "down": 1430,
+          "sumDelta": 334.8337836588329
+        },
+        "DC": {
+          "n": 9147,
+          "up": 5307,
+          "equal": 1900,
+          "down": 1940,
+          "sumDelta": 1217.1576838287226
+        },
+        "MR": {
+          "n": 1197,
+          "up": 596,
+          "equal": 222,
+          "down": 379,
+          "sumDelta": 38.14534066815537
+        },
+        "DR": {
+          "n": 4439,
+          "up": 2402,
+          "equal": 1078,
+          "down": 959,
+          "sumDelta": 380.74495515695133
+        },
+        "AMR": {
+          "n": 3678,
+          "up": 1969,
+          "equal": 750,
+          "down": 959,
+          "sumDelta": 323.36868324797626
+        },
+        "WBL": {
+          "n": 553,
+          "up": 303,
+          "equal": 87,
+          "down": 163,
+          "sumDelta": 31.191461314823957
+        },
+        "WBR": {
+          "n": 227,
+          "up": 120,
+          "equal": 63,
+          "down": 44,
+          "sumDelta": 23.370798646126104
+        },
+        "ML": {
+          "n": 1030,
+          "up": 506,
+          "equal": 217,
+          "down": 307,
+          "sumDelta": 34.7764326013894
+        }
+      },
+      "positionUnavailable": 0,
+      "positionChanged": 91,
+      "cannotScore": 0,
+      "pairedCA": {
+        "n": 58538,
+        "up": 22983,
+        "equal": 27905,
+        "down": 7650,
+        "sumDelta": 59409
+      },
+      "caUnchanged": {
+        "n": 27905,
+        "up": 11348,
+        "equal": 10217,
+        "down": 6340,
+        "sumDelta": 623.7148067680032
+      },
+      "caLoss": {
+        "n": 7650,
+        "up": 671,
+        "equal": 886,
+        "down": 6093,
+        "sumDelta": -3296.6324924557366
+      }
+    },
+    "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+  },
+  "intake": {
+    "baseline_n": 16,
+    "excluded_before_scoring": {
+      "baseline_goalkeeper": 1
+    },
+    "eligible_at_baseline_after_input_checks": 15,
+    "missing_followup_identity_or_attributes": 0,
+    "meta_delta": {
+      "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+      "modelVersion": "FM27_OUTFIELD_META_V2_1",
+      "scoreable": {
+        "n": 15,
+        "up": 14,
+        "equal": 1,
+        "down": 0,
+        "sumDelta": 9.134747694422366
+      },
+      "caGain": {
+        "n": 14,
+        "up": 14,
+        "equal": 0,
+        "down": 0,
+        "sumDelta": 9.134747694422366
+      },
+      "positionUnavailable": 0,
+      "positionChanged": 0,
+      "cannotScore": 0,
+      "pairedCA": {
+        "n": 15,
+        "up": 14,
+        "equal": 1,
+        "down": 0,
+        "sumDelta": 112
+      },
+      "caUnchanged": {
+        "n": 1,
+        "up": 0,
+        "equal": 1,
+        "down": 0,
+        "sumDelta": 0
+      },
+      "caLoss": {
+        "n": 0,
+        "up": 0,
+        "equal": 0,
+        "down": 0,
+        "sumDelta": 0
+      }
+    },
+    "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+  }
+}

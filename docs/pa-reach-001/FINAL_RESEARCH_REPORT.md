@@ -48,6 +48,8 @@ Ein Vergleich im selben Verein grenzt die Vertragshypothese ein. Von 712 Spieler
 
 ### Was bedeutet das für PA-Meta?
 
+Nach 275 Tagen betrug die mittlere Änderung des gemessenen Feldspieler-Meta bei 58.538 Spielerpaaren auf derselben Bewertungsposition **+0,087**. Unter den 22.983 CA-Gewinnern sank der Index bei 1.918. Im eigenen Jahrgang stieg die CA der 15 Feldspieler zwischen April und Dezember im Mittel um 7,47 Punkte, ihr Meta um 0,609. Vierzehn verbesserten ihren Meta-Wert, einer blieb gleich. [Gemessene Indexwerte, Positionswechsel und Ausfälle](OBSERVED_META.md)
+
 Über dieselben 58 Tage stieg bei 14.793 qualifizierten Feldspielern die CA. Der unveränderte Meta-v2.1-Score stieg bei 10.248, blieb bei 3.164 exakt gleich und sank bei 1.381. Bei der Auswertung wurde dieselbe Einsatzposition vorausgesetzt und jedes erforderliche Anzeigeattribut an beiden Tagen gegen einen unabhängigen Readback geprüft. Die Gesamtkohorte dieses eigenen Messwegs umfasst 61.483. Dies liefert eine reale Zielgröße für spätere Prognosen über Attributpfade. Eine künftige Peak-Verteilung wurde noch nicht geschätzt. [Beobachtete Meta-Veränderung](OBSERVED_META.md) · [Modellplan](MODEL_DESIGN.md)
 
 ### Vertragsbindung und Umfang der nächsten Messung
