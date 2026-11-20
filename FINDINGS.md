@@ -1,5 +1,9 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-20 – FMSuperScout v2.1: native Abnahme, Leistungsfrage offen
+
+Auf Steam 27.1.0+2505117 und Tactics Lab v1118.1 wurden 16 technische Vollmatches mit acht exakten A/A-Paaren gemessen. Die vier JR-Rohstufen erreichten die vorgesehenen Starter. Der ursprüngliche Einzelexport und eine vollständige zeitgleiche UI-Kalibrierung fehlen. Wissenschaftlich getestete Spielerpaare und Kurvenblöcke: jeweils 0. [Abnahme](docs/meta-validation-001/MATCH_VALIDATION.md) · [Ergebnisse und Grenzen](docs/meta-validation-001/RESULTS.md).
+
 ## 2026-11-15 – Spielerentwicklung003: technische Übergabe, kein neuer Befund
 
 CA-003-GOLD: **INDEPENDENT_EDITOR_RCA_UNAVAILABLE** im begrenzten lokalen

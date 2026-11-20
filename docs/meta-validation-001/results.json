@@ -1,0 +1,149 @@
+{
+  "study": "META-VALIDATION-001",
+  "as_of": "2026-11-20",
+  "preregistration_commit": "3a82115277f03b02cb3d84359ab997e20a44733a",
+  "scientific_status": "TECHNICAL_NONSTART",
+  "A": {
+    "selected_pairs": [],
+    "technical_profile_swaps": 0,
+    "pilot_matches": 0,
+    "main_matches": 0,
+    "decision": null,
+    "V": null,
+    "chosen_GD_gain": null,
+    "ci95": null,
+    "source_counts_from_prior_aggregate": {
+      "players": 113673,
+      "hidden": 18,
+      "goalkeepers": 12570,
+      "noPosition": 0,
+      "invalid": 6091,
+      "eligible": 94994
+    },
+    "source_generated": "2026-11-17T20:59:56",
+    "source_aggregate_sha256": "2896c1a91269c1ca9aee51cba650a5b89be9a3bd10a6677c4cf1ec7d34a433dd",
+    "alternate_source_hashes": [
+      "7211856183c4bff2c391aa76d3866d0dee3bbe534bcb3fe87ecf1d5219a9afe4",
+      "e440d890b66bc1dda830c26113915b43090513beb38ca68363e9ef18b8aafe38"
+    ]
+  },
+  "B": {
+    "technical_matches": 16,
+    "exact_aa_pairs": 8,
+    "independent_technical_seeds": 1,
+    "scientific_matches": 0,
+    "scientific_pairs": 0,
+    "raw_doses": [
+      35,
+      45,
+      80,
+      95
+    ],
+    "worker_failures": 0,
+    "retries": 0,
+    "exclusions": 0,
+    "native_seconds": 30.968,
+    "planned_conditional_pilot": 128,
+    "pilot_started": 0,
+    "C": null,
+    "ci95": null,
+    "display_calibration": "INCOMPLETE",
+    "save_game_date": "2027-03-12",
+    "save_sha256": "52243ca895448a1337e4363cd8587c2e5fdeaada337a40b343f6ccd5206b7dbb",
+    "identity_matched_checks": [
+      {
+        "raw": 35,
+        "identity_match": true,
+        "ui_min": "7",
+        "ui_max": "7",
+        "ui_text": "7",
+        "game_date": "2027-03-17",
+        "ui_sha256": "0cdd8b66861f63e0bcc7bb71fc68ddcc05e3c5cc9667f8b594c5b6360c6fdefe",
+        "uid_receipt_sha256": "6fa1af26aada9a7b9e62b001b19409e94eb451739d8cb283160d4574c518905a"
+      },
+      {
+        "raw": 45,
+        "identity_match": true,
+        "ui_min": "9",
+        "ui_max": "9",
+        "ui_text": "9",
+        "game_date": "2027-03-17",
+        "ui_sha256": "fd8c106ead0d3e2201f641557faa814e1cfeb1ac0685f383f238e9ff66c42188",
+        "uid_receipt_sha256": "f447dbc653db2d6a29ab8cbae5eb87f80578a234ddd0a216b527ef3b0570e26a"
+      },
+      {
+        "raw": 80,
+        "identity_match": true,
+        "ui_min": "16",
+        "ui_max": "16",
+        "ui_text": "16",
+        "game_date": "2027-03-17",
+        "ui_sha256": "f63abd959509dfc86f43efa285c8d74388b7dcfdd051145082c160e321ec88fc",
+        "uid_receipt_sha256": "74a6b6258cf31af179155fd416a375c3d2cce17078965be87c9c051120f2406f"
+      },
+      {
+        "raw": 95,
+        "identity_match": true,
+        "ui_min": "-1",
+        "ui_max": "-1",
+        "ui_text": "-",
+        "game_date": "2027-03-17",
+        "ui_sha256": "5b96a569cf7f73912f9c568ff6f0946c58de402c635e5a0c5a0e08f59f67ca27",
+        "uid_receipt_sha256": "dce3c54baececbcb16c01ab1be0391dcf78aa016a475d591844f01d5f8402f2e"
+      }
+    ],
+    "additional_high_dose_checks": [
+      {
+        "display": "14-20",
+        "max": "20",
+        "uid_matched": true,
+        "game_date": "2027-03-20",
+        "raw": 95,
+        "min": "14",
+        "ui_sha256": "13eccdbb48e6d7ad1cbb5d87637e84230e40fda2224e013c9fc3b5a5c66cb14e",
+        "uid_receipt_sha256": "000f925cbac1a42cceb43e77e2649c7d46f9305b01d238b67594551a4a763291"
+      },
+      {
+        "display": "17-20",
+        "max": "20",
+        "uid_matched": true,
+        "game_date": "2027-03-20",
+        "raw": 95,
+        "min": "17",
+        "ui_sha256": "77b493be1ac703896629224ca6432d7bae5b3bf98201604647200d928bb0393a",
+        "uid_receipt_sha256": "7b62cdf7908df93d2d82ab0ff760cfe39e883c3d562079fc595d1f72e5d79dff"
+      },
+      {
+        "display": "17-20",
+        "max": "20",
+        "uid_matched": true,
+        "game_date": "2027-03-20",
+        "raw": 95,
+        "min": "17",
+        "ui_sha256": "c20c2adeefcc0aa37007f333443232786b6e6cee6216336702b25292830b142a",
+        "uid_receipt_sha256": "2a82f27fbd81a9e9b6e2ea24aa183d8ccb45552c8a861b0b3157bd6abe458e98"
+      },
+      {
+        "display": "13-20",
+        "max": "20",
+        "uid_matched": true,
+        "game_date": "2027-03-20",
+        "raw": 95,
+        "min": "13",
+        "ui_sha256": "5860559d73c3729568c8e5cab83a98a2859b3030a0f7771c967487f21f9a0853",
+        "uid_receipt_sha256": "df6b8144e16cfbdc00235839bc30a2dab6589f64947b1a9ac979c0f22b0ed69f"
+      },
+      {
+        "display": "17-20",
+        "max": "20",
+        "uid_matched": true,
+        "game_date": "2027-03-20",
+        "raw": 95,
+        "min": "17",
+        "ui_sha256": "18268ff277398e6162620666bfc514006df426a5b38e90aba767e91d8f2a6aca",
+        "uid_receipt_sha256": "d93858c1e1aee346a8e2df117a8ed67467a5e146e3c62f98cedba4ee02d389bf"
+      }
+    ],
+    "scientific_status": "NOT_ADMITTED"
+  }
+}

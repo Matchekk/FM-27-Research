@@ -1,5 +1,9 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## META-VALIDATION-001 – offene Voraussetzungen für den Holdout
+
+Für die Spielerwahl einen hashidentischen Export wiederfinden oder eine neue Kohorte separat einfrieren und vollständige Profile inklusive Eignung nativ prüfen. Für die isolierte JR-Kurve die vier Rohstufen am selben Spielstand gegen unmaskierte Originalwerte kalibrieren und positionsgeeignete Starter wählen. Der eine Technikseed ist verbraucht. [Modellentscheidung](docs/meta-validation-001/MODEL_DECISION.md).
+
 ## Spielerentwicklung004 – echter Karrierepilot auf Nutzerwunsch pausiert
 
 [TRAIN-005](docs/player-development-004/RESEARCH_REPORT.md) hat nun nachgewiesenen
