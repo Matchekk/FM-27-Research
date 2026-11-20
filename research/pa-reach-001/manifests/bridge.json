@@ -350,6 +350,78 @@
         "self_reported_date": "2028-05-20"
       },
       "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2028-09-30": {
+      "save": {
+        "bytes": 219844843,
+        "sha256": "0797b95e010919b3c223262424976924a18b99d8c8a7d7725ea16d0ebe0c6143"
+      },
+      "native_inventory": {
+        "bytes": 12500461,
+        "sha256": "317ef6a73b0de7bc5044f288c1d45266ace2df3fedd0e5132162b487b6860aa2",
+        "rows": 96469
+      },
+      "scout": {
+        "bytes": 205911496,
+        "sha256": "7884261a0479a40152cc7fffde9cddfcebdf68c2c613d99a06cd265b9f041961",
+        "rows": 113347,
+        "self_reported_date": "2028-09-16"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2028-12-30": {
+      "save": {
+        "bytes": 223446497,
+        "sha256": "0704de8500328709c9accfcde1f748314734275a04e6bbba41271b3e4e0e06f9"
+      },
+      "native_inventory": {
+        "bytes": 12665769,
+        "sha256": "491f07ffb29783d16d3fe7651f5052495b806cd4a6d4fed9f949e8ef4ac763ef",
+        "rows": 97714
+      },
+      "scout": {
+        "bytes": 208170714,
+        "sha256": "559badcb7def802ef3a066fca11b135947d0366bf1e3228e5f1b8db9d34fbf28",
+        "rows": 114658,
+        "self_reported_date": "2028-12-20"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2029-03-05": {
+      "save": {
+        "bytes": 227628852,
+        "sha256": "07e5430c77435f98a8e1e0e441c8578e001c7316baaa585a29f65218c5ef2e6e"
+      },
+      "native_inventory": {
+        "bytes": 12796971,
+        "sha256": "f04d09c1b2ee0b444463b8d02cf352e62ac8c22466b242208896c19f198d3c20",
+        "rows": 98673
+      },
+      "scout": {
+        "bytes": 206561380,
+        "sha256": "0500eb3efd74f47bb0b5906f15061b9b8c98608e4d6249f43938d342be519f1c",
+        "rows": 113977,
+        "self_reported_date": "2029-03-03"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2029-03-30": {
+      "save": {
+        "bytes": 229515467,
+        "sha256": "da7ad64586135cfb2b6b59bd88cb6a026f526ecdc6d8cb5f77576432a58fe135"
+      },
+      "native_inventory": {
+        "bytes": 12933711,
+        "sha256": "97cf6fcd8e10420dff8cf18c741c9f12e40c21b1473041b302a010c379b44098",
+        "rows": 99734
+      },
+      "scout": {
+        "bytes": 206796142,
+        "sha256": "abe9bd6a83be2cd08d41923017a904739f5287b345882bebfc74accb26efab71",
+        "rows": 114052,
+        "self_reported_date": "2029-03-17"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
     }
   },
   "retention_at_2027_04_07": {

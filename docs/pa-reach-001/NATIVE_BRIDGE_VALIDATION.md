@@ -1,5 +1,9 @@
 # Nativer Karrierezugang und Sicherung der Kontrollkarriere
 
+## Endstand und Rückkehr zum Sitzungsbeginn
+
+Der Retentionszweig erreichte den exakten Zweijahresstichtag 30.03.2029 nach 731 Spieltagen. Save, natives CA-/PA-Inventar und Scout-Vollscan liegen für diesen Tag und die Jahresquartale mit gehashten Referenzen vor. In einer getrennten Anschlusskopie folgte bis zum 05.04.2029 die Jugendaufnahme. Zum Abschluss wurde die private Rückkehrkopie des am Anfang geöffneten Spielzustands geladen. Der native Kontext bestätigte den 30.03.2027, den erwarteten Rückkehrpfad und einen ruhenden Spielzustand. Die Prüfsummen der drei geschützten persönlichen Quelldateien entsprachen erneut ihren ursprünglichen SHA-256-Werten. Die Forschungskopien und Rohdaten liegen privat. [Messstände und Scanherkunft](../../research/pa-reach-001/manifests/bridge.json) · [Endpunkt, Rückkehr und Originalprüfung](../../research/pa-reach-001/manifests/zubieta-session-closeout.json)
+
 ## Messweg
 
 Die laufende Steam-Installation meldete FM27 `27.1.0+2505117`. Auf diesem Build antwortete die vorhandene LabHost-Brücke 0.4.7 auf dem Spielthread auf reine Kontextabfragen. Der Prozess lieferte in derselben Antwort den tatsächlich aktiven Speicherpfad, das Spieldatum, Manager- und Mannschaftsidentität sowie die Zustände für Verarbeitung, laufende Partie und Speichern. Die privaten Protokolle bewahren die vollständigen Werte. Öffentlich erscheinen nur logische Bezeichnungen und Prüfsummen. Die Modulprüfsummen und Maschinenbelege stehen im [Bridge-Manifest](../../research/pa-reach-001/manifests/bridge.json).

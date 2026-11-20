@@ -1,0 +1,41 @@
+{
+  "age_frequency": {
+    "15": 11,
+    "16": 5
+  },
+  "baseline_day": "2029-04-05",
+  "build": "27.1.0+2505117",
+  "ca": {
+    "max": 89,
+    "mean": 65.8125,
+    "median": 65.5,
+    "min": 47
+  },
+  "cohort_n": 16,
+  "earlier_factor_measurement": null,
+  "first_date_in_registration_chain": "2029-03-31",
+  "pa": {
+    "max": 179,
+    "mean": 125.25,
+    "median": 128.0,
+    "min": 78
+  },
+  "present_in_world_save_2029_03_30": 0,
+  "schema": "pa-reach-intake-growth-baseline/v1",
+  "scout_ca_pa_name_verified": 16,
+  "sources": {
+    "hashes": {
+      "after": "57218bc345d0305780ab7ac547c7cbef2aa62e3cdb3bc42a43bc1949f1d4913c",
+      "before": "57218bc345d0305780ab7ac547c7cbef2aa62e3cdb3bc42a43bc1949f1d4913c",
+      "scout": "7e6f574f410183d07bb98b919caa9408947f0559c5442154fa0c59a8e6c6e854"
+    },
+    "prior_save_sha256": "da7ad64586135cfb2b6b59bd88cb6a026f526ecdc6d8cb5f77576432a58fe135",
+    "save_sha256": "803bca50bd8a0a5f80275ff3ee9a4fa39625cc1a8953c9acd3282976eb14e9d3",
+    "scanner_build": "1.7.3",
+    "scanner_reported_date": "2029-03-31"
+  },
+  "stored_factor_frequency": {
+    "0": 15,
+    "1": 1
+  }
+}

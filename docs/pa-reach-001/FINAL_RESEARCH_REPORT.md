@@ -4,6 +4,14 @@
 
 **FM27 27.1.0+2505117.** Die Zubieta-Saves liefern einen echten Längsschnitt, das als `ProgressionFactor` identifizierte Savefeld bei CA+7 und direkt gemessene Attribut-/Meta-Verläufe. Ein individuell kalibrierter PA-Erreichungsscore ist noch nicht freigegeben. Die Daten zählen als ein Zubieta-Ausgangsuniversum. Der frühere TRAIN-005-Bestand überschneidet sich auch bei den jungen Spielern so stark, dass er als unabhängiger Test ausscheidet.
 
+| Evidenz | Ergebnisstand |
+|---|---|
+| Extern berichtet | Fünf Stufen, postulierte Caps und Ereignisregeln. Die FM24-Codeanalyse und die FM27-Savebeobachtungen haben unterschiedliche Beweiskraft. [Originalquellen und Buildzuordnung](LITERATURE_REVIEW.md) |
+| Selbst in FM27 überprüft | Zwei Kalenderjahre CA/PA und Attribute, zeitliche Stufenwechsel, Vertragslaufzeiten und Zieltreffer. Der Faktor wurde stichprobenweise mit dem benannten Spielwert abgeglichen. [Feldprüfung](PROGRESSION_FACTOR_VALIDATION.md) |
+| Empirisch geschätzt und an zeitlich späteren Daten geprüft | Fehler der Jahres-CA, Intervallabdeckung der maximalen CA an fünf Stichtagen sowie bedingte Genauigkeit der PA-Meta-Projektion im selben Karriereuniversum. [Punktprognosen](PROSPECTIVE_CA_PERSONALITY.md) · [Intervalltest](PROSPECTIVE_PEAK_CA.md) |
+| Unabhängige Karrierevalidierung | Null unberührte Testkarrieren. Eine persönliche Prozentprognose für volle PA und erwartetes Karriere-Peak-Meta bleiben offen. [Kalibrierungsstand](CALIBRATION_REPORT.md) |
+| Offene Mechanismen | Auslöser eines tatsächlichen Neuwurfs, temporäre monatliche Freigabe und kausaler Einfluss eines Trainingsfokus. Eine mögliche historische Mod-Exposition der Ausgangskarriere begrenzt die Übertragung. [Kausale Befunde](CAUSAL_EFFECTS.md) · [Mod und Build](NATIVE_BRIDGE_VALIDATION.md) |
+
 ## Wer erreichte die volle PA?
 
 Am 30.03.2027 hatten 61.613 Feldspieler unter 28 ihre PA noch vor sich. 434 weitere hatten sie bereits erreicht. Die Auswertung hält für jeden Spieler die März-PA fest und berücksichtigt spätere Treffer höchstens bis einschließlich seines 28. Geburtstags. In 731 Spieltagen wurden **308 erstmals beobachtete Treffer auf die volle PA** gemessen.
@@ -82,7 +90,9 @@ Nach 275 Tagen betrug die mittlere Änderung des gemessenen Feldspieler-Meta bei
 
 Über dieselben 58 Tage stieg bei 14.793 qualifizierten Feldspielern die CA. Der unveränderte Meta-v2.1-Score stieg bei 10.248, blieb bei 3.164 exakt gleich und sank bei 1.381. Bei der Auswertung wurde dieselbe Einsatzposition vorausgesetzt und jedes erforderliche Anzeigeattribut an beiden Tagen gegen einen unabhängigen Readback geprüft. Die Gesamtkohorte dieses eigenen Messwegs umfasst 61.483. Dies liefert eine reale Zielgröße für spätere Prognosen über Attributpfade. Eine künftige Peak-Verteilung wurde noch nicht geschätzt. [Beobachtete Meta-Veränderung](OBSERVED_META.md) · [Modellplan](MODEL_DESIGN.md)
 
-### Vertragsbindung und Umfang der nächsten Messung
+### Vertragsbindung und Abschluss
+
+Nach dem gesicherten Primärendpunkt vom 30.03.2029 wurde ausschließlich in der sechstägigen Anschlusskopie die neue Aufnahme abgeschlossen. Alle 16 Kandidaten des Jahrgangs 2029 erhielten ein bestätigtes individuelles Angebot. Ihre spätere Unterschrift wurde in dieser Runde nicht gemessen. Von 15 bis Juni fälligen Bestandsverträgen gehörten 14 zu früheren offenen Fällen. Der einzige neu zu bearbeitende Fall erhielt einen Versuch ohne bestätigten Verhandlungsauftrag. Zum Abschluss war die private Rückkehrkopie des ursprünglichen Spielzustands am 30.03.2027 geladen und pausiert. Alle drei persönlichen Originaldateien wurden erneut erfolgreich gegen ihre Ausgangshashes geprüft. [Jahrgang 2029](../../research/pa-reach-001/manifests/zubieta-intake-2029-april-baseline.json) · [Abschlussquittung](../../research/pa-reach-001/manifests/zubieta-session-closeout.json)
 
 Im Jahrgang 2028 erhielten alle 16 Kandidaten ein Angebot und besaßen am 30. Juni einen laufenden Vertrag beim selben Klub. Nach 359 Tagen waren alle 16 wieder messbar. 15 gewannen CA, die mittlere Änderung betrug +10,625 (Median +8,5, Spannweite 0 bis +31). Bei den drei bis Juni 2028 auslaufenden Ausnahmefällen gab es im September einen bestätigten Vertrag bei einem anderen Klub, einen Spieler ohne registrierten Klub und einen weiter bei Zubieta registrierten Spieler ohne bestätigten laufenden Vertrag. [Zweiter Jugendjahrgang](../../research/pa-reach-001/manifests/zubieta-intake-2028-march-2029-followup.json) · [Passiver Abgleich nach Ablauf](../../research/pa-reach-001/manifests/zubieta-retention-september-2028.json)
 

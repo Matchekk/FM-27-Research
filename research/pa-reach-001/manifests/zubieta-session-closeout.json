@@ -1,0 +1,40 @@
+{
+  "annual_2029": {
+    "after_offers_save_sha256": "922462095eef0dfa259014008869351441cea2afe521d169e525cdae8284f954",
+    "expiring_by_june": 15,
+    "incumbents": 112,
+    "intake_offers_submitted_april_5": 16,
+    "legacy_skipped": 8,
+    "new_attempt_unresolved": 1,
+    "new_attempts": 1,
+    "previous_year_unresolved_or_unconfirmed_skipped": 6,
+    "verified_signed_2029_intake": null
+  },
+  "build": "27.1.0+2505117",
+  "independent_career_origins": 1,
+  "independent_test_origins": 0,
+  "primary_observation": {
+    "baseline": "2027-03-30",
+    "days": 731,
+    "end": "2029-03-30",
+    "end_save_sha256": "da7ad64586135cfb2b6b59bd88cb6a026f526ecdc6d8cb5f77576432a58fe135"
+  },
+  "private_evidence_sha256": {
+    "deadline_census": "437996e48efd148b5fd01123cbf5e6dc2a02cac09a6dd115cd2aa73a6508a87a",
+    "frozen_intake": "df7711879b4f6b3cb973673d45c29fbadd5f720a070826a84015865c86efdc2a",
+    "historical_exemptions": "ec4cf3d2153fa6065eaf4b741f517859b6a3870f1322c3070ed1c23584777d61",
+    "new_due_log": "40e8a89778abe602d00608c5e3488efd4d588783eb05415e6893926d31eddc97",
+    "prior_annual_log": "7056c08bac9d31dfc3855cf249588abd08fefa09f2d398636ff0b198a96a173a",
+    "submitted_intake": "a6542a7448f7ce26800969489517342ea604cc05cb2790d927e3e965999eea0f"
+  },
+  "recovery": {
+    "active_file": "PRIVATE_PRESESSION_LIVE_RECOVERY",
+    "context_sha256": "f0db709cc0734313dbbde7646052adbec9ec8c77343179e7afe161067506b508",
+    "date": "2027-03-30",
+    "distinct_personal_sources_rehashed": 3,
+    "game_idle": true,
+    "save_sha256": "3ca36cec598f60d34d7d1b051a16138b067b0aac0cd205baca38e331fe9f1a89",
+    "source_mismatches": 0
+  },
+  "schema": "pa-reach-zubieta-session-closeout/v1"
+}

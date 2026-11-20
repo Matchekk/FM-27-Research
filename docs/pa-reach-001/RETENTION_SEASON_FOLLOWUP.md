@@ -115,6 +115,10 @@ Alle 16 Angebote gingen in einen laufenden Vertrag beim gleichen Klub über. Der
 
 Nach 359 Spieltagen sind am 30. März 2029 alle 16 erneut in Struktur, nativem Inventar und Scout abgeglichen. Alle blieben beim selben Klub und bei gleicher PA. Die CA nahm im Mittel um +10,625 zu (Median +8,5, SD 8,9713, Bereich 0 bis +31). Fünfzehn steigerten ihre CA und bei einem blieb sie gleich. Die zwölf mit gespeichertem Baseline-Faktor 0 stehen am Ende bei 2, 3, 4 oder 5 (1, 3, 5 und 3 Spieler). Die vier übrigen Übergänge sind 3→2, 3→4, 4→4 und 4→5. Das Datum einzelner Veränderungen zwischen den Messpunkten bleibt offen. [Intake-Folgemessung März 2029](../../research/pa-reach-001/manifests/zubieta-intake-2028-march-2029-followup.json)
 
+## Jugendjahrgang 2029
+
+Der Stand vom 5. April 2029 enthält 16 neue Probeidentitäten im eigenen Vertragsbestand mit gespeichertem Kettenbeginn am 31. März und offenem Vertragsende. Im strukturellen Weltsave vom 30. März fehlt die gesamte Gruppe. Elf Spieler sind 15 Jahre alt, fünf sind 16. Der geklammerte Scout stimmt bei allen 16 in Datenbank-ID, Geburtsdatum, Name, CA und PA mit der strukturellen Messung überein. Die mittlere CA beträgt 65,8125 (47–89), die mittlere PA 125,25 (78–179). Das gespeicherte Faktor-Feld zeigt 15 Werte von 0 und einen Wert von 1. Der Faktorbefund bezieht sich ausschließlich auf den 5. April. [Intake-Baseline 2029](../../research/pa-reach-001/manifests/zubieta-intake-2029-april-baseline.json)
+
 ## Reproduktion
 
 Der CLI-Aufruf verwendet das private native SQLite-Panel, das private strukturelle SQLite-Panel, das datierte native Eingabemanifest, den gewünschten Endtag und das zugehörige Struktur-Tag. Er prüft Build, Datum und Quellen-Hashes und beschränkt die Auswertung explizit auf die damals verfügbaren Stichtage. Die Identität beim Strukturabgleich verwendet Datenbank-ID und Geburtsdatum für die gesamte Spielwelt.
