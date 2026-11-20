@@ -1,0 +1,238 @@
+{
+  "bracket_date": "2027-04-30",
+  "context_sha256": [
+    "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3",
+    "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3"
+  ],
+  "counts": {
+    "export_rows": 115182,
+    "matched": 109109,
+    "not_in_reference_with_unique_uid_and_birth": 6073,
+    "reference_pairs": 109128
+  },
+  "fields": {
+    "acceleration": {
+      "equal": 109106,
+      "missing_or_out_of_range": 3
+    },
+    "adaptability": {
+      "equal": 109109
+    },
+    "aerial_reach": {
+      "equal": 109109
+    },
+    "aggression": {
+      "equal": 109109
+    },
+    "agility": {
+      "equal": 109108,
+      "missing_or_out_of_range": 1
+    },
+    "ambition": {
+      "equal": 109109
+    },
+    "anticipation": {
+      "equal": 109092,
+      "missing_or_out_of_range": 17
+    },
+    "balance": {
+      "equal": 109043,
+      "missing_or_out_of_range": 66
+    },
+    "bravery": {
+      "equal": 108650,
+      "missing_or_out_of_range": 459
+    },
+    "command_of_area": {
+      "equal": 109107,
+      "missing_or_out_of_range": 2
+    },
+    "communication": {
+      "equal": 109103,
+      "missing_or_out_of_range": 6
+    },
+    "composure": {
+      "equal": 108888,
+      "missing_or_out_of_range": 221
+    },
+    "concentration": {
+      "equal": 108894,
+      "missing_or_out_of_range": 215
+    },
+    "consistency": {
+      "equal": 109109
+    },
+    "controversy": {
+      "equal": 109109
+    },
+    "corners": {
+      "equal": 107438,
+      "missing_or_out_of_range": 1671
+    },
+    "crossing": {
+      "equal": 106589,
+      "missing_or_out_of_range": 2520
+    },
+    "decisions": {
+      "equal": 109103,
+      "missing_or_out_of_range": 6
+    },
+    "determination": {
+      "equal": 109109
+    },
+    "dirtiness": {
+      "equal": 109109
+    },
+    "dribbling": {
+      "equal": 106514,
+      "missing_or_out_of_range": 2595
+    },
+    "eccentricity": {
+      "equal": 109109
+    },
+    "finishing": {
+      "equal": 105858,
+      "missing_or_out_of_range": 3251
+    },
+    "first_touch": {
+      "equal": 106980,
+      "missing_or_out_of_range": 2129
+    },
+    "flair": {
+      "equal": 109109
+    },
+    "free_kick_taking": {
+      "equal": 102836,
+      "missing_or_out_of_range": 6273
+    },
+    "handling": {
+      "equal": 109109
+    },
+    "heading": {
+      "equal": 100150,
+      "missing_or_out_of_range": 8959
+    },
+    "important_matches": {
+      "equal": 109092,
+      "missing_or_out_of_range": 17
+    },
+    "injury_proneness": {
+      "equal": 109109
+    },
+    "jumping_reach": {
+      "equal": 109056,
+      "missing_or_out_of_range": 53
+    },
+    "kicking": {
+      "equal": 109108,
+      "missing_or_out_of_range": 1
+    },
+    "leadership": {
+      "equal": 107167,
+      "missing_or_out_of_range": 1942
+    },
+    "long_shots": {
+      "equal": 106975,
+      "missing_or_out_of_range": 2134
+    },
+    "long_throws": {
+      "equal": 98401,
+      "missing_or_out_of_range": 10708
+    },
+    "loyalty": {
+      "equal": 109109
+    },
+    "marking": {
+      "equal": 107735,
+      "missing_or_out_of_range": 1374
+    },
+    "natural_fitness": {
+      "equal": 109109
+    },
+    "off_the_ball": {
+      "equal": 108749,
+      "missing_or_out_of_range": 360
+    },
+    "one_on_ones": {
+      "equal": 109102,
+      "missing_or_out_of_range": 7
+    },
+    "pace": {
+      "equal": 109100,
+      "missing_or_out_of_range": 9
+    },
+    "passing": {
+      "equal": 108820,
+      "missing_or_out_of_range": 289
+    },
+    "penalty_taking": {
+      "equal": 103303,
+      "missing_or_out_of_range": 5806
+    },
+    "positioning": {
+      "equal": 108440,
+      "missing_or_out_of_range": 669
+    },
+    "pressure": {
+      "equal": 109109
+    },
+    "professionalism": {
+      "equal": 109109
+    },
+    "punching": {
+      "equal": 109109
+    },
+    "reflexes": {
+      "equal": 109109
+    },
+    "rushing_out": {
+      "equal": 109109
+    },
+    "sportsmanship": {
+      "equal": 109109
+    },
+    "stamina": {
+      "equal": 108006,
+      "missing_or_out_of_range": 1103
+    },
+    "strength": {
+      "equal": 107746,
+      "missing_or_out_of_range": 1363
+    },
+    "tackling": {
+      "equal": 106386,
+      "missing_or_out_of_range": 2723
+    },
+    "teamwork": {
+      "equal": 109066,
+      "missing_or_out_of_range": 43
+    },
+    "technique": {
+      "equal": 107201,
+      "missing_or_out_of_range": 1908
+    },
+    "temperament": {
+      "equal": 109109
+    },
+    "throwing": {
+      "equal": 109089,
+      "missing_or_out_of_range": 20
+    },
+    "versatility": {
+      "equal": 109109
+    },
+    "vision": {
+      "equal": 107945,
+      "missing_or_out_of_range": 1164
+    },
+    "work_rate": {
+      "equal": 109067,
+      "missing_or_out_of_range": 42
+    }
+  },
+  "same_pid_before_after": true,
+  "scanner_date_source": "memory",
+  "scanner_reported_date": "2027-04-28",
+  "scanner_version": "1.7.3",
+  "scout_sha256": "f9beee1b5686be282c478c93d279b39ae7cad588c59675eca50e5369898eac3e"
+}

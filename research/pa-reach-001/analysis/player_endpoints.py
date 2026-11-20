@@ -1,10 +1,19 @@
 """Stream private landmark outcomes from the verified capture, one player per line."""
 import argparse
+from calendar import monthrange
 from datetime import date
 from itertools import groupby
 import json
 from pathlib import Path
 import sqlite3
+
+
+def quarter_later(day):
+    """End of a three-calendar-month observation window, clipped to month end."""
+    months = day.year * 12 + day.month - 1 + 3
+    year, month = divmod(months, 12)
+    month += 1
+    return date(year, month, min(day.day, monthrange(year, month)[1]))
 
 
 def endpoint(rows):
@@ -35,6 +44,15 @@ def endpoint(rows):
             status = "NO_OBSERVED_HIT_BY_HORIZON_COVERAGE_UNVERIFIED"
         targets[name] = {"status": status, "first_observed_hit": hit}
     by_day = {r["day"]: r["ca"] for r in observed}
+    quarter_count = 0
+    last_growth = None
+    for r in observed:
+        last = quarter_later(date.fromisoformat(r["day"])).isoformat()
+        if last in by_day:
+            quarter_count += 1
+            delta = by_day[last] - r["ca"]
+            if delta >= 3:
+                last_growth = {"start": r["day"], "end": last, "delta_ca": delta}
     start = date.fromisoformat(first["day"])
     annual_ca = {}
     for years in (1, 2):
@@ -44,7 +62,7 @@ def endpoint(rows):
             anniversary = start.replace(year=start.year + years, day=28)
         annual_ca[str(12 * years)] = by_day.get(anniversary.isoformat())
     return {
-        "schema_version": 1, "baseline_date": first["day"], "baseline_CA": first["ca"],
+        "schema_version": 2, "baseline_date": first["day"], "baseline_CA": first["ca"],
         "baseline_PA": baseline_pa, "target_date": horizon.isoformat(),
         "last_observed_in_window": observed[-1]["day"], "ca_at_exact_month": annual_ca,
         "observed_peak_CA": peak["ca"], "first_observed_peak_date": peak["day"],
@@ -52,6 +70,8 @@ def endpoint(rows):
         "last_minus_baseline_CA": observed[-1]["ca"] - first["ca"],
         "pa_changed_in_window": any(r["pa"] != baseline_pa for r in observed),
         "targets": targets,
+        "exact_quarter_windows": quarter_count,
+        "last_observed_quarter_gain_at_least_3_ca": last_growth,
     }
 
 

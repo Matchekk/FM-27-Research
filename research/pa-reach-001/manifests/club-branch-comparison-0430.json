@@ -1,0 +1,116 @@
+{
+  "schema": "pa-reach-club-branch-comparison/v1",
+  "date": "2027-04-30",
+  "supplementary_control_scout_sha256": "da725ab74400679a9dc88be08e5b99b970545db7eb9f1bf8a7dcbe1816ddcafe",
+  "save_hashes": [
+    "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+    "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634",
+    "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9"
+  ],
+  "independent_career_roots": 1,
+  "groups": {
+    "due": {
+      "baseline_n": 29,
+      "paired_n": 29,
+      "missing": {},
+      "control_matched_via_alternative_scanner": 0,
+      "pa_equal": 29,
+      "factor_pairs_control_to_retention": {
+        "3->3": 5,
+        "4->3": 2,
+        "4->2": 1,
+        "5->3": 2,
+        "4->4": 5,
+        "2->3": 1,
+        "3->5": 3,
+        "4->5": 2,
+        "3->4": 6,
+        "2->4": 2
+      },
+      "mean_ca_retention_minus_control": 0.41379310344827586,
+      "median_ca_retention_minus_control": 0,
+      "ca_difference_counts": {
+        "-1": 4,
+        "0": 18,
+        "1": 5,
+        "4": 1,
+        "7": 1
+      },
+      "contracts": {
+        "control_club_held": 29,
+        "control_fixed_end_confirmed": 29,
+        "retention_club_held": 29,
+        "retention_fixed_end_confirmed": 29
+      }
+    },
+    "later": {
+      "baseline_n": 54,
+      "paired_n": 54,
+      "missing": {},
+      "control_matched_via_alternative_scanner": 0,
+      "pa_equal": 54,
+      "factor_pairs_control_to_retention": {
+        "3->3": 10,
+        "5->5": 6,
+        "4->4": 13,
+        "5->4": 3,
+        "3->4": 5,
+        "3->5": 1,
+        "3->2": 3,
+        "1->1": 1,
+        "4->3": 2,
+        "4->1": 1,
+        "2->4": 3,
+        "4->5": 1,
+        "5->3": 3,
+        "1->3": 1,
+        "4->2": 1
+      },
+      "mean_ca_retention_minus_control": -0.05555555555555555,
+      "median_ca_retention_minus_control": 0.0,
+      "ca_difference_counts": {
+        "-2": 1,
+        "-1": 5,
+        "0": 45,
+        "1": 2,
+        "2": 1
+      },
+      "contracts": {
+        "control_club_held": 54,
+        "control_fixed_end_confirmed": 54,
+        "retention_club_held": 54,
+        "retention_fixed_end_confirmed": 54
+      }
+    },
+    "intake": {
+      "baseline_n": 16,
+      "paired_n": 16,
+      "missing": {},
+      "control_matched_via_alternative_scanner": 16,
+      "pa_equal": 16,
+      "factor_pairs_control_to_retention": {
+        "4->4": 8,
+        "1->3": 1,
+        "4->5": 4,
+        "2->4": 1,
+        "4->3": 1,
+        "3->4": 1
+      },
+      "mean_ca_retention_minus_control": -0.125,
+      "median_ca_retention_minus_control": -0.5,
+      "ca_difference_counts": {
+        "-2": 3,
+        "-1": 5,
+        "0": 3,
+        "1": 2,
+        "2": 2,
+        "3": 1
+      },
+      "contracts": {
+        "control_club_held": 16,
+        "retention_club_held": 16,
+        "retention_fixed_end_confirmed": 16
+      }
+    }
+  }
+}

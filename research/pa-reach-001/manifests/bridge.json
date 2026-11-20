@@ -50,6 +50,10 @@
       "bytes": 162887143,
       "sha256": "53fcc3eb45e4e6b52e8bb5f01933c4aeecae18edef391a30a7309abd93fe3998"
     },
+    "retention_april7_after_annual_contract_actions": {
+      "bytes": 164367632,
+      "sha256": "9b8e5200d38e4846dfa7d438136e94e1c452ce58bd2465bc65ab425a6ab11eb9"
+    },
     "retention_youth_offered_checkpoint": {
       "bytes": 162885882,
       "sha256": "932b1890f14aa2d8f770a3457757254cc5a28de4e86427629798f5765004059a"
@@ -132,5 +136,84 @@
     "immediate_refusal_transfer_listed": 1,
     "final_retention": null
   },
-  "calibration": "NOT_OUTCOME_VALIDATED"
+  "calibration": "NOT_OUTCOME_VALIDATED",
+  "retention_ui_controller": {
+    "mode": "regular_in_game_player_profile_and_explicit_contract_dialog",
+    "identity_guard": "private_roster_identity_and_profile_birthday_and_name",
+    "context_guard": "full_private_path_date_idle_state_foreground_window_and_pid",
+    "window_capture": "Windows Graphics Capture, target HWND only",
+    "window_capture_wrapper_version": "2.0.1",
+    "text_readback": "local Windows.Media.Ocr",
+    "private_controller_digests": {
+      "club-ui": "7a23594ce7c3e68d9210432091d180cd237d9d5e3a653445800aa9f5569d5875",
+      "contracts-control": "7c5b98d3e7a1d8629519cbd163ed8cbd5eddbe28866a9be630d3f5197e1b45ff",
+      "renew-homonyms": "628160de257a733dc161a2d1ca4af675b443cedc21e01ece0e6b33cfdd6c4682",
+      "verified-frame": "53f9dab1c4b4839e616fb0c1f77f104007004c9c0298003037889c1ba5fda2ae",
+      "ocr-frame": "32c29d4cbfe0dd38126f63a54c291d38bbc8297ac76b4adff4f6060f52be7ff3"
+    }
+  },
+  "retention_checkpoints": {
+    "2027-04-07": {
+      "save": {
+        "bytes": 164330033,
+        "sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a"
+      },
+      "native_inventory": {
+        "bytes": 12829258,
+        "sha256": "dc1be796cb5cf6ea5caf0f04bb0230c052875ef501293dc805a458b20a91c24e",
+        "rows": 99518
+      },
+      "scout": {
+        "bytes": 198345892,
+        "sha256": "4b5719dc18594fbd7e32934cd02e32b4adfd88aad48bc7ac213e9733f3836d91",
+        "rows": 109917,
+        "self_reported_date": "2027-04-06"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2027-04-30": {
+      "save": {
+        "bytes": 169434658,
+        "sha256": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9"
+      },
+      "native_inventory": {
+        "bytes": 14180603,
+        "sha256": "220f6bc79058272816913fb6f19517ce8279430583d65c4cbc8e1ea7f97b291e",
+        "rows": 109815
+      },
+      "scout": {
+        "bytes": 207524204,
+        "sha256": "f9beee1b5686be282c478c93d279b39ae7cad588c59675eca50e5369898eac3e",
+        "rows": 115182,
+        "self_reported_date": "2027-04-28"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    }
+  },
+  "retention_at_2027_04_07": {
+    "intake_signed_and_active": 16,
+    "begin_dates_observed": [
+      "2027-04-02",
+      "2027-04-03"
+    ],
+    "youth_contract": 15,
+    "full_time_contract": 1,
+    "with_future_periods": 11,
+    "prior_members_with_new_terms_before_second_batch": 30,
+    "of_expiring_members": 28,
+    "of_longer_contracts": 2,
+    "prior_members": 83,
+    "source": "independent_contract_date_readback_plus_date_and_identity_bound_save"
+  },
+  "annual_2027_contract_action_census": {
+    "baseline_contract_holders": 83,
+    "covered": 83,
+    "explicit_individual_delegations": 77,
+    "additional_identified_active_offers": 4,
+    "immediate_individual_refusals": 2,
+    "subsequent_reported_refusals_within_delegations": 2,
+    "known_refusals_so_far": 4,
+    "ascertainment": "verified_profile_plus_regular_FM_contract_menu_or_named_FM_inbox",
+    "new_contract_outcome_requires_followup": true
+  }
 }

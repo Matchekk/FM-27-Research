@@ -3,6 +3,8 @@
   "date": "2027-04-07",
   "game_build": "27.1.0+2505117",
   "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a",
+  "reader_revision": "7fb12175f59b4d41b4418bf0378c3855a5bab4bd",
+  "reader_sha256": "2e44723d7de70d69c0f93eb55141c61ccd7a09c0cf781167e51f1364cc4f269a",
   "private_receipt_sha256": "d79703cb82f3ec195b07f85269d6e9417d7ba0cc3bdcf606f7410d4539a21ccb",
   "clubs_requested": 10,
   "player_uid_birth_confirmed": 10,

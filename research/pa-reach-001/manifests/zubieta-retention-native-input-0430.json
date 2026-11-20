@@ -1,0 +1,21 @@
+{
+  "career_id": "ZD-RETENTION-01",
+  "engine_build": "27.1.0+2505117",
+  "independent_cluster": "ZUBIETA",
+  "native_module_sha256": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
+  "schema_version": 1,
+  "snapshots": {
+    "2027-03-30": {
+      "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+      "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    },
+    "2027-04-07": {
+      "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a",
+      "native_sha256": "dc1be796cb5cf6ea5caf0f04bb0230c052875ef501293dc805a458b20a91c24e"
+    },
+    "2027-04-30": {
+      "save_sha256": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9",
+      "native_sha256": "220f6bc79058272816913fb6f19517ce8279430583d65c4cbc8e1ea7f97b291e"
+    }
+  }
+}

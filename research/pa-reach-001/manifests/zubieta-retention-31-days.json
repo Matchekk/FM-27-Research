@@ -1,0 +1,424 @@
+{
+  "baseline_median_ca_over_pa": {
+    "0": 0.4593,
+    "1": 0.8161,
+    "2": 0.82,
+    "3": 0.8391,
+    "4": 0.8596,
+    "5": 0.8598
+  },
+  "baseline_outfield_under28_endpoint_counts": {
+    "full": {
+      "already_at_baseline": 434,
+      "horizon_passed_without_observed_hit_sparse_sampling": 366,
+      "newly_observed_hit": 25,
+      "right_censored": 61222
+    },
+    "pa95": {
+      "already_at_baseline": 3714,
+      "horizon_passed_without_observed_hit_sparse_sampling": 289,
+      "newly_observed_hit": 56,
+      "right_censored": 57988
+    },
+    "pa_minus_2": {
+      "already_at_baseline": 1635,
+      "horizon_passed_without_observed_hit_sparse_sampling": 340,
+      "newly_observed_hit": 31,
+      "right_censored": 60041
+    }
+  },
+  "build": "27.1.0+2505117",
+  "byte_counts": {
+    "2027-03-30": {
+      "0": 1273,
+      "1": 6868,
+      "2": 20851,
+      "3": 48029,
+      "4": 15406,
+      "5": 4831
+    },
+    "2027-04-07": {
+      "0": 2637,
+      "1": 6885,
+      "2": 20973,
+      "3": 48223,
+      "4": 15548,
+      "5": 4914
+    },
+    "2027-04-30": {
+      "0": 6685,
+      "1": 7473,
+      "2": 22657,
+      "3": 50914,
+      "4": 16261,
+      "5": 5138
+    }
+  },
+  "calibration_metrics": null,
+  "career_cluster_count": 1,
+  "club_and_candidate_intervals": [
+    {
+      "changed": 363,
+      "club": "same",
+      "end": "2027-04-07",
+      "intervals": 37606,
+      "start": "2027-03-30"
+    },
+    {
+      "changed": 491,
+      "club": "unknown",
+      "end": "2027-04-07",
+      "intervals": 58351,
+      "start": "2027-03-30"
+    },
+    {
+      "changed": 0,
+      "club": "different",
+      "end": "2027-04-30",
+      "intervals": 1,
+      "start": "2027-04-07"
+    },
+    {
+      "changed": 342,
+      "club": "same",
+      "end": "2027-04-30",
+      "intervals": 37822,
+      "start": "2027-04-07"
+    },
+    {
+      "changed": 482,
+      "club": "unknown",
+      "end": "2027-04-30",
+      "intervals": 58556,
+      "start": "2027-04-07"
+    }
+  ],
+  "days_between_endpoints": 31,
+  "first_last_candidate_transitions": {
+    "0->1": 80,
+    "0->2": 218,
+    "0->3": 603,
+    "0->4": 267,
+    "0->5": 101,
+    "1->1": 6726,
+    "1->2": 43,
+    "1->3": 62,
+    "1->4": 14,
+    "1->5": 2,
+    "2->1": 54,
+    "2->2": 20478,
+    "2->3": 215,
+    "2->4": 44,
+    "2->5": 10,
+    "3->1": 47,
+    "3->2": 278,
+    "3->3": 47267,
+    "3->4": 252,
+    "3->5": 96,
+    "4->1": 16,
+    "4->2": 69,
+    "4->3": 249,
+    "4->4": 14996,
+    "4->5": 51,
+    "5->1": 5,
+    "5->2": 16,
+    "5->3": 97,
+    "5->4": 41,
+    "5->5": 4665
+  },
+  "first_seen_after_baseline_byte_counts": {
+    "0": 8196,
+    "1": 393,
+    "2": 1135,
+    "3": 1807,
+    "4": 395,
+    "5": 142
+  },
+  "independent_test_careers": 0,
+  "linkage": {
+    "baseline": 97258,
+    "baseline_absent_on_final_date": 196,
+    "first_seen_after_baseline": 12068,
+    "lower_candidate_final_ca_above_new_cap": 549,
+    "paired": 97062,
+    "present_all_dates": 97062
+  },
+  "new_youth_diagnostics": {
+    "first_seen_under18": 12060,
+    "initially_zero": 8192,
+    "zero_then_1_to_5": 1507
+  },
+  "outfield_under28_growth_by_baseline_age_gap": [
+    {
+      "age": "18-20",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0.0,
+      "min_delta": 0,
+      "n": 62,
+      "sum_delta": 0
+    },
+    {
+      "age": "18-20",
+      "gains": 152,
+      "gap": "1-10",
+      "losses": 12,
+      "max_delta": 5,
+      "mean_delta": 0.0846,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 2459,
+      "sum_delta": 208
+    },
+    {
+      "age": "18-20",
+      "gains": 3182,
+      "gap": "11-30",
+      "losses": 48,
+      "max_delta": 7,
+      "mean_delta": 0.391,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 12070,
+      "sum_delta": 4719
+    },
+    {
+      "age": "18-20",
+      "gains": 2015,
+      "gap": ">30",
+      "losses": 20,
+      "max_delta": 7,
+      "mean_delta": 0.7141,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 4435,
+      "sum_delta": 3167
+    },
+    {
+      "age": "21-23",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0.0,
+      "min_delta": 0,
+      "n": 86,
+      "sum_delta": 0
+    },
+    {
+      "age": "21-23",
+      "gains": 218,
+      "gap": "1-10",
+      "losses": 7,
+      "max_delta": 4,
+      "mean_delta": 0.1032,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 2800,
+      "sum_delta": 289
+    },
+    {
+      "age": "21-23",
+      "gains": 1535,
+      "gap": "11-30",
+      "losses": 58,
+      "max_delta": 6,
+      "mean_delta": 0.1618,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 12808,
+      "sum_delta": 2072
+    },
+    {
+      "age": "21-23",
+      "gains": 292,
+      "gap": ">30",
+      "losses": 4,
+      "max_delta": 6,
+      "mean_delta": 0.2953,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 1419,
+      "sum_delta": 419
+    },
+    {
+      "age": "24-27",
+      "gains": 0,
+      "gap": "0",
+      "losses": 1,
+      "max_delta": 0,
+      "mean_delta": -0.0036,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 274,
+      "sum_delta": -1
+    },
+    {
+      "age": "24-27",
+      "gains": 281,
+      "gap": "1-10",
+      "losses": 72,
+      "max_delta": 3,
+      "mean_delta": 0.0291,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 8467,
+      "sum_delta": 246
+    },
+    {
+      "age": "24-27",
+      "gains": 527,
+      "gap": "11-30",
+      "losses": 83,
+      "max_delta": 3,
+      "mean_delta": 0.0585,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 9552,
+      "sum_delta": 559
+    },
+    {
+      "age": "24-27",
+      "gains": 47,
+      "gap": ">30",
+      "losses": 3,
+      "max_delta": 2,
+      "mean_delta": 0.1157,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 432,
+      "sum_delta": 50
+    },
+    {
+      "age": "<18",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 11,
+      "sum_delta": 0
+    },
+    {
+      "age": "<18",
+      "gains": 33,
+      "gap": "1-10",
+      "losses": 0,
+      "max_delta": 5,
+      "mean_delta": 0.1541,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 331,
+      "sum_delta": 51
+    },
+    {
+      "age": "<18",
+      "gains": 1166,
+      "gap": "11-30",
+      "losses": 6,
+      "max_delta": 7,
+      "mean_delta": 0.7932,
+      "median_delta": 1,
+      "min_delta": -1,
+      "n": 2287,
+      "sum_delta": 1814
+    },
+    {
+      "age": "<18",
+      "gains": 2725,
+      "gap": ">30",
+      "losses": 12,
+      "max_delta": 7,
+      "mean_delta": 1.0908,
+      "median_delta": 1.0,
+      "min_delta": -1,
+      "n": 4428,
+      "sum_delta": 4830
+    }
+  ],
+  "outfield_under28_growth_by_candidate_cap_room": {
+    "2 to 10 below": {
+      "gains": 3645,
+      "losses": 63,
+      "max_delta": 6,
+      "mean_delta": 0.4095,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 12341,
+      "sum_delta": 5054
+    },
+    ">10 below": {
+      "gains": 7168,
+      "losses": 67,
+      "max_delta": 7,
+      "mean_delta": 0.7321,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 15833,
+      "sum_delta": 11592
+    },
+    "above by >2": {
+      "gains": 203,
+      "losses": 115,
+      "max_delta": 5,
+      "mean_delta": 0.0077,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 17782,
+      "sum_delta": 137
+    },
+    "within 2": {
+      "gains": 463,
+      "losses": 74,
+      "max_delta": 5,
+      "mean_delta": 0.0343,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 13700,
+      "sum_delta": 470
+    }
+  },
+  "snapshots": {
+    "2027-03-30": {
+      "accepted_ability_pairs": 97258,
+      "birth_missing_or_mismatch": 289,
+      "club_unverified_among_accepted": 59051,
+      "native_records": 97555,
+      "native_uid_absent_from_save": 8,
+      "no_closing_identity": 13,
+      "no_native_uid": 9983,
+      "save_records": 107543
+    },
+    "2027-04-07": {
+      "accepted_ability_pairs": 99180,
+      "birth_missing_or_mismatch": 325,
+      "club_unverified_among_accepted": 60214,
+      "native_records": 99518,
+      "native_uid_absent_from_save": 13,
+      "no_closing_identity": 16,
+      "no_native_uid": 9823,
+      "save_records": 109344
+    },
+    "2027-04-30": {
+      "accepted_ability_pairs": 109128,
+      "birth_missing_or_mismatch": 623,
+      "club_unverified_among_accepted": 67896,
+      "native_records": 109815,
+      "native_uid_absent_from_save": 64,
+      "no_closing_identity": 66,
+      "no_native_uid": 4746,
+      "save_records": 114563
+    }
+  },
+  "status": [
+    "INSUFFICIENT_LONGITUDINAL_EVIDENCE",
+    "PROGRESSION_FACTOR_FIELD_VALIDATED",
+    "NOT_OUTCOME_VALIDATED"
+  ]
+}

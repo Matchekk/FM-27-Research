@@ -1,0 +1,55 @@
+{
+  "schema": "pa-reach-branch-background/v1",
+  "build": "27.1.0+2505117",
+  "start": "2027-03-30",
+  "end": "2027-04-30",
+  "source_root": {
+    "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+    "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+  },
+  "control_end": {
+    "save_sha256": "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634",
+    "native_sha256": "08e9d633037a28db8b87c9889f50d7a4f5402f9be59ee9bee79093c99b3d0606"
+  },
+  "retention_end": {
+    "save_sha256": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9",
+    "native_sha256": "220f6bc79058272816913fb6f19517ce8279430583d65c4cbc8e1ea7f97b291e"
+  },
+  "excluded_roster_union": 99,
+  "career_cluster_count": 1,
+  "common_u28_outfield_endpoints": 61912,
+  "background_paired": 61844,
+  "different_end_pa": 0,
+  "different_end_full_baseline_pa_status": 17,
+  "different_end_95_baseline_pa_status": 71,
+  "known_target_persons_removed": 68,
+  "end_ca_delta_retention_minus_control_frequency": {
+    "-8": 2,
+    "-7": 1,
+    "-6": 3,
+    "-5": 11,
+    "-4": 34,
+    "-3": 173,
+    "-2": 933,
+    "-1": 4274,
+    "0": 51023,
+    "1": 4221,
+    "2": 909,
+    "3": 196,
+    "4": 43,
+    "5": 18,
+    "6": 3
+  },
+  "end_saved_factor_delta_retention_minus_control_frequency": {
+    "-4": 8,
+    "-3": 27,
+    "-2": 217,
+    "-1": 628,
+    "0": 60004,
+    "1": 707,
+    "2": 229,
+    "3": 22,
+    "4": 2
+  },
+  "causal_effect": null
+}
