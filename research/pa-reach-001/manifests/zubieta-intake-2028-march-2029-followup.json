@@ -1,0 +1,69 @@
+{
+  "ca_change": {
+    "distribution": {
+      "0": 1,
+      "10": 1,
+      "14": 1,
+      "16": 1,
+      "23": 1,
+      "27": 1,
+      "3": 4,
+      "31": 1,
+      "5": 1,
+      "6": 1,
+      "8": 1,
+      "9": 2
+    },
+    "max": 31,
+    "mean": 10.625,
+    "median": 8.5,
+    "min": 0,
+    "n": 16,
+    "sd": 8.971308432999058
+  },
+  "cohort_n": 16,
+  "coverage": {
+    "native_ca_pa_verified": 16,
+    "pa_changed": 0,
+    "paired": 16,
+    "same_current_club": 16,
+    "scout_ca_pa_verified": 16
+  },
+  "days": 359,
+  "engine_build": "27.1.0+2505117",
+  "schema": "pa-reach-intake-growth/v1",
+  "snapshots": {
+    "2028-04-05": {
+      "hashes": {
+        "after": "5a63f66138e021f4c0b94c244a648263d45136a45e76374f702312e3aa9de647",
+        "before": "5a63f66138e021f4c0b94c244a648263d45136a45e76374f702312e3aa9de647",
+        "scout": "6e7a5a569a9d52452881c32eb8c8525d103a31db8a139f89f79885bb3787b097"
+      },
+      "native_sha256": "ac1eb39f132136ec8909268f490dec0579fbc56a718167f7a084431b539ce4ab",
+      "save_sha256": "27e3fe396d112ae6271a040077ff97957b0a121db340283f7de0dbfddc284401",
+      "scanner_build": "1.7.3",
+      "scanner_reported_date": "2028-04-04"
+    },
+    "2029-03-30": {
+      "hashes": {
+        "after": "fd5eab9e3bab5e2e1ba8d7015c1d79e99b53d6d11e2953334b6431b5f32f4703",
+        "before": "fd5eab9e3bab5e2e1ba8d7015c1d79e99b53d6d11e2953334b6431b5f32f4703",
+        "scout": "abe9bd6a83be2cd08d41923017a904739f5287b345882bebfc74accb26efab71"
+      },
+      "native_sha256": "97cf6fcd8e10420dff8cf18c741c9f12e40c21b1473041b302a010c379b44098",
+      "save_sha256": "da7ad64586135cfb2b6b59bd88cb6a026f526ecdc6d8cb5f77576432a58fe135",
+      "scanner_build": "1.7.3",
+      "scanner_reported_date": "2029-03-17"
+    }
+  },
+  "stored_factor_transitions": {
+    "0->2": 1,
+    "0->3": 3,
+    "0->4": 5,
+    "0->5": 3,
+    "3->2": 1,
+    "3->4": 1,
+    "4->4": 1,
+    "4->5": 1
+  }
+}

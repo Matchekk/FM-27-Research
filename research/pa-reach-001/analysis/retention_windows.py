@@ -75,6 +75,7 @@ def landmarks(conn, career, first, last, planned):
     gains = defaultdict(list)
     peak_delta = defaultdict(list)
     peak_first_day = defaultdict(Counter)
+    wide_gap_peak_age = defaultdict(Counter)
     peak_coverage = defaultdict(Counter)
     peak_age = defaultdict(list)
     age_quarter_counts = defaultdict(Counter)
@@ -100,6 +101,7 @@ def landmarks(conn, career, first, last, planned):
         if row["baseline_PA"] - row["baseline_CA"] > 30:
             peak_delta[band].append(row["observed_peak_CA"] - row["baseline_CA"])
             peak_first_day[band][row["first_observed_peak_date"]] += 1
+            wide_gap_peak_age[band][row["age_at_observed_peak"]] += 1
             required = {day for day in planned if day <= row["target_date"]}
             observed = {observation["day"] for observation in history}
             peak_coverage[band]["missing_at_least_one_planned_day"] += not required <= observed
@@ -111,6 +113,7 @@ def landmarks(conn, career, first, last, planned):
         n = len(values)
         peaks[band] = {"n": n, "median_gain": median(values), "p10_gain": values[ceil(n*.1)-1],
                        "p90_gain": values[ceil(n*.9)-1], "first_observed_peak_by_day": peak_first_day[band],
+                       "age_at_first_observed_peak_frequency": dict(sorted(wide_gap_peak_age[band].items())),
                        **peak_coverage[band]}
     timing = {}
     for band, ages in sorted(peak_age.items()):

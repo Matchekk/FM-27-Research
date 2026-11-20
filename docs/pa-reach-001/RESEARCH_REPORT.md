@@ -1,5 +1,7 @@
 # PA-REACH-001 · Was sich heute schon messen lässt
 
+Auf Zubieta liegen inzwischen zwei echte Entwicklungsjahre bis zum 30.03.2029 vor. 308 Feldspieler erreichten erstmals beobachtet die volle Ausgangs-PA. Drei vorab fixierte Jahres-CA-Regeln konnten gegen die späteren Messungen von 63.054 Spielern geprüft werden. Der Gesamtbericht enthält die Endpunktdefinitionen, den Altersvergleich, die Prüfung der CA-Intervalle und die Auswertung des unveränderten App-Meta. [Gesamtbericht und Datengrundlage](FINAL_RESEARCH_REPORT.md)
+
 Der Forschungsdurchbruch ist ein überprüfbarer Messweg. Zeitlich getrennte Saves lassen sich über die **Datenbank-ID im schließenden Personenheader**, das Geburtsdatum und unabhängige native CA/PA-Messungen verbinden. Im Zielbuild entspricht das gespeicherte Byte bei CA+7 dem vom Spiel benannten `ProgressionFactor`. Je zwei direkte Treffer pro Wert von 0 bis 5 belegen die Zuordnung. Eine Wahrscheinlichkeit, die volle PA bis 28 zu erreichen, ist noch nicht kalibriert. [Direkter Feldvergleich](NAMED_PROGRESSION_READBACK.md)
 
 ### Historische Kontrolle auf 27.0.1+2503222

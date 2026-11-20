@@ -67,6 +67,40 @@ Am 30. September 2028 sind 95.675 Spieler nativ CA-/PA-geprüft und 111.998 stru
 
 Die drei für passive Nachverfolgung fixierten Eigentümerfälle hatten am 30. Juni 2028 weiterhin dasselbe bestätigte Vertragsende und keine späteren Konditionen beim eigenen Klub. Am 30. September sind alle drei weltweit im Save und im Scout identifiziert. Einer hat einen laufenden Vertrag bei einem anderen Klub mit bestätigt übereinstimmendem Enddatum. Bei einem ergeben beide Quellen keinen aktuellen Klub und kein aktives Vertragsende. Einer wird weiterhin beim eigenen Klub als registriert geführt, ein laufender Vertrag bleibt offen. [Passiver Vertragsabgleich](../../research/pa-reach-001/manifests/zubieta-retention-september-2028.json)
 
+Am 30. Dezember 2028 sind 96.917 Spieler nativ CA-/PA-geprüft und 113.205 strukturell akzeptiert. Das 91-Tage-Fenster ab September enthält 95.381 native Paare und 72.245 geeignete U28-Feldspielerpaare. 186 geeignete Ausgangsspieler fehlen im Dezember. Für 283 von 294 nativ fehlenden September-Identitäten liegt eine eindeutige Identität im Weltsave vor. Bei einer Lücke über 30 zeigen die U18 im Mittel +2,5798 CA (n=17.952, Median 2, SD 2,5358), die 24–27-Jährigen +0,5403 (n=931, Median 0, SD 1,0076). Ab März 2027 liegen 67.987 Weltpaare und 263 neu beobachtete volle PA-Treffer vor. [Dezember 2028](../../research/pa-reach-001/manifests/zubieta-retention-december-2028.json)
+
+### 30. März 2029 · Exakter Zweijahresstand
+
+Über **731 Spieltage** vom 30. März 2027 bis zum 30. März 2029 sind 68.369 Baseline-Identitäten nativ gepaart. Von 28.889 im nativen Inventar am Endtag fehlenden Identitäten sind 12.877 im Weltsave weiterhin auffindbar. 16.012 fehlen in beiden Messwegen. Am Endtag sind 112.750 Spieler strukturell akzeptiert und 98.926 nativ CA-/PA-bestätigt. CA änderte sich bei 48.287 gepaarten Spielern und der gespeicherte Faktor bei 33.808. Die PA blieb bei sämtlichen Paaren gleich. Der letzte Abschnitt ab 30. Dezember 2028 umfasst 90 Tage und 94.324 Weltpaare. [Zweijahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-two.json)
+
+Unter den 62.047 anfangs geeigneten Feldspielern unter 28 sind 54.394 am Zweijahresendtag gepaart. 47.014 davon haben den exakten 24-Monats-CA-Wert bis einschließlich ihres 28. Geburtstags. 308 Spieler erreichten im Beobachtungsfenster neu ihre volle Ausgangs-PA, 1.375 mindestens 95 % und 667 die Schwelle PA−2. Bei voller PA sind 434 bereits am Start am Ziel, 53.525 rechtszensiert und 7.780 haben den Altershorizont ohne beobachteten Treffer bei lückenhaften Daten überschritten. Die Zählungen verwenden den höchsten beobachteten CA-Wert bis zum Endtag oder 28. Geburtstag. Sie beschreiben eine einzige Karrierewurzel. [Zweijahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-two.json)
+
+Bei mehr als 30 CA-Punkten Ausgangslücke gilt für die Zweijahresänderung der Baseline-Feldspieler folgende Bilanz. Der Jahrestagsvergleich umfasst auch Spieler, deren 28. Geburtstag zwischen den Endpunkten liegt. Die Peak-Analyse weiter unten behandelt diese Altersgrenze explizit.
+
+| Alter am 30.03.2027 | Baseline | Zweijahrespaare | Nativ fehlend, im Save vorhanden | In beiden fehlend | Mittlere ΔCA | Median | SD |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Unter 18 | 4.435 | 4.372 | 25 | 38 | +18,9879 | 18 | 11,7539 |
+| 18–20 | 4.439 | 4.277 | 68 | 94 | +9,4452 | 9 | 7,1703 |
+| 21–23 | 1.422 | 1.194 | 97 | 131 | +5,5419 | 4 | 8,1852 |
+| 24–27 | 432 | 309 | 57 | 66 | −3,9903 | 0 | 11,2358 |
+
+Wie im ersten Jahr beeinflussen starke Rückgänge den Mittelwert des ältesten Bands. 79 der 309 gepaarten Spieler verlieren mindestens 10 CA, darunter 39 mindestens 20. Bei allen 79 stimmen die End-CA und PA in den drei Messwegen überein. Die kleinste End-CA unter ihnen ist 37. Für die 165 am Endtag noch unter 28 beträgt die mittlere Änderung −2,7152 CA (Median 0). Lässt man die 79 starken Rückgänge für eine zusätzliche deskriptive Rechnung außer Betracht, beträgt der mittlere Zuwachs bei den 230 übrigen +1,8043 (Median 1). [Zweijahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-two.json)
+
+Der bis zum 28. Geburtstag oder Endtag beobachtete maximale CA-Zuwachs bei derselben Ausgangslücke beträgt im Median 18, 8, 4 und 0 für die vier Altersgruppen. Die jeweiligen P10–P90-Bereiche betragen 3–36, 1–19, 0–15 und 0–6 CA. Der letzte für den Spieler altersgeeignete Messpunkt fehlt bei 63, 162, 228 bzw. 114 Spielern. Im ältesten Band fehlen bei 226 der 432 Baseline-Spieler mindestens ein vorgesehener Messpunkt und bei 239 liegt der 28. Geburtstag nach dem beobachteten Zweijahreszeitraum. Beobachtete Höchstwerte geben bei diskreten Messpunkten eine Untergrenze an. [Zweijahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-two.json)
+
+Über alle Ausgangslücken haben 60.481 Baseline-Feldspieler mindestens ein exaktes Drei-Kalendermonats-Fenster bis Alter 28. Bei 16.651 zeigt mindestens eines dieser Fenster einen Zuwachs von drei oder mehr CA. Das Manifest zählt für jedes der acht Quartale, wie oft es der letzte beobachtete solche Zuwachs war. Die letzte Spalte zeigt, wie viele bis einschließlich dem jüngsten 90-Tage-Fenster noch einen entsprechend großen Zuwachs hatten.
+
+| Baseline-Alter | Baseline | Mind. ein exaktes Quartal | Mind. ein Quartal mit ΔCA ≥3 | Medianalter beim ersten beobachteten Höchststand | Letztes ΔCA-≥3-Quartal endet 30.03.2029 |
+|---|---:|---:|---:|---:|---:|---:|
+| Unter 18 | 7.066 | 7.036 | 5.047 | 18 | 1.158 |
+| 18–20 | 19.041 | 18.940 | 7.219 | 20 | 846 |
+| 21–23 | 17.158 | 17.046 | 3.568 | 23 | 570 |
+| 24–27 | 18.782 | 17.459 | 817 | 26 | 82 |
+
+Der erste Zeitpunkt des beobachteten Höchststands wird bei späteren Gleichständen beibehalten. Ältere Spieler haben durch die Grenze mit 28 kürzere mögliche Beobachtungsfenster. Nicht erfasste Quartale können weitere Wachstumsepisoden enthalten. [Zweijahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-two.json)
+
+Über die 731 Tage sind 53.456 U28-Paare für alle zehn Anzeigeattribute bestätigt, 9.545 am Anfang geeignete Profile fehlen im Folgeabgleich. Für alle Paare bzw. die 28.025 mit CA-Gewinn beträgt die mittlere Änderung bei Stärke +0,5060 bzw. +0,9964, bei Tempo +0,1596 bzw. +0,4701, bei Antritt +0,0389 bzw. +0,3140, bei Sprunghöhe −0,0689 bzw. +0,1198 und beim Abschluss −0,1105 bzw. +0,1058. [Zweijahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-two.json)
+
 ## Jugendjahrgang 2028
 
 Der ruhende Stand vom 5. April 2028 vor den protokollierten Angeboten enthält 16 stabile Probeidentitäten im eigenen Vertragsbestand mit Kettenbeginn 31. März und ohne festes Vertragsende. Die private Liste aus Datenbank-ID und Geburtsdatum wurde für alle späteren Auswertungen fixiert. Sie enthält zwölf 15- und vier 16-Jährige. Keine der 16 Identitäten ließ sich im strukturellen Welt-Save vom 30. März finden. [Intake-Baseline](../../research/pa-reach-001/manifests/zubieta-intake-2028-april-baseline.json)
@@ -78,6 +112,8 @@ Der Controller bestätigte am 5. April anschließend für alle 16 fixierten Iden
 Nach 86 Spieltagen sind am 30. Juni alle 16 mit strukturellem Save, nativem CA-/PA-Inventar und unabhängigem Scout erneut abgeglichen. Alle blieben beim gleichen Klub und bei gleicher PA. CA stieg im Mittel um +0,8125 (Median 0, SD 1,1842). Zehn blieben gleich, zwei gewannen einen Punkt, einer zwei und drei jeweils drei Punkte. Die zwölf gespeicherten Faktorwerte von 0 wechselten jeweils auf Stufen 2–5 (2, 3, 5 und 2 Spieler). Bei den übrigen vier beobachteten wir 3→2, 3→3, 4→4 und 4→5. Die diskreten Werte stammen aus den beiden datierten Saves. [Intake-Folgemessung Juni](../../research/pa-reach-001/manifests/zubieta-intake-2028-june-followup.json)
 
 Alle 16 Angebote gingen in einen laufenden Vertrag beim gleichen Klub über. Der Junistand enthält elf Jugend- und fünf Vollzeitverträge. Bei neun bestätigt der Scout den 30. Juni 2031 und bei sieben den 30. Juni 2032 als Vertragsende. Laut aktiver Save-Kette begannen drei Verträge am 7. April und zehn am 8. April. Je ein Vertrag begann am 21. Mai, 10. Juni bzw. 24. Juni. Bei vier Spielern sind zusätzlich spätere Konditionen beim gleichen Klub gespeichert. Für den genauen Vertragsbeginn liegt die gespeicherte Kette als Quelle vor. [Vertragsabgleich](../../research/pa-reach-001/manifests/zubieta-intake-2028-june-followup.json)
+
+Nach 359 Spieltagen sind am 30. März 2029 alle 16 erneut in Struktur, nativem Inventar und Scout abgeglichen. Alle blieben beim selben Klub und bei gleicher PA. Die CA nahm im Mittel um +10,625 zu (Median +8,5, SD 8,9713, Bereich 0 bis +31). Fünfzehn steigerten ihre CA und bei einem blieb sie gleich. Die zwölf mit gespeichertem Baseline-Faktor 0 stehen am Ende bei 2, 3, 4 oder 5 (1, 3, 5 und 3 Spieler). Die vier übrigen Übergänge sind 3→2, 3→4, 4→4 und 4→5. Das Datum einzelner Veränderungen zwischen den Messpunkten bleibt offen. [Intake-Folgemessung März 2029](../../research/pa-reach-001/manifests/zubieta-intake-2028-march-2029-followup.json)
 
 ## Reproduktion
 

@@ -1,6 +1,6 @@
 # Datenherkunft und Beobachtungsdauer
 
-Auf dem aktuellen Zubieta-Build 27.1.0+2505117 sind am 30.03.2027 und 30.03.2028 bereits 75.239 Spieler aller Altersgruppen in Save und nativem Inventar gepaart. Die Karriereableger teilen einen Ursprung. Die Datumsfolge, Altersabgrenzung und Ausfälle des Hauptversuchs sind separat belegt. [Laufendes Zubieta-Panel](RETENTION_SEASON_FOLLOWUP.md) · [Ergebnisse und offene Prognoseziele](FINAL_RESEARCH_REPORT.md)
+Auf dem aktuellen Zubieta-Build 27.1.0+2505117 sind am 30.03.2027 und 30.03.2029 insgesamt 68.369 Spieler aller Altersgruppen in Save und nativem Inventar gepaart. Die Karriereableger teilen einen Ursprung. Die Datumsfolge, Altersabgrenzung und Ausfälle des Hauptversuchs sind separat belegt. [Laufendes Zubieta-Panel](RETENTION_SEASON_FOLLOWUP.md) · [Ergebnisse und offene Prognoseziele](FINAL_RESEARCH_REPORT.md)
 
 ## Historischer TRAIN-005-Bestand auf Build 27.0.1+2503222
 

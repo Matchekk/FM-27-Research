@@ -13,3 +13,24 @@ Erst mit fünf gehashten und identitätsgeprüften Zielmessungen auf `27.1.0+250
 ```text
 python research/pa-reach-001/analysis/prospective_peak_ca.py score RETENTION_PANEL FORECAST_LIST TARGET_SOURCE_HASHES_JSON
 ```
+
+## Gemessen bis zum 30.03.2029
+
+Bei **61.365 von 65.751** Spielern lagen alle fünf Messungen vor. **4.386** hatten mindestens eine Lücke. Das geschlossene P10–P90-Intervall enthielt **89,50 %** der beobachteten Maxima und war im Mittel **8,948 CA-Punkte** breit. Die Medianprognose senkte den MAE von **3,486** bei konstanter Start-CA auf **2,701 CA**. Der mittlere Fehler änderte sich von −3,486 auf −0,322 CA, der Median des absoluten Fehlers blieb bei 1 CA. Die konstante Start-CA traf das beobachtete Maximum bei 47,69 % der vollständigen Verläufe exakt. [Zielabrechnung mit Quellhashes und Ausfallmustern](../../research/pa-reach-001/manifests/prospective-peak-ca-20290330-score.json)
+
+| Alter | PA−CA | Vollständige Verläufe | Abdeckung | Breite in CA | MAE konstant | MAE Medianprognose |
+|---|---:|---:|---:|---:|---:|---:|
+| U18 | 0–10 | 2.375 | 94,11 % | 3 | 0,661 | 0,661 |
+| U18 | 11–30 | 3.128 | 94,05 % | 12 | 4,216 | 3,700 |
+| U18 | >30 | 13.931 | 78,52 % | 20 | 9,613 | 6,423 |
+| 18–20 | 0–10 | 1.991 | 89,70 % | 2 | 0,663 | 0,663 |
+| 18–20 | 11–30 | 10.478 | 94,52 % | 8 | 2,224 | 2,161 |
+| 18–20 | >30 | 2.591 | 93,44 % | 13 | 4,537 | 3,995 |
+| 21–23 | 0–10 | 3.136 | 93,78 % | 2 | 0,482 | 0,482 |
+| 21–23 | 11–30 | 11.391 | 90,83 % | 5 | 1,410 | 1,410 |
+| 21–23 | >30 | 1.383 | 93,56 % | 10 | 2,827 | 2,800 |
+| 24–27 | 0–10 | 3.743 | 91,13 % | 1 | 0,388 | 0,388 |
+| 24–27 | 11–30 | 6.593 | 92,78 % | 3 | 0,736 | 0,736 |
+| 24–27 | >30 | 625 | 94,24 % | 6 | 1,690 | 1,690 |
+
+Die fehlenden Messwerte verteilen sich auf 326 am 30.06., 3.317 am 30.09., 3.486 am 30.12. und 2.642 am 30.03.2029. Einzelne Spieler fehlen an mehreren Tagen. Die größte jüngste Lückengruppe hatte trotz der breitesten Intervalle die niedrigste Abdeckung. Die diskreten, geschlossenen Quantilintervalle und der Ausschluss unvollständiger Pfade prägen die Abdeckung. Sie ist für diesen Zeitabschnitt binnen einer Karriere gemessen.

@@ -1,6 +1,6 @@
 # Modellprüfung für Zubieta und den Scout
 
-Der Retentionszweig liefert einen vollständigen Kalenderabstand von zwölf Monaten. Die am Stichtag tatsächlich messbare CA lässt sich bereits gegen eingefrorene Punktprognosen prüfen. Für viele Spielertypen endet die Beobachtung weiterhin Jahre vor dem 28. Geburtstag. Die übertragbare PA-Erreichungswahrscheinlichkeit und der erwartete künftige Peak-Meta bleiben offen. [Erster gemessener Jahrestest](PROSPECTIVE_CA_YEAR.md) · [Daten bis zum Zielalter](FINAL_RESEARCH_REPORT.md)
+Der Retentionszweig liefert einen vollständigen Kalenderabstand von 24 Monaten. Die am Stichtag tatsächlich messbare CA lässt sich bereits gegen eingefrorene Punktprognosen prüfen. Für viele Spielertypen endet die Beobachtung weiterhin Jahre vor dem 28. Geburtstag. Die übertragbare PA-Erreichungswahrscheinlichkeit und der erwartete künftige Peak-Meta bleiben offen. [Erster gemessener Jahrestest](PROSPECTIVE_CA_YEAR.md) · [Daten bis zum Zielalter](FINAL_RESEARCH_REPORT.md)
 
 Für eine Freigabe fehlen hinreichend dicht beobachtete Zielverläufe bis zum Ende der Entwicklungsphase und ein vor dem Fit reservierter unabhängiger Karriereholdout. Ein Testarm aus derselben Zubieta-Wurzel dient der internen Bestätigung. Alter, Position und die persönliche Ausgangslücke lassen sich bereits auswerten. Für die Stufe gilt je Spieler und Datum ohne hinreichende direkte Bestätigung `PROGRESSION_TIER_UNVERIFIED`. [Ergebniszählung und fehlende Metriken](CALIBRATION_REPORT.md) · [Modelle A–D, Split und geplante Kalibrierung](MODEL_DESIGN.md)
 

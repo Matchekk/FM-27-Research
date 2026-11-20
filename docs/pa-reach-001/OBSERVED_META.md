@@ -69,3 +69,23 @@ Ausgangspunkt waren 61.613 U28-Feldspieler mit CA unter PA. Bei 4.689 fehlte der
 Der Offline-Aufruf verwendet die unveränderten Funktionen `metaPaScore`, `projectAttrs` und `weightedMeta` des geprüften App-Blobs zusammen mit dem Originalscorer. Alle 47 sichtbaren Ausgangsattribute und die erforderlichen Folgeattribute wurden gegen die Save-Struktur geprüft. Die App verwendet bei der Attributprojektion das Alter aus der im Scan gelieferten Metadatenzeit. Im März-Ausgangsscan stammt das Headerdatum aus dem Speicher und lautet 20.03.2027. Der Save und die beidseitigen Kontextbelege datieren den tatsächlichen Scan auf 30.03.2027. Die Tabelle zeigt zusätzlich dieselbe App-Berechnung mit diesem belegten Datum als Referenz. Die Ursache der unterschiedlichen Datumswerte bleibt offen. [Gepinnter Original-App-Code](https://github.com/Matchekk/FMSuperScout/blob/977ecefe623a3d4081871a0f558ab12d9bce850d/app/app.js) · [Abgleich und Ausführung](../../research/pa-reach-001/analysis/potential_meta_compare.py)
 
 Für den 30.03.2029 sind dieselben App-Regeln auf **51.381** verifizierten Ausgangsprofilen vom 30.03.2028 vorab eingefroren. Die Auswertung verwendet die identischen Kriterien für exakt erreichte Ausgangs-PA und gleiche App-Bewertungsposition. Die DOB-Teilgruppe mit Enddatum bis einschließlich 28. Geburtstag ist ebenfalls vorab festgelegt. Der Vergleich bleibt bedingt auf später beobachtete Treffer innerhalb derselben Karriere. [Versiegelte Basis](../../research/pa-reach-001/manifests/potential-meta-baseline-20280330.json)
+
+### Gemessenes Meta nach zwei Jahren
+
+| Ausgangsgruppe bis 30.03.2029 | Tage | Gültige Paare | Mittlere ΔCA | Mittlere ΔMeta | Meta gestiegen / gleich / gesunken |
+|---|---:|---:|---:|---:|---:|
+| Feldspieler unter 28 am 30.03.2027 | 731 | 53.226 | +2,5361 | +0,2053 | 34.554 / 2.846 / 15.826 |
+| Fester Jugendjahrgang ab 30.04.2027 | 700 | 14 | +18,6429 | +1,2473 | 13 / 0 / 1 |
+
+Von 63.001 geeigneten März-Ausgangsprofilen fehlten 9.033 im strukturellen Folgeabgleich, 512 hatten ungültige Folgeattribute und bei 230 wechselte die gewählte Bewertungsposition. Bei 27.885 Feldspielern mit CA-Zuwachs betrug der mittlere Meta-Zuwachs 0,5466. Bei 2.588 dieser Spieler fiel der Index. Von den 16 Spielern des Jugendjahrgangs entfielen ein Torwart und ein Spieler mit Positionswechsel. Die Kontextklammer und der Save bestätigen den 30.03.2029. Der Scout-Header meldet den 17.03.2029. [Abrechnung und Quellhashes](../../research/pa-reach-001/manifests/retention-meta-20290330.json)
+
+### Bestätigung des bedingten PA-Meta-Vergleichs
+
+Bei **384 von 69.212** U28-Feldspielern mit CA unter PA am 30.03.2028 entsprach die CA am 30.03.2029 genau ihrer Ausgangs-PA. Bei 2.947 fehlte der verifizierte strukturelle und native Folgeabgleich. Unter den 384 Treffern fehlten 121 verifizierbare Ausgangseingaben, bei vier der Folgeabgleich von Scan oder Namen und bei einem die unveränderte Bewertungsposition. **258** waren auswertbar, darunter **253** von 379 exakten Treffern bis einschließlich des 28. Geburtstags. [Zielabrechnung](../../research/pa-reach-001/manifests/potential-meta-at-pa-20290330.json)
+
+| Auswahl | Paare | MAE unverändertes Meta | MAE App-PA-Meta | Mittlerer Fehler unverändert | Mittlerer Fehler App-PA-Meta |
+|---|---:|---:|---:|---:|---:|
+| Exakte Jahres-PA | 258 | 0,36159 | 0,28937 | −0,33750 | −0,24821 |
+| Zusätzlich bis einschließlich 28. Geburtstag | 253 | 0,36784 | 0,29419 | −0,34417 | −0,25312 |
+
+Die App-Regel senkte den MAE in der strengen Gruppe um **0,07365 Meta-Punkte**. Der bestätigte Stichtag anstelle des Scanner-Headerdatums ergab für diese Paare dieselben Fehler. Die Ergebnisse bestätigen die bedingte Aussage für einen späteren Zeitraum desselben Karriereursprungs. Die Auswahl erfordert, dass der Spieler seinen PA-Wert am Stichtag tatsächlich erreicht hat.

@@ -1,0 +1,252 @@
+{
+  "global_calendar_days": 731,
+  "global_outfield_under_28": {
+    "eligible_at_baseline_after_input_checks": 63001,
+    "followup_exclusions": {
+      "invalid_scanner_attribute": 512,
+      "no_structural_followup_identity": 9033
+    },
+    "meta_delta": {
+      "byPosition": {
+        "AMC": {
+          "down": 1350,
+          "equal": 233,
+          "n": 4271,
+          "sumDelta": 797.6649169219213,
+          "up": 2688
+        },
+        "AML": {
+          "down": 1786,
+          "equal": 323,
+          "n": 5152,
+          "sumDelta": 669.6912211195257,
+          "up": 3043
+        },
+        "AMR": {
+          "down": 1128,
+          "equal": 146,
+          "n": 3375,
+          "sumDelta": 627.260509397437,
+          "up": 2101
+        },
+        "DC": {
+          "down": 2049,
+          "equal": 385,
+          "n": 8411,
+          "sumDelta": 2582.8609581873857,
+          "up": 5977
+        },
+        "DL": {
+          "down": 1126,
+          "equal": 248,
+          "n": 4084,
+          "sumDelta": 793.1448132791203,
+          "up": 2710
+        },
+        "DM": {
+          "down": 1630,
+          "equal": 321,
+          "n": 5817,
+          "sumDelta": 1253.8207229574527,
+          "up": 3866
+        },
+        "DR": {
+          "down": 1127,
+          "equal": 229,
+          "n": 4061,
+          "sumDelta": 828.1061649805843,
+          "up": 2705
+        },
+        "MC": {
+          "down": 2178,
+          "equal": 362,
+          "n": 7511,
+          "sumDelta": 1763.811587413266,
+          "up": 4971
+        },
+        "ML": {
+          "down": 318,
+          "equal": 36,
+          "n": 883,
+          "sumDelta": 85.90557808164417,
+          "up": 529
+        },
+        "MR": {
+          "down": 348,
+          "equal": 48,
+          "n": 1018,
+          "sumDelta": 126.23190569976109,
+          "up": 622
+        },
+        "ST": {
+          "down": 2600,
+          "equal": 488,
+          "n": 8003,
+          "sumDelta": 1247.0625329419327,
+          "up": 4915
+        },
+        "WBL": {
+          "down": 120,
+          "equal": 11,
+          "n": 427,
+          "sumDelta": 109.15521541828483,
+          "up": 296
+        },
+        "WBR": {
+          "down": 66,
+          "equal": 16,
+          "n": 213,
+          "sumDelta": 40.79730780784001,
+          "up": 131
+        }
+      },
+      "caGain": {
+        "down": 2588,
+        "equal": 577,
+        "n": 27885,
+        "sumDelta": 15242.293133802514,
+        "up": 24720
+      },
+      "caLoss": {
+        "down": 8032,
+        "equal": 493,
+        "n": 9999,
+        "sumDelta": -4949.722293030645,
+        "up": 1474
+      },
+      "caUnchanged": {
+        "down": 5206,
+        "equal": 1776,
+        "n": 15342,
+        "sumDelta": 632.9425934342321,
+        "up": 8360
+      },
+      "cannotScore": 0,
+      "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+      "modelVersion": "FM27_OUTFIELD_META_V2_1",
+      "pairedCA": {
+        "down": 9999,
+        "equal": 15342,
+        "n": 53226,
+        "sumDelta": 134985,
+        "up": 27885
+      },
+      "positionChanged": 230,
+      "positionUnavailable": 0,
+      "scoreable": {
+        "down": 15826,
+        "equal": 2846,
+        "n": 53226,
+        "sumDelta": 10925.513434206108,
+        "up": 34554
+      }
+    },
+    "missing_followup_identity_or_attributes": 9545,
+    "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+  },
+  "independent_career_roots": 1,
+  "intake": {
+    "baseline_n": 16,
+    "eligible_at_baseline_after_input_checks": 15,
+    "excluded_before_scoring": {
+      "baseline_goalkeeper": 1
+    },
+    "meta_delta": {
+      "caGain": {
+        "down": 0,
+        "equal": 0,
+        "n": 13,
+        "sumDelta": 17.623834146126946,
+        "up": 13
+      },
+      "caLoss": {
+        "down": 0,
+        "equal": 0,
+        "n": 0,
+        "sumDelta": 0,
+        "up": 0
+      },
+      "caUnchanged": {
+        "down": 1,
+        "equal": 0,
+        "n": 1,
+        "sumDelta": -0.1612351523765181,
+        "up": 0
+      },
+      "cannotScore": 0,
+      "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+      "modelVersion": "FM27_OUTFIELD_META_V2_1",
+      "pairedCA": {
+        "down": 0,
+        "equal": 1,
+        "n": 14,
+        "sumDelta": 261,
+        "up": 13
+      },
+      "positionChanged": 1,
+      "positionUnavailable": 0,
+      "scoreable": {
+        "down": 1,
+        "equal": 0,
+        "n": 14,
+        "sumDelta": 17.462598993750426,
+        "up": 13
+      }
+    },
+    "missing_followup_identity_or_attributes": 0,
+    "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+  },
+  "intake_calendar_days": 700,
+  "intake_identity_manifest_sha256": "1dcc8637e4d8047872e16607df854393702d3fa3c9396522c7186ab2048b5973",
+  "schema": "pa-reach-retention-meta-long/v1",
+  "snapshots": {
+    "2027-03-30": {
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 100544,
+        "invalid_scanner_attribute": 6669,
+        "unmatched_identity_or_ability": 18
+      },
+      "controller_day": "2027-03-30",
+      "hashes": {
+        "after": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+        "before": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+        "dump": "19782dd0793840acae9a06eeaa83ad6d050a1912067303a34b02e9ee4617e3cd",
+        "loaded_copy": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+      },
+      "scanner_reported_day": "2027-03-20",
+      "scanner_version": "1.7.3"
+    },
+    "2027-04-30": {
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 106095,
+        "invalid_scanner_attribute": 7747,
+        "unmatched_identity_or_ability": 20
+      },
+      "controller_day": "2027-04-30",
+      "hashes": {
+        "after": "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3",
+        "before": "111bc28a9d1f5ac43ef5bec9cf343ebe33a79a1a5f28248093bd84874a5f24e3",
+        "dump": "f9beee1b5686be282c478c93d279b39ae7cad588c59675eca50e5369898eac3e",
+        "loaded_copy": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9"
+      },
+      "scanner_reported_day": "2027-04-28",
+      "scanner_version": "1.7.3"
+    },
+    "2029-03-30": {
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 106512,
+        "invalid_scanner_attribute": 6046,
+        "unmatched_identity_or_ability": 192
+      },
+      "controller_day": "2029-03-30",
+      "hashes": {
+        "after": "fd5eab9e3bab5e2e1ba8d7015c1d79e99b53d6d11e2953334b6431b5f32f4703",
+        "before": "fd5eab9e3bab5e2e1ba8d7015c1d79e99b53d6d11e2953334b6431b5f32f4703",
+        "dump": "abe9bd6a83be2cd08d41923017a904739f5287b345882bebfc74accb26efab71",
+        "loaded_copy": "da7ad64586135cfb2b6b59bd88cb6a026f526ecdc6d8cb5f77576432a58fe135"
+      },
+      "scanner_reported_day": "2029-03-17",
+      "scanner_version": "1.7.3"
+    }
+  }
+}
