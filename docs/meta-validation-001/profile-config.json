@@ -1,0 +1,15 @@
+{
+  "study": "META-VALIDATION-001",
+  "build": "27.1.0+2505117",
+  "expected_dump_sha256": "fa57cbb5f25347cf69ba6cb35f9006c99136677c2ba224f5a1da042abcf9ab39",
+  "real_pairs": [],
+  "technical_slots": {"ST": 10, "CB": 2},
+  "technical_side": 0,
+  "technical_repeats": 2,
+  "technical_raw_JR": [35, 45, 80, 95],
+  "importance": 10,
+  "roster_size": 23,
+  "fixture": "bundled_match_pkm",
+  "tech_workers": 1,
+  "retries": 0
+}

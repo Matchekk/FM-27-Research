@@ -1,0 +1,20 @@
+{
+  "commit": "977ecefe623a3d4081871a0f558ab12d9bce850d",
+  "commit_payload_sha256": "4bb241fa609a7102d93beb9fc602436d8bac0b0d4a6fab25469dff0e3280341d",
+  "git_blob_content_sha256": {
+    "app/outfield-meta27.js": "6cfb1e2ad4078bce21c91c80faa6f94ce0311858180258417fab63b110cea3ae",
+    "app/app.js": "98f5e9953f2db6c5f8cc9104f01eb84aa357ac9c85804fe538d7eb3db1428cc8",
+    "test/harness.js": "f9874b721b58e7136619beea2324c202c2381c220a220eca8950ed424a9666db",
+    "test/outfield-v21.test.js": "06bd1605deeabed6af23be79774ac2653ba79a95e494282484d53073f2c1ff4a",
+    "docs/fm27-outfield-meta-v2-model.json": "8707c7fe096be2faa73a996ef669236f749ad2e9ec950888794715198af1ae9a",
+    "docs/fm27-meta-score-v2-1.md": "286d6e7cd649a8b6f6ccf47195fe70510ec51318ab24c6eeeabbc2fa5a6991e0",
+    "tools/rank-outfield-meta.js": "b774bbcee46eb43361ae33329fe6c21e1d263858d98330f05dfaa9ea4382fd6c",
+    "core/Dumper.cs": "27b42585a58c17fd8e0c7570757933c7ff8d6e13ce05daff3f503030b32e0d70",
+    "core/Fields.cs": "66f6a7b4e579d33da25967291de1317003395aff74e0a4b7c5c2f99f3033c2cb"
+  },
+  "coefficients_sha256": "de530082e714daeb39d198082cf8ca17b153cf8bd2d7f2e08da8982f624735ff",
+  "utility_sha256": "a961313bbe32857e2d73fa23b1ca9cd2e37b3b0115a9095a695a694bc43ad993",
+  "positions_sha256": "95e95d74d491c63ebc977556e320d45e5ec2959c44253f52d76d1cfd45f28bc3",
+  "params_sha256": "fbb6a8467842bdfa7579acc381408cd48a2312053a6e7862cc4a49ae8157c818",
+  "profile_config_sha256": "8e3c5b4866c59e18cf4107ea2a6c097e31ba92a47fd720302c7dc32565f46f29"
+}

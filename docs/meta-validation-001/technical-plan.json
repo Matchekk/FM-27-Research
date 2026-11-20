@@ -1,0 +1,135 @@
+{
+  "build": "27.1.0+2505117",
+  "engine": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
+  "host": "e3a1cbf8a8678de3aa077fdb077d1b408680bb566293cecf70a003cbdb8dce07",
+  "fixture": "39c594c7e876cc0ad325dfa51c377f4cf360840612479ed72d800ec548e504b6",
+  "resource": "e99e04e19fe4f191f00859cbf6864332a8b17249bfcf7a080cc0f31203a32900",
+  "profile": "fm27_desktop_d12202dd_adapter_v1",
+  "release": "v1118.1",
+  "cells": {
+    "ST-35": {
+      "position": "ST",
+      "slot": 10,
+      "jr_index": 54,
+      "raw": 35,
+      "phase_positions": [
+        "ST",
+        "STL"
+      ],
+      "phase_roles": [
+        "CentreForward",
+        "OPCentreForward"
+      ],
+      "setup_sha256": "f751e16749cdfe5e8782bfda69b601e944c236b037c93dcb8760e6fc12938d46"
+    },
+    "ST-45": {
+      "position": "ST",
+      "slot": 10,
+      "jr_index": 54,
+      "raw": 45,
+      "phase_positions": [
+        "ST",
+        "STL"
+      ],
+      "phase_roles": [
+        "CentreForward",
+        "OPCentreForward"
+      ],
+      "setup_sha256": "e8d2ca171b70902c56b740ca4bd17552e20476e425dfed164aed84deab668d64"
+    },
+    "ST-80": {
+      "position": "ST",
+      "slot": 10,
+      "jr_index": 54,
+      "raw": 80,
+      "phase_positions": [
+        "ST",
+        "STL"
+      ],
+      "phase_roles": [
+        "CentreForward",
+        "OPCentreForward"
+      ],
+      "setup_sha256": "d618cb070634fd49015d9b322bbe5bd9f30c4976b44d1a46c71b8ee7d5d8a0ea"
+    },
+    "ST-95": {
+      "position": "ST",
+      "slot": 10,
+      "jr_index": 54,
+      "raw": 95,
+      "phase_positions": [
+        "ST",
+        "STL"
+      ],
+      "phase_roles": [
+        "CentreForward",
+        "OPCentreForward"
+      ],
+      "setup_sha256": "96eea1d086dd70447cfad8a7fda849cf8605ce3f46d7336124c0a6c4441c2abf"
+    },
+    "CB-35": {
+      "position": "CB",
+      "slot": 2,
+      "jr_index": 54,
+      "raw": 35,
+      "phase_positions": [
+        "DCR",
+        "DCR"
+      ],
+      "phase_roles": [
+        "CentreBack",
+        "OPCentreBack"
+      ],
+      "setup_sha256": "0d6da68628c4842ee36d28545164cd8f41aa826631da852ce2c5fbd33c427934"
+    },
+    "CB-45": {
+      "position": "CB",
+      "slot": 2,
+      "jr_index": 54,
+      "raw": 45,
+      "phase_positions": [
+        "DCR",
+        "DCR"
+      ],
+      "phase_roles": [
+        "CentreBack",
+        "OPCentreBack"
+      ],
+      "setup_sha256": "f081ebd4008b41c06e0ace2bc1e372c62b9a8572b7da3f3abe1400512b61504c"
+    },
+    "CB-80": {
+      "position": "CB",
+      "slot": 2,
+      "jr_index": 54,
+      "raw": 80,
+      "phase_positions": [
+        "DCR",
+        "DCR"
+      ],
+      "phase_roles": [
+        "CentreBack",
+        "OPCentreBack"
+      ],
+      "setup_sha256": "21ffde8489ce067e7294aa446028491294cdfa9e375d1f1f2b5292322a8bb6ca"
+    },
+    "CB-95": {
+      "position": "CB",
+      "slot": 2,
+      "jr_index": 54,
+      "raw": 95,
+      "phase_positions": [
+        "DCR",
+        "DCR"
+      ],
+      "phase_roles": [
+        "CentreBack",
+        "OPCentreBack"
+      ],
+      "setup_sha256": "d466ff352ce102a199a1be4d3521a6abef3975ce0c8f09679bb7e8c4e89fb9c2"
+    }
+  },
+  "repeats": 2,
+  "seeds": [
+    3539707856
+  ]
+}
