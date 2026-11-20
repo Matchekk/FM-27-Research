@@ -18,6 +18,11 @@ CREATE TABLE IF NOT EXISTS observation(
  PRIMARY KEY(career,day,uid),
  FOREIGN KEY(career,day) REFERENCES snapshot(career,day)
 );
+CREATE TABLE IF NOT EXISTS factor_check(
+ career TEXT NOT NULL, day TEXT NOT NULL, uid INTEGER NOT NULL, birth TEXT NOT NULL,
+ native_factor INTEGER NOT NULL, receipt TEXT NOT NULL, PRIMARY KEY(career,day,uid),
+ FOREIGN KEY(career,day,uid) REFERENCES observation(career,day,uid)
+);
 CREATE VIEW IF NOT EXISTS research_panel AS
  SELECT o.career AS career_id, o.day AS snapshot_date, s.build AS engine_build,
         o.uid AS player_id_within_career, o.birth, o.age, o.position AS position_family,
@@ -27,12 +32,14 @@ CREATE VIEW IF NOT EXISTS research_panel AS
         CASE WHEN s.build='27.1.0+2505117' AND o.candidate BETWEEN 0 AND 5
              THEN o.candidate END AS stored_progression_factor,
         CASE WHEN s.build='27.1.0+2505117' AND o.candidate BETWEEN 1 AND 5
+                  AND f.native_factor=o.candidate
              THEN o.candidate END AS progression_tier_if_verified,
         NULL AS professionalism, NULL AS ambition, NULL AS determination,
         o.club AS current_club, NULL AS club_reputation, NULL AS training_facilities_if_verified,
         NULL AS contract_start_if_verified, NULL AS playing_minutes_if_verified,
         NULL AS injury_days_if_verified, NULL AS loan_status
- FROM observation o JOIN snapshot s USING(career,day);
+ FROM observation o JOIN snapshot s USING(career,day)
+ LEFT JOIN factor_check f USING(career,day,uid,birth);
 """
 
 
@@ -42,21 +49,21 @@ def digest(path):
 
 
 def initialize_panel(conn):
-    """Version 3 updates the interpretation view only. Recorded observations stay immutable."""
+    """Update derived interpretation without editing saved raw observations."""
     conn.execute("PRAGMA foreign_keys=ON")
     version = conn.execute("PRAGMA user_version").fetchone()[0]
-    if version == 3:
+    if version == 4:
         return
-    if version == 2:
+    if version in (2, 3):
         columns = [c[1] for c in conn.execute("PRAGMA table_info(observation)")]
         snapshots = [c[1] for c in conn.execute("PRAGMA table_info(snapshot)")]
         if (columns != ["career", "day", "uid", "birth", "age", "position", "ca", "pa", "candidate", "club"]
                 or snapshots != ["career", "day", "build", "save_hash", "inventory_hash", "reader", "accounting"]):
-            raise ValueError("Unrecognized version 2 panel")
+            raise ValueError("Unrecognized private capture panel")
     elif version or conn.execute("SELECT 1 FROM sqlite_master LIMIT 1").fetchone():
         raise ValueError("Existing database has unrelated schema")
-    migration = "DROP VIEW IF EXISTS research_panel;" if version == 2 else ""
-    conn.executescript("BEGIN IMMEDIATE;\n" + migration + SCHEMA + "PRAGMA user_version=3;\nCOMMIT;")
+    migration = "DROP VIEW IF EXISTS research_panel;" if version else ""
+    conn.executescript("BEGIN IMMEDIATE;\n" + migration + SCHEMA + "PRAGMA user_version=4;\nCOMMIT;")
 
 
 def decode(save, native):

@@ -9,6 +9,9 @@
   "selection": "purposeful; frequency distribution and predictive calibration not estimable",
   "requested": 28,
   "identity_and_native_type_confirmed": 28,
+  "binding_modes": {
+    "per_person_one_request": 28
+  },
   "excluded": {},
   "save_ca_relative_byte_offset": 7,
   "native_name": "ProgressionFactor",

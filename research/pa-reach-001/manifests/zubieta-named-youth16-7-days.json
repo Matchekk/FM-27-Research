@@ -1,0 +1,55 @@
+{
+  "schema": "pa-reach-named-factor-followup/v1",
+  "baseline": {
+    "game_date": "2027-03-31",
+    "save_sha256": "53fcc3eb45e4e6b52e8bb5f01933c4aeecae18edef391a30a7309abd93fe3998",
+    "private_receipt_sha256": "6537b7b8f94de31a4c79fa032df72d6927953960b6994c50f799f80e2a54d070"
+  },
+  "followup": {
+    "game_date": "2027-04-07",
+    "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a",
+    "private_receipt_sha256": "8e081b212fd77c9d06934d4f77d3190a2ee5fa442304a70d69f21fe4b15afc7f"
+  },
+  "days": 7,
+  "baseline_n": 16,
+  "followup_n": 28,
+  "paired_uid_dob": 16,
+  "paired_save_native_equal_both_dates": 16,
+  "missing_followup": 0,
+  "unresolved_pair_count": 0,
+  "unresolved_pairs": [],
+  "changed_native_and_saved_factor": 16,
+  "factor_pairs": [
+    {
+      "start": 0,
+      "end": 3,
+      "n": 2
+    },
+    {
+      "start": 0,
+      "end": 4,
+      "n": 8
+    },
+    {
+      "start": 0,
+      "end": 5,
+      "n": 6
+    }
+  ],
+  "ca_change_frequency": {
+    "0": 14,
+    "2": 1,
+    "3": 1
+  },
+  "pa_change_frequency": {
+    "0": 16
+  },
+  "native_recalculation_score_change_frequency": {
+    "0": 8,
+    "1": 2,
+    "2": 3,
+    "3": 3
+  },
+  "causal_attribution": "UNRESOLVED",
+  "independent_careers": 1
+}

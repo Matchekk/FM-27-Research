@@ -20,6 +20,17 @@ Ein zweiter Abruf mit einem gemeinsamen, zwischen Personen wechselnden Pfad füh
 
 Sechs weitere Personen wurden gezielt aus dem neuen Save ausgewählt. Ihre gespeicherte Stufe hatte sich gegenüber März zwischen zwei positiven Werten verändert. Über **sechs bis dahin unbenutzte individuelle Objektpfade** stimmten Spiel-ID, Geburtstag, neue Stufe und Save bei **6/6** überein. Damit ist die Feldzuordnung an einem zweiten Spieltag gestützt. Die sechs Personen wurden am Märzstichtag nicht namentlich abgefragt. [Kontrolle mit unbenutzten Pfaden](../../research/pa-reach-001/manifests/zubieta-named-progression-0407-new.json)
 
+### Beobachteter Übergang von 0 auf eine positive Stufe
+
+Beim abschließenden Abruf wurde die gemeinsame Bindung für jede Person zuerst umgeschaltet. Erst nach dem abgeschlossenen ersten Aufruf wurden dieselben vier Eigenschaften ein zweites Mal angefordert. Das Prüfprogramm kontrolliert den Prozess, die aufgelösten Pfade, den Zeitstempel des zweiten Rückrufs, anschließend ID und Geburtstag. Bei diesen 28 Wiederholungen stimmte die Identität in **28/28** und der gespeicherte mit dem nativ benannten Faktor in **26/28** Fällen überein. [Zweistufiger Leseversuch](../../research/pa-reach-001/manifests/zubieta-named-progression-0407-warm.json)
+
+| Kohorte im Retentionsarm | Beide Quellen am 31.03. | Beide Quellen am 07.04. | Übereinstimmende zeitliche Faktorverläufe |
+|---|---|---|---:|
+| 16 eigene Jugendkandidaten mit übermitteltem Angebot | 16 × 0 | 2 × 3, 8 × 4, 6 × 5 | 16/16 |
+| Zwölf Vergleichspersonen | Je zwei auf 0 bis 5 | Zehn stabil positive Werte stimmen überein. Zwei Livewerte bleiben bei 0, während der Save 3 bzw. 4 zeigt. | 10/12 |
+
+Bei den 16 Kandidaten fand der beobachtete erste Übergang nach dem Intaketag und spätestens am siebten Folgetag statt. 14 behielten in dieser Woche ihre CA, ein Spieler gewann zwei und einer drei CA. Die PA blieb bei allen 16 gleich. Bei acht änderte sich auch der benannte Neuberechnungsscore. Diese zwei tatsächlichen Stichtage belegen für diesen Jugendjahrgang den Übergang von 0 zu einer positiven Stufe in beiden Quellen. Zwischen den Stichtagen lagen Spieltage und Vertragsschritte. Der Zeitpunkt des Wurfs und dessen Auslöser bleiben offen. Für die beiden außerhalb des Intakes widersprüchlichen Personen bleibt der zeitliche native Nachweis aus. [Jugendverlauf und Änderungen](../../research/pa-reach-001/manifests/zubieta-named-youth16-7-days.json) · [Vergleichspersonen einschließlich Diskrepanzen](../../research/pa-reach-001/manifests/zubieta-named-panel12-7-days.json)
+
 ### Separater Neuberechnungsscore
 
 Für `ProgressionFactorRecalculationScore` wurden vor der Untersuchung 49 mögliche Bytepositionen im Save zwischen CA−24 und CA+24 festgelegt. Keine Position reproduzierte den nativen Score bei allen zwölf Personen der ersten Gruppe. Die besten Positionen erzielten zwei Treffer. Damit gab es für die zweite Gruppe keinen Kandidaten. Die direkte native Zahl bleibt an den eingangs geprüften Stichtag und die Auslesemethode gebunden. Aufbau, Ablage und Formel sind weiter offen. [Messplan](../../experiments/PA-REACH-001-SCORE.md) · [Ergebnis](../../research/pa-reach-001/manifests/zubieta-recalculation-score-window.json)

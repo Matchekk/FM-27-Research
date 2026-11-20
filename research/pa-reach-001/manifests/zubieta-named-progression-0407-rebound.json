@@ -9,6 +9,9 @@
   "selection": "purposeful; frequency distribution and predictive calibration not estimable",
   "requested": 34,
   "identity_and_native_type_confirmed": 1,
+  "binding_modes": {
+    "shared_one_request": 34
+  },
   "excluded": {
     "native_id_disagrees": 33
   },

@@ -47,7 +47,7 @@ def summarize(directory, queue, panel, tag, checkpoint, before, after, private_r
         if (len({p["uid"] for p in queue_rows}) != len(queue_rows)
                 or len({p["index"] for p in queue_rows}) != len(queue_rows)):
             raise ValueError("Duplicate private queue key")
-        matrix, score_counts, excluded = Counter(), Counter(), Counter()
+        matrix, score_counts, excluded, modes = Counter(), Counter(), Counter(), Counter()
         linked = []
         source_files = [before, after, queue]
         for person in queue_rows:
@@ -62,6 +62,16 @@ def summarize(directory, queue, panel, tag, checkpoint, before, after, private_r
                     or req["PersonIndex"] != person["index"] or resp["Status"] != "completed"
                     or any(resp[k] != contexts[0][k] for k in ("Pid", "ThreadId"))):
                 raise ValueError("Unverified player request")
+            warm_path = directory / f"{prefix}-warm.json"
+            warm_time = None
+            if warm_path.exists():
+                warm = load_part("warm")
+                if (warm["Status"] != "completed" or any(warm[k] != resp[k] for k in ("Pid", "ThreadId"))
+                        or {r["Path"] for r in warm["Response"] if r["Exists"] is True} != set(req["Paths"])):
+                    raise ValueError("First binding response did not resolve the same property paths")
+                warm_time = warm_path.stat().st_mtime
+            mode = "per_person" if req["UniquePersonBinding"] else "shared"
+            modes[mode + ("_two_requests" if warm_time is not None else "_one_request")] += 1
             existing = {row["Path"] for row in resp["Response"] if row["Exists"] is True}
             values = {}
             for key, native_type in PROPERTIES.items():
@@ -69,7 +79,8 @@ def summarize(directory, queue, panel, tag, checkpoint, before, after, private_r
                 suffix = prefix if req["UniquePersonBinding"] else ""
                 path = f"lpRead/CheatPerson{suffix}/{key}"
                 timestamp = datetime.fromisoformat(prop["Utc"].replace("Z", "+00:00")).timestamp()
-                if not before.stat().st_mtime <= timestamp <= after.stat().st_mtime:
+                lower_bound = warm_time if warm_time is not None else before.stat().st_mtime
+                if not before.stat().st_mtime <= lower_bound <= timestamp <= after.stat().st_mtime:
                     raise ValueError("Callback not inside acquisition bracket")
                 if (path in req["Paths"] and path in existing and prop["Path"] == path
                         and prop["Type"] == native_type and prop["Value"] is not None):
@@ -105,6 +116,7 @@ def summarize(directory, queue, panel, tag, checkpoint, before, after, private_r
         "game_thread_parked_before_and_after": True, "independent_careers": 1,
         "selection": "purposeful; frequency distribution and predictive calibration not estimable",
         "requested": len(queue_rows), "identity_and_native_type_confirmed": matrix.total(),
+        "binding_modes": dict(modes),
         "excluded": dict(excluded), "save_ca_relative_byte_offset": 7,
         "native_name": "ProgressionFactor", "native_type": PROPERTIES["ProgressionFactor"],
         "equal": sum(n for (a, b), n in matrix.items() if a == b),

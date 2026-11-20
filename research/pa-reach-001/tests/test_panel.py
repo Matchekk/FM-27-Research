@@ -6,6 +6,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "analysis"))
 from pa_reach_capture import initialize_panel
+from pa_reach_factor_check import attach
 
 
 class PanelTest(unittest.TestCase):
@@ -14,6 +15,7 @@ class PanelTest(unittest.TestCase):
             initialize_panel(conn)
             conn.executescript("""
                 DROP VIEW research_panel;
+                DROP TABLE factor_check;
                 CREATE VIEW research_panel AS SELECT candidate FROM observation;
                 PRAGMA user_version=2;
             """)
@@ -29,6 +31,10 @@ class PanelTest(unittest.TestCase):
             conn.commit()
             initialize_panel(conn)
             initialize_panel(conn)
+            self.assertEqual(conn.execute("SELECT count(progression_tier_if_verified) FROM research_panel").fetchone()[0], 0)
+            for idx, native in enumerate((0, 4, 2, 4)):
+                conn.execute("INSERT INTO factor_check VALUES(?,?,?,?,?,?)",
+                             (f"series-{idx}", "2027-03-31", 1, "2010-01-01", native, "test"))
             result = conn.execute("""SELECT candidate_byte,stored_progression_factor,
                                      progression_tier_if_verified FROM research_panel
                                      ORDER BY career_id""").fetchall()
@@ -40,3 +46,28 @@ class PanelTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 initialize_panel(conn)
             self.assertEqual(conn.execute("PRAGMA user_version").fetchone()[0], 0)
+
+    def test_named_check_retries_and_conflicting_evidence(self):
+        day = "2027-04-07"
+        private = {"game_date":day, "save_sha256":"s", "private_receipt_sha256":"r",
+                   "rows":[{"uid":7, "birth":"2011-01-01", "ca":80, "pa":140,
+                            "saved_factor":3, "native_factor":3}]}
+        public = {"game_date":day, "snapshot_sha256":"s", "private_receipt_sha256":"r",
+                  "engine_build":"27.1.0+2505117", "native_name":"ProgressionFactor",
+                  "game_thread_parked_before_and_after":True, "save_ca_relative_byte_offset":7,
+                  "binding_modes":{"shared_two_requests":1}, "requested":1,
+                  "identity_and_native_type_confirmed":1, "confusion":[{"save":3,"native":3,"n":1}]}
+        with sqlite3.connect(":memory:") as conn:
+            initialize_panel(conn)
+            conn.execute("INSERT INTO snapshot VALUES(?,?,?,?,?,?,?)",
+                         ("series",day,public["engine_build"],"s","i","0.14.1","{}"))
+            conn.execute("INSERT INTO observation VALUES(?,?,?,?,?,?,?,?,?,?)",
+                         ("series",day,7,"2011-01-01",16,"ST",80,140,3,1))
+            conn.commit()
+            for _ in range(2):
+                self.assertEqual(attach(conn,"series",private,public),{"checked":1,"verified_tier":1})
+            private["rows"][0]["native_factor"] = 0
+            public["confusion"][0]["native"] = 0
+            with self.assertRaisesRegex(ValueError,"different property check"):
+                attach(conn,"series",private,public)
+            self.assertEqual(conn.execute("SELECT native_factor FROM factor_check").fetchall(), [(3,)])
