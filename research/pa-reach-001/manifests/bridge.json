@@ -145,7 +145,7 @@
     "window_capture_wrapper_version": "2.0.1",
     "text_readback": "local Windows.Media.Ocr",
     "private_controller_digests": {
-      "club-ui": "7a23594ce7c3e68d9210432091d180cd237d9d5e3a653445800aa9f5569d5875",
+      "club-ui": "174f7349dbf7122539ca8bbe1be4d5ff8e11113539cfeffc4ea4941a0b5ca397",
       "contracts-control": "7c5b98d3e7a1d8629519cbd163ed8cbd5eddbe28866a9be630d3f5197e1b45ff",
       "renew-homonyms": "628160de257a733dc161a2d1ca4af675b443cedc21e01ece0e6b33cfdd6c4682",
       "verified-frame": "53f9dab1c4b4839e616fb0c1f77f104007004c9c0298003037889c1ba5fda2ae",
@@ -186,6 +186,78 @@
         "sha256": "f9beee1b5686be282c478c93d279b39ae7cad588c59675eca50e5369898eac3e",
         "rows": 115182,
         "self_reported_date": "2027-04-28"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2027-04-30-afterdelist": {
+      "save": {
+        "bytes": 169434138,
+        "sha256": "f70a7401188b5603fb1a8bae347902129036e17059ae000c8f8f2be687544a02"
+      },
+      "native_inventory": {
+        "bytes": 14180603,
+        "sha256": "d4fafbfd7f2dc59f2b031962f99430dea3de40c22a93ac4460d7ec79c3fe7967",
+        "rows": 109815
+      },
+      "scout": {
+        "bytes": 207545073,
+        "sha256": "a3f72a402e22acf5d6102e3fc863c7b376c4eb84ad7a65f62620ed37e1f1b835",
+        "rows": 115198,
+        "self_reported_date": "2027-04-28"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2027-06-30": {
+      "save": {
+        "bytes": 177630174,
+        "sha256": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088"
+      },
+      "native_inventory": {
+        "bytes": 12729600,
+        "sha256": "e651e5174995bd95b0e71c708f4595d0163c0bc6fb47e7e4bd149bc8956cba6e",
+        "rows": 98452
+      },
+      "scout": {
+        "bytes": 207164314,
+        "sha256": "c8c221b87039de644435efc731c5ddc4b94271572b98c0bd63b441670cbb4d87",
+        "rows": 113934,
+        "self_reported_date": "2027-05-30"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2027-07-02": {
+      "save": {
+        "bytes": 178559552,
+        "sha256": "09297f2e9af3573299b1ac8985a9877718796fca0a16426c980ec446490d672e"
+      },
+      "native_inventory": {
+        "bytes": 10833232,
+        "sha256": "b78888aaac0fedcbd83eac9dcc9ab881092262af8aafd73e2a26e1ffae75a5dc",
+        "rows": 83843
+      },
+      "scout": {
+        "bytes": 205320517,
+        "sha256": "67dbc3c099909660e67bdccfee0a7ae77abfbba945b6591657715327bffcd7c2",
+        "rows": 113913,
+        "self_reported_date": "2027-05-30"
+      },
+      "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
+    },
+    "2027-09-30": {
+      "save": {
+        "bytes": 194491567,
+        "sha256": "a06b6e5f0aa32eeec1a7365b03afc5b0c9d6be303ef728fa6166b1c5f6591456"
+      },
+      "native_inventory": {
+        "bytes": 11978402,
+        "sha256": "6a3ecfd1a8b7564c0e303ea06a2cc119caaac44918ecb2298e2bc350601691b8",
+        "rows": 92655
+      },
+      "scout": {
+        "bytes": 204678110,
+        "sha256": "d18e11fbef0b61c48bc9c0fe09ee97c5fea0ed63e73444c453fb61b16e5a353e",
+        "rows": 113202,
+        "self_reported_date": "2027-09-18"
       },
       "dated_by": "bracketing_game_thread_context_and_existing_saved_research_path"
     }

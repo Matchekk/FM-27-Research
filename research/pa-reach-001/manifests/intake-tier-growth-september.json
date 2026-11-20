@@ -1,0 +1,53 @@
+{
+  "accounting": {
+    "excluded_position": 1,
+    "paired": 15
+  },
+  "baseline": "2027-04-07",
+  "build": "27.1.0+2505117",
+  "calendar_days": 176,
+  "checkpoints": {
+    "2027-04-07": {
+      "inventory_sha256": "dc1be796cb5cf6ea5caf0f04bb0230c052875ef501293dc805a458b20a91c24e",
+      "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a"
+    },
+    "2027-09-30": {
+      "inventory_sha256": "6a3ecfd1a8b7564c0e303ea06a2cc119caaac44918ecb2298e2bc350601691b8",
+      "save_sha256": "a06b6e5f0aa32eeec1a7365b03afc5b0c9d6be303ef728fa6166b1c5f6591456"
+    }
+  },
+  "independent_roots": 1,
+  "intake_sha256": "1dcc8637e4d8047872e16607df854393702d3fa3c9396522c7186ab2048b5973",
+  "intake_size": 16,
+  "outfield_by_verified_baseline_tier": {
+    "3": {
+      "baseline_gap_mean": 62.5,
+      "end_pa_changed": 0,
+      "growth_mean": 2.5,
+      "growth_median": 2.5,
+      "growth_total": 5,
+      "n": 2,
+      "stored_factor_different_at_end": 2
+    },
+    "4": {
+      "baseline_gap_mean": 63.285714285714285,
+      "end_pa_changed": 0,
+      "growth_mean": 4.285714285714286,
+      "growth_median": 4,
+      "growth_total": 30,
+      "n": 7,
+      "stored_factor_different_at_end": 4
+    },
+    "5": {
+      "baseline_gap_mean": 50.666666666666664,
+      "end_pa_changed": 0,
+      "growth_mean": 2.1666666666666665,
+      "growth_median": 2.5,
+      "growth_total": 13,
+      "n": 6,
+      "stored_factor_different_at_end": 4
+    }
+  },
+  "schema": "pa-reach-intake-tier-growth/v1",
+  "target": "2027-09-30"
+}

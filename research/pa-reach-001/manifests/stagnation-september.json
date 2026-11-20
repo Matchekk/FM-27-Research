@@ -1,0 +1,167 @@
+{
+  "accounting": {
+    "baseline": 564,
+    "complete": 562,
+    "missing_march_or_april": 2
+  },
+  "baseline_strata": {
+    "age/18-20": {
+      "fluctuating_net_within_one": 1,
+      "net_gain_ge2": 131,
+      "stagnant_observed_range_le1": 95
+    },
+    "age/21-23": {
+      "net_gain_ge2": 51,
+      "stagnant_observed_range_le1": 149
+    },
+    "age/24-27": {
+      "net_gain_ge2": 6,
+      "stagnant_observed_range_le1": 41
+    },
+    "age/<18": {
+      "net_gain_ge2": 74,
+      "stagnant_observed_range_le1": 14
+    },
+    "age_cap_room/18-20/above_by_more_than_two": {
+      "stagnant_observed_range_le1": 6
+    },
+    "age_cap_room/18-20/over_ten_below": {
+      "net_gain_ge2": 116,
+      "stagnant_observed_range_le1": 48
+    },
+    "age_cap_room/18-20/up_to_ten_below": {
+      "fluctuating_net_within_one": 1,
+      "net_gain_ge2": 14,
+      "stagnant_observed_range_le1": 13
+    },
+    "age_cap_room/18-20/within_two": {
+      "net_gain_ge2": 1,
+      "stagnant_observed_range_le1": 28
+    },
+    "age_cap_room/21-23/above_by_more_than_two": {
+      "net_gain_ge2": 1,
+      "stagnant_observed_range_le1": 36
+    },
+    "age_cap_room/21-23/over_ten_below": {
+      "net_gain_ge2": 43,
+      "stagnant_observed_range_le1": 54
+    },
+    "age_cap_room/21-23/up_to_ten_below": {
+      "net_gain_ge2": 6,
+      "stagnant_observed_range_le1": 10
+    },
+    "age_cap_room/21-23/within_two": {
+      "net_gain_ge2": 1,
+      "stagnant_observed_range_le1": 49
+    },
+    "age_cap_room/24-27/above_by_more_than_two": {
+      "net_gain_ge2": 1,
+      "stagnant_observed_range_le1": 13
+    },
+    "age_cap_room/24-27/over_ten_below": {
+      "net_gain_ge2": 4,
+      "stagnant_observed_range_le1": 16
+    },
+    "age_cap_room/24-27/up_to_ten_below": {
+      "net_gain_ge2": 1,
+      "stagnant_observed_range_le1": 3
+    },
+    "age_cap_room/24-27/within_two": {
+      "stagnant_observed_range_le1": 9
+    },
+    "age_cap_room/<18/over_ten_below": {
+      "net_gain_ge2": 67,
+      "stagnant_observed_range_le1": 11
+    },
+    "age_cap_room/<18/unresolved": {
+      "net_gain_ge2": 7,
+      "stagnant_observed_range_le1": 3
+    },
+    "all": {
+      "fluctuating_net_within_one": 1,
+      "net_gain_ge2": 262,
+      "stagnant_observed_range_le1": 299
+    },
+    "cap_room/above_by_more_than_two": {
+      "net_gain_ge2": 2,
+      "stagnant_observed_range_le1": 55
+    },
+    "cap_room/over_ten_below": {
+      "net_gain_ge2": 230,
+      "stagnant_observed_range_le1": 129
+    },
+    "cap_room/unresolved": {
+      "net_gain_ge2": 7,
+      "stagnant_observed_range_le1": 3
+    },
+    "cap_room/up_to_ten_below": {
+      "fluctuating_net_within_one": 1,
+      "net_gain_ge2": 21,
+      "stagnant_observed_range_le1": 26
+    },
+    "cap_room/within_two": {
+      "net_gain_ge2": 2,
+      "stagnant_observed_range_le1": 86
+    },
+    "stored_factor/0": {
+      "net_gain_ge2": 7,
+      "stagnant_observed_range_le1": 3
+    },
+    "stored_factor/1": {
+      "net_gain_ge2": 3,
+      "stagnant_observed_range_le1": 11
+    },
+    "stored_factor/2": {
+      "net_gain_ge2": 7,
+      "stagnant_observed_range_le1": 33
+    },
+    "stored_factor/3": {
+      "fluctuating_net_within_one": 1,
+      "net_gain_ge2": 93,
+      "stagnant_observed_range_le1": 151
+    },
+    "stored_factor/4": {
+      "net_gain_ge2": 112,
+      "stagnant_observed_range_le1": 73
+    },
+    "stored_factor/5": {
+      "net_gain_ge2": 40,
+      "stagnant_observed_range_le1": 28
+    }
+  },
+  "career_roots": 1,
+  "dates": [
+    "2027-01-31",
+    "2027-03-30",
+    "2027-04-30"
+  ],
+  "later_ca_by_april_classification": {
+    "fluctuating_net_within_one": {
+      "classified": 1,
+      "followup_measured": 1,
+      "gained_at_least_three": 0,
+      "pa_differs_from_january": 0,
+      "sum_delta_ca": 1
+    },
+    "net_gain_ge2": {
+      "classified": 262,
+      "followup_measured": 262,
+      "gained_at_least_three": 177,
+      "pa_differs_from_january": 0,
+      "sum_delta_ca": 1044
+    },
+    "stagnant_observed_range_le1": {
+      "classified": 299,
+      "followup_measured": 299,
+      "gained_at_least_three": 34,
+      "pa_differs_from_january": 0,
+      "sum_delta_ca": 245
+    }
+  },
+  "later_date": "2027-09-30",
+  "later_save_and_native_sha256": [
+    "a06b6e5f0aa32eeec1a7365b03afc5b0c9d6be303ef728fa6166b1c5f6591456",
+    "6a3ecfd1a8b7564c0e303ea06a2cc119caaac44918ecb2298e2bc350601691b8"
+  ],
+  "schema": "pa-reach-stagnation/v1"
+}

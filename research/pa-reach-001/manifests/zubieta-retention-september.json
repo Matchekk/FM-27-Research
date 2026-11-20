@@ -1,0 +1,1501 @@
+{
+  "age_gap_intervals": {
+    "2027-03-30:2027-09-30": {
+      "age_gap": {
+        "18-20/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 55,
+          "sum_delta": 0
+        },
+        "18-20/1-10": {
+          "empirical_sd": 0.9315,
+          "gains": 328,
+          "losses": 41,
+          "max_delta": 8,
+          "mean_delta": 0.2879,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 2306,
+          "sum_delta": 664
+        },
+        "18-20/11-30": {
+          "empirical_sd": 2.4683,
+          "gains": 5914,
+          "losses": 122,
+          "max_delta": 20,
+          "mean_delta": 1.6936,
+          "median_delta": 1,
+          "min_delta": -2,
+          "n": 11811,
+          "sum_delta": 20003
+        },
+        "18-20/>30": {
+          "empirical_sd": 3.2161,
+          "gains": 3332,
+          "losses": 35,
+          "max_delta": 21,
+          "mean_delta": 3.28,
+          "median_delta": 3.0,
+          "min_delta": -3,
+          "n": 4368,
+          "sum_delta": 14327
+        },
+        "21-23/0": {
+          "empirical_sd": 0.1118,
+          "gains": 0,
+          "losses": 1,
+          "max_delta": 0,
+          "mean_delta": -0.0127,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 79,
+          "sum_delta": -1
+        },
+        "21-23/1-10": {
+          "empirical_sd": 1.0144,
+          "gains": 389,
+          "losses": 60,
+          "max_delta": 8,
+          "mean_delta": 0.3059,
+          "median_delta": 0,
+          "min_delta": -3,
+          "n": 2537,
+          "sum_delta": 776
+        },
+        "21-23/11-30": {
+          "empirical_sd": 1.7093,
+          "gains": 3229,
+          "losses": 236,
+          "max_delta": 15,
+          "mean_delta": 0.7707,
+          "median_delta": 0.0,
+          "min_delta": -6,
+          "n": 11398,
+          "sum_delta": 8785
+        },
+        "21-23/>30": {
+          "empirical_sd": 2.5439,
+          "gains": 591,
+          "losses": 22,
+          "max_delta": 22,
+          "mean_delta": 1.5553,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 1266,
+          "sum_delta": 1969
+        },
+        "24-27/0": {
+          "empirical_sd": 0.3632,
+          "gains": 0,
+          "losses": 21,
+          "max_delta": 0,
+          "mean_delta": -0.1016,
+          "median_delta": 0.0,
+          "min_delta": -3,
+          "n": 246,
+          "sum_delta": -25
+        },
+        "24-27/1-10": {
+          "empirical_sd": 0.7445,
+          "gains": 745,
+          "losses": 684,
+          "max_delta": 6,
+          "mean_delta": 0.0301,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 7366,
+          "sum_delta": 222
+        },
+        "24-27/11-30": {
+          "empirical_sd": 1.1517,
+          "gains": 1240,
+          "losses": 763,
+          "max_delta": 11,
+          "mean_delta": 0.185,
+          "median_delta": 0.0,
+          "min_delta": -6,
+          "n": 7758,
+          "sum_delta": 1435
+        },
+        "24-27/>30": {
+          "empirical_sd": 1.6361,
+          "gains": 104,
+          "losses": 48,
+          "max_delta": 7,
+          "mean_delta": 0.503,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 328,
+          "sum_delta": 165
+        },
+        "<18/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 11,
+          "sum_delta": 0
+        },
+        "<18/1-10": {
+          "empirical_sd": 1.1765,
+          "gains": 66,
+          "losses": 5,
+          "max_delta": 8,
+          "mean_delta": 0.4606,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 317,
+          "sum_delta": 146
+        },
+        "<18/11-30": {
+          "empirical_sd": 3.0648,
+          "gains": 1622,
+          "losses": 9,
+          "max_delta": 16,
+          "mean_delta": 3.1651,
+          "median_delta": 3,
+          "min_delta": -1,
+          "n": 2271,
+          "sum_delta": 7188
+        },
+        "<18/>30": {
+          "empirical_sd": 4.6458,
+          "gains": 3952,
+          "losses": 17,
+          "max_delta": 33,
+          "mean_delta": 6.0403,
+          "median_delta": 6.0,
+          "min_delta": -2,
+          "n": 4416,
+          "sum_delta": 26674
+        }
+      },
+      "all_end_only": 15707,
+      "all_observed_end": 91991,
+      "all_observed_start": 97258,
+      "all_paired": 76284,
+      "all_start_only": 20974,
+      "days": 184,
+      "eligible_missing": 5514,
+      "eligible_paired": 56533,
+      "eligible_start": 62047
+    },
+    "2027-04-07:2027-09-30": {
+      "age_gap": {
+        "18-20/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 55,
+          "sum_delta": 0
+        },
+        "18-20/1-10": {
+          "empirical_sd": 0.9365,
+          "gains": 325,
+          "losses": 41,
+          "max_delta": 9,
+          "mean_delta": 0.2884,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 2292,
+          "sum_delta": 661
+        },
+        "18-20/11-30": {
+          "empirical_sd": 2.4047,
+          "gains": 5823,
+          "losses": 124,
+          "max_delta": 17,
+          "mean_delta": 1.63,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 11792,
+          "sum_delta": 19221
+        },
+        "18-20/>30": {
+          "empirical_sd": 3.1534,
+          "gains": 3255,
+          "losses": 34,
+          "max_delta": 21,
+          "mean_delta": 3.1415,
+          "median_delta": 2.0,
+          "min_delta": -3,
+          "n": 4340,
+          "sum_delta": 13634
+        },
+        "21-23/0": {
+          "empirical_sd": 0.1118,
+          "gains": 0,
+          "losses": 1,
+          "max_delta": 0,
+          "mean_delta": -0.0127,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 79,
+          "sum_delta": -1
+        },
+        "21-23/1-10": {
+          "empirical_sd": 0.9808,
+          "gains": 369,
+          "losses": 58,
+          "max_delta": 8,
+          "mean_delta": 0.2863,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 2553,
+          "sum_delta": 731
+        },
+        "21-23/11-30": {
+          "empirical_sd": 1.6728,
+          "gains": 3176,
+          "losses": 218,
+          "max_delta": 15,
+          "mean_delta": 0.7423,
+          "median_delta": 0.0,
+          "min_delta": -6,
+          "n": 11458,
+          "sum_delta": 8505
+        },
+        "21-23/>30": {
+          "empirical_sd": 2.4624,
+          "gains": 567,
+          "losses": 21,
+          "max_delta": 22,
+          "mean_delta": 1.469,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 1260,
+          "sum_delta": 1851
+        },
+        "24-27/0": {
+          "empirical_sd": 0.3587,
+          "gains": 0,
+          "losses": 20,
+          "max_delta": 0,
+          "mean_delta": -0.0976,
+          "median_delta": 0.0,
+          "min_delta": -3,
+          "n": 246,
+          "sum_delta": -24
+        },
+        "24-27/1-10": {
+          "empirical_sd": 0.7243,
+          "gains": 714,
+          "losses": 662,
+          "max_delta": 6,
+          "mean_delta": 0.0276,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 7350,
+          "sum_delta": 203
+        },
+        "24-27/11-30": {
+          "empirical_sd": 1.1147,
+          "gains": 1217,
+          "losses": 763,
+          "max_delta": 11,
+          "mean_delta": 0.1718,
+          "median_delta": 0.0,
+          "min_delta": -6,
+          "n": 7796,
+          "sum_delta": 1339
+        },
+        "24-27/>30": {
+          "empirical_sd": 1.5662,
+          "gains": 101,
+          "losses": 50,
+          "max_delta": 7,
+          "mean_delta": 0.4502,
+          "median_delta": 0,
+          "min_delta": -5,
+          "n": 331,
+          "sum_delta": 149
+        },
+        "<18/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0.0,
+          "min_delta": 0,
+          "n": 12,
+          "sum_delta": 0
+        },
+        "<18/1-10": {
+          "empirical_sd": 0.9247,
+          "gains": 75,
+          "losses": 11,
+          "max_delta": 8,
+          "mean_delta": 0.2613,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 574,
+          "sum_delta": 150
+        },
+        "<18/11-30": {
+          "empirical_sd": 2.9657,
+          "gains": 1621,
+          "losses": 12,
+          "max_delta": 16,
+          "mean_delta": 2.8612,
+          "median_delta": 2,
+          "min_delta": -2,
+          "n": 2399,
+          "sum_delta": 6864
+        },
+        "<18/>30": {
+          "empirical_sd": 4.5483,
+          "gains": 4840,
+          "losses": 21,
+          "max_delta": 33,
+          "mean_delta": 5.3801,
+          "median_delta": 5,
+          "min_delta": -2,
+          "n": 5661,
+          "sum_delta": 30457
+        }
+      },
+      "all_end_only": 13759,
+      "all_observed_end": 91991,
+      "all_observed_start": 99180,
+      "all_paired": 78232,
+      "all_start_only": 20948,
+      "days": 176,
+      "eligible_missing": 5486,
+      "eligible_paired": 58198,
+      "eligible_start": 63684
+    },
+    "2027-04-30:2027-09-30": {
+      "age_gap": {
+        "18-20/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 59,
+          "sum_delta": 0
+        },
+        "18-20/1-10": {
+          "empirical_sd": 0.9027,
+          "gains": 291,
+          "losses": 36,
+          "max_delta": 10,
+          "mean_delta": 0.2614,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 2261,
+          "sum_delta": 591
+        },
+        "18-20/11-30": {
+          "empirical_sd": 2.1361,
+          "gains": 5523,
+          "losses": 119,
+          "max_delta": 17,
+          "mean_delta": 1.4002,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 11850,
+          "sum_delta": 16592
+        },
+        "18-20/>30": {
+          "empirical_sd": 2.7494,
+          "gains": 2978,
+          "losses": 28,
+          "max_delta": 20,
+          "mean_delta": 2.6037,
+          "median_delta": 2.0,
+          "min_delta": -3,
+          "n": 4166,
+          "sum_delta": 10847
+        },
+        "21-23/0": {
+          "empirical_sd": 0.1098,
+          "gains": 0,
+          "losses": 1,
+          "max_delta": 0,
+          "mean_delta": -0.0122,
+          "median_delta": 0.0,
+          "min_delta": -1,
+          "n": 82,
+          "sum_delta": -1
+        },
+        "21-23/1-10": {
+          "empirical_sd": 0.867,
+          "gains": 334,
+          "losses": 54,
+          "max_delta": 8,
+          "mean_delta": 0.2391,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 2622,
+          "sum_delta": 627
+        },
+        "21-23/11-30": {
+          "empirical_sd": 1.4693,
+          "gains": 2886,
+          "losses": 194,
+          "max_delta": 15,
+          "mean_delta": 0.6164,
+          "median_delta": 0.0,
+          "min_delta": -6,
+          "n": 11562,
+          "sum_delta": 7127
+        },
+        "21-23/>30": {
+          "empirical_sd": 2.1137,
+          "gains": 506,
+          "losses": 19,
+          "max_delta": 19,
+          "mean_delta": 1.162,
+          "median_delta": 0,
+          "min_delta": -3,
+          "n": 1259,
+          "sum_delta": 1463
+        },
+        "24-27/0": {
+          "empirical_sd": 0.2931,
+          "gains": 0,
+          "losses": 17,
+          "max_delta": 0,
+          "mean_delta": -0.0757,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 251,
+          "sum_delta": -19
+        },
+        "24-27/1-10": {
+          "empirical_sd": 0.6686,
+          "gains": 601,
+          "losses": 608,
+          "max_delta": 5,
+          "mean_delta": 0.0129,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 7298,
+          "sum_delta": 94
+        },
+        "24-27/11-30": {
+          "empirical_sd": 1.0125,
+          "gains": 1077,
+          "losses": 728,
+          "max_delta": 9,
+          "mean_delta": 0.1272,
+          "median_delta": 0,
+          "min_delta": -6,
+          "n": 7875,
+          "sum_delta": 1002
+        },
+        "24-27/>30": {
+          "empirical_sd": 1.4674,
+          "gains": 83,
+          "losses": 50,
+          "max_delta": 7,
+          "mean_delta": 0.3302,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 324,
+          "sum_delta": 107
+        },
+        "<18/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0.0,
+          "min_delta": 0,
+          "n": 14,
+          "sum_delta": 0
+        },
+        "<18/1-10": {
+          "empirical_sd": 0.6806,
+          "gains": 147,
+          "losses": 43,
+          "max_delta": 6,
+          "mean_delta": 0.1486,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 1366,
+          "sum_delta": 203
+        },
+        "<18/11-30": {
+          "empirical_sd": 2.3675,
+          "gains": 1636,
+          "losses": 59,
+          "max_delta": 15,
+          "mean_delta": 1.7212,
+          "median_delta": 1,
+          "min_delta": -2,
+          "n": 3221,
+          "sum_delta": 5544
+        },
+        "<18/>30": {
+          "empirical_sd": 3.4767,
+          "gains": 7844,
+          "losses": 151,
+          "max_delta": 28,
+          "mean_delta": 2.6794,
+          "median_delta": 1.0,
+          "min_delta": -2,
+          "n": 12636,
+          "sum_delta": 33857
+        }
+      },
+      "all_end_only": 3676,
+      "all_observed_end": 91991,
+      "all_observed_start": 109128,
+      "all_paired": 88315,
+      "all_start_only": 20813,
+      "days": 153,
+      "eligible_missing": 5359,
+      "eligible_paired": 66846,
+      "eligible_start": 72205
+    },
+    "2027-06-30:2027-09-30": {
+      "age_gap": {
+        "18-20/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 61,
+          "sum_delta": 0
+        },
+        "18-20/1-10": {
+          "empirical_sd": 0.7832,
+          "gains": 244,
+          "losses": 26,
+          "max_delta": 8,
+          "mean_delta": 0.212,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 2160,
+          "sum_delta": 458
+        },
+        "18-20/11-30": {
+          "empirical_sd": 1.5979,
+          "gains": 4724,
+          "losses": 99,
+          "max_delta": 13,
+          "mean_delta": 0.9698,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 11672,
+          "sum_delta": 11319
+        },
+        "18-20/>30": {
+          "empirical_sd": 2.0253,
+          "gains": 2489,
+          "losses": 46,
+          "max_delta": 14,
+          "mean_delta": 1.7322,
+          "median_delta": 1.0,
+          "min_delta": -2,
+          "n": 3962,
+          "sum_delta": 6863
+        },
+        "21-23/0": {
+          "empirical_sd": 0.1072,
+          "gains": 0,
+          "losses": 1,
+          "max_delta": 0,
+          "mean_delta": -0.0116,
+          "median_delta": 0.0,
+          "min_delta": -1,
+          "n": 86,
+          "sum_delta": -1
+        },
+        "21-23/1-10": {
+          "empirical_sd": 0.6723,
+          "gains": 259,
+          "losses": 41,
+          "max_delta": 8,
+          "mean_delta": 0.1602,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 2759,
+          "sum_delta": 442
+        },
+        "21-23/11-30": {
+          "empirical_sd": 1.1226,
+          "gains": 2325,
+          "losses": 159,
+          "max_delta": 13,
+          "mean_delta": 0.4191,
+          "median_delta": 0,
+          "min_delta": -3,
+          "n": 11797,
+          "sum_delta": 4944
+        },
+        "21-23/>30": {
+          "empirical_sd": 1.5758,
+          "gains": 438,
+          "losses": 21,
+          "max_delta": 13,
+          "mean_delta": 0.7678,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 1365,
+          "sum_delta": 1048
+        },
+        "24-27/0": {
+          "empirical_sd": 0.2368,
+          "gains": 0,
+          "losses": 11,
+          "max_delta": 0,
+          "mean_delta": -0.0502,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 239,
+          "sum_delta": -12
+        },
+        "24-27/1-10": {
+          "empirical_sd": 0.5452,
+          "gains": 420,
+          "losses": 487,
+          "max_delta": 5,
+          "mean_delta": -0.008,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 7128,
+          "sum_delta": -57
+        },
+        "24-27/11-30": {
+          "empirical_sd": 0.8202,
+          "gains": 869,
+          "losses": 685,
+          "max_delta": 7,
+          "mean_delta": 0.0608,
+          "median_delta": 0.0,
+          "min_delta": -6,
+          "n": 8148,
+          "sum_delta": 495
+        },
+        "24-27/>30": {
+          "empirical_sd": 1.3159,
+          "gains": 75,
+          "losses": 68,
+          "max_delta": 5,
+          "mean_delta": 0.0699,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 372,
+          "sum_delta": 26
+        },
+        "<18/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0.0,
+          "min_delta": 0,
+          "n": 24,
+          "sum_delta": 0
+        },
+        "<18/1-10": {
+          "empirical_sd": 0.5715,
+          "gains": 144,
+          "losses": 45,
+          "max_delta": 6,
+          "mean_delta": 0.1092,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 1657,
+          "sum_delta": 181
+        },
+        "<18/11-30": {
+          "empirical_sd": 1.692,
+          "gains": 1403,
+          "losses": 59,
+          "max_delta": 12,
+          "mean_delta": 1.1359,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 3150,
+          "sum_delta": 3578
+        },
+        "<18/>30": {
+          "empirical_sd": 2.4515,
+          "gains": 7394,
+          "losses": 157,
+          "max_delta": 21,
+          "mean_delta": 1.8261,
+          "median_delta": 1,
+          "min_delta": -2,
+          "n": 13133,
+          "sum_delta": 23982
+        }
+      },
+      "all_end_only": 1861,
+      "all_observed_end": 91991,
+      "all_observed_start": 97753,
+      "all_paired": 90130,
+      "all_start_only": 7623,
+      "days": 92,
+      "eligible_missing": 4712,
+      "eligible_paired": 67713,
+      "eligible_start": 72425
+    },
+    "2027-07-02:2027-09-30": {
+      "age_gap": {
+        "18-20/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0.0,
+          "min_delta": 0,
+          "n": 54,
+          "sum_delta": 0
+        },
+        "18-20/1-10": {
+          "empirical_sd": 0.8104,
+          "gains": 228,
+          "losses": 20,
+          "max_delta": 8,
+          "mean_delta": 0.2283,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 1927,
+          "sum_delta": 440
+        },
+        "18-20/11-30": {
+          "empirical_sd": 1.5722,
+          "gains": 4368,
+          "losses": 71,
+          "max_delta": 13,
+          "mean_delta": 0.971,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 10674,
+          "sum_delta": 10364
+        },
+        "18-20/>30": {
+          "empirical_sd": 2.0047,
+          "gains": 2383,
+          "losses": 39,
+          "max_delta": 14,
+          "mean_delta": 1.7299,
+          "median_delta": 1,
+          "min_delta": -2,
+          "n": 3777,
+          "sum_delta": 6534
+        },
+        "21-23/0": {
+          "empirical_sd": 0.117,
+          "gains": 0,
+          "losses": 1,
+          "max_delta": 0,
+          "mean_delta": -0.0139,
+          "median_delta": 0.0,
+          "min_delta": -1,
+          "n": 72,
+          "sum_delta": -1
+        },
+        "21-23/1-10": {
+          "empirical_sd": 0.6887,
+          "gains": 245,
+          "losses": 33,
+          "max_delta": 8,
+          "mean_delta": 0.1713,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 2498,
+          "sum_delta": 428
+        },
+        "21-23/11-30": {
+          "empirical_sd": 1.0958,
+          "gains": 2058,
+          "losses": 110,
+          "max_delta": 13,
+          "mean_delta": 0.4103,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 10634,
+          "sum_delta": 4363
+        },
+        "21-23/>30": {
+          "empirical_sd": 1.5058,
+          "gains": 379,
+          "losses": 15,
+          "max_delta": 12,
+          "mean_delta": 0.7287,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 1235,
+          "sum_delta": 900
+        },
+        "24-27/0": {
+          "empirical_sd": 0.1747,
+          "gains": 0,
+          "losses": 7,
+          "max_delta": 0,
+          "mean_delta": -0.0315,
+          "median_delta": 0.0,
+          "min_delta": -1,
+          "n": 222,
+          "sum_delta": -7
+        },
+        "24-27/1-10": {
+          "empirical_sd": 0.4722,
+          "gains": 405,
+          "losses": 258,
+          "max_delta": 5,
+          "mean_delta": 0.0402,
+          "median_delta": 0,
+          "min_delta": -3,
+          "n": 6421,
+          "sum_delta": 258
+        },
+        "24-27/11-30": {
+          "empirical_sd": 0.748,
+          "gains": 778,
+          "losses": 392,
+          "max_delta": 7,
+          "mean_delta": 0.1128,
+          "median_delta": 0.0,
+          "min_delta": -4,
+          "n": 7200,
+          "sum_delta": 812
+        },
+        "24-27/>30": {
+          "empirical_sd": 1.2245,
+          "gains": 66,
+          "losses": 47,
+          "max_delta": 5,
+          "mean_delta": 0.141,
+          "median_delta": 0.0,
+          "min_delta": -5,
+          "n": 312,
+          "sum_delta": 44
+        },
+        "<18/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0.0,
+          "min_delta": 0,
+          "n": 24,
+          "sum_delta": 0
+        },
+        "<18/1-10": {
+          "empirical_sd": 0.5664,
+          "gains": 144,
+          "losses": 45,
+          "max_delta": 6,
+          "mean_delta": 0.1076,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 1655,
+          "sum_delta": 178
+        },
+        "<18/11-30": {
+          "empirical_sd": 1.669,
+          "gains": 1390,
+          "losses": 59,
+          "max_delta": 11,
+          "mean_delta": 1.1239,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 3132,
+          "sum_delta": 3520
+        },
+        "<18/>30": {
+          "empirical_sd": 2.4375,
+          "gains": 7380,
+          "losses": 157,
+          "max_delta": 21,
+          "mean_delta": 1.8165,
+          "median_delta": 1.0,
+          "min_delta": -2,
+          "n": 13120,
+          "sum_delta": 23833
+        }
+      },
+      "all_end_only": 9013,
+      "all_observed_end": 91991,
+      "all_observed_start": 83209,
+      "all_paired": 82978,
+      "all_start_only": 231,
+      "days": 90,
+      "eligible_missing": 86,
+      "eligible_paired": 62957,
+      "eligible_start": 63043
+    }
+  },
+  "baseline_under28_field_player_endpoints": {
+    "full": {
+      "already_at_baseline": 434,
+      "horizon_passed_without_observed_hit_sparse_sampling": 1844,
+      "newly_observed_hit": 75,
+      "right_censored": 59694
+    },
+    "pa95": {
+      "already_at_baseline": 3714,
+      "horizon_passed_without_observed_hit_sparse_sampling": 1390,
+      "newly_observed_hit": 317,
+      "right_censored": 56626
+    },
+    "pa_minus_2": {
+      "already_at_baseline": 1635,
+      "horizon_passed_without_observed_hit_sparse_sampling": 1696,
+      "newly_observed_hit": 155,
+      "right_censored": 58561
+    }
+  },
+  "calibration_metrics": null,
+  "career_cluster_count": 1,
+  "causal_effect": null,
+  "displayed_attributes": {
+    "comparisons": {
+      "2027-03-30:2027-09-30": {
+        "deltas": {
+          "all": {
+            "Acceleration": {
+              "down": 3590,
+              "equal": 50200,
+              "mean": 0.02359,
+              "n": 58704,
+              "sd": 0.38723,
+              "up": 4914
+            },
+            "Anticipation": {
+              "down": 3282,
+              "equal": 46919,
+              "mean": 0.09371,
+              "n": 58704,
+              "sd": 0.45695,
+              "up": 8503
+            },
+            "Balance": {
+              "down": 2593,
+              "equal": 46027,
+              "mean": 0.13423,
+              "n": 58704,
+              "sd": 0.46921,
+              "up": 10084
+            },
+            "Concentration": {
+              "down": 3725,
+              "equal": 45146,
+              "mean": 0.11824,
+              "n": 58704,
+              "sd": 0.51702,
+              "up": 9833
+            },
+            "Dribbling": {
+              "down": 3671,
+              "equal": 49760,
+              "mean": 0.02875,
+              "n": 58704,
+              "sd": 0.39763,
+              "up": 5273
+            },
+            "Finishing": {
+              "down": 4884,
+              "equal": 50237,
+              "mean": -0.02162,
+              "n": 58704,
+              "sd": 0.3835,
+              "up": 3583
+            },
+            "JumpingReach": {
+              "down": 5461,
+              "equal": 47769,
+              "mean": 0.00709,
+              "n": 58704,
+              "sd": 0.45776,
+              "up": 5474
+            },
+            "Pace": {
+              "down": 3190,
+              "equal": 48885,
+              "mean": 0.06126,
+              "n": 58704,
+              "sd": 0.41687,
+              "up": 6629
+            },
+            "Stamina": {
+              "down": 2638,
+              "equal": 45191,
+              "mean": 0.14844,
+              "n": 58704,
+              "sd": 0.49943,
+              "up": 10875
+            },
+            "Strength": {
+              "down": 2091,
+              "equal": 45159,
+              "mean": 0.17047,
+              "n": 58704,
+              "sd": 0.49084,
+              "up": 11454
+            }
+          },
+          "ca_gain": {
+            "Acceleration": {
+              "down": 657,
+              "equal": 15729,
+              "mean": 0.1706,
+              "n": 20446,
+              "sd": 0.46289,
+              "up": 4060
+            },
+            "Anticipation": {
+              "down": 443,
+              "equal": 13675,
+              "mean": 0.30246,
+              "n": 20446,
+              "sd": 0.53379,
+              "up": 6328
+            },
+            "Balance": {
+              "down": 296,
+              "equal": 12920,
+              "mean": 0.35831,
+              "n": 20446,
+              "sd": 0.54626,
+              "up": 7230
+            },
+            "Concentration": {
+              "down": 718,
+              "equal": 13031,
+              "mean": 0.32603,
+              "n": 20446,
+              "sd": 0.60818,
+              "up": 6697
+            },
+            "Dribbling": {
+              "down": 708,
+              "equal": 15505,
+              "mean": 0.17764,
+              "n": 20446,
+              "sd": 0.47529,
+              "up": 4233
+            },
+            "Finishing": {
+              "down": 1194,
+              "equal": 16374,
+              "mean": 0.08471,
+              "n": 20446,
+              "sd": 0.44623,
+              "up": 2878
+            },
+            "JumpingReach": {
+              "down": 2180,
+              "equal": 14518,
+              "mean": 0.09449,
+              "n": 20446,
+              "sd": 0.57955,
+              "up": 3748
+            },
+            "Pace": {
+              "down": 520,
+              "equal": 14745,
+              "mean": 0.23657,
+              "n": 20446,
+              "sd": 0.49888,
+              "up": 5181
+            },
+            "Stamina": {
+              "down": 282,
+              "equal": 12125,
+              "mean": 0.40516,
+              "n": 20446,
+              "sd": 0.57846,
+              "up": 8039
+            },
+            "Strength": {
+              "down": 211,
+              "equal": 11650,
+              "mean": 0.44165,
+              "n": 20446,
+              "sd": 0.58033,
+              "up": 8585
+            }
+          }
+        },
+        "n_missing": 4297,
+        "n_paired": 58704,
+        "n_start": 63001
+      },
+      "2027-06-30:2027-09-30": {
+        "deltas": {
+          "all": {
+            "Acceleration": {
+              "down": 2841,
+              "equal": 61869,
+              "mean": 0.02049,
+              "n": 68947,
+              "sd": 0.3209,
+              "up": 4237
+            },
+            "Anticipation": {
+              "down": 3220,
+              "equal": 59826,
+              "mean": 0.03977,
+              "n": 68947,
+              "sd": 0.36523,
+              "up": 5901
+            },
+            "Balance": {
+              "down": 2504,
+              "equal": 59391,
+              "mean": 0.06633,
+              "n": 68947,
+              "sd": 0.36829,
+              "up": 7052
+            },
+            "Concentration": {
+              "down": 3370,
+              "equal": 59145,
+              "mean": 0.04785,
+              "n": 68947,
+              "sd": 0.38911,
+              "up": 6432
+            },
+            "Dribbling": {
+              "down": 3242,
+              "equal": 61858,
+              "mean": 0.00898,
+              "n": 68947,
+              "sd": 0.32148,
+              "up": 3847
+            },
+            "Finishing": {
+              "down": 4349,
+              "equal": 61887,
+              "mean": -0.02368,
+              "n": 68947,
+              "sd": 0.31946,
+              "up": 2711
+            },
+            "JumpingReach": {
+              "down": 3872,
+              "equal": 58170,
+              "mean": 0.04557,
+              "n": 68947,
+              "sd": 0.39875,
+              "up": 6905
+            },
+            "Pace": {
+              "down": 2624,
+              "equal": 60954,
+              "mean": 0.04019,
+              "n": 68947,
+              "sd": 0.33977,
+              "up": 5369
+            },
+            "Stamina": {
+              "down": 2276,
+              "equal": 58504,
+              "mean": 0.08493,
+              "n": 68947,
+              "sd": 0.39244,
+              "up": 8167
+            },
+            "Strength": {
+              "down": 1834,
+              "equal": 58629,
+              "mean": 0.09709,
+              "n": 68947,
+              "sd": 0.38084,
+              "up": 8484
+            }
+          },
+          "ca_gain": {
+            "Acceleration": {
+              "down": 386,
+              "equal": 16107,
+              "mean": 0.14293,
+              "n": 19674,
+              "sd": 0.40431,
+              "up": 3181
+            },
+            "Anticipation": {
+              "down": 418,
+              "equal": 15230,
+              "mean": 0.18649,
+              "n": 19674,
+              "sd": 0.44778,
+              "up": 4026
+            },
+            "Balance": {
+              "down": 311,
+              "equal": 14662,
+              "mean": 0.22451,
+              "n": 19674,
+              "sd": 0.45725,
+              "up": 4701
+            },
+            "Concentration": {
+              "down": 510,
+              "equal": 15121,
+              "mean": 0.1871,
+              "n": 19674,
+              "sd": 0.47034,
+              "up": 4043
+            },
+            "Dribbling": {
+              "down": 522,
+              "equal": 16408,
+              "mean": 0.11365,
+              "n": 19674,
+              "sd": 0.39398,
+              "up": 2744
+            },
+            "Finishing": {
+              "down": 856,
+              "equal": 16873,
+              "mean": 0.05561,
+              "n": 19674,
+              "sd": 0.37422,
+              "up": 1945
+            },
+            "JumpingReach": {
+              "down": 1111,
+              "equal": 15159,
+              "mean": 0.11965,
+              "n": 19674,
+              "sd": 0.4739,
+              "up": 3404
+            },
+            "Pace": {
+              "down": 331,
+              "equal": 15537,
+              "mean": 0.17795,
+              "n": 19674,
+              "sd": 0.42729,
+              "up": 3806
+            },
+            "Stamina": {
+              "down": 222,
+              "equal": 13943,
+              "mean": 0.27071,
+              "n": 19674,
+              "sd": 0.48239,
+              "up": 5509
+            },
+            "Strength": {
+              "down": 178,
+              "equal": 13691,
+              "mean": 0.28911,
+              "n": 19674,
+              "sd": 0.48141,
+              "up": 5805
+            }
+          }
+        },
+        "n_missing": 1482,
+        "n_paired": 68947,
+        "n_start": 70429
+      }
+    },
+    "snapshots": {
+      "2027-03-30": {
+        "accounting": {
+          "accepted_inputs_all_ages_positions": 100544,
+          "invalid_scanner_attribute": 6669,
+          "unmatched_identity_or_ability": 18
+        },
+        "controller_day": "2027-03-30",
+        "hashes": {
+          "after": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+          "before": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+          "dump": "19782dd0793840acae9a06eeaa83ad6d050a1912067303a34b02e9ee4617e3cd",
+          "loaded_copy": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+        },
+        "scanner_reported_day": "2027-03-20",
+        "scanner_version": "1.7.3"
+      },
+      "2027-06-30": {
+        "accounting": {
+          "accepted_inputs_all_ages_positions": 105257,
+          "invalid_scanner_attribute": 7560,
+          "unmatched_identity_or_ability": 139
+        },
+        "controller_day": "2027-06-30",
+        "hashes": {
+          "after": "b930d7a7e4b3275ec74e8669f52e3223477934170ee14e9ca0c28d87578d4e99",
+          "before": "b930d7a7e4b3275ec74e8669f52e3223477934170ee14e9ca0c28d87578d4e99",
+          "dump": "c8c221b87039de644435efc731c5ddc4b94271572b98c0bd63b441670cbb4d87",
+          "loaded_copy": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088"
+        },
+        "scanner_reported_day": "2027-05-30",
+        "scanner_version": "1.7.3"
+      },
+      "2027-09-30": {
+        "accounting": {
+          "accepted_inputs_all_ages_positions": 104583,
+          "invalid_scanner_attribute": 7095,
+          "unmatched_identity_or_ability": 110
+        },
+        "controller_day": "2027-09-30",
+        "hashes": {
+          "after": "bb30beec5c9b7bdce47134e5b36d6a445d6b827d5342899a0719de3bf68d6468",
+          "before": "bb30beec5c9b7bdce47134e5b36d6a445d6b827d5342899a0719de3bf68d6468",
+          "dump": "d18e11fbef0b61c48bc9c0fe09ee97c5fea0ed63e73444c453fb61b16e5a353e",
+          "loaded_copy": "a06b6e5f0aa32eeec1a7365b03afc5b0c9d6be303ef728fa6166b1c5f6591456"
+        },
+        "scanner_reported_day": "2027-09-18",
+        "scanner_version": "1.7.3"
+      }
+    }
+  },
+  "engine_build": "27.1.0+2505117",
+  "independent_test_careers": 0,
+  "landmark_availability": {
+    "endpoint_eligible": 62047,
+    "has_12_month_ca": 0,
+    "has_24_month_ca": 0,
+    "has_exact_quarter": 60201,
+    "has_observed_quarter_gain_3": 9919
+  },
+  "last_qualified_quarter_gain_by_baseline_age": {
+    "18-20": {
+      "gains": 4226,
+      "losses": 0,
+      "max_delta": 14,
+      "mean_delta": 4.111,
+      "median_delta": 4.0,
+      "min_delta": 3,
+      "n": 4226,
+      "sum_delta": 17373
+    },
+    "21-23": {
+      "gains": 1472,
+      "losses": 0,
+      "max_delta": 14,
+      "mean_delta": 3.9755,
+      "median_delta": 4.0,
+      "min_delta": 3,
+      "n": 1472,
+      "sum_delta": 5852
+    },
+    "24-27": {
+      "gains": 342,
+      "losses": 0,
+      "max_delta": 7,
+      "mean_delta": 3.5292,
+      "median_delta": 3.0,
+      "min_delta": 3,
+      "n": 342,
+      "sum_delta": 1207
+    },
+    "<18": {
+      "gains": 3879,
+      "losses": 0,
+      "max_delta": 17,
+      "mean_delta": 4.6914,
+      "median_delta": 4,
+      "min_delta": 3,
+      "n": 3879,
+      "sum_delta": 18198
+    }
+  },
+  "native_module_sha256": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
+  "new_snapshots": {
+    "2027-09-30": {
+      "context_sha256": [
+        "bb30beec5c9b7bdce47134e5b36d6a445d6b827d5342899a0719de3bf68d6468",
+        "bb30beec5c9b7bdce47134e5b36d6a445d6b827d5342899a0719de3bf68d6468"
+      ],
+      "native": {
+        "accepted_ability_pairs": 91991,
+        "birth_missing_or_mismatch": 626,
+        "club_unverified_among_accepted": 54091,
+        "native_records": 92655,
+        "native_uid_absent_from_save": 38,
+        "no_closing_identity": 67,
+        "no_native_uid": 19831,
+        "save_records": 112515
+      },
+      "native_sha256": "6a3ecfd1a8b7564c0e303ea06a2cc119caaac44918ecb2298e2bc350601691b8",
+      "save_sha256": "a06b6e5f0aa32eeec1a7365b03afc5b0c9d6be303ef728fa6166b1c5f6591456",
+      "structural": {
+        "absent_or_ambiguous_id": 67,
+        "accepted_save_rows": 111788,
+        "indexed": 112515,
+        "missing_dob_or_age": 659,
+        "unresolved_ca_pa": 1
+      }
+    }
+  },
+  "prospective_arm_count": 1,
+  "reader_version": "0.14.1",
+  "schema": "pa-reach-retention-observed-quarter/v1",
+  "source_root": {
+    "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+    "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+  },
+  "world_linkage": {
+    "2027-03-30:2027-09-30": {
+      "absent_native_and_save": 4233,
+      "absent_native_at_end": 20974,
+      "absent_native_but_same_identity_in_save": 16741,
+      "ca_changed": 32731,
+      "factor_changed": 15487,
+      "native_pairs": 76284,
+      "pa_changed": 0
+    },
+    "2027-04-07:2027-09-30": {
+      "absent_native_and_save": 4211,
+      "absent_native_at_end": 20948,
+      "absent_native_but_same_identity_in_save": 16737,
+      "ca_changed": 33293,
+      "factor_changed": 16228,
+      "native_pairs": 78232,
+      "pa_changed": 0
+    },
+    "2027-04-30:2027-09-30": {
+      "absent_native_and_save": 4080,
+      "absent_native_at_end": 20813,
+      "absent_native_but_same_identity_in_save": 16733,
+      "ca_changed": 35048,
+      "factor_changed": 20521,
+      "native_pairs": 88315,
+      "pa_changed": 0
+    },
+    "2027-06-30:2027-09-30": {
+      "absent_native_and_save": 300,
+      "absent_native_at_end": 7623,
+      "absent_native_but_same_identity_in_save": 7323,
+      "ca_changed": 30732,
+      "factor_changed": 10105,
+      "native_pairs": 90130,
+      "pa_changed": 0
+    },
+    "2027-07-02:2027-09-30": {
+      "absent_native_and_save": 30,
+      "absent_native_at_end": 231,
+      "absent_native_but_same_identity_in_save": 201,
+      "ca_changed": 27767,
+      "factor_changed": 4568,
+      "native_pairs": 82978,
+      "pa_changed": 0
+    }
+  }
+}

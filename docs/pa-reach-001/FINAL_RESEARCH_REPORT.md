@@ -4,6 +4,7 @@
 
 | Untersuchung | Gesicherte Messung | Geltungsbereich |
 |---|---|---|
+| Halbes Jahr ab März | 30.03.–30.09.2027, 184 Spieltage, 76.284 nativ gepaarte Spieler | 75 erstmals beobachtete Treffer auf die feste März-PA vor oder am 28. Geburtstag. 317 erstmals beobachtete Treffer auf mindestens 95 %. |
 | Vorhandene Zubieta-Historie | 31.01.–30.03.2027, 58 Tage, 94.585 beidseitig bestätigte Spieler | Alter, Geburtsdatum und zwei echte Endzustände. Beide gespeicherten CA/PA-Werte separat nativ geprüft. |
 | Neu ausgeführte Kontrolle | 30.03.–30.04.2027, 31 simulierte Tage, 97.062 gepaarte Spieler | Private Kopie, regulärer Urlaub mit delegierten Matches. Die 58 historischen Tage kommen als eigene Beobachtungszeit hinzu. Der gemeinsame Märzstand wird einmal gezählt. |
 | Retentionszweig bis zum Sommer | 30.03.–30.06.2027, 92 Spieltage, 83.716 gepaarte Spieler aller Altersgruppen | 45 neue Treffer auf die volle März-PA bis zum Altershorizont und 152 auf mindestens 95 %. 434 Feldspieler lagen schon im März auf ihrer vollen PA. Am 02.07. folgte ein weiterer gesicherter Stichtag. |
@@ -14,9 +15,13 @@
 
 Im ersten gemessenen Quartal gewannen Feldspieler mit mehr als 30 CA-Punkten Abstand zur PA je nach Ausgangsalter im Mittel 2,80 CA (unter 18), 1,61 CA (18–20), 0,66 CA (21–23) und 0,26 CA (24–27). Für 59.784 Spieler stehen die Einzelprognosen für den 30. März 2028 bereits fest. [Quartalsmessung, Streuungen und Messausfälle](RETENTION_FIRST_QUARTER.md) · [Vorab festgelegter Jahresvergleich](PROSPECTIVE_CA_YEAR.md)
 
-### Was hat den ersten prospektiven Test bestanden?
+Mit einer im März gemessenen Lücke über 30 CA-Punkten betrug der Zuwachs bis Ende September bei Unter-18-Jährigen im Mittel 6,04 (Median 6, n=4.416), mit 24–27 Jahren 0,50 (Median 0, n=328). Die Streuung innerhalb der Gruppen war erheblich. Bei den Jüngsten betrug die Standardabweichung 4,65 CA-Punkte. [Halbjahresergebnis und gesondertes Sommerquartal](RETENTION_SEASON_FOLLOWUP.md)
+
+### Wer erreichte seine PA und wie genau waren die CA-Prognosen?
 
 Von 61.613 Feldspielern, deren CA im März unter der eigenen PA lag, erreichten bis zum Juni-Stichtag 45 nachweislich das volle Ziel. 34 davon starteten ein bis zwei CA-Punkte darunter, neun mit drei bis fünf und zwei mit sechs bis zehn Punkten Lücke. Von den Unter-18-Jährigen erreichte in diesem Quartal keiner die volle März-PA, obwohl die Jüngsten mit großer Lücke im Mittel am schnellsten wuchsen. Ein fehlender Juni-Treffer lässt die spätere Entwicklung offen. [Altersgruppen, Ausgangslücken und Zensierung](RETENTION_PA_HITS_0630.md)
+
+Bis Ende September stieg die Zahl der beobachteten vollen Treffer auf **75**. Davon starteten 42 mit 1–2, 20 mit 3–5, zehn mit 6–10 und drei mit 11–20 Punkten Rückstand. Unter den 7.055 zu Beginn unter 18-Jährigen waren nun zwei Treffer. Für die 61.613 Spieler unter ihrer Ausgangs-PA gibt es außerdem 155 erstmals beobachtete PA−2-Treffer. Mindestens 95 % erreichten 317 erstmals im Beobachtungsfenster. Die drei Schwellen überlappen. In der im April festgelegten stagnierenden Hoch-PA-Gruppe gewannen bis September 34 von 299 mindestens drei CA. Bei den früher wachsenden Spielern waren es 177 von 262. [Endpunkte, Altersgruppen und fehlende Follow-ups](../../research/pa-reach-001/manifests/retention-pa-hits-0930.json) · [Stagnationsverläufe](STAGNATION.md)
 
 Für 61.540 Spieler waren am 30. April zwei einfache CA-Prognosen für den 30. Juni festgeschrieben. 60.863 Spieler hatten einen verwertbaren Endwert, bei 677 fehlt er. Über alle Paare lag die unveränderte April-CA im Mittel um **0,396 CA-Punkte** daneben, der fortgeschriebene jüngste Trend um **0,532**. Bei 4.109 Unter-18-Jährigen mit über 30 Punkten Ausgangslücke war die Reihenfolge umgekehrt (1,732 gegenüber 1,510). Die Fehler beziehen sich auf 61 Tage in einer einzigen Karriere. [Vorhersagen, Fehlermaße und Ausschlüsse](CALIBRATION_REPORT.md)
 
