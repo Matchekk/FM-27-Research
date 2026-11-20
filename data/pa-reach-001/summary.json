@@ -1,0 +1,469 @@
+{
+  "baseline_median_ca_over_pa": {
+    "0": 0.5033,
+    "1": 0.824,
+    "2": 0.8265,
+    "3": 0.84,
+    "4": 0.8592,
+    "5": 0.8595
+  },
+  "baseline_outfield_under28_endpoint_counts": {
+    "full": {
+      "already_at_baseline": 432,
+      "horizon_passed_without_observed_hit_sparse_sampling": 254,
+      "newly_observed_hit": 9,
+      "right_censored": 59035
+    },
+    "pa95": {
+      "already_at_baseline": 3764,
+      "horizon_passed_without_observed_hit_sparse_sampling": 192,
+      "newly_observed_hit": 35,
+      "right_censored": 55739
+    },
+    "pa_minus_2": {
+      "already_at_baseline": 1626,
+      "horizon_passed_without_observed_hit_sparse_sampling": 237,
+      "newly_observed_hit": 19,
+      "right_censored": 57848
+    }
+  },
+  "build": "27.0.1+2503222",
+  "byte_counts": {
+    "2027-01-16": {
+      "0": 26,
+      "1": 6602,
+      "2": 20038,
+      "3": 46825,
+      "4": 14960,
+      "5": 4710
+    },
+    "2027-01-19": {
+      "0": 211,
+      "1": 6621,
+      "2": 20120,
+      "3": 46926,
+      "4": 14993,
+      "5": 4712
+    },
+    "2027-01-23": {
+      "0": 547,
+      "1": 6638,
+      "2": 20190,
+      "3": 47040,
+      "4": 15007,
+      "5": 4730
+    },
+    "2027-02-04": {
+      "0": 476,
+      "1": 6743,
+      "2": 20508,
+      "3": 47557,
+      "4": 15097,
+      "5": 4768
+    }
+  },
+  "calibration_metrics": null,
+  "career_cluster_count": 1,
+  "club_and_candidate_intervals": [
+    {
+      "changed": 5,
+      "club": "different",
+      "end": "2027-01-19",
+      "intervals": 7,
+      "start": "2027-01-16"
+    },
+    {
+      "changed": 46,
+      "club": "same",
+      "end": "2027-01-19",
+      "intervals": 36811,
+      "start": "2027-01-16"
+    },
+    {
+      "changed": 75,
+      "club": "unknown",
+      "end": "2027-01-19",
+      "intervals": 56313,
+      "start": "2027-01-16"
+    },
+    {
+      "changed": 3,
+      "club": "different",
+      "end": "2027-01-23",
+      "intervals": 5,
+      "start": "2027-01-19"
+    },
+    {
+      "changed": 47,
+      "club": "same",
+      "end": "2027-01-23",
+      "intervals": 36866,
+      "start": "2027-01-19"
+    },
+    {
+      "changed": 70,
+      "club": "unknown",
+      "end": "2027-01-23",
+      "intervals": 56484,
+      "start": "2027-01-19"
+    },
+    {
+      "changed": 21,
+      "club": "different",
+      "end": "2027-02-04",
+      "intervals": 36,
+      "start": "2027-01-23"
+    },
+    {
+      "changed": 302,
+      "club": "same",
+      "end": "2027-02-04",
+      "intervals": 36837,
+      "start": "2027-01-23"
+    },
+    {
+      "changed": 386,
+      "club": "unknown",
+      "end": "2027-02-04",
+      "intervals": 56705,
+      "start": "2027-01-23"
+    }
+  ],
+  "days_between_endpoints": 19,
+  "first_last_candidate_transitions": {
+    "0->0": 13,
+    "0->2": 1,
+    "0->3": 4,
+    "0->4": 6,
+    "0->5": 2,
+    "1->1": 6538,
+    "1->2": 17,
+    "1->3": 37,
+    "1->4": 8,
+    "1->5": 1,
+    "2->1": 16,
+    "2->2": 19896,
+    "2->3": 94,
+    "2->4": 19,
+    "2->5": 7,
+    "3->1": 45,
+    "3->2": 141,
+    "3->3": 46405,
+    "3->4": 151,
+    "3->5": 55,
+    "4->1": 14,
+    "4->2": 35,
+    "4->3": 163,
+    "4->4": 14692,
+    "4->5": 44,
+    "5->2": 21,
+    "5->3": 44,
+    "5->4": 39,
+    "5->5": 4605
+  },
+  "first_seen_after_baseline_byte_counts": {
+    "0": 681,
+    "1": 120,
+    "2": 364,
+    "3": 694,
+    "4": 136,
+    "5": 41
+  },
+  "independent_test_careers": 0,
+  "linkage": {
+    "baseline": 93161,
+    "baseline_absent_on_final_date": 48,
+    "first_seen_after_baseline": 2036,
+    "lower_candidate_final_ca_above_new_cap": 322,
+    "paired": 93113,
+    "present_all_dates": 93113
+  },
+  "new_youth_diagnostics": {
+    "first_seen_under18": 773,
+    "initially_zero": 681,
+    "zero_then_1_to_5": 218
+  },
+  "outfield_under28_growth_by_baseline_age_gap": [
+    {
+      "age": "18-20",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 69,
+      "sum_delta": 0
+    },
+    {
+      "age": "18-20",
+      "gains": 77,
+      "gap": "1-10",
+      "losses": 8,
+      "max_delta": 6,
+      "mean_delta": 0.0384,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 2554,
+      "sum_delta": 98
+    },
+    {
+      "age": "18-20",
+      "gains": 1544,
+      "gap": "11-30",
+      "losses": 28,
+      "max_delta": 7,
+      "mean_delta": 0.198,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 11871,
+      "sum_delta": 2351
+    },
+    {
+      "age": "18-20",
+      "gains": 1181,
+      "gap": ">30",
+      "losses": 16,
+      "max_delta": 6,
+      "mean_delta": 0.3838,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 4812,
+      "sum_delta": 1847
+    },
+    {
+      "age": "21-23",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 71,
+      "sum_delta": 0
+    },
+    {
+      "age": "21-23",
+      "gains": 92,
+      "gap": "1-10",
+      "losses": 2,
+      "max_delta": 3,
+      "mean_delta": 0.0494,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 2472,
+      "sum_delta": 122
+    },
+    {
+      "age": "21-23",
+      "gains": 947,
+      "gap": "11-30",
+      "losses": 30,
+      "max_delta": 6,
+      "mean_delta": 0.1004,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 12605,
+      "sum_delta": 1265
+    },
+    {
+      "age": "21-23",
+      "gains": 131,
+      "gap": ">30",
+      "losses": 1,
+      "max_delta": 7,
+      "mean_delta": 0.1506,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 1328,
+      "sum_delta": 200
+    },
+    {
+      "age": "24-27",
+      "gains": 0,
+      "gap": "0",
+      "losses": 2,
+      "max_delta": 0,
+      "mean_delta": -0.0071,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 280,
+      "sum_delta": -2
+    },
+    {
+      "age": "24-27",
+      "gains": 148,
+      "gap": "1-10",
+      "losses": 77,
+      "max_delta": 2,
+      "mean_delta": 0.0095,
+      "median_delta": 0.0,
+      "min_delta": -2,
+      "n": 8610,
+      "sum_delta": 82
+    },
+    {
+      "age": "24-27",
+      "gains": 283,
+      "gap": "11-30",
+      "losses": 80,
+      "max_delta": 3,
+      "mean_delta": 0.0281,
+      "median_delta": 0,
+      "min_delta": -3,
+      "n": 8933,
+      "sum_delta": 251
+    },
+    {
+      "age": "24-27",
+      "gains": 26,
+      "gap": ">30",
+      "losses": 1,
+      "max_delta": 2,
+      "mean_delta": 0.0788,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 419,
+      "sum_delta": 33
+    },
+    {
+      "age": "<18",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0.0,
+      "min_delta": 0,
+      "n": 12,
+      "sum_delta": 0
+    },
+    {
+      "age": "<18",
+      "gains": 7,
+      "gap": "1-10",
+      "losses": 2,
+      "max_delta": 5,
+      "mean_delta": 0.0565,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 230,
+      "sum_delta": 13
+    },
+    {
+      "age": "<18",
+      "gains": 647,
+      "gap": "11-30",
+      "losses": 4,
+      "max_delta": 6,
+      "mean_delta": 0.421,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 2349,
+      "sum_delta": 989
+    },
+    {
+      "age": "<18",
+      "gains": 1156,
+      "gap": ">30",
+      "losses": 8,
+      "max_delta": 6,
+      "mean_delta": 0.6225,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 3089,
+      "sum_delta": 1923
+    }
+  ],
+  "outfield_under28_growth_by_candidate_cap_room": {
+    "2 to 10 below": {
+      "gains": 1975,
+      "losses": 54,
+      "max_delta": 7,
+      "mean_delta": 0.2163,
+      "median_delta": 0.0,
+      "min_delta": -3,
+      "n": 12536,
+      "sum_delta": 2712
+    },
+    ">10 below": {
+      "gains": 3814,
+      "losses": 43,
+      "max_delta": 7,
+      "mean_delta": 0.3782,
+      "median_delta": 0,
+      "min_delta": -2,
+      "n": 16019,
+      "sum_delta": 6058
+    },
+    "above by >2": {
+      "gains": 72,
+      "losses": 116,
+      "max_delta": 4,
+      "mean_delta": -0.0023,
+      "median_delta": 0.0,
+      "min_delta": -2,
+      "n": 18014,
+      "sum_delta": -41
+    },
+    "within 2": {
+      "gains": 255,
+      "losses": 45,
+      "max_delta": 5,
+      "mean_delta": 0.0206,
+      "median_delta": 0.0,
+      "min_delta": -2,
+      "n": 12428,
+      "sum_delta": 256
+    }
+  },
+  "snapshots": {
+    "2027-01-16": {
+      "accepted_ability_pairs": 93161,
+      "birth_missing_or_mismatch": 7,
+      "club_unverified_among_accepted": 56310,
+      "native_records": 93168,
+      "native_uid_absent_from_save": 0,
+      "no_closing_identity": 1,
+      "no_native_uid": 20646,
+      "save_records": 113815
+    },
+    "2027-01-19": {
+      "accepted_ability_pairs": 93583,
+      "birth_missing_or_mismatch": 14,
+      "club_unverified_among_accepted": 56583,
+      "native_records": 93597,
+      "native_uid_absent_from_save": 0,
+      "no_closing_identity": 1,
+      "no_native_uid": 19548,
+      "save_records": 113146
+    },
+    "2027-01-23": {
+      "accepted_ability_pairs": 94152,
+      "birth_missing_or_mismatch": 58,
+      "club_unverified_among_accepted": 57031,
+      "native_records": 94212,
+      "native_uid_absent_from_save": 2,
+      "no_closing_identity": 4,
+      "no_native_uid": 19353,
+      "save_records": 113567
+    },
+    "2027-02-04": {
+      "accepted_ability_pairs": 95149,
+      "birth_missing_or_mismatch": 58,
+      "club_unverified_among_accepted": 57844,
+      "native_records": 95209,
+      "native_uid_absent_from_save": 2,
+      "no_closing_identity": 4,
+      "no_native_uid": 18523,
+      "save_records": 113734
+    }
+  },
+  "status": [
+    "INSUFFICIENT_LONGITUDINAL_EVIDENCE",
+    "PROGRESSION_TIER_UNVERIFIED",
+    "NOT_OUTCOME_VALIDATED"
+  ]
+}

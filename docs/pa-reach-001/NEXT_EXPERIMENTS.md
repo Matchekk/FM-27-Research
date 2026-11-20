@@ -1,0 +1,5 @@
+# Nächste unterscheidbare Erkenntnisschritte
+
+1. Zubieta auf 27.1.0+2505117 an zwei Spieltagen derselben Wurzel durch zeitgleiche native und gespeicherte Messungen qualifizieren. Pfad, Datum, Build, ID und Geburt an beiden Enden abgleichen. Erfassungslücken und alle nicht beobachtbaren Ereigniszeitpunkte dokumentieren. Der aktuelle Stand je Spieltag steht im [Zubieta-Readback](LONGITUDINAL_ANALYSIS.md).
+2. Den sicher geladenen Kontrollzweig über einen Monat und danach bis zu einer Saison mit festen Stichtagen beobachten. Vertragsbeginn und Klubwechsel engmaschig erfassen. Erst nach A/A-Abgleich und bestätigtem Setter einen einzelnen Fokus- oder Ereigniskontrast starten. Für die Freigabefrage bei temporärem Cap ist ein unabhängiges Freigabesignal erforderlich. [Experimentplan](EXPERIMENT_DESIGN.md)
+3. Weitere unabhängige Karrierewurzeln aufnehmen. Messrhythmus und Ausfallursachen prüfen, trainierende und testende Wurzeln versiegeln, danach A/B/C vergleichen. Attribut- und Meta-Prognosen benötigen ein eigenes späteres Prognoseziel. [Modellplan](MODEL_DESIGN.md)

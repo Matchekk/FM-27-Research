@@ -1,5 +1,9 @@
 # Nächste Schritte – priorisierte Forschungsaufträge
 
+## PA-REACH-001 · Entwicklung bis 28
+
+Die Zubieta-Forschungszweige liefern die praktische Fortsetzung des Messwegs. Priorität haben die direkte Qualifikation am Zielbuild, der kontrollierte Monats-/Saisonverlauf und zusätzliche unabhängige Karrierewurzeln für die Kalibrierung. [Nächste Experimente](docs/pa-reach-001/NEXT_EXPERIMENTS.md) · [Versuchsdesign](docs/pa-reach-001/EXPERIMENT_DESIGN.md).
+
 ## META-VALIDATION-001 – offene Voraussetzungen für den Holdout
 
 Für die Spielerwahl einen hashidentischen Export wiederfinden oder eine neue Kohorte separat einfrieren und vollständige Profile inklusive Eignung nativ prüfen. Für die isolierte JR-Kurve die vier Rohstufen am selben Spielstand gegen unmaskierte Originalwerte kalibrieren und positionsgeeignete Starter wählen. Der eine Technikseed ist verbraucht. [Modellentscheidung](docs/meta-validation-001/MODEL_DECISION.md).

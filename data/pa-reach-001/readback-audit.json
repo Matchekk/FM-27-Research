@@ -1,0 +1,85 @@
+{
+  "as_of": "2026-11-20",
+  "installed_engine_log": "27.1.0+2505117",
+  "installed_steam_build_id": 26620374,
+  "installed_GameAssembly_sha256": "3f4a26c4869d6429d2e73c276adc64bdfaf6f3c86ce44fe0de93d14683a5d7e9",
+  "python": "3.12.10",
+  "reader": "fmsave 0.14.1",
+  "fmsave_source": "9dd60521042e9c5a33a14725da59023eb3ad8dfa",
+  "second_reader_source_review_only": "7fb12175f59b4d41b4418bf0378c3855a5bab4bd",
+  "research_start_head": "3690883824997255dfe3fbe70ed5a7b2791931fe",
+  "fork_main": "86a85f32549ddeb75c04e0536807b35dcfdc9461",
+  "fork_model": "977ecefe623a3d4081871a0f558ab12d9bce850d",
+  "rejected_opening_uid_join": {
+    "2027-01-16": {
+      "ability_mismatch": 179,
+      "accepted_ability_pairs": 3,
+      "birth_missing_or_mismatch": 78200,
+      "native_records": 93168,
+      "native_uid_absent_from_save": 14786,
+      "no_native_uid": 35433,
+      "save_records": 113815
+    },
+    "2027-01-19": {
+      "ability_mismatch": 178,
+      "accepted_ability_pairs": 3,
+      "birth_missing_or_mismatch": 78194,
+      "native_records": 93597,
+      "native_uid_absent_from_save": 15222,
+      "no_native_uid": 34771,
+      "save_records": 113146
+    },
+    "2027-01-23": {
+      "ability_mismatch": 180,
+      "accepted_ability_pairs": 3,
+      "birth_missing_or_mismatch": 78864,
+      "native_records": 94212,
+      "native_uid_absent_from_save": 15165,
+      "no_native_uid": 34520,
+      "save_records": 113567
+    },
+    "2027-02-04": {
+      "ability_mismatch": 179,
+      "accepted_ability_pairs": 4,
+      "birth_missing_or_mismatch": 79723,
+      "native_records": 95209,
+      "native_uid_absent_from_save": 15303,
+      "no_native_uid": 33828,
+      "save_records": 113734
+    }
+  },
+  "repeat_row_set_differences": {
+    "snapshot_main_minus_replica": 0,
+    "snapshot_replica_minus_main": 0,
+    "observation_main_minus_replica": 0,
+    "observation_replica_minus_main": 0
+  },
+  "sqlite_integrity": "ok",
+  "foreign_key_violations": 0,
+  "p001_confirmed": [
+    {
+      "day": "2027-01-16",
+      "ca": 134,
+      "pa": 160,
+      "candidate": 4
+    },
+    {
+      "day": "2027-01-19",
+      "ca": 134,
+      "pa": 160,
+      "candidate": 4
+    },
+    {
+      "day": "2027-01-23",
+      "ca": 134,
+      "pa": 160,
+      "candidate": 4
+    },
+    {
+      "day": "2027-02-04",
+      "ca": 135,
+      "pa": 160,
+      "candidate": 4
+    }
+  ]
+}

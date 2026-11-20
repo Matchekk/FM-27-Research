@@ -1,5 +1,9 @@
 # Findings – geprüfte Forschungsergebnisse
 
+## 2026-11-20 · PA-REACH-001, gespeichert und zeitlich geprüft
+
+Auf 27.0.1+2503222 wurden in vier TRAIN-005-Kopieständen 376.045 identitäts- und CA/PA-geprüfte Spieler-Zeitpunkte gewonnen. Zwischen dem ersten und letzten Spieltag (19 Tage) änderte sich das Byte bei CA+7 für 964 von 93.113 gepaarten Spielern. Unter 59.730 Ausgangsfeldspielern unter 28 erreichten neun ihre feste Baseline-PA erstmals im beobachteten Zeitfenster. 432 lagen schon am Ziel. Für die meisten übrigen endet die Beobachtung vor 28. Die Messungen stützen einen gespeicherten, veränderlichen Entwicklungszustand. Übergangsauslöser und individuelle Erfolgswahrscheinlichkeiten sind offen. [Daten und Ausschlüsse](docs/pa-reach-001/LONGITUDINAL_DATA_AUDIT.md) · [Stufenprüfung](docs/pa-reach-001/PROGRESSION_FACTOR_VALIDATION.md) · [Endpunkte](docs/pa-reach-001/CALIBRATION_REPORT.md).
+
 ## 2026-11-20 – FMSuperScout v2.1: native Abnahme, Leistungsfrage offen
 
 Auf Steam 27.1.0+2505117 und Tactics Lab v1118.1 wurden 16 technische Vollmatches mit acht exakten A/A-Paaren gemessen. Die vier JR-Rohstufen erreichten die vorgesehenen Starter. Der ursprüngliche Einzelexport und eine vollständige zeitgleiche UI-Kalibrierung fehlen. Wissenschaftlich getestete Spielerpaare und Kurvenblöcke: jeweils 0. [Abnahme](docs/meta-validation-001/MATCH_VALIDATION.md) · [Ergebnisse und Grenzen](docs/meta-validation-001/RESULTS.md).

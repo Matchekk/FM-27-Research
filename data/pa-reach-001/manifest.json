@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "career_id": "TRAIN005-A",
+  "independent_cluster": "TRAIN005",
+  "engine_build": "27.0.1+2503222",
+  "native_module_sha256": "8c6971ce0b1c8afe6529ea3f46205a5175aea988a97d7421a980da42e23fe340",
+  "snapshots": {
+    "2027-01-16": {
+      "save_sha256": "1e6dfc4ec647f7c02ff7f527f4696e91dec14f9b79086a1c038d0a97eaf40d0d",
+      "native_sha256": "484aaff5f1765b895fdc08e203fbf39b9fc79d2b3d4141b252b39fdd258af686"
+    },
+    "2027-01-19": {
+      "save_sha256": "3a7d0919067ea7ca8fc3127d7789e6db129872c48b453bbfd4467a783d71d8d5",
+      "native_sha256": "70606aef5afdbe89ca14a9db1959431a0edcf03fe2f501bb95c75898642b2ccc"
+    },
+    "2027-01-23": {
+      "save_sha256": "063264c1b58fb9e0c040c77c110abb2212b08e557bffa1d85fa810b6bbeb995d",
+      "native_sha256": "98a044ef6411c180a70062e53676d907ba293e3e99239487da9e703c0f605167"
+    },
+    "2027-02-04": {
+      "save_sha256": "c67eab6aea1642887d83c2e6955841235889d31be45927110239b69ec02c279c",
+      "native_sha256": "2b5fdfde6e36eaf1903836e29048ba463644c6dd3c458810f8e9dc7902fb3409"
+    }
+  }
+}
