@@ -17,6 +17,8 @@ Am ersten Tag beträgt der Median CA/PA bei den Bytes 1 bis 5 der Reihe nach 0,8
 
 ### Zeitlicher Abgleich und mögliche Auslöser
 
+Im Zubieta-Fenster vom 30.06. bis 02.07.2027 waren 39 zuvor angekündigte Wechsel zum beobachteten Zielklub anhand der beiden Spielstände, Kaderzuordnungen und des Scout-Referenzwegs nachvollziehbar. Bei 22 dieser 39 änderte sich das gespeicherte Stufenfeld. In der strengeren Teilgruppe mit beiden Klub-IDs über einen zweiten numerischen Messweg waren es neun von 16, gegenüber 64 von 28.128 Spielern mit stabil bestätigtem Klub ohne positive Wechselankündigung. CA und PA blieben bei den 39 Wechseln über diese zwei Tage gleich. Bei 37 fiel ein gespeicherter neuer Vertragsbeginn am Zielklub in dasselbe Fenster. Klubwechsel und Beginn des neuen Vertrags lassen sich daher als mögliche Auslöser kaum trennen. [Fenster, Vergleichsgruppen und Quellhashes](../../research/pa-reach-001/manifests/retention-transfer-0702.json)
+
 Bei 964 von 93.113 identitätsgleichen Spielern differiert das Byte zwischen Tag 0 und Tag 19. In 322 Fällen mit einem niedrigeren Endwert lag die End-CA über der dazu postulierten neuen Grenze. Beim früher per UI identifizierten P001 blieb das Byte an allen vier Daten auf 4, während CA von 134 auf 135 stieg und PA bei 160 blieb. Ein zweiter vollständiger Lesevorgang lieferte identische Mess- und Abrechnungszeilen. [Verlauf P001 und Wiederholung](../../data/pa-reach-001/readback-audit.json)
 
 | Klubkennung an benachbarten Spieltagen | Intervalle mit Byte 1–5 an beiden Enden | Byte verschieden |

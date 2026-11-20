@@ -14,8 +14,7 @@ KEYS = ("Acceleration", "Pace", "JumpingReach", "Stamina", "Anticipation",
 TAGS = {"2027-01-31":"ZD-HIST-02", "2027-03-30":"ZD-ROOT-01", "2027-04-30":"ZD-CONTROL-APR"}
 
 
-def read_scan(conn, day, scan, before, after, *, tag=None, exclusions=None):
-    tag = tag or TAGS[day]
+def bracketed_scan(conn, day, scan, before, after, tag):
     context = []
     public_hashes = {}
     for label, path in (("before",before),("after",after)):
@@ -40,6 +39,13 @@ def read_scan(conn, day, scan, before, after, *, tag=None, exclusions=None):
     meta = dump["meta"]
     if meta["game"] != "FM27" or meta["versionOk"] is not True:
         raise ValueError("Scanner rejected game version")
+    return dump, {"controller_day":day,"scanner_reported_day":meta["gameDate"],
+                  "scanner_version":meta["pluginVersion"],"hashes":public_hashes}
+
+
+def read_scan(conn, day, scan, before, after, *, tag=None, exclusions=None):
+    tag = tag or TAGS[day]
+    dump, audit = bracketed_scan(conn, day, scan, before, after, tag)
     fields = json.loads(conn.execute("SELECT labels FROM field_order WHERE name='raw_attrs'").fetchone()[0])
     position_codes = json.loads(conn.execute("SELECT labels FROM field_order WHERE name='positions'").fetchone()[0])
     position_codes = ["ST" if code=="STC" else code for code in position_codes]
@@ -82,8 +88,7 @@ def read_scan(conn, day, scan, before, after, *, tag=None, exclusions=None):
         record["attrs"] = attrs
         accepted[uid,birth,names] = (age,pos,ca,record)
         ledger["accepted_inputs_all_ages_positions"] += 1
-    return accepted, {"controller_day":day,"scanner_reported_day":meta["gameDate"],
-                      "scanner_version":meta["pluginVersion"],"hashes":public_hashes,"accounting":dict(ledger)}
+    return accepted, {**audit, "accounting":dict(ledger)}
 
 
 def score_pairs(start, end, model, *, extended=False):

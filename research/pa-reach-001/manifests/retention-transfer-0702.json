@@ -1,0 +1,253 @@
+{
+  "all_scout_complete_announcement_rows": {
+    "2027-06-30": 158,
+    "2027-07-02": 47
+  },
+  "branch": "ZD-RETENTION-01",
+  "build": "27.1.0+2505117",
+  "club_binding_sensitivity": {
+    "moved_to_announced_club|independent_club_id_both_days": {
+      "ca_changed": 0,
+      "factor_changed": 9,
+      "factor_down": 5,
+      "factor_up": 4,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 16,
+      "pa_changed": 0
+    },
+    "moved_to_announced_club|third_party_club_name_both_days": {
+      "ca_changed": 0,
+      "factor_changed": 22,
+      "factor_down": 8,
+      "factor_up": 14,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 39,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|independent_club_id_both_days": {
+      "ca_changed": 109,
+      "factor_changed": 64,
+      "factor_down": 32,
+      "factor_up": 32,
+      "mean_ca_change": 0.004124004550625711,
+      "mean_pa_change": 0,
+      "n": 28128,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|third_party_club_name_both_days": {
+      "ca_changed": 251,
+      "factor_changed": 142,
+      "factor_down": 67,
+      "factor_up": 75,
+      "mean_ca_change": 0.0031427920746982464,
+      "mean_pa_change": 0,
+      "n": 65865,
+      "pa_changed": 0
+    }
+  },
+  "coverage": {
+    "announced_date_2027-06-30": 7,
+    "announced_date_2027-07-01": 59,
+    "announced_date_2027-07-02": 1,
+    "in_window_contract_start_and_exact_scan_expiry_match": 33,
+    "in_window_contract_start_matches_announcement_date": 37,
+    "player_or_club_unverified_either_side": 16,
+    "unmapped_or_ambiguous_target_club": 2,
+    "verified_club_unchanged": 10,
+    "verified_moved_to_announced_club": 39
+  },
+  "factor_field": "saved_CA_plus_7_on_identity_and_ability_checked_players; no_named_reads_at_these_dates",
+  "groups": {
+    "moved_to_announced_club": {
+      "ca_changed": 0,
+      "factor_changed": 22,
+      "factor_down": 8,
+      "factor_up": 14,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 39,
+      "pa_changed": 0
+    },
+    "moved_to_announced_club|age:18\u201320": {
+      "ca_changed": 0,
+      "factor_changed": 11,
+      "factor_down": 6,
+      "factor_up": 5,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 20,
+      "pa_changed": 0
+    },
+    "moved_to_announced_club|age:21\u201323": {
+      "ca_changed": 0,
+      "factor_changed": 6,
+      "factor_down": 2,
+      "factor_up": 4,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 12,
+      "pa_changed": 0
+    },
+    "moved_to_announced_club|age:24\u201327": {
+      "ca_changed": 0,
+      "factor_changed": 2,
+      "factor_down": 0,
+      "factor_up": 2,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 3,
+      "pa_changed": 0
+    },
+    "moved_to_announced_club|age:28+": {
+      "ca_changed": 0,
+      "factor_changed": 3,
+      "factor_down": 0,
+      "factor_up": 3,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 4,
+      "pa_changed": 0
+    },
+    "moved_to_announced_club|new_observed_club_contract_started_in_window": {
+      "ca_changed": 0,
+      "factor_changed": 21,
+      "factor_down": 8,
+      "factor_up": 13,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 37,
+      "pa_changed": 0
+    },
+    "moved_to_announced_club|no_matching_club_contract_start_in_window": {
+      "ca_changed": 0,
+      "factor_changed": 1,
+      "factor_down": 0,
+      "factor_up": 1,
+      "mean_ca_change": 0,
+      "mean_pa_change": 0,
+      "n": 2,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan": {
+      "ca_changed": 273,
+      "factor_changed": 145,
+      "factor_down": 68,
+      "factor_up": 77,
+      "mean_ca_change": 0.0033075448931790758,
+      "mean_pa_change": 0,
+      "n": 70445,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|age:18\u201320": {
+      "ca_changed": 81,
+      "factor_changed": 31,
+      "factor_down": 16,
+      "factor_up": 15,
+      "mean_ca_change": 0.00788763578495814,
+      "mean_pa_change": 0,
+      "n": 14453,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|age:21\u201323": {
+      "ca_changed": 32,
+      "factor_changed": 25,
+      "factor_down": 11,
+      "factor_up": 14,
+      "mean_ca_change": 0.002778635381290522,
+      "mean_pa_change": 0,
+      "n": 12956,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|age:24\u201327": {
+      "ca_changed": 12,
+      "factor_changed": 21,
+      "factor_down": 11,
+      "factor_up": 10,
+      "mean_ca_change": 0.0008991458114790948,
+      "mean_pa_change": 0,
+      "n": 13346,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|age:28+": {
+      "ca_changed": 61,
+      "factor_changed": 17,
+      "factor_down": 7,
+      "factor_up": 10,
+      "mean_ca_change": -0.005562648185300018,
+      "mean_pa_change": 0,
+      "n": 10966,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|age:U18": {
+      "ca_changed": 87,
+      "factor_changed": 51,
+      "factor_down": 23,
+      "factor_up": 28,
+      "mean_ca_change": 0.007049775688955351,
+      "mean_pa_change": 0,
+      "n": 18724,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|new_observed_club_contract_started_in_window": {
+      "ca_changed": 5,
+      "factor_changed": 33,
+      "factor_down": 16,
+      "factor_up": 17,
+      "mean_ca_change": 0.03468208092485549,
+      "mean_pa_change": 0,
+      "n": 173,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|no_matching_club_contract_start_in_window": {
+      "ca_changed": 268,
+      "factor_changed": 112,
+      "factor_down": 52,
+      "factor_up": 60,
+      "mean_ca_change": 0.003230305100182149,
+      "mean_pa_change": 0,
+      "n": 70272,
+      "pa_changed": 0
+    },
+    "stable_club_no_positive_announcement_either_scan|scout_expiry_changed": {
+      "ca_changed": 1,
+      "factor_changed": 66,
+      "factor_down": 35,
+      "factor_up": 31,
+      "mean_ca_change": 0.009009009009009009,
+      "mean_pa_change": 0,
+      "n": 111,
+      "pa_changed": 0
+    }
+  },
+  "independent_careers": 1,
+  "near_announcement_unique_players": 67,
+  "schema": "pa-reach-retention-transfer-window/v1",
+  "snapshots": {
+    "2027-06-30": {
+      "controller_day": "2027-06-30",
+      "hashes": {
+        "after": "b930d7a7e4b3275ec74e8669f52e3223477934170ee14e9ca0c28d87578d4e99",
+        "before": "b930d7a7e4b3275ec74e8669f52e3223477934170ee14e9ca0c28d87578d4e99",
+        "dump": "c8c221b87039de644435efc731c5ddc4b94271572b98c0bd63b441670cbb4d87",
+        "loaded_copy": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088",
+        "native_inventory": "e651e5174995bd95b0e71c708f4595d0163c0bc6fb47e7e4bd149bc8956cba6e"
+      },
+      "scanner_reported_day": "2027-05-30",
+      "scanner_version": "1.7.3"
+    },
+    "2027-07-02": {
+      "controller_day": "2027-07-02",
+      "hashes": {
+        "after": "58fc1200ba6906fa3bcbc3bfe66a1996cdf59c93a5101fa520048f86f1161e97",
+        "before": "58fc1200ba6906fa3bcbc3bfe66a1996cdf59c93a5101fa520048f86f1161e97",
+        "dump": "67dbc3c099909660e67bdccfee0a7ae77abfbba945b6591657715327bffcd7c2",
+        "loaded_copy": "09297f2e9af3573299b1ac8985a9877718796fca0a16426c980ec446490d672e",
+        "native_inventory": "b78888aaac0fedcbd83eac9dcc9ab881092262af8aafd73e2a26e1ffae75a5dc"
+      },
+      "scanner_reported_day": "2027-05-30",
+      "scanner_version": "1.7.3"
+    }
+  }
+}
