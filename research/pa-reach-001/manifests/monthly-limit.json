@@ -1,0 +1,45 @@
+{
+  "days": 31,
+  "eligible_before_scout": 56736,
+  "verified_professionalism": 56730,
+  "over_cap_by_more_than_two_points": {
+    "all": {
+      "players": 17781,
+      "observed_net_ca_gain": 181,
+      "sum_net_ca_change": 88
+    },
+    "pro_14": {
+      "players": 1041,
+      "observed_net_ca_gain": 8,
+      "sum_net_ca_change": 2
+    },
+    "pa_125": {
+      "players": 336,
+      "observed_net_ca_gain": 1,
+      "sum_net_ca_change": 0
+    },
+    "pro_15": {
+      "players": 430,
+      "observed_net_ca_gain": 9,
+      "sum_net_ca_change": 9
+    },
+    "pa_124": {
+      "players": 107,
+      "observed_net_ca_gain": 3,
+      "sum_net_ca_change": 2
+    },
+    "pa_ge180_pro_ge15": {
+      "players": 4,
+      "observed_net_ca_gain": 0,
+      "sum_net_ca_change": 0
+    },
+    "pa_180": {
+      "players": 2,
+      "observed_net_ca_gain": 0,
+      "sum_net_ca_change": 0
+    }
+  },
+  "training_facilities": null,
+  "in_engine_temporary_ceiling": null,
+  "monthly_breakthrough_probability": null
+}

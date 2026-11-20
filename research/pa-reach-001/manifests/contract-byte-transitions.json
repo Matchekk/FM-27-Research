@@ -1,0 +1,208 @@
+{
+  "build": "27.1.0+2505117",
+  "career_clusters": 1,
+  "ijson": "3.4.0.post0",
+  "intervals": [
+    {
+      "all_same_club_groups": {
+        "contract_evidence_missing": {
+          "higher": 29,
+          "lower": 35,
+          "unchanged": 1307
+        },
+        "new_chain_start_and_later_confirmed_end": {
+          "higher": 220,
+          "lower": 222,
+          "unchanged": 270
+        },
+        "no_detected_change_in_current_terms": {
+          "higher": 101,
+          "lower": 137,
+          "unchanged": 34439,
+          "zero_0_to_1": 4,
+          "zero_0_to_2": 30,
+          "zero_0_to_3": 63,
+          "zero_0_to_4": 38,
+          "zero_0_to_5": 12
+        },
+        "other_contract_date_change": {
+          "higher": 18,
+          "lower": 20,
+          "unchanged": 98,
+          "zero_0_to_2": 2,
+          "zero_0_to_4": 1
+        }
+      },
+      "days": 58,
+      "descriptive_contrast_same_club_and_baseline_byte": {
+        "career_cluster_95ci": null,
+        "change_fraction_difference": 0.6077214315077352,
+        "clubs": 406,
+        "control_change_fraction_weighted_to_exposed": 0.007438918346492256,
+        "exposed_changed": 422,
+        "exposed_on_common_support": 686,
+        "within_career_club_bootstrap_95ci": [
+          0.5690854793375304,
+          0.6447722466412801
+        ]
+      },
+      "different_clubs": 32,
+      "end": "2027-03-30",
+      "event_clubs": 424,
+      "identities_matched_native_ca_pa": 94585,
+      "missing_club_or_record_at_either_date": 57507,
+      "same_club": 37046,
+      "start": "2027-01-31",
+      "subset_exposed_already_future_terms_at_baseline": {
+        "higher": 2,
+        "lower": 4,
+        "unchanged": 11
+      },
+      "subset_unchanged_terms_with_new_future_spells": {
+        "unchanged": 11,
+        "zero_0_to_3": 1,
+        "zero_0_to_4": 1
+      },
+      "within_event_clubs": {
+        "contract_evidence_missing": {
+          "higher": 19,
+          "lower": 21,
+          "unchanged": 298
+        },
+        "new_chain_start_and_later_confirmed_end": {
+          "higher": 220,
+          "lower": 222,
+          "unchanged": 270
+        },
+        "no_detected_change_in_current_terms": {
+          "higher": 65,
+          "lower": 81,
+          "unchanged": 16197,
+          "zero_0_to_2": 3,
+          "zero_0_to_3": 13,
+          "zero_0_to_4": 10,
+          "zero_0_to_5": 6
+        },
+        "other_contract_date_change": {
+          "higher": 13,
+          "lower": 16,
+          "unchanged": 55
+        }
+      }
+    },
+    {
+      "all_same_club_groups": {
+        "contract_evidence_missing": {
+          "higher": 67,
+          "lower": 72,
+          "unchanged": 1315,
+          "zero_0_to_2": 4,
+          "zero_0_to_3": 13,
+          "zero_0_to_4": 2,
+          "zero_0_to_5": 2
+        },
+        "new_chain_start_and_later_confirmed_end": {
+          "higher": 174,
+          "lower": 214,
+          "unchanged": 262
+        },
+        "no_detected_change_in_current_terms": {
+          "higher": 60,
+          "lower": 82,
+          "unchanged": 35206,
+          "zero_0_to_1": 18,
+          "zero_0_to_2": 73,
+          "zero_0_to_3": 246,
+          "zero_0_to_4": 147,
+          "zero_0_to_5": 62
+        },
+        "other_contract_date_change": {
+          "higher": 7,
+          "lower": 7,
+          "unchanged": 61,
+          "zero_0_to_2": 4,
+          "zero_0_to_3": 3,
+          "zero_0_to_4": 4
+        }
+      },
+      "days": 31,
+      "descriptive_contrast_same_club_and_baseline_byte": {
+        "career_cluster_95ci": null,
+        "change_fraction_difference": 0.5842200473195546,
+        "clubs": 354,
+        "control_change_fraction_weighted_to_exposed": 0.002318414218906913,
+        "exposed_changed": 366,
+        "exposed_on_common_support": 624,
+        "within_career_club_bootstrap_95ci": [
+          0.544405905178731,
+          0.6224564058947207
+        ]
+      },
+      "different_clubs": 4,
+      "end": "2027-04-30",
+      "event_clubs": 371,
+      "identities_matched_native_ca_pa": 97062,
+      "missing_club_or_record_at_either_date": 58953,
+      "same_club": 38105,
+      "start": "2027-03-30",
+      "subset_exposed_already_future_terms_at_baseline": {
+        "higher": 1,
+        "lower": 4,
+        "unchanged": 6
+      },
+      "subset_unchanged_terms_with_new_future_spells": {
+        "unchanged": 3
+      },
+      "within_event_clubs": {
+        "contract_evidence_missing": {
+          "higher": 40,
+          "lower": 45,
+          "unchanged": 323
+        },
+        "new_chain_start_and_later_confirmed_end": {
+          "higher": 174,
+          "lower": 214,
+          "unchanged": 262
+        },
+        "no_detected_change_in_current_terms": {
+          "higher": 43,
+          "lower": 43,
+          "unchanged": 15267,
+          "zero_0_to_1": 4,
+          "zero_0_to_2": 15,
+          "zero_0_to_3": 111,
+          "zero_0_to_4": 69,
+          "zero_0_to_5": 30
+        },
+        "other_contract_date_change": {
+          "higher": 6,
+          "lower": 4,
+          "unchanged": 21,
+          "zero_0_to_3": 1,
+          "zero_0_to_4": 3
+        }
+      }
+    }
+  ],
+  "per_date_contract_status": {
+    "2027-01-31": {
+      "end_not_independently_confirmed": 95,
+      "no_current_terms": 960,
+      "outside_effective_dates": 6,
+      "readable": 36159
+    },
+    "2027-03-30": {
+      "end_not_independently_confirmed": 310,
+      "no_current_terms": 1009,
+      "outside_effective_dates": 6,
+      "readable": 36882
+    },
+    "2027-04-30": {
+      "end_not_independently_confirmed": 179,
+      "no_current_terms": 1229,
+      "outside_effective_dates": 6,
+      "readable": 39766
+    }
+  },
+  "reader": "0.14.1"
+}

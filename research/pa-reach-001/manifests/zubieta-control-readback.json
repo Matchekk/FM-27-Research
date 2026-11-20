@@ -1,0 +1,19 @@
+{
+  "branch": "ZD-CONTROL-01",
+  "day": "2027-04-30",
+  "endpoint_sha256": "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634",
+  "new_undated_club_members": {
+    "also_missing_scout_expiry": 16,
+    "first_seen_at_club_without_contract_end": 16,
+    "independent_scout_and_save_ability_agree": 16,
+    "present_in_strict_native_pairs": 0
+  },
+  "repeat_row_differences": {
+    "n_minus_replica_observation": 0,
+    "n_minus_replica_snapshot": 0,
+    "replica_minus_n_observation": 0,
+    "replica_minus_n_snapshot": 0
+  },
+  "source_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+  "verified_youth_candidate_screen_count": null
+}

@@ -1,5 +1,7 @@
 # Wachstum nach Alter und verbleibender PA
 
+![Mittlere CA-Veränderung nach Ausgangsalter und verbleibender PA-Lücke](age-growth-58-days.png)
+
 **Zubieta, 31. Januar bis 30. März 2027.** Bei 60.550 gepaarten Feldspielern unter 28 Jahren stieg die gespeicherte CA in 58 Tagen durchschnittlich um 0,559. Bei 43.777 blieb sie an den beiden Stichtagen gleich. Geburtsdatum, CA und PA wurden an beiden Spieltagen gegen die jeweiligen separat im Spiel ausgelesenen Werte bestätigt. Gleiche Datenbank-ID, Geburt und nichtleerer Namensprüfwert waren Voraussetzung. Ein Saisonendpunkt fehlt. [Datenherkunft](LONGITUDINAL_ANALYSIS.md) · [Vollständige Zubieta-Auswertung](../../research/pa-reach-001/manifests/zubieta-associations.json)
 
 Die Zellen zeigen die mittlere Änderung in CA-Punkten mit der Spielerzahl in Klammern. Die Lücke ist die am ersten Stichtag gemessene PA minus CA.
