@@ -12,6 +12,11 @@ def rows(*observations):
 
 
 class QuarterTest(unittest.TestCase):
+    def test_unassigned_position_is_outside_outfield_target(self):
+        sample = rows(("2027-03-30", 100))
+        sample[0]["position"] = ""
+        self.assertIsNone(endpoint(sample))
+
     def test_missing_exact_end_differs_from_small_gain(self):
         incomplete = endpoint(rows(("2027-03-31", 100), ("2027-06-29", 107)))
         small = endpoint(rows(("2027-03-31", 100), ("2027-06-30", 102)))

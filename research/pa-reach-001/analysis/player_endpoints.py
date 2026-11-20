@@ -16,14 +16,22 @@ def quarter_later(day):
     return date(year, month, min(day.day, monthrange(year, month)[1]))
 
 
+def birthday_28(dob):
+    try:
+        return dob.replace(year=dob.year + 28)
+    except ValueError:
+        return dob.replace(year=dob.year + 28, day=28)
+
+
+def ability_targets(pa):
+    return {"full": pa, "pa95": (95 * pa + 99) // 100, "pa_minus_2": pa - 2}
+
+
 def endpoint(rows):
     first = rows[0]
     dob = date.fromisoformat(first["birth"])
-    try:
-        horizon = dob.replace(year=dob.year + 28)
-    except ValueError:
-        horizon = dob.replace(year=dob.year + 28, day=28)
-    if first["position"] in (None, "GK") or first["day"] >= horizon.isoformat():
+    horizon = birthday_28(dob)
+    if not first["position"] or first["position"] == "GK" or first["day"] >= horizon.isoformat():
         return None
     observed = [r for r in rows if r["day"] <= horizon.isoformat()]
     peak = max(observed, key=lambda r: r["ca"])
@@ -31,8 +39,7 @@ def endpoint(rows):
     age_at_peak = peak_day.year - dob.year - ((peak_day.month, peak_day.day) < (dob.month, dob.day))
     baseline_pa = first["pa"]
     targets = {}
-    for name, level in (("full", baseline_pa), ("pa95", (95 * baseline_pa + 99) // 100),
-                        ("pa_minus_2", baseline_pa - 2)):
+    for name, level in ability_targets(baseline_pa).items():
         hit = next((r["day"] for r in observed if r["ca"] >= level), None)
         if hit == first["day"]:
             status = "ALREADY_AT_BASELINE"

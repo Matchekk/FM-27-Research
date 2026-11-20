@@ -1,5 +1,7 @@
 # Vorab festgelegte CA-Referenz zum 30.03.2028
 
+Beim Einfrieren war der genaue Jahresendpunkt noch offen. Die Arbeitsgruppe kannte bereits den Juni-Verlauf derselben Welt. Dieser Vergleich prüft ein späteres Datum innerhalb der untersuchten Karriere. Eine unabhängige Testkarriere fehlt.
+
 Für den Retentionszweig wurden zwei CA-Punktreferenzen für exakt den 30.03.2028 eingefroren. Die bisherigen Kurzzeittests legten bereits Referenzen für 31 beziehungsweise 61 Tage fest. Der Jahrestermin erhält eine eigene Auswertung. Eingaben sind ausschließlich die abgeglichenen Spielerwerte vom 31.01. und 30.03.2027. Der März-Save stimmt zwischen Ausgangsuniversum und Retentionszweig überein. [Frühere 61-Tage-Referenz](../../research/pa-reach-001/analysis/prospective_ca61.py) · [Jahresbeleg mit Hashes und Gruppengrößen](../../research/pa-reach-001/manifests/prospective-ca-20280330.json)
 
 - **Konservative Referenz.** Die gespeicherte CA vom 30.03.2027 bleibt als Punktprognose unverändert.

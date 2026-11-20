@@ -1,0 +1,53 @@
+{
+  "schema": "pa-reach-intake-tier-growth/v1",
+  "build": "27.1.0+2505117",
+  "independent_roots": 1,
+  "baseline": "2027-04-07",
+  "target": "2027-06-30",
+  "calendar_days": 84,
+  "intake_sha256": "1dcc8637e4d8047872e16607df854393702d3fa3c9396522c7186ab2048b5973",
+  "intake_size": 16,
+  "checkpoints": {
+    "2027-04-07": {
+      "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a",
+      "inventory_sha256": "dc1be796cb5cf6ea5caf0f04bb0230c052875ef501293dc805a458b20a91c24e"
+    },
+    "2027-06-30": {
+      "save_sha256": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088",
+      "inventory_sha256": "e651e5174995bd95b0e71c708f4595d0163c0bc6fb47e7e4bd149bc8956cba6e"
+    }
+  },
+  "accounting": {
+    "paired": 15,
+    "excluded_position": 1
+  },
+  "outfield_by_verified_baseline_tier": {
+    "3": {
+      "n": 2,
+      "baseline_gap_mean": 62.5,
+      "growth_mean": 1,
+      "growth_median": 1.0,
+      "growth_total": 2,
+      "end_pa_changed": 0,
+      "stored_factor_different_at_end": 0
+    },
+    "4": {
+      "n": 7,
+      "baseline_gap_mean": 63.285714285714285,
+      "growth_mean": 1.4285714285714286,
+      "growth_median": 2,
+      "growth_total": 10,
+      "end_pa_changed": 0,
+      "stored_factor_different_at_end": 2
+    },
+    "5": {
+      "n": 6,
+      "baseline_gap_mean": 50.666666666666664,
+      "growth_mean": 0.8333333333333334,
+      "growth_median": 1.0,
+      "growth_total": 5,
+      "end_pa_changed": 0,
+      "stored_factor_different_at_end": 2
+    }
+  }
+}
