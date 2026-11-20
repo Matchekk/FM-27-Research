@@ -10,3 +10,9 @@ Für den Retentionszweig wurden zwei CA-Punktreferenzen für exakt den 30.03.202
 Die feste Population umfasst **59.784** Feldspieler unter 28 Jahren mit bekannter Märzposition und eindeutiger Zuordnung per Datenbank-ID und Geburtsdatum an beiden Eingabetagen. Alter und `PA−CA` stammen vom 30.03.2027. Altersgruppen sind unter 18, 18–20, 21–23 und 24–27. Lückengruppen sind 0–10, 11–30 und über 30. Eine negative Lücke wäre eine eigene Gruppe. Alle Regeln und numerischen Einzelprognosen wurden vor dem Zielwertzugriff eingefroren. Die Einzeldatei bleibt privat.
 
 Bei der späteren Prüfung zählen ausschließlich der exakte Spieltag im Retentionszweig und doppelt abgeglichene CA-Werte auf `27.1.0+2505117`. Ausfälle bleiben pro Gruppe im eingefrorenen Nenner. Beide Regeln verwenden dieselben beobachtbaren Paare. Gesamt und je Alters-/Lückenzelle sind gepaarter MAE, RMSE, mittlerer Fehler `Prognose−Messung` und die MAE-Differenz `Rate−unveränderte CA` zu berichten. Fehlende Zielwerte bleiben ohne Ersatz. Abweichende Datums-/Buildstände erfordern einen getrennten Befund. Der Test misst Punktprognosegüte innerhalb eines Karriereursprungs. Die individuelle Erreichungswahrscheinlichkeit und Übertragbarkeit auf andere Karrieren bleiben offen. [Eingefrorener Rechenweg](../../research/pa-reach-001/analysis/prospective_ca_year.py) · [Freigabekriterien](MODEL_DESIGN.md)
+
+Nach Übernahme des exakten und bestätigten Ziel-Snapshots erzeugt der CLI-Aufruf das aggregierte JSON. Die beiden Hashes müssen aus der bestätigten Zielreceipt stammen. Die bereits eingefrorene Liste wird unverändert eingesetzt.
+
+```text
+python research/pa-reach-001/analysis/prospective_ca_year.py score RETENTION_PANEL FORECAST_LIST --save-sha256 SAVE_SHA256 --native-sha256 NATIVE_SHA256
+```

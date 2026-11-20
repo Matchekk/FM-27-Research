@@ -19,6 +19,13 @@ def sha(path):
         return file_digest(f, "sha256").hexdigest()
 
 
+def metrics(errors):
+    n = len(errors)
+    return dict(n=n, mae_ca=sum(map(abs, errors))/n if n else None,
+                rmse_ca=sqrt(sum(x*x for x in errors)/n) if n else None,
+                bias_ca=sum(errors)/n if n else None)
+
+
 def freeze(db, private_output):
     source = json.loads((MANIFESTS / "zubieta-retention-native-input-0430.json").read_bytes())
     for date in (MARCH, APRIL):
@@ -78,9 +85,6 @@ def score(db, private_forecasts, receipt):
                 errors[g]["previous_rate"].append(trend_num/31-observed)
     if counts["all"]["frozen"] != saved["total"]:
         raise ValueError("Frozen cohort size differs")
-    def metrics(v):
-        n = len(v)
-        return dict(n=n,mae_ca=sum(map(abs,v))/n,rmse_ca=sqrt(sum(x*x for x in v)/n),bias_ca=sum(v)/n)
     return {"schema":"pa-reach-scored-ca61/v1", "receipt_sha256":sha(receipt), "target":JUNE,
             "save_sha256":source[1], "native_sha256":source[2], "accounting":counts,
             "metrics":{g:{m:metrics(v) for m,v in pairs.items()} for g,pairs in errors.items()},
