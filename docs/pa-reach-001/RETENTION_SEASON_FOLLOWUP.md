@@ -59,6 +59,12 @@ Bei Gleichstand zählt der erste Stichtag mit dem beobachteten Maximum. Für äl
 
 Die Jahresmessung der Anzeigeattribute umfasst 56.467 U28-Paare (6.534 fehlende qualifizierte Folgeprofile). Bei allen Paaren bzw. den 24.628 mit CA-Gewinn änderten sich im Mittel Stärke um +0,2974 bzw. +0,6817, Tempo um +0,0955 bzw. +0,3421, Antritt um +0,0293 bzw. +0,2428, Sprunghöhe um −0,0211 bzw. +0,1218 und Abschluss um −0,0515 bzw. +0,1083. Zwischen dem 30. Dezember und dem 30. März liegen 91 Tage und 68.010 qualifizierte Attributpaare. [Jahresmanifest](../../research/pa-reach-001/manifests/zubieta-retention-year-one.json)
 
+## Jugendjahrgang 2028
+
+Der ruhende Stand vom 5. April 2028 vor den protokollierten Angeboten enthält 16 stabile Probeidentitäten im eigenen Vertragsbestand mit Kettenbeginn 31. März und ohne festes Vertragsende. Die private Liste aus Datenbank-ID und Geburtsdatum wurde für alle späteren Auswertungen fixiert. Sie enthält zwölf 15- und vier 16-Jährige. Keine der 16 Identitäten ließ sich im strukturellen Welt-Save vom 30. März finden. [Intake-Baseline](../../research/pa-reach-001/manifests/zubieta-intake-2028-april-baseline.json)
+
+Am 5. April bestätigt der zeitlich geklammerte Scout für alle 16 die Identität und CA/PA des strukturellen Saves. Im separat erhobenen nativen Inventar fehlt die gesamte Gruppe. Die mittlere CA beträgt 61,3125 (35–90), die mittlere PA 116,375 (73–177). Das gespeicherte Faktorenfeld zeigt zwölf Werte von 0, zweimal 3 und zweimal 4. Der gespeicherte Faktor wird als Rohwert dieses Stichtags gezählt. Für den 31. März liegt kein eigener Faktorwert vor, die Bedeutung von 0 für diese Spieler bleibt offen. [Intake-Baseline](../../research/pa-reach-001/manifests/zubieta-intake-2028-april-baseline.json) · [Feldvalidierung](NAMED_PROGRESSION_READBACK.md)
+
 ## Reproduktion
 
 Der CLI-Aufruf verwendet das private native SQLite-Panel, das private strukturelle SQLite-Panel, das datierte native Eingabemanifest, den gewünschten Endtag und das zugehörige Struktur-Tag. Er prüft Build, Datum und Quellen-Hashes und beschränkt die Auswertung explizit auf die damals verfügbaren Stichtage. Die Identität beim Strukturabgleich verwendet Datenbank-ID und Geburtsdatum für die gesamte Spielwelt.
@@ -68,3 +74,5 @@ python research/pa-reach-001/analysis/retention_windows.py <native.sqlite> <stru
 ```
 
 Die Attributprüfung ruft `observed_meta.read_scan` für die datierten Save-Tags mit den zugehörigen unabhängigen Scans und Kontextklammern auf. Pro Vergleich werden die qualifizierten Identitäten anhand von Datenbank-ID, Geburtsdatum und Namensprüfung verbunden. Die Ausgangsauswahl sind Feldspieler unter 28. Differenzen werden pro Anzeigeattribut mit Anzahl, Mittelwert, Standardabweichung und Richtung ausgewiesen. Die ausfallsensitive Erhebung gehört zu genau einem Karriereuniversum. [CLI-Auswertung](../../research/pa-reach-001/analysis/retention_windows.py) · [Attributprüfung](../../research/pa-reach-001/analysis/observed_meta.py)
+
+Für den Jugendjahrgang verwendet `intake_growth.py` die fixierte private Liste, das datierte native Eingabemanifest, beide privaten Panels und die Klammerdateien für die beiden Scans. Es prüft die CA/PA der Baseline gegen den Scout und die Folgewerte gegenüber allen verfügbaren Referenzen. Eine gleich gebliebene oder geänderte aktuelle Klubzuordnung muss durch beide Messwege bestätigt werden. [Intake-Auswertung](../../research/pa-reach-001/analysis/intake_growth.py)

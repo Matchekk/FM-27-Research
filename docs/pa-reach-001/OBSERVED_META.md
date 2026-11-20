@@ -50,3 +50,22 @@ Der gehashte Retentionssave und ruhende Kontextabfragen vor und nach dem Scan be
 | Fester Jugendjahrgang ab 30.04.2027 | 335 | 14 | +9,4286 | +0,6996 | 13 / 0 / 1 |
 
 Von 63.001 geeigneten März-Ausgangsprofilen fehlten zum Jahresstichtag 6.157 im strukturellen Folgeabgleich, 377 hatten ungültige Anzeigeattribute und 121 eine andere App-Bewertungsposition. Bei 24.573 Spielern mit CA-Zuwachs stieg der Index im Mittel um 0,3899 Punkte. Unter ihnen sank er bei 2.106. Im festen Jugendjahrgang entfallen ein Torwart und ein Spieler mit geänderter Bewertungsposition. Der Scout-Header meldete den 22.03.2028. Die Save-Prüfsumme und die beidseitige Kontextklammer bestätigen den 30.03.2028. [Jahresabrechnung](../../research/pa-reach-001/manifests/retention-meta-20280330.json)
+
+### Theoretisches PA-Meta bei exakt erreichter Ausgangs-PA
+
+Unter **145** gepaarten Feldspielern, deren CA am 30.03.2028 exakt ihrer PA vom 30.03.2027 entsprach, lag das PA-Meta der Original-App im MAE um **0,0845 Meta-Punkte** näher am beobachteten Jahreswert als unverändertes Ausgangs-Meta. Unter den **129** auswertbaren Spielern, deren Jahrestag spätestens auf den 28. Geburtstag fiel, betrug die Verbesserung **0,0950 Punkte**. Die Werte sind bedingt auf das tatsächliche Erreichen der Ausgangs-PA genau am Folgestichtag. [Messabrechnung](../../research/pa-reach-001/manifests/potential-meta-at-pa-20280330.json)
+
+| Auswahl | Vergleichsregel | Gültige Paare | MAE | Mittlerer Fehler Regel minus Messung |
+|---|---|---:|---:|---:|
+| Jahres-CA exakt auf Ausgangs-PA | Unverändertes Ausgangs-Meta | 145 | 0,30284 | −0,29666 |
+| Jahres-CA exakt auf Ausgangs-PA | PA-Meta nach Original-App | 145 | 0,21830 | −0,19048 |
+| Jahres-CA exakt auf Ausgangs-PA | PA-Meta mit bestätigtem Stichtag im App-Datumskontext | 145 | 0,21979 | −0,19197 |
+| Zusätzlich bis einschließlich 28. Geburtstag | Unverändertes Ausgangs-Meta | 129 | 0,32371 | −0,31676 |
+| Zusätzlich bis einschließlich 28. Geburtstag | PA-Meta nach Original-App | 129 | 0,22869 | −0,19742 |
+| Zusätzlich bis einschließlich 28. Geburtstag | PA-Meta mit bestätigtem Stichtag im App-Datumskontext | 129 | 0,23036 | −0,19909 |
+
+Ausgangspunkt waren 61.613 U28-Feldspieler mit CA unter PA. Bei 4.689 fehlte der verifizierte strukturelle und native Folgeabgleich. **158** lagen exakt am Jahresstichtag auf ihrer festen Ausgangs-PA, darunter 141 bis einschließlich des 28. Geburtstags. Zehn der 158 scheiterten an der Ausgangsprüfung, einer an der Folgeprüfung und zwei an der gleichermaßen erforderlichen App-Bewertungsposition. Die separat berichteten **153** vollen PA-Treffer beschreiben ein anderes Ereignis. Dort zählt jeder belegte Stichtag bis einschließlich 28. Geburtstag, an dem die Ausgangs-PA erreicht oder überschritten wurde. [Altersbegrenzte Verlaufszählung](../../research/pa-reach-001/manifests/retention-pa-hits-20280330.json)
+
+Der Offline-Aufruf verwendet die unveränderten Funktionen `metaPaScore`, `projectAttrs` und `weightedMeta` des geprüften App-Blobs zusammen mit dem Originalscorer. Alle 47 sichtbaren Ausgangsattribute und die erforderlichen Folgeattribute wurden gegen die Save-Struktur geprüft. Die App verwendet bei der Attributprojektion das Alter aus der im Scan gelieferten Metadatenzeit. Im März-Ausgangsscan stammt das Headerdatum aus dem Speicher und lautet 20.03.2027. Der Save und die beidseitigen Kontextbelege datieren den tatsächlichen Scan auf 30.03.2027. Die Tabelle zeigt zusätzlich dieselbe App-Berechnung mit diesem belegten Datum als Referenz. Die Ursache der unterschiedlichen Datumswerte bleibt offen. [Gepinnter Original-App-Code](https://github.com/Matchekk/FMSuperScout/blob/977ecefe623a3d4081871a0f558ab12d9bce850d/app/app.js) · [Abgleich und Ausführung](../../research/pa-reach-001/analysis/potential_meta_compare.py)
+
+Für den 30.03.2029 sind dieselben App-Regeln auf **51.381** verifizierten Ausgangsprofilen vom 30.03.2028 vorab eingefroren. Die Auswertung verwendet die identischen Kriterien für exakt erreichte Ausgangs-PA und gleiche App-Bewertungsposition. Die DOB-Teilgruppe mit Enddatum bis einschließlich 28. Geburtstag ist ebenfalls vorab festgelegt. Der Vergleich bleibt bedingt auf später beobachtete Treffer innerhalb derselben Karriere. [Versiegelte Basis](../../research/pa-reach-001/manifests/potential-meta-baseline-20280330.json)

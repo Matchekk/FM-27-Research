@@ -1,0 +1,45 @@
+{
+  "age_frequency": {
+    "15": 12,
+    "16": 4
+  },
+  "baseline_day": "2028-04-05",
+  "baseline_timing": "before recorded offers",
+  "build": "27.1.0+2505117",
+  "ca": {
+    "max": 90,
+    "mean": 61.3125,
+    "median": 63.0,
+    "min": 35
+  },
+  "cohort_n": 16,
+  "earlier_factor_measurement": null,
+  "first_date_in_registration_chain": "2028-03-31",
+  "native_ca_pa_verified": 0,
+  "pa": {
+    "max": 177,
+    "mean": 116.375,
+    "median": 113.0,
+    "min": 73
+  },
+  "present_in_native_inventory_2028_03_30": 0,
+  "present_in_world_save_2028_03_30": 0,
+  "schema": "pa-reach-intake-growth-baseline/v1",
+  "scout_ca_pa_name_verified": 16,
+  "sources": {
+    "hashes": {
+      "after": "5a63f66138e021f4c0b94c244a648263d45136a45e76374f702312e3aa9de647",
+      "before": "5a63f66138e021f4c0b94c244a648263d45136a45e76374f702312e3aa9de647",
+      "scout": "6e7a5a569a9d52452881c32eb8c8525d103a31db8a139f89f79885bb3787b097"
+    },
+    "native_sha256": "ac1eb39f132136ec8909268f490dec0579fbc56a718167f7a084431b539ce4ab",
+    "save_sha256": "27e3fe396d112ae6271a040077ff97957b0a121db340283f7de0dbfddc284401",
+    "scanner_build": "1.7.3",
+    "scanner_reported_date": "2028-04-04"
+  },
+  "stored_factor_frequency": {
+    "0": 12,
+    "3": 2,
+    "4": 2
+  }
+}

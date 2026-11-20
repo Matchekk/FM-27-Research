@@ -6,6 +6,7 @@ from datetime import date
 import json
 from pathlib import Path
 import sqlite3
+from statistics import mean, median
 import sys
 
 import fmsave
@@ -138,7 +139,15 @@ def compare(cohort, left, right):
         known = [k for k in pairs if left[k][field] is not None and right[k][field] is not None]
         audit[field] = {"verified": len(known), "unverified": len(cohort) - len(known),
                         "different": sum(left[k][field] != right[k][field] for k in known)}
+    differences = [abs(left[k]["ca"] - right[k]["ca"]) for k in pairs]
+    ca_deviation = None
+    if differences:
+        ca_deviation = {"n": len(differences), "sum_abs_ca_difference": sum(differences),
+                        "mean_abs_ca_difference": mean(differences), "median_abs_ca_difference": median(differences),
+                        "max_abs_ca_difference": max(differences),
+                        "abs_ca_difference_frequency": dict(sorted(Counter(differences).items()))}
     return {"predeclared": len(cohort), "paired": len(pairs), "fields": audit,
+            "ca_repeat_deviation": ca_deviation,
             "all_cohort_fields_verified_equal": pairs == cohort and all(
                 not v["unverified"] and not v["different"] for v in audit.values())}
 

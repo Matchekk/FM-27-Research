@@ -1,0 +1,28 @@
+{
+  "app_commit": "977ecefe623a3d4081871a0f558ab12d9bce850d",
+  "forecast_sha256": "ac06a59995bef4f5202d3bf696142438cf5f166d07125a908053167f287dbde8",
+  "schema": "pa-reach-conditional-pa-meta-freeze/v1",
+  "scores": {
+    "date_sensitivity_differs": 86,
+    "scored": 51381
+  },
+  "source": {
+    "accounting": {
+      "attribute_unverified": 17775,
+      "eligible_native_and_save": 69212,
+      "scan_identity_or_ability_unverified": 56,
+      "verified_inputs": 51381
+    },
+    "controller_day": "2028-03-30",
+    "hashes": {
+      "after": "c848d2e54db8aae18f59bc9ee40fe136ed106fbd7512e4e93bfbd5cc5038ebbd",
+      "before": "c848d2e54db8aae18f59bc9ee40fe136ed106fbd7512e4e93bfbd5cc5038ebbd",
+      "dump": "15c9e345c9b1753de28725b120dfee3bf5435b5dea9afe27c34bb0f48e7ca691",
+      "loaded_copy": "4c225451d135a6ddea09625c9de6a5fe92befdfae44db583121c0e2766139fa1",
+      "native_inventory": "0c34736196be1080a6b493dd28639675936038c0ba0a9575a2662cb719d014c5"
+    },
+    "scanner_reported_day": "2028-03-22",
+    "scanner_version": "1.7.3"
+  },
+  "target": "2029-03-30"
+}

@@ -1,5 +1,7 @@
 # PA-REACH-001-TRAIN-FOCUS · Zusatzfokus über zwölf Monate
 
+**A/A vom 30.04. bis 07.05.2027.** Zwei bytegleiche Zweige lieferten nach sieben Tagen unter delegierter Urlaubsverwaltung unterschiedliche Spieler- und Matchergebnisse. Im vollständig geprüften 13er-Panel unterschieden sich vier CA-Werte, bei fünf Spielern mindestens ein Rohattribut und bei vier die Einsatzdaten. PA und gespeicherter Entwicklungsfaktor waren bei allen 13 gleich. Die A/A-Abnahme ist negativ. Der Fokusvergleich wurde nicht gestartet und die Wirkung bleibt ohne Schätzung. [Messabrechnung](../research/pa-reach-001/manifests/training-withdraw-aa-7-days.json)
+
 **Stand 20.11.2026 · Ausgangskohorte offline vorbereitet · Eingriff und Fortschreibung ausstehend.** Der Pilot fragt, ob ein individuell zugewiesener Zusatzfokus „Schnelligkeit“ im regulär betreuten Zubieta-Karriereumfeld den gespeicherten CA-Zuwachs eines jungen Feldspielers bis zum 30.04.2028 erhöht. Antritt und Tempo zeigen sekundär, wie sich die beiden Zielattribute verändern. Zwei Zweige teilen sich eine Karrierewurzel und einen Teamslot. Der Pilot liefert höchstens einen gepaarten Zielspielerkontrast. Für eine Bestätigung sind weitere unabhängig gewonnene Karrierewurzeln erforderlich.
 
 ## Überlappung und technische Vorarbeit

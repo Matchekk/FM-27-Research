@@ -1,0 +1,75 @@
+{
+  "app_commit": "977ecefe623a3d4081871a0f558ab12d9bce850d",
+  "baseline_native_eligible": 61613,
+  "baseline_native_missing_followup": 4689,
+  "baseline_receipt_sha256": "719fac0120632f4b04195b9ba631ef5c6c27cc3314a272efca71b73b812c26e2",
+  "exact_pa_at_target": 158,
+  "independent_test_careers": 0,
+  "schema": "pa-reach-conditional-pa-meta-compare/v1",
+  "scores": {
+    "original_pa_meta": {
+      "bias_meta": -0.190480985725924,
+      "mae_meta": 0.21830041919887064,
+      "n": 145,
+      "rmse_meta": 0.29207021334880656
+    },
+    "unchanged_baseline_meta": {
+      "bias_meta": -0.2966574676735945,
+      "mae_meta": 0.302837265280674,
+      "n": 145,
+      "rmse_meta": 0.405794315637399
+    },
+    "verified_date_pa_meta": {
+      "bias_meta": -0.19197102542471167,
+      "mae_meta": 0.2197904588976583,
+      "n": 145,
+      "rmse_meta": 0.29435369888825824
+    }
+  },
+  "selection_exclusions": {
+    "app_position_changed_or_unavailable": 2,
+    "baseline_app_input_or_structural_unverified": 10,
+    "followup_scan_or_name_unverified": 1
+  },
+  "source": {
+    "accounting": {
+      "attribute_unverified": 5446,
+      "eligible_native_and_save": 93906,
+      "scan_identity_or_ability_unverified": 62,
+      "verified_inputs": 88398
+    },
+    "controller_day": "2028-03-30",
+    "hashes": {
+      "after": "c848d2e54db8aae18f59bc9ee40fe136ed106fbd7512e4e93bfbd5cc5038ebbd",
+      "before": "c848d2e54db8aae18f59bc9ee40fe136ed106fbd7512e4e93bfbd5cc5038ebbd",
+      "dump": "15c9e345c9b1753de28725b120dfee3bf5435b5dea9afe27c34bb0f48e7ca691",
+      "loaded_copy": "4c225451d135a6ddea09625c9de6a5fe92befdfae44db583121c0e2766139fa1",
+      "native_inventory": "0c34736196be1080a6b493dd28639675936038c0ba0a9575a2662cb719d014c5"
+    },
+    "scanner_reported_day": "2028-03-22",
+    "scanner_version": "1.7.3"
+  },
+  "target_at_or_before_28th_birthday": {
+    "exact_pa_at_target": 141,
+    "scores": {
+      "original_pa_meta": {
+        "bias_meta": -0.19741749398091557,
+        "mae_meta": 0.22868739982259975,
+        "n": 129,
+        "rmse_meta": 0.30213953024603096
+      },
+      "unchanged_baseline_meta": {
+        "bias_meta": -0.31676315198411104,
+        "mae_meta": 0.32370943611609965,
+        "n": 129,
+        "rmse_meta": 0.424848104424072
+      },
+      "verified_date_pa_meta": {
+        "bias_meta": -0.19909234480513424,
+        "mae_meta": 0.23036225064681842,
+        "n": 129,
+        "rmse_meta": 0.30462021437847037
+      }
+    }
+  }
+}
