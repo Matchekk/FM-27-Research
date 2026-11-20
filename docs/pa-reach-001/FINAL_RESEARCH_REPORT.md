@@ -1,9 +1,12 @@
 # PA-REACH-001 · Zubieta Dynasty
 
+![Beobachtete PA-Zieltreffer und Wachstum nach Alter in einer Zubieta-Karriere](zubieta-observed-development.png)
+
 **FM27 27.1.0+2505117.** Die Zubieta-Saves liefern einen echten Längsschnitt, das als `ProgressionFactor` identifizierte Savefeld bei CA+7 und direkt gemessene Attribut-/Meta-Verläufe. Ein individuell kalibrierter PA-Erreichungsscore ist noch nicht freigegeben. Die Daten zählen als ein Zubieta-Ausgangsuniversum. Der frühere TRAIN-005-Bestand überschneidet sich auch bei den jungen Spielern so stark, dass er als unabhängiger Test ausscheidet.
 
 | Untersuchung | Gesicherte Messung | Geltungsbereich |
 |---|---|---|
+| Neun Monate ab März | 30.03.–30.12.2027 | 118 erstmals beobachtete Treffer auf die feste März-PA, 244 auf PA−2 und 517 auf mindestens 95 %. 71 der 299 vorab als stagnierend klassifizierten Talente gewannen seit April mindestens drei CA. |
 | Halbes Jahr ab März | 30.03.–30.09.2027, 184 Spieltage, 76.284 nativ gepaarte Spieler | 75 erstmals beobachtete Treffer auf die feste März-PA vor oder am 28. Geburtstag. 317 erstmals beobachtete Treffer auf mindestens 95 %. |
 | Vorhandene Zubieta-Historie | 31.01.–30.03.2027, 58 Tage, 94.585 beidseitig bestätigte Spieler | Alter, Geburtsdatum und zwei echte Endzustände. Beide gespeicherten CA/PA-Werte separat nativ geprüft. |
 | Neu ausgeführte Kontrolle | 30.03.–30.04.2027, 31 simulierte Tage, 97.062 gepaarte Spieler | Private Kopie, regulärer Urlaub mit delegierten Matches. Die 58 historischen Tage kommen als eigene Beobachtungszeit hinzu. Der gemeinsame Märzstand wird einmal gezählt. |
@@ -18,6 +21,8 @@ Im ersten gemessenen Quartal gewannen Feldspieler mit mehr als 30 CA-Punkten Abs
 Mit einer im März gemessenen Lücke über 30 CA-Punkten betrug der Zuwachs bis Ende September bei Unter-18-Jährigen im Mittel 6,04 (Median 6, n=4.416), mit 24–27 Jahren 0,50 (Median 0, n=328). Die Streuung innerhalb der Gruppen war erheblich. Bei den Jüngsten betrug die Standardabweichung 4,65 CA-Punkte. [Halbjahresergebnis und gesondertes Sommerquartal](RETENTION_SEASON_FOLLOWUP.md)
 
 ### Wer erreichte seine PA und wie genau waren die CA-Prognosen?
+
+Bis 30. Dezember hatten 118 der 61.613 im März unter ihrer PA gestarteten Feldspieler vor oder am 28. Geburtstag nachweislich die volle März-PA erreicht. 50 starteten mit 1–2, 27 mit 3–5, 34 mit 6–10 und sieben mit 11–20 Punkten Lücke. Für die übrigen Spieler ohne beobachteten Treffer sind 58.920 Verläufe vor dem Horizont rechtszensiert, bei 2.484 ist die zeitliche Abdeckung am Altershorizont offen und bei 91 fehlt eine geeignete Folgebeobachtung. [Zielerreichung und Datierung](../../research/pa-reach-001/manifests/retention-pa-hits-1230.json)
 
 Von 61.613 Feldspielern, deren CA im März unter der eigenen PA lag, erreichten bis zum Juni-Stichtag 45 nachweislich das volle Ziel. 34 davon starteten ein bis zwei CA-Punkte darunter, neun mit drei bis fünf und zwei mit sechs bis zehn Punkten Lücke. Von den Unter-18-Jährigen erreichte in diesem Quartal keiner die volle März-PA, obwohl die Jüngsten mit großer Lücke im Mittel am schnellsten wuchsen. Ein fehlender Juni-Treffer lässt die spätere Entwicklung offen. [Altersgruppen, Ausgangslücken und Zensierung](RETENTION_PA_HITS_0630.md)
 

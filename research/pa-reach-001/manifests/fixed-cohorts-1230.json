@@ -1,0 +1,91 @@
+{
+  "intake": {
+    "accounting": {
+      "excluded_position": 1,
+      "paired": 15
+    },
+    "baseline": "2027-04-07",
+    "build": "27.1.0+2505117",
+    "calendar_days": 267,
+    "checkpoints": {
+      "2027-04-07": {
+        "inventory_sha256": "dc1be796cb5cf6ea5caf0f04bb0230c052875ef501293dc805a458b20a91c24e",
+        "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a"
+      },
+      "2027-12-30": {
+        "inventory_sha256": "a4955d42dfb7fa57b09d661231d6aa436e59eaeee00b381a283aab51d6f841b9",
+        "save_sha256": "121cdf2c90abcf9f765d8e84939dbfceb49062682d18632e36d8252c78d3835c"
+      }
+    },
+    "independent_roots": 1,
+    "intake_sha256": "1dcc8637e4d8047872e16607df854393702d3fa3c9396522c7186ab2048b5973",
+    "intake_size": 16,
+    "outfield_by_verified_baseline_tier": {
+      "3": {
+        "baseline_gap_mean": 62.5,
+        "end_pa_changed": 0,
+        "growth_mean": 7.5,
+        "growth_median": 7.5,
+        "growth_total": 15,
+        "n": 2,
+        "stored_factor_different_at_end": 2
+      },
+      "4": {
+        "baseline_gap_mean": 63.285714285714285,
+        "end_pa_changed": 0,
+        "growth_mean": 9.857142857142858,
+        "growth_median": 11,
+        "growth_total": 69,
+        "n": 7,
+        "stored_factor_different_at_end": 3
+      },
+      "5": {
+        "baseline_gap_mean": 50.666666666666664,
+        "end_pa_changed": 0,
+        "growth_mean": 5.5,
+        "growth_median": 5.0,
+        "growth_total": 33,
+        "n": 6,
+        "stored_factor_different_at_end": 4
+      }
+    },
+    "schema": "pa-reach-intake-tier-growth/v1",
+    "target": "2027-12-30"
+  },
+  "stagnation": {
+    "career_roots": 1,
+    "dates": [
+      "2027-01-31",
+      "2027-03-30",
+      "2027-04-30"
+    ],
+    "later_ca_by_april_classification": {
+      "fluctuating_net_within_one": {
+        "classified": 1,
+        "followup_measured": 1,
+        "gained_at_least_three": 1,
+        "pa_differs_from_january": 0,
+        "sum_delta_ca": 7
+      },
+      "net_gain_ge2": {
+        "classified": 262,
+        "followup_measured": 262,
+        "gained_at_least_three": 219,
+        "pa_differs_from_january": 0,
+        "sum_delta_ca": 1709
+      },
+      "stagnant_observed_range_le1": {
+        "classified": 299,
+        "followup_measured": 299,
+        "gained_at_least_three": 71,
+        "pa_differs_from_january": 0,
+        "sum_delta_ca": 484
+      }
+    },
+    "later_date": "2027-12-30",
+    "later_save_and_native_sha256": [
+      "121cdf2c90abcf9f765d8e84939dbfceb49062682d18632e36d8252c78d3835c",
+      "a4955d42dfb7fa57b09d661231d6aa436e59eaeee00b381a283aab51d6f841b9"
+    ]
+  }
+}
