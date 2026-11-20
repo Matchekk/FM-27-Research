@@ -1,0 +1,29 @@
+{
+  "schema": "pa-reach-named-facility-rating/v1",
+  "date": "2027-04-07",
+  "game_build": "27.1.0+2505117",
+  "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a",
+  "private_receipt_sha256": "081b5a0d4a0f66fca2bc6bc8fa18b6fe09b2c718805983b1c4db0235c84152c3",
+  "clubs_requested": 6,
+  "player_uid_birth_confirmed": 6,
+  "intended_club_confirmed": 4,
+  "wrong_native_club": 2,
+  "native_property": "Person.PrimaryClubTeam.Club.TrainingFacilityRating.Rating",
+  "included_rows": [
+    {
+      "reader_integer": 16,
+      "named_ui_rating": 18,
+      "clubs": 3
+    },
+    {
+      "reader_integer": 17,
+      "named_ui_rating": 18,
+      "clubs": 1
+    }
+  ],
+  "included_exact_matches": 0,
+  "descriptions_for_included_16_17": {
+    "Exzellente Trainingseinrichtungen (8/10)": 4
+  },
+  "numeric_boundary_independently_resolved": false
+}

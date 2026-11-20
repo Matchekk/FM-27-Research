@@ -13,6 +13,14 @@ Diese Zahlen beschreiben die Abdeckung für einen möglichen Grenztest. Externe 
 
 Der nächste Nachweis erfordert einen unabhängigen, numerischen **Training Facilities**-Wert für mehrere eindeutige Klubidentitäten beiderseits der Schwelle, etwa eine rein lesende, benannte Eigenschaft der Spielengine oder den numerischen Ingame-Editor auf einer gesonderten Kopie. Zu erfassen sind jeweils Build, Save-Prüfsumme, Spieltag und derselbe Klub. Erst damit lässt sich der Grenzkontrast im beobachteten Kollektiv schätzen. Selbst dann trennt ein Netto-CA-Zuwachs die mutmaßliche Monatsfreigabe nicht vom Wachstum nach einer Freigabe. [Grenzfallanalyse](PROGRESSION_FACTOR_VALIDATION.md)
 
+### Was zeigt der nativ benannte Anlagenwert?
+
+Am 07.04.2027 wurde im Retentionsarm für sechs Kandidatenklubs mit einem Readerwert von 16 oder 17 jeweils ein zugehöriger Spieler abgefragt. Die Leseabfrage lief innerhalb einer Datumsklammer am selben gespeicherten Checkpoint. Die Spieler-ID und das Geburtsdatum stimmten in allen sechs Fällen mit dem Save und seinem nativen Referenzinventar überein. Die vom Spielerobjekt aus durchlaufene Verbindung `PrimaryClubTeam.Club.UniqueId` ergab bei vier Spielern genau den vorab ausgewählten Klub. Zwei abweichende Klubzuordnungen sind ausgeschlossen. [Grenzstichprobe](../../research/pa-reach-001/manifests/named-facility-boundary-0407.json)
+
+Die benannte Eigenschaft `Club.TrainingFacilityRating` enthält eine Zahl `Rating`, einen angezeigten Bereich und eine Beschreibung. Bei den drei bestätigten Reader-16-Klubs und dem einen bestätigten Reader-17-Klub ergaben Zahl, Unter- und Obergrenze jeweils **18**. Der Text lautete in allen vier Fällen „Exzellente Trainingseinrichtungen (8/10)“. Das Feld für eine Scoutschätzung war jeweils deaktiviert. Diese Spielanzeige unterscheidet die beiden fraglichen benachbarten Zahlenwerte nicht. [Eigenschaftsprüfung](../../research/pa-reach-001/analysis/named_facilities.py)
+
+Bei weiteren zehn vorab bestimmten, verschiedenen Klubs stimmten neun Klub-IDs überein. Die Paare von Save-Readerwert zu benannter UI-Zahl lauteten 7→13, 8→14, 10→15, 11→15, 12→16, 13→16, 14→17, 15→17 und 18→19. Der benannte Wert variiert über Klubs, mehrere benachbarte Readerwerte teilen sich eine dargestellte Stufe. Diese ausgewählten Fälle belegen weder die vollständige Umrechnungsskala noch den kausalen Effekt einer Anlage. Die exakte Trennung 16/17 bleibt ohne unabhängige Zahlenreferenz. [Kontrollen außerhalb der Grenze](../../research/pa-reach-001/manifests/named-facility-range-0407.json)
+
 ## Änderte sich das PA-Ziel?
 
 Beide Stichtage jedes Intervalls erforderten eine eindeutige Identität über ID und Geburt sowie eine übereinstimmende CA/PA-Messung aus Save und nativem Inventar. Die folgende Zählung schließt Spieler unabhängig von einer möglichen PA-Veränderung ein.
