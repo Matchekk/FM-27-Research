@@ -65,6 +65,8 @@ Der ruhende Stand vom 5. April 2028 vor den protokollierten Angeboten enthält 1
 
 Am 5. April bestätigt der zeitlich geklammerte Scout für alle 16 die Identität und CA/PA des strukturellen Saves. Im separat erhobenen nativen Inventar fehlt die gesamte Gruppe. Die mittlere CA beträgt 61,3125 (35–90), die mittlere PA 116,375 (73–177). Das gespeicherte Faktorenfeld zeigt zwölf Werte von 0, zweimal 3 und zweimal 4. Der gespeicherte Faktor wird als Rohwert dieses Stichtags gezählt. Für den 31. März liegt kein eigener Faktorwert vor, die Bedeutung von 0 für diese Spieler bleibt offen. [Intake-Baseline](../../research/pa-reach-001/manifests/zubieta-intake-2028-april-baseline.json) · [Feldvalidierung](NAMED_PROGRESSION_READBACK.md)
 
+Der Controller bestätigte am 5. April anschließend für alle 16 fixierten Identitäten individuell abgeschickte Angebote. Die Einträge wurden gegen die private Liste abgeglichen. Bei 15 Namen genügte die normalisierte Übereinstimmung, in einem Fall ergänzte der im Spiel bestätigte Vertragskopf eine OCR-Abweichung. Die Wirksamkeit der Angebote bleibt eine Folgemessung.
+
 ## Reproduktion
 
 Der CLI-Aufruf verwendet das private native SQLite-Panel, das private strukturelle SQLite-Panel, das datierte native Eingabemanifest, den gewünschten Endtag und das zugehörige Struktur-Tag. Er prüft Build, Datum und Quellen-Hashes und beschränkt die Auswertung explizit auf die damals verfügbaren Stichtage. Die Identität beim Strukturabgleich verwendet Datenbank-ID und Geburtsdatum für die gesamte Spielwelt.

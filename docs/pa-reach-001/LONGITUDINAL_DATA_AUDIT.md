@@ -1,5 +1,9 @@
 # Datenherkunft und Beobachtungsdauer
 
+Auf dem aktuellen Zubieta-Build 27.1.0+2505117 sind am 30.03.2027 und 30.03.2028 bereits 75.239 Spieler aller Altersgruppen in Save und nativem Inventar gepaart. Die Karriereableger teilen einen Ursprung. Die Datumsfolge, Altersabgrenzung und Ausfälle des Hauptversuchs sind separat belegt. [Laufendes Zubieta-Panel](RETENTION_SEASON_FOLLOWUP.md) · [Ergebnisse und offene Prognoseziele](FINAL_RESEARCH_REPORT.md)
+
+## Historischer TRAIN-005-Bestand auf Build 27.0.1+2503222
+
 **Eine Karriere, vier Save-Spieltage, 19 Tage.** 95.197 verschiedene Identitäten liefern 376.045 abgeglichene Spieler-Zeitpunkte. 93.113 sind an allen vier Tagen messbar. Von den 93.161 Ausgangsspielern fehlen 48 am letzten Tag. 2.036 Identitäten erscheinen erstmals nach der Baseline. Datengrundlage ist ausschließlich der Kontrollarm A von TRAIN-005. Der identische B-Start, der weitere bytegleiche Lesesnapshot und ein nativer Tag-14-Abzug ohne hier gepaarten Save ergeben keine zusätzlichen unabhängigen Karrieren. [Vorversuch](../player-development-004/RESEARCH_REPORT.md) · [Manifest mit je zwei Quellhashes pro Tag](../../data/pa-reach-001/manifest.json)
 
 | Spieltag | Save-Records | Native Referenz | Kein passender nativer UID-Eintrag | Ohne schließende ID | Geburt fehlt/weicht ab | Akzeptierte CA/PA |
