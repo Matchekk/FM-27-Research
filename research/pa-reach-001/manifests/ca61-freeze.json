@@ -1,0 +1,29 @@
+{
+  "career": "ZD-RETENTION-01",
+  "counts": {
+    "age24_27_gap_gt30": 430,
+    "other": 56991,
+    "under18_gap_gt30": 4119
+  },
+  "engine_build": "27.1.0+2505117",
+  "fixed_rule_trend_denominator": 31,
+  "independent_test_careers": 0,
+  "origin": "2027-04-30",
+  "outcome_seen_at_freeze": false,
+  "prediction_file_sha256": "9bd40ced4ee5fd447f12f16b69b4678ec6f6caed5d30af1d9edf31797914c0b8",
+  "predictor_sources": {
+    "2027-03-30": {
+      "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+      "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    },
+    "2027-04-30": {
+      "native_sha256": "220f6bc79058272816913fb6f19517ce8279430583d65c4cbc8e1ea7f97b291e",
+      "save_sha256": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9"
+    }
+  },
+  "previous": "2027-03-30",
+  "schema": "pa-reach-frozen-ca61/v1",
+  "target": "2027-06-30",
+  "total": 61540,
+  "training_career_count": 0
+}

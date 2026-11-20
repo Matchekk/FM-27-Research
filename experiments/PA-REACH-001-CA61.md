@@ -1,0 +1,8 @@
+# PA-REACH-001 · Prospektiver CA-Punktfehler über 61 Tage
+
+Festgelegt vor jeder Einsicht in einen Juni-Endpunkt. Der Zubieta-Retentionszweig hat gehashte, unabhängig gemessene Daten bis zum 30.04.2027. Die frühere Monatsauswertung ergab je nach Fehlermaß unterschiedliche Rangfolgen zweier einfacher Fortschreibungen. Der neue Vergleich verwendet die unveränderten Regeln mit einem längeren tatsächlich beobachtbaren Zielabstand. Ein Karriereursprung, Build 27.1.0+2505117, keine neuen Seeds, keine geschätzten Koeffizienten. [Früherer Vergleich](../docs/pa-reach-001/CALIBRATION_REPORT.md)
+
+- Baseline 30.04.2027. Feldspieler unter 28 mit eindeutiger bestätigter CA und PA am 30.03. und 30.04. in der Retentionskopie. Auch Beobachtungen mit späterem Vereinswechsel gehören zur Kohorte. Fehlende künftige CA wird eigens ausgewiesen.
+- Erster Referenzwert ist die April-CA. Zweiter Referenzwert ist die April-CA plus März–April-Zuwachs mal 61/31. Den zweiten Wert auf 1–200 begrenzen und für die Fehlermaße mit voller numerischer Präzision verwenden.
+- Primär am 30.06.2027 mittlerer absoluter Fehler in CA-Punkten, sekundär RMSE und mittlerer vorzeichenbehafteter Fehler. Zusätzlich die beiden bereits verwendeten Gruppen unter 18 bzw. 24–27, jeweils mit April-Lücke größer 30, beschreiben. Bei fehlender Beobachtung am exakten Enddatum kein Ersatz durch den 15. Juni.
+- Die private Voraussagedatei wird mit den Identitäten und den beiden festeingestellten Regeln vor Beobachtung des Zieltages geschrieben und ihr Inhalts-SHA öffentlich fixiert. Juni wird später nur zur Bewertung an dieselben Identitäten angefügt. Keine individuelle PA-Prozentzahl, keine Schätzung der Übertragungsunsicherheit aus einem Karrierecluster.
