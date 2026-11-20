@@ -1,0 +1,87 @@
+{
+  "ca_change": {
+    "distribution": {
+      "0": 10,
+      "1": 2,
+      "2": 1,
+      "3": 3
+    },
+    "max": 3,
+    "mean": 0.8125,
+    "median": 0.0,
+    "min": 0,
+    "n": 16,
+    "sd": 1.184205957593526
+  },
+  "cohort_n": 16,
+  "contract_followup": {
+    "build": "27.1.0+2505117",
+    "date": "2028-06-30",
+    "independently_confirmed_end_dates": {
+      "2031-06-30": 9,
+      "2032-06-30": 7
+    },
+    "observed_kind": {
+      "FULL_TIME": 5,
+      "YOUTH": 11
+    },
+    "observed_start_dates": {
+      "2028-04-07": 3,
+      "2028-04-08": 10,
+      "2028-05-21": 1,
+      "2028-06-10": 1,
+      "2028-06-24": 1
+    },
+    "outcomes": {
+      "current_same_club_contract_with_confirmed_end_after_offer": 16
+    },
+    "save_sha256": "a782aa90d18a6b145869dd4547dd54f2219e18cd8162771e4889b32ec543b2b4",
+    "schema": "pa-reach-intake-contracts/v1",
+    "submitted": 16,
+    "with_additional_future_same_club_terms": 4
+  },
+  "coverage": {
+    "native_ca_pa_verified": 16,
+    "pa_changed": 0,
+    "paired": 16,
+    "same_current_club": 16,
+    "scout_ca_pa_verified": 16
+  },
+  "days": 86,
+  "engine_build": "27.1.0+2505117",
+  "schema": "pa-reach-intake-growth/v1",
+  "snapshots": {
+    "2028-04-05": {
+      "hashes": {
+        "after": "5a63f66138e021f4c0b94c244a648263d45136a45e76374f702312e3aa9de647",
+        "before": "5a63f66138e021f4c0b94c244a648263d45136a45e76374f702312e3aa9de647",
+        "scout": "6e7a5a569a9d52452881c32eb8c8525d103a31db8a139f89f79885bb3787b097"
+      },
+      "native_sha256": "ac1eb39f132136ec8909268f490dec0579fbc56a718167f7a084431b539ce4ab",
+      "save_sha256": "27e3fe396d112ae6271a040077ff97957b0a121db340283f7de0dbfddc284401",
+      "scanner_build": "1.7.3",
+      "scanner_reported_date": "2028-04-04"
+    },
+    "2028-06-30": {
+      "hashes": {
+        "after": "c4ed5adddf175731ee0af9c9a464460aca9762687bdb8e49a885bda63bbd9594",
+        "before": "c4ed5adddf175731ee0af9c9a464460aca9762687bdb8e49a885bda63bbd9594",
+        "scout": "e8168f4b284e150204d07c8325520fb33a6106a4a07f9ef28755213b3262c2ce"
+      },
+      "native_sha256": "2d425d89f36c77e082403f86263f7a69c19d093d8cc36abdd6f9518559141fc6",
+      "save_sha256": "a782aa90d18a6b145869dd4547dd54f2219e18cd8162771e4889b32ec543b2b4",
+      "scanner_build": "1.7.3",
+      "scanner_reported_date": "2028-05-20"
+    }
+  },
+  "stored_factor_transitions": {
+    "0->2": 2,
+    "0->3": 3,
+    "0->4": 5,
+    "0->5": 2,
+    "3->2": 1,
+    "3->3": 1,
+    "4->4": 1,
+    "4->5": 1
+  }
+}

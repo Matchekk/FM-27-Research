@@ -14,6 +14,7 @@ Am 30.03.2027 hatten 61.613 Feldspieler unter 28 ihre PA noch vor sich. 434 weit
 | 30.09.2027 | 75 | 155 | 317 |
 | 30.12.2027 | 118 | 244 | 517 |
 | 30.03.2028 | **153** | **320** | **673** |
+| [30.06.2028](../../research/pa-reach-001/manifests/retention-pa-hits-20280630.json) | 184 | 394 | 829 |
 
 Jede Spalte zählt erstmals beobachtete Treffer unter den 61.613 in voller PA noch offenen Spielern. Für PA−2 lagen 1.201 und für den 95-%-Endpunkt 3.280 von ihnen bereits im März am jeweiligen Ziel. Von den 153 vollen Treffern starteten 54 mit 1–2, 29 mit 3–5, 49 mit 6–10, 20 mit 11–20 und einer mit 21–30 Punkten Rückstand. Von 10.728 mit über 30 Punkten Rückstand hatte bis zum Jahresstichtag keiner die volle März-PA erreicht. In der Gesamtkohorte sind 57.496 Verläufe vor 28 rechtszensiert, bei 3.873 ist die Beobachtungsdichte am Altershorizont unzureichend und bei 91 fehlt eine geeignete Folgebeobachtung. Zwischen den Stichtagen kann ein temporärer Treffer unerkannt bleiben. [Jahresabrechnung nach Alter, Ausgangslücke und Ziel](../../research/pa-reach-001/manifests/retention-pa-hits-20280330.json) · [Messweg und frühere Zielzählung](RETENTION_PA_HITS_0630.md)
 

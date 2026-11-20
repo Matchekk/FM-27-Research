@@ -76,6 +76,9 @@ def landmarks(conn, career, first, last, planned):
     peak_delta = defaultdict(list)
     peak_first_day = defaultdict(Counter)
     peak_coverage = defaultdict(Counter)
+    peak_age = defaultdict(list)
+    age_quarter_counts = defaultdict(Counter)
+    last_growth_window = defaultdict(Counter)
     for history in histories.values():
         row = endpoint(history)
         if row is None:
@@ -84,14 +87,17 @@ def landmarks(conn, career, first, last, planned):
         counts["has_exact_quarter"] += bool(row["exact_quarter_windows"])
         counts["has_12_month_ca"] += row["ca_at_exact_month"]["12"] is not None
         counts["has_24_month_ca"] += row["ca_at_exact_month"]["24"] is not None
+        band = age_band(history[0]["age"])
+        peak_age[band].append(row["age_at_observed_peak"])
+        age_quarter_counts[band]["exact_quarter_observed"] += bool(row["exact_quarter_windows"])
         qualifying = row["last_observed_quarter_gain_at_least_3_ca"]
         counts["has_observed_quarter_gain_3"] += bool(qualifying)
         if qualifying:
-            gains[age_band(history[0]["age"])].append(qualifying["delta_ca"])
+            gains[band].append(qualifying["delta_ca"])
+            last_growth_window[band][qualifying["start"], qualifying["end"]] += 1
         for threshold, result in row["targets"].items():
             targets[threshold][result["status"]] += 1
         if row["baseline_PA"] - row["baseline_CA"] > 30:
-            band = age_band(history[0]["age"])
             peak_delta[band].append(row["observed_peak_CA"] - row["baseline_CA"])
             peak_first_day[band][row["first_observed_peak_date"]] += 1
             required = {day for day in planned if day <= row["target_date"]}
@@ -106,9 +112,18 @@ def landmarks(conn, career, first, last, planned):
         peaks[band] = {"n": n, "median_gain": median(values), "p10_gain": values[ceil(n*.1)-1],
                        "p90_gain": values[ceil(n*.9)-1], "first_observed_peak_by_day": peak_first_day[band],
                        **peak_coverage[band]}
+    timing = {}
+    for band, ages in sorted(peak_age.items()):
+        timing[band] = {"n": len(ages),
+                        "age_at_first_observed_peak_median": median(ages),
+                        "age_at_first_observed_peak_frequency": dict(sorted(Counter(ages).items())),
+                        "exact_quarter_observed": age_quarter_counts[band]["exact_quarter_observed"],
+                        "with_qualified_quarter_gain": len(gains.get(band, ())),
+                        "last_qualified_quarter_frequency": [dict(start=start, end=end, players=n)
+                            for (start, end), n in sorted(last_growth_window[band].items())]}
     return dict(landmark_availability=counts, baseline_under28_field_player_endpoints=targets,
                 last_qualified_quarter_gain_by_baseline_age={a: growth(v) for a, v in sorted(gains.items())},
-                gap_over_30_observed_peak_by_baseline_age=peaks)
+                gap_over_30_observed_peak_by_baseline_age=peaks, observed_peak_and_quarter_timing_by_baseline_age=timing)
 
 
 def analyze(native, structural, manifest, end, end_tag):
