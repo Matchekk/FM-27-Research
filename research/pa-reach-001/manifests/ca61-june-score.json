@@ -1,0 +1,89 @@
+{
+  "accounting": {
+    "age24_27_gap_gt30": {
+      "frozen": 430,
+      "missing": 5,
+      "observed": 425
+    },
+    "all": {
+      "frozen": 61540,
+      "missing": 677,
+      "observed": 60863
+    },
+    "other": {
+      "frozen": 56991,
+      "missing": 662,
+      "observed": 56329
+    },
+    "under18_gap_gt30": {
+      "frozen": 4119,
+      "missing": 10,
+      "observed": 4109
+    }
+  },
+  "career_origins": 1,
+  "independent_test_careers": 0,
+  "metrics": {
+    "age24_27_gap_gt30": {
+      "carry_forward": {
+        "bias_ca": -0.1223529411764706,
+        "mae_ca": 0.1411764705882353,
+        "n": 425,
+        "rmse_ca": 0.46017899330842227
+      },
+      "previous_rate": {
+        "bias_ca": 0.025806451612903285,
+        "mae_ca": 0.2559392789373815,
+        "n": 425,
+        "rmse_ca": 0.6601485028276897
+      }
+    },
+    "all": {
+      "carry_forward": {
+        "bias_ca": -0.3836649524341554,
+        "mae_ca": 0.3958562673545504,
+        "n": 60863,
+        "rmse_ca": 1.0433405732454901
+      },
+      "previous_rate": {
+        "bias_ca": 0.2084390484605036,
+        "mae_ca": 0.5322503793554325,
+        "n": 60863,
+        "rmse_ca": 1.2473248047843954
+      }
+    },
+    "other": {
+      "carry_forward": {
+        "bias_ca": -0.2877913685668128,
+        "mae_ca": 0.3003248770615491,
+        "n": 56329,
+        "rmse_ca": 0.8462668112625085
+      },
+      "previous_rate": {
+        "bias_ca": 0.1984413002183602,
+        "mae_ca": 0.463014811026693,
+        "n": 56329,
+        "rmse_ca": 1.1585150172901064
+      }
+    },
+    "under18_gap_gt30": {
+      "carry_forward": {
+        "bias_ca": -1.7249939157945973,
+        "mae_ca": 1.7318082258457046,
+        "n": 4109,
+        "rmse_ca": 2.5068414541844524
+      },
+      "previous_rate": {
+        "bias_ca": 0.3643850242190637,
+        "mae_ca": 1.5099584703915092,
+        "n": 4109,
+        "rmse_ca": 2.1449224391294246
+      }
+    }
+  },
+  "native_sha256": "e651e5174995bd95b0e71c708f4595d0163c0bc6fb47e7e4bd149bc8956cba6e",
+  "receipt_sha256": "293f347003d9e800d715b7715b7e29ea9e9b3df02539d25d6830aaf1062ab4f8",
+  "save_sha256": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088",
+  "schema": "pa-reach-scored-ca61/v1",
+  "target": "2027-06-30"
+}

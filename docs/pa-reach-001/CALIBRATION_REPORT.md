@@ -35,3 +35,15 @@ Für 59.665 Feldspieler unter 28 am 30. März waren alle drei Messungen im selbe
 | 24–27, Lücke über 30 | 426 | 0,146 CA | 0,204 CA |
 
 Über alle 59.665 Spieler sank der quadratisch gewichtete Fehler (RMSE) von 0,748 auf 0,646 CA. Bei jungen Spielern mit großer Lücke erfasste der Trend einen Teil der weiteren Entwicklung. In dieser Gruppe beträgt der mittlere Unterschied der absoluten Fehler unter den 1.530 Spielern mit bestätigtem Ausgangsklub −0,409 CA (klubweise Jackknife, approximatives 95-%-Intervall −0,464 bis −0,354). Das Intervall beschreibt die Streuung über die 357 vertretenen Klubs dieser Teilgruppe. Die drei Beobachtungen schließen Spieler ohne Januarhistorie aus. Aussagen zu einem Jahr, anderen Karrieren und zur Kalibrierung der vollen PA bleiben offen. [Fehler je Regel und Gruppe](../../research/pa-reach-001/manifests/short-horizon-reference.json) · [Auswertung](../../research/pa-reach-001/analysis/short_horizon_reference.py)
+
+### Vorab eingefrorener Test auf den 30. Juni 2027
+
+Für 61.540 April-Feldspieler wurden die beiden festen Punktprognosen vor der Einsicht in den Juni-Endpunkt erzeugt. Der öffentliche Commit enthält den kryptografischen Fingerabdruck der privaten Einzelprognosen. Das Ziel war die gespeicherte und unabhängig nativ bestätigte CA am exakt 61 Tage später liegenden 30. Juni. 60.863 Spieler waren messbar, 677 fehlten. Es gab eine Karrierewurzel und keine geschätzten Modellparameter. [Studienplan](../../experiments/PA-REACH-001-CA61.md) · [Versiegelte Prognosen](https://github.com/Matchekk/FM-27-Research/commit/d23f0aa)
+
+| Gruppe am 30. April | Am Zieldatum bestätigt | MAE bei konstanter CA | MAE bei fortgeschriebenem Trend |
+|---|---:|---:|---:|
+| Alle | 60.863 | 0,396 | 0,532 |
+| Unter 18 mit CA-Lücke über 30 | 4.109 | 1,732 | 1,510 |
+| 24–27 mit CA-Lücke über 30 | 425 | 0,141 | 0,256 |
+
+Bei allen Spielern lagen die RMSE-Werte bei 1,043 und 1,247 CA-Punkten (konstant, Trend). Die konstante CA unterschätzte den Juniwert im Mittel um 0,384 Punkte, die Trendfortschreibung überschätzte ihn um 0,208 Punkte. Bei jungen Spielern mit großer Lücke passte die Trendfortschreibung im Mittel besser. Die Vorzeichen und Größen gelten für die beobachteten Personen, den konkreten Prognosehorizont und diese Karrierebedingungen. Wahrscheinlichkeiten für volle PA, erwartete Peak-CA und erwarteter Peak-Meta bleiben ohne unabhängige Validierung. [Alle Nenner und Fehler](../../research/pa-reach-001/manifests/ca61-june-score.json) · [Auswertungsprogramm](../../research/pa-reach-001/analysis/prospective_ca61.py)

@@ -1,5 +1,7 @@
 # Jugendaufnahme und jährliche Vertragsbindung
 
+Seit dem 15. Juni 2027 bleiben die offenen Problemverträge ihrem regulären Ablauf überlassen. Änderungen der Laufzeit, Abgänge und spätere Entwicklung werden in den regulären Messständen ausgelesen. In späteren jährlichen Angebotsrunden werden bereits abgelehnte oder anhängige Vorgänge übersprungen. [Datierte Änderung des Versuchsplans](EXPERIMENT_DESIGN.md)
+
 Für künftige Zubieta-Spielzeiten gilt die vom Nutzer festgelegte aktive Vertragspolitik auf dem privaten Retentionszweig. Alle Jugendkandidaten und alle eigenen Spielerverträge einschließlich Jugend, Reserve und auswärtig eingesetzter eigener Spieler gehören zur jährlichen Prüfung. Die private Ausgangskopie vom 30. März bewahrt den Zugang zum Intake am 31. März.
 
 ### Belegter Ausgangsbestand und Vergleich
