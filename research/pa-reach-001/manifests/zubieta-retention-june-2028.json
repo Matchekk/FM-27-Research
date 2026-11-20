@@ -1,0 +1,960 @@
+{
+  "age_gap_intervals": {
+    "2027-03-30:2028-06-30": {
+      "absent_native_and_save": 11175,
+      "absent_native_but_same_identity_in_save": 12649,
+      "age_gap": {
+        "18-20/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 53,
+          "sum_delta": 0
+        },
+        "18-20/1-10": {
+          "empirical_sd": 1.5379,
+          "gains": 497,
+          "losses": 118,
+          "max_delta": 10,
+          "mean_delta": 0.469,
+          "median_delta": 0,
+          "min_delta": -7,
+          "n": 2239,
+          "sum_delta": 1050
+        },
+        "18-20/11-30": {
+          "empirical_sd": 3.9898,
+          "gains": 7124,
+          "losses": 303,
+          "max_delta": 27,
+          "mean_delta": 3.0912,
+          "median_delta": 1.0,
+          "min_delta": -8,
+          "n": 11730,
+          "sum_delta": 36260
+        },
+        "18-20/>30": {
+          "empirical_sd": 5.7153,
+          "gains": 3763,
+          "losses": 44,
+          "max_delta": 42,
+          "mean_delta": 6.8283,
+          "median_delta": 6.0,
+          "min_delta": -6,
+          "n": 4332,
+          "sum_delta": 29580
+        },
+        "21-23/0": {
+          "empirical_sd": 1.1784,
+          "gains": 0,
+          "losses": 6,
+          "max_delta": 0,
+          "mean_delta": -0.3014,
+          "median_delta": 0,
+          "min_delta": -7,
+          "n": 73,
+          "sum_delta": -22
+        },
+        "21-23/1-10": {
+          "empirical_sd": 2.1638,
+          "gains": 558,
+          "losses": 227,
+          "max_delta": 10,
+          "mean_delta": 0.1923,
+          "median_delta": 0.0,
+          "min_delta": -19,
+          "n": 2480,
+          "sum_delta": 477
+        },
+        "21-23/11-30": {
+          "empirical_sd": 3.8354,
+          "gains": 4674,
+          "losses": 964,
+          "max_delta": 23,
+          "mean_delta": 1.3066,
+          "median_delta": 0,
+          "min_delta": -30,
+          "n": 11625,
+          "sum_delta": 15189
+        },
+        "21-23/>30": {
+          "empirical_sd": 5.5836,
+          "gains": 796,
+          "losses": 89,
+          "max_delta": 34,
+          "mean_delta": 3.6711,
+          "median_delta": 2.0,
+          "min_delta": -24,
+          "n": 1280,
+          "sum_delta": 4699
+        },
+        "24-27/0": {
+          "empirical_sd": 3.7335,
+          "gains": 0,
+          "losses": 62,
+          "max_delta": 0,
+          "mean_delta": -1.2389,
+          "median_delta": 0,
+          "min_delta": -22,
+          "n": 247,
+          "sum_delta": -306
+        },
+        "24-27/1-10": {
+          "empirical_sd": 4.0639,
+          "gains": 1328,
+          "losses": 1671,
+          "max_delta": 10,
+          "mean_delta": -0.9414,
+          "median_delta": 0,
+          "min_delta": -30,
+          "n": 7503,
+          "sum_delta": -7063
+        },
+        "24-27/11-30": {
+          "empirical_sd": 5.4877,
+          "gains": 2040,
+          "losses": 2058,
+          "max_delta": 17,
+          "mean_delta": -1.2084,
+          "median_delta": 0,
+          "min_delta": -31,
+          "n": 8209,
+          "sum_delta": -9920
+        },
+        "24-27/>30": {
+          "empirical_sd": 8.4799,
+          "gains": 137,
+          "losses": 128,
+          "max_delta": 15,
+          "mean_delta": -2.1068,
+          "median_delta": 0,
+          "min_delta": -32,
+          "n": 365,
+          "sum_delta": -769
+        },
+        "<18/0": {
+          "empirical_sd": 0.4157,
+          "gains": 0,
+          "losses": 2,
+          "max_delta": 0,
+          "mean_delta": -0.2222,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 9,
+          "sum_delta": -2
+        },
+        "<18/1-10": {
+          "empirical_sd": 1.5412,
+          "gains": 94,
+          "losses": 7,
+          "max_delta": 8,
+          "mean_delta": 0.7967,
+          "median_delta": 0.0,
+          "min_delta": -1,
+          "n": 300,
+          "sum_delta": 239
+        },
+        "<18/11-30": {
+          "empirical_sd": 4.8833,
+          "gains": 1820,
+          "losses": 17,
+          "max_delta": 25,
+          "mean_delta": 5.8128,
+          "median_delta": 5.0,
+          "min_delta": -3,
+          "n": 2238,
+          "sum_delta": 13009
+        },
+        "<18/>30": {
+          "empirical_sd": 8.7704,
+          "gains": 4184,
+          "losses": 15,
+          "max_delta": 52,
+          "mean_delta": 13.3887,
+          "median_delta": 13.0,
+          "min_delta": -4,
+          "n": 4384,
+          "sum_delta": 58696
+        }
+      },
+      "age_gap_coverage": {
+        "18-20/0": {
+          "baseline": 62,
+          "native_and_save_missing": 8,
+          "native_missing_save_present": 1,
+          "paired": 53
+        },
+        "18-20/1-10": {
+          "baseline": 2462,
+          "native_and_save_missing": 153,
+          "native_missing_save_present": 70,
+          "paired": 2239
+        },
+        "18-20/11-30": {
+          "baseline": 12078,
+          "native_and_save_missing": 183,
+          "native_missing_save_present": 165,
+          "paired": 11730
+        },
+        "18-20/>30": {
+          "baseline": 4439,
+          "native_and_save_missing": 58,
+          "native_missing_save_present": 49,
+          "paired": 4332
+        },
+        "21-23/0": {
+          "baseline": 87,
+          "native_and_save_missing": 6,
+          "native_missing_save_present": 8,
+          "paired": 73
+        },
+        "21-23/1-10": {
+          "baseline": 2805,
+          "native_and_save_missing": 170,
+          "native_missing_save_present": 155,
+          "paired": 2480
+        },
+        "21-23/11-30": {
+          "baseline": 12844,
+          "native_and_save_missing": 763,
+          "native_missing_save_present": 456,
+          "paired": 11625
+        },
+        "21-23/>30": {
+          "baseline": 1422,
+          "native_and_save_missing": 79,
+          "native_missing_save_present": 63,
+          "paired": 1280
+        },
+        "24-27/0": {
+          "baseline": 274,
+          "native_and_save_missing": 12,
+          "native_missing_save_present": 15,
+          "paired": 247
+        },
+        "24-27/1-10": {
+          "baseline": 8487,
+          "native_and_save_missing": 676,
+          "native_missing_save_present": 308,
+          "paired": 7503
+        },
+        "24-27/11-30": {
+          "baseline": 9589,
+          "native_and_save_missing": 985,
+          "native_missing_save_present": 395,
+          "paired": 8209
+        },
+        "24-27/>30": {
+          "baseline": 432,
+          "native_and_save_missing": 40,
+          "native_missing_save_present": 27,
+          "paired": 365
+        },
+        "<18/0": {
+          "baseline": 11,
+          "native_missing_save_present": 2,
+          "paired": 9
+        },
+        "<18/1-10": {
+          "baseline": 331,
+          "native_and_save_missing": 15,
+          "native_missing_save_present": 16,
+          "paired": 300
+        },
+        "<18/11-30": {
+          "baseline": 2289,
+          "native_and_save_missing": 17,
+          "native_missing_save_present": 34,
+          "paired": 2238
+        },
+        "<18/>30": {
+          "baseline": 4435,
+          "native_and_save_missing": 26,
+          "native_missing_save_present": 25,
+          "paired": 4384
+        }
+      },
+      "all_end_only": 25464,
+      "all_observed_end": 98898,
+      "all_observed_start": 97258,
+      "all_paired": 73434,
+      "all_start_only": 23824,
+      "ca_changed": 42693,
+      "days": 458,
+      "eligible_missing": 4980,
+      "eligible_paired": 57067,
+      "eligible_start": 62047,
+      "factor_changed": 26246,
+      "pa_changed": 0
+    },
+    "2028-03-30:2028-06-30": {
+      "absent_native_and_save": 158,
+      "absent_native_but_same_identity_in_save": 1860,
+      "age_gap": {
+        "18-20/0": {
+          "empirical_sd": 0.1941,
+          "gains": 0,
+          "losses": 2,
+          "max_delta": 0,
+          "mean_delta": -0.0392,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 51,
+          "sum_delta": -2
+        },
+        "18-20/1-10": {
+          "empirical_sd": 0.6823,
+          "gains": 239,
+          "losses": 11,
+          "max_delta": 6,
+          "mean_delta": 0.2068,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 1997,
+          "sum_delta": 413
+        },
+        "18-20/11-30": {
+          "empirical_sd": 1.1475,
+          "gains": 3194,
+          "losses": 79,
+          "max_delta": 12,
+          "mean_delta": 0.5751,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 10651,
+          "sum_delta": 6125
+        },
+        "18-20/>30": {
+          "empirical_sd": 1.5435,
+          "gains": 1285,
+          "losses": 21,
+          "max_delta": 13,
+          "mean_delta": 1.0627,
+          "median_delta": 0.0,
+          "min_delta": -1,
+          "n": 2646,
+          "sum_delta": 2812
+        },
+        "21-23/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 111,
+          "sum_delta": 0
+        },
+        "21-23/1-10": {
+          "empirical_sd": 0.6406,
+          "gains": 310,
+          "losses": 23,
+          "max_delta": 6,
+          "mean_delta": 0.1624,
+          "median_delta": 0.0,
+          "min_delta": -2,
+          "n": 3412,
+          "sum_delta": 554
+        },
+        "21-23/11-30": {
+          "empirical_sd": 0.9273,
+          "gains": 1911,
+          "losses": 100,
+          "max_delta": 11,
+          "mean_delta": 0.3061,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 12563,
+          "sum_delta": 3846
+        },
+        "21-23/>30": {
+          "empirical_sd": 1.1019,
+          "gains": 353,
+          "losses": 7,
+          "max_delta": 12,
+          "mean_delta": 0.4664,
+          "median_delta": 0,
+          "min_delta": -1,
+          "n": 1531,
+          "sum_delta": 714
+        },
+        "24-27/0": {
+          "empirical_sd": 0.2147,
+          "gains": 0,
+          "losses": 8,
+          "max_delta": 0,
+          "mean_delta": -0.039,
+          "median_delta": 0,
+          "min_delta": -2,
+          "n": 231,
+          "sum_delta": -9
+        },
+        "24-27/1-10": {
+          "empirical_sd": 0.4082,
+          "gains": 345,
+          "losses": 106,
+          "max_delta": 6,
+          "mean_delta": 0.0615,
+          "median_delta": 0,
+          "min_delta": -4,
+          "n": 6097,
+          "sum_delta": 375
+        },
+        "24-27/11-30": {
+          "empirical_sd": 0.5241,
+          "gains": 770,
+          "losses": 174,
+          "max_delta": 6,
+          "mean_delta": 0.1028,
+          "median_delta": 0,
+          "min_delta": -6,
+          "n": 9755,
+          "sum_delta": 1003
+        },
+        "24-27/>30": {
+          "empirical_sd": 0.6035,
+          "gains": 153,
+          "losses": 28,
+          "max_delta": 4,
+          "mean_delta": 0.1713,
+          "median_delta": 0,
+          "min_delta": -3,
+          "n": 963,
+          "sum_delta": 165
+        },
+        "<18/0": {
+          "empirical_sd": 0.0,
+          "gains": 0,
+          "losses": 0,
+          "max_delta": 0,
+          "mean_delta": 0,
+          "median_delta": 0,
+          "min_delta": 0,
+          "n": 255,
+          "sum_delta": 0
+        },
+        "<18/1-10": {
+          "empirical_sd": 0.6627,
+          "gains": 356,
+          "losses": 12,
+          "max_delta": 5,
+          "mean_delta": 0.2467,
+          "median_delta": 0.0,
+          "min_delta": -1,
+          "n": 2132,
+          "sum_delta": 526
+        },
+        "<18/11-30": {
+          "empirical_sd": 1.5656,
+          "gains": 1577,
+          "losses": 20,
+          "max_delta": 13,
+          "mean_delta": 1.0973,
+          "median_delta": 1.0,
+          "min_delta": -1,
+          "n": 3144,
+          "sum_delta": 3450
+        },
+        "<18/>30": {
+          "empirical_sd": 2.333,
+          "gains": 9970,
+          "losses": 67,
+          "max_delta": 23,
+          "mean_delta": 2.1889,
+          "median_delta": 2.0,
+          "min_delta": -2,
+          "n": 13978,
+          "sum_delta": 30596
+        }
+      },
+      "age_gap_coverage": {
+        "18-20/0": {
+          "baseline": 52,
+          "native_missing_save_present": 1,
+          "paired": 51
+        },
+        "18-20/1-10": {
+          "baseline": 2037,
+          "native_missing_save_present": 40,
+          "paired": 1997
+        },
+        "18-20/11-30": {
+          "baseline": 10749,
+          "native_and_save_missing": 2,
+          "native_missing_save_present": 96,
+          "paired": 10651
+        },
+        "18-20/>30": {
+          "baseline": 2662,
+          "native_and_save_missing": 4,
+          "native_missing_save_present": 12,
+          "paired": 2646
+        },
+        "21-23/0": {
+          "baseline": 113,
+          "native_missing_save_present": 2,
+          "paired": 111
+        },
+        "21-23/1-10": {
+          "baseline": 3428,
+          "native_and_save_missing": 1,
+          "native_missing_save_present": 15,
+          "paired": 3412
+        },
+        "21-23/11-30": {
+          "baseline": 12609,
+          "native_and_save_missing": 5,
+          "native_missing_save_present": 41,
+          "paired": 12563
+        },
+        "21-23/>30": {
+          "baseline": 1533,
+          "native_and_save_missing": 1,
+          "native_missing_save_present": 1,
+          "paired": 1531
+        },
+        "24-27/0": {
+          "baseline": 234,
+          "native_missing_save_present": 3,
+          "paired": 231
+        },
+        "24-27/1-10": {
+          "baseline": 6141,
+          "native_and_save_missing": 1,
+          "native_missing_save_present": 43,
+          "paired": 6097
+        },
+        "24-27/11-30": {
+          "baseline": 9798,
+          "native_and_save_missing": 4,
+          "native_missing_save_present": 39,
+          "paired": 9755
+        },
+        "24-27/>30": {
+          "baseline": 966,
+          "native_missing_save_present": 3,
+          "paired": 963
+        },
+        "<18/0": {
+          "baseline": 256,
+          "native_missing_save_present": 1,
+          "paired": 255
+        },
+        "<18/1-10": {
+          "baseline": 2137,
+          "native_and_save_missing": 3,
+          "native_missing_save_present": 2,
+          "paired": 2132
+        },
+        "<18/11-30": {
+          "baseline": 3154,
+          "native_and_save_missing": 4,
+          "native_missing_save_present": 6,
+          "paired": 3144
+        },
+        "<18/>30": {
+          "baseline": 13998,
+          "native_and_save_missing": 14,
+          "native_missing_save_present": 6,
+          "paired": 13978
+        }
+      },
+      "all_end_only": 7010,
+      "all_observed_end": 98898,
+      "all_observed_start": 93906,
+      "all_paired": 91888,
+      "all_start_only": 2018,
+      "ca_changed": 27144,
+      "days": 92,
+      "eligible_missing": 350,
+      "eligible_paired": 69517,
+      "eligible_start": 69867,
+      "factor_changed": 8513,
+      "pa_changed": 0
+    }
+  },
+  "baseline_under28_field_player_endpoints": {
+    "full": {
+      "already_at_baseline": 434,
+      "horizon_passed_without_observed_hit_sparse_sampling": 4992,
+      "newly_observed_hit": 184,
+      "right_censored": 56437
+    },
+    "pa95": {
+      "already_at_baseline": 3714,
+      "horizon_passed_without_observed_hit_sparse_sampling": 3785,
+      "newly_observed_hit": 829,
+      "right_censored": 53719
+    },
+    "pa_minus_2": {
+      "already_at_baseline": 1635,
+      "horizon_passed_without_observed_hit_sparse_sampling": 4598,
+      "newly_observed_hit": 394,
+      "right_censored": 55420
+    }
+  },
+  "calibration_metrics": null,
+  "career_cluster_count": 1,
+  "causal_effect": null,
+  "engine_build": "27.1.0+2505117",
+  "gap_over_30_observed_peak_by_baseline_age": {
+    "18-20": {
+      "age_28_beyond_last_planned_day": 4439,
+      "first_observed_peak_by_day": {
+        "2027-03-30": 615,
+        "2027-04-07": 20,
+        "2027-04-30": 82,
+        "2027-06-30": 151,
+        "2027-07-02": 3,
+        "2027-09-30": 270,
+        "2027-12-30": 680,
+        "2028-03-05": 485,
+        "2028-03-30": 354,
+        "2028-04-05": 74,
+        "2028-06-30": 1705
+      },
+      "median_gain": 6,
+      "missing_at_least_one_planned_day": 345,
+      "missing_last_planned_day": 107,
+      "n": 4439,
+      "p10_gain": 0,
+      "p90_gain": 15
+    },
+    "21-23": {
+      "age_28_beyond_last_planned_day": 1422,
+      "first_observed_peak_by_day": {
+        "2027-03-30": 556,
+        "2027-04-07": 12,
+        "2027-04-30": 36,
+        "2027-06-30": 59,
+        "2027-07-02": 1,
+        "2027-09-30": 68,
+        "2027-12-30": 146,
+        "2028-03-05": 103,
+        "2028-03-30": 61,
+        "2028-04-05": 16,
+        "2028-06-30": 364
+      },
+      "median_gain": 1.0,
+      "missing_at_least_one_planned_day": 334,
+      "missing_last_planned_day": 142,
+      "n": 1422,
+      "p10_gain": 0,
+      "p90_gain": 11
+    },
+    "24-27": {
+      "age_28_beyond_last_planned_day": 322,
+      "first_observed_peak_by_day": {
+        "2027-03-30": 274,
+        "2027-04-07": 2,
+        "2027-04-30": 12,
+        "2027-06-30": 16,
+        "2027-09-30": 21,
+        "2027-12-30": 34,
+        "2028-03-05": 18,
+        "2028-03-30": 13,
+        "2028-04-05": 4,
+        "2028-06-30": 38
+      },
+      "median_gain": 0.0,
+      "missing_at_least_one_planned_day": 177,
+      "missing_last_planned_day": 72,
+      "n": 432,
+      "p10_gain": 0,
+      "p90_gain": 5
+    },
+    "<18": {
+      "age_28_beyond_last_planned_day": 4435,
+      "first_observed_peak_by_day": {
+        "2027-03-30": 211,
+        "2027-04-07": 3,
+        "2027-04-30": 26,
+        "2027-06-30": 69,
+        "2027-07-02": 2,
+        "2027-09-30": 155,
+        "2027-12-30": 294,
+        "2028-03-05": 282,
+        "2028-03-30": 284,
+        "2028-04-05": 77,
+        "2028-06-30": 3032
+      },
+      "median_gain": 13,
+      "missing_at_least_one_planned_day": 70,
+      "missing_last_planned_day": 51,
+      "n": 4435,
+      "p10_gain": 2,
+      "p90_gain": 25
+    }
+  },
+  "independent_test_careers": 0,
+  "landmark_availability": {
+    "endpoint_eligible": 62047,
+    "has_12_month_ca": 53438,
+    "has_24_month_ca": 0,
+    "has_exact_quarter": 60476,
+    "has_observed_quarter_gain_3": 13976
+  },
+  "last_qualified_quarter_gain_by_baseline_age": {
+    "18-20": {
+      "gains": 6037,
+      "losses": 0,
+      "max_delta": 14,
+      "mean_delta": 4.0071,
+      "median_delta": 3,
+      "min_delta": 3,
+      "n": 6037,
+      "sum_delta": 24191
+    },
+    "21-23": {
+      "gains": 2611,
+      "losses": 0,
+      "max_delta": 14,
+      "mean_delta": 3.9073,
+      "median_delta": 3,
+      "min_delta": 3,
+      "n": 2611,
+      "sum_delta": 10202
+    },
+    "24-27": {
+      "gains": 606,
+      "losses": 0,
+      "max_delta": 7,
+      "mean_delta": 3.5545,
+      "median_delta": 3.0,
+      "min_delta": 3,
+      "n": 606,
+      "sum_delta": 2154
+    },
+    "<18": {
+      "gains": 4722,
+      "losses": 0,
+      "max_delta": 17,
+      "mean_delta": 4.1493,
+      "median_delta": 4.0,
+      "min_delta": 3,
+      "n": 4722,
+      "sum_delta": 19593
+    }
+  },
+  "native_module_sha256": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
+  "new_snapshots": {
+    "2028-06-30": {
+      "context_sha256": [
+        "c4ed5adddf175731ee0af9c9a464460aca9762687bdb8e49a885bda63bbd9594",
+        "c4ed5adddf175731ee0af9c9a464460aca9762687bdb8e49a885bda63bbd9594"
+      ],
+      "native": {
+        "accepted_ability_pairs": 98898,
+        "birth_missing_or_mismatch": 795,
+        "club_unverified_among_accepted": 59805,
+        "native_records": 99742,
+        "native_uid_absent_from_save": 49,
+        "no_closing_identity": 61,
+        "no_native_uid": 13971,
+        "save_records": 113725
+      },
+      "native_sha256": "2d425d89f36c77e082403f86263f7a69c19d093d8cc36abdd6f9518559141fc6",
+      "save_sha256": "a782aa90d18a6b145869dd4547dd54f2219e18cd8162771e4889b32ec543b2b4",
+      "structural": {
+        "absent_or_ambiguous_id": 61,
+        "accepted_save_rows": 112850,
+        "indexed": 113725,
+        "missing_dob_or_age": 814
+      }
+    }
+  },
+  "observed_peak_and_quarter_timing_by_baseline_age": {
+    "18-20": {
+      "age_at_first_observed_peak_frequency": {
+        "18": 2183,
+        "19": 6330,
+        "20": 8141,
+        "21": 2212,
+        "22": 175
+      },
+      "age_at_first_observed_peak_median": 20,
+      "exact_quarter_observed": 18940,
+      "last_qualified_quarter_frequency": [
+        {
+          "end": "2027-06-30",
+          "players": 1149,
+          "start": "2027-03-30"
+        },
+        {
+          "end": "2027-09-30",
+          "players": 1350,
+          "start": "2027-06-30"
+        },
+        {
+          "end": "2027-12-30",
+          "players": 1585,
+          "start": "2027-09-30"
+        },
+        {
+          "end": "2028-03-30",
+          "players": 1036,
+          "start": "2027-12-30"
+        },
+        {
+          "end": "2028-06-30",
+          "players": 917,
+          "start": "2028-03-30"
+        }
+      ],
+      "n": 19041,
+      "with_qualified_quarter_gain": 6037
+    },
+    "21-23": {
+      "age_at_first_observed_peak_frequency": {
+        "21": 4667,
+        "22": 5329,
+        "23": 5986,
+        "24": 1092,
+        "25": 84
+      },
+      "age_at_first_observed_peak_median": 22.0,
+      "exact_quarter_observed": 17043,
+      "last_qualified_quarter_frequency": [
+        {
+          "end": "2027-06-30",
+          "players": 533,
+          "start": "2027-03-30"
+        },
+        {
+          "end": "2027-09-30",
+          "players": 452,
+          "start": "2027-06-30"
+        },
+        {
+          "end": "2027-12-30",
+          "players": 633,
+          "start": "2027-09-30"
+        },
+        {
+          "end": "2028-03-30",
+          "players": 483,
+          "start": "2027-12-30"
+        },
+        {
+          "end": "2028-06-30",
+          "players": 510,
+          "start": "2028-03-30"
+        }
+      ],
+      "n": 17158,
+      "with_qualified_quarter_gain": 2611
+    },
+    "24-27": {
+      "age_at_first_observed_peak_frequency": {
+        "24": 4055,
+        "25": 4900,
+        "26": 4821,
+        "27": 5004,
+        "28": 2
+      },
+      "age_at_first_observed_peak_median": 26.0,
+      "exact_quarter_observed": 17458,
+      "last_qualified_quarter_frequency": [
+        {
+          "end": "2027-06-30",
+          "players": 133,
+          "start": "2027-03-30"
+        },
+        {
+          "end": "2027-09-30",
+          "players": 143,
+          "start": "2027-06-30"
+        },
+        {
+          "end": "2027-12-30",
+          "players": 152,
+          "start": "2027-09-30"
+        },
+        {
+          "end": "2028-03-30",
+          "players": 106,
+          "start": "2027-12-30"
+        },
+        {
+          "end": "2028-06-30",
+          "players": 72,
+          "start": "2028-03-30"
+        }
+      ],
+      "n": 18782,
+      "with_qualified_quarter_gain": 606
+    },
+    "<18": {
+      "age_at_first_observed_peak_frequency": {
+        "15": 224,
+        "16": 1469,
+        "17": 2508,
+        "18": 2483,
+        "19": 382
+      },
+      "age_at_first_observed_peak_median": 17.0,
+      "exact_quarter_observed": 7035,
+      "last_qualified_quarter_frequency": [
+        {
+          "end": "2027-06-30",
+          "players": 360,
+          "start": "2027-03-30"
+        },
+        {
+          "end": "2027-09-30",
+          "players": 681,
+          "start": "2027-06-30"
+        },
+        {
+          "end": "2027-12-30",
+          "players": 906,
+          "start": "2027-09-30"
+        },
+        {
+          "end": "2028-03-30",
+          "players": 1188,
+          "start": "2027-12-30"
+        },
+        {
+          "end": "2028-06-30",
+          "players": 1587,
+          "start": "2028-03-30"
+        }
+      ],
+      "n": 7066,
+      "with_qualified_quarter_gain": 4722
+    }
+  },
+  "prospective_arm_count": 1,
+  "reader_version": "0.14.1",
+  "schema": "pa-reach-retention-observed-quarter/v1",
+  "source_root": {
+    "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+    "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+  },
+  "world_linkage": {
+    "2027-03-30:2028-06-30": {
+      "absent_native_and_save": 11175,
+      "absent_native_at_end": 23824,
+      "absent_native_but_same_identity_in_save": 12649,
+      "ca_changed": 42693,
+      "factor_changed": 26246,
+      "native_pairs": 73434,
+      "pa_changed": 0
+    },
+    "2028-03-30:2028-06-30": {
+      "absent_native_and_save": 158,
+      "absent_native_at_end": 2018,
+      "absent_native_but_same_identity_in_save": 1860,
+      "ca_changed": 27144,
+      "factor_changed": 8513,
+      "native_pairs": 91888,
+      "pa_changed": 0
+    }
+  }
+}
