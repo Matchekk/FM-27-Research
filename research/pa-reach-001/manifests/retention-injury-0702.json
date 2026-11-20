@@ -1,0 +1,58 @@
+{
+  "branch": "ZD-RETENTION-01",
+  "build": "27.1.0+2505117",
+  "capture": {
+    "2027-06-30": {
+      "injury_source_history": 38963,
+      "injury_source_typed": 1291,
+      "stable_native_players_bound_in_save": 32815,
+      "warning_UnknownBuildWarning": 1
+    },
+    "2027-07-02": {
+      "injury_source_history": 39130,
+      "injury_source_typed": 1256,
+      "stable_native_players_bound_in_save": 32815,
+      "warning_UnknownBuildWarning": 1
+    }
+  },
+  "counts": {
+    "contract_not_confirmed_stable_and_active": 1710,
+    "new_dated_injury_history": 39,
+    "new_injury_among_contract_exclusions": 1,
+    "no_recorded_new_injury_history": 31066
+  },
+  "factor_ca_pa": {
+    "new_dated_injury_history": {
+      "ca_changed": 0,
+      "factor_down": 0,
+      "factor_equal": 39,
+      "factor_up": 0,
+      "pa_changed": 0
+    },
+    "no_recorded_new_injury_history": {
+      "ca_changed": 121,
+      "factor_down": 29,
+      "factor_equal": 31012,
+      "factor_up": 25,
+      "pa_changed": 0
+    }
+  },
+  "factor_field": "saved_CA_plus_7",
+  "independent_careers": 1,
+  "new_dated_history_by_day": {
+    "2027-07-01": 39
+  },
+  "schema": "pa-reach-retention-injury-window/v1",
+  "severity_or_time_lost_measured": false,
+  "snapshots": {
+    "2027-06-30": {
+      "native_sha256": "e651e5174995bd95b0e71c708f4595d0163c0bc6fb47e7e4bd149bc8956cba6e",
+      "save_sha256": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088"
+    },
+    "2027-07-02": {
+      "native_sha256": "b78888aaac0fedcbd83eac9dcc9ab881092262af8aafd73e2a26e1ffae75a5dc",
+      "save_sha256": "09297f2e9af3573299b1ac8985a9877718796fca0a16426c980ec446490d672e"
+    }
+  },
+  "stable_verified_club_pairs": 32815
+}
