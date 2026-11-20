@@ -1416,6 +1416,41 @@
       "sum_delta": 18198
     }
   },
+  "managed_club_season_calendar": {
+    "by_snapshot": {
+      "2027-06-30": {
+        "2026": {
+          "played": 8,
+          "unplayed": 0
+        }
+      },
+      "2027-07-02": {
+        "2026": {
+          "played": 8,
+          "unplayed": 0
+        }
+      },
+      "2027-09-30": {
+        "2026": {
+          "played": 8,
+          "unplayed": 0
+        },
+        "2027": {
+          "played": 9,
+          "unplayed": 38
+        },
+        "unknown": {
+          "played": 3,
+          "unplayed": 0
+        }
+      }
+    },
+    "exact_switchover_day": null,
+    "field": "season_start_year",
+    "fixture_dates_on_or_after": "2027-05-01",
+    "readback_team_slot": 0,
+    "source": "fmsave 0.14.1 fixtures(), strict=True"
+  },
   "native_module_sha256": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
   "new_snapshots": {
     "2027-09-30": {
