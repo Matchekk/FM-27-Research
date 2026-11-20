@@ -1,0 +1,136 @@
+{
+  "field_status": "SAVE_READER_EXPLICIT_COUNTS_NOT_INDEPENDENTLY_NATIVE_VERIFIED",
+  "intervals": [
+    {
+      "career": "ZD-ROOT-01",
+      "causal_playing_time_effect": null,
+      "dated_history_rows_inside_interval_endpoint_reader": 5835,
+      "distinct_endpoint_people_with_dated_history_inside_interval": 5284,
+      "distinct_endpoint_person_days_with_dated_history_inside_interval": 5835,
+      "finish": "2027-03-30",
+      "injury_days_missed": null,
+      "paired_outfield_selection": {
+        "all_rows_managed_club": 17,
+        "matched_non_decreasing_totals": 38633,
+        "native_pairs_outfield_under28": 60550,
+        "no_accepted_total_at_one_or_both_dates": 21385,
+        "team_keys_changed": 532
+      },
+      "start": "2027-01-31",
+      "stored_minute_increase_groups": {
+        "0": {
+          "delta_ca_sum": 4562,
+          "mean_delta_ca": 0.3559,
+          "minutes_difference_sum": 0,
+          "n": 12820
+        },
+        "181_to_450": {
+          "delta_ca_sum": 1956,
+          "mean_delta_ca": 0.3936,
+          "minutes_difference_sum": 1548650,
+          "n": 4969
+        },
+        "1_to_180": {
+          "delta_ca_sum": 3329,
+          "mean_delta_ca": 0.4448,
+          "minutes_difference_sum": 631656,
+          "n": 7484
+        },
+        "above_450": {
+          "delta_ca_sum": 5677,
+          "mean_delta_ca": 0.4249,
+          "minutes_difference_sum": 10050002,
+          "n": 13360
+        }
+      }
+    },
+    {
+      "career": "ZD-CONTROL-01",
+      "causal_playing_time_effect": null,
+      "dated_history_rows_inside_interval_endpoint_reader": 3372,
+      "distinct_endpoint_people_with_dated_history_inside_interval": 3213,
+      "distinct_endpoint_person_days_with_dated_history_inside_interval": 3372,
+      "finish": "2027-04-30",
+      "injury_days_missed": null,
+      "paired_outfield_selection": {
+        "all_rows_managed_club": 18,
+        "matched_non_decreasing_totals": 40451,
+        "native_pairs_outfield_under28": 61920,
+        "no_accepted_total_at_one_or_both_dates": 21290,
+        "team_keys_changed": 179
+      },
+      "start": "2027-03-30",
+      "stored_minute_increase_groups": {
+        "0": {
+          "delta_ca_sum": 4067,
+          "mean_delta_ca": 0.2398,
+          "minutes_difference_sum": 0,
+          "n": 16960
+        },
+        "181_to_450": {
+          "delta_ca_sum": 2257,
+          "mean_delta_ca": 0.1855,
+          "minutes_difference_sum": 4009483,
+          "n": 12166
+        },
+        "1_to_180": {
+          "delta_ca_sum": 1437,
+          "mean_delta_ca": 0.1634,
+          "minutes_difference_sum": 750470,
+          "n": 8795
+        },
+        "above_450": {
+          "delta_ca_sum": 440,
+          "mean_delta_ca": 0.1739,
+          "minutes_difference_sum": 1344748,
+          "n": 2530
+        }
+      }
+    }
+  ],
+  "snapshots": {
+    "2027-01-31": {
+      "absent_or_duplicate_component_lines": 358,
+      "accepted_dated_history_rows": 22456,
+      "accepted_overall_team_rows": 68002,
+      "all_stat_rows": 264454,
+      "history_unbound_undated_or_future": 128,
+      "injury_source_history": 22584,
+      "injury_source_typed": 1486,
+      "native_uid_dob_bound": 94708,
+      "overall_team_rows": 70378,
+      "stat_outside_bound_population": 2018,
+      "warning_UnknownBuildWarning": 1
+    },
+    "2027-03-30": {
+      "absent_or_duplicate_component_lines": 229,
+      "accepted_dated_history_rows": 28385,
+      "accepted_overall_team_rows": 71379,
+      "all_stat_rows": 293279,
+      "history_unbound_undated_or_future": 174,
+      "injury_source_history": 28559,
+      "injury_source_typed": 1496,
+      "native_uid_dob_bound": 97258,
+      "overall_team_rows": 73351,
+      "stat_outside_bound_population": 1742,
+      "totals_differ_from_recorded_competitions": 1,
+      "warning_ReaderCheckWarning": 1,
+      "warning_UnknownBuildWarning": 1
+    },
+    "2027-04-30": {
+      "absent_or_duplicate_component_lines": 180,
+      "accepted_dated_history_rows": 31737,
+      "accepted_overall_team_rows": 75490,
+      "all_stat_rows": 311329,
+      "history_unbound_undated_or_future": 220,
+      "injury_source_history": 31957,
+      "injury_source_typed": 1679,
+      "native_uid_dob_bound": 109128,
+      "overall_team_rows": 77476,
+      "stat_outside_bound_population": 1805,
+      "totals_differ_from_recorded_competitions": 1,
+      "warning_ReaderCheckWarning": 1,
+      "warning_UnknownBuildWarning": 1
+    }
+  }
+}
