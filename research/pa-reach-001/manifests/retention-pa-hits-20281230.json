@@ -1,0 +1,1894 @@
+{
+  "baseline_day": "2027-03-30",
+  "branch": "ZD-RETENTION-01",
+  "build": "27.1.0+2505117",
+  "groups": {
+    "18\u201320|11\u201320": {
+      "birthday_coverage": {
+        "before_horizon": 6204
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 2,
+          "2027-12-30": 2,
+          "2028-03-05": 3,
+          "2028-06-30": 4,
+          "2028-09-30": 5,
+          "2028-12-30": 6
+        },
+        "pa95": {
+          "2027-06-30": 2,
+          "2027-09-30": 10,
+          "2027-12-30": 17,
+          "2028-03-05": 15,
+          "2028-03-30": 4,
+          "2028-04-05": 1,
+          "2028-06-30": 25,
+          "2028-09-30": 18,
+          "2028-12-30": 33
+        },
+        "pa_minus_2": {
+          "2027-09-30": 4,
+          "2027-12-30": 6,
+          "2028-03-05": 4,
+          "2028-03-30": 5,
+          "2028-06-30": 9,
+          "2028-09-30": 14,
+          "2028-12-30": 23
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 1,
+        "observed_before_or_at_horizon": 6203
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 22,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 6181
+        },
+        "pa95": {
+          "first_observed_after_baseline": 125,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 6078
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 65,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 6138
+        }
+      },
+      "n": 6204
+    },
+    "18\u201320|1\u20132": {
+      "birthday_coverage": {
+        "before_horizon": 251
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-30": 3,
+          "2027-06-30": 3,
+          "2027-09-30": 1,
+          "2027-12-30": 1,
+          "2028-03-05": 2,
+          "2028-12-30": 2
+        },
+        "pa95": {
+          "2027-06-30": 1,
+          "2028-03-05": 2,
+          "2028-12-30": 2
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 251
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 12,
+          "right_censored_before_horizon": 239
+        },
+        "pa95": {
+          "already_at_baseline": 213,
+          "first_observed_after_baseline": 5,
+          "right_censored_before_horizon": 33
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 251
+        }
+      },
+      "n": 251
+    },
+    "18\u201320|21\u201330": {
+      "birthday_coverage": {
+        "before_horizon": 5874
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2028-06-30": 2,
+          "2028-09-30": 3,
+          "2028-12-30": 6
+        },
+        "pa95": {
+          "2027-09-30": 1,
+          "2027-12-30": 4,
+          "2028-03-05": 4,
+          "2028-03-30": 2,
+          "2028-06-30": 8,
+          "2028-09-30": 15,
+          "2028-12-30": 11
+        },
+        "pa_minus_2": {
+          "2027-09-30": 1,
+          "2027-12-30": 1,
+          "2028-03-05": 1,
+          "2028-03-30": 1,
+          "2028-06-30": 3,
+          "2028-09-30": 5,
+          "2028-12-30": 4
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 5874
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 11,
+          "right_censored_before_horizon": 5863
+        },
+        "pa95": {
+          "first_observed_after_baseline": 45,
+          "right_censored_before_horizon": 5829
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 16,
+          "right_censored_before_horizon": 5858
+        }
+      },
+      "n": 5874
+    },
+    "18\u201320|3\u20135": {
+      "birthday_coverage": {
+        "before_horizon": 574
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 2,
+          "2027-12-30": 1,
+          "2028-06-30": 1,
+          "2028-09-30": 4,
+          "2028-12-30": 1
+        },
+        "pa95": {
+          "2027-04-07": 1,
+          "2027-04-30": 5,
+          "2027-06-30": 6,
+          "2027-09-30": 11,
+          "2027-12-30": 3,
+          "2028-03-05": 3,
+          "2028-06-30": 7,
+          "2028-09-30": 11,
+          "2028-12-30": 5
+        },
+        "pa_minus_2": {
+          "2027-04-07": 4,
+          "2027-04-30": 4,
+          "2027-06-30": 6,
+          "2027-09-30": 11,
+          "2027-12-30": 8,
+          "2028-03-05": 5,
+          "2028-04-05": 1,
+          "2028-06-30": 6,
+          "2028-09-30": 5,
+          "2028-12-30": 7
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 574
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 9,
+          "right_censored_before_horizon": 565
+        },
+        "pa95": {
+          "already_at_baseline": 139,
+          "first_observed_after_baseline": 52,
+          "right_censored_before_horizon": 383
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 57,
+          "right_censored_before_horizon": 517
+        }
+      },
+      "n": 574
+    },
+    "18\u201320|6\u201310": {
+      "birthday_coverage": {
+        "before_horizon": 1637
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 2,
+          "2027-12-30": 1,
+          "2028-03-05": 1,
+          "2028-03-30": 1,
+          "2028-06-30": 2,
+          "2028-09-30": 2,
+          "2028-12-30": 2
+        },
+        "pa95": {
+          "2027-04-07": 2,
+          "2027-04-30": 3,
+          "2027-06-30": 7,
+          "2027-09-30": 21,
+          "2027-12-30": 21,
+          "2028-03-05": 6,
+          "2028-04-05": 1,
+          "2028-06-30": 15,
+          "2028-09-30": 11,
+          "2028-12-30": 10
+        },
+        "pa_minus_2": {
+          "2027-04-30": 1,
+          "2027-06-30": 3,
+          "2027-09-30": 7,
+          "2027-12-30": 8,
+          "2028-03-05": 5,
+          "2028-03-30": 3,
+          "2028-06-30": 10,
+          "2028-09-30": 6,
+          "2028-12-30": 8
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 1637
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 11,
+          "right_censored_before_horizon": 1626
+        },
+        "pa95": {
+          "already_at_baseline": 2,
+          "first_observed_after_baseline": 97,
+          "right_censored_before_horizon": 1538
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 51,
+          "right_censored_before_horizon": 1586
+        }
+      },
+      "n": 1637
+    },
+    "18\u201320|>30": {
+      "birthday_coverage": {
+        "before_horizon": 4439
+      },
+      "first_seen_by_date": {
+        "pa95": {
+          "2028-12-30": 4
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 2,
+        "observed_before_or_at_horizon": 4437
+      },
+      "goals": {
+        "full": {
+          "missing_eligible_followup": 2,
+          "right_censored_before_horizon": 4437
+        },
+        "pa95": {
+          "first_observed_after_baseline": 4,
+          "missing_eligible_followup": 2,
+          "right_censored_before_horizon": 4433
+        },
+        "pa_minus_2": {
+          "missing_eligible_followup": 2,
+          "right_censored_before_horizon": 4437
+        }
+      },
+      "n": 4439
+    },
+    "21\u201323|11\u201320": {
+      "birthday_coverage": {
+        "before_horizon": 7890
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-12-30": 2,
+          "2028-03-05": 4,
+          "2028-03-30": 1,
+          "2028-06-30": 8,
+          "2028-09-30": 4,
+          "2028-12-30": 9
+        },
+        "pa95": {
+          "2027-06-30": 9,
+          "2027-09-30": 9,
+          "2027-12-30": 37,
+          "2028-03-05": 18,
+          "2028-03-30": 9,
+          "2028-04-05": 2,
+          "2028-06-30": 29,
+          "2028-09-30": 30,
+          "2028-12-30": 30
+        },
+        "pa_minus_2": {
+          "2027-09-30": 2,
+          "2027-12-30": 5,
+          "2028-03-05": 6,
+          "2028-03-30": 2,
+          "2028-06-30": 10,
+          "2028-09-30": 8,
+          "2028-12-30": 14
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 5,
+        "observed_before_or_at_horizon": 7885
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 28,
+          "missing_eligible_followup": 5,
+          "right_censored_before_horizon": 7857
+        },
+        "pa95": {
+          "first_observed_after_baseline": 173,
+          "missing_eligible_followup": 5,
+          "right_censored_before_horizon": 7712
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 47,
+          "missing_eligible_followup": 5,
+          "right_censored_before_horizon": 7838
+        }
+      },
+      "n": 7890
+    },
+    "21\u201323|1\u20132": {
+      "birthday_coverage": {
+        "before_horizon": 203
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-30": 3,
+          "2027-06-30": 1,
+          "2027-09-30": 1,
+          "2027-12-30": 1,
+          "2028-03-30": 1,
+          "2028-06-30": 1,
+          "2028-09-30": 1
+        },
+        "pa95": {
+          "2027-09-30": 1,
+          "2028-03-05": 1,
+          "2028-06-30": 2
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 203
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 9,
+          "right_censored_before_horizon": 194
+        },
+        "pa95": {
+          "already_at_baseline": 186,
+          "first_observed_after_baseline": 4,
+          "right_censored_before_horizon": 13
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 203
+        }
+      },
+      "n": 203
+    },
+    "21\u201323|21\u201330": {
+      "birthday_coverage": {
+        "before_horizon": 4954
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2028-03-30": 1,
+          "2028-06-30": 1,
+          "2028-09-30": 4,
+          "2028-12-30": 1
+        },
+        "pa95": {
+          "2027-12-30": 2,
+          "2028-03-05": 3,
+          "2028-03-30": 1,
+          "2028-04-05": 1,
+          "2028-06-30": 5,
+          "2028-09-30": 6,
+          "2028-12-30": 7
+        },
+        "pa_minus_2": {
+          "2028-03-05": 1,
+          "2028-03-30": 1,
+          "2028-06-30": 3,
+          "2028-09-30": 3,
+          "2028-12-30": 3
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 2,
+        "observed_before_or_at_horizon": 4952
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 7,
+          "missing_eligible_followup": 2,
+          "right_censored_before_horizon": 4945
+        },
+        "pa95": {
+          "first_observed_after_baseline": 25,
+          "missing_eligible_followup": 2,
+          "right_censored_before_horizon": 4927
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 11,
+          "missing_eligible_followup": 2,
+          "right_censored_before_horizon": 4941
+        }
+      },
+      "n": 4954
+    },
+    "21\u201323|3\u20135": {
+      "birthday_coverage": {
+        "before_horizon": 542
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-06-30": 5,
+          "2027-12-30": 3,
+          "2028-09-30": 1,
+          "2028-12-30": 2
+        },
+        "pa95": {
+          "2027-04-07": 1,
+          "2027-04-30": 2,
+          "2027-06-30": 1,
+          "2027-09-30": 8,
+          "2027-12-30": 7,
+          "2028-03-05": 3,
+          "2028-03-30": 1,
+          "2028-06-30": 7,
+          "2028-09-30": 6,
+          "2028-12-30": 3
+        },
+        "pa_minus_2": {
+          "2027-04-07": 1,
+          "2027-04-30": 6,
+          "2027-06-30": 8,
+          "2027-09-30": 7,
+          "2027-12-30": 4,
+          "2028-03-05": 3,
+          "2028-06-30": 5,
+          "2028-09-30": 4,
+          "2028-12-30": 5
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 542
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 11,
+          "right_censored_before_horizon": 531
+        },
+        "pa95": {
+          "already_at_baseline": 208,
+          "first_observed_after_baseline": 39,
+          "right_censored_before_horizon": 295
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 43,
+          "right_censored_before_horizon": 499
+        }
+      },
+      "n": 542
+    },
+    "21\u201323|6\u201310": {
+      "birthday_coverage": {
+        "before_horizon": 2060
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-06-30": 2,
+          "2027-09-30": 4,
+          "2027-12-30": 13,
+          "2028-03-05": 4,
+          "2028-03-30": 1,
+          "2028-06-30": 1,
+          "2028-09-30": 5,
+          "2028-12-30": 3
+        },
+        "pa95": {
+          "2027-04-07": 6,
+          "2027-04-30": 13,
+          "2027-06-30": 24,
+          "2027-09-30": 29,
+          "2027-12-30": 13,
+          "2028-03-05": 13,
+          "2028-03-30": 4,
+          "2028-06-30": 17,
+          "2028-09-30": 20,
+          "2028-12-30": 17
+        },
+        "pa_minus_2": {
+          "2027-06-30": 6,
+          "2027-09-30": 13,
+          "2027-12-30": 15,
+          "2028-03-05": 3,
+          "2028-03-30": 2,
+          "2028-04-05": 1,
+          "2028-06-30": 4,
+          "2028-09-30": 7,
+          "2028-12-30": 9
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 2060
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 33,
+          "right_censored_before_horizon": 2027
+        },
+        "pa95": {
+          "already_at_baseline": 35,
+          "first_observed_after_baseline": 156,
+          "right_censored_before_horizon": 1869
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 60,
+          "right_censored_before_horizon": 2000
+        }
+      },
+      "n": 2060
+    },
+    "21\u201323|>30": {
+      "birthday_coverage": {
+        "before_horizon": 1422
+      },
+      "first_seen_by_date": {
+        "pa95": {
+          "2028-12-30": 1
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 1,
+        "observed_before_or_at_horizon": 1421
+      },
+      "goals": {
+        "full": {
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 1421
+        },
+        "pa95": {
+          "first_observed_after_baseline": 1,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 1420
+        },
+        "pa_minus_2": {
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 1421
+        }
+      },
+      "n": 1422
+    },
+    "24\u201327|11\u201320": {
+      "birthday_coverage": {
+        "before_horizon": 5541,
+        "crossed_without_birthday_observation": 2085,
+        "exact_birthday_observed": 52
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2028-03-05": 3,
+          "2028-03-30": 2,
+          "2028-04-05": 1,
+          "2028-06-30": 2,
+          "2028-09-30": 2,
+          "2028-12-30": 2
+        },
+        "pa95": {
+          "2027-06-30": 1,
+          "2027-09-30": 5,
+          "2027-12-30": 14,
+          "2028-03-05": 9,
+          "2028-03-30": 3,
+          "2028-04-05": 1,
+          "2028-06-30": 5,
+          "2028-09-30": 17,
+          "2028-12-30": 11
+        },
+        "pa_minus_2": {
+          "2027-12-30": 2,
+          "2028-03-05": 7,
+          "2028-03-30": 1,
+          "2028-04-05": 1,
+          "2028-06-30": 3,
+          "2028-09-30": 2,
+          "2028-12-30": 2
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 28,
+        "observed_before_or_at_horizon": 7650
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 12,
+          "missing_eligible_followup": 28,
+          "no_observed_hit_birthday_interval_coverage_open": 2113,
+          "right_censored_before_horizon": 5525
+        },
+        "pa95": {
+          "first_observed_after_baseline": 66,
+          "missing_eligible_followup": 28,
+          "no_observed_hit_birthday_interval_coverage_open": 2111,
+          "right_censored_before_horizon": 5473
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 18,
+          "missing_eligible_followup": 28,
+          "no_observed_hit_birthday_interval_coverage_open": 2113,
+          "right_censored_before_horizon": 5519
+        }
+      },
+      "n": 7678
+    },
+    "24\u201327|1\u20132": {
+      "birthday_coverage": {
+        "before_horizon": 222,
+        "crossed_without_birthday_observation": 465,
+        "exact_birthday_observed": 10
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-07": 6,
+          "2027-04-30": 13,
+          "2027-06-30": 5,
+          "2027-09-30": 5,
+          "2027-12-30": 5,
+          "2028-03-05": 1,
+          "2028-06-30": 1,
+          "2028-09-30": 1
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 9,
+        "observed_before_or_at_horizon": 688
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 37,
+          "missing_eligible_followup": 9,
+          "no_observed_hit_birthday_interval_coverage_open": 449,
+          "right_censored_before_horizon": 202
+        },
+        "pa95": {
+          "already_at_baseline": 675,
+          "no_observed_hit_birthday_interval_coverage_open": 8,
+          "right_censored_before_horizon": 14
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 697
+        }
+      },
+      "n": 697
+    },
+    "24\u201327|21\u201330": {
+      "birthday_coverage": {
+        "before_horizon": 1394,
+        "crossed_without_birthday_observation": 504,
+        "exact_birthday_observed": 13
+      },
+      "first_seen_by_date": {
+        "pa95": {
+          "2028-12-30": 2
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 5,
+        "observed_before_or_at_horizon": 1906
+      },
+      "goals": {
+        "full": {
+          "missing_eligible_followup": 5,
+          "no_observed_hit_birthday_interval_coverage_open": 512,
+          "right_censored_before_horizon": 1394
+        },
+        "pa95": {
+          "first_observed_after_baseline": 2,
+          "missing_eligible_followup": 5,
+          "no_observed_hit_birthday_interval_coverage_open": 512,
+          "right_censored_before_horizon": 1392
+        },
+        "pa_minus_2": {
+          "missing_eligible_followup": 5,
+          "no_observed_hit_birthday_interval_coverage_open": 512,
+          "right_censored_before_horizon": 1394
+        }
+      },
+      "n": 1911
+    },
+    "24\u201327|3\u20135": {
+      "birthday_coverage": {
+        "before_horizon": 1010,
+        "crossed_without_birthday_observation": 1123,
+        "exact_birthday_observed": 21
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-06-30": 4,
+          "2027-09-30": 9,
+          "2027-12-30": 3,
+          "2028-03-05": 1,
+          "2028-04-05": 1,
+          "2028-06-30": 2,
+          "2028-12-30": 2
+        },
+        "pa95": {
+          "2027-04-07": 1,
+          "2027-04-30": 1,
+          "2027-06-30": 4,
+          "2027-09-30": 5,
+          "2027-12-30": 11,
+          "2028-03-05": 3,
+          "2028-03-30": 3,
+          "2028-09-30": 5,
+          "2028-12-30": 5
+        },
+        "pa_minus_2": {
+          "2027-04-07": 5,
+          "2027-04-30": 8,
+          "2027-06-30": 17,
+          "2027-09-30": 15,
+          "2027-12-30": 15,
+          "2028-03-05": 7,
+          "2028-03-30": 1,
+          "2028-04-05": 1,
+          "2028-06-30": 6,
+          "2028-09-30": 5,
+          "2028-12-30": 8
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 10,
+        "observed_before_or_at_horizon": 2144
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 22,
+          "missing_eligible_followup": 10,
+          "no_observed_hit_birthday_interval_coverage_open": 1132,
+          "right_censored_before_horizon": 990
+        },
+        "pa95": {
+          "already_at_baseline": 1502,
+          "first_observed_after_baseline": 38,
+          "missing_eligible_followup": 3,
+          "no_observed_hit_birthday_interval_coverage_open": 258,
+          "right_censored_before_horizon": 353
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 88,
+          "missing_eligible_followup": 10,
+          "no_observed_hit_birthday_interval_coverage_open": 1109,
+          "right_censored_before_horizon": 947
+        }
+      },
+      "n": 2154
+    },
+    "24\u201327|6\u201310": {
+      "birthday_coverage": {
+        "before_horizon": 3483,
+        "crossed_without_birthday_observation": 2104,
+        "exact_birthday_observed": 49
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 2,
+          "2027-12-30": 10,
+          "2028-03-05": 4,
+          "2028-03-30": 4,
+          "2028-06-30": 4,
+          "2028-09-30": 4,
+          "2028-12-30": 2
+        },
+        "pa95": {
+          "2027-04-07": 6,
+          "2027-04-30": 13,
+          "2027-06-30": 38,
+          "2027-09-30": 50,
+          "2027-12-30": 64,
+          "2028-03-05": 37,
+          "2028-03-30": 3,
+          "2028-04-05": 1,
+          "2028-06-30": 25,
+          "2028-09-30": 31,
+          "2028-12-30": 29
+        },
+        "pa_minus_2": {
+          "2027-06-30": 1,
+          "2027-09-30": 6,
+          "2027-12-30": 20,
+          "2028-03-05": 9,
+          "2028-03-30": 1,
+          "2028-06-30": 6,
+          "2028-09-30": 5,
+          "2028-12-30": 8
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 24,
+        "observed_before_or_at_horizon": 5612
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 30,
+          "missing_eligible_followup": 24,
+          "no_observed_hit_birthday_interval_coverage_open": 2129,
+          "right_censored_before_horizon": 3453
+        },
+        "pa95": {
+          "already_at_baseline": 289,
+          "first_observed_after_baseline": 297,
+          "missing_eligible_followup": 23,
+          "no_observed_hit_birthday_interval_coverage_open": 1905,
+          "right_censored_before_horizon": 3122
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 56,
+          "missing_eligible_followup": 24,
+          "no_observed_hit_birthday_interval_coverage_open": 2126,
+          "right_censored_before_horizon": 3430
+        }
+      },
+      "n": 5636
+    },
+    "24\u201327|>30": {
+      "birthday_coverage": {
+        "before_horizon": 306,
+        "crossed_without_birthday_observation": 125,
+        "exact_birthday_observed": 1
+      },
+      "first_seen_by_date": {},
+      "followup": {
+        "missing_before_or_at_horizon": 2,
+        "observed_before_or_at_horizon": 430
+      },
+      "goals": {
+        "full": {
+          "missing_eligible_followup": 2,
+          "no_observed_hit_birthday_interval_coverage_open": 124,
+          "right_censored_before_horizon": 306
+        },
+        "pa95": {
+          "missing_eligible_followup": 2,
+          "no_observed_hit_birthday_interval_coverage_open": 124,
+          "right_censored_before_horizon": 306
+        },
+        "pa_minus_2": {
+          "missing_eligible_followup": 2,
+          "no_observed_hit_birthday_interval_coverage_open": 124,
+          "right_censored_before_horizon": 306
+        }
+      },
+      "n": 432
+    },
+    "U18|11\u201320": {
+      "birthday_coverage": {
+        "before_horizon": 873
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 1,
+          "2028-09-30": 1,
+          "2028-12-30": 1
+        },
+        "pa95": {
+          "2027-06-30": 1,
+          "2027-09-30": 7,
+          "2027-12-30": 5,
+          "2028-03-05": 3,
+          "2028-03-30": 2,
+          "2028-06-30": 2,
+          "2028-09-30": 7,
+          "2028-12-30": 5
+        },
+        "pa_minus_2": {
+          "2027-09-30": 6,
+          "2027-12-30": 2,
+          "2028-03-05": 3,
+          "2028-03-30": 1,
+          "2028-06-30": 1,
+          "2028-09-30": 5,
+          "2028-12-30": 3
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 873
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 3,
+          "right_censored_before_horizon": 870
+        },
+        "pa95": {
+          "first_observed_after_baseline": 32,
+          "right_censored_before_horizon": 841
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 21,
+          "right_censored_before_horizon": 852
+        }
+      },
+      "n": 873
+    },
+    "U18|1\u20132": {
+      "birthday_coverage": {
+        "before_horizon": 50
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 1,
+          "2027-12-30": 1,
+          "2028-12-30": 1
+        },
+        "pa95": {
+          "2027-09-30": 1,
+          "2027-12-30": 1
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 50
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 3,
+          "right_censored_before_horizon": 47
+        },
+        "pa95": {
+          "already_at_baseline": 28,
+          "first_observed_after_baseline": 2,
+          "right_censored_before_horizon": 20
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 50
+        }
+      },
+      "n": 50
+    },
+    "U18|21\u201330": {
+      "birthday_coverage": {
+        "before_horizon": 1416
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2028-09-30": 1
+        },
+        "pa95": {
+          "2027-12-30": 1,
+          "2028-03-05": 1,
+          "2028-03-30": 1,
+          "2028-06-30": 2,
+          "2028-09-30": 6,
+          "2028-12-30": 8
+        },
+        "pa_minus_2": {
+          "2027-12-30": 1,
+          "2028-06-30": 3,
+          "2028-09-30": 2,
+          "2028-12-30": 7
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 1416
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 1,
+          "right_censored_before_horizon": 1415
+        },
+        "pa95": {
+          "first_observed_after_baseline": 19,
+          "right_censored_before_horizon": 1397
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 13,
+          "right_censored_before_horizon": 1403
+        }
+      },
+      "n": 1416
+    },
+    "U18|3\u20135": {
+      "birthday_coverage": {
+        "before_horizon": 77
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2028-03-30": 1,
+          "2028-12-30": 1
+        },
+        "pa95": {
+          "2027-06-30": 1,
+          "2027-09-30": 1,
+          "2028-03-30": 1,
+          "2028-12-30": 1
+        },
+        "pa_minus_2": {
+          "2027-04-07": 1,
+          "2027-04-30": 1,
+          "2027-06-30": 3,
+          "2027-09-30": 2,
+          "2027-12-30": 2,
+          "2028-03-05": 2,
+          "2028-03-30": 1,
+          "2028-09-30": 3,
+          "2028-12-30": 1
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 77
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 2,
+          "right_censored_before_horizon": 75
+        },
+        "pa95": {
+          "already_at_baseline": 3,
+          "first_observed_after_baseline": 4,
+          "right_censored_before_horizon": 70
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 16,
+          "right_censored_before_horizon": 61
+        }
+      },
+      "n": 77
+    },
+    "U18|6\u201310": {
+      "birthday_coverage": {
+        "before_horizon": 204
+      },
+      "first_seen_by_date": {
+        "pa95": {
+          "2027-04-30": 2,
+          "2027-06-30": 1,
+          "2027-09-30": 6,
+          "2028-03-30": 1,
+          "2028-09-30": 3,
+          "2028-12-30": 1
+        },
+        "pa_minus_2": {
+          "2027-06-30": 1,
+          "2027-09-30": 5,
+          "2028-03-30": 1,
+          "2028-06-30": 1,
+          "2028-12-30": 2
+        }
+      },
+      "followup": {
+        "observed_before_or_at_horizon": 204
+      },
+      "goals": {
+        "full": {
+          "right_censored_before_horizon": 204
+        },
+        "pa95": {
+          "first_observed_after_baseline": 14,
+          "right_censored_before_horizon": 190
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 10,
+          "right_censored_before_horizon": 194
+        }
+      },
+      "n": 204
+    },
+    "U18|>30": {
+      "birthday_coverage": {
+        "before_horizon": 4435
+      },
+      "first_seen_by_date": {
+        "pa95": {
+          "2028-09-30": 1,
+          "2028-12-30": 4
+        },
+        "pa_minus_2": {
+          "2028-09-30": 1
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 1,
+        "observed_before_or_at_horizon": 4434
+      },
+      "goals": {
+        "full": {
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 4434
+        },
+        "pa95": {
+          "first_observed_after_baseline": 5,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 4429
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 1,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 4433
+        }
+      },
+      "n": 4435
+    },
+    "age:18\u201320": {
+      "birthday_coverage": {
+        "before_horizon": 18979
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-30": 3,
+          "2027-06-30": 3,
+          "2027-09-30": 7,
+          "2027-12-30": 5,
+          "2028-03-05": 6,
+          "2028-03-30": 1,
+          "2028-06-30": 9,
+          "2028-09-30": 14,
+          "2028-12-30": 17
+        },
+        "pa95": {
+          "2027-04-07": 3,
+          "2027-04-30": 8,
+          "2027-06-30": 16,
+          "2027-09-30": 43,
+          "2027-12-30": 45,
+          "2028-03-05": 30,
+          "2028-03-30": 6,
+          "2028-04-05": 2,
+          "2028-06-30": 55,
+          "2028-09-30": 55,
+          "2028-12-30": 65
+        },
+        "pa_minus_2": {
+          "2027-04-07": 4,
+          "2027-04-30": 5,
+          "2027-06-30": 9,
+          "2027-09-30": 23,
+          "2027-12-30": 23,
+          "2028-03-05": 15,
+          "2028-03-30": 9,
+          "2028-04-05": 1,
+          "2028-06-30": 28,
+          "2028-09-30": 30,
+          "2028-12-30": 42
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 3,
+        "observed_before_or_at_horizon": 18976
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 65,
+          "missing_eligible_followup": 3,
+          "right_censored_before_horizon": 18911
+        },
+        "pa95": {
+          "already_at_baseline": 354,
+          "first_observed_after_baseline": 328,
+          "missing_eligible_followup": 3,
+          "right_censored_before_horizon": 18294
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 251,
+          "first_observed_after_baseline": 189,
+          "missing_eligible_followup": 3,
+          "right_censored_before_horizon": 18536
+        }
+      },
+      "n": 18979
+    },
+    "age:21\u201323": {
+      "birthday_coverage": {
+        "before_horizon": 17071
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-30": 3,
+          "2027-06-30": 8,
+          "2027-09-30": 5,
+          "2027-12-30": 19,
+          "2028-03-05": 8,
+          "2028-03-30": 4,
+          "2028-06-30": 11,
+          "2028-09-30": 15,
+          "2028-12-30": 15
+        },
+        "pa95": {
+          "2027-04-07": 7,
+          "2027-04-30": 15,
+          "2027-06-30": 34,
+          "2027-09-30": 47,
+          "2027-12-30": 59,
+          "2028-03-05": 38,
+          "2028-03-30": 15,
+          "2028-04-05": 3,
+          "2028-06-30": 60,
+          "2028-09-30": 62,
+          "2028-12-30": 58
+        },
+        "pa_minus_2": {
+          "2027-04-07": 1,
+          "2027-04-30": 6,
+          "2027-06-30": 14,
+          "2027-09-30": 22,
+          "2027-12-30": 24,
+          "2028-03-05": 13,
+          "2028-03-30": 5,
+          "2028-04-05": 1,
+          "2028-06-30": 22,
+          "2028-09-30": 22,
+          "2028-12-30": 31
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 8,
+        "observed_before_or_at_horizon": 17063
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 88,
+          "missing_eligible_followup": 8,
+          "right_censored_before_horizon": 16975
+        },
+        "pa95": {
+          "already_at_baseline": 429,
+          "first_observed_after_baseline": 398,
+          "missing_eligible_followup": 8,
+          "right_censored_before_horizon": 16236
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 203,
+          "first_observed_after_baseline": 161,
+          "missing_eligible_followup": 8,
+          "right_censored_before_horizon": 16699
+        }
+      },
+      "n": 17071
+    },
+    "age:24\u201327": {
+      "birthday_coverage": {
+        "before_horizon": 11956,
+        "crossed_without_birthday_observation": 6406,
+        "exact_birthday_observed": 146
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-07": 6,
+          "2027-04-30": 13,
+          "2027-06-30": 9,
+          "2027-09-30": 16,
+          "2027-12-30": 18,
+          "2028-03-05": 9,
+          "2028-03-30": 6,
+          "2028-04-05": 2,
+          "2028-06-30": 9,
+          "2028-09-30": 7,
+          "2028-12-30": 6
+        },
+        "pa95": {
+          "2027-04-07": 7,
+          "2027-04-30": 14,
+          "2027-06-30": 43,
+          "2027-09-30": 60,
+          "2027-12-30": 89,
+          "2028-03-05": 49,
+          "2028-03-30": 9,
+          "2028-04-05": 2,
+          "2028-06-30": 30,
+          "2028-09-30": 53,
+          "2028-12-30": 47
+        },
+        "pa_minus_2": {
+          "2027-04-07": 5,
+          "2027-04-30": 8,
+          "2027-06-30": 18,
+          "2027-09-30": 21,
+          "2027-12-30": 37,
+          "2028-03-05": 23,
+          "2028-03-30": 3,
+          "2028-04-05": 2,
+          "2028-06-30": 15,
+          "2028-09-30": 12,
+          "2028-12-30": 18
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 78,
+        "observed_before_or_at_horizon": 18430
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 101,
+          "missing_eligible_followup": 78,
+          "no_observed_hit_birthday_interval_coverage_open": 6459,
+          "right_censored_before_horizon": 11870
+        },
+        "pa95": {
+          "already_at_baseline": 2466,
+          "first_observed_after_baseline": 403,
+          "missing_eligible_followup": 61,
+          "no_observed_hit_birthday_interval_coverage_open": 4918,
+          "right_censored_before_horizon": 10660
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 697,
+          "first_observed_after_baseline": 162,
+          "missing_eligible_followup": 69,
+          "no_observed_hit_birthday_interval_coverage_open": 5984,
+          "right_censored_before_horizon": 11596
+        }
+      },
+      "n": 18508
+    },
+    "age:U18": {
+      "birthday_coverage": {
+        "before_horizon": 7055
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 2,
+          "2027-12-30": 1,
+          "2028-03-30": 1,
+          "2028-09-30": 2,
+          "2028-12-30": 3
+        },
+        "pa95": {
+          "2027-04-30": 2,
+          "2027-06-30": 3,
+          "2027-09-30": 15,
+          "2027-12-30": 7,
+          "2028-03-05": 4,
+          "2028-03-30": 5,
+          "2028-06-30": 4,
+          "2028-09-30": 17,
+          "2028-12-30": 19
+        },
+        "pa_minus_2": {
+          "2027-04-07": 1,
+          "2027-04-30": 1,
+          "2027-06-30": 4,
+          "2027-09-30": 13,
+          "2027-12-30": 5,
+          "2028-03-05": 5,
+          "2028-03-30": 3,
+          "2028-06-30": 5,
+          "2028-09-30": 11,
+          "2028-12-30": 13
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 1,
+        "observed_before_or_at_horizon": 7054
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 9,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 7045
+        },
+        "pa95": {
+          "already_at_baseline": 31,
+          "first_observed_after_baseline": 76,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 6947
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 50,
+          "first_observed_after_baseline": 61,
+          "missing_eligible_followup": 1,
+          "right_censored_before_horizon": 6943
+        }
+      },
+      "n": 7055
+    },
+    "all": {
+      "birthday_coverage": {
+        "before_horizon": 55061,
+        "crossed_without_birthday_observation": 6406,
+        "exact_birthday_observed": 146
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-07": 6,
+          "2027-04-30": 19,
+          "2027-06-30": 20,
+          "2027-09-30": 30,
+          "2027-12-30": 43,
+          "2028-03-05": 23,
+          "2028-03-30": 12,
+          "2028-04-05": 2,
+          "2028-06-30": 29,
+          "2028-09-30": 38,
+          "2028-12-30": 41
+        },
+        "pa95": {
+          "2027-04-07": 17,
+          "2027-04-30": 39,
+          "2027-06-30": 96,
+          "2027-09-30": 165,
+          "2027-12-30": 200,
+          "2028-03-05": 121,
+          "2028-03-30": 35,
+          "2028-04-05": 7,
+          "2028-06-30": 149,
+          "2028-09-30": 187,
+          "2028-12-30": 189
+        },
+        "pa_minus_2": {
+          "2027-04-07": 11,
+          "2027-04-30": 20,
+          "2027-06-30": 45,
+          "2027-09-30": 79,
+          "2027-12-30": 89,
+          "2028-03-05": 56,
+          "2028-03-30": 20,
+          "2028-04-05": 4,
+          "2028-06-30": 70,
+          "2028-09-30": 75,
+          "2028-12-30": 104
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 90,
+        "observed_before_or_at_horizon": 61523
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 263,
+          "missing_eligible_followup": 90,
+          "no_observed_hit_birthday_interval_coverage_open": 6459,
+          "right_censored_before_horizon": 54801
+        },
+        "pa95": {
+          "already_at_baseline": 3280,
+          "first_observed_after_baseline": 1205,
+          "missing_eligible_followup": 73,
+          "no_observed_hit_birthday_interval_coverage_open": 4918,
+          "right_censored_before_horizon": 52137
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 1201,
+          "first_observed_after_baseline": 573,
+          "missing_eligible_followup": 81,
+          "no_observed_hit_birthday_interval_coverage_open": 5984,
+          "right_censored_before_horizon": 53774
+        }
+      },
+      "n": 61613
+    },
+    "gap:11\u201320": {
+      "birthday_coverage": {
+        "before_horizon": 20508,
+        "crossed_without_birthday_observation": 2085,
+        "exact_birthday_observed": 52
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-09-30": 3,
+          "2027-12-30": 4,
+          "2028-03-05": 10,
+          "2028-03-30": 3,
+          "2028-04-05": 1,
+          "2028-06-30": 14,
+          "2028-09-30": 12,
+          "2028-12-30": 18
+        },
+        "pa95": {
+          "2027-06-30": 13,
+          "2027-09-30": 31,
+          "2027-12-30": 73,
+          "2028-03-05": 45,
+          "2028-03-30": 18,
+          "2028-04-05": 4,
+          "2028-06-30": 61,
+          "2028-09-30": 72,
+          "2028-12-30": 79
+        },
+        "pa_minus_2": {
+          "2027-09-30": 12,
+          "2027-12-30": 15,
+          "2028-03-05": 20,
+          "2028-03-30": 9,
+          "2028-04-05": 1,
+          "2028-06-30": 23,
+          "2028-09-30": 29,
+          "2028-12-30": 42
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 34,
+        "observed_before_or_at_horizon": 22611
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 65,
+          "missing_eligible_followup": 34,
+          "no_observed_hit_birthday_interval_coverage_open": 2113,
+          "right_censored_before_horizon": 20433
+        },
+        "pa95": {
+          "first_observed_after_baseline": 396,
+          "missing_eligible_followup": 34,
+          "no_observed_hit_birthday_interval_coverage_open": 2111,
+          "right_censored_before_horizon": 20104
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 151,
+          "missing_eligible_followup": 34,
+          "no_observed_hit_birthday_interval_coverage_open": 2113,
+          "right_censored_before_horizon": 20347
+        }
+      },
+      "n": 22645
+    },
+    "gap:1\u20132": {
+      "birthday_coverage": {
+        "before_horizon": 726,
+        "crossed_without_birthday_observation": 465,
+        "exact_birthday_observed": 10
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-04-07": 6,
+          "2027-04-30": 19,
+          "2027-06-30": 9,
+          "2027-09-30": 8,
+          "2027-12-30": 8,
+          "2028-03-05": 3,
+          "2028-03-30": 1,
+          "2028-06-30": 2,
+          "2028-09-30": 2,
+          "2028-12-30": 3
+        },
+        "pa95": {
+          "2027-06-30": 1,
+          "2027-09-30": 2,
+          "2027-12-30": 1,
+          "2028-03-05": 3,
+          "2028-06-30": 2,
+          "2028-12-30": 2
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 9,
+        "observed_before_or_at_horizon": 1192
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 61,
+          "missing_eligible_followup": 9,
+          "no_observed_hit_birthday_interval_coverage_open": 449,
+          "right_censored_before_horizon": 682
+        },
+        "pa95": {
+          "already_at_baseline": 1102,
+          "first_observed_after_baseline": 11,
+          "no_observed_hit_birthday_interval_coverage_open": 8,
+          "right_censored_before_horizon": 80
+        },
+        "pa_minus_2": {
+          "already_at_baseline": 1201
+        }
+      },
+      "n": 1201
+    },
+    "gap:21\u201330": {
+      "birthday_coverage": {
+        "before_horizon": 13638,
+        "crossed_without_birthday_observation": 504,
+        "exact_birthday_observed": 13
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2028-03-30": 1,
+          "2028-06-30": 3,
+          "2028-09-30": 8,
+          "2028-12-30": 7
+        },
+        "pa95": {
+          "2027-09-30": 1,
+          "2027-12-30": 7,
+          "2028-03-05": 8,
+          "2028-03-30": 4,
+          "2028-04-05": 1,
+          "2028-06-30": 15,
+          "2028-09-30": 27,
+          "2028-12-30": 28
+        },
+        "pa_minus_2": {
+          "2027-09-30": 1,
+          "2027-12-30": 2,
+          "2028-03-05": 2,
+          "2028-03-30": 2,
+          "2028-06-30": 9,
+          "2028-09-30": 10,
+          "2028-12-30": 14
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 7,
+        "observed_before_or_at_horizon": 14148
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 19,
+          "missing_eligible_followup": 7,
+          "no_observed_hit_birthday_interval_coverage_open": 512,
+          "right_censored_before_horizon": 13617
+        },
+        "pa95": {
+          "first_observed_after_baseline": 91,
+          "missing_eligible_followup": 7,
+          "no_observed_hit_birthday_interval_coverage_open": 512,
+          "right_censored_before_horizon": 13545
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 40,
+          "missing_eligible_followup": 7,
+          "no_observed_hit_birthday_interval_coverage_open": 512,
+          "right_censored_before_horizon": 13596
+        }
+      },
+      "n": 14155
+    },
+    "gap:3\u20135": {
+      "birthday_coverage": {
+        "before_horizon": 2203,
+        "crossed_without_birthday_observation": 1123,
+        "exact_birthday_observed": 21
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-06-30": 9,
+          "2027-09-30": 11,
+          "2027-12-30": 7,
+          "2028-03-05": 1,
+          "2028-03-30": 1,
+          "2028-04-05": 1,
+          "2028-06-30": 3,
+          "2028-09-30": 5,
+          "2028-12-30": 6
+        },
+        "pa95": {
+          "2027-04-07": 3,
+          "2027-04-30": 8,
+          "2027-06-30": 12,
+          "2027-09-30": 25,
+          "2027-12-30": 21,
+          "2028-03-05": 9,
+          "2028-03-30": 5,
+          "2028-06-30": 14,
+          "2028-09-30": 22,
+          "2028-12-30": 14
+        },
+        "pa_minus_2": {
+          "2027-04-07": 11,
+          "2027-04-30": 19,
+          "2027-06-30": 34,
+          "2027-09-30": 35,
+          "2027-12-30": 29,
+          "2028-03-05": 17,
+          "2028-03-30": 2,
+          "2028-04-05": 2,
+          "2028-06-30": 17,
+          "2028-09-30": 17,
+          "2028-12-30": 21
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 10,
+        "observed_before_or_at_horizon": 3337
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 44,
+          "missing_eligible_followup": 10,
+          "no_observed_hit_birthday_interval_coverage_open": 1132,
+          "right_censored_before_horizon": 2161
+        },
+        "pa95": {
+          "already_at_baseline": 1852,
+          "first_observed_after_baseline": 133,
+          "missing_eligible_followup": 3,
+          "no_observed_hit_birthday_interval_coverage_open": 258,
+          "right_censored_before_horizon": 1101
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 204,
+          "missing_eligible_followup": 10,
+          "no_observed_hit_birthday_interval_coverage_open": 1109,
+          "right_censored_before_horizon": 2024
+        }
+      },
+      "n": 3347
+    },
+    "gap:6\u201310": {
+      "birthday_coverage": {
+        "before_horizon": 7384,
+        "crossed_without_birthday_observation": 2104,
+        "exact_birthday_observed": 49
+      },
+      "first_seen_by_date": {
+        "full": {
+          "2027-06-30": 2,
+          "2027-09-30": 8,
+          "2027-12-30": 24,
+          "2028-03-05": 9,
+          "2028-03-30": 6,
+          "2028-06-30": 7,
+          "2028-09-30": 11,
+          "2028-12-30": 7
+        },
+        "pa95": {
+          "2027-04-07": 14,
+          "2027-04-30": 31,
+          "2027-06-30": 70,
+          "2027-09-30": 106,
+          "2027-12-30": 98,
+          "2028-03-05": 56,
+          "2028-03-30": 8,
+          "2028-04-05": 2,
+          "2028-06-30": 57,
+          "2028-09-30": 65,
+          "2028-12-30": 57
+        },
+        "pa_minus_2": {
+          "2027-04-30": 1,
+          "2027-06-30": 11,
+          "2027-09-30": 31,
+          "2027-12-30": 43,
+          "2028-03-05": 17,
+          "2028-03-30": 7,
+          "2028-04-05": 1,
+          "2028-06-30": 21,
+          "2028-09-30": 18,
+          "2028-12-30": 27
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 24,
+        "observed_before_or_at_horizon": 9513
+      },
+      "goals": {
+        "full": {
+          "first_observed_after_baseline": 74,
+          "missing_eligible_followup": 24,
+          "no_observed_hit_birthday_interval_coverage_open": 2129,
+          "right_censored_before_horizon": 7310
+        },
+        "pa95": {
+          "already_at_baseline": 326,
+          "first_observed_after_baseline": 564,
+          "missing_eligible_followup": 23,
+          "no_observed_hit_birthday_interval_coverage_open": 1905,
+          "right_censored_before_horizon": 6719
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 177,
+          "missing_eligible_followup": 24,
+          "no_observed_hit_birthday_interval_coverage_open": 2126,
+          "right_censored_before_horizon": 7210
+        }
+      },
+      "n": 9537
+    },
+    "gap:>30": {
+      "birthday_coverage": {
+        "before_horizon": 10602,
+        "crossed_without_birthday_observation": 125,
+        "exact_birthday_observed": 1
+      },
+      "first_seen_by_date": {
+        "pa95": {
+          "2028-09-30": 1,
+          "2028-12-30": 9
+        },
+        "pa_minus_2": {
+          "2028-09-30": 1
+        }
+      },
+      "followup": {
+        "missing_before_or_at_horizon": 6,
+        "observed_before_or_at_horizon": 10722
+      },
+      "goals": {
+        "full": {
+          "missing_eligible_followup": 6,
+          "no_observed_hit_birthday_interval_coverage_open": 124,
+          "right_censored_before_horizon": 10598
+        },
+        "pa95": {
+          "first_observed_after_baseline": 10,
+          "missing_eligible_followup": 6,
+          "no_observed_hit_birthday_interval_coverage_open": 124,
+          "right_censored_before_horizon": 10588
+        },
+        "pa_minus_2": {
+          "first_observed_after_baseline": 1,
+          "missing_eligible_followup": 6,
+          "no_observed_hit_birthday_interval_coverage_open": 124,
+          "right_censored_before_horizon": 10597
+        }
+      },
+      "n": 10728
+    }
+  },
+  "independent_careers": 1,
+  "last_checkpoint": "2028-12-30",
+  "outside_risk_cohort_already_at_full_pa": 434,
+  "schema": "pa-reach-retention-fixed-pa-hits/v1",
+  "snapshots": {
+    "2027-03-30": {
+      "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+      "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    },
+    "2027-04-07": {
+      "native_sha256": "dc1be796cb5cf6ea5caf0f04bb0230c052875ef501293dc805a458b20a91c24e",
+      "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a"
+    },
+    "2027-04-30": {
+      "native_sha256": "220f6bc79058272816913fb6f19517ce8279430583d65c4cbc8e1ea7f97b291e",
+      "save_sha256": "d2b2feabde2c324993d3584ae0b6f51649fa81b9a40ef36c598d110147a591b9"
+    },
+    "2027-06-30": {
+      "native_sha256": "e651e5174995bd95b0e71c708f4595d0163c0bc6fb47e7e4bd149bc8956cba6e",
+      "save_sha256": "040140911df6862dcc21bd20e0ba5b1acfeb616af7a66052bebbcd4ac1932088"
+    },
+    "2027-07-02": {
+      "native_sha256": "b78888aaac0fedcbd83eac9dcc9ab881092262af8aafd73e2a26e1ffae75a5dc",
+      "save_sha256": "09297f2e9af3573299b1ac8985a9877718796fca0a16426c980ec446490d672e"
+    },
+    "2027-09-30": {
+      "native_sha256": "6a3ecfd1a8b7564c0e303ea06a2cc119caaac44918ecb2298e2bc350601691b8",
+      "save_sha256": "a06b6e5f0aa32eeec1a7365b03afc5b0c9d6be303ef728fa6166b1c5f6591456"
+    },
+    "2027-12-30": {
+      "native_sha256": "a4955d42dfb7fa57b09d661231d6aa436e59eaeee00b381a283aab51d6f841b9",
+      "save_sha256": "121cdf2c90abcf9f765d8e84939dbfceb49062682d18632e36d8252c78d3835c"
+    },
+    "2028-03-05": {
+      "native_sha256": "fbf18cd7a9da672e9edb23cb46eba3ef798c15b2dd1af178d74ff5e90c2cb423",
+      "save_sha256": "257d9cf1b93012b91d7920d9b7394d9692d988c535c2c5d25d1c4c65043e125e"
+    },
+    "2028-03-30": {
+      "native_sha256": "0c34736196be1080a6b493dd28639675936038c0ba0a9575a2662cb719d014c5",
+      "save_sha256": "4c225451d135a6ddea09625c9de6a5fe92befdfae44db583121c0e2766139fa1"
+    },
+    "2028-04-05": {
+      "native_sha256": "ac1eb39f132136ec8909268f490dec0579fbc56a718167f7a084431b539ce4ab",
+      "save_sha256": "27e3fe396d112ae6271a040077ff97957b0a121db340283f7de0dbfddc284401"
+    },
+    "2028-06-30": {
+      "native_sha256": "2d425d89f36c77e082403f86263f7a69c19d093d8cc36abdd6f9518559141fc6",
+      "save_sha256": "a782aa90d18a6b145869dd4547dd54f2219e18cd8162771e4889b32ec543b2b4"
+    },
+    "2028-09-30": {
+      "native_sha256": "317ef6a73b0de7bc5044f288c1d45266ace2df3fedd0e5132162b487b6860aa2",
+      "save_sha256": "0797b95e010919b3c223262424976924a18b99d8c8a7d7725ea16d0ebe0c6143"
+    },
+    "2028-12-30": {
+      "native_sha256": "491f07ffb29783d16d3fe7651f5052495b806cd4a6d4fed9f949e8ef4ac763ef",
+      "save_sha256": "0704de8500328709c9accfcde1f748314734275a04e6bbba41271b3e4e0e06f9"
+    }
+  }
+}
