@@ -1,0 +1,15 @@
+{
+  "status": "exploratory_secondary_analysis_after_inspection_of_age_gap_group_means",
+  "career": "TRAIN005-A",
+  "build": "27.0.1+2503222",
+  "start": "2027-01-16",
+  "end": "2027-02-04",
+  "outcome": "end_ca_minus_start_ca",
+  "inclusion": "all baseline outfield players below age 28 with matched career, database identity, date of birth and observed endpoint",
+  "descriptive_correlations": ["age", "gap", "ca", "pa", "candidate_byte_1_to_5"],
+  "within_groups": ["baseline_age_band", "baseline_best_natural_position"],
+  "adjustment": ["baseline_age_center_20", "baseline_gap_per_10_center_20", "baseline_CA_per_10_center_100", "age_by_gap", "baseline_position", "baseline_candidate_category_reference_3", "candidate_by_gap"],
+  "uncertainty": "separate fit in baseline-club-verified subset, CR1 club-cluster sandwich and t(G-1), no interval across careers",
+  "multiplicity": "Holm across all non-intercept coefficients of the club-subset fit, including position contrasts. Other summaries descriptive.",
+  "outcome_validation": false
+}

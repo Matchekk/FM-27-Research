@@ -1,0 +1,26 @@
+{
+  "experiment": "PA-REACH-001-ZD-CONTROL-01",
+  "mode": "exploratory_one_career_pilot",
+  "root_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+  "engine_build": "27.1.0+2505117",
+  "baseline_day": "2027-03-30",
+  "planned_first_checkpoint": "one calendar month or nearest selectable four-week return",
+  "planned_extended_checkpoint": "season boundary if throughput and private save provenance permit",
+  "treatment": "built-in holiday with delegated matches as a distinct observational regime",
+  "comparative_treatment": null,
+  "primary_observation": "paired stored current ability change by verified player identity",
+  "tier_observation": "candidate byte at CA+7, no tier setter",
+  "new_seed_reservations": 0,
+  "independent_career_roots": 1,
+  "planned_parallel_controllers": 1,
+  "starting_save_bytes": 162182704,
+  "single_season_storage_estimate_gb": [2, 4],
+  "storage_estimate_basis": "12 monthly saves at baseline size plus changing file sizes, inventories and retention for recovery",
+  "stop_conditions": [
+    "active test path, clock, identity or build cannot be verified",
+    "destination could write a personal file",
+    "unbounded return, unknown blocking state or process failure",
+    "unexpected personal-profile or mod interaction"
+  ],
+  "causal_estimate": null
+}

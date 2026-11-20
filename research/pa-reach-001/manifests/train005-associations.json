@@ -1,0 +1,941 @@
+{
+  "plan": "association-plan.json",
+  "build": "27.0.1+2503222",
+  "root_careers": 1,
+  "paired_distinct_outfield_players_under_28": 59704,
+  "complete_player_seasons": 0,
+  "days": 19,
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "baseline_club_missing": 35308,
+  "baseline_candidate_exclusions_for_byte_analyses": 23,
+  "delta_distribution": {
+    "-3": 2,
+    "-2": 16,
+    "-1": 241,
+    "0": 53206,
+    "1": 3913,
+    "2": 1690,
+    "3": 474,
+    "4": 101,
+    "5": 38,
+    "6": 19,
+    "7": 4
+  },
+  "correlations": {
+    "age_gap": {
+      "n": 59704,
+      "pearson": -0.5332670447988089,
+      "spearman": -0.5323952837913022
+    },
+    "age_ca": {
+      "n": 59704,
+      "pearson": 0.3259254513518066,
+      "spearman": 0.3276386503686889
+    },
+    "age_pa": {
+      "n": 59704,
+      "pearson": 0.0615238271085798,
+      "spearman": 0.04989147785785796
+    },
+    "age_candidate": {
+      "n": 59681,
+      "pearson": -0.07849916479631944,
+      "spearman": -0.08496079963194127
+    },
+    "age_delta": {
+      "n": 59704,
+      "pearson": -0.2492031322236158,
+      "spearman": -0.26684426369438674
+    },
+    "gap_ca": {
+      "n": 59704,
+      "pearson": -0.11890780742604765,
+      "spearman": -0.11144807480778934
+    },
+    "gap_pa": {
+      "n": 59704,
+      "pearson": 0.3492110997084263,
+      "spearman": 0.3374395868979275
+    },
+    "gap_candidate": {
+      "n": 59681,
+      "pearson": -0.0010319469105451872,
+      "spearman": -0.018510595711265603
+    },
+    "gap_delta": {
+      "n": 59704,
+      "pearson": 0.2524318957632025,
+      "spearman": 0.25601509815839263
+    },
+    "ca_pa": {
+      "n": 59704,
+      "pearson": 0.8888721064813601,
+      "spearman": 0.8601638152460003
+    },
+    "ca_candidate": {
+      "n": 59681,
+      "pearson": 0.23117319632180255,
+      "spearman": 0.23836519119471808
+    },
+    "ca_delta": {
+      "n": 59704,
+      "pearson": -0.023782574099881732,
+      "spearman": -0.024675898681295765
+    },
+    "pa_candidate": {
+      "n": 59681,
+      "pearson": 0.21783183407444837,
+      "spearman": 0.23479688218473596
+    },
+    "pa_delta": {
+      "n": 59704,
+      "pearson": 0.09403486729049458,
+      "spearman": 0.11188633759633386
+    },
+    "candidate_delta": {
+      "n": 59681,
+      "pearson": 0.14742816248810897,
+      "spearman": 0.16210730066813506
+    }
+  },
+  "verified_club_subset_correlations": {
+    "age": {
+      "n": 24396,
+      "pearson": -0.2697967767847099,
+      "spearman": -0.3002560918470704,
+      "baseline_clubs": 1365,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        -0.28278124111943037,
+        -0.2556151494115865
+      ],
+      "spearman_95ci": [
+        -0.31609594664421353,
+        -0.2828153307946863
+      ]
+    },
+    "gap": {
+      "n": 24396,
+      "pearson": 0.2786784417200905,
+      "spearman": 0.2862957620945691,
+      "baseline_clubs": 1365,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        0.2624374847748202,
+        0.2952016538782352
+      ],
+      "spearman_95ci": [
+        0.27174976597823414,
+        0.3008343862270234
+      ]
+    },
+    "ca": {
+      "n": 24396,
+      "pearson": -0.07344421361123527,
+      "spearman": -0.081795509515268,
+      "baseline_clubs": 1365,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        -0.0959732748121863,
+        -0.05482615382342802
+      ],
+      "spearman_95ci": [
+        -0.10234342584074194,
+        -0.06230686898230025
+      ]
+    },
+    "pa": {
+      "n": 24396,
+      "pearson": 0.06769765992098767,
+      "spearman": 0.0799620180522838,
+      "baseline_clubs": 1365,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        0.04472905926630007,
+        0.08578148433453558
+      ],
+      "spearman_95ci": [
+        0.06071699146271592,
+        0.09828333324621513
+      ]
+    },
+    "candidate": {
+      "n": 24378,
+      "pearson": 0.1361330666158159,
+      "spearman": 0.15119249852517985,
+      "baseline_clubs": 1365,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        0.12258494145295185,
+        0.14754669306016063
+      ],
+      "spearman_95ci": [
+        0.13772901917112101,
+        0.16336414019508613
+      ]
+    }
+  },
+  "within_groups": {
+    "age_lt18": {
+      "age_delta": {
+        "n": 5680,
+        "pearson": -0.01915310192536285,
+        "spearman": -0.031903238006477645
+      },
+      "gap_delta": {
+        "n": 5680,
+        "pearson": 0.14743269062512082,
+        "spearman": 0.15328974588559707
+      },
+      "ca_delta": {
+        "n": 5680,
+        "pearson": 0.13886507157098196,
+        "spearman": 0.14120695441754316
+      },
+      "pa_delta": {
+        "n": 5680,
+        "pearson": 0.17140286598516088,
+        "spearman": 0.18166830477199328
+      },
+      "candidate_delta": {
+        "n": 5657,
+        "pearson": 0.1456561772991666,
+        "spearman": 0.1447414727537509
+      }
+    },
+    "age_18_20": {
+      "age_delta": {
+        "n": 19306,
+        "pearson": -0.1483700333859737,
+        "spearman": -0.16407147152594964
+      },
+      "gap_delta": {
+        "n": 19306,
+        "pearson": 0.19238093494914243,
+        "spearman": 0.21911071275961314
+      },
+      "ca_delta": {
+        "n": 19306,
+        "pearson": 0.059358986884449724,
+        "spearman": 0.07081307278770921
+      },
+      "pa_delta": {
+        "n": 19306,
+        "pearson": 0.1366609279156094,
+        "spearman": 0.1676919136368785
+      },
+      "candidate_delta": {
+        "n": 19306,
+        "pearson": 0.14806246860780872,
+        "spearman": 0.16306322796025802
+      }
+    },
+    "age_21_23": {
+      "age_delta": {
+        "n": 16476,
+        "pearson": -0.011967087088367098,
+        "spearman": 0.012558975298084045
+      },
+      "gap_delta": {
+        "n": 16476,
+        "pearson": 0.0826123912527174,
+        "spearman": 0.08444881971618859
+      },
+      "ca_delta": {
+        "n": 16476,
+        "pearson": 0.045082233777659506,
+        "spearman": 0.05276049155861558
+      },
+      "pa_delta": {
+        "n": 16476,
+        "pearson": 0.07114859812353207,
+        "spearman": 0.08296690255170759
+      },
+      "candidate_delta": {
+        "n": 16476,
+        "pearson": 0.14967718748823178,
+        "spearman": 0.16769057999717282
+      }
+    },
+    "age_24_27": {
+      "age_delta": {
+        "n": 18242,
+        "pearson": -0.054104444256692204,
+        "spearman": -0.051380868248480656
+      },
+      "gap_delta": {
+        "n": 18242,
+        "pearson": 0.0672697846790906,
+        "spearman": 0.06183987564275582
+      },
+      "ca_delta": {
+        "n": 18242,
+        "pearson": 0.07045348737211356,
+        "spearman": 0.06545701626040344
+      },
+      "pa_delta": {
+        "n": 18242,
+        "pearson": 0.09150742239429986,
+        "spearman": 0.08896072951663553
+      },
+      "candidate_delta": {
+        "n": 18242,
+        "pearson": 0.11940516724658307,
+        "spearman": 0.11531634766786832
+      }
+    },
+    "position_AMC": {
+      "age_delta": {
+        "n": 4582,
+        "pearson": -0.27842599102591886,
+        "spearman": -0.2898623591035204
+      },
+      "gap_delta": {
+        "n": 4582,
+        "pearson": 0.28476018790911356,
+        "spearman": 0.2876140396005764
+      },
+      "ca_delta": {
+        "n": 4582,
+        "pearson": -0.028291659608964265,
+        "spearman": -0.021523770411140158
+      },
+      "pa_delta": {
+        "n": 4582,
+        "pearson": 0.11214904967147803,
+        "spearman": 0.1334809759277005
+      },
+      "candidate_delta": {
+        "n": 4580,
+        "pearson": 0.1368507034365314,
+        "spearman": 0.15609701449492927
+      }
+    },
+    "position_AML": {
+      "age_delta": {
+        "n": 5073,
+        "pearson": -0.26488811624107894,
+        "spearman": -0.2786080132403064
+      },
+      "gap_delta": {
+        "n": 5073,
+        "pearson": 0.27866492816481736,
+        "spearman": 0.26514779722848625
+      },
+      "ca_delta": {
+        "n": 5073,
+        "pearson": -0.032602966350135834,
+        "spearman": -0.03342323991219054
+      },
+      "pa_delta": {
+        "n": 5073,
+        "pearson": 0.10297583810959873,
+        "spearman": 0.11326317637640183
+      },
+      "candidate_delta": {
+        "n": 5072,
+        "pearson": 0.14545150506100077,
+        "spearman": 0.16496529180218342
+      }
+    },
+    "position_AMR": {
+      "age_delta": {
+        "n": 4927,
+        "pearson": -0.24703280625391025,
+        "spearman": -0.2636324794652394
+      },
+      "gap_delta": {
+        "n": 4927,
+        "pearson": 0.2580537377374545,
+        "spearman": 0.25553918044175084
+      },
+      "ca_delta": {
+        "n": 4927,
+        "pearson": -0.017265436151841673,
+        "spearman": -0.018863555010842786
+      },
+      "pa_delta": {
+        "n": 4927,
+        "pearson": 0.1047049941367221,
+        "spearman": 0.12695894569762492
+      },
+      "candidate_delta": {
+        "n": 4926,
+        "pearson": 0.1392862532229901,
+        "spearman": 0.15203077082044508
+      }
+    },
+    "position_DC": {
+      "age_delta": {
+        "n": 10517,
+        "pearson": -0.24647011087435777,
+        "spearman": -0.2678084910586559
+      },
+      "gap_delta": {
+        "n": 10517,
+        "pearson": 0.25295204056067633,
+        "spearman": 0.25643162463094943
+      },
+      "ca_delta": {
+        "n": 10517,
+        "pearson": -0.024211653484684254,
+        "spearman": -0.03547800983846565
+      },
+      "pa_delta": {
+        "n": 10517,
+        "pearson": 0.09629034551299567,
+        "spearman": 0.10619577967850907
+      },
+      "candidate_delta": {
+        "n": 10512,
+        "pearson": 0.14681433102196573,
+        "spearman": 0.1627434660060183
+      }
+    },
+    "position_DL": {
+      "age_delta": {
+        "n": 4476,
+        "pearson": -0.25938450498835425,
+        "spearman": -0.28062017100782277
+      },
+      "gap_delta": {
+        "n": 4476,
+        "pearson": 0.26836561953878385,
+        "spearman": 0.2630981663951037
+      },
+      "ca_delta": {
+        "n": 4476,
+        "pearson": -0.03295341724062813,
+        "spearman": -0.030248299567605542
+      },
+      "pa_delta": {
+        "n": 4476,
+        "pearson": 0.09797326059255942,
+        "spearman": 0.11975728737311972
+      },
+      "candidate_delta": {
+        "n": 4473,
+        "pearson": 0.16728084738742555,
+        "spearman": 0.1768160853602938
+      }
+    },
+    "position_DM": {
+      "age_delta": {
+        "n": 5177,
+        "pearson": -0.24010879344768893,
+        "spearman": -0.26498651828089637
+      },
+      "gap_delta": {
+        "n": 5177,
+        "pearson": 0.23811275055079778,
+        "spearman": 0.2590179294160945
+      },
+      "ca_delta": {
+        "n": 5177,
+        "pearson": -0.043709099559025015,
+        "spearman": -0.04554245805821802
+      },
+      "pa_delta": {
+        "n": 5177,
+        "pearson": 0.06752041969210348,
+        "spearman": 0.0892093595391665
+      },
+      "candidate_delta": {
+        "n": 5173,
+        "pearson": 0.1375256047295569,
+        "spearman": 0.15604719522744528
+      }
+    },
+    "position_DR": {
+      "age_delta": {
+        "n": 4578,
+        "pearson": -0.2386046565137853,
+        "spearman": -0.2536281000141783
+      },
+      "gap_delta": {
+        "n": 4578,
+        "pearson": 0.23573950507566274,
+        "spearman": 0.23163403787602546
+      },
+      "ca_delta": {
+        "n": 4578,
+        "pearson": -0.023618793071004167,
+        "spearman": -0.034896072361326864
+      },
+      "pa_delta": {
+        "n": 4578,
+        "pearson": 0.08725611938964623,
+        "spearman": 0.09963696182359534
+      },
+      "candidate_delta": {
+        "n": 4577,
+        "pearson": 0.15852708474297914,
+        "spearman": 0.17064183246554407
+      }
+    },
+    "position_MC": {
+      "age_delta": {
+        "n": 8631,
+        "pearson": -0.24444113676839416,
+        "spearman": -0.25673198328435276
+      },
+      "gap_delta": {
+        "n": 8631,
+        "pearson": 0.23164731714716486,
+        "spearman": 0.2446671365816655
+      },
+      "ca_delta": {
+        "n": 8631,
+        "pearson": -0.022878660123524158,
+        "spearman": -0.01348758336652307
+      },
+      "pa_delta": {
+        "n": 8631,
+        "pearson": 0.08246286023674908,
+        "spearman": 0.10354682199058131
+      },
+      "candidate_delta": {
+        "n": 8629,
+        "pearson": 0.15574738248068662,
+        "spearman": 0.16452463417935728
+      }
+    },
+    "position_ML": {
+      "age_delta": {
+        "n": 653,
+        "pearson": -0.193163781788775,
+        "spearman": -0.17834751290791895
+      },
+      "gap_delta": {
+        "n": 653,
+        "pearson": 0.1604670406823185,
+        "spearman": 0.16808527426601533
+      },
+      "ca_delta": {
+        "n": 653,
+        "pearson": 0.0014869274531468916,
+        "spearman": 0.0020000835990746134
+      },
+      "pa_delta": {
+        "n": 653,
+        "pearson": 0.060864705139364574,
+        "spearman": 0.06591999251677907
+      },
+      "candidate_delta": {
+        "n": 653,
+        "pearson": 0.15188287977816692,
+        "spearman": 0.18805111254415557
+      }
+    },
+    "position_MR": {
+      "age_delta": {
+        "n": 786,
+        "pearson": -0.22213157597542427,
+        "spearman": -0.23571112756863488
+      },
+      "gap_delta": {
+        "n": 786,
+        "pearson": 0.2575097920205321,
+        "spearman": 0.27223700135152107
+      },
+      "ca_delta": {
+        "n": 786,
+        "pearson": -0.02243491493309217,
+        "spearman": -0.01798257763806569
+      },
+      "pa_delta": {
+        "n": 786,
+        "pearson": 0.08997520963243062,
+        "spearman": 0.11704352926213762
+      },
+      "candidate_delta": {
+        "n": 785,
+        "pearson": 0.08636354438412434,
+        "spearman": 0.10938627140736558
+      }
+    },
+    "position_STC": {
+      "age_delta": {
+        "n": 9305,
+        "pearson": -0.2459864435732849,
+        "spearman": -0.26860087680495387
+      },
+      "gap_delta": {
+        "n": 9305,
+        "pearson": 0.25149366944958307,
+        "spearman": 0.25476100754168524
+      },
+      "ca_delta": {
+        "n": 9305,
+        "pearson": -0.0087566251943201,
+        "spearman": -0.008355420200487858
+      },
+      "pa_delta": {
+        "n": 9305,
+        "pearson": 0.11011850363442471,
+        "spearman": 0.12980910671278773
+      },
+      "candidate_delta": {
+        "n": 9302,
+        "pearson": 0.15270748282709146,
+        "spearman": 0.1647208664436516
+      }
+    },
+    "position_WBL": {
+      "age_delta": {
+        "n": 677,
+        "pearson": -0.23502766990744786,
+        "spearman": -0.2523877544265669
+      },
+      "gap_delta": {
+        "n": 677,
+        "pearson": 0.2364105830451887,
+        "spearman": 0.2513538139807353
+      },
+      "ca_delta": {
+        "n": 677,
+        "pearson": -0.05008096161573131,
+        "spearman": -0.045317996364192904
+      },
+      "pa_delta": {
+        "n": 677,
+        "pearson": 0.038124968452688465,
+        "spearman": 0.05005779256778871
+      },
+      "candidate_delta": {
+        "n": 677,
+        "pearson": 0.07319088916841839,
+        "spearman": 0.0783541485348767
+      }
+    },
+    "position_WBR": {
+      "age_delta": {
+        "n": 322,
+        "pearson": -0.3357808734330152,
+        "spearman": -0.32061913956425603
+      },
+      "gap_delta": {
+        "n": 322,
+        "pearson": 0.2730803617390145,
+        "spearman": 0.2511653536218011
+      },
+      "ca_delta": {
+        "n": 322,
+        "pearson": -0.014884974223816889,
+        "spearman": -0.023391231761384485
+      },
+      "pa_delta": {
+        "n": 322,
+        "pearson": 0.09683380136829503,
+        "spearman": 0.09850503080903994
+      },
+      "candidate_delta": {
+        "n": 322,
+        "pearson": 0.17728610455606042,
+        "spearman": 0.20454616816139662
+      }
+    }
+  },
+  "partial_pearson_delta": {
+    "age": -0.14943578716471187,
+    "gap": 0.14212464409597841
+  },
+  "adjusted": {
+    "all_paired": {
+      "n": 59681,
+      "coefficients": {
+        "intercept": {
+          "coefficient": 0.17783672014565252
+        },
+        "age_year": {
+          "coefficient": -0.03025302072797033
+        },
+        "gap_10": {
+          "coefficient": 0.10760339133794747
+        },
+        "ca_10": {
+          "coefficient": 0.0013206379685956977
+        },
+        "age_year_x_gap_10": {
+          "coefficient": -0.015055011348297414
+        },
+        "byte_1_vs_3": {
+          "coefficient": -0.12483451277786578
+        },
+        "byte_1_vs_3_x_gap_10": {
+          "coefficient": -0.09168165355041588
+        },
+        "byte_2_vs_3": {
+          "coefficient": -0.09381052387157623
+        },
+        "byte_2_vs_3_x_gap_10": {
+          "coefficient": -0.05965876366643299
+        },
+        "byte_4_vs_3": {
+          "coefficient": 0.08800527276610846
+        },
+        "byte_4_vs_3_x_gap_10": {
+          "coefficient": -0.015905418865185886
+        },
+        "byte_5_vs_3": {
+          "coefficient": 0.1325447273695702
+        },
+        "byte_5_vs_3_x_gap_10": {
+          "coefficient": -0.04359732413009656
+        },
+        "position_AMC_vs_DC": {
+          "coefficient": 0.028921250321189633
+        },
+        "position_AML_vs_DC": {
+          "coefficient": 0.008873465151888894
+        },
+        "position_AMR_vs_DC": {
+          "coefficient": 0.0011834972109692
+        },
+        "position_DL_vs_DC": {
+          "coefficient": 0.006883538238733355
+        },
+        "position_DM_vs_DC": {
+          "coefficient": 0.020420770272041356
+        },
+        "position_DR_vs_DC": {
+          "coefficient": 0.0006995334432791325
+        },
+        "position_MC_vs_DC": {
+          "coefficient": 0.011061897453477281
+        },
+        "position_ML_vs_DC": {
+          "coefficient": 0.02060013129698231
+        },
+        "position_MR_vs_DC": {
+          "coefficient": 0.009632862275060848
+        },
+        "position_STC_vs_DC": {
+          "coefficient": 0.0009883836705369912
+        },
+        "position_WBL_vs_DC": {
+          "coefficient": 0.010371668015418424
+        },
+        "position_WBR_vs_DC": {
+          "coefficient": 0.022607516798883523
+        }
+      },
+      "descriptive_r_squared": 0.11530601319781253
+    },
+    "verified_club_subset": {
+      "n": 24378,
+      "coefficients": {
+        "intercept": {
+          "coefficient": 0.18583495876420827,
+          "club_conditional_pointwise_95ci": [
+            0.16550166385981346,
+            0.20616825366860309
+          ]
+        },
+        "age_year": {
+          "coefficient": -0.035614998104187646,
+          "club_conditional_pointwise_95ci": [
+            -0.03939969823811327,
+            -0.031830297970262024
+          ],
+          "holm_p": 1.0212387954446837e-66
+        },
+        "gap_10": {
+          "coefficient": 0.10896606903050975,
+          "club_conditional_pointwise_95ci": [
+            0.09655551217852347,
+            0.12137662588249602
+          ],
+          "holm_p": 6.021061146768874e-59
+        },
+        "ca_10": {
+          "coefficient": -0.0010656139788301285,
+          "club_conditional_pointwise_95ci": [
+            -0.005788125559424649,
+            0.0036568976017643923
+          ],
+          "holm_p": 1.0
+        },
+        "age_year_x_gap_10": {
+          "coefficient": -0.01859748468560605,
+          "club_conditional_pointwise_95ci": [
+            -0.021520598317072648,
+            -0.01567437105413945
+          ],
+          "holm_p": 1.2538669506423302e-32
+        },
+        "byte_1_vs_3": {
+          "coefficient": -0.14281365809207744,
+          "club_conditional_pointwise_95ci": [
+            -0.1599877202461213,
+            -0.1256395959380336
+          ],
+          "holm_p": 1.9070498231000594e-53
+        },
+        "byte_1_vs_3_x_gap_10": {
+          "coefficient": -0.101617480300019,
+          "club_conditional_pointwise_95ci": [
+            -0.1242816793040864,
+            -0.07895328129595161
+          ],
+          "holm_p": 8.002441663344544e-17
+        },
+        "byte_2_vs_3": {
+          "coefficient": -0.10484808794691447,
+          "club_conditional_pointwise_95ci": [
+            -0.12032476019716559,
+            -0.08937141569666335
+          ],
+          "holm_p": 1.1485712943124387e-36
+        },
+        "byte_2_vs_3_x_gap_10": {
+          "coefficient": -0.05177464985911074,
+          "club_conditional_pointwise_95ci": [
+            -0.0716561640612956,
+            -0.03189313565692588
+          ],
+          "holm_p": 5.929392590421446e-06
+        },
+        "byte_4_vs_3": {
+          "coefficient": 0.09109692694973899,
+          "club_conditional_pointwise_95ci": [
+            0.07009836349607235,
+            0.11209549040340563
+          ],
+          "holm_p": 8.106029466716466e-16
+        },
+        "byte_4_vs_3_x_gap_10": {
+          "coefficient": -0.0239910022189213,
+          "club_conditional_pointwise_95ci": [
+            -0.0434253729675514,
+            -0.0045566314702912
+          ],
+          "holm_p": 0.2025386555031614
+        },
+        "byte_5_vs_3": {
+          "coefficient": 0.1342891990087587,
+          "club_conditional_pointwise_95ci": [
+            0.09694064317292188,
+            0.17163775484459548
+          ],
+          "holm_p": 4.7036577982703636e-11
+        },
+        "byte_5_vs_3_x_gap_10": {
+          "coefficient": -0.05012727714097569,
+          "club_conditional_pointwise_95ci": [
+            -0.08292031470725914,
+            -0.017334239574692233
+          ],
+          "holm_p": 0.041413106040410534
+        },
+        "position_AMC_vs_DC": {
+          "coefficient": 0.0424274173187092,
+          "club_conditional_pointwise_95ci": [
+            0.009169940773340289,
+            0.07568489386407812
+          ],
+          "holm_p": 0.17422750506804882
+        },
+        "position_AML_vs_DC": {
+          "coefficient": 0.01202349041676702,
+          "club_conditional_pointwise_95ci": [
+            -0.013657613491342072,
+            0.03770459432487611
+          ],
+          "holm_p": 1.0
+        },
+        "position_AMR_vs_DC": {
+          "coefficient": -0.0029598039113562075,
+          "club_conditional_pointwise_95ci": [
+            -0.033825486117863686,
+            0.027905878295151273
+          ],
+          "holm_p": 1.0
+        },
+        "position_DL_vs_DC": {
+          "coefficient": 0.009137586074056686,
+          "club_conditional_pointwise_95ci": [
+            -0.021862812846345774,
+            0.04013798499445915
+          ],
+          "holm_p": 1.0
+        },
+        "position_DM_vs_DC": {
+          "coefficient": 0.010311354753504092,
+          "club_conditional_pointwise_95ci": [
+            -0.019694386228714292,
+            0.04031709573572248
+          ],
+          "holm_p": 1.0
+        },
+        "position_DR_vs_DC": {
+          "coefficient": -0.016200641425464953,
+          "club_conditional_pointwise_95ci": [
+            -0.04491159738016373,
+            0.012510314529233822
+          ],
+          "holm_p": 1.0
+        },
+        "position_MC_vs_DC": {
+          "coefficient": 0.005271565688385717,
+          "club_conditional_pointwise_95ci": [
+            -0.020252982915792632,
+            0.03079611429256407
+          ],
+          "holm_p": 1.0
+        },
+        "position_ML_vs_DC": {
+          "coefficient": 0.04434638257670492,
+          "club_conditional_pointwise_95ci": [
+            -0.030900671984998067,
+            0.1195934371384079
+          ],
+          "holm_p": 1.0
+        },
+        "position_MR_vs_DC": {
+          "coefficient": 0.004955454852369185,
+          "club_conditional_pointwise_95ci": [
+            -0.05389678239769297,
+            0.06380769210243134
+          ],
+          "holm_p": 1.0
+        },
+        "position_STC_vs_DC": {
+          "coefficient": -0.0055837025363364625,
+          "club_conditional_pointwise_95ci": [
+            -0.031438824062808096,
+            0.020271418990135168
+          ],
+          "holm_p": 1.0
+        },
+        "position_WBL_vs_DC": {
+          "coefficient": 0.06993223929757986,
+          "club_conditional_pointwise_95ci": [
+            -0.05422100251962139,
+            0.1940854811147811
+          ],
+          "holm_p": 1.0
+        },
+        "position_WBR_vs_DC": {
+          "coefficient": 0.019423691054214924,
+          "club_conditional_pointwise_95ci": [
+            -0.06385382557230587,
+            0.10270120768073573
+          ],
+          "holm_p": 1.0
+        }
+      },
+      "descriptive_r_squared": 0.12812259241954227,
+      "baseline_clubs": 1365
+    }
+  },
+  "career_cluster_95ci": null,
+  "seasonal_effect": null,
+  "causal_ate": null
+}

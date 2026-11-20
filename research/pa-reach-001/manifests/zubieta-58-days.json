@@ -1,0 +1,391 @@
+{
+  "baseline_median_ca_over_pa": {
+    "0": 0.4444,
+    "1": 0.8235,
+    "2": 0.8261,
+    "3": 0.84,
+    "4": 0.8593,
+    "5": 0.8598
+  },
+  "baseline_outfield_under28_endpoint_counts": {
+    "full": {
+      "already_at_baseline": 434,
+      "horizon_passed_without_observed_hit_sparse_sampling": 732,
+      "newly_observed_hit": 37,
+      "right_censored": 59432
+    },
+    "pa95": {
+      "already_at_baseline": 3780,
+      "horizon_passed_without_observed_hit_sparse_sampling": 546,
+      "newly_observed_hit": 154,
+      "right_censored": 56155
+    },
+    "pa_minus_2": {
+      "already_at_baseline": 1642,
+      "horizon_passed_without_observed_hit_sparse_sampling": 659,
+      "newly_observed_hit": 86,
+      "right_censored": 58248
+    }
+  },
+  "build": "27.1.0+2505117",
+  "byte_counts": {
+    "2027-01-31": {
+      "0": 529,
+      "1": 6687,
+      "2": 20362,
+      "3": 47297,
+      "4": 15086,
+      "5": 4747
+    },
+    "2027-03-30": {
+      "0": 1273,
+      "1": 6868,
+      "2": 20851,
+      "3": 48029,
+      "4": 15406,
+      "5": 4831
+    }
+  },
+  "calibration_metrics": null,
+  "career_cluster_count": 1,
+  "club_and_candidate_intervals": [
+    {
+      "changed": 17,
+      "club": "different",
+      "end": "2027-03-30",
+      "intervals": 32,
+      "start": "2027-01-31"
+    },
+    {
+      "changed": 782,
+      "club": "same",
+      "end": "2027-03-30",
+      "intervals": 36896,
+      "start": "2027-01-31"
+    },
+    {
+      "changed": 1056,
+      "club": "unknown",
+      "end": "2027-03-30",
+      "intervals": 57130,
+      "start": "2027-01-31"
+    }
+  ],
+  "days_between_endpoints": 58,
+  "first_last_candidate_transitions": {
+    "0->1": 41,
+    "0->2": 139,
+    "0->3": 231,
+    "0->4": 92,
+    "0->5": 24,
+    "1->1": 6549,
+    "1->2": 41,
+    "1->3": 70,
+    "1->4": 12,
+    "1->5": 6,
+    "2->1": 39,
+    "2->2": 20024,
+    "2->3": 213,
+    "2->4": 53,
+    "2->5": 15,
+    "3->1": 100,
+    "3->2": 259,
+    "3->3": 46449,
+    "3->4": 303,
+    "3->5": 113,
+    "4->1": 15,
+    "4->2": 67,
+    "4->3": 291,
+    "4->4": 14639,
+    "4->5": 55,
+    "5->1": 8,
+    "5->2": 27,
+    "5->3": 106,
+    "5->4": 62,
+    "5->5": 4542
+  },
+  "first_seen_after_baseline_byte_counts": {
+    "0": 1273,
+    "1": 116,
+    "2": 294,
+    "3": 669,
+    "4": 245,
+    "5": 76
+  },
+  "independent_test_careers": 0,
+  "linkage": {
+    "baseline": 94708,
+    "baseline_absent_on_final_date": 123,
+    "first_seen_after_baseline": 2673,
+    "lower_candidate_final_ca_above_new_cap": 653,
+    "paired": 94585,
+    "present_all_dates": 94585
+  },
+  "new_youth_diagnostics": {
+    "first_seen_under18": 2224,
+    "initially_zero": 1272
+  },
+  "outfield_under28_growth_by_baseline_age_gap": [
+    {
+      "age": "18-20",
+      "gains": 0,
+      "gap": "0",
+      "losses": 1,
+      "max_delta": 0,
+      "mean_delta": -0.0152,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 66,
+      "sum_delta": -1
+    },
+    {
+      "age": "18-20",
+      "gains": 211,
+      "gap": "1-10",
+      "losses": 26,
+      "max_delta": 6,
+      "mean_delta": 0.1538,
+      "median_delta": 0.0,
+      "min_delta": -2,
+      "n": 2530,
+      "sum_delta": 389
+    },
+    {
+      "age": "18-20",
+      "gains": 4107,
+      "gap": "11-30",
+      "losses": 105,
+      "max_delta": 12,
+      "mean_delta": 0.7275,
+      "median_delta": 0.0,
+      "min_delta": -2,
+      "n": 11946,
+      "sum_delta": 8691
+    },
+    {
+      "age": "18-20",
+      "gains": 2816,
+      "gap": ">30",
+      "losses": 32,
+      "max_delta": 12,
+      "mean_delta": 1.3912,
+      "median_delta": 1,
+      "min_delta": -1,
+      "n": 4795,
+      "sum_delta": 6671
+    },
+    {
+      "age": "21-23",
+      "gains": 0,
+      "gap": "0",
+      "losses": 1,
+      "max_delta": 0,
+      "mean_delta": -0.0132,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 76,
+      "sum_delta": -1
+    },
+    {
+      "age": "21-23",
+      "gains": 255,
+      "gap": "1-10",
+      "losses": 22,
+      "max_delta": 7,
+      "mean_delta": 0.1743,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 2565,
+      "sum_delta": 447
+    },
+    {
+      "age": "21-23",
+      "gains": 2240,
+      "gap": "11-30",
+      "losses": 109,
+      "max_delta": 11,
+      "mean_delta": 0.3332,
+      "median_delta": 0,
+      "min_delta": -2,
+      "n": 12737,
+      "sum_delta": 4244
+    },
+    {
+      "age": "21-23",
+      "gains": 353,
+      "gap": ">30",
+      "losses": 15,
+      "max_delta": 11,
+      "mean_delta": 0.5485,
+      "median_delta": 0,
+      "min_delta": -2,
+      "n": 1371,
+      "sum_delta": 752
+    },
+    {
+      "age": "24-27",
+      "gains": 0,
+      "gap": "0",
+      "losses": 7,
+      "max_delta": 0,
+      "mean_delta": -0.0319,
+      "median_delta": 0.0,
+      "min_delta": -3,
+      "n": 282,
+      "sum_delta": -9
+    },
+    {
+      "age": "24-27",
+      "gains": 482,
+      "gap": "1-10",
+      "losses": 357,
+      "max_delta": 6,
+      "mean_delta": 0.0275,
+      "median_delta": 0,
+      "min_delta": -4,
+      "n": 8643,
+      "sum_delta": 238
+    },
+    {
+      "age": "24-27",
+      "gains": 811,
+      "gap": "11-30",
+      "losses": 416,
+      "max_delta": 5,
+      "mean_delta": 0.0758,
+      "median_delta": 0.0,
+      "min_delta": -4,
+      "n": 9114,
+      "sum_delta": 691
+    },
+    {
+      "age": "24-27",
+      "gains": 78,
+      "gap": ">30",
+      "losses": 16,
+      "max_delta": 5,
+      "mean_delta": 0.2311,
+      "median_delta": 0.0,
+      "min_delta": -5,
+      "n": 424,
+      "sum_delta": 98
+    },
+    {
+      "age": "<18",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0.0,
+      "min_delta": 0,
+      "n": 10,
+      "sum_delta": 0
+    },
+    {
+      "age": "<18",
+      "gains": 36,
+      "gap": "1-10",
+      "losses": 2,
+      "max_delta": 7,
+      "mean_delta": 0.3074,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 231,
+      "sum_delta": 71
+    },
+    {
+      "age": "<18",
+      "gains": 1509,
+      "gap": "11-30",
+      "losses": 10,
+      "max_delta": 10,
+      "mean_delta": 1.6372,
+      "median_delta": 1,
+      "min_delta": -2,
+      "n": 2293,
+      "sum_delta": 3754
+    },
+    {
+      "age": "<18",
+      "gains": 2741,
+      "gap": ">30",
+      "losses": 15,
+      "max_delta": 11,
+      "mean_delta": 2.2492,
+      "median_delta": 2,
+      "min_delta": -1,
+      "n": 3467,
+      "sum_delta": 7798
+    }
+  ],
+  "outfield_under28_growth_by_candidate_cap_room": {
+    "2 to 10 below": {
+      "gains": 4963,
+      "losses": 213,
+      "max_delta": 10,
+      "mean_delta": 0.7766,
+      "median_delta": 0.0,
+      "min_delta": -4,
+      "n": 12464,
+      "sum_delta": 9679
+    },
+    ">10 below": {
+      "gains": 8922,
+      "losses": 171,
+      "max_delta": 12,
+      "mean_delta": 1.3824,
+      "median_delta": 1.0,
+      "min_delta": -5,
+      "n": 15844,
+      "sum_delta": 21903
+    },
+    "above by >2": {
+      "gains": 333,
+      "losses": 503,
+      "max_delta": 4,
+      "mean_delta": -0.0115,
+      "median_delta": 0.0,
+      "min_delta": -4,
+      "n": 17990,
+      "sum_delta": -207
+    },
+    "within 2": {
+      "gains": 658,
+      "losses": 238,
+      "max_delta": 4,
+      "mean_delta": 0.0409,
+      "median_delta": 0.0,
+      "min_delta": -3,
+      "n": 12560,
+      "sum_delta": 514
+    }
+  },
+  "snapshots": {
+    "2027-01-31": {
+      "accepted_ability_pairs": 94708,
+      "birth_missing_or_mismatch": 65,
+      "club_unverified_among_accepted": 57488,
+      "native_records": 94776,
+      "native_uid_absent_from_save": 3,
+      "no_closing_identity": 5,
+      "no_native_uid": 18881,
+      "save_records": 113659
+    },
+    "2027-03-30": {
+      "accepted_ability_pairs": 97258,
+      "birth_missing_or_mismatch": 289,
+      "club_unverified_among_accepted": 59051,
+      "native_records": 97555,
+      "native_uid_absent_from_save": 8,
+      "no_closing_identity": 13,
+      "no_native_uid": 9983,
+      "save_records": 107543
+    }
+  },
+  "status": [
+    "INSUFFICIENT_LONGITUDINAL_EVIDENCE",
+    "PROGRESSION_TIER_UNVERIFIED",
+    "NOT_OUTCOME_VALIDATED"
+  ]
+}

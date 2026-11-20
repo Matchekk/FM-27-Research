@@ -1,0 +1,548 @@
+{
+  "career_roots": 1,
+  "build": "27.1.0+2505117",
+  "start": "2027-01-31",
+  "end": "2027-03-30",
+  "days": 58,
+  "status": "NATIVE_CONFIRMED_CA_PA_BOTH_DATES",
+  "inclusion": "outfield at baseline under 28, paired database UID + DOB + nonempty equal name checksum, CA/PA verified at January and March against dated native inventories",
+  "n_distinct_end_to_end": 60550,
+  "baseline_verified_club_missing": 36007,
+  "complete_player_seasons": 0,
+  "delta_distribution": {
+    "-5": 1,
+    "-4": 4,
+    "-3": 33,
+    "-2": 160,
+    "-1": 936,
+    "0": 43777,
+    "1": 6028,
+    "2": 4330,
+    "3": 2553,
+    "4": 1597,
+    "5": 664,
+    "6": 269,
+    "7": 113,
+    "8": 46,
+    "9": 21,
+    "10": 10,
+    "11": 4,
+    "12": 4
+  },
+  "correlations": {
+    "age": {
+      "n": 60550,
+      "pearson": -0.4126291663193575,
+      "spearman": -0.4451845091209361
+    },
+    "gap": {
+      "n": 60550,
+      "pearson": 0.4018044107386022,
+      "spearman": 0.41534632003235916
+    },
+    "ca": {
+      "n": 60550,
+      "pearson": -0.024019313455679328,
+      "spearman": -0.026423338527409128
+    },
+    "pa": {
+      "n": 60550,
+      "pearson": 0.17692467015215751,
+      "spearman": 0.20303663600113947
+    }
+  },
+  "conditional_club_subset_correlations": {
+    "age": {
+      "n": 24543,
+      "pearson": -0.43971343447869277,
+      "spearman": -0.4992327699443477,
+      "baseline_clubs": 1420,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        -0.45474949015991667,
+        -0.4243656200163839
+      ],
+      "spearman_95ci": [
+        -0.5178717891779031,
+        -0.4805247854773309
+      ]
+    },
+    "gap": {
+      "n": 24543,
+      "pearson": 0.4316833773675493,
+      "spearman": 0.46223135365641826,
+      "baseline_clubs": 1420,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        0.41566119498308035,
+        0.4477592247275333
+      ],
+      "spearman_95ci": [
+        0.4462192845353732,
+        0.47731469290566564
+      ]
+    },
+    "ca": {
+      "n": 24543,
+      "pearson": -0.0985111970724002,
+      "spearman": -0.11688694908824498,
+      "baseline_clubs": 1420,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        -0.1257547504993667,
+        -0.07305672636626279
+      ],
+      "spearman_95ci": [
+        -0.14261431470866248,
+        -0.08957070875132322
+      ]
+    },
+    "pa": {
+      "n": 24543,
+      "pearson": 0.1275797108288996,
+      "spearman": 0.14358408466762795,
+      "baseline_clubs": 1420,
+      "bootstrap_draws": 999,
+      "defined_draws": 999,
+      "pearson_95ci": [
+        0.10150451205826883,
+        0.15064272373429205
+      ],
+      "spearman_95ci": [
+        0.12085778127072272,
+        0.16634774209169517
+      ]
+    }
+  },
+  "partial_pearson": {
+    "age": -0.27625993985161595,
+    "gap": 0.2255072877618807
+  },
+  "gap_delta_by_group": {
+    "<18": {
+      "n": 6001,
+      "pearson": 0.18480213380589303,
+      "spearman": 0.22793377519661082
+    },
+    "18-20": {
+      "n": 19337,
+      "pearson": 0.316243098689094,
+      "spearman": 0.37460501803885893
+    },
+    "21-23": {
+      "n": 16749,
+      "pearson": 0.12695200331464693,
+      "spearman": 0.13286541626717316
+    },
+    "24-27": {
+      "n": 18463,
+      "pearson": 0.08469288126568651,
+      "spearman": 0.07509790487125993
+    },
+    "position_AMC": {
+      "n": 4637,
+      "pearson": 0.42759629988966885,
+      "spearman": 0.44041028278451244
+    },
+    "position_AML": {
+      "n": 5123,
+      "pearson": 0.4103177564873825,
+      "spearman": 0.4147722100070023
+    },
+    "position_AMR": {
+      "n": 5021,
+      "pearson": 0.39416226250893105,
+      "spearman": 0.4108897163232956
+    },
+    "position_DC": {
+      "n": 10674,
+      "pearson": 0.4098148817671783,
+      "spearman": 0.42268189825422264
+    },
+    "position_DL": {
+      "n": 4541,
+      "pearson": 0.40301390826853745,
+      "spearman": 0.4177337660513946
+    },
+    "position_DM": {
+      "n": 5218,
+      "pearson": 0.39205094056326467,
+      "spearman": 0.40356015710367776
+    },
+    "position_DR": {
+      "n": 4656,
+      "pearson": 0.39524911337674595,
+      "spearman": 0.3946516411299951
+    },
+    "position_MC": {
+      "n": 8774,
+      "pearson": 0.37134944581859874,
+      "spearman": 0.39913103295525887
+    },
+    "position_ML": {
+      "n": 655,
+      "pearson": 0.39465635438168856,
+      "spearman": 0.3951249527472147
+    },
+    "position_MR": {
+      "n": 807,
+      "pearson": 0.42779217822119314,
+      "spearman": 0.43890052208195107
+    },
+    "position_STC": {
+      "n": 9427,
+      "pearson": 0.4196397007093453,
+      "spearman": 0.4300440413725879
+    },
+    "position_WBL": {
+      "n": 690,
+      "pearson": 0.3538133719985035,
+      "spearman": 0.3879318627774063
+    },
+    "position_WBR": {
+      "n": 327,
+      "pearson": 0.34165640652292517,
+      "spearman": 0.23616196731563885
+    }
+  },
+  "age_gap_cells": [
+    {
+      "age": "<18",
+      "gap": "<0",
+      "n": 0,
+      "mean_delta": null
+    },
+    {
+      "age": "<18",
+      "gap": "0",
+      "n": 10,
+      "mean_delta": 0.0
+    },
+    {
+      "age": "<18",
+      "gap": "1-10",
+      "n": 231,
+      "mean_delta": 0.30735930735930733
+    },
+    {
+      "age": "<18",
+      "gap": "11-30",
+      "n": 2293,
+      "mean_delta": 1.6371565634539904
+    },
+    {
+      "age": "<18",
+      "gap": ">30",
+      "n": 3467,
+      "mean_delta": 2.2492068070377846
+    },
+    {
+      "age": "18-20",
+      "gap": "<0",
+      "n": 0,
+      "mean_delta": null
+    },
+    {
+      "age": "18-20",
+      "gap": "0",
+      "n": 66,
+      "mean_delta": -0.015151515151515152
+    },
+    {
+      "age": "18-20",
+      "gap": "1-10",
+      "n": 2530,
+      "mean_delta": 0.15375494071146245
+    },
+    {
+      "age": "18-20",
+      "gap": "11-30",
+      "n": 11946,
+      "mean_delta": 0.7275238573581115
+    },
+    {
+      "age": "18-20",
+      "gap": ">30",
+      "n": 4795,
+      "mean_delta": 1.3912408759124089
+    },
+    {
+      "age": "21-23",
+      "gap": "<0",
+      "n": 0,
+      "mean_delta": null
+    },
+    {
+      "age": "21-23",
+      "gap": "0",
+      "n": 76,
+      "mean_delta": -0.013157894736842105
+    },
+    {
+      "age": "21-23",
+      "gap": "1-10",
+      "n": 2565,
+      "mean_delta": 0.1742690058479532
+    },
+    {
+      "age": "21-23",
+      "gap": "11-30",
+      "n": 12737,
+      "mean_delta": 0.3332024809609798
+    },
+    {
+      "age": "21-23",
+      "gap": ">30",
+      "n": 1371,
+      "mean_delta": 0.5485047410649161
+    },
+    {
+      "age": "24-27",
+      "gap": "<0",
+      "n": 0,
+      "mean_delta": null
+    },
+    {
+      "age": "24-27",
+      "gap": "0",
+      "n": 282,
+      "mean_delta": -0.031914893617021274
+    },
+    {
+      "age": "24-27",
+      "gap": "1-10",
+      "n": 8643,
+      "mean_delta": 0.027536734930001156
+    },
+    {
+      "age": "24-27",
+      "gap": "11-30",
+      "n": 9114,
+      "mean_delta": 0.07581742374369102
+    },
+    {
+      "age": "24-27",
+      "gap": ">30",
+      "n": 424,
+      "mean_delta": 0.23113207547169812
+    }
+  ],
+  "exploratory_piecewise_age": {
+    "prespecified_band_boundaries_used_as_knots": [
+      18,
+      21,
+      24
+    ],
+    "slope_per_year_at_gap_20_by_segment": [
+      -0.18784108250094417,
+      -0.31297574357748426,
+      -0.012426414064679703,
+      -0.06994426531652922
+    ],
+    "descriptive_r_squared": 0.25778199420604075
+  },
+  "adjusted_all": {
+    "n": 60550,
+    "coefficients": {
+      "intercept": {
+        "coefficient": 0.8012861166416355
+      },
+      "age_year": {
+        "coefficient": -0.136759862123903
+      },
+      "gap_10": {
+        "coefficient": 0.2256067090558154
+      },
+      "ca_10": {
+        "coefficient": 0.06200746270751075
+      },
+      "age_year_x_gap_10": {
+        "coefficient": -0.03429610207211693
+      },
+      "position_AMC_vs_DC": {
+        "coefficient": 0.021229001682880545
+      },
+      "position_AML_vs_DC": {
+        "coefficient": -0.002089419636080875
+      },
+      "position_AMR_vs_DC": {
+        "coefficient": 0.027387150128631223
+      },
+      "position_DL_vs_DC": {
+        "coefficient": 0.014064365798897974
+      },
+      "position_DM_vs_DC": {
+        "coefficient": 0.06725868033531862
+      },
+      "position_DR_vs_DC": {
+        "coefficient": 0.003132345574087249
+      },
+      "position_MC_vs_DC": {
+        "coefficient": 0.03861047052948565
+      },
+      "position_ML_vs_DC": {
+        "coefficient": 0.07784764332093966
+      },
+      "position_MR_vs_DC": {
+        "coefficient": 0.026402935257055598
+      },
+      "position_STC_vs_DC": {
+        "coefficient": 0.0037633303612898575
+      },
+      "position_WBL_vs_DC": {
+        "coefficient": 0.07368928038153388
+      },
+      "position_WBR_vs_DC": {
+        "coefficient": -0.1005914721848182
+      }
+    },
+    "descriptive_r_squared": 0.23960928554095107
+  },
+  "adjusted_with_baseline_club": {
+    "n": 24543,
+    "coefficients": {
+      "intercept": {
+        "coefficient": 0.8359586983352049,
+        "club_conditional_pointwise_95ci": [
+          0.7890183289416384,
+          0.8828990677287714
+        ]
+      },
+      "age_year": {
+        "coefficient": -0.1609279341551297,
+        "club_conditional_pointwise_95ci": [
+          -0.17115966705030666,
+          -0.15069620125995276
+        ],
+        "holm_p": 3.5914156817604474e-159
+      },
+      "gap_10": {
+        "coefficient": 0.23703831627371744,
+        "club_conditional_pointwise_95ci": [
+          0.2156085966739159,
+          0.25846803587351896
+        ],
+        "holm_p": 3.284061961602936e-89
+      },
+      "ca_10": {
+        "coefficient": 0.0581041215260224,
+        "club_conditional_pointwise_95ci": [
+          0.04742985808721973,
+          0.06877838496482507
+        ],
+        "holm_p": 1.5346358877898625e-24
+      },
+      "age_year_x_gap_10": {
+        "coefficient": -0.04680452026421874,
+        "club_conditional_pointwise_95ci": [
+          -0.0534129671173218,
+          -0.04019607341111568
+        ],
+        "holm_p": 4.283971857682482e-40
+      },
+      "position_AMC_vs_DC": {
+        "coefficient": 0.04003571157550856,
+        "club_conditional_pointwise_95ci": [
+          -0.025724207111215897,
+          0.10579563026223301
+        ],
+        "holm_p": 1.0
+      },
+      "position_AML_vs_DC": {
+        "coefficient": -0.014583872763165646,
+        "club_conditional_pointwise_95ci": [
+          -0.07030928292208716,
+          0.04114153739575586
+        ],
+        "holm_p": 1.0
+      },
+      "position_AMR_vs_DC": {
+        "coefficient": 0.08140459477331816,
+        "club_conditional_pointwise_95ci": [
+          0.020259419417271336,
+          0.14254977012936498
+        ],
+        "holm_p": 0.109286546699131
+      },
+      "position_DL_vs_DC": {
+        "coefficient": 0.0293195253754403,
+        "club_conditional_pointwise_95ci": [
+          -0.03176568225996168,
+          0.09040473301084229
+        ],
+        "holm_p": 1.0
+      },
+      "position_DM_vs_DC": {
+        "coefficient": 0.058228468495990796,
+        "club_conditional_pointwise_95ci": [
+          -0.00044600000367232134,
+          0.1169029369956539
+        ],
+        "holm_p": 0.5694112986122135
+      },
+      "position_DR_vs_DC": {
+        "coefficient": 0.02764625661102772,
+        "club_conditional_pointwise_95ci": [
+          -0.031031383413239803,
+          0.08632389663529524
+        ],
+        "holm_p": 1.0
+      },
+      "position_MC_vs_DC": {
+        "coefficient": 0.03428149062731459,
+        "club_conditional_pointwise_95ci": [
+          -0.01734281864812598,
+          0.08590579990275515
+        ],
+        "holm_p": 1.0
+      },
+      "position_ML_vs_DC": {
+        "coefficient": 0.07613946879656067,
+        "club_conditional_pointwise_95ci": [
+          -0.06864014187161815,
+          0.2209190794647395
+        ],
+        "holm_p": 1.0
+      },
+      "position_MR_vs_DC": {
+        "coefficient": 0.022775362081291745,
+        "club_conditional_pointwise_95ci": [
+          -0.10827743707518031,
+          0.1538281612377638
+        ],
+        "holm_p": 1.0
+      },
+      "position_STC_vs_DC": {
+        "coefficient": 0.03780994887092753,
+        "club_conditional_pointwise_95ci": [
+          -0.012601313681426453,
+          0.08822121142328151
+        ],
+        "holm_p": 1.0
+      },
+      "position_WBL_vs_DC": {
+        "coefficient": 0.13709113877974513,
+        "club_conditional_pointwise_95ci": [
+          -0.05833598820102173,
+          0.332518265760512
+        ],
+        "holm_p": 1.0
+      },
+      "position_WBR_vs_DC": {
+        "coefficient": -0.08260980618358121,
+        "club_conditional_pointwise_95ci": [
+          -0.2513244096392691,
+          0.08610479727210668
+        ],
+        "holm_p": 1.0
+      }
+    },
+    "descriptive_r_squared": 0.26722612889526653,
+    "baseline_clubs": 1420
+  },
+  "career_cluster_95ci": null,
+  "causal_ate": null
+}

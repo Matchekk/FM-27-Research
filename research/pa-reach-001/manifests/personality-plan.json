@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-20",
+  "status": "exploratory_extension_after_age_gap_analysis_before_baseline_personality_coefficients",
+  "career": "ZD-ROOT-01",
+  "baseline": "2027-01-31",
+  "outcome_date": "2027-03-30",
+  "build": "27.1.0+2505117",
+  "eligibility": "under-28 outfield at baseline, native and save identity and CA/PA on both dates, stable private name check, baseline scanner and save agree on all five attributes",
+  "baseline_attributes": ["professionalism", "ambition", "determination", "natural_fitness", "injury_proneness"],
+  "measurement": "use the bracketed January copy for covariates; no March covariates",
+  "outcome": "58-day net observed CA change in points",
+  "adjustment": "age, CA, PA minus CA, age by gap, position, five centred attributes, age by professionalism",
+  "sensitivity": "add observed candidate categories and their gap interactions among nonzero candidates",
+  "inference": "paired descriptive Pearson/Spearman; conditional CR1 in verified baseline-club subset, Holm across all non-intercept terms of that fit; no independent-career inference"
+}

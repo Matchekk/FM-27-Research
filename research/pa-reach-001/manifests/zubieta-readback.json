@@ -1,0 +1,110 @@
+{
+  "as_of": "2026-11-20",
+  "auxiliary_scout": {
+    "agrees_managed_club": true,
+    "agrees_manager_name": true,
+    "counters": {
+      "ca_differs_from_january": 29575,
+      "ca_differs_from_march30": 9423,
+      "export_rows": 111652,
+      "same_pa_all_three": 94583,
+      "uid_and_birth_match_2027-01-31": 94702,
+      "uid_and_birth_match_2027-03-30": 95974,
+      "uid_and_birth_match_both_dates": 94583
+    },
+    "date": "2027-03-17",
+    "date_source": "memory",
+    "game": "FM27",
+    "same_day_independent_save": false,
+    "sha256": "31127c1c686623ed7f0512b3dc8e8fda5379a43759391fdfa57162f10638237c",
+    "source": "FMSuperScout scanner v1.7.3",
+    "version": "27.1"
+  },
+  "delta_history": {
+    "complete_dob_build_or_branch_at_each_date": false,
+    "dates": [
+      "2027-01-02",
+      "2027-01-16",
+      "2027-01-23",
+      "2027-01-30",
+      "2027-03-12",
+      "2027-03-17"
+    ],
+    "explicit_march17_against_scout": {
+      "both_values_agree": 5927
+    },
+    "explicit_point_counts": {
+      "2027-01-02": 114145,
+      "2027-01-16": 26551,
+      "2027-01-23": 13050,
+      "2027-01-30": 13280,
+      "2027-03-12": 55014,
+      "2027-03-17": 5927
+    },
+    "sha256": "a3a83f5ff44f4f2a62ab55366476f609d58e6904d8dbf977f96dcc88e62062e7",
+    "uid_keys": 115975
+  },
+  "independent_repeat": {
+    "main_minus_replay_observation": 0,
+    "main_minus_replay_snapshot": 0,
+    "replay_minus_main_observation": 0,
+    "replay_minus_main_snapshot": 0
+  },
+  "one_matching_filled_manager_staff_uid_and_club_uid": true,
+  "origin": "ZUBIETA",
+  "private_capture_field_orders": {
+    "personality": 8,
+    "positions": 15,
+    "raw_attrs": 52
+  },
+  "snapshots": [
+    {
+      "accounting": {
+        "absent_or_ambiguous_id": 1,
+        "accepted_save_rows": 114172,
+        "indexed": 114176,
+        "missing_dob_or_age": 2,
+        "unresolved_ca_pa": 1
+      },
+      "build": "27.0.1+2494687",
+      "game_date": "2026-10-22",
+      "reader": "0.14.1",
+      "sha256": "d877e0a5668e4addcf81b26f3d936e5aaa522bbf7f584a30081fb78d97ea7114",
+      "tag": "ZD-HIST-03"
+    },
+    {
+      "accounting": {
+        "absent_or_ambiguous_id": 5,
+        "accepted_save_rows": 113581,
+        "indexed": 113659,
+        "missing_dob_or_age": 72,
+        "unresolved_ca_pa": 1
+      },
+      "build": "27.1.0+2505117",
+      "game_date": "2027-01-31",
+      "reader": "0.14.1",
+      "sha256": "7f0c59ed72dc6c07eac3e15ec44fc32507f9caae396fa5b27116d02fa415fb07",
+      "tag": "ZD-HIST-02"
+    },
+    {
+      "accounting": {
+        "absent_or_ambiguous_id": 13,
+        "accepted_save_rows": 107231,
+        "indexed": 107543,
+        "missing_dob_or_age": 298,
+        "unresolved_ca_pa": 1
+      },
+      "build": "27.1.0+2505117",
+      "game_date": "2027-03-30",
+      "reader": "0.14.1",
+      "sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+      "tag": "ZD-ROOT-01"
+    }
+  ],
+  "train005_overlap": {
+    "baseline_under18_uid_at_least_2_billion": 6424,
+    "independent_career_validation_allowed": false,
+    "january_uid_birth_pa_matches": 6424,
+    "same_manager_and_own_club": true
+  }
+}

@@ -1,0 +1,12 @@
+# Kausale Wirkung von Entwicklungsmaßnahmen
+
+**Für die beiden ausgewerteten Kalenderverläufe ist keine durchschnittliche kausale Wirkung auf CA, volle PA oder Peak-Meta identifiziert.** Die historischen Zubieta-Stichtage beschreiben eine tatsächlich gespielte Laufbahn. TRAIN005-A ist ein einziger Kontrollarm. Die Byteänderungen und Vereinswechsel entstanden im laufenden Spiel. Gruppenunterschiede können aus Alter, Kaderselektion, Training, Minuten, Verträgen und Verletzungen gleichzeitig folgen. [Ereignisabgleich](PROGRESSION_FACTOR_VALIDATION.md) · [Bedingte Zusammenhänge](CORRELATION_REPORT.md)
+
+| Forschungsfrage | Beobachtbare Messung | Bedingung für einen kausalen Schätzer |
+|---|---|---|
+| Zusatzfokus oder Intensität | Historische technische Fokussetzung und Readback in TRAIN-005. Dem zweiten Arm fehlt ein vergleichbarer Endtag. | Gleich gestartete Kontroll-/Interventionskopien, zufällige Zuteilung soweit durchführbar, gleiche Kalender-/Matchpolitik, bestätigter Eingriff, dokumentierte Teilnahme, Ausfälle und vorab definierter CA-/Attributendpunkt. |
+| Spielzeit oder Leihe | Spielerentwicklung und teils geänderte Clubkennungen an Stichtagen. | Tatsächliche Einsätze und Ereignisdatum, klar definierte Behandlung, geeignete Kontrollgruppe. Eine Leihe ändert auch Trainer, Mitspieler, Umfeld und Liga. |
+| Verletzung, Trainer oder neue Anlagen | Im Panel fehlt ein geprüfter und isoliert veränderter Zustand dieser Faktoren. | Ereignis-Readback vor und nach Änderung, zeitgleicher Kontrollzweig und Prüfung weiterer Änderungen auf Spieler-/Teamebene. |
+| Byte oder temporäre Ausnahme | Wiederholbare Save-Werte und unterschiedliche ΔCA nach Abstand zur postulierten Grenze. | Fachlich identifizierter, nativ rückgelesener Mechanismus. Neuwurf, Stufenwechsel, befristete Freigabe und tatsächlicher Zuwachs brauchen getrennte Messgrößen. |
+
+Für die Interventionseinheit Team oder Karriere lautet der gepaarte Kontrast je Ausgangsuniversum `Y(Intervention) − Y(Kontrolle)`. Unabhängige Ausgangsuniversen liefern die Replikate. Zusätzliche Spieler desselben Teams präzisieren den Teamendpunkt. Die einjährige CA-Wirkung, PA-Erreichungsdifferenz, Verletzungstage, Kosten und Meta-Wirkung haben derzeit den Wert `null`. Der historische TRAIN-001-Planvergleich behält seinen eigenen Build und Versuchsgegenstand. [Früherer Karriereversuch](../../experiments/TRAIN-001-karriere.md) · [Zubieta-Zweigdesign](EXPERIMENT_DESIGN.md)

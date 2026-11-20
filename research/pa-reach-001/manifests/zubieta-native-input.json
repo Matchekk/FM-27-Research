@@ -1,0 +1,17 @@
+{
+  "career_id": "ZD-ROOT-01",
+  "engine_build": "27.1.0+2505117",
+  "independent_cluster": "ZUBIETA",
+  "native_module_sha256": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
+  "schema_version": 1,
+  "snapshots": {
+    "2027-01-31": {
+      "native_sha256": "5a6ea8883b73ffc66f43e6f1d9a22de2c95c2d4a04306b8ff1cfc13505e580ef",
+      "save_sha256": "7f0c59ed72dc6c07eac3e15ec44fc32507f9caae396fa5b27116d02fa415fb07"
+    },
+    "2027-03-30": {
+      "native_sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+      "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    }
+  }
+}
