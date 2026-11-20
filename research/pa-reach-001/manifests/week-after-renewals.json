@@ -1,0 +1,477 @@
+{
+  "build": "27.1.0+2505117",
+  "branch": "ZD-RETENTION-01",
+  "baseline": "2027-03-31",
+  "end": "2027-04-07",
+  "elapsed_days": 7,
+  "save_sha256": [
+    "53fcc3eb45e4e6b52e8bb5f01933c4aeecae18edef391a30a7309abd93fe3998",
+    "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a"
+  ],
+  "full_native_ability_inventory_on_march31": false,
+  "groups": {
+    "due": {
+      "n": 29,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          6,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 19,
+      "delta_CA_counts": {
+        "0": 26,
+        "1": 1,
+        "3": 2
+      },
+      "delta_PA_counts": {
+        "0": 29
+      },
+      "positive_factor_directions": {
+        "up": 14,
+        "down": 5,
+        "same": 10,
+        "zero_or_missing": 0
+      },
+      "separate_april7_native_CA_PA": 29,
+      "separate_march30_native_CA_PA_agree_with_march31": 29,
+      "april7_scan_agrees_with_contract_end": 29,
+      "april7_current_spell_start_dates_for_observed_renewals_or_signings": {
+        "2027-04-03": 1,
+        "2027-04-04": 14,
+        "2027-04-05": 13
+      },
+      "mar31_new_end_still_agrees_april7": 28
+    },
+    "due_immediately_renewed": {
+      "n": 28,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          6,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 19,
+      "delta_CA_counts": {
+        "0": 25,
+        "1": 1,
+        "3": 2
+      },
+      "delta_PA_counts": {
+        "0": 28
+      },
+      "positive_factor_directions": {
+        "up": 14,
+        "down": 5,
+        "same": 9,
+        "zero_or_missing": 0
+      },
+      "separate_april7_native_CA_PA": 28,
+      "separate_march30_native_CA_PA_agree_with_march31": 28,
+      "april7_scan_agrees_with_contract_end": 28,
+      "april7_current_spell_start_dates_for_observed_renewals_or_signings": {
+        "2027-04-03": 1,
+        "2027-04-04": 14,
+        "2027-04-05": 13
+      },
+      "mar31_new_end_still_agrees_april7": 28
+    },
+    "due_without_immediate_renewal": {
+      "n": 1,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 1
+      },
+      "delta_PA_counts": {
+        "0": 1
+      },
+      "positive_factor_directions": {
+        "up": 0,
+        "down": 0,
+        "same": 1,
+        "zero_or_missing": 0
+      },
+      "separate_april7_native_CA_PA": 1,
+      "separate_march30_native_CA_PA_agree_with_march31": 1,
+      "april7_scan_agrees_with_contract_end": 1,
+      "april7_current_spell_start_dates_for_observed_renewals_or_signings": {},
+      "mar31_new_end_still_agrees_april7": 0
+    },
+    "later": {
+      "n": 54,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          18,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          12
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 1,
+      "delta_CA_counts": {
+        "0": 50,
+        "1": 3,
+        "4": 1
+      },
+      "delta_PA_counts": {
+        "0": 54
+      },
+      "positive_factor_directions": {
+        "up": 1,
+        "down": 0,
+        "same": 53,
+        "zero_or_missing": 0
+      },
+      "separate_april7_native_CA_PA": 54,
+      "separate_march30_native_CA_PA_agree_with_march31": 54,
+      "april7_scan_agrees_with_contract_end": 54,
+      "april7_current_spell_start_dates_for_observed_renewals_or_signings": {
+        "2027-04-04": 1,
+        "2027-04-05": 1
+      },
+      "mar31_new_end_still_agrees_april7": 0
+    },
+    "later_renewed_during_week": {
+      "n": 2,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 1,
+      "delta_CA_counts": {
+        "0": 2
+      },
+      "delta_PA_counts": {
+        "0": 2
+      },
+      "positive_factor_directions": {
+        "up": 1,
+        "down": 0,
+        "same": 1,
+        "zero_or_missing": 0
+      },
+      "separate_april7_native_CA_PA": 2,
+      "separate_march30_native_CA_PA_agree_with_march31": 2,
+      "april7_scan_agrees_with_contract_end": 2,
+      "april7_current_spell_start_dates_for_observed_renewals_or_signings": {
+        "2027-04-04": 1,
+        "2027-04-05": 1
+      },
+      "mar31_new_end_still_agrees_april7": 0
+    },
+    "later_without_observed_extension": {
+      "n": 52,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          18,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          18,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          11
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 48,
+        "1": 3,
+        "4": 1
+      },
+      "delta_PA_counts": {
+        "0": 52
+      },
+      "positive_factor_directions": {
+        "up": 0,
+        "down": 0,
+        "same": 52,
+        "zero_or_missing": 0
+      },
+      "separate_april7_native_CA_PA": 52,
+      "separate_march30_native_CA_PA_agree_with_march31": 52,
+      "april7_scan_agrees_with_contract_end": 52,
+      "april7_current_spell_start_dates_for_observed_renewals_or_signings": {},
+      "mar31_new_end_still_agrees_april7": 0
+    },
+    "intake": {
+      "n": 16,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_or_missing_transitions": [
+        {
+          "before": 0,
+          "after": 4,
+          "n": 8
+        },
+        {
+          "before": 0,
+          "after": 5,
+          "n": 6
+        },
+        {
+          "before": 0,
+          "after": 3,
+          "n": 2
+        }
+      ],
+      "null_at_either_end": 0,
+      "changed_factor": 16,
+      "delta_CA_counts": {
+        "0": 14,
+        "2": 1,
+        "3": 1
+      },
+      "delta_PA_counts": {
+        "0": 16
+      },
+      "positive_factor_directions": {
+        "up": 0,
+        "down": 0,
+        "same": 0,
+        "zero_or_missing": 16
+      },
+      "separate_april7_native_CA_PA": 16,
+      "separate_march30_native_CA_PA_agree_with_march31": 0,
+      "april7_scan_agrees_with_contract_end": 16,
+      "april7_current_spell_start_dates_for_observed_renewals_or_signings": {
+        "2027-04-02": 2,
+        "2027-04-03": 14
+      },
+      "mar31_new_end_still_agrees_april7": 0
+    }
+  }
+}

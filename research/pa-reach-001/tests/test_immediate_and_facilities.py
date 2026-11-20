@@ -41,3 +41,21 @@ class SavePairTests(unittest.TestCase):
             self.assertEqual(known + others, group["n"])
             self.assertEqual(sum(group["delta_CA_counts"].values()), group["n"])
             self.assertEqual(sum(group["delta_PA_counts"].values()), group["n"])
+
+    def test_seven_day_check_uses_same_cohorts_and_keeps_calendar_dates_distinct(self):
+        week = json.loads((ROOT / "manifests/week-after-renewals.json").read_bytes())
+        self.assertEqual((week["baseline"], week["end"], week["elapsed_days"]), ("2027-03-31", "2027-04-07", 7))
+        g = week["groups"]
+        for whole, left, right in (("due", "due_immediately_renewed", "due_without_immediate_renewal"),
+                                   ("later", "later_renewed_during_week", "later_without_observed_extension")):
+            for k in ("n", "changed_factor", "separate_april7_native_CA_PA"):
+                self.assertEqual(g[whole][k], g[left][k] + g[right][k])
+        due = g["due_immediately_renewed"]
+        self.assertEqual(due["n"], due["mar31_new_end_still_agrees_april7"])
+        starts = due["april7_current_spell_start_dates_for_observed_renewals_or_signings"]
+        self.assertTrue(all(week["baseline"] < d <= week["end"] for d in starts))
+        self.assertEqual(sum(starts.values()), due["n"])
+        for group in g.values():
+            self.assertEqual(group["separate_april7_native_CA_PA"], group["n"])
+            self.assertEqual(group["april7_scan_agrees_with_contract_end"], group["n"])
+            self.assertEqual(sum(group["positive_factor_directions"].values()), group["n"])
