@@ -1,0 +1,84 @@
+{
+  "schema": "pa-reach-short-horizon-reference/v1",
+  "dates": [
+    "2027-01-31",
+    "2027-03-30",
+    "2027-04-30"
+  ],
+  "career_origins": 1,
+  "untouched_test_careers": 0,
+  "fitted_parameters": 0,
+  "paired_mae_difference_known_club": {
+    "all": {
+      "n": 24158,
+      "clubs": 1414,
+      "mae_previous_rate_minus_carry_forward": -0.013637233043384022,
+      "approximate_club_conditional_95ci": [
+        -0.024133130934896413,
+        -0.0031413351518716336
+      ]
+    },
+    "age24_27_gap_gt30": {
+      "n": 130,
+      "clubs": 91,
+      "mae_previous_rate_minus_carry_forward": 0.12029177718832847,
+      "approximate_club_conditional_95ci": [
+        0.061697545762665555,
+        0.17888600861399137
+      ]
+    },
+    "under18_gap_gt30": {
+      "n": 1530,
+      "clubs": 357,
+      "mae_previous_rate_minus_carry_forward": -0.4089700247915252,
+      "approximate_club_conditional_95ci": [
+        -0.4644342990819307,
+        -0.35350575050111976
+      ]
+    }
+  },
+  "groups": {
+    "all": {
+      "carry_forward": {
+        "n": 59665,
+        "mae_ca": 0.29231542780524594,
+        "rmse_ca": 0.747621161074275,
+        "mean_prediction_minus_observed_ca": -0.28125366630352805
+      },
+      "previous_rate": {
+        "n": 59665,
+        "mae_ca": 0.2948424681483107,
+        "rmse_ca": 0.6461913622525145,
+        "mean_prediction_minus_observed_ca": 0.022129013428423164
+      }
+    },
+    "age24_27_gap_gt30": {
+      "carry_forward": {
+        "n": 426,
+        "mae_ca": 0.14553990610328638,
+        "rmse_ca": 0.4223786877537083,
+        "mean_prediction_minus_observed_ca": -0.1267605633802817
+      },
+      "previous_rate": {
+        "n": 426,
+        "mae_ca": 0.20398251578436102,
+        "rmse_ca": 0.4628458718928058,
+        "mean_prediction_minus_observed_ca": -0.059009227780476466
+      }
+    },
+    "under18_gap_gt30": {
+      "carry_forward": {
+        "n": 2713,
+        "mae_ca": 1.215628455584224,
+        "rmse_ca": 1.6286234376034388,
+        "mean_prediction_minus_observed_ca": -1.2060449686693697
+      },
+      "previous_rate": {
+        "n": 2713,
+        "mae_ca": 0.8192038333947664,
+        "rmse_ca": 1.1168420293278012,
+        "mean_prediction_minus_observed_ca": -0.08960051857595058
+      }
+    }
+  }
+}

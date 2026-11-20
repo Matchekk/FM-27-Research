@@ -1,0 +1,24 @@
+{
+  "schema": "pa-reach-intake-contracts/v1",
+  "date": "2027-04-07",
+  "build": "27.1.0+2505117",
+  "save_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a",
+  "submitted": 16,
+  "outcomes": {
+    "current_same_club_contract_with_confirmed_end_after_offer": 16
+  },
+  "observed_kind": {
+    "YOUTH": 15,
+    "FULL_TIME": 1
+  },
+  "observed_start_dates": {
+    "2027-04-03": 14,
+    "2027-04-02": 2
+  },
+  "independently_confirmed_end_dates": {
+    "2030-06-30": 11,
+    "2029-06-30": 1,
+    "2031-06-30": 4
+  },
+  "with_additional_future_same_club_terms": 11
+}

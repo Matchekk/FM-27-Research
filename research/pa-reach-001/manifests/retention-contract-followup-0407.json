@@ -1,0 +1,23 @@
+{
+  "branch": "ZD-RETENTION",
+  "build": "27.1.0+2505117",
+  "start": "2027-03-30",
+  "end": "2027-04-07",
+  "deadline": "2027-06-30",
+  "baseline_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+  "checkpoint_sha256": "544d5d067a3858ffee79095cda9bf49c52dda7231891cb3b5c3556ef52b8df6a",
+  "baseline_owned": 83,
+  "all_baseline_outcomes": {
+    "same_current_end": 53,
+    "later_end_confirmed_new_start_observed": 30
+  },
+  "baseline_due": 29,
+  "baseline_due_outcomes": {
+    "same_current_end": 1,
+    "later_end_confirmed_new_start_observed": 28
+  },
+  "newly_observed_owned": 16,
+  "newly_observed_owned_without_fixed_end": 0,
+  "candidate_status_requires_separate_intake_evidence": true,
+  "offer_counts_require_separate_event_ledger": true
+}
