@@ -1,0 +1,292 @@
+{
+  "snapshots": {
+    "2027-01-31": {
+      "controller_day": "2027-01-31",
+      "scanner_reported_day": "2027-01-30",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "5e0b0f22a4f8525527018f8c8120db41c307a7c77bc119eb9349c31257050043",
+        "after": "5e0b0f22a4f8525527018f8c8120db41c307a7c77bc119eb9349c31257050043",
+        "loaded_copy": "7f0c59ed72dc6c07eac3e15ec44fc32507f9caae396fa5b27116d02fa415fb07",
+        "dump": "885259f8072fa7f8dad06eb85723e87cab93b870d3277bbd0b425dceb1c81ff6"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 106397,
+        "invalid_scanner_attribute": 7181,
+        "unmatched_identity_or_ability": 3
+      }
+    },
+    "2027-03-30": {
+      "controller_day": "2027-03-30",
+      "scanner_reported_day": "2027-03-20",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+        "after": "ff2f309bf3f478303323c21b550fac7b39390a8e4fa8b993bc7288163c01f7d2",
+        "loaded_copy": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+        "dump": "19782dd0793840acae9a06eeaa83ad6d050a1912067303a34b02e9ee4617e3cd"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 100544,
+        "invalid_scanner_attribute": 6669,
+        "unmatched_identity_or_ability": 18
+      }
+    },
+    "2027-04-30": {
+      "controller_day": "2027-04-30",
+      "scanner_reported_day": "2027-04-28",
+      "scanner_version": "1.7.3",
+      "hashes": {
+        "before": "c6a7ad7d471150257988321adb7c4931d0788812916b287159b87d891ac1acc4",
+        "after": "c6a7ad7d471150257988321adb7c4931d0788812916b287159b87d891ac1acc4",
+        "loaded_copy": "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634",
+        "dump": "da725ab74400679a9dc88be08e5b99b970545db7eb9f1bf8a7dcbe1816ddcafe"
+      },
+      "accounting": {
+        "accepted_inputs_all_ages_positions": 106135,
+        "invalid_scanner_attribute": 7704,
+        "unmatched_identity_or_ability": 20
+      }
+    }
+  },
+  "intervals": {
+    "2027-01-31_to_2027-03-30": {
+      "eligible_at_baseline_after_input_checks": 67210,
+      "missing_followup_identity_or_attributes": 5691,
+      "meta_delta": {
+        "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+        "modelVersion": "FM27_OUTFIELD_META_V2_1",
+        "scoreable": {
+          "n": 61483,
+          "up": 18684,
+          "equal": 33478,
+          "down": 9321,
+          "sumDelta": 1425.4356214488114
+        },
+        "caGain": {
+          "n": 14793,
+          "up": 10248,
+          "equal": 3164,
+          "down": 1381,
+          "sumDelta": 1991.7097791445842
+        },
+        "byPosition": {
+          "ST": {
+            "n": 9393,
+            "up": 2801,
+            "equal": 4950,
+            "down": 1642,
+            "sumDelta": 137.54521954014072
+          },
+          "DM": {
+            "n": 6615,
+            "up": 2078,
+            "equal": 3575,
+            "down": 962,
+            "sumDelta": 188.43527923001218
+          },
+          "DL": {
+            "n": 4690,
+            "up": 1396,
+            "equal": 2659,
+            "down": 635,
+            "sumDelta": 119.8310929688674
+          },
+          "AMC": {
+            "n": 4843,
+            "up": 1458,
+            "equal": 2647,
+            "down": 738,
+            "sumDelta": 115.35200777606231
+          },
+          "DC": {
+            "n": 9562,
+            "up": 3080,
+            "equal": 5297,
+            "down": 1185,
+            "sumDelta": 312.28744898148153
+          },
+          "MC": {
+            "n": 8834,
+            "up": 2740,
+            "equal": 4684,
+            "down": 1410,
+            "sumDelta": 215.31320572008374
+          },
+          "AML": {
+            "n": 5824,
+            "up": 1606,
+            "equal": 3286,
+            "down": 932,
+            "sumDelta": 87.49819441789795
+          },
+          "MR": {
+            "n": 1295,
+            "up": 391,
+            "equal": 679,
+            "down": 225,
+            "sumDelta": 20.662578459063557
+          },
+          "DR": {
+            "n": 4642,
+            "up": 1398,
+            "equal": 2645,
+            "down": 599,
+            "sumDelta": 117.38854879631833
+          },
+          "AMR": {
+            "n": 3800,
+            "up": 1185,
+            "equal": 2010,
+            "down": 605,
+            "sumDelta": 86.61196513840883
+          },
+          "WBL": {
+            "n": 609,
+            "up": 172,
+            "equal": 298,
+            "down": 139,
+            "sumDelta": 5.722050201686435
+          },
+          "WBR": {
+            "n": 240,
+            "up": 58,
+            "equal": 141,
+            "down": 41,
+            "sumDelta": 4.345885542944179
+          },
+          "ML": {
+            "n": 1136,
+            "up": 321,
+            "equal": 607,
+            "down": 208,
+            "sumDelta": 14.442144675854692
+          }
+        },
+        "positionUnavailable": 0,
+        "positionChanged": 36,
+        "cannotScore": 0
+      },
+      "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+    },
+    "2027-03-30_to_2027-04-30": {
+      "eligible_at_baseline_after_input_checks": 63001,
+      "missing_followup_identity_or_attributes": 2971,
+      "meta_delta": {
+        "modelBlob": "181eab2ae56bacdf32cff6b4c93e6b604f0fc1db",
+        "modelVersion": "FM27_OUTFIELD_META_V2_1",
+        "scoreable": {
+          "n": 60011,
+          "up": 13476,
+          "equal": 41183,
+          "down": 5352,
+          "sumDelta": 1014.1304296360856
+        },
+        "caGain": {
+          "n": 11619,
+          "up": 6865,
+          "equal": 3831,
+          "down": 923,
+          "sumDelta": 1047.6383080146181
+        },
+        "byPosition": {
+          "ST": {
+            "n": 9079,
+            "up": 1995,
+            "equal": 6247,
+            "down": 837,
+            "sumDelta": 119.57279912685887
+          },
+          "DM": {
+            "n": 6448,
+            "up": 1462,
+            "equal": 4466,
+            "down": 520,
+            "sumDelta": 125.78240774362907
+          },
+          "DL": {
+            "n": 4550,
+            "up": 1023,
+            "equal": 3159,
+            "down": 368,
+            "sumDelta": 80.60204810972616
+          },
+          "AMC": {
+            "n": 4734,
+            "up": 1062,
+            "equal": 3251,
+            "down": 421,
+            "sumDelta": 77.33133749908102
+          },
+          "DC": {
+            "n": 9429,
+            "up": 2251,
+            "equal": 6450,
+            "down": 728,
+            "sumDelta": 225.35584468782287
+          },
+          "MC": {
+            "n": 8688,
+            "up": 2043,
+            "equal": 5815,
+            "down": 830,
+            "sumDelta": 154.65518026260352
+          },
+          "AML": {
+            "n": 5677,
+            "up": 1099,
+            "equal": 4006,
+            "down": 572,
+            "sumDelta": 55.6141644571868
+          },
+          "MR": {
+            "n": 1218,
+            "up": 279,
+            "equal": 804,
+            "down": 135,
+            "sumDelta": 18.032396056147036
+          },
+          "DR": {
+            "n": 4567,
+            "up": 996,
+            "equal": 3221,
+            "down": 350,
+            "sumDelta": 84.1209367691549
+          },
+          "AMR": {
+            "n": 3758,
+            "up": 845,
+            "equal": 2538,
+            "down": 375,
+            "sumDelta": 49.07614503336677
+          },
+          "WBL": {
+            "n": 572,
+            "up": 150,
+            "equal": 351,
+            "down": 71,
+            "sumDelta": 8.766579456948513
+          },
+          "WBR": {
+            "n": 237,
+            "up": 40,
+            "equal": 170,
+            "down": 27,
+            "sumDelta": 0.3469107376574341
+          },
+          "ML": {
+            "n": 1054,
+            "up": 231,
+            "equal": 705,
+            "down": 118,
+            "sumDelta": 14.87367969591819
+          }
+        },
+        "positionUnavailable": 0,
+        "positionChanged": 19,
+        "cannotScore": 0
+      },
+      "status": "OBSERVED_PAIRED_INDEX_NOT_PEAK_FORECAST"
+    }
+  }
+}

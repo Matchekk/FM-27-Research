@@ -1,0 +1,21 @@
+{
+  "branch": "ZD-CONTROL-01",
+  "build": "27.1.0+2505117",
+  "start": "2027-03-30",
+  "end": "2027-04-30",
+  "deadline": "2027-06-30",
+  "baseline_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+  "checkpoint_sha256": "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634",
+  "baseline_owned": 83,
+  "all_baseline_outcomes": {
+    "same_current_end": 83
+  },
+  "baseline_due": 29,
+  "baseline_due_outcomes": {
+    "same_current_end": 29
+  },
+  "newly_observed_owned": 16,
+  "newly_observed_owned_without_fixed_end": 16,
+  "candidate_status_requires_separate_intake_evidence": true,
+  "offer_counts_require_separate_event_ledger": true
+}

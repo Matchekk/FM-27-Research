@@ -1,0 +1,21 @@
+{
+  "game_date": "2027-03-30",
+  "save_sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4",
+  "build": "27.1.0+2505117",
+  "cutoff": "2027-06-30",
+  "registered_or_contracted": 84,
+  "registered": 77,
+  "contract_owner_resolves_to_club": 83,
+  "club_held_outside_registered_squad": 7,
+  "registered_ownership_unresolved": 0,
+  "owned_without_end": 0,
+  "owned_without_end_age_counts": {},
+  "owned_without_end_start_counts": {},
+  "owned_expiring_by_cutoff": 29,
+  "due_stable_identity": 29,
+  "due_same_day_scan_end_agrees": 29,
+  "due_scan_end_differs": 0,
+  "due_scan_end_missing": 0,
+  "due_with_later_same_club_terms": 0,
+  "youth_intake_candidates_identified_from_team_slot": null
+}

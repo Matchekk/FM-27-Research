@@ -1,5 +1,23 @@
 # Welche Ausgangsmerkmale mit kurzfristigem CA-Wachstum zusammenhängen
 
+### Persönlichkeit am Ausgangstag
+
+Für **60.548** der 60.550 identitätsgesicherten Feldspieler stimmen am 31.01. zusätzlich Professionalität, Ehrgeiz, Zielstrebigkeit, Natural Fitness und Verletzungsanfälligkeit zwischen Save und eigenständigem Scout-Readback überein. Bei zwei Spielern fehlt die eindeutige zusätzliche Scanzuordnung. Die native Spieluhr vor und nach dem Scanner bestätigt den 31.01., der Scanheader nennt fälschlich den 30.01. Die folgende Auswertung verwendet nur die Januarwerte als Prädiktoren und die tatsächliche CA-Differenz bis 30.03.2027 als Ziel. [Vorab festgelegte Zusatzanalyse](../../research/pa-reach-001/manifests/personality-plan.json)
+
+| Ausgangsmerkmal | Pearson / Spearman mit ΔCA | Adjustierte CA-Differenz je Skalenpunkt, alle | Separates Modell in verifizierten Baseline-Klubs, 95-%-Intervall |
+|---|---:|---:|---:|
+| Professionalität, mit 20 Jahren | 0,075 / 0,067 | +0,056 | +0,058 [0,044 bis 0,071] |
+| Ehrgeiz | 0,050 / 0,042 | +0,030 | +0,033 [0,023 bis 0,042] |
+| Zielstrebigkeit | 0,077 / 0,078 | +0,022 | +0,026 [0,021 bis 0,030] |
+| Natural Fitness | 0,019 / 0,022 | +0,004 | +0,005 [−0,001 bis 0,011] |
+| Verletzungsanfälligkeit | −0,012 / −0,011 | +0,002 | +0,005 [−0,0004 bis 0,010] |
+
+Korrelationen beziehen sich jeweils auf alle eingeschlossenen Altersgruppen. Beide linearen Modelle berücksichtigen Alter, Start-CA, Abstand zur PA, Position, die fünf Ausgangsattribute, Alter × Abstand sowie Alter × Professionalität. Im Modell für alle Spieler entspricht bei Alter 20 ein Unterschied von fünf Professionalitätspunkten rund **0,28 CA mehr in 58 Tagen**. Der geschätzte Zusammenhang pro Professionalitätspunkt fällt je zusätzlichem Altersjahr um 0,011 CA. Die beobachtete Altersinteraktion kann unter anderem von Spielpraxis und Auswahl beeinflusst sein. Sie ist kein Engine-Grenzwert. Bei zusätzlicher Kontrolle der beobachteten Bytekategorie und Byte × Abstand beträgt der Professionalitätskoeffizient bei Alter 20 noch +0,045 CA (60.088 Spieler). Die Modellierung einer möglichen Vermittlervariable verändert die Interpretation.
+
+Die 95-%-Intervalle entstammen dem getrennten Modell mit 24.543 Spielern in 1.420 bestätigten Baseline-Klubs, bedingt auf diese Karriere. Im Beleg stehen punktweise Intervalle und über sämtliche Nicht-Intercept-Terme des Modells Holm-korrigierte Tests. Kein zwischen Karrieren gültiges Intervall und kein Kausaleffekt einer Persönlichkeitsänderung wurden geschätzt. [Vollständige Koeffizienten und Missing](../../research/pa-reach-001/manifests/personality-growth.json) · [Auswertung](../../research/pa-reach-001/analysis/personality_growth.py)
+
+### Alter und verbleibende PA-Lücke
+
 **In Zubieta hing der CA-Zuwachs über 58 Tage am stärksten mit Alter und verbleibendem PA-Abstand unter den vier untersuchten Ausgangsgrößen zusammen.** Der Zusammenhang blieb nach Kontrolle der jeweils anderen Größe, der Ausgangs-CA und der Position bestehen. CA, PA und Identität sind im Januar und März jeweils am Save und im Spiel unabhängig abgeglichen. Die historische 19-Tage-Auswertung stammt von einem anderen Build. Die zwei Zeitfenster können denselben Karriereursprung teilen. Es liegen null vollständige Spieler-Saisons und kein unabhängiges Testuniversum vor. [Zubieta-Beleg](../../research/pa-reach-001/manifests/zubieta-associations.json) · [TRAIN005-Beleg](../../research/pa-reach-001/manifests/train005-associations.json)
 
 | Ausgangsmerkmal gegen ΔCA | Zubieta 58 Tage · Pearson / Spearman | TRAIN005 19 Tage · Pearson / Spearman |

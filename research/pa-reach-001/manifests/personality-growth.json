@@ -1,0 +1,409 @@
+{
+  "plan": "personality-plan.json",
+  "counts": {
+    "eligible_native_pairs": 60550,
+    "no_unique_scan_id": 2,
+    "retained": 60548
+  },
+  "scan_sha256": "885259f8072fa7f8dad06eb85723e87cab93b870d3277bbd0b425dceb1c81ff6",
+  "before_sha256": "5e0b0f22a4f8525527018f8c8120db41c307a7c77bc119eb9349c31257050043",
+  "after_sha256": "5e0b0f22a4f8525527018f8c8120db41c307a7c77bc119eb9349c31257050043",
+  "scanner_claimed_game_date": "2027-01-30",
+  "native_baseline_day": "2027-01-31",
+  "outcome_day": "2027-03-30",
+  "correlations": {
+    "professionalism": {
+      "n": 60548,
+      "pearson": 0.07492470327312918,
+      "spearman": 0.06744187019469462
+    },
+    "ambition": {
+      "n": 60548,
+      "pearson": 0.04997809307070964,
+      "spearman": 0.0420498341360517
+    },
+    "determination": {
+      "n": 60548,
+      "pearson": 0.07736119674450918,
+      "spearman": 0.07753608602987479
+    },
+    "natural_fitness": {
+      "n": 60548,
+      "pearson": 0.0189726992792601,
+      "spearman": 0.02158816662123576
+    },
+    "injury_proneness": {
+      "n": 60548,
+      "pearson": -0.01185042423363083,
+      "spearman": -0.011035231665154221
+    }
+  },
+  "adjusted_models": {
+    "all": {
+      "n": 60548,
+      "coefficients": {
+        "intercept": {
+          "coefficient": 0.6196038679114056
+        },
+        "age_year": {
+          "coefficient": -0.11881494550946743
+        },
+        "gap_10": {
+          "coefficient": 0.22999736515287028
+        },
+        "ca_10": {
+          "coefficient": 0.04288160859910555
+        },
+        "age_year_x_gap_10": {
+          "coefficient": -0.03377798292533
+        },
+        "position_AMC_vs_DC": {
+          "coefficient": 0.029056946325644973
+        },
+        "position_AML_vs_DC": {
+          "coefficient": 0.007947935428811701
+        },
+        "position_AMR_vs_DC": {
+          "coefficient": 0.04179942824251725
+        },
+        "position_DL_vs_DC": {
+          "coefficient": 0.015944115737257455
+        },
+        "position_DM_vs_DC": {
+          "coefficient": 0.06760431564559605
+        },
+        "position_DR_vs_DC": {
+          "coefficient": 0.006408668563985342
+        },
+        "position_MC_vs_DC": {
+          "coefficient": 0.041240576897853196
+        },
+        "position_ML_vs_DC": {
+          "coefficient": 0.093171299321784
+        },
+        "position_MR_vs_DC": {
+          "coefficient": 0.03190434636522207
+        },
+        "position_STC_vs_DC": {
+          "coefficient": 0.014967222151147378
+        },
+        "position_WBL_vs_DC": {
+          "coefficient": 0.07117914874772174
+        },
+        "position_WBR_vs_DC": {
+          "coefficient": -0.10659484299706201
+        },
+        "professionalism": {
+          "coefficient": 0.05603292015942192
+        },
+        "ambition": {
+          "coefficient": 0.030336754465214822
+        },
+        "determination": {
+          "coefficient": 0.02227380414795895
+        },
+        "natural_fitness": {
+          "coefficient": 0.004383687710078804
+        },
+        "injury_proneness": {
+          "coefficient": 0.0024710854725003995
+        },
+        "age_x_professionalism": {
+          "coefficient": -0.01104106548298365
+        }
+      },
+      "descriptive_r_squared": 0.25336016038454123
+    },
+    "club_subset": {
+      "n": 24543,
+      "coefficients": {
+        "intercept": {
+          "coefficient": 0.6326627191025901,
+          "club_conditional_pointwise_95ci": [
+            0.5820987565590863,
+            0.6832266816460939
+          ]
+        },
+        "age_year": {
+          "coefficient": -0.1424993020186181,
+          "club_conditional_pointwise_95ci": [
+            -0.1524322435740535,
+            -0.1325663604631827
+          ],
+          "holm_p": 1.7421415396422998e-137
+        },
+        "gap_10": {
+          "coefficient": 0.24092670357821525,
+          "club_conditional_pointwise_95ci": [
+            0.2198932548954213,
+            0.26196015226100916
+          ],
+          "holm_p": 1.3973915204036186e-94
+        },
+        "ca_10": {
+          "coefficient": 0.032206809902666556,
+          "club_conditional_pointwise_95ci": [
+            0.02052096993405713,
+            0.04389264987127598
+          ],
+          "holm_p": 1.1304036545691307e-06
+        },
+        "age_year_x_gap_10": {
+          "coefficient": -0.04651018608164401,
+          "club_conditional_pointwise_95ci": [
+            -0.053060587059868075,
+            -0.03995978510341995
+          ],
+          "holm_p": 3.979957563945297e-40
+        },
+        "position_AMC_vs_DC": {
+          "coefficient": 0.04641762671898055,
+          "club_conditional_pointwise_95ci": [
+            -0.01867301825170784,
+            0.11150827168966895
+          ],
+          "holm_p": 1.0
+        },
+        "position_AML_vs_DC": {
+          "coefficient": -0.0010966356599477036,
+          "club_conditional_pointwise_95ci": [
+            -0.05655790720276584,
+            0.05436463588287043
+          ],
+          "holm_p": 1.0
+        },
+        "position_AMR_vs_DC": {
+          "coefficient": 0.0960537057343262,
+          "club_conditional_pointwise_95ci": [
+            0.03465309793114816,
+            0.15745431353750425
+          ],
+          "holm_p": 0.03066511848013831
+        },
+        "position_DL_vs_DC": {
+          "coefficient": 0.029519702821708207,
+          "club_conditional_pointwise_95ci": [
+            -0.030987630410788638,
+            0.09002703605420505
+          ],
+          "holm_p": 1.0
+        },
+        "position_DM_vs_DC": {
+          "coefficient": 0.05450459068186283,
+          "club_conditional_pointwise_95ci": [
+            -0.00416374115661703,
+            0.1131729225203427
+          ],
+          "holm_p": 0.8495330727938546
+        },
+        "position_DR_vs_DC": {
+          "coefficient": 0.032901947439884956,
+          "club_conditional_pointwise_95ci": [
+            -0.025199952716167554,
+            0.09100384759593746
+          ],
+          "holm_p": 1.0
+        },
+        "position_MC_vs_DC": {
+          "coefficient": 0.03241552074055612,
+          "club_conditional_pointwise_95ci": [
+            -0.019402364755655585,
+            0.08423340623676782
+          ],
+          "holm_p": 1.0
+        },
+        "position_ML_vs_DC": {
+          "coefficient": 0.08024075802463063,
+          "club_conditional_pointwise_95ci": [
+            -0.06376518957922447,
+            0.22424670562848573
+          ],
+          "holm_p": 1.0
+        },
+        "position_MR_vs_DC": {
+          "coefficient": 0.027974686802835703,
+          "club_conditional_pointwise_95ci": [
+            -0.10260778216620921,
+            0.15855715577188062
+          ],
+          "holm_p": 1.0
+        },
+        "position_STC_vs_DC": {
+          "coefficient": 0.047224423986365234,
+          "club_conditional_pointwise_95ci": [
+            -0.003004664127740156,
+            0.09745351210047062
+          ],
+          "holm_p": 0.8495330727938546
+        },
+        "position_WBL_vs_DC": {
+          "coefficient": 0.14687178792178113,
+          "club_conditional_pointwise_95ci": [
+            -0.052940141959359394,
+            0.3466837178029216
+          ],
+          "holm_p": 1.0
+        },
+        "position_WBR_vs_DC": {
+          "coefficient": -0.08384229602017437,
+          "club_conditional_pointwise_95ci": [
+            -0.25066817327349356,
+            0.08298358123314484
+          ],
+          "holm_p": 1.0
+        },
+        "professionalism": {
+          "coefficient": 0.0578506105104293,
+          "club_conditional_pointwise_95ci": [
+            0.044356931328214555,
+            0.07134428969264404
+          ],
+          "holm_p": 1.774360595709743e-15
+        },
+        "ambition": {
+          "coefficient": 0.03267552127680772,
+          "club_conditional_pointwise_95ci": [
+            0.02295691988683761,
+            0.042394122666777834
+          ],
+          "holm_p": 1.015001980270263e-09
+        },
+        "determination": {
+          "coefficient": 0.025792221675516248,
+          "club_conditional_pointwise_95ci": [
+            0.021487011808888068,
+            0.030097431542144427
+          ],
+          "holm_p": 3.224697017201039e-29
+        },
+        "natural_fitness": {
+          "coefficient": 0.005123821565099833,
+          "club_conditional_pointwise_95ci": [
+            -0.0007978554620265178,
+            0.011045498592226184
+          ],
+          "holm_p": 0.898523310722916
+        },
+        "injury_proneness": {
+          "coefficient": 0.004778951131900363,
+          "club_conditional_pointwise_95ci": [
+            -0.0004022869897780607,
+            0.009960189253578788
+          ],
+          "holm_p": 0.8495330727938546
+        },
+        "age_x_professionalism": {
+          "coefficient": -0.01031413341191747,
+          "club_conditional_pointwise_95ci": [
+            -0.013642675660582223,
+            -0.006985591163252718
+          ],
+          "holm_p": 2.48991331332229e-08
+        }
+      },
+      "descriptive_r_squared": 0.28087267492972523,
+      "baseline_clubs": 1420
+    },
+    "candidate_sensitivity": {
+      "n": 60088,
+      "coefficients": {
+        "intercept": {
+          "coefficient": 0.578360499936856
+        },
+        "age_year": {
+          "coefficient": -0.10689385614424449
+        },
+        "gap_10": {
+          "coefficient": 0.3662853026873997
+        },
+        "ca_10": {
+          "coefficient": 0.013783000058087323
+        },
+        "age_year_x_gap_10": {
+          "coefficient": -0.04853342200333134
+        },
+        "byte_1_vs_3": {
+          "coefficient": -0.38161202087826673
+        },
+        "byte_1_vs_3_x_gap_10": {
+          "coefficient": -0.2980279845559973
+        },
+        "byte_2_vs_3": {
+          "coefficient": -0.2993344777816849
+        },
+        "byte_2_vs_3_x_gap_10": {
+          "coefficient": -0.19750541204668723
+        },
+        "byte_4_vs_3": {
+          "coefficient": 0.29639650732887013
+        },
+        "byte_4_vs_3_x_gap_10": {
+          "coefficient": -0.07939166194403116
+        },
+        "byte_5_vs_3": {
+          "coefficient": 0.478785234584333
+        },
+        "byte_5_vs_3_x_gap_10": {
+          "coefficient": -0.15205831332138242
+        },
+        "position_AMC_vs_DC": {
+          "coefficient": 0.03876914217881383
+        },
+        "position_AML_vs_DC": {
+          "coefficient": 0.016716570417348992
+        },
+        "position_AMR_vs_DC": {
+          "coefficient": 0.0530046105427628
+        },
+        "position_DL_vs_DC": {
+          "coefficient": 0.02141620780902233
+        },
+        "position_DM_vs_DC": {
+          "coefficient": 0.06716759210606683
+        },
+        "position_DR_vs_DC": {
+          "coefficient": 0.003511954671750835
+        },
+        "position_MC_vs_DC": {
+          "coefficient": 0.04848018417320383
+        },
+        "position_ML_vs_DC": {
+          "coefficient": 0.08678000672869288
+        },
+        "position_MR_vs_DC": {
+          "coefficient": 0.031203506942687118
+        },
+        "position_STC_vs_DC": {
+          "coefficient": 0.025432853281573707
+        },
+        "position_WBL_vs_DC": {
+          "coefficient": 0.03661191442298783
+        },
+        "position_WBR_vs_DC": {
+          "coefficient": -0.11777808780708507
+        },
+        "professionalism": {
+          "coefficient": 0.04467651052798732
+        },
+        "ambition": {
+          "coefficient": 0.015207220018465535
+        },
+        "determination": {
+          "coefficient": 0.013397828805608449
+        },
+        "natural_fitness": {
+          "coefficient": 0.0046189118357390264
+        },
+        "injury_proneness": {
+          "coefficient": 0.0015725275121326956
+        },
+        "age_x_professionalism": {
+          "coefficient": -0.010056624871028147
+        }
+      },
+      "descriptive_r_squared": 0.3037951366289944
+    }
+  },
+  "independent_holdout": false,
+  "causal_effect": null
+}

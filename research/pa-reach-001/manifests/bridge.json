@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "study": "PA-REACH-001",
+  "engine_build": "27.1.0+2505117",
+  "native_module_sha256": "d12202dd01c3911d4c4e55e778f37b2251ffb10f9cf8cecc3b9ec08ece622c6b",
+  "gameassembly_sha256": "3f4a26c4869d6429d2e73c276adc64bdfaf6f3c86ce44fe0de93d14683a5d7e9",
+  "bridge_host": "0.4.7",
+  "bepinex": "6.0.0-be.791",
+  "unity": "6000.3.18f1-custom",
+  "native_context_operation": "context",
+  "native_inventory_access": "process_query_and_read_only",
+  "career_controller": "built_in_save_load_and_bounded_manager_holiday",
+  "one_active_controller": true,
+  "independent_calendar_roots": 1,
+  "native_write_experiment": false,
+  "observed_source_files_rehashed_without_change": 3,
+  "seasons_mod": {
+    "version": "0.13.0",
+    "loaded": true,
+    "personal_root_is_authorized_solo_path": true,
+    "named_experiment_paths_on_write_allowlist": false,
+    "historical_exposure": "POSSIBLE_UNQUANTIFIED"
+  },
+  "saves": {
+    "root": {
+      "bytes": 162182704,
+      "sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    },
+    "untouched_reserve": {
+      "bytes": 162182704,
+      "sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    },
+    "personal_live_state_recovery": {
+      "bytes": 162177713,
+      "sha256": "3ca36cec598f60d34d7d1b051a16138b067b0aac0cd205baca38e331fe9f1a89"
+    },
+    "january_research_copy": {
+      "bytes": 151193328,
+      "sha256": "7f0c59ed72dc6c07eac3e15ec44fc32507f9caae396fa5b27116d02fa415fb07"
+    },
+    "march_control_baseline": {
+      "bytes": 162182704,
+      "sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    },
+    "march_retention_baseline": {
+      "bytes": 162182704,
+      "sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
+    },
+    "april_control_checkpoint": {
+      "bytes": 169308652,
+      "sha256": "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634"
+    }
+  },
+  "native_inventories": {
+    "2027-01-31": {
+      "bytes": 12212581,
+      "sha256": "5a6ea8883b73ffc66f43e6f1d9a22de2c95c2d4a04306b8ff1cfc13505e580ef",
+      "rows": 94776,
+      "duration_ms": 1686
+    },
+    "2027-03-30": {
+      "bytes": 12573822,
+      "sha256": "d8fd3cb42df998b97fb6f61628732dc9a66ae1f33e31b789ab9a96eebf4a2f14",
+      "rows": 97555,
+      "duration_ms": 1644
+    },
+    "2027-04-30": {
+      "bytes": 14180922,
+      "sha256": "08e9d633037a28db8b87c9889f50d7a4f5402f9be59ee9bee79093c99b3d0606",
+      "rows": 109816,
+      "duration_ms": 1962
+    }
+  },
+  "scout_full_exports": {
+    "2027-01-31": {
+      "bytes": 201265857,
+      "sha256": "885259f8072fa7f8dad06eb85723e87cab93b870d3277bbd0b425dceb1c81ff6",
+      "rows": 113673,
+      "self_reported_date": "2027-01-30",
+      "source_of_study_date": "dated_save_and_bracketing_bridge_context"
+    },
+    "2027-03-30": {
+      "bytes": 195862699,
+      "sha256": "19782dd0793840acae9a06eeaa83ad6d050a1912067303a34b02e9ee4617e3cd",
+      "rows": 108233,
+      "self_reported_date": "2027-03-20",
+      "source_of_study_date": "dated_save_and_bracketing_bridge_context"
+    },
+    "2027-04-30": {
+      "bytes": 207539069,
+      "sha256": "da725ab74400679a9dc88be08e5b99b970545db7eb9f1bf8a7dcbe1816ddcafe",
+      "rows": 115186,
+      "self_reported_date": "2027-04-28",
+      "source_of_study_date": "dated_save_and_bracketing_bridge_context"
+    }
+  },
+  "prospective_checkpoint": {
+    "target_day": "2027-04-30",
+    "elapsed_simulated_days": 31,
+    "real_seconds_between_first_and_last_monitor": 204.3,
+    "timing_note": "Start marker immediately after holiday confirmation; end is the first observed idle terminal context, with monitor latency.",
+    "free_bytes_at_terminal": 399247392768,
+    "delegated_holiday": true,
+    "transfer_bids": "reject_all",
+    "job_applications": false,
+    "current_tactics": true,
+    "force_current_lineup": false,
+    "ongoing_background_calendar": false
+  },
+  "progression_tier_semantics": "PROGRESSION_TIER_UNVERIFIED",
+  "calibration": "NOT_OUTCOME_VALIDATED"
+}
