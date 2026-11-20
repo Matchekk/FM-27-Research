@@ -58,7 +58,7 @@ def summarize(directory, queue, panel, tag, checkpoint, before, after, private_r
                 return read(artifact)
 
             req, resp = load_part("request"), load_part("response")
-            if (req["Operation"] != "read-properties" or not req["UniquePersonBinding"]
+            if (req["Operation"] != "read-properties" or not isinstance(req["UniquePersonBinding"], bool)
                     or req["PersonIndex"] != person["index"] or resp["Status"] != "completed"
                     or any(resp[k] != contexts[0][k] for k in ("Pid", "ThreadId"))):
                 raise ValueError("Unverified player request")
@@ -66,7 +66,8 @@ def summarize(directory, queue, panel, tag, checkpoint, before, after, private_r
             values = {}
             for key, native_type in PROPERTIES.items():
                 prop = load_part(key)
-                path = f"lpRead/CheatPerson{prefix}/{key}"
+                suffix = prefix if req["UniquePersonBinding"] else ""
+                path = f"lpRead/CheatPerson{suffix}/{key}"
                 timestamp = datetime.fromisoformat(prop["Utc"].replace("Z", "+00:00")).timestamp()
                 if not before.stat().st_mtime <= timestamp <= after.stat().st_mtime:
                     raise ValueError("Callback not inside acquisition bracket")

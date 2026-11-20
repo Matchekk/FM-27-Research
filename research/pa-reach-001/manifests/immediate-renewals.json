@@ -1,0 +1,333 @@
+{
+  "build": "27.1.0+2505117",
+  "game_date_both": "2027-03-31",
+  "save_hash_before_after": [
+    "932b1890f14aa2d8f770a3457757254cc5a28de4e86427629798f5765004059a",
+    "53fcc3eb45e4e6b52e8bb5f01933c4aeecae18edef391a30a7309abd93fe3998"
+  ],
+  "save_extractor": "fmsave 0.14.1",
+  "separate_native_full_population_on_either_checkpoint": false,
+  "population_before_after": [
+    107365,
+    107365
+  ],
+  "stable_uid_birth_full_name_pairs": 107365,
+  "ledger_display_and_full_names_reconciled_before_after": [
+    5,
+    5
+  ],
+  "exact_display_name_matches_to_full_name_at_baseline": 94,
+  "extensions_by_primary_group": {
+    "due": 28,
+    "later": 0,
+    "intake": 0
+  },
+  "groups": {
+    "due": {
+      "n": 29,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          14,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 29
+      },
+      "delta_PA_counts": {
+        "0": 29
+      }
+    },
+    "later": {
+      "n": 54,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          19,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          18,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          12
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 54
+      },
+      "delta_PA_counts": {
+        "0": 54
+      }
+    },
+    "intake": {
+      "n": 16,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_or_missing_transitions": [
+        {
+          "before": 0,
+          "after": 0,
+          "n": 16
+        }
+      ],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 16
+      },
+      "delta_PA_counts": {
+        "0": 16
+      }
+    },
+    "due_with_later_end_and_new_same_day_start": {
+      "n": 28,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          13,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 28
+      },
+      "delta_PA_counts": {
+        "0": 28
+      }
+    },
+    "remaining_club_inventory": {
+      "n": 1,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_or_missing_transitions": [],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 1
+      },
+      "delta_PA_counts": {
+        "0": 1
+      }
+    },
+    "outside_observed_club_inventory": {
+      "n": 107265,
+      "matrix_before_rows_after_columns_1_to_5": [
+        [
+          7745,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          23750,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          53223,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          16095,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          5062
+        ]
+      ],
+      "zero_or_missing_transitions": [
+        {
+          "before": 0,
+          "after": 0,
+          "n": 1390
+        }
+      ],
+      "null_at_either_end": 0,
+      "changed_factor": 0,
+      "delta_CA_counts": {
+        "0": 107265
+      },
+      "delta_PA_counts": {
+        "0": 107265
+      }
+    }
+  }
+}

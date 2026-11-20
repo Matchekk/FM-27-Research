@@ -1,0 +1,75 @@
+{
+  "build": "27.1.0+2505117",
+  "external_reader_revision": "7fb12175f59b4d41b4418bf0378c3855a5bab4bd",
+  "external_reader_version": "fm27scout 1.6.1",
+  "local_executable_sha256": "2e44723d7de70d69c0f93eb55141c61ccd7a09c0cf781167e51f1364cc4f269a",
+  "historical": {
+    "all": {
+      "eligible_baseline": 94708,
+      "eligible_at_end_using_end_age_and_position": 97258,
+      "matched_by_baseline_eligibility": 94585,
+      "baseline_without_identity_pair_at_end": 123,
+      "endpoint_PA_difference_counts": {
+        "0": 94585
+      }
+    },
+    "outfield_under28": {
+      "eligible_baseline": 60635,
+      "eligible_at_end_using_end_age_and_position": 62047,
+      "matched_by_baseline_eligibility": 60550,
+      "baseline_without_identity_pair_at_end": 85,
+      "endpoint_PA_difference_counts": {
+        "0": 60550
+      }
+    }
+  },
+  "control": {
+    "all": {
+      "eligible_baseline": 97258,
+      "eligible_at_end_using_end_age_and_position": 109128,
+      "matched_by_baseline_eligibility": 97062,
+      "baseline_without_identity_pair_at_end": 196,
+      "endpoint_PA_difference_counts": {
+        "0": 97062
+      }
+    },
+    "outfield_under28": {
+      "eligible_baseline": 62047,
+      "eligible_at_end_using_end_age_and_position": 72103,
+      "matched_by_baseline_eligibility": 61920,
+      "baseline_without_identity_pair_at_end": 127,
+      "endpoint_PA_difference_counts": {
+        "0": 61920
+      }
+    }
+  },
+  "control_facilities": {
+    "club_rows_by_day": [
+      42001,
+      42001
+    ],
+    "nonmissing_decoded_by_day": [
+      188,
+      188
+    ],
+    "same_nonmissing_value_both_dates": 188,
+    "stable_clubs_at_16": 7,
+    "stable_clubs_at_17": 4,
+    "baseline_outfield_under28": {
+      "same_observed_club": {
+        "players": 25059,
+        "with_stable_decoded_rating": 1533,
+        "at_decoded_16": 169,
+        "at_decoded_17": 138
+      },
+      "same_observed_club_and_stable_pa_factor_1_4_above_cap_plus_two": {
+        "players": 6326,
+        "with_stable_decoded_rating": 342,
+        "at_decoded_16": 42,
+        "at_decoded_17": 30
+      }
+    },
+    "held_out_exact_integer_reference": null,
+    "verified_facility_boundary_effect": null
+  }
+}

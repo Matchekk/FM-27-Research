@@ -1,0 +1,29 @@
+{
+  "schema": "pa-reach-recalculation-byte/v1",
+  "build": "27.1.0+2505117",
+  "game_date": "2027-03-31",
+  "private_receipt_sha256": [
+    "7b2f67689e364518c4eed0d13720c0bca48273f854f7dd9606bef8f122b6a059",
+    "6537b7b8f94de31a4c79fa032df72d6927953960b6994c50f799f80e2a54d070"
+  ],
+  "career_clusters": 1,
+  "searched_bytes_relative_to_ca": [
+    -24,
+    24
+  ],
+  "positions_tested": 49,
+  "discovery_players": 12,
+  "replication_players_available": 16,
+  "positive_control_factor_equal": [
+    12,
+    16
+  ],
+  "discovery_match_count_histogram_across_offsets": {
+    "0": 41,
+    "1": 5,
+    "2": 3
+  },
+  "offsets_matching_all_discovery_players": [],
+  "replication_matches_by_candidate_offset": {},
+  "offsets_matching_both_groups": []
+}

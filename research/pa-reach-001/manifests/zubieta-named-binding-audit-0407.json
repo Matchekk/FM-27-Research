@@ -1,0 +1,16 @@
+{
+  "schema": "pa-reach-named-binding-diagnostic/v1",
+  "repeat_uids_and_dob": 28,
+  "repeated_distinct_player_path": {
+    "same_native_factor": 28,
+    "same_native_recalculation_score": 28,
+    "save_factor_changed": 18,
+    "later_native_agrees_with_later_save": 10
+  },
+  "shared_path_requests": 34,
+  "shared_path_distinct_returned_ids": 33,
+  "shared_path_id_equal_current_request": 1,
+  "shared_path_equal_previous_request": 33,
+  "preceding_request_comparisons": 33,
+  "cross_assigned_rows_admitted_to_target_panel": 0
+}

@@ -1,0 +1,384 @@
+{
+  "baseline_median_ca_over_pa": {
+    "0": 0.4593,
+    "1": 0.8161,
+    "2": 0.82,
+    "3": 0.8391,
+    "4": 0.8596,
+    "5": 0.8598
+  },
+  "baseline_outfield_under28_endpoint_counts": {
+    "full": {
+      "already_at_baseline": 434,
+      "horizon_passed_without_observed_hit_sparse_sampling": 93,
+      "newly_observed_hit": 6,
+      "right_censored": 61514
+    },
+    "pa95": {
+      "already_at_baseline": 3714,
+      "horizon_passed_without_observed_hit_sparse_sampling": 71,
+      "newly_observed_hit": 17,
+      "right_censored": 58245
+    },
+    "pa_minus_2": {
+      "already_at_baseline": 1635,
+      "horizon_passed_without_observed_hit_sparse_sampling": 82,
+      "newly_observed_hit": 11,
+      "right_censored": 60319
+    }
+  },
+  "build": "27.1.0+2505117",
+  "byte_counts": {
+    "2027-03-30": {
+      "0": 1273,
+      "1": 6868,
+      "2": 20851,
+      "3": 48029,
+      "4": 15406,
+      "5": 4831
+    },
+    "2027-04-07": {
+      "0": 2637,
+      "1": 6885,
+      "2": 20973,
+      "3": 48223,
+      "4": 15548,
+      "5": 4914
+    }
+  },
+  "calibration_metrics": null,
+  "career_cluster_count": 1,
+  "club_and_candidate_intervals": [
+    {
+      "changed": 363,
+      "club": "same",
+      "end": "2027-04-07",
+      "intervals": 37606,
+      "start": "2027-03-30"
+    },
+    {
+      "changed": 491,
+      "club": "unknown",
+      "end": "2027-04-07",
+      "intervals": 58351,
+      "start": "2027-03-30"
+    }
+  ],
+  "days_between_endpoints": 8,
+  "first_last_candidate_transitions": {
+    "0->0": 860,
+    "0->1": 21,
+    "0->2": 62,
+    "0->3": 192,
+    "0->4": 97,
+    "0->5": 41,
+    "1->1": 6799,
+    "1->2": 22,
+    "1->3": 36,
+    "1->4": 7,
+    "1->5": 2,
+    "2->1": 25,
+    "2->2": 20679,
+    "2->3": 108,
+    "2->4": 25,
+    "2->5": 8,
+    "3->1": 23,
+    "3->2": 137,
+    "3->3": 47654,
+    "3->4": 145,
+    "3->5": 57,
+    "4->1": 8,
+    "4->2": 38,
+    "4->3": 115,
+    "4->4": 15214,
+    "4->5": 25,
+    "5->2": 7,
+    "5->3": 51,
+    "5->4": 15,
+    "5->5": 4757
+  },
+  "first_seen_after_baseline_byte_counts": {
+    "0": 1777,
+    "1": 9,
+    "2": 28,
+    "3": 67,
+    "4": 45,
+    "5": 24
+  },
+  "independent_test_careers": 0,
+  "linkage": {
+    "baseline": 97258,
+    "baseline_absent_on_final_date": 28,
+    "first_seen_after_baseline": 1950,
+    "lower_candidate_final_ca_above_new_cap": 270,
+    "paired": 97230,
+    "present_all_dates": 97230
+  },
+  "new_youth_diagnostics": {
+    "first_seen_under18": 1946,
+    "initially_zero": 1775
+  },
+  "outfield_under28_growth_by_baseline_age_gap": [
+    {
+      "age": "18-20",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0.0,
+      "min_delta": 0,
+      "n": 62,
+      "sum_delta": 0
+    },
+    {
+      "age": "18-20",
+      "gains": 32,
+      "gap": "1-10",
+      "losses": 2,
+      "max_delta": 4,
+      "mean_delta": 0.0179,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 2462,
+      "sum_delta": 44
+    },
+    {
+      "age": "18-20",
+      "gains": 715,
+      "gap": "11-30",
+      "losses": 5,
+      "max_delta": 6,
+      "mean_delta": 0.0875,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 12077,
+      "sum_delta": 1057
+    },
+    {
+      "age": "18-20",
+      "gains": 440,
+      "gap": ">30",
+      "losses": 4,
+      "max_delta": 7,
+      "mean_delta": 0.1578,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 4437,
+      "sum_delta": 700
+    },
+    {
+      "age": "21-23",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 87,
+      "sum_delta": 0
+    },
+    {
+      "age": "21-23",
+      "gains": 50,
+      "gap": "1-10",
+      "losses": 0,
+      "max_delta": 4,
+      "mean_delta": 0.0275,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 2805,
+      "sum_delta": 77
+    },
+    {
+      "age": "21-23",
+      "gains": 338,
+      "gap": "11-30",
+      "losses": 20,
+      "max_delta": 4,
+      "mean_delta": 0.0331,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 12836,
+      "sum_delta": 425
+    },
+    {
+      "age": "21-23",
+      "gains": 70,
+      "gap": ">30",
+      "losses": 2,
+      "max_delta": 4,
+      "mean_delta": 0.069,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 1421,
+      "sum_delta": 98
+    },
+    {
+      "age": "24-27",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0.0,
+      "min_delta": 0,
+      "n": 274,
+      "sum_delta": 0
+    },
+    {
+      "age": "24-27",
+      "gains": 68,
+      "gap": "1-10",
+      "losses": 15,
+      "max_delta": 2,
+      "mean_delta": 0.0074,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 8486,
+      "sum_delta": 63
+    },
+    {
+      "age": "24-27",
+      "gains": 119,
+      "gap": "11-30",
+      "losses": 18,
+      "max_delta": 3,
+      "mean_delta": 0.0137,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 9585,
+      "sum_delta": 131
+    },
+    {
+      "age": "24-27",
+      "gains": 11,
+      "gap": ">30",
+      "losses": 0,
+      "max_delta": 2,
+      "mean_delta": 0.0324,
+      "median_delta": 0.0,
+      "min_delta": 0,
+      "n": 432,
+      "sum_delta": 14
+    },
+    {
+      "age": "<18",
+      "gains": 0,
+      "gap": "0",
+      "losses": 0,
+      "max_delta": 0,
+      "mean_delta": 0,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 11,
+      "sum_delta": 0
+    },
+    {
+      "age": "<18",
+      "gains": 8,
+      "gap": "1-10",
+      "losses": 0,
+      "max_delta": 3,
+      "mean_delta": 0.0393,
+      "median_delta": 0,
+      "min_delta": 0,
+      "n": 331,
+      "sum_delta": 13
+    },
+    {
+      "age": "<18",
+      "gains": 244,
+      "gap": "11-30",
+      "losses": 1,
+      "max_delta": 5,
+      "mean_delta": 0.1669,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 2289,
+      "sum_delta": 382
+    },
+    {
+      "age": "<18",
+      "gains": 536,
+      "gap": ">30",
+      "losses": 4,
+      "max_delta": 7,
+      "mean_delta": 0.2068,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 4434,
+      "sum_delta": 917
+    }
+  ],
+  "outfield_under28_growth_by_candidate_cap_room": {
+    "2 to 10 below": {
+      "gains": 836,
+      "losses": 13,
+      "max_delta": 5,
+      "mean_delta": 0.093,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 12493,
+      "sum_delta": 1162
+    },
+    ">10 below": {
+      "gains": 1504,
+      "losses": 17,
+      "max_delta": 7,
+      "mean_delta": 0.15,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 16070,
+      "sum_delta": 2410
+    },
+    "above by >2": {
+      "gains": 39,
+      "losses": 23,
+      "max_delta": 2,
+      "mean_delta": 0.0012,
+      "median_delta": 0,
+      "min_delta": -1,
+      "n": 17941,
+      "sum_delta": 22
+    },
+    "within 2": {
+      "gains": 108,
+      "losses": 17,
+      "max_delta": 3,
+      "mean_delta": 0.0077,
+      "median_delta": 0.0,
+      "min_delta": -1,
+      "n": 13818,
+      "sum_delta": 107
+    }
+  },
+  "snapshots": {
+    "2027-03-30": {
+      "accepted_ability_pairs": 97258,
+      "birth_missing_or_mismatch": 289,
+      "club_unverified_among_accepted": 59051,
+      "native_records": 97555,
+      "native_uid_absent_from_save": 8,
+      "no_closing_identity": 13,
+      "no_native_uid": 9983,
+      "save_records": 107543
+    },
+    "2027-04-07": {
+      "accepted_ability_pairs": 99180,
+      "birth_missing_or_mismatch": 325,
+      "club_unverified_among_accepted": 60214,
+      "native_records": 99518,
+      "native_uid_absent_from_save": 13,
+      "no_closing_identity": 16,
+      "no_native_uid": 9823,
+      "save_records": 109344
+    }
+  },
+  "status": [
+    "INSUFFICIENT_LONGITUDINAL_EVIDENCE",
+    "PROGRESSION_FACTOR_FIELD_VALIDATED",
+    "NOT_OUTCOME_VALIDATED"
+  ]
+}
