@@ -46,6 +46,14 @@
       "bytes": 162182704,
       "sha256": "631a2c000d854fd46d98f0efcce55a5b179367167e8d57b99ad2d7844e4329e4"
     },
+    "retention_due_delegations_checkpoint": {
+      "bytes": 162887143,
+      "sha256": "53fcc3eb45e4e6b52e8bb5f01933c4aeecae18edef391a30a7309abd93fe3998"
+    },
+    "retention_youth_offered_checkpoint": {
+      "bytes": 162885882,
+      "sha256": "932b1890f14aa2d8f770a3457757254cc5a28de4e86427629798f5765004059a"
+    },
     "april_control_checkpoint": {
       "bytes": 169308652,
       "sha256": "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634"
@@ -107,6 +115,22 @@
     "force_current_lineup": false,
     "ongoing_background_calendar": false
   },
-  "progression_tier_semantics": "PROGRESSION_TIER_UNVERIFIED",
+  "named_progression_factor_readback": {
+    "status": "BUILD_SPECIFIC_IDENTITY_MATCH",
+    "sample": 12,
+    "matches": 12,
+    "engine_build": "27.1.0+2505117",
+    "cap_and_reroll_semantics": "UNVALIDATED"
+  },
+  "retention_at_2027_03_31": {
+    "intake_present": 16,
+    "intake_offers_submitted": 16,
+    "intake_future_periods_present_at_offer_checkpoint": 0,
+    "existing_contracts": 83,
+    "due_by_june": 29,
+    "due_individual_negotiations_initiated": 29,
+    "immediate_refusal_transfer_listed": 1,
+    "final_retention": null
+  },
   "calibration": "NOT_OUTCOME_VALIDATED"
 }

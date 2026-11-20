@@ -1,6 +1,6 @@
 # PA-REACH-001 · Zubieta Dynasty
 
-**FM27 27.1.0+2505117.** Die Zubieta-Saves liefern einen echten Längsschnitt, ein wiederholbar lesbares Byte bei CA+7 und direkt gemessene Attribut-/Meta-Verläufe. Ein individuell kalibrierter PA-Erreichungsscore ist noch nicht freigegeben. Die Daten zählen als ein Zubieta-Ausgangsuniversum. Der frühere TRAIN-005-Bestand überschneidet sich auch bei den jungen Spielern so stark, dass er als unabhängiger Test ausscheidet.
+**FM27 27.1.0+2505117.** Die Zubieta-Saves liefern einen echten Längsschnitt, das als `ProgressionFactor` identifizierte Savefeld bei CA+7 und direkt gemessene Attribut-/Meta-Verläufe. Ein individuell kalibrierter PA-Erreichungsscore ist noch nicht freigegeben. Die Daten zählen als ein Zubieta-Ausgangsuniversum. Der frühere TRAIN-005-Bestand überschneidet sich auch bei den jungen Spielern so stark, dass er als unabhängiger Test ausscheidet.
 
 | Untersuchung | Gesicherte Messung | Geltungsbereich |
 |---|---|---|
@@ -19,7 +19,7 @@ Für 38.633 Spieler im historischen Fenster und 40.451 im Kontrollmonat ließen 
 
 ### Was spricht für einen Entwicklungszustand?
 
-Das Byte am extern berichteten Ort änderte sich in der historischen Zubieta-Stichprobe bei **2.382 von 94.585** Spielern. In 653 Fällen mit niedrigerem Endbyte blieb die CA oberhalb der postulierten neuen Grenze. Mehr Spielraum zur angenommenen Grenze ging mit mehr Wachstum einher. Das Muster repliziert mehrere Beobachtungen aus dem FM-Arena-Thread auf dem aktuellen Build. Ein vom Spiel unabhängig beschrifteter Tierwert, eine isolierte Neuwurfchance oder die monatliche Ausnahme sind dadurch noch nicht nachgewiesen. [Lokale Prüfung](PROGRESSION_FACTOR_VALIDATION.md) · [Externe Befunde](LITERATURE_REVIEW.md)
+Das Byte am extern berichteten Ort änderte sich in der historischen Zubieta-Stichprobe bei **2.382 von 94.585** Spielern. In 653 Fällen mit niedrigerem Endbyte blieb die CA oberhalb der postulierten neuen Grenze. Mehr Spielraum zur angenommenen Grenze ging mit mehr Wachstum einher. Das Muster repliziert mehrere Beobachtungen aus dem FM-Arena-Thread auf dem aktuellen Build. In einer separaten Stichprobe traf das Savebyte bei allen zwölf Identitäten den vom Spiel benannten Wert `ProgressionFactor`, je zweimal für 0 bis 5. Welches Ereignis einen Neuwurf verursacht und wann die monatliche Ausnahme greift, ist weiterhin offen. [Benannter Feldvergleich](NAMED_PROGRESSION_READBACK.md) [Lokale Prüfung](PROGRESSION_FACTOR_VALIDATION.md) · [Externe Befunde](LITERATURE_REVIEW.md)
 
 Ein Vergleich im selben Verein grenzt die Vertragshypothese ein. Von 712 Spielern mit neuem Datum in der Vertragskette und unabhängig bestätigter längerer Laufzeit zeigten 442 nach 58 Tagen einen Bytewechsel. In der Vergleichsgruppe mit stabilen Vertragsdaten waren es 238 von 34.677. Im prospektiven Kontrollmonat wiederholte sich das Muster (388/650 gegenüber 142/35.348). Verbleibende gleichzeitige Ereignisse, die Semantik des Kettenstartdatums und unveränderte Ergebnisse trotz Neuwurf begrenzen die Kausalaussage. [Ereignisgruppen und Unsicherheit](CONTRACT_BYTE_TRANSITIONS.md)
 

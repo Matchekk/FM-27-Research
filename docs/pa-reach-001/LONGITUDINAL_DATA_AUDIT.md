@@ -30,3 +30,5 @@ python analysis/pa_reach_summary.py local/panel.sqlite TRAIN005-A
 ```
 
 Die Tabelle ist pro Karriere und Spieltag transaktional und unbegrenzt fortschreibbar. Ein wiederholter Import derselben Kombination wird abgewiesen. Zur Prüfwiederholung eine frische private Datenbank verwenden. Die Sicht `research_panel` hält die erste PA pro Karriere, ID und Geburt fest. Bestätigte Klubkennungen stammen aus zwei Quellen. Ungeprüfte Persönlichkeit, Anlagen, Vertragsdaten, Leihstatus, Minuten, Verletzungstage und semantische Stufe bleiben SQL-NULL. Für spätere Landmark-Prognosen wird die Ziel-PA am jeweiligen Prognosetag erneut fixiert. SQLite-Dateien, native Inventare und Einzelprofile verbleiben privat. [Erfassungsprogramm](../../analysis/pa_reach_capture.py) · [Aggregatauswertung](../../analysis/pa_reach_summary.py)
+
+Die private Panelsicht ab Schema 3 gibt auf 27.1.0+2505117 den gespeicherten Faktor 0–5 aus. Nur Werte 1–5 gelangen in das Stufenmerkmal. Bei anderen Builds bleibt das Merkmal fehlend. Die Migration der Sicht erhält die aufgenommenen Rohzeilen. [Nativ benannter Wert und Feldanker](NAMED_PROGRESSION_READBACK.md)

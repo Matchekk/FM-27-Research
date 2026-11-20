@@ -1,6 +1,6 @@
 # FM27 Meta Research
 
-> **PA-REACH-001 (20.11.2026)** untersucht volle PA bis 28 in echten Karriereverläufen. Zeitlich getrennte Saves und native CA-/PA-Messungen sind miteinander abgeglichen. [Forschungsbericht](docs/pa-reach-001/RESEARCH_REPORT.md) · [Kalibrierungsstand](docs/pa-reach-001/CALIBRATION_REPORT.md).
+> **PA-REACH-001 (20.11.2026)** untersucht volle PA bis 28 in echten Karriereverläufen. Zeitlich getrennte Saves und native CA-/PA-Messungen sind miteinander abgeglichen. Auf 27.1.0+2505117 wurde das gespeicherte Feld `ProgressionFactor` anhand der benannten Spieleigenschaft identifiziert. [Forschungsbericht](docs/pa-reach-001/RESEARCH_REPORT.md) · [Kalibrierungsstand](docs/pa-reach-001/CALIBRATION_REPORT.md).
 
 > **PLAYER-DEVELOPMENT-003 (15.11.):** unabhängiger Editor-RCA-Zugang und
 > kontrollierter Karriereexecutor weiterhin nicht nachgewiesen. FM27 läuft,

@@ -132,7 +132,9 @@ def summarize(conn, career):
         ],
         "outfield_under28_growth_by_candidate_cap_room": {g: growth(v) for g, v in cap_groups.items()},
         "independent_test_careers": 0, "calibration_metrics": None,
-        "status": ["INSUFFICIENT_LONGITUDINAL_EVIDENCE", "PROGRESSION_TIER_UNVERIFIED", "NOT_OUTCOME_VALIDATED"],
+        "status": ["INSUFFICIENT_LONGITUDINAL_EVIDENCE",
+                   "PROGRESSION_FACTOR_FIELD_VALIDATED" if snapshots[0][1] == "27.1.0+2505117"
+                   else "PROGRESSION_TIER_UNVERIFIED", "NOT_OUTCOME_VALIDATED"],
     }
 
 

@@ -1,0 +1,50 @@
+{
+  "schema": "zubieta-youth-intake-cross-branch/v1",
+  "retention_snapshot": {
+    "date": "2027-03-31",
+    "sha256": "932b1890f14aa2d8f770a3457757254cc5a28de4e86427629798f5765004059a"
+  },
+  "control_snapshot": {
+    "date": "2027-04-30",
+    "sha256": "2bdd785514fadf862f0dfea5a6078b9c28a65741a805c68e12abcbbbd46ec634"
+  },
+  "retention_candidates": 16,
+  "control_candidates": 16,
+  "ui_offer_entries": 16,
+  "uniquely_name_linked_offers": 16,
+  "same_day_terms_submitted": 16,
+  "ui_confirmed_future_start": 0,
+  "reader_without_future_spell_in_retention": 16,
+  "reader_with_confirmed_contract_end_in_retention": 0,
+  "unique_uid_birth_overlap": 16,
+  "name_hash_also_equal": 16,
+  "equal_pa": 16,
+  "control_ca_minus_retention_ca": {
+    "0": 8,
+    "1": 4,
+    "2": 4
+  },
+  "progression_factor_pairs": [
+    {
+      "retention": 0,
+      "control": 1,
+      "n": 1
+    },
+    {
+      "retention": 0,
+      "control": 2,
+      "n": 1
+    },
+    {
+      "retention": 0,
+      "control": 3,
+      "n": 1
+    },
+    {
+      "retention": 0,
+      "control": 4,
+      "n": 13
+    }
+  ],
+  "scope": "different dates and branches, no same-arm transition or causal effect"
+}

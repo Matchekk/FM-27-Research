@@ -7,13 +7,6 @@ import struct
 from collections import Counter
 from pathlib import Path
 
-import fmsave
-from fmsave._layouts import ContractLayout, PersonBlockLayout, find_layout
-from fmsave._scan import decode_date
-from fmsave.readers.player_scan import window_end
-from fmsave.readers.players import build_player_decoder
-
-
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS snapshot(
  career TEXT, day TEXT, build TEXT, save_hash TEXT, inventory_hash TEXT,
@@ -30,7 +23,11 @@ CREATE VIEW IF NOT EXISTS research_panel AS
         o.uid AS player_id_within_career, o.birth, o.age, o.position AS position_family,
         o.ca AS current_CA, o.pa AS snapshot_PA,
         first_value(o.pa) OVER (PARTITION BY o.career,o.uid,o.birth ORDER BY o.day) AS baseline_PA,
-        o.candidate AS candidate_byte, NULL AS progression_tier_if_verified,
+        o.candidate AS candidate_byte,
+        CASE WHEN s.build='27.1.0+2505117' AND o.candidate BETWEEN 0 AND 5
+             THEN o.candidate END AS stored_progression_factor,
+        CASE WHEN s.build='27.1.0+2505117' AND o.candidate BETWEEN 1 AND 5
+             THEN o.candidate END AS progression_tier_if_verified,
         NULL AS professionalism, NULL AS ambition, NULL AS determination,
         o.club AS current_club, NULL AS club_reputation, NULL AS training_facilities_if_verified,
         NULL AS contract_start_if_verified, NULL AS playing_minutes_if_verified,
@@ -44,8 +41,31 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
+def initialize_panel(conn):
+    """Version 3 updates the interpretation view only. Recorded observations stay immutable."""
+    conn.execute("PRAGMA foreign_keys=ON")
+    version = conn.execute("PRAGMA user_version").fetchone()[0]
+    if version == 3:
+        return
+    if version == 2:
+        columns = [c[1] for c in conn.execute("PRAGMA table_info(observation)")]
+        snapshots = [c[1] for c in conn.execute("PRAGMA table_info(snapshot)")]
+        if (columns != ["career", "day", "uid", "birth", "age", "position", "ca", "pa", "candidate", "club"]
+                or snapshots != ["career", "day", "build", "save_hash", "inventory_hash", "reader", "accounting"]):
+            raise ValueError("Unrecognized version 2 panel")
+    elif version or conn.execute("SELECT 1 FROM sqlite_master LIMIT 1").fetchone():
+        raise ValueError("Existing database has unrelated schema")
+    migration = "DROP VIEW IF EXISTS research_panel;" if version == 2 else ""
+    conn.executescript("BEGIN IMMEDIATE;\n" + migration + SCHEMA + "PRAGMA user_version=3;\nCOMMIT;")
+
+
 def decode(save, native):
     """Yield accepted rows; the ledger accounts for every indexed save record."""
+    from fmsave._layouts import ContractLayout, PersonBlockLayout, find_layout
+    from fmsave._scan import decode_date
+    from fmsave.readers.player_scan import window_end
+    from fmsave.readers.players import build_player_decoder
+
     counts = Counter(native_records=len(native))
     frequencies = Counter(row["Uid"] for row in native)
     reference = {row["Uid"]: row for row in native if frequencies[row["Uid"]] == 1}
@@ -123,6 +143,8 @@ def decode(save, native):
 
 
 def capture(db_path, manifest, day, save_path, inventory_path):
+    import fmsave
+
     meta = manifest["snapshots"][day]
     build, career = manifest["engine_build"], manifest["career_id"]
     if manifest["schema_version"] != 1 or fmsave.__version__ != "0.14.1" or build not in {"27.0.1+2503222", "27.1.0+2505117"}:
@@ -137,12 +159,7 @@ def capture(db_path, manifest, day, save_path, inventory_path):
             raise ValueError("Save metadata differs from manifest")
         rows, counts = decode(save, native["Players"])
     with sqlite3.connect(db_path) as conn:
-        conn.execute("PRAGMA foreign_keys=ON")
-        version = conn.execute("PRAGMA user_version").fetchone()[0]
-        if version != 2 and (version or conn.execute("SELECT 1 FROM sqlite_master LIMIT 1").fetchone()):
-            raise ValueError("Existing database has unrelated schema")
-        conn.executescript(SCHEMA)
-        conn.execute("PRAGMA user_version=2")
+        initialize_panel(conn)
         conn.execute("BEGIN IMMEDIATE")
         if conn.execute("SELECT 1 FROM snapshot WHERE career=? AND build<>?", (career, build)).fetchone():
             raise ValueError("Use a separate series for different builds")

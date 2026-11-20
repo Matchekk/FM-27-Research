@@ -2,7 +2,7 @@
 
 ## PA-REACH-001 · Entwicklung bis 28
 
-Die Zubieta-Forschungszweige liefern die praktische Fortsetzung des Messwegs. Priorität haben die direkte Qualifikation am Zielbuild, der kontrollierte Monats-/Saisonverlauf und zusätzliche unabhängige Karrierewurzeln für die Kalibrierung. [Nächste Experimente](docs/pa-reach-001/NEXT_EXPERIMENTS.md) · [Versuchsdesign](docs/pa-reach-001/EXPERIMENT_DESIGN.md).
+Die Zubieta-Forschungszweige liefern die praktische Fortsetzung des Messwegs. Priorität haben die zeitliche Prüfung der benannten Stufe bei Jugendaufnahme und Vertragsbeginn, der saisonübergreifende Retentionsverlauf und zusätzliche unabhängige Karrierewurzeln für die Kalibrierung. [Nächste Experimente](docs/pa-reach-001/NEXT_EXPERIMENTS.md) · [Versuchsdesign](docs/pa-reach-001/EXPERIMENT_DESIGN.md).
 
 ## META-VALIDATION-001 – offene Voraussetzungen für den Holdout
 

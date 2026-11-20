@@ -1,0 +1,61 @@
+{
+  "schema": "pa-reach-named-progression/v1",
+  "game_date": "2027-03-31",
+  "engine_build": "27.1.0+2505117",
+  "snapshot_sha256": "932b1890f14aa2d8f770a3457757254cc5a28de4e86427629798f5765004059a",
+  "private_receipt_sha256": "7b2f67689e364518c4eed0d13720c0bca48273f854f7dd9606bef8f122b6a059",
+  "game_thread_parked_before_and_after": true,
+  "independent_careers": 1,
+  "selection": "purposeful; frequency distribution and predictive calibration not estimable",
+  "requested": 12,
+  "identity_and_native_type_confirmed": 12,
+  "excluded": {},
+  "save_ca_relative_byte_offset": 7,
+  "native_name": "ProgressionFactor",
+  "native_type": "SI.Core.DynamicNumber",
+  "equal": 12,
+  "confusion": [
+    {
+      "save": 0,
+      "native": 0,
+      "n": 2
+    },
+    {
+      "save": 1,
+      "native": 1,
+      "n": 2
+    },
+    {
+      "save": 2,
+      "native": 2,
+      "n": 2
+    },
+    {
+      "save": 3,
+      "native": 3,
+      "n": 2
+    },
+    {
+      "save": 4,
+      "native": 4,
+      "n": 2
+    },
+    {
+      "save": 5,
+      "native": 5,
+      "n": 2
+    }
+  ],
+  "recalculation_score_frequency_in_panel": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "6": 1,
+    "9": 1,
+    "10": 1,
+    "14": 3,
+    "15": 2
+  },
+  "zero_meaning": "NOT_ROLLED_OR_UNVERIFIED",
+  "growth_caps_monthly_exceptions_rerolls": "NOT_ESTABLISHED_BY_FIELD_IDENTITY"
+}

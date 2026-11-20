@@ -1,6 +1,6 @@
 # PA-REACH-001 · Was sich heute schon messen lässt
 
-Der Forschungsdurchbruch ist ein überprüfbarer Messweg. Zeitlich getrennte Saves lassen sich über die **Datenbank-ID im schließenden Personenheader**, das Geburtsdatum und unabhängige native CA/PA-Messungen verbinden. Damit kann ein Kandidatenbyte in derselben Karriere verfolgt werden. Eine Wahrscheinlichkeit, die volle PA bis 28 zu erreichen, ist noch nicht kalibriert.
+Der Forschungsdurchbruch ist ein überprüfbarer Messweg. Zeitlich getrennte Saves lassen sich über die **Datenbank-ID im schließenden Personenheader**, das Geburtsdatum und unabhängige native CA/PA-Messungen verbinden. Im Zielbuild entspricht das gespeicherte Byte bei CA+7 dem vom Spiel benannten `ProgressionFactor`. Je zwei direkte Treffer pro Wert von 0 bis 5 belegen die Zuordnung. Eine Wahrscheinlichkeit, die volle PA bis 28 zu erreichen, ist noch nicht kalibriert. [Direkter Feldvergleich](NAMED_PROGRESSION_READBACK.md)
 
 ### Historische Kontrolle auf 27.0.1+2503222
 
